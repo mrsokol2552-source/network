@@ -1,0 +1,38 @@
+
+
+$ show running-config
+                        ^
+% Invalid input detected at '^' marker.
+
+
+
+$ show version
+  ZES-2028GS Device, Compiled on Aug 22 16:01:07 2018
+  sysLocation Russia, 124681, Moscow, Zelenograd, Zavodskaya st., 1B, bldg 2
+  CPU Mac 00:1a:81:01:a6:1b
+  Vlan MAC 00:1a:81:01:a6:1a
+  SoftWare Version 7.0.3.5(R0241.0270)
+  BootRom Version 7.2.40
+  HardWare Version 2.0.2
+  CPLD Version N/A
+  Serial No.:2321211012063
+  Copyright 2018 by Zelax
+  All rights reserved
+  Last reboot is cold reset.
+  Uptime is 44 weeks, 0 days, 23 hours, 55 minutes
+
+
+$ show cdp neighbors detail
+                        ^
+% Invalid input detected at '^' marker.
+
+
+
+$ show lldp neighbors detail
+                                      ^
+% Invalid input detected at '^' marker.
+
+
+
+$ show interface status
+interface error!

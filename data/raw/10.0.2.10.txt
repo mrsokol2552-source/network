@@ -1,0 +1,613 @@
+
+
+$ show running-config
+Building configuration...
+
+Current configuration : 9997 bytes
+!
+! Last configuration change at 08:14:57 MSK Tue Sep 30 2025 by volodin_s
+! NVRAM config last updated at 08:18:10 MSK Tue Sep 30 2025 by volodin_s
+!
+version 12.2
+no service pad
+service timestamps debug uptime
+service timestamps log uptime
+service password-encryption
+!
+hostname MSK-NSWS-03-2-10
+!
+boot-start-marker
+boot-end-marker
+!
+enable secret 5 $1$4P0L$uMvJ4fIKw/oV4hsOD5pHa.
+!
+username itdep privilege 15 secret 5 $1$9HdO$ztL3aP8Dz2JwgocybNZEW.
+username volodin_s privilege 15 secret 5 $1$GIRL$Ev13kaRaAp9iLsN1.0/eQ0
+username zhiltsov_a privilege 15 secret 5 $1$HMnS$O065YMPk8WaAxugb83O3e1
+!
+!
+no aaa new-model
+clock timezone MSK 3
+system mtu routing 1500
+vtp domain Kolmar-lan
+vtp mode off
+authentication mac-move permit
+ip subnet-zero
+!
+!
+no ip domain-lookup
+ip domain-name kolmar.local
+!
+!
+crypto pki trustpoint TP-self-signed-666753152
+ enrollment selfsigned
+ subject-name cn=IOS-Self-Signed-Certificate-666753152
+ revocation-check none
+ rsakeypair TP-self-signed-666753152
+!
+!
+crypto pki certificate chain TP-self-signed-666753152
+ certificate self-signed 01
+  30820249 308201B2 A0030201 02020101 300D0609 2A864886 F70D0101 04050030 
+  30312E30 2C060355 04031325 494F532D 53656C66 2D536967 6E65642D 43657274 
+  69666963 6174652D 36363637 35333135 32301E17 0D393330 33303130 30303231 
+  355A170D 32303031 30313030 30303030 5A303031 2E302C06 03550403 1325494F 
+  532D5365 6C662D53 69676E65 642D4365 72746966 69636174 652D3636 36373533 
+  31353230 819F300D 06092A86 4886F70D 01010105 0003818D 00308189 02818100 
+  D7AA04BB 28E98678 07B0EE4D 68E204D2 B4046EAA 7D0DDB0E B679D1B5 1FAEDCE2 
+  680C3403 033AC220 62D6E9FB 70FB1260 AB20E663 EF8A7FBF BD65DB64 E3BAE6B8 
+  5AA49B10 51B33C9E EC463B23 EE17CFB5 30A02D78 3EE7E25F AE8F78E7 303042BA 
+  E6BD9557 F7955ADF B43760FB EEBE9812 389BDB64 826D747C 4BD41F70 71A08213 
+  02030100 01A37330 71300F06 03551D13 0101FF04 05300301 01FF301E 0603551D 
+  11041730 15821373 77323936 302E6B6F 6C6D6172 2E6C6F63 616C301F 0603551D 
+  23041830 1680145C BB153080 2B6D02D1 850E77A7 3909B9CC 90E10430 1D060355 
+  1D0E0416 04145CBB 1530802B 6D02D185 0E77A739 09B9CC90 E104300D 06092A86 
+  4886F70D 01010405 00038181 00AB7740 F34A874A 1C4DE9F8 BB1662CF 1D90E2FA 
+  F63FBC7E 797B8A8C 5EEB9CE6 5AFC3C89 E89FC984 02A6FD8A 451CB98B 4F4CC5E4 
+  BB93D8BA 82CAD0C2 9706C19D 8045BC4B 2E676775 868D4DBB 829B1D13 2F3F768C 
+  F8D847A6 729E9132 4B29C704 21F5BE11 1D146BA0 C0BF9D61 33DDE544 804AEACA 
+  B2FD509B 78EA9BF3 8E9BC66A 27
+  quit
+!
+!
+!
+!
+spanning-tree mode rapid-pvst
+spanning-tree etherchannel guard misconfig
+spanning-tree extend system-id
+!
+vlan internal allocation policy ascending
+!
+vlan 9
+ name PhoneStation
+!
+vlan 10
+ name Servers
+!
+vlan 12
+ name Admins
+!
+vlan 13
+ name Phones
+!
+vlan 14
+ name VKS
+!
+vlan 17
+ name Transport
+!
+vlan 20
+ name Users
+!
+vlan 21
+ name Printers
+!
+vlan 30
+ name Wi-Fi
+!
+vlan 31
+ name Wifi_guest
+!
+vlan 32
+ name Wifi_Work
+!
+vlan 33
+ name Wifi_Staff
+!
+vlan 34
+ name Wifi_General
+!
+vlan 36
+ name Wifi_VIPGuest
+!
+vlan 130
+ name WiFi_NEW
+!
+vlan 131-134 
+!
+vlan 135
+ name Wifi-IoT
+!
+vlan 136 
+!
+vlan 141
+ name RESERV-VKS
+!
+vlan 220
+ name UPS
+!
+vlan 2034
+ name Endymion(Users)
+!
+ip ssh time-out 30
+ip ssh dscp 0
+ip ssh version 2
+!
+!
+interface Port-channel1
+ switchport mode trunk
+!
+interface GigabitEthernet0/1
+ description ISR Router
+ switchport mode trunk
+!
+interface GigabitEthernet0/2
+ description ISR Router
+ switchport mode trunk
+!
+interface GigabitEthernet0/3
+ description HYPER-V
+ switchport mode trunk
+ channel-group 1 mode active
+ ip dhcp snooping trust
+!
+interface GigabitEthernet0/4
+ description HYPER-V
+ switchport mode trunk
+ channel-group 1 mode active
+!
+interface GigabitEthernet0/5
+ description SERVERS
+ switchport mode trunk
+!
+interface GigabitEthernet0/6
+ description SERVERS
+ switchport mode access
+ speed 100
+ duplex full
+!
+interface GigabitEthernet0/7
+ description SERVERS
+ switchport mode trunk
+!
+interface GigabitEthernet0/8
+ description SERVERS
+ switchport mode trunk
+!
+interface GigabitEthernet0/9
+ switchport mode access
+ spanning-tree portfast
+ spanning-tree bpduguard enable
+!
+interface GigabitEthernet0/10
+ switchport mode access
+ spanning-tree portfast
+ spanning-tree bpduguard enable
+!
+interface GigabitEthernet0/11
+ switchport mode access
+ spanning-tree portfast
+ spanning-tree bpduguard enable
+!
+interface GigabitEthernet0/12
+ switchport mode access
+ spanning-tree portfast
+ spanning-tree bpduguard enable
+!
+interface GigabitEthernet0/13
+ switchport mode access
+ spanning-tree portfast
+ spanning-tree bpduguard enable
+!
+interface GigabitEthernet0/14
+ switchport mode access
+ spanning-tree portfast
+ spanning-tree bpduguard enable
+!
+interface GigabitEthernet0/15
+ switchport mode access
+ spanning-tree portfast
+ spanning-tree bpduguard enable
+!
+interface GigabitEthernet0/16
+ switchport mode access
+ spanning-tree portfast
+ spanning-tree bpduguard enable
+!
+interface GigabitEthernet0/17
+ switchport mode access
+ spanning-tree portfast
+ spanning-tree bpduguard enable
+!
+interface GigabitEthernet0/18
+ switchport mode access
+ spanning-tree portfast
+ spanning-tree bpduguard enable
+!
+interface GigabitEthernet0/19
+ switchport mode access
+ spanning-tree portfast
+ spanning-tree bpduguard enable
+!
+interface GigabitEthernet0/20
+ switchport mode access
+ spanning-tree portfast
+ spanning-tree bpduguard enable
+!
+interface GigabitEthernet0/21
+ switchport mode access
+ spanning-tree portfast
+ spanning-tree bpduguard enable
+!
+interface GigabitEthernet0/22
+ switchport mode access
+ spanning-tree portfast
+ spanning-tree bpduguard enable
+!
+interface GigabitEthernet0/23
+ switchport mode access
+ spanning-tree portfast
+ spanning-tree bpduguard enable
+!
+interface GigabitEthernet0/24
+ description hohlov
+ switchport mode access
+ spanning-tree portfast
+ spanning-tree bpduguard enable
+!
+interface GigabitEthernet0/25
+ switchport mode access
+ spanning-tree portfast
+ spanning-tree bpduguard enable
+!
+interface GigabitEthernet0/26
+ switchport mode access
+ spanning-tree portfast
+ spanning-tree bpduguard enable
+!
+interface GigabitEthernet0/27
+ switchport mode access
+ spanning-tree portfast
+ spanning-tree bpduguard enable
+!
+interface GigabitEthernet0/28
+ switchport mode access
+ spanning-tree portfast
+ spanning-tree bpduguard enable
+!
+interface GigabitEthernet0/29
+ switchport mode access
+ spanning-tree portfast
+ spanning-tree bpduguard enable
+!
+interface GigabitEthernet0/30
+ switchport mode access
+ switchport port-security maximum 2
+ speed 100
+ duplex full
+ spanning-tree portfast
+ spanning-tree bpduguard enable
+!
+interface GigabitEthernet0/31
+ switchport mode access
+ spanning-tree portfast
+ spanning-tree bpduguard enable
+!
+interface GigabitEthernet0/32
+ description mishina
+ switchport mode access
+ spanning-tree portfast
+ spanning-tree bpduguard enable
+!
+interface GigabitEthernet0/33
+ switchport mode access
+ spanning-tree portfast
+ spanning-tree bpduguard enable
+!
+interface GigabitEthernet0/34
+ switchport mode access
+ spanning-tree portfast
+ spanning-tree bpduguard enable
+!
+interface GigabitEthernet0/35
+ switchport mode access
+ spanning-tree portfast
+ spanning-tree bpduguard enable
+!
+interface GigabitEthernet0/36
+ switchport mode access
+ spanning-tree portfast
+ spanning-tree bpduguard enable
+!
+interface GigabitEthernet0/37
+ switchport mode access
+ spanning-tree portfast
+ spanning-tree bpduguard enable
+!
+interface GigabitEthernet0/38
+ switchport mode access
+ spanning-tree portfast
+ spanning-tree bpduguard enable
+!
+interface GigabitEthernet0/39
+ switchport mode access
+ spanning-tree portfast
+ spanning-tree bpduguard enable
+!
+interface GigabitEthernet0/40
+ switchport access vlan 14
+ switchport mode access
+ spanning-tree portfast
+ spanning-tree bpduguard enable
+!
+interface GigabitEthernet0/41
+ switchport mode access
+ spanning-tree portfast
+ spanning-tree bpduguard enable
+!
+interface GigabitEthernet0/42
+ switchport mode access
+ spanning-tree portfast
+ spanning-tree bpduguard enable
+!
+interface GigabitEthernet0/43
+ switchport mode access
+ spanning-tree portfast
+ spanning-tree bpduguard enable
+!
+interface GigabitEthernet0/44
+ switchport mode access
+ spanning-tree portfast
+ spanning-tree bpduguard enable
+!
+interface GigabitEthernet0/45
+ description WIFI
+ switchport mode trunk
+!
+interface GigabitEthernet0/46
+ description WIFI
+ switchport mode trunk
+!
+interface GigabitEthernet0/47
+ description SWITCH
+ switchport mode trunk
+!
+interface GigabitEthernet0/48
+ description SWITCH
+ switchport mode trunk
+!
+interface Vlan1
+ ip address 10.0.2.10 255.255.255.0
+ no ip route-cache
+!
+ip default-gateway 10.0.2.11
+ip http server
+ip http secure-server
+ip sla enable reaction-alerts
+access-list 5 permit 10.0.2.180
+snmp-server community public RO
+snmp-server enable traps snmp authentication linkdown linkup coldstart warmstart
+snmp-server enable traps tty
+snmp-server enable traps cluster
+snmp-server enable traps entity
+snmp-server enable traps cpu threshold
+snmp-server enable traps vtp
+snmp-server enable traps vlancreate
+snmp-server enable traps vlandelete
+snmp-server enable traps flash insertion removal
+snmp-server enable traps port-security
+snmp-server enable traps envmon fan shutdown supply temperature status
+snmp-server enable traps config-copy
+snmp-server enable traps config
+snmp-server enable traps bridge newroot topologychange
+snmp-server enable traps stpx inconsistency root-inconsistency loop-inconsistency
+snmp-server enable traps syslog
+snmp-server enable traps mac-notification change move threshold
+snmp-server enable traps vlan-membership
+banner motd ^C
+***************************
+*      HELLO     *
+It Cisco Switch MC Kolmar LLC
+If you are not authorized for work with this switch
+please, disconnect from this console
+***************************
+^C
+!
+line con 0
+ exec-timeout 60 0
+ password 7 01252D160C1B3E17291D4B
+ logging synchronous
+ login local
+line vty 0 4
+ exec-timeout 90 0
+ logging synchronous
+ login local
+ transport input ssh
+line vty 5 15
+ exec-timeout 90 0
+ logging synchronous
+ login local
+ transport input ssh
+!
+ntp clock-period 36029352
+ntp server 194.190.168.1
+end
+
+
+
+$ show version
+Cisco IOS Software, C2960 Software (C2960-LANBASEK9-M), Version 12.2(53)SE2, RELEASE SOFTWARE (fc3)
+Technical Support: http://www.cisco.com/techsupport
+Copyright (c) 1986-2010 by Cisco Systems, Inc.
+Compiled Wed 21-Apr-10 05:52 by prod_rel_team
+Image text-base: 0x00003000, data-base: 0x01500000
+
+ROM: Bootstrap program is C2960 boot loader
+BOOTLDR: C2960 Boot Loader (C2960-HBOOT-M) Version 12.2(44)SE5, RELEASE SOFTWARE (fc1)
+
+MSK-NSWS-03-2-10 uptime is 1 year, 17 weeks, 5 days, 23 hours, 42 minutes
+System returned to ROM by power-on
+System restarted at 07:52:17 MSK Fri Jun 7 2024
+System image file is "flash:/c2960-lanbasek9-mz.122-53.SE2.bin"
+
+
+This product contains cryptographic features and is subject to United
+States and local country laws governing import, export, transfer and
+use. Delivery of Cisco cryptographic products does not imply
+third-party authority to import, export, distribute or use encryption.
+Importers, exporters, distributors and users are responsible for
+compliance with U.S. and local country laws. By using this product you
+agree to comply with applicable laws and regulations. If you are unable
+to comply with U.S. and local laws, return this product immediately.
+
+A summary of U.S. laws governing Cisco cryptographic products may be found at:
+http://www.cisco.com/wwl/export/crypto/tool/stqrg.html
+
+If you require further assistance please contact us by sending email to
+export@cisco.com.
+
+cisco WS-C2960G-48TC-L (PowerPC405) processor (revision C0) with 65536K bytes of memory.
+Processor board ID FOC1204X30B
+Last reset from power-on
+1 Virtual Ethernet interface
+48 Gigabit Ethernet interfaces
+The password-recovery mechanism is enabled.
+
+64K bytes of flash-simulated non-volatile configuration memory.
+Base ethernet MAC Address       : 00:1F:27:BD:D8:80
+Motherboard assembly number     : 73-10300-07
+Power supply part number        : 341-0098-02
+Motherboard serial number       : FOC12043F4B
+Power supply serial number      : AZS120321PW
+Model revision number           : C0
+Motherboard revision number     : A0
+Model number                    : WS-C2960G-48TC-L
+System serial number            : FOC1204X30B
+Top Assembly Part Number        : 800-27071-02
+Top Assembly Revision Number    : A0
+Version ID                      : V02
+CLEI Code Number                : COM4A10BRB
+Hardware Board Revision Number  : 0x01
+
+
+Switch Ports Model              SW Version            SW Image                 
+------ ----- -----              ----------            ----------               
+*    1 48    WS-C2960G-48TC-L   12.2(53)SE2           C2960-LANBASEK9-M        
+
+
+Configuration register is 0xF
+
+
+
+$ show cdp neighbors detail
+-------------------------
+Device ID: MSK-NSWR-01-2-11.kolmar.local
+Entry address(es): 
+  IP address: 10.0.2.11
+Platform: cisco WS-C3560G-48TS,  Capabilities: Router Switch IGMP 
+Interface: GigabitEthernet0/48,  Port ID (outgoing port): GigabitEthernet0/48
+Holdtime : 140 sec
+
+Version :
+Cisco IOS Software, C3560 Software (C3560-IPSERVICESK9-M), Version 12.2(55)SE10, RELEASE SOFTWARE (fc2)
+Technical Support: http://www.cisco.com/techsupport
+Copyright (c) 1986-2015 by Cisco Systems, Inc.
+Compiled Wed 11-Feb-15 11:34 by prod_rel_team
+
+advertisement version: 2
+Protocol Hello:  OUI=0x00000C, Protocol ID=0x0112; payload len=27, value=00000000FFFFFFFF010221FF00000000000000169D07AB80FF0000
+VTP Management Domain: 'Kolmar-lan'
+Native VLAN: 1
+Duplex: full
+Management address(es): 
+  IP address: 10.0.2.11
+
+-------------------------
+Device ID: MSK-NSWS-01-2-41
+Entry address(es): 
+  IP address: 10.0.2.41
+Platform: cisco C1000-48P-4G-L,  Capabilities: Switch IGMP 
+Interface: GigabitEthernet0/47,  Port ID (outgoing port): GigabitEthernet1/0/18
+Holdtime : 178 sec
+
+Version :
+Cisco IOS Software, C1000 Software (C1000-UNIVERSALK9-M), Version 15.2(7)E4, RELEASE SOFTWARE (fc2)
+Technical Support: http://www.cisco.com/techsupport
+Copyright (c) 1986-2021 by Cisco Systems, Inc.
+Compiled Mon 08-Mar-21 09:07 by prod_rel_team
+
+advertisement version: 2
+VTP Management Domain: ''
+Native VLAN: 1
+Duplex: full
+Management address(es): 
+  IP address: 10.0.2.41
+
+
+
+$ show lldp neighbors detail
+% LLDP is not enabled
+
+
+$ show interface status
+
+Port      Name               Status       Vlan       Duplex  Speed Type
+Gi0/1     ISR Router         connected    trunk      a-full a-1000 10/100/1000BaseTX
+Gi0/2     ISR Router         connected    trunk      a-full a-1000 10/100/1000BaseTX
+Gi0/3     HYPER-V            connected    trunk      a-full a-1000 10/100/1000BaseTX
+Gi0/4     HYPER-V            connected    trunk      a-full a-1000 10/100/1000BaseTX
+Gi0/5     SERVERS            notconnect   1            auto   auto 10/100/1000BaseTX
+Gi0/6     SERVERS            connected    1            full    100 10/100/1000BaseTX
+Gi0/7     SERVERS            notconnect   1            auto   auto 10/100/1000BaseTX
+Gi0/8     SERVERS            notconnect   1            auto   auto 10/100/1000BaseTX
+Gi0/9                        connected    1          a-full a-1000 10/100/1000BaseTX
+Gi0/10                       notconnect   1            auto   auto 10/100/1000BaseTX
+Gi0/11                       notconnect   1            auto   auto 10/100/1000BaseTX
+Gi0/12                       notconnect   1            auto   auto 10/100/1000BaseTX
+Gi0/13                       notconnect   1            auto   auto 10/100/1000BaseTX
+Gi0/14                       connected    1          a-full  a-100 10/100/1000BaseTX
+Gi0/15                       connected    1          a-full a-1000 10/100/1000BaseTX
+Gi0/16                       notconnect   1            auto   auto 10/100/1000BaseTX
+Gi0/17                       notconnect   1            auto   auto 10/100/1000BaseTX
+Gi0/18                       notconnect   1            auto   auto 10/100/1000BaseTX
+Gi0/19                       notconnect   1            auto   auto 10/100/1000BaseTX
+Gi0/20                       notconnect   1            auto   auto 10/100/1000BaseTX
+Gi0/21                       connected    1          a-full  a-100 10/100/1000BaseTX
+Gi0/22                       notconnect   1            auto   auto 10/100/1000BaseTX
+Gi0/23                       notconnect   1            auto   auto 10/100/1000BaseTX
+Gi0/24    hohlov             connected    1          a-full a-1000 10/100/1000BaseTX
+Gi0/25                       err-disabled 1            auto   auto 10/100/1000BaseTX
+Gi0/26                       notconnect   1            auto   auto 10/100/1000BaseTX
+Gi0/27                       notconnect   1            auto   auto 10/100/1000BaseTX
+Gi0/28                       notconnect   1            auto   auto 10/100/1000BaseTX
+Gi0/29                       notconnect   1            auto   auto 10/100/1000BaseTX
+Gi0/30                       notconnect   1            full    100 10/100/1000BaseTX
+Gi0/31                       notconnect   1            auto   auto 10/100/1000BaseTX
+Gi0/32    mishina            notconnect   1            auto   auto 10/100/1000BaseTX
+Gi0/33                       connected    1          a-full   a-10 10/100/1000BaseTX
+Gi0/34                       notconnect   1            auto   auto 10/100/1000BaseTX
+Gi0/35                       notconnect   1            auto   auto 10/100/1000BaseTX
+Gi0/36                       notconnect   1            auto   auto 10/100/1000BaseTX
+Gi0/37                       connected    1          a-full a-1000 10/100/1000BaseTX
+Gi0/38                       notconnect   1            auto   auto 10/100/1000BaseTX
+Gi0/39                       notconnect   1            auto   auto 10/100/1000BaseTX
+Gi0/40                       connected    14         a-full a-1000 10/100/1000BaseTX
+Gi0/41                       connected    1          a-full a-1000 10/100/1000BaseTX
+Gi0/42                       notconnect   1            auto   auto 10/100/1000BaseTX
+Gi0/43                       notconnect   1            auto   auto 10/100/1000BaseTX
+Gi0/44                       notconnect   1            auto   auto 10/100/1000BaseTX
+Gi0/45    WIFI               notconnect   1            auto   auto Not Present
+Gi0/46    WIFI               notconnect   1            auto   auto Not Present
+Gi0/47    SWITCH             connected    trunk      a-full a-1000 10/100/1000BaseTX
+Gi0/48    SWITCH             connected    trunk      a-full a-1000 10/100/1000BaseTX
+Po1                          notconnect   unassigned   auto   auto 

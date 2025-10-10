@@ -1,0 +1,33 @@
+
+
+$ show running-config
+             ^
+% Invalid input detected at '^' marker.
+
+
+
+$ show version
+Firmware:
+ SW-8182/L(300W) 6.7.4
+ Build time: Jun 19 2023, 10:58:19
+Bootrom:
+ Bootrom 1.4.7
+
+ Build time: Sep 22 2021, 18:08:48
+
+
+
+$ show cdp neighbors detail
+             ^
+% Invalid input detected at '^' marker.
+
+
+
+$ show lldp neighbors detail
+                         ^
+% Invalid input detected at '^' marker.
+
+
+
+$ show interface status
+% Can't find interface status

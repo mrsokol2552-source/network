@@ -1,0 +1,183 @@
+
+
+$ show running-config
+Command: show
+Next possible completions: 
+802.1p              802.1x              aaa                 access_profile      
+account             accounting          acct_client         address_binding     
+arp_spoofing_prevention                 arpentry            attack_log          
+auth_client         auth_diagnostics    auth_session_statistics                 
+auth_statistics     authen              authen_enable       authen_login        
+authen_policy       authentication      authorization       autoconfig          
+bandwidth_control   block               boot_file           bpdu_protection     
+cfm                 command             command_history     
+community_encryption                    config              control_pkt         
+cpu                 cpu_filter          current_config      ddm                 
+device_status       dhcp_local_relay    dhcp_relay          
+dhcpv6_local_relay                      dhcpv6_relay        dos_prevention      
+dot1v_protocol_group                    dscp                duld                
+environment         erps                error               ethernet_oam        
+fdb                 filter              flow_meter          gratuitous_arp      
+greeting_message    gvrp                igmp                igmp_snooping       
+ipif                ipif_ipv6_link_local_auto               iproute             
+ipv6                ipv6route           jumbo_frame         l2protocol_tunnel   
+lacp_port           limited_multicast_addr                  link_aggregation    
+lldp                lldp_med            log                 log_save_timing     
+log_software_module                     loopdetect          
+mac_based_access_control                mac_based_access_control_local          
+mac_based_vlan      mac_notification    mac_protection      max_mcast_group     
+mcast_filter_profile                    mirror              mld_snooping        
+multicast           multicast_fdb       nlb                 packet              
+password_recovery   per_queue           port                port_security       
+port_security_entry                     port_vlan           ports               
+pppoe               private_vlan        pvid                qinq                
+radius              reboot              rmon                router_ports        
+safeguard_engine    scheduling          scheduling_mechanism                    
+serial_port         session             sflow               sim                 
+smtp                snmp                sntp                ssh                 
+ssl                 storage_media_info                      stp                 
+switch              syslog              system_severity     tech_support        
+terminal            terminal_line       tftp                time                
+time_range          traffic             traffic_segmentation                    
+trap                trusted_host        utilization         vlan                
+vlan_translation    vlan_trunk          voice_vlan          
+
+
+
+$ show version
+Command: show
+Next possible completions: 
+802.1p              802.1x              aaa                 access_profile      
+account             accounting          acct_client         address_binding     
+arp_spoofing_prevention                 arpentry            attack_log          
+auth_client         auth_diagnostics    auth_session_statistics                 
+auth_statistics     authen              authen_enable       authen_login        
+authen_policy       authentication      authorization       autoconfig          
+bandwidth_control   block               boot_file           bpdu_protection     
+cfm                 command             command_history     
+community_encryption                    config              control_pkt         
+cpu                 cpu_filter          current_config      ddm                 
+device_status       dhcp_local_relay    dhcp_relay          
+dhcpv6_local_relay                      dhcpv6_relay        dos_prevention      
+dot1v_protocol_group                    dscp                duld                
+environment         erps                error               ethernet_oam        
+fdb                 filter              flow_meter          gratuitous_arp      
+greeting_message    gvrp                igmp                igmp_snooping       
+ipif                ipif_ipv6_link_local_auto               iproute             
+ipv6                ipv6route           jumbo_frame         l2protocol_tunnel   
+lacp_port           limited_multicast_addr                  link_aggregation    
+lldp                lldp_med            log                 log_save_timing     
+log_software_module                     loopdetect          
+mac_based_access_control                mac_based_access_control_local          
+mac_based_vlan      mac_notification    mac_protection      max_mcast_group     
+mcast_filter_profile                    mirror              mld_snooping        
+multicast           multicast_fdb       nlb                 packet              
+password_recovery   per_queue           port                port_security       
+port_security_entry                     port_vlan           ports               
+pppoe               private_vlan        pvid                qinq                
+radius              reboot              rmon                router_ports        
+safeguard_engine    scheduling          scheduling_mechanism                    
+serial_port         session             sflow               sim                 
+smtp                snmp                sntp                ssh                 
+ssl                 storage_media_info                      stp                 
+switch              syslog              system_severity     tech_support        
+terminal            terminal_line       tftp                time                
+time_range          traffic             traffic_segmentation                    
+trap                trusted_host        utilization         vlan                
+vlan_translation    vlan_trunk          voice_vlan          
+
+
+
+$ show cdp neighbors detail
+Command: show
+Next possible completions: 
+802.1p              802.1x              aaa                 access_profile      
+account             accounting          acct_client         address_binding     
+arp_spoofing_prevention                 arpentry            attack_log          
+auth_client         auth_diagnostics    auth_session_statistics                 
+auth_statistics     authen              authen_enable       authen_login        
+authen_policy       authentication      authorization       autoconfig          
+bandwidth_control   block               boot_file           bpdu_protection     
+cfm                 command             command_history     
+community_encryption                    config              control_pkt         
+cpu                 cpu_filter          current_config      ddm                 
+device_status       dhcp_local_relay    dhcp_relay          
+dhcpv6_local_relay                      dhcpv6_relay        dos_prevention      
+dot1v_protocol_group                    dscp                duld                
+environment         erps                error               ethernet_oam        
+fdb                 filter              flow_meter          gratuitous_arp      
+greeting_message    gvrp                igmp                igmp_snooping       
+ipif                ipif_ipv6_link_local_auto               iproute             
+ipv6                ipv6route           jumbo_frame         l2protocol_tunnel   
+lacp_port           limited_multicast_addr                  link_aggregation    
+lldp                lldp_med            log                 log_save_timing     
+log_software_module                     loopdetect          
+mac_based_access_control                mac_based_access_control_local          
+mac_based_vlan      mac_notification    mac_protection      max_mcast_group     
+mcast_filter_profile                    mirror              mld_snooping        
+multicast           multicast_fdb       nlb                 packet              
+password_recovery   per_queue           port                port_security       
+port_security_entry                     port_vlan           ports               
+pppoe               private_vlan        pvid                qinq                
+radius              reboot              rmon                router_ports        
+safeguard_engine    scheduling          scheduling_mechanism                    
+serial_port         session             sflow               sim                 
+smtp                snmp                sntp                ssh                 
+ssl                 storage_media_info                      stp                 
+switch              syslog              system_severity     tech_support        
+terminal            terminal_line       tftp                time                
+time_range          traffic             traffic_segmentation                    
+trap                trusted_host        utilization         vlan                
+vlan_translation    vlan_trunk          voice_vlan          
+
+
+
+$ show lldp neighbors detail
+Command: show lldp
+Next possible completions: 
+{}                  local_ports         mgt_addr            ports               
+remote_ports        statistics          
+
+
+
+$ show interface status
+Command: show
+Next possible completions: 
+802.1p              802.1x              aaa                 access_profile      
+account             accounting          acct_client         address_binding     
+arp_spoofing_prevention                 arpentry            attack_log          
+auth_client         auth_diagnostics    auth_session_statistics                 
+auth_statistics     authen              authen_enable       authen_login        
+authen_policy       authentication      authorization       autoconfig          
+bandwidth_control   block               boot_file           bpdu_protection     
+cfm                 command             command_history     
+community_encryption                    config              control_pkt         
+cpu                 cpu_filter          current_config      ddm                 
+device_status       dhcp_local_relay    dhcp_relay          
+dhcpv6_local_relay                      dhcpv6_relay        dos_prevention      
+dot1v_protocol_group                    dscp                duld                
+environment         erps                error               ethernet_oam        
+fdb                 filter              flow_meter          gratuitous_arp      
+greeting_message    gvrp                igmp                igmp_snooping       
+ipif                ipif_ipv6_link_local_auto               iproute             
+ipv6                ipv6route           jumbo_frame         l2protocol_tunnel   
+lacp_port           limited_multicast_addr                  link_aggregation    
+lldp                lldp_med            log                 log_save_timing     
+log_software_module                     loopdetect          
+mac_based_access_control                mac_based_access_control_local          
+mac_based_vlan      mac_notification    mac_protection      max_mcast_group     
+mcast_filter_profile                    mirror              mld_snooping        
+multicast           multicast_fdb       nlb                 packet              
+password_recovery   per_queue           port                port_security       
+port_security_entry                     port_vlan           ports               
+pppoe               private_vlan        pvid                qinq                
+radius              reboot              rmon                router_ports        
+safeguard_engine    scheduling          scheduling_mechanism                    
+serial_port         session             sflow               sim                 
+smtp                snmp                sntp                ssh                 
+ssl                 storage_media_info                      stp                 
+switch              syslog              system_severity     tech_support        
+terminal            terminal_line       tftp                time                
+time_range          traffic             traffic_segmentation                    
+trap                trusted_host        utilization         vlan                
+vlan_translation    vlan_trunk          voice_vlan          

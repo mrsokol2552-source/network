@@ -1,0 +1,19 @@
+===== SCAN TEST START 30.09.2025 10:39:07,37 ===== 
+[INFO] Шаг: TextFSM-парсинг CLI
+[INFO] Загружено шаблонов: vendor=eltex_mes count=0
+[WARNING] Вендор osnova не задан в config.json->vendors
+[WARNING] Вендор fortigate не задан в config.json->vendors
+[WARNING] Вендор zyxel не задан в config.json->vendors
+[INFO] Загружено шаблонов: vendor=cisco_ios count=0
+[WARNING] Вендор nis не задан в config.json->vendors
+[INFO] Загружено шаблонов: vendor=dlink count=0
+[WARNING] Вендор brocade не задан в config.json->vendors
+[INFO] Загружено шаблонов: vendor=mikrotik count=0
+[INFO] Готово: C:\Users\zhiltsov.aa\Desktop\net-auto-mermaid\data\output\logs\parsed_textfsm.json
+[INFO] Pipeline OK
+[INFO] Шаг: Нормализация
+[INFO] Готово: C:\Users\zhiltsov.aa\Desktop\net-auto-mermaid\data\output\logs\normalized.json (nodes=0, edges=0, warnings=0)
+[INFO] Pipeline OK
+[INFO] Шаг: Рендер Mermaid
+[INFO] Готово: data\output\network.mmd
+[INFO] Pipeline OK

@@ -1,0 +1,5 @@
+# TextFSM template — huawei_vrp
+Value FillMeUp (.*)
+
+Start
+  ^.* -> Record

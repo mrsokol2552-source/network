@@ -1,0 +1,452 @@
+
+
+$ show running-config
+Building configuration...
+
+Current configuration : 5267 bytes
+!
+! Last configuration change at 05:17:31 UTC Tue Sep 30 2025 by volodin_s
+! NVRAM config last updated at 05:25:25 UTC Tue Sep 30 2025 by volodin_s
+!
+version 15.2
+no service pad
+service timestamps debug datetime msec
+service timestamps log datetime msec
+no service password-encryption
+!
+hostname MSK-NSWS-01-2-41
+!
+boot-start-marker
+boot-end-marker
+!
+enable secret 5 $1$4P0L$uMvJ4fIKw/oV4hsOD5pHa.
+!
+username itdep privilege 15 secret 5 $1$9HdO$ztL3aP8Dz2JwgocybNZEW.
+username volodin_s privilege 15 secret 9 $9$rrDur7D/8RnL1m$FQrr9TdQo6pqh.PsjbR/beHAFuMY0v4J5/gjIs./wIk
+username zhiltsov_a privilege 15 secret 9 $9$KYAyTKyTAzAUrM$4dbSYEP2BHrfd19SjS./fZLLxyImMnpS/nChfk4YaEM
+no aaa new-model
+switch 1 provision c1000-48p-4g-l
+system mtu routing 1500
+!
+!
+vtp mode off
+!
+!
+!
+!
+!
+!
+crypto pki trustpoint TP-self-signed-3442776448
+ enrollment selfsigned
+ subject-name cn=IOS-Self-Signed-Certificate-3442776448
+ revocation-check none
+ rsakeypair TP-self-signed-3442776448
+!
+!
+crypto pki certificate chain TP-self-signed-3442776448
+ certificate self-signed 01
+  3082022B 30820194 A0030201 02020101 300D0609 2A864886 F70D0101 05050030 
+  31312F30 2D060355 04031326 494F532D 53656C66 2D536967 6E65642D 43657274 
+  69666963 6174652D 33343432 37373634 3438301E 170D3235 30393234 31393134 
+  35365A17 0D333030 31303130 30303030 305A3031 312F302D 06035504 03132649 
+  4F532D53 656C662D 5369676E 65642D43 65727469 66696361 74652D33 34343237 
+  37363434 3830819F 300D0609 2A864886 F70D0101 01050003 818D0030 81890281 
+  8100AF26 AB36C42B FC65C455 D93CF11F 23AC4333 DEB5E056 87E25AC6 E00717D0 
+  8EF86535 C32D6C74 F4F82130 B67BFEAB CDBF1FC4 6AA48ED9 872359C4 046E04F7 
+  97310F7F 76F50D72 0499589D 5C62FD96 00652178 5368D5B8 FD88095F 3CCA959B 
+  B0F59980 AD11C12B E80C54CC 82CD57AC FA92390B 16E8F72D A1418BC5 756C37C7 
+  AFDD0203 010001A3 53305130 0F060355 1D130101 FF040530 030101FF 301F0603 
+  551D2304 18301680 1483ED61 7955E552 E2A1ED55 B89B57AD 705FC160 F7301D06 
+  03551D0E 04160414 83ED6179 55E552E2 A1ED55B8 9B57AD70 5FC160F7 300D0609 
+  2A864886 F70D0101 05050003 81810039 FCA90C54 62AF86E5 5F261976 DAA757AB 
+  309D192D 7FFE0144 6F2F779F 69A8CD30 E281CAAF 42FCA0C7 E1372CAA 5826056F 
+  7FF40298 E441DEBD 3769A87B 32269943 A17F1721 2DC38F70 CE373B7E D08D5AE3 
+  E5AD6849 51972430 7C032CE9 99FA438F E6E61402 C0BAC6CA 41D805E9 F9F06026 
+  64C110BA 29382764 39993A2F 7D344F
+  	quit
+!
+spanning-tree mode rapid-pvst
+spanning-tree extend system-id
+!
+vlan internal allocation policy ascending
+!
+vlan 9
+ name PhoneStation
+!
+vlan 10
+ name Servers
+!
+vlan 12
+ name Admin
+!
+vlan 13
+ name Phones
+!
+vlan 14
+ name VKS
+!
+vlan 17
+ name Transport
+!
+vlan 20
+ name Users
+!
+vlan 21
+ name Printers
+!
+vlan 30
+ name Wi-Fi
+!
+vlan 31
+ name Wifi_guest
+!
+vlan 32
+ name Wifi_Work
+!
+vlan 33
+ name Wifi_Staff
+!
+vlan 34
+ name Wifi_General
+!
+vlan 36
+ name Wifi_VIPGuest
+!
+vlan 130
+ name WiFi_NEW
+!
+vlan 131-134 
+!
+vlan 135
+ name Wifi-IoT
+!
+vlan 136 
+!
+vlan 141
+ name RESERV-VKS
+!
+vlan 220
+ name UPS
+!
+vlan 2034
+ name Endymion(Users)
+!
+!
+!
+!
+!
+!
+interface GigabitEthernet1/0/1
+!
+interface GigabitEthernet1/0/2
+!
+interface GigabitEthernet1/0/3
+!
+interface GigabitEthernet1/0/4
+!
+interface GigabitEthernet1/0/5
+!
+interface GigabitEthernet1/0/6
+!
+interface GigabitEthernet1/0/7
+!
+interface GigabitEthernet1/0/8
+!
+interface GigabitEthernet1/0/9
+!
+interface GigabitEthernet1/0/10
+!
+interface GigabitEthernet1/0/11
+!
+interface GigabitEthernet1/0/12
+!
+interface GigabitEthernet1/0/13
+!
+interface GigabitEthernet1/0/14
+!
+interface GigabitEthernet1/0/15
+!
+interface GigabitEthernet1/0/16
+!
+interface GigabitEthernet1/0/17
+!
+interface GigabitEthernet1/0/18
+!
+interface GigabitEthernet1/0/19
+!
+interface GigabitEthernet1/0/20
+!
+interface GigabitEthernet1/0/21
+!
+interface GigabitEthernet1/0/22
+!
+interface GigabitEthernet1/0/23
+!
+interface GigabitEthernet1/0/24
+!
+interface GigabitEthernet1/0/25
+!
+interface GigabitEthernet1/0/26
+!
+interface GigabitEthernet1/0/27
+!
+interface GigabitEthernet1/0/28
+!
+interface GigabitEthernet1/0/29
+!
+interface GigabitEthernet1/0/30
+!
+interface GigabitEthernet1/0/31
+!
+interface GigabitEthernet1/0/32
+!
+interface GigabitEthernet1/0/33
+!
+interface GigabitEthernet1/0/34
+!
+interface GigabitEthernet1/0/35
+!
+interface GigabitEthernet1/0/36
+!
+interface GigabitEthernet1/0/37
+!
+interface GigabitEthernet1/0/38
+!
+interface GigabitEthernet1/0/39
+!
+interface GigabitEthernet1/0/40
+!
+interface GigabitEthernet1/0/41
+!
+interface GigabitEthernet1/0/42
+!
+interface GigabitEthernet1/0/43
+!
+interface GigabitEthernet1/0/44
+!
+interface GigabitEthernet1/0/45
+!
+interface GigabitEthernet1/0/46
+!
+interface GigabitEthernet1/0/47
+!
+interface GigabitEthernet1/0/48
+!
+interface GigabitEthernet1/0/49
+!
+interface GigabitEthernet1/0/50
+!
+interface GigabitEthernet1/0/51
+!
+interface GigabitEthernet1/0/52
+!
+interface Vlan1
+ ip address 10.0.2.41 255.255.255.0
+ no ip route-cache
+!
+ip http server
+ip http banner
+ip http secure-server
+ip ssh time-out 30
+ip ssh version 2
+ip ssh dscp 0
+!
+!
+!
+snmp-server community public RO
+snmp mib flash cache
+!
+line con 0
+ login local
+line vty 0 4
+ exec-timeout 90 0
+ logging synchronous
+ login local
+ transport input ssh
+line vty 5 15
+ exec-timeout 90 0
+ logging synchronous
+ login local
+ transport input ssh
+!
+ntp server ip pool.ntp.org
+ntp server ip time-pnp.cisco.com
+end
+
+
+
+$ show version
+Cisco IOS Software, C1000 Software (C1000-UNIVERSALK9-M), Version 15.2(7)E4, RELEASE SOFTWARE (fc2)
+Technical Support: http://www.cisco.com/techsupport
+Copyright (c) 1986-2021 by Cisco Systems, Inc.
+Compiled Mon 08-Mar-21 09:07 by prod_rel_team
+
+ROM: Bootstrap program is c1000 boot loader
+BOOTLDR: C1000 Boot Loader (C1000-HBOOT-M) Version 15.2(7r)E3, RELEASE SOFTWARE (fc4)
+
+MSK-NSWS-01-2-41 uptime is 2 weeks, 1 day, 10 hours, 7 minutes
+System returned to ROM by power-on
+System restarted at 18:38:15 UTC Wed Sep 24 2025
+System image file is "flash:/c1000-universalk9-mz.152-7.E4/c1000-universalk9-mz.152-7.E4.bin"
+Last reload reason: power-on
+
+
+
+This product contains cryptographic features and is subject to United
+States and local country laws governing import, export, transfer and
+use. Delivery of Cisco cryptographic products does not imply
+third-party authority to import, export, distribute or use encryption.
+Importers, exporters, distributors and users are responsible for
+compliance with U.S. and local country laws. By using this product you
+agree to comply with applicable laws and regulations. If you are unable
+to comply with U.S. and local laws, return this product immediately.
+
+A summary of U.S. laws governing Cisco cryptographic products may be found at:
+http://www.cisco.com/wwl/export/crypto/tool/stqrg.html
+
+If you require further assistance please contact us by sending email to
+export@cisco.com.
+
+cisco C1000-48P-4G-L (Marvell PJ4B (584) v7 (Rev 2)) processor (revision D0) with 524288K bytes of memory.
+Processor board ID PSZ25321A72
+Last reset from Reload
+1 Virtual Ethernet interface
+52 Gigabit Ethernet interfaces
+The password-recovery mechanism is enabled.
+
+512K bytes of flash-simulated non-volatile configuration memory.
+Base ethernet MAC Address       : A4:9B:CD:34:99:80
+Motherboard assembly number     : 69BBA5M12A02
+Power supply part number        : 341-0528-02
+Motherboard serial number       : 2115202700722
+Power supply serial number      : DCC242690YP
+Model revision number           : D0
+Motherboard revision number     : 2
+Model number                    : C1000-48P-4G-L
+Daughterboard assembly number   : 69BBA5Y10A01
+Daughterboard serial number     : 2115202801291
+System serial number            : PSZ25321A72
+Top Assembly Part Number        : 74-122918-01
+Top Assembly Revision Number    : D0
+Version ID                      : V01
+CLEI Code Number                : CMM5500ARA
+Daughterboard revision number   : 2
+Hardware Board Revision Number  : 0x01
+
+
+Switch Ports Model                     SW Version            SW Image                 
+------ ----- -----                     ----------            ----------               
+*    1 52    C1000-48P-4G-L            15.2(7)E4             C1000-UNIVERSALK9-M      
+
+
+Configuration register is 0xF
+
+
+
+$ show cdp neighbors detail
+-------------------------
+Device ID: MSK-NSWS-03-2-10.kolmar.local
+Entry address(es): 
+  IP address: 10.0.2.10
+Platform: cisco WS-C2960G-48TC-L,  Capabilities: Switch IGMP 
+Interface: GigabitEthernet1/0/18,  Port ID (outgoing port): GigabitEthernet0/47
+Holdtime : 149 sec
+
+Version :
+Cisco IOS Software, C2960 Software (C2960-LANBASEK9-M), Version 12.2(53)SE2, RELEASE SOFTWARE (fc3)
+Technical Support: http://www.cisco.com/techsupport
+Copyright (c) 1986-2010 by Cisco Systems, Inc.
+Compiled Wed 21-Apr-10 05:52 by prod_rel_team
+
+advertisement version: 2
+Protocol Hello:  OUI=0x00000C, Protocol ID=0x0112; payload len=27, value=00000000FFFFFFFF010221FF000000000000001F27BDD880FF0000
+VTP Management Domain: 'Kolmar-lan'
+Native VLAN: 1
+Duplex: full
+Management address(es): 
+  IP address: 10.0.2.10
+
+-------------------------
+Device ID: MSK-NSWS-02-2-40
+Entry address(es): 
+  IP address: 10.0.2.40
+Platform: cisco C1000-48P-4G-L,  Capabilities: Switch IGMP 
+Interface: GigabitEthernet1/0/49,  Port ID (outgoing port): GigabitEthernet1/0/49
+Holdtime : 178 sec
+
+Version :
+Cisco IOS Software, C1000 Software (C1000-UNIVERSALK9-M), Version 15.2(7)E4, RELEASE SOFTWARE (fc2)
+Technical Support: http://www.cisco.com/techsupport
+Copyright (c) 1986-2021 by Cisco Systems, Inc.
+Compiled Mon 08-Mar-21 09:07 by prod_rel_team
+
+advertisement version: 2
+VTP Management Domain: ''
+Native VLAN: 1
+Duplex: full
+Management address(es): 
+  IP address: 10.0.2.40
+
+
+Total cdp entries displayed : 2
+
+
+$ show lldp neighbors detail
+% LLDP is not enabled
+
+
+$ show interface status
+
+Port      Name               Status       Vlan       Duplex  Speed Type 
+Gi1/0/1                      notconnect   1            auto   auto 10/100/1000BaseTX
+Gi1/0/2                      notconnect   1            auto   auto 10/100/1000BaseTX
+Gi1/0/3                      connected    1          a-full  a-100 10/100/1000BaseTX
+Gi1/0/4                      connected    1          a-full a-1000 10/100/1000BaseTX
+Gi1/0/5                      notconnect   1            auto   auto 10/100/1000BaseTX
+Gi1/0/6                      connected    1          a-full  a-100 10/100/1000BaseTX
+Gi1/0/7                      notconnect   1            auto   auto 10/100/1000BaseTX
+Gi1/0/8                      notconnect   1            auto   auto 10/100/1000BaseTX
+Gi1/0/9                      notconnect   1            auto   auto 10/100/1000BaseTX
+Gi1/0/10                     notconnect   1            auto   auto 10/100/1000BaseTX
+Gi1/0/11                     connected    1          a-full a-1000 10/100/1000BaseTX
+Gi1/0/12                     notconnect   1            auto   auto 10/100/1000BaseTX
+Gi1/0/13                     notconnect   1            auto   auto 10/100/1000BaseTX
+Gi1/0/14                     notconnect   1            auto   auto 10/100/1000BaseTX
+Gi1/0/15                     notconnect   1            auto   auto 10/100/1000BaseTX
+Gi1/0/16                     notconnect   1            auto   auto 10/100/1000BaseTX
+Gi1/0/17                     notconnect   1            auto   auto 10/100/1000BaseTX
+Gi1/0/18                     connected    trunk      a-full a-1000 10/100/1000BaseTX
+Gi1/0/19                     notconnect   1            auto   auto 10/100/1000BaseTX
+Gi1/0/20                     notconnect   1            auto   auto 10/100/1000BaseTX
+Gi1/0/21                     notconnect   1            auto   auto 10/100/1000BaseTX
+Gi1/0/22                     notconnect   1            auto   auto 10/100/1000BaseTX
+Gi1/0/23                     notconnect   1            auto   auto 10/100/1000BaseTX
+Gi1/0/24                     notconnect   1            auto   auto 10/100/1000BaseTX
+Gi1/0/25                     notconnect   1            auto   auto 10/100/1000BaseTX
+Gi1/0/26                     notconnect   1            auto   auto 10/100/1000BaseTX
+Gi1/0/27                     notconnect   1            auto   auto 10/100/1000BaseTX
+Gi1/0/28                     notconnect   1            auto   auto 10/100/1000BaseTX
+Gi1/0/29                     notconnect   1            auto   auto 10/100/1000BaseTX
+Gi1/0/30                     notconnect   1            auto   auto 10/100/1000BaseTX
+Gi1/0/31                     connected    1          a-full a-1000 10/100/1000BaseTX
+Gi1/0/32                     connected    1          a-full a-1000 10/100/1000BaseTX
+Gi1/0/33                     notconnect   1            auto   auto 10/100/1000BaseTX
+Gi1/0/34                     notconnect   1            auto   auto 10/100/1000BaseTX
+Gi1/0/35                     notconnect   1            auto   auto 10/100/1000BaseTX
+Gi1/0/36                     notconnect   1            auto   auto 10/100/1000BaseTX
+Gi1/0/37                     notconnect   1            auto   auto 10/100/1000BaseTX
+Gi1/0/38                     notconnect   1            auto   auto 10/100/1000BaseTX
+Gi1/0/39                     notconnect   1            auto   auto 10/100/1000BaseTX
+Gi1/0/40                     notconnect   1            auto   auto 10/100/1000BaseTX
+Gi1/0/41                     notconnect   1            auto   auto 10/100/1000BaseTX
+Gi1/0/42                     connected    1          a-full a-1000 10/100/1000BaseTX
+Gi1/0/43                     notconnect   1            auto   auto 10/100/1000BaseTX
+Gi1/0/44                     notconnect   1            auto   auto 10/100/1000BaseTX
+Gi1/0/45                     connected    1          a-full  a-100 10/100/1000BaseTX
+Gi1/0/46                     connected    1          a-full a-1000 10/100/1000BaseTX
+Gi1/0/47                     notconnect   1            auto   auto 10/100/1000BaseTX
+Gi1/0/48                     notconnect   1            auto   auto 10/100/1000BaseTX
+Gi1/0/49                     connected    trunk      a-full a-1000 1000BaseLX SFP
+Gi1/0/50                     notconnect   1            auto   auto Not Present
+Gi1/0/51                     err-disabled 1            auto   auto unknown
+Gi1/0/52                     notconnect   1            auto   auto Not Present

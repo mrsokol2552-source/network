@@ -1,0 +1,65 @@
+{
+  "project": {
+    "name": "Mermaid NetDocs",
+    "version": "0.1.0"
+  },
+  "paths": {
+    "output_mermaid": "data/output/network.mmd",
+    "logs_dir": "data/output/logs",
+    "standards_file": "mermaid_style.md",
+    "cli_dir": "data/raw",
+
+    "inventory_file": "data/input/inventory.json",
+    "parsed_textfsm": "data/output/logs/parsed_textfsm.json",
+    "normalized_file": "data/output/logs/normalized.json",
+    "raw_dir": "data/raw"
+  },
+  "render": {
+    "layout_engine": "elk",
+    "flow_direction": "LR",
+    "use_subgraphs": true,
+    "label_verbosity": "full",
+    "show_ports": true,
+    "show_vlans": true,
+    "show_ips": true,
+    "classes": ["core", "dist", "access", "wan", "dmz", "mgmt"]
+  },
+  "vendors": {
+    "cisco_ios": {
+      "platform_patterns": ["Cisco IOS", "IOS-XE", "C9200", "C2960", "C3560X"],
+      "textfsm_glob": "templates/textfsm/cisco_ios/*.template"
+    },
+    "eltex_mes": {
+      "platform_patterns": ["Eltex MES", "MES2424P", "MES2448B"],
+      "textfsm_glob": "templates/textfsm/eltex_mes/*.template"
+    },
+    "qtech": {
+      "platform_patterns": ["Qtech", "QSW", "QSW-28??"],
+      "textfsm_glob": "templates/textfsm/qtech/*.template"
+    },
+    "dlink": {
+      "platform_patterns": ["D-Link", "DES-3???", "DGS-3???"],
+      "textfsm_glob": "templates/textfsm/dlink/*.template"
+    },
+    "huawei_vrp": {
+      "platform_patterns": ["Huawei", "VRP"],
+      "textfsm_glob": "templates/textfsm/huawei_vrp/*.template"
+    },
+    "mikrotik": {
+      "platform_patterns": ["MikroTik", "RouterOS"],
+      "textfsm_glob": "templates/textfsm/mikrotik/*.template"
+    }
+  },
+  "rules": {
+    "device_name_format": "{site}-{role}-{oct1}-{oct2}-{id}",
+    "vlan_label_format": "VLAN {id} — {name}",
+    "edge_label_format": "{intf} | {speed} | {desc}"
+  },
+  "safety": {
+    "mask_passwords": true,
+    "mask_secrets": true
+  },
+  "logging": {
+    "level": "INFO"
+  }
+}

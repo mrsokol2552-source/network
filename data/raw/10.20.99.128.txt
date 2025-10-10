@@ -1,0 +1,73 @@
+
+
+$ show running-config
+[ERROR executing command: 
+Pattern not detected: 'NER\\-NSWS\\-05\\-99\\-128\\#' in output.
+
+Things you might try to fix this:
+1. Explicitly set your pattern using the expect_string argument.
+2. Increase the read_timeout to a larger value.
+
+You can also look at the Netmiko session_log or debug log for more information.
+
+]
+
+
+$ show version
+[ERROR executing command: 
+
+Pattern not detected: 'show\\ version' in output.
+
+Things you might try to fix this:
+1. Adjust the regex pattern to better identify the terminating string. Note, in
+many situations the pattern is automatically based on the network device's prompt.
+2. Increase the read_timeout to a larger value.
+
+You can also look at the Netmiko session_log or debug log for more information.
+
+]
+
+
+$ show cdp neighbors detail
+[ERROR executing command: 
+
+Pattern not detected: 'show\\ cdp\\ neighbors\\ detail' in output.
+
+Things you might try to fix this:
+1. Adjust the regex pattern to better identify the terminating string. Note, in
+many situations the pattern is automatically based on the network device's prompt.
+2. Increase the read_timeout to a larger value.
+
+You can also look at the Netmiko session_log or debug log for more information.
+
+]
+
+
+$ show lldp neighbors detail
+[ERROR executing command: 
+
+Pattern not detected: 'show\\ lldp\\ neighbors\\ detail' in output.
+
+Things you might try to fix this:
+1. Adjust the regex pattern to better identify the terminating string. Note, in
+many situations the pattern is automatically based on the network device's prompt.
+2. Increase the read_timeout to a larger value.
+
+You can also look at the Netmiko session_log or debug log for more information.
+
+]
+
+
+$ show interface status
+[ERROR executing command: 
+
+Pattern not detected: 'show\\ interface\\ status' in output.
+
+Things you might try to fix this:
+1. Adjust the regex pattern to better identify the terminating string. Note, in
+many situations the pattern is automatically based on the network device's prompt.
+2. Increase the read_timeout to a larger value.
+
+You can also look at the Netmiko session_log or debug log for more information.
+
+]

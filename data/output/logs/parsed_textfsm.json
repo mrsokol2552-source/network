@@ -1,0 +1,2588 @@
+{
+  "hosts": {
+    "MSK-NSWS-03-2-10": {
+      "vendor": "cisco_ios",
+      "raw_files": [
+        "10.0.2.10.txt"
+      ],
+      "parsed": {},
+      "errors": [
+        "no_templates_for_vendor:cisco_ios"
+      ]
+    },
+    "MSK-NSWR-01-2-11": {
+      "vendor": "cisco_ios",
+      "raw_files": [
+        "10.0.2.11.txt"
+      ],
+      "parsed": {},
+      "errors": [
+        "no_templates_for_vendor:cisco_ios"
+      ]
+    },
+    "MSK-NSWR-01-2-12": {
+      "vendor": "cisco_ios",
+      "raw_files": [
+        "10.0.2.12.txt"
+      ],
+      "parsed": {},
+      "errors": [
+        "no_templates_for_vendor:cisco_ios"
+      ]
+    },
+    "MSK-NSWS-02-2-40": {
+      "vendor": "cisco_ios",
+      "raw_files": [
+        "10.0.2.40.txt"
+      ],
+      "parsed": {},
+      "errors": [
+        "no_templates_for_vendor:cisco_ios"
+      ]
+    },
+    "MSK-NSWS-01-2-41": {
+      "vendor": "cisco_ios",
+      "raw_files": [
+        "10.0.2.41.txt"
+      ],
+      "parsed": {},
+      "errors": [
+        "no_templates_for_vendor:cisco_ios"
+      ]
+    },
+    "NSK-NSWR-01-99-1": {
+      "vendor": "cisco_ios",
+      "raw_files": [
+        "10.2.99.1.txt"
+      ],
+      "parsed": {},
+      "errors": [
+        "no_templates_for_vendor:cisco_ios"
+      ]
+    },
+    "NSK-NSWS-01-99-11": {
+      "vendor": "cisco_ios",
+      "raw_files": [
+        "10.2.99.11.txt"
+      ],
+      "parsed": {},
+      "errors": [
+        "no_templates_for_vendor:cisco_ios"
+      ]
+    },
+    "NSK-NSWS-01-99-5": {
+      "vendor": "cisco_ios",
+      "raw_files": [
+        "10.2.99.5.txt"
+      ],
+      "parsed": {},
+      "errors": [
+        "no_templates_for_vendor:cisco_ios"
+      ]
+    },
+    "NSK-NSWS-01-99-7": {
+      "vendor": "cisco_ios",
+      "raw_files": [
+        "10.2.99.7.txt"
+      ],
+      "parsed": {},
+      "errors": [
+        "no_templates_for_vendor:cisco_ios"
+      ]
+    },
+    "INA-NSWR-03-97-1": {
+      "vendor": "cisco_ios",
+      "raw_files": [
+        "10.20.97.1.txt"
+      ],
+      "parsed": {},
+      "errors": [
+        "no_templates_for_vendor:cisco_ios"
+      ]
+    },
+    "NER-NSWS-11-97-10": {
+      "vendor": "cisco_ios",
+      "raw_files": [
+        "10.20.97.10.txt"
+      ],
+      "parsed": {},
+      "errors": [
+        "no_templates_for_vendor:cisco_ios"
+      ]
+    },
+    "INA-NSWS-123-97-100": {
+      "vendor": "cisco_ios",
+      "raw_files": [
+        "10.20.97.100.txt"
+      ],
+      "parsed": {},
+      "errors": [
+        "no_templates_for_vendor:cisco_ios"
+      ]
+    },
+    "DEN-NSWS-111-97-11": {
+      "vendor": "cisco_ios",
+      "raw_files": [
+        "10.20.97.11.txt"
+      ],
+      "parsed": {},
+      "errors": [
+        "no_templates_for_vendor:cisco_ios"
+      ]
+    },
+    "NER-NSWS-17-97-3": {
+      "vendor": "cisco_ios",
+      "raw_files": [
+        "10.20.97.3.txt"
+      ],
+      "parsed": {},
+      "errors": [
+        "no_templates_for_vendor:cisco_ios"
+      ]
+    },
+    "NER-NSWS-13-97-4": {
+      "vendor": "cisco_ios",
+      "raw_files": [
+        "10.20.97.4.txt"
+      ],
+      "parsed": {},
+      "errors": [
+        "no_templates_for_vendor:cisco_ios"
+      ]
+    },
+    "NER-NSWS-12-97-5": {
+      "vendor": "cisco_ios",
+      "raw_files": [
+        "10.20.97.5.txt"
+      ],
+      "parsed": {},
+      "errors": [
+        "no_templates_for_vendor:cisco_ios"
+      ]
+    },
+    "NER-NSWS-14-97-6": {
+      "vendor": "cisco_ios",
+      "raw_files": [
+        "10.20.97.6.txt"
+      ],
+      "parsed": {},
+      "errors": [
+        "no_templates_for_vendor:cisco_ios"
+      ]
+    },
+    "NER-NSWS-16-97-7": {
+      "vendor": "cisco_ios",
+      "raw_files": [
+        "10.20.97.7.txt"
+      ],
+      "parsed": {},
+      "errors": [
+        "no_templates_for_vendor:cisco_ios"
+      ]
+    },
+    "NER-NSWS-15-97-9": {
+      "vendor": "cisco_ios",
+      "raw_files": [
+        "10.20.97.9.txt"
+      ],
+      "parsed": {},
+      "errors": [
+        "no_templates_for_vendor:cisco_ios"
+      ]
+    },
+    "DEN-NSWR-03-98-1": {
+      "vendor": "cisco_ios",
+      "raw_files": [
+        "10.20.98.1.txt"
+      ],
+      "parsed": {},
+      "errors": [
+        "no_templates_for_vendor:cisco_ios"
+      ]
+    },
+    "Switch": {
+      "vendor": "cisco_ios",
+      "raw_files": [
+        "10.20.99.60.txt"
+      ],
+      "parsed": {},
+      "errors": [
+        "no_templates_for_vendor:cisco_ios"
+      ]
+    },
+    "10.20.98.101": {
+      "vendor": "cisco_ios",
+      "raw_files": [
+        "10.20.98.101.txt"
+      ],
+      "parsed": {},
+      "errors": [
+        "no_templates_for_vendor:cisco_ios"
+      ]
+    },
+    "10.20.98.102": {
+      "vendor": "cisco_ios",
+      "raw_files": [
+        "10.20.98.102.txt"
+      ],
+      "parsed": {},
+      "errors": [
+        "no_templates_for_vendor:cisco_ios"
+      ]
+    },
+    "DEN-NSWS-14-98-129": {
+      "vendor": "cisco_ios",
+      "raw_files": [
+        "10.20.98.103.txt"
+      ],
+      "parsed": {},
+      "errors": [
+        "no_templates_for_vendor:cisco_ios"
+      ]
+    },
+    "10.20.98.104": {
+      "vendor": "cisco_ios",
+      "raw_files": [
+        "10.20.98.104.txt"
+      ],
+      "parsed": {},
+      "errors": [
+        "no_templates_for_vendor:cisco_ios"
+      ]
+    },
+    "DEN-NSWS-28-98-105": {
+      "vendor": "cisco_ios",
+      "raw_files": [
+        "10.20.98.105.txt"
+      ],
+      "parsed": {},
+      "errors": [
+        "no_templates_for_vendor:cisco_ios"
+      ]
+    },
+    "DEN-NSWS-27-98-106": {
+      "vendor": "cisco_ios",
+      "raw_files": [
+        "10.20.98.106.txt"
+      ],
+      "parsed": {},
+      "errors": [
+        "no_templates_for_vendor:cisco_ios"
+      ]
+    },
+    "DEN-NSWS-27-98-107": {
+      "vendor": "cisco_ios",
+      "raw_files": [
+        "10.20.98.107.txt"
+      ],
+      "parsed": {},
+      "errors": [
+        "no_templates_for_vendor:cisco_ios"
+      ]
+    },
+    "DEN-NSWS-27-98-108": {
+      "vendor": "cisco_ios",
+      "raw_files": [
+        "10.20.98.108.txt"
+      ],
+      "parsed": {},
+      "errors": [
+        "no_templates_for_vendor:cisco_ios"
+      ]
+    },
+    "DEN-NSWS-01-98-110": {
+      "vendor": "cisco_ios",
+      "raw_files": [
+        "10.20.98.110.txt"
+      ],
+      "parsed": {},
+      "errors": [
+        "no_templates_for_vendor:cisco_ios"
+      ]
+    },
+    "DEN-NSWS-98-112": {
+      "vendor": "cisco_ios",
+      "raw_files": [
+        "10.20.98.112.txt"
+      ],
+      "parsed": {},
+      "errors": [
+        "no_templates_for_vendor:cisco_ios"
+      ]
+    },
+    "DEN-NSWS-81-98-113": {
+      "vendor": "cisco_ios",
+      "raw_files": [
+        "10.20.98.113.txt"
+      ],
+      "parsed": {},
+      "errors": [
+        "no_templates_for_vendor:cisco_ios"
+      ]
+    },
+    "DEN-NSWS-41-98-114": {
+      "vendor": "cisco_ios",
+      "raw_files": [
+        "10.20.98.114.txt"
+      ],
+      "parsed": {},
+      "errors": [
+        "no_templates_for_vendor:cisco_ios"
+      ]
+    },
+    "DEN-NSWS-65-98-115": {
+      "vendor": "cisco_ios",
+      "raw_files": [
+        "10.20.98.115.txt"
+      ],
+      "parsed": {},
+      "errors": [
+        "no_templates_for_vendor:cisco_ios"
+      ]
+    },
+    "DEN-NSWS-49-98-117": {
+      "vendor": "cisco_ios",
+      "raw_files": [
+        "10.20.98.117.txt"
+      ],
+      "parsed": {},
+      "errors": [
+        "no_templates_for_vendor:cisco_ios"
+      ]
+    },
+    "DEN-NSWS-51-98-118": {
+      "vendor": "cisco_ios",
+      "raw_files": [
+        "10.20.98.118.txt"
+      ],
+      "parsed": {},
+      "errors": [
+        "no_templates_for_vendor:cisco_ios"
+      ]
+    },
+    "DEN-NSWS-50-98-119": {
+      "vendor": "cisco_ios",
+      "raw_files": [
+        "10.20.98.119.txt"
+      ],
+      "parsed": {},
+      "errors": [
+        "no_templates_for_vendor:cisco_ios"
+      ]
+    },
+    "DEN-NSWS-04-98-125": {
+      "vendor": "cisco_ios",
+      "raw_files": [
+        "10.20.98.125.txt"
+      ],
+      "parsed": {},
+      "errors": [
+        "no_templates_for_vendor:cisco_ios"
+      ]
+    },
+    "DEN-NSWS-16-98-126": {
+      "vendor": "cisco_ios",
+      "raw_files": [
+        "10.20.98.126.txt"
+      ],
+      "parsed": {},
+      "errors": [
+        "no_templates_for_vendor:cisco_ios"
+      ]
+    },
+    "DEN-NSWS-10-98-127": {
+      "vendor": "cisco_ios",
+      "raw_files": [
+        "10.20.98.127.txt"
+      ],
+      "parsed": {},
+      "errors": [
+        "no_templates_for_vendor:cisco_ios"
+      ]
+    },
+    "DEN-NSWS-08-98-128": {
+      "vendor": "cisco_ios",
+      "raw_files": [
+        "10.20.98.128.txt"
+      ],
+      "parsed": {},
+      "errors": [
+        "no_templates_for_vendor:cisco_ios"
+      ]
+    },
+    "Switch_5": {
+      "vendor": "cisco_ios",
+      "raw_files": [
+        "10.20.98.129.txt"
+      ],
+      "parsed": {},
+      "errors": [
+        "no_templates_for_vendor:cisco_ios"
+      ]
+    },
+    "DEN-NSWS-17-98-130": {
+      "vendor": "cisco_ios",
+      "raw_files": [
+        "10.20.98.130.txt"
+      ],
+      "parsed": {},
+      "errors": [
+        "no_templates_for_vendor:cisco_ios"
+      ]
+    },
+    "DEN-NSWS-60-98-131": {
+      "vendor": "cisco_ios",
+      "raw_files": [
+        "10.20.98.131.txt"
+      ],
+      "parsed": {},
+      "errors": [
+        "no_templates_for_vendor:cisco_ios"
+      ]
+    },
+    "DEN-NSWS-58-98-132": {
+      "vendor": "cisco_ios",
+      "raw_files": [
+        "10.20.98.132.txt"
+      ],
+      "parsed": {},
+      "errors": [
+        "no_templates_for_vendor:cisco_ios"
+      ]
+    },
+    "DEN-NSWS-59-98-134": {
+      "vendor": "cisco_ios",
+      "raw_files": [
+        "10.20.98.134.txt"
+      ],
+      "parsed": {},
+      "errors": [
+        "no_templates_for_vendor:cisco_ios"
+      ]
+    },
+    "CHU-NSWR-14-98-140": {
+      "vendor": "cisco_ios",
+      "raw_files": [
+        "10.20.98.140.txt"
+      ],
+      "parsed": {},
+      "errors": [
+        "no_templates_for_vendor:cisco_ios"
+      ]
+    },
+    "CHU-NSWS-14-98-141": {
+      "vendor": "cisco_ios",
+      "raw_files": [
+        "10.20.98.141.txt"
+      ],
+      "parsed": {},
+      "errors": [
+        "no_templates_for_vendor:cisco_ios"
+      ]
+    },
+    "CHU-NSWS-12-98-142": {
+      "vendor": "cisco_ios",
+      "raw_files": [
+        "10.20.98.142.txt"
+      ],
+      "parsed": {},
+      "errors": [
+        "no_templates_for_vendor:cisco_ios"
+      ]
+    },
+    "CHU-NSWS-01-98-143": {
+      "vendor": "cisco_ios",
+      "raw_files": [
+        "10.20.98.143.txt"
+      ],
+      "parsed": {},
+      "errors": [
+        "no_templates_for_vendor:cisco_ios"
+      ]
+    },
+    "CHU-NSWS-03-98-144": {
+      "vendor": "cisco_ios",
+      "raw_files": [
+        "10.20.98.144.txt"
+      ],
+      "parsed": {},
+      "errors": [
+        "no_templates_for_vendor:cisco_ios"
+      ]
+    },
+    "CHU-NSWS-07-98-145": {
+      "vendor": "cisco_ios",
+      "raw_files": [
+        "10.20.98.145.txt"
+      ],
+      "parsed": {},
+      "errors": [
+        "no_templates_for_vendor:cisco_ios"
+      ]
+    },
+    "CHU-NSWS-05-98-146": {
+      "vendor": "cisco_ios",
+      "raw_files": [
+        "10.20.98.146.txt"
+      ],
+      "parsed": {},
+      "errors": [
+        "no_templates_for_vendor:cisco_ios"
+      ]
+    },
+    "CHU-NSWS-06-98-147": {
+      "vendor": "cisco_ios",
+      "raw_files": [
+        "10.20.98.147.txt"
+      ],
+      "parsed": {},
+      "errors": [
+        "no_templates_for_vendor:cisco_ios"
+      ]
+    },
+    "CHU-NSWS-08-98-148": {
+      "vendor": "cisco_ios",
+      "raw_files": [
+        "10.20.98.148.txt"
+      ],
+      "parsed": {},
+      "errors": [
+        "no_templates_for_vendor:cisco_ios"
+      ]
+    },
+    "CHU-NSWS-10-98-149": {
+      "vendor": "cisco_ios",
+      "raw_files": [
+        "10.20.98.149.txt"
+      ],
+      "parsed": {},
+      "errors": [
+        "no_templates_for_vendor:cisco_ios"
+      ]
+    },
+    "CHU-NSWS-11-98-150": {
+      "vendor": "cisco_ios",
+      "raw_files": [
+        "10.20.98.150.txt"
+      ],
+      "parsed": {},
+      "errors": [
+        "no_templates_for_vendor:cisco_ios"
+      ]
+    },
+    "CHU-NSWS-22-98-151": {
+      "vendor": "cisco_ios",
+      "raw_files": [
+        "10.20.98.151.txt"
+      ],
+      "parsed": {},
+      "errors": [
+        "no_templates_for_vendor:cisco_ios"
+      ]
+    },
+    "INA-NSWS-21-98-153": {
+      "vendor": "cisco_ios",
+      "raw_files": [
+        "10.20.98.153.txt"
+      ],
+      "parsed": {},
+      "errors": [
+        "no_templates_for_vendor:cisco_ios"
+      ]
+    },
+    "CHU-NSWS-25-98-231": {
+      "vendor": "cisco_ios",
+      "raw_files": [
+        "10.20.98.231.txt"
+      ],
+      "parsed": {},
+      "errors": [
+        "no_templates_for_vendor:cisco_ios"
+      ]
+    },
+    "CHU-NSWS-24-98-232": {
+      "vendor": "cisco_ios",
+      "raw_files": [
+        "10.20.98.232.txt"
+      ],
+      "parsed": {},
+      "errors": [
+        "no_templates_for_vendor:cisco_ios"
+      ]
+    },
+    "CHU-NSWS-26-98-233": {
+      "vendor": "cisco_ios",
+      "raw_files": [
+        "10.20.98.233.txt"
+      ],
+      "parsed": {},
+      "errors": [
+        "no_templates_for_vendor:cisco_ios"
+      ]
+    },
+    "CHU-NSWS-23-98-235": {
+      "vendor": "cisco_ios",
+      "raw_files": [
+        "10.20.98.235.txt"
+      ],
+      "parsed": {},
+      "errors": [
+        "no_templates_for_vendor:cisco_ios"
+      ]
+    },
+    "DEN-NSWS-83-98-51": {
+      "vendor": "cisco_ios",
+      "raw_files": [
+        "10.20.98.51.txt"
+      ],
+      "parsed": {},
+      "errors": [
+        "no_templates_for_vendor:cisco_ios"
+      ]
+    },
+    "DEN-NSWS-106-98-53": {
+      "vendor": "cisco_ios",
+      "raw_files": [
+        "10.20.98.53.txt"
+      ],
+      "parsed": {},
+      "errors": [
+        "no_templates_for_vendor:cisco_ios"
+      ]
+    },
+    "DEN-NSWS-90-98-54": {
+      "vendor": "cisco_ios",
+      "raw_files": [
+        "10.20.98.54.txt"
+      ],
+      "parsed": {},
+      "errors": [
+        "no_templates_for_vendor:cisco_ios"
+      ]
+    },
+    "DEN-NSWS-89-98-55": {
+      "vendor": "cisco_ios",
+      "raw_files": [
+        "10.20.98.55.txt"
+      ],
+      "parsed": {},
+      "errors": [
+        "no_templates_for_vendor:cisco_ios"
+      ]
+    },
+    "DEN-NSWS-86-98-56": {
+      "vendor": "cisco_ios",
+      "raw_files": [
+        "10.20.98.56.txt"
+      ],
+      "parsed": {},
+      "errors": [
+        "no_templates_for_vendor:cisco_ios"
+      ]
+    },
+    "DEN-NSWS-88-98-57": {
+      "vendor": "cisco_ios",
+      "raw_files": [
+        "10.20.98.57.txt"
+      ],
+      "parsed": {},
+      "errors": [
+        "no_templates_for_vendor:cisco_ios"
+      ]
+    },
+    "DEN-NSWS-87-98-58": {
+      "vendor": "cisco_ios",
+      "raw_files": [
+        "10.20.98.58.txt"
+      ],
+      "parsed": {},
+      "errors": [
+        "no_templates_for_vendor:cisco_ios"
+      ]
+    },
+    "DEN-NSWS-18-98-65": {
+      "vendor": "cisco_ios",
+      "raw_files": [
+        "10.20.98.65.txt"
+      ],
+      "parsed": {},
+      "errors": [
+        "no_templates_for_vendor:cisco_ios"
+      ]
+    },
+    "DEN-NSWS-01-98-66": {
+      "vendor": "cisco_ios",
+      "raw_files": [
+        "10.20.98.66.txt"
+      ],
+      "parsed": {},
+      "errors": [
+        "no_templates_for_vendor:cisco_ios"
+      ]
+    },
+    "DEN-NSWS-22-98-67": {
+      "vendor": "cisco_ios",
+      "raw_files": [
+        "10.20.98.67.txt"
+      ],
+      "parsed": {},
+      "errors": [
+        "no_templates_for_vendor:cisco_ios"
+      ]
+    },
+    "DEN-NSWS-21-98-68": {
+      "vendor": "cisco_ios",
+      "raw_files": [
+        "10.20.98.68.txt"
+      ],
+      "parsed": {},
+      "errors": [
+        "no_templates_for_vendor:cisco_ios"
+      ]
+    },
+    "DEN-NSWS-21-98-69": {
+      "vendor": "cisco_ios",
+      "raw_files": [
+        "10.20.98.69.txt"
+      ],
+      "parsed": {},
+      "errors": [
+        "no_templates_for_vendor:cisco_ios"
+      ]
+    },
+    "INA-NSWS-46-98-70": {
+      "vendor": "cisco_ios",
+      "raw_files": [
+        "10.20.98.70.txt"
+      ],
+      "parsed": {},
+      "errors": [
+        "no_templates_for_vendor:cisco_ios"
+      ]
+    },
+    "INA-NSWS-08-98-73": {
+      "vendor": "cisco_ios",
+      "raw_files": [
+        "10.20.98.73.txt"
+      ],
+      "parsed": {},
+      "errors": [
+        "no_templates_for_vendor:cisco_ios"
+      ]
+    },
+    "DEN-NSWS-62-98-87": {
+      "vendor": "cisco_ios",
+      "raw_files": [
+        "10.20.98.87.txt"
+      ],
+      "parsed": {},
+      "errors": [
+        "no_templates_for_vendor:cisco_ios"
+      ]
+    },
+    "INA-NSWS-44-98-91": {
+      "vendor": "cisco_ios",
+      "raw_files": [
+        "10.20.98.91.txt"
+      ],
+      "parsed": {},
+      "errors": [
+        "no_templates_for_vendor:cisco_ios"
+      ]
+    },
+    "INA-NSWS-44-98-92": {
+      "vendor": "cisco_ios",
+      "raw_files": [
+        "10.20.98.92.txt"
+      ],
+      "parsed": {},
+      "errors": [
+        "no_templates_for_vendor:cisco_ios"
+      ]
+    },
+    "10.20.98.95": {
+      "vendor": "cisco_ios",
+      "raw_files": [
+        "10.20.98.95.txt"
+      ],
+      "parsed": {},
+      "errors": [
+        "no_templates_for_vendor:cisco_ios"
+      ]
+    },
+    "DEN-NSWS-01-98-96": {
+      "vendor": "cisco_ios",
+      "raw_files": [
+        "10.20.98.96.txt"
+      ],
+      "parsed": {},
+      "errors": [
+        "no_templates_for_vendor:cisco_ios"
+      ]
+    },
+    "DEN-NSWS-01-98-97": {
+      "vendor": "cisco_ios",
+      "raw_files": [
+        "10.20.98.97.txt"
+      ],
+      "parsed": {},
+      "errors": [
+        "no_templates_for_vendor:cisco_ios"
+      ]
+    },
+    "10.20.98.98": {
+      "vendor": "cisco_ios",
+      "raw_files": [
+        "10.20.98.98.txt"
+      ],
+      "parsed": {},
+      "errors": [
+        "no_templates_for_vendor:cisco_ios"
+      ]
+    },
+    "sw-ner-main": {
+      "vendor": "cisco_ios",
+      "raw_files": [
+        "10.20.99.1.txt"
+      ],
+      "parsed": {},
+      "errors": [
+        "no_templates_for_vendor:cisco_ios"
+      ]
+    },
+    "INA-NSWS-03-99-10": {
+      "vendor": "cisco_ios",
+      "raw_files": [
+        "10.20.99.10.txt"
+      ],
+      "parsed": {},
+      "errors": [
+        "no_templates_for_vendor:cisco_ios"
+      ]
+    },
+    "10.20.99.101": {
+      "vendor": "huawei_vrp",
+      "raw_files": [
+        "10.20.99.101.txt"
+      ],
+      "parsed": {},
+      "errors": [
+        "no_templates_for_vendor:huawei_vrp"
+      ]
+    },
+    "10.20.99.102": {
+      "vendor": "huawei_vrp",
+      "raw_files": [
+        "10.20.99.102.txt"
+      ],
+      "parsed": {},
+      "errors": [
+        "no_templates_for_vendor:huawei_vrp"
+      ]
+    },
+    "10.20.99.105": {
+      "vendor": "cisco_ios",
+      "raw_files": [
+        "10.20.99.105.txt"
+      ],
+      "parsed": {},
+      "errors": [
+        "no_templates_for_vendor:cisco_ios"
+      ]
+    },
+    "10.20.99.106": {
+      "vendor": "cisco_ios",
+      "raw_files": [
+        "10.20.99.106.txt"
+      ],
+      "parsed": {},
+      "errors": [
+        "no_templates_for_vendor:cisco_ios"
+      ]
+    },
+    "INA-NSWS-08-99-107": {
+      "vendor": "cisco_ios",
+      "raw_files": [
+        "10.20.99.107.txt"
+      ],
+      "parsed": {},
+      "errors": [
+        "no_templates_for_vendor:cisco_ios"
+      ]
+    },
+    "INA-NSWS-118-99-108": {
+      "vendor": "cisco_ios",
+      "raw_files": [
+        "10.20.99.108.txt"
+      ],
+      "parsed": {},
+      "errors": [
+        "no_templates_for_vendor:cisco_ios"
+      ]
+    },
+    "INA-NSWS-20-99-109": {
+      "vendor": "cisco_ios",
+      "raw_files": [
+        "10.20.99.109.txt"
+      ],
+      "parsed": {},
+      "errors": [
+        "no_templates_for_vendor:cisco_ios"
+      ]
+    },
+    "DEN-NSWS-03-99-11": {
+      "vendor": "eltex_mes",
+      "raw_files": [
+        "10.20.99.11.txt"
+      ],
+      "parsed": {},
+      "errors": [
+        "no_templates_for_vendor:eltex_mes"
+      ]
+    },
+    "DEN-NSWS-63-99-112": {
+      "vendor": "cisco_ios",
+      "raw_files": [
+        "10.20.99.112.txt"
+      ],
+      "parsed": {},
+      "errors": [
+        "no_templates_for_vendor:cisco_ios"
+      ]
+    },
+    "10.20.99.113": {
+      "vendor": "cisco_ios",
+      "raw_files": [
+        "10.20.99.113.txt"
+      ],
+      "parsed": {},
+      "errors": [
+        "no_templates_for_vendor:cisco_ios"
+      ]
+    },
+    "DEN-NSWS-24-99-114": {
+      "vendor": "cisco_ios",
+      "raw_files": [
+        "10.20.99.114.txt"
+      ],
+      "parsed": {},
+      "errors": [
+        "no_templates_for_vendor:cisco_ios"
+      ]
+    },
+    "DEN-NSWS-24-99-115": {
+      "vendor": "cisco_ios",
+      "raw_files": [
+        "10.20.99.115.txt"
+      ],
+      "parsed": {},
+      "errors": [
+        "no_templates_for_vendor:cisco_ios"
+      ]
+    },
+    "DEN-NSWS-24-99-116": {
+      "vendor": "cisco_ios",
+      "raw_files": [
+        "10.20.99.116.txt"
+      ],
+      "parsed": {},
+      "errors": [
+        "no_templates_for_vendor:cisco_ios"
+      ]
+    },
+    "DEN-NSWS-24-99-117": {
+      "vendor": "cisco_ios",
+      "raw_files": [
+        "10.20.99.117.txt"
+      ],
+      "parsed": {},
+      "errors": [
+        "no_templates_for_vendor:cisco_ios"
+      ]
+    },
+    "DEN-NSWS-29-99-118": {
+      "vendor": "cisco_ios",
+      "raw_files": [
+        "10.20.99.118.txt"
+      ],
+      "parsed": {},
+      "errors": [
+        "no_templates_for_vendor:cisco_ios"
+      ]
+    },
+    "INA-NSWS-41-99-119": {
+      "vendor": "cisco_ios",
+      "raw_files": [
+        "10.20.99.119.txt"
+      ],
+      "parsed": {},
+      "errors": [
+        "no_templates_for_vendor:cisco_ios"
+      ]
+    },
+    "DEN-NSWS-16-99-12": {
+      "vendor": "cisco_ios",
+      "raw_files": [
+        "10.20.99.12.txt"
+      ],
+      "parsed": {},
+      "errors": [
+        "no_templates_for_vendor:cisco_ios"
+      ]
+    },
+    "DEN-NSWS-64-99-120": {
+      "vendor": "cisco_ios",
+      "raw_files": [
+        "10.20.99.120.txt"
+      ],
+      "parsed": {},
+      "errors": [
+        "no_templates_for_vendor:cisco_ios"
+      ]
+    },
+    "DEN-NSWS-23-99-121": {
+      "vendor": "cisco_ios",
+      "raw_files": [
+        "10.20.99.121.txt"
+      ],
+      "parsed": {},
+      "errors": [
+        "no_templates_for_vendor:cisco_ios"
+      ]
+    },
+    "DEN-NSWS-109-99-122": {
+      "vendor": "cisco_ios",
+      "raw_files": [
+        "10.20.99.122.txt"
+      ],
+      "parsed": {},
+      "errors": [
+        "no_templates_for_vendor:cisco_ios"
+      ]
+    },
+    "DEN-NSWS-01-99-123": {
+      "vendor": "cisco_ios",
+      "raw_files": [
+        "10.20.99.123.txt"
+      ],
+      "parsed": {},
+      "errors": [
+        "no_templates_for_vendor:cisco_ios"
+      ]
+    },
+    "10.20.99.124": {
+      "vendor": "cisco_ios",
+      "raw_files": [
+        "10.20.99.124.txt"
+      ],
+      "parsed": {},
+      "errors": [
+        "no_templates_for_vendor:cisco_ios"
+      ]
+    },
+    "INA-NSWS-129-99-125": {
+      "vendor": "cisco_ios",
+      "raw_files": [
+        "10.20.99.125.txt"
+      ],
+      "parsed": {},
+      "errors": [
+        "no_templates_for_vendor:cisco_ios"
+      ]
+    },
+    "INA-NSWS-10-99-126": {
+      "vendor": "cisco_ios",
+      "raw_files": [
+        "10.20.99.126.txt"
+      ],
+      "parsed": {},
+      "errors": [
+        "no_templates_for_vendor:cisco_ios"
+      ]
+    },
+    "INA-NSWS-09-99-127": {
+      "vendor": "cisco_ios",
+      "raw_files": [
+        "10.20.99.127.txt"
+      ],
+      "parsed": {},
+      "errors": [
+        "no_templates_for_vendor:cisco_ios"
+      ]
+    },
+    "10.20.99.128": {
+      "vendor": "cisco_ios",
+      "raw_files": [
+        "10.20.99.128.txt"
+      ],
+      "parsed": {},
+      "errors": [
+        "no_templates_for_vendor:cisco_ios"
+      ]
+    },
+    "10.20.99.129": {
+      "vendor": "cisco_ios",
+      "raw_files": [
+        "10.20.99.129.txt"
+      ],
+      "parsed": {},
+      "errors": [
+        "no_templates_for_vendor:cisco_ios"
+      ]
+    },
+    "INA-NSWS-56-99-13": {
+      "vendor": "cisco_ios",
+      "raw_files": [
+        "10.20.99.13.txt"
+      ],
+      "parsed": {},
+      "errors": [
+        "no_templates_for_vendor:cisco_ios"
+      ]
+    },
+    "INA-NSWS-64-99-130": {
+      "vendor": "cisco_ios",
+      "raw_files": [
+        "10.20.99.130.txt"
+      ],
+      "parsed": {},
+      "errors": [
+        "no_templates_for_vendor:cisco_ios"
+      ]
+    },
+    "INA-NSWS-65-99-131": {
+      "vendor": "cisco_ios",
+      "raw_files": [
+        "10.20.99.131.txt"
+      ],
+      "parsed": {},
+      "errors": [
+        "no_templates_for_vendor:cisco_ios"
+      ]
+    },
+    "DEN-NSWS-93-99-132": {
+      "vendor": "cisco_ios",
+      "raw_files": [
+        "10.20.99.132.txt"
+      ],
+      "parsed": {},
+      "errors": [
+        "no_templates_for_vendor:cisco_ios"
+      ]
+    },
+    "10.20.99.134": {
+      "vendor": "cisco_ios",
+      "raw_files": [
+        "10.20.99.134.txt"
+      ],
+      "parsed": {},
+      "errors": [
+        "no_templates_for_vendor:cisco_ios"
+      ]
+    },
+    "DEN-NSWS-04-99-135": {
+      "vendor": "cisco_ios",
+      "raw_files": [
+        "10.20.99.135.txt"
+      ],
+      "parsed": {},
+      "errors": [
+        "no_templates_for_vendor:cisco_ios"
+      ]
+    },
+    "10.20.99.136": {
+      "vendor": "cisco_ios",
+      "raw_files": [
+        "10.20.99.136.txt"
+      ],
+      "parsed": {},
+      "errors": [
+        "no_templates_for_vendor:cisco_ios"
+      ]
+    },
+    "INA-NSWS-72-99-137": {
+      "vendor": "cisco_ios",
+      "raw_files": [
+        "10.20.99.137.txt"
+      ],
+      "parsed": {},
+      "errors": [
+        "no_templates_for_vendor:cisco_ios"
+      ]
+    },
+    "INA-NSWS-76-99-138": {
+      "vendor": "cisco_ios",
+      "raw_files": [
+        "10.20.99.138.txt"
+      ],
+      "parsed": {},
+      "errors": [
+        "no_templates_for_vendor:cisco_ios"
+      ]
+    },
+    "INA-NSWS-35-99-139": {
+      "vendor": "cisco_ios",
+      "raw_files": [
+        "10.20.99.139.txt"
+      ],
+      "parsed": {},
+      "errors": [
+        "no_templates_for_vendor:cisco_ios"
+      ]
+    },
+    "CHU-NSWS-03-99-14": {
+      "vendor": "cisco_ios",
+      "raw_files": [
+        "10.20.99.14.txt"
+      ],
+      "parsed": {},
+      "errors": [
+        "no_templates_for_vendor:cisco_ios"
+      ]
+    },
+    "DEN-NSWS-80-99-141": {
+      "vendor": "cisco_ios",
+      "raw_files": [
+        "10.20.99.141.txt"
+      ],
+      "parsed": {},
+      "errors": [
+        "no_templates_for_vendor:cisco_ios"
+      ]
+    },
+    "DEN-NSWS-61-99-143": {
+      "vendor": "cisco_ios",
+      "raw_files": [
+        "10.20.99.143.txt"
+      ],
+      "parsed": {},
+      "errors": [
+        "no_templates_for_vendor:cisco_ios"
+      ]
+    },
+    "INA-NSWS-13-99-145": {
+      "vendor": "cisco_ios",
+      "raw_files": [
+        "10.20.99.145.txt"
+      ],
+      "parsed": {},
+      "errors": [
+        "no_templates_for_vendor:cisco_ios"
+      ]
+    },
+    "DEN-NSWS-04-99-147": {
+      "vendor": "cisco_ios",
+      "raw_files": [
+        "10.20.99.147.txt"
+      ],
+      "parsed": {},
+      "errors": [
+        "no_templates_for_vendor:cisco_ios"
+      ]
+    },
+    "INA-NSWS-130-99-148": {
+      "vendor": "cisco_ios",
+      "raw_files": [
+        "10.20.99.148.txt"
+      ],
+      "parsed": {},
+      "errors": [
+        "no_templates_for_vendor:cisco_ios"
+      ]
+    },
+    "SNR-S3850G-24TX": {
+      "vendor": "cisco_ios",
+      "raw_files": [
+        "10.20.99.149.txt"
+      ],
+      "parsed": {},
+      "errors": [
+        "no_templates_for_vendor:cisco_ios"
+      ]
+    },
+    "DEN-NSWS-04-99-15": {
+      "vendor": "cisco_ios",
+      "raw_files": [
+        "10.20.99.15.txt"
+      ],
+      "parsed": {},
+      "errors": [
+        "no_templates_for_vendor:cisco_ios"
+      ]
+    },
+    "INA-NSWS-11-99-150": {
+      "vendor": "cisco_ios",
+      "raw_files": [
+        "10.20.99.150.txt"
+      ],
+      "parsed": {},
+      "errors": [
+        "no_templates_for_vendor:cisco_ios"
+      ]
+    },
+    "10.20.99.151": {
+      "vendor": "cisco_ios",
+      "raw_files": [
+        "10.20.99.151.txt"
+      ],
+      "parsed": {},
+      "errors": [
+        "no_templates_for_vendor:cisco_ios"
+      ]
+    },
+    "INA-NSWS-14-99-152": {
+      "vendor": "cisco_ios",
+      "raw_files": [
+        "10.20.99.152.txt"
+      ],
+      "parsed": {},
+      "errors": [
+        "no_templates_for_vendor:cisco_ios"
+      ]
+    },
+    "INA-NSWS-11-99-153": {
+      "vendor": "cisco_ios",
+      "raw_files": [
+        "10.20.99.153.txt"
+      ],
+      "parsed": {},
+      "errors": [
+        "no_templates_for_vendor:cisco_ios"
+      ]
+    },
+    "INA-NSWS-74-99-155": {
+      "vendor": "cisco_ios",
+      "raw_files": [
+        "10.20.99.155.txt"
+      ],
+      "parsed": {},
+      "errors": [
+        "no_templates_for_vendor:cisco_ios"
+      ]
+    },
+    "INA-NSWS-73-99-156": {
+      "vendor": "cisco_ios",
+      "raw_files": [
+        "10.20.99.156.txt"
+      ],
+      "parsed": {},
+      "errors": [
+        "no_templates_for_vendor:cisco_ios"
+      ]
+    },
+    "INA-NSWS-41-99-159": {
+      "vendor": "cisco_ios",
+      "raw_files": [
+        "10.20.99.159.txt"
+      ],
+      "parsed": {},
+      "errors": [
+        "no_templates_for_vendor:cisco_ios"
+      ]
+    },
+    "10.20.99.16": {
+      "vendor": "cisco_ios",
+      "raw_files": [
+        "10.20.99.16.txt"
+      ],
+      "parsed": {},
+      "errors": [
+        "no_templates_for_vendor:cisco_ios"
+      ]
+    },
+    "INA-NSWS-51-99-160": {
+      "vendor": "cisco_ios",
+      "raw_files": [
+        "10.20.99.160.txt"
+      ],
+      "parsed": {},
+      "errors": [
+        "no_templates_for_vendor:cisco_ios"
+      ]
+    },
+    "10.20.99.161": {
+      "vendor": "cisco_ios",
+      "raw_files": [
+        "10.20.99.161.txt"
+      ],
+      "parsed": {},
+      "errors": [
+        "no_templates_for_vendor:cisco_ios"
+      ]
+    },
+    "INA-NSWS-125-99-162": {
+      "vendor": "cisco_ios",
+      "raw_files": [
+        "10.20.99.162.txt"
+      ],
+      "parsed": {},
+      "errors": [
+        "no_templates_for_vendor:cisco_ios"
+      ]
+    },
+    "INA-NSWS-128-99-164": {
+      "vendor": "cisco_ios",
+      "raw_files": [
+        "10.20.99.164.txt"
+      ],
+      "parsed": {},
+      "errors": [
+        "no_templates_for_vendor:cisco_ios"
+      ]
+    },
+    "INA-NSWS-124-99-165": {
+      "vendor": "cisco_ios",
+      "raw_files": [
+        "10.20.99.165.txt"
+      ],
+      "parsed": {},
+      "errors": [
+        "no_templates_for_vendor:cisco_ios"
+      ]
+    },
+    "DEN-NSWS-23-99-17": {
+      "vendor": "cisco_ios",
+      "raw_files": [
+        "10.20.99.17.txt"
+      ],
+      "parsed": {},
+      "errors": [
+        "no_templates_for_vendor:cisco_ios"
+      ]
+    },
+    "INA-NSWS-43-99-170": {
+      "vendor": "cisco_ios",
+      "raw_files": [
+        "10.20.99.170.txt"
+      ],
+      "parsed": {},
+      "errors": [
+        "no_templates_for_vendor:cisco_ios"
+      ]
+    },
+    "10.20.99.18": {
+      "vendor": "cisco_ios",
+      "raw_files": [
+        "10.20.99.18.txt"
+      ],
+      "parsed": {},
+      "errors": [
+        "no_templates_for_vendor:cisco_ios"
+      ]
+    },
+    "10.20.99.183": {
+      "vendor": "cisco_ios",
+      "raw_files": [
+        "10.20.99.183.txt"
+      ],
+      "parsed": {},
+      "errors": [
+        "no_templates_for_vendor:cisco_ios"
+      ]
+    },
+    "INA-NSWS-39-99-185": {
+      "vendor": "cisco_ios",
+      "raw_files": [
+        "10.20.99.185.txt"
+      ],
+      "parsed": {},
+      "errors": [
+        "no_templates_for_vendor:cisco_ios"
+      ]
+    },
+    "INA-NSWS-36-99-186": {
+      "vendor": "cisco_ios",
+      "raw_files": [
+        "10.20.99.186.txt"
+      ],
+      "parsed": {},
+      "errors": [
+        "no_templates_for_vendor:cisco_ios"
+      ]
+    },
+    "DEN-NSWS-92-99-187": {
+      "vendor": "cisco_ios",
+      "raw_files": [
+        "10.20.99.187.txt"
+      ],
+      "parsed": {},
+      "errors": [
+        "no_templates_for_vendor:cisco_ios"
+      ]
+    },
+    "DEN-NSWS-26-99-19": {
+      "vendor": "cisco_ios",
+      "raw_files": [
+        "10.20.99.19.txt"
+      ],
+      "parsed": {},
+      "errors": [
+        "no_templates_for_vendor:cisco_ios"
+      ]
+    },
+    "INA-NSWS-51-99-193": {
+      "vendor": "cisco_ios",
+      "raw_files": [
+        "10.20.99.193.txt"
+      ],
+      "parsed": {},
+      "errors": [
+        "no_templates_for_vendor:cisco_ios"
+      ]
+    },
+    "INA-NSWS-52-99-194": {
+      "vendor": "cisco_ios",
+      "raw_files": [
+        "10.20.99.194.txt"
+      ],
+      "parsed": {},
+      "errors": [
+        "no_templates_for_vendor:cisco_ios"
+      ]
+    },
+    "INA-NSWS-11-99-196": {
+      "vendor": "cisco_ios",
+      "raw_files": [
+        "10.20.99.196.txt"
+      ],
+      "parsed": {},
+      "errors": [
+        "no_templates_for_vendor:cisco_ios"
+      ]
+    },
+    "INA-NSWS-63-99-197": {
+      "vendor": "cisco_ios",
+      "raw_files": [
+        "10.20.99.197.txt"
+      ],
+      "parsed": {},
+      "errors": [
+        "no_templates_for_vendor:cisco_ios"
+      ]
+    },
+    "10.20.99.198": {
+      "vendor": "cisco_ios",
+      "raw_files": [
+        "10.20.99.198.txt"
+      ],
+      "parsed": {},
+      "errors": [
+        "no_templates_for_vendor:cisco_ios"
+      ]
+    },
+    "10.20.99.199": {
+      "vendor": "cisco_ios",
+      "raw_files": [
+        "10.20.99.199.txt"
+      ],
+      "parsed": {},
+      "errors": [
+        "no_templates_for_vendor:cisco_ios"
+      ]
+    },
+    "INA-NSWR-03-99-20": {
+      "vendor": "cisco_ios",
+      "raw_files": [
+        "10.20.99.20.txt"
+      ],
+      "parsed": {},
+      "errors": [
+        "no_templates_for_vendor:cisco_ios"
+      ]
+    },
+    "INA-NSWS-14-99-205": {
+      "vendor": "cisco_ios",
+      "raw_files": [
+        "10.20.99.205.txt"
+      ],
+      "parsed": {},
+      "errors": [
+        "no_templates_for_vendor:cisco_ios"
+      ]
+    },
+    "INA-NSWS-15-99-206": {
+      "vendor": "cisco_ios",
+      "raw_files": [
+        "10.20.99.206.txt"
+      ],
+      "parsed": {},
+      "errors": [
+        "no_templates_for_vendor:cisco_ios"
+      ]
+    },
+    "INA-NSWS-14-99-207": {
+      "vendor": "cisco_ios",
+      "raw_files": [
+        "10.20.99.207.txt"
+      ],
+      "parsed": {},
+      "errors": [
+        "no_templates_for_vendor:cisco_ios"
+      ]
+    },
+    "NER-NSWS-03-99-21": {
+      "vendor": "cisco_ios",
+      "raw_files": [
+        "10.20.99.21.txt"
+      ],
+      "parsed": {},
+      "errors": [
+        "no_templates_for_vendor:cisco_ios"
+      ]
+    },
+    "CHU-NSWS-15-99-217": {
+      "vendor": "cisco_ios",
+      "raw_files": [
+        "10.20.99.217.txt"
+      ],
+      "parsed": {},
+      "errors": [
+        "no_templates_for_vendor:cisco_ios"
+      ]
+    },
+    "CHU-NSWS-13-99-218": {
+      "vendor": "cisco_ios",
+      "raw_files": [
+        "10.20.99.218.txt"
+      ],
+      "parsed": {},
+      "errors": [
+        "no_templates_for_vendor:cisco_ios"
+      ]
+    },
+    "CHU-NSWS-13-99-219": {
+      "vendor": "cisco_ios",
+      "raw_files": [
+        "10.20.99.219.txt"
+      ],
+      "parsed": {},
+      "errors": [
+        "no_templates_for_vendor:cisco_ios"
+      ]
+    },
+    "sw-ner-inag-22-l2": {
+      "vendor": "cisco_ios",
+      "raw_files": [
+        "10.20.99.22.txt"
+      ],
+      "parsed": {},
+      "errors": [
+        "no_templates_for_vendor:cisco_ios"
+      ]
+    },
+    "CHU-NSWS-04-99-222": {
+      "vendor": "cisco_ios",
+      "raw_files": [
+        "10.20.99.222.txt"
+      ],
+      "parsed": {},
+      "errors": [
+        "no_templates_for_vendor:cisco_ios"
+      ]
+    },
+    "CHU-NSWS-02-99-223": {
+      "vendor": "cisco_ios",
+      "raw_files": [
+        "10.20.99.223.txt"
+      ],
+      "parsed": {},
+      "errors": [
+        "no_templates_for_vendor:cisco_ios"
+      ]
+    },
+    "CHU-NSWS-03-99-224": {
+      "vendor": "cisco_ios",
+      "raw_files": [
+        "10.20.99.224.txt"
+      ],
+      "parsed": {},
+      "errors": [
+        "no_templates_for_vendor:cisco_ios"
+      ]
+    },
+    "CHU-NSWS-16-99-225": {
+      "vendor": "cisco_ios",
+      "raw_files": [
+        "10.20.99.225.txt"
+      ],
+      "parsed": {},
+      "errors": [
+        "no_templates_for_vendor:cisco_ios"
+      ]
+    },
+    "CHU-NSWS-17-99-226": {
+      "vendor": "cisco_ios",
+      "raw_files": [
+        "10.20.99.226.txt"
+      ],
+      "parsed": {},
+      "errors": [
+        "no_templates_for_vendor:cisco_ios"
+      ]
+    },
+    "CHU-NSWS-17-99-227": {
+      "vendor": "cisco_ios",
+      "raw_files": [
+        "10.20.99.227.txt"
+      ],
+      "parsed": {},
+      "errors": [
+        "no_templates_for_vendor:cisco_ios"
+      ]
+    },
+    "INA-NSWS-66-99-231": {
+      "vendor": "cisco_ios",
+      "raw_files": [
+        "10.20.99.231.txt"
+      ],
+      "parsed": {},
+      "errors": [
+        "no_templates_for_vendor:cisco_ios"
+      ]
+    },
+    "INA-NSWS-15-99-234": {
+      "vendor": "cisco_ios",
+      "raw_files": [
+        "10.20.99.234.txt"
+      ],
+      "parsed": {},
+      "errors": [
+        "no_templates_for_vendor:cisco_ios"
+      ]
+    },
+    "INA-NSWS-14-99-235": {
+      "vendor": "cisco_ios",
+      "raw_files": [
+        "10.20.99.235.txt"
+      ],
+      "parsed": {},
+      "errors": [
+        "no_templates_for_vendor:cisco_ios"
+      ]
+    },
+    "INA-NSWS-15-99-236": {
+      "vendor": "cisco_ios",
+      "raw_files": [
+        "10.20.99.236.txt"
+      ],
+      "parsed": {},
+      "errors": [
+        "no_templates_for_vendor:cisco_ios"
+      ]
+    },
+    "INA-NSWS-16-99-237": {
+      "vendor": "cisco_ios",
+      "raw_files": [
+        "10.20.99.237.txt"
+      ],
+      "parsed": {},
+      "errors": [
+        "no_templates_for_vendor:cisco_ios"
+      ]
+    },
+    "INA-NSWS-67-99-240": {
+      "vendor": "cisco_ios",
+      "raw_files": [
+        "10.20.99.240.txt"
+      ],
+      "parsed": {},
+      "errors": [
+        "no_templates_for_vendor:cisco_ios"
+      ]
+    },
+    "INA-NSWS-60-99-243": {
+      "vendor": "cisco_ios",
+      "raw_files": [
+        "10.20.99.243.txt"
+      ],
+      "parsed": {},
+      "errors": [
+        "no_templates_for_vendor:cisco_ios"
+      ]
+    },
+    "10.20.99.244": {
+      "vendor": "cisco_ios",
+      "raw_files": [
+        "10.20.99.244.txt"
+      ],
+      "parsed": {},
+      "errors": [
+        "no_templates_for_vendor:cisco_ios"
+      ]
+    },
+    "10.20.99.245": {
+      "vendor": "cisco_ios",
+      "raw_files": [
+        "10.20.99.245.txt"
+      ],
+      "parsed": {},
+      "errors": [
+        "no_templates_for_vendor:cisco_ios"
+      ]
+    },
+    "HRAM-RPBK": {
+      "vendor": "cisco_ios",
+      "raw_files": [
+        "10.20.99.248.txt"
+      ],
+      "parsed": {},
+      "errors": [
+        "no_templates_for_vendor:cisco_ios"
+      ]
+    },
+    "DEN-NSWS-03-99-25": {
+      "vendor": "cisco_ios",
+      "raw_files": [
+        "10.20.99.25.txt"
+      ],
+      "parsed": {},
+      "errors": [
+        "no_templates_for_vendor:cisco_ios"
+      ]
+    },
+    "DEN-NSWS-91-99-26": {
+      "vendor": "cisco_ios",
+      "raw_files": [
+        "10.20.99.26.txt"
+      ],
+      "parsed": {},
+      "errors": [
+        "no_templates_for_vendor:cisco_ios"
+      ]
+    },
+    "NER-NSWS-06-99-27": {
+      "vendor": "cisco_ios",
+      "raw_files": [
+        "10.20.99.27.txt"
+      ],
+      "parsed": {},
+      "errors": [
+        "no_templates_for_vendor:cisco_ios"
+      ]
+    },
+    "NER-NSWS-04-99-28": {
+      "vendor": "cisco_ios",
+      "raw_files": [
+        "10.20.99.28.txt"
+      ],
+      "parsed": {},
+      "errors": [
+        "no_templates_for_vendor:cisco_ios"
+      ]
+    },
+    "INA-NSWS-75-99-29": {
+      "vendor": "cisco_ios",
+      "raw_files": [
+        "10.20.99.29.txt"
+      ],
+      "parsed": {},
+      "errors": [
+        "no_templates_for_vendor:cisco_ios"
+      ]
+    },
+    "NER-NSWR-01-99-3": {
+      "vendor": "cisco_ios",
+      "raw_files": [
+        "10.20.99.3.txt"
+      ],
+      "parsed": {},
+      "errors": [
+        "no_templates_for_vendor:cisco_ios"
+      ]
+    },
+    "10.20.99.30": {
+      "vendor": "huawei_vrp",
+      "raw_files": [
+        "10.20.99.30.txt"
+      ],
+      "parsed": {},
+      "errors": [
+        "no_templates_for_vendor:huawei_vrp"
+      ]
+    },
+    "INA-NSWS-51-99-32": {
+      "vendor": "cisco_ios",
+      "raw_files": [
+        "10.20.99.32.txt"
+      ],
+      "parsed": {},
+      "errors": [
+        "no_templates_for_vendor:cisco_ios"
+      ]
+    },
+    "DEN-NSWS-81-99-34": {
+      "vendor": "cisco_ios",
+      "raw_files": [
+        "10.20.99.34.txt"
+      ],
+      "parsed": {},
+      "errors": [
+        "no_templates_for_vendor:cisco_ios"
+      ]
+    },
+    "DEN-NSWS-08-99-35": {
+      "vendor": "cisco_ios",
+      "raw_files": [
+        "10.20.99.35.txt"
+      ],
+      "parsed": {},
+      "errors": [
+        "no_templates_for_vendor:cisco_ios"
+      ]
+    },
+    "NER-NSWS-07-99-36": {
+      "vendor": "cisco_ios",
+      "raw_files": [
+        "10.20.99.36.txt"
+      ],
+      "parsed": {},
+      "errors": [
+        "no_templates_for_vendor:cisco_ios"
+      ]
+    },
+    "NER-NSWS-07-99-37": {
+      "vendor": "cisco_ios",
+      "raw_files": [
+        "10.20.99.37.txt"
+      ],
+      "parsed": {},
+      "errors": [
+        "no_templates_for_vendor:cisco_ios"
+      ]
+    },
+    "NRG-NSWR-01-99-38": {
+      "vendor": "cisco_ios",
+      "raw_files": [
+        "10.20.99.38.txt"
+      ],
+      "parsed": {},
+      "errors": [
+        "no_templates_for_vendor:cisco_ios"
+      ]
+    },
+    "NER-NSWS-08-99-39": {
+      "vendor": "cisco_ios",
+      "raw_files": [
+        "10.20.99.39.txt"
+      ],
+      "parsed": {},
+      "errors": [
+        "no_templates_for_vendor:cisco_ios"
+      ]
+    },
+    "NER-NSWS-01-99-4": {
+      "vendor": "cisco_ios",
+      "raw_files": [
+        "10.20.99.4.txt"
+      ],
+      "parsed": {},
+      "errors": [
+        "no_templates_for_vendor:cisco_ios"
+      ]
+    },
+    "NER-NSWS-04-99-40": {
+      "vendor": "cisco_ios",
+      "raw_files": [
+        "10.20.99.40.txt"
+      ],
+      "parsed": {},
+      "errors": [
+        "no_templates_for_vendor:cisco_ios"
+      ]
+    },
+    "NRG-NSWS-01-99-41": {
+      "vendor": "cisco_ios",
+      "raw_files": [
+        "10.20.99.41.txt"
+      ],
+      "parsed": {},
+      "errors": [
+        "no_templates_for_vendor:cisco_ios"
+      ]
+    },
+    "DEN-NSWS-09-99-42": {
+      "vendor": "cisco_ios",
+      "raw_files": [
+        "10.20.99.42.txt"
+      ],
+      "parsed": {},
+      "errors": [
+        "no_templates_for_vendor:cisco_ios"
+      ]
+    },
+    "DEN-NSWS-06-99-43": {
+      "vendor": "cisco_ios",
+      "raw_files": [
+        "10.20.99.43.txt"
+      ],
+      "parsed": {},
+      "errors": [
+        "no_templates_for_vendor:cisco_ios"
+      ]
+    },
+    "DEN-NSWS-29-99-44": {
+      "vendor": "cisco_ios",
+      "raw_files": [
+        "10.20.99.44.txt"
+      ],
+      "parsed": {},
+      "errors": [
+        "no_templates_for_vendor:cisco_ios"
+      ]
+    },
+    "CHU-NSWR-14-99-45": {
+      "vendor": "eltex_mes",
+      "raw_files": [
+        "10.20.99.45.txt"
+      ],
+      "parsed": {},
+      "errors": [
+        "no_templates_for_vendor:eltex_mes"
+      ]
+    },
+    "DEN-NSWS-83-99-46": {
+      "vendor": "cisco_ios",
+      "raw_files": [
+        "10.20.99.46.txt"
+      ],
+      "parsed": {},
+      "errors": [
+        "no_templates_for_vendor:cisco_ios"
+      ]
+    },
+    "INA-NSWS-47-99-47": {
+      "vendor": "cisco_ios",
+      "raw_files": [
+        "10.20.99.47.txt"
+      ],
+      "parsed": {},
+      "errors": [
+        "no_templates_for_vendor:cisco_ios"
+      ]
+    },
+    "10.20.99.48": {
+      "vendor": "cisco_ios",
+      "raw_files": [
+        "10.20.99.48.txt"
+      ],
+      "parsed": {},
+      "errors": [
+        "no_templates_for_vendor:cisco_ios"
+      ]
+    },
+    "10.20.99.49": {
+      "vendor": "cisco_ios",
+      "raw_files": [
+        "10.20.99.49.txt"
+      ],
+      "parsed": {},
+      "errors": [
+        "no_templates_for_vendor:cisco_ios"
+      ]
+    },
+    "NER-NSWS-03-99-5": {
+      "vendor": "cisco_ios",
+      "raw_files": [
+        "10.20.99.5.txt"
+      ],
+      "parsed": {},
+      "errors": [
+        "no_templates_for_vendor:cisco_ios"
+      ]
+    },
+    "10.20.99.50": {
+      "vendor": "cisco_ios",
+      "raw_files": [
+        "10.20.99.50.txt"
+      ],
+      "parsed": {},
+      "errors": [
+        "no_templates_for_vendor:cisco_ios"
+      ]
+    },
+    "NER-NSWS-04-99-51": {
+      "vendor": "cisco_ios",
+      "raw_files": [
+        "10.20.99.51.txt"
+      ],
+      "parsed": {},
+      "errors": [
+        "no_templates_for_vendor:cisco_ios"
+      ]
+    },
+    "INA-NSWS-48-99-52": {
+      "vendor": "cisco_ios",
+      "raw_files": [
+        "10.20.99.52.txt"
+      ],
+      "parsed": {},
+      "errors": [
+        "no_templates_for_vendor:cisco_ios"
+      ]
+    },
+    "NER-NSWS-08-99-53": {
+      "vendor": "cisco_ios",
+      "raw_files": [
+        "10.20.99.53.txt"
+      ],
+      "parsed": {},
+      "errors": [
+        "no_templates_for_vendor:cisco_ios"
+      ]
+    },
+    "NER-NSWS-09-99-54": {
+      "vendor": "cisco_ios",
+      "raw_files": [
+        "10.20.99.54.txt"
+      ],
+      "parsed": {},
+      "errors": [
+        "no_templates_for_vendor:cisco_ios"
+      ]
+    },
+    "INA-NSWS-122-99-55": {
+      "vendor": "cisco_ios",
+      "raw_files": [
+        "10.20.99.55.txt"
+      ],
+      "parsed": {},
+      "errors": [
+        "no_templates_for_vendor:cisco_ios"
+      ]
+    },
+    "SRB-NSWS-02-99-56": {
+      "vendor": "cisco_ios",
+      "raw_files": [
+        "10.20.99.56.txt"
+      ],
+      "parsed": {},
+      "errors": [
+        "no_templates_for_vendor:cisco_ios"
+      ]
+    },
+    "SRB-NSWS-01-99-57": {
+      "vendor": "cisco_ios",
+      "raw_files": [
+        "10.20.99.57.txt"
+      ],
+      "parsed": {},
+      "errors": [
+        "no_templates_for_vendor:cisco_ios"
+      ]
+    },
+    "NER-NSWS-01-99-58": {
+      "vendor": "cisco_ios",
+      "raw_files": [
+        "10.20.99.58.txt"
+      ],
+      "parsed": {},
+      "errors": [
+        "no_templates_for_vendor:cisco_ios"
+      ]
+    },
+    "INA-NSWS-76-99-59": {
+      "vendor": "cisco_ios",
+      "raw_files": [
+        "10.20.99.59.txt"
+      ],
+      "parsed": {},
+      "errors": [
+        "no_templates_for_vendor:cisco_ios"
+      ]
+    },
+    "NER-NSWS-01-99-6": {
+      "vendor": "cisco_ios",
+      "raw_files": [
+        "10.20.99.6.txt"
+      ],
+      "parsed": {},
+      "errors": [
+        "no_templates_for_vendor:cisco_ios"
+      ]
+    },
+    "INA-NSWS-35-99-61": {
+      "vendor": "cisco_ios",
+      "raw_files": [
+        "10.20.99.61.txt"
+      ],
+      "parsed": {},
+      "errors": [
+        "no_templates_for_vendor:cisco_ios"
+      ]
+    },
+    "10.20.99.63": {
+      "vendor": "cisco_ios",
+      "raw_files": [
+        "10.20.99.63.txt"
+      ],
+      "parsed": {},
+      "errors": [
+        "no_templates_for_vendor:cisco_ios"
+      ]
+    },
+    "INA-NSWS-121-99-64": {
+      "vendor": "cisco_ios",
+      "raw_files": [
+        "10.20.99.64.txt"
+      ],
+      "parsed": {},
+      "errors": [
+        "no_templates_for_vendor:cisco_ios"
+      ]
+    },
+    "DEN-NSWS-47-99-65": {
+      "vendor": "cisco_ios",
+      "raw_files": [
+        "10.20.99.65.txt"
+      ],
+      "parsed": {},
+      "errors": [
+        "no_templates_for_vendor:cisco_ios"
+      ]
+    },
+    "10.20.99.66": {
+      "vendor": "cisco_ios",
+      "raw_files": [
+        "10.20.99.66.txt"
+      ],
+      "parsed": {},
+      "errors": [
+        "no_templates_for_vendor:cisco_ios"
+      ]
+    },
+    "NER-NSWS-06-99-67": {
+      "vendor": "cisco_ios",
+      "raw_files": [
+        "10.20.99.67.txt"
+      ],
+      "parsed": {},
+      "errors": [
+        "no_templates_for_vendor:cisco_ios"
+      ]
+    },
+    "INA-NSWS-131-99-68": {
+      "vendor": "cisco_ios",
+      "raw_files": [
+        "10.20.99.68.txt"
+      ],
+      "parsed": {},
+      "errors": [
+        "no_templates_for_vendor:cisco_ios"
+      ]
+    },
+    "NER-NSWS-01-99-69": {
+      "vendor": "cisco_ios",
+      "raw_files": [
+        "10.20.99.69.txt"
+      ],
+      "parsed": {},
+      "errors": [
+        "no_templates_for_vendor:cisco_ios"
+      ]
+    },
+    "CHU-NSWS-03-99-7": {
+      "vendor": "cisco_ios",
+      "raw_files": [
+        "10.20.99.7.txt"
+      ],
+      "parsed": {},
+      "errors": [
+        "no_templates_for_vendor:cisco_ios"
+      ]
+    },
+    "INA-NSWS-53-99-70": {
+      "vendor": "cisco_ios",
+      "raw_files": [
+        "10.20.99.70.txt"
+      ],
+      "parsed": {},
+      "errors": [
+        "no_templates_for_vendor:cisco_ios"
+      ]
+    },
+    "CHU-NSWS-04-99-71": {
+      "vendor": "cisco_ios",
+      "raw_files": [
+        "10.20.99.71.txt"
+      ],
+      "parsed": {},
+      "errors": [
+        "no_templates_for_vendor:cisco_ios"
+      ]
+    },
+    "INA-NSWS-39-99-72": {
+      "vendor": "cisco_ios",
+      "raw_files": [
+        "10.20.99.72.txt"
+      ],
+      "parsed": {},
+      "errors": [
+        "no_templates_for_vendor:cisco_ios"
+      ]
+    },
+    "NER-NSWS-01-99-73": {
+      "vendor": "cisco_ios",
+      "raw_files": [
+        "10.20.99.73.txt"
+      ],
+      "parsed": {},
+      "errors": [
+        "no_templates_for_vendor:cisco_ios"
+      ]
+    },
+    "NER-NSWS-01-99-74": {
+      "vendor": "cisco_ios",
+      "raw_files": [
+        "10.20.99.74.txt"
+      ],
+      "parsed": {},
+      "errors": [
+        "no_templates_for_vendor:cisco_ios"
+      ]
+    },
+    "NER-NSWS-09-99-75": {
+      "vendor": "cisco_ios",
+      "raw_files": [
+        "10.20.99.75.txt"
+      ],
+      "parsed": {},
+      "errors": [
+        "no_templates_for_vendor:cisco_ios"
+      ]
+    },
+    "INA-NSWS-08-99-76": {
+      "vendor": "cisco_ios",
+      "raw_files": [
+        "10.20.99.76.txt"
+      ],
+      "parsed": {},
+      "errors": [
+        "no_templates_for_vendor:cisco_ios"
+      ]
+    },
+    "DEN-NSWS-82-99-77": {
+      "vendor": "cisco_ios",
+      "raw_files": [
+        "10.20.99.77.txt"
+      ],
+      "parsed": {},
+      "errors": [
+        "no_templates_for_vendor:cisco_ios"
+      ]
+    },
+    "INA-NSWS-120-99-79": {
+      "vendor": "cisco_ios",
+      "raw_files": [
+        "10.20.99.79.txt"
+      ],
+      "parsed": {},
+      "errors": [
+        "no_templates_for_vendor:cisco_ios"
+      ]
+    },
+    "DEN-NSWS-06-99-8": {
+      "vendor": "cisco_ios",
+      "raw_files": [
+        "10.20.99.8.txt"
+      ],
+      "parsed": {},
+      "errors": [
+        "no_templates_for_vendor:cisco_ios"
+      ]
+    },
+    "INA-NSWS-118-99-82": {
+      "vendor": "cisco_ios",
+      "raw_files": [
+        "10.20.99.82.txt"
+      ],
+      "parsed": {},
+      "errors": [
+        "no_templates_for_vendor:cisco_ios"
+      ]
+    },
+    "10.20.99.83": {
+      "vendor": "cisco_ios",
+      "raw_files": [
+        "10.20.99.83.txt"
+      ],
+      "parsed": {},
+      "errors": [
+        "no_templates_for_vendor:cisco_ios"
+      ]
+    },
+    "INA-NSWR-01-99-84": {
+      "vendor": "cisco_ios",
+      "raw_files": [
+        "10.20.99.84.txt"
+      ],
+      "parsed": {},
+      "errors": [
+        "no_templates_for_vendor:cisco_ios"
+      ]
+    },
+    "INA-NSWS-01-99-85": {
+      "vendor": "cisco_ios",
+      "raw_files": [
+        "10.20.99.85.txt"
+      ],
+      "parsed": {},
+      "errors": [
+        "no_templates_for_vendor:cisco_ios"
+      ]
+    },
+    "DEN-NSWS-58-99-86": {
+      "vendor": "cisco_ios",
+      "raw_files": [
+        "10.20.99.86.txt"
+      ],
+      "parsed": {},
+      "errors": [
+        "no_templates_for_vendor:cisco_ios"
+      ]
+    },
+    "NER-NSWS-01-99-87": {
+      "vendor": "cisco_ios",
+      "raw_files": [
+        "10.20.99.87.txt"
+      ],
+      "parsed": {},
+      "errors": [
+        "no_templates_for_vendor:cisco_ios"
+      ]
+    },
+    "DEN-NSWS-02-99-87": {
+      "vendor": "cisco_ios",
+      "raw_files": [
+        "10.20.99.88.txt"
+      ],
+      "parsed": {},
+      "errors": [
+        "no_templates_for_vendor:cisco_ios"
+      ]
+    },
+    "DEN-NSWS-20-99-89": {
+      "vendor": "cisco_ios",
+      "raw_files": [
+        "10.20.99.89.txt"
+      ],
+      "parsed": {},
+      "errors": [
+        "no_templates_for_vendor:cisco_ios"
+      ]
+    },
+    "NER-NSWS-04-99-9": {
+      "vendor": "cisco_ios",
+      "raw_files": [
+        "10.20.99.9.txt"
+      ],
+      "parsed": {},
+      "errors": [
+        "no_templates_for_vendor:cisco_ios"
+      ]
+    },
+    "DEN-NSWS-62-99-90": {
+      "vendor": "cisco_ios",
+      "raw_files": [
+        "10.20.99.90.txt"
+      ],
+      "parsed": {},
+      "errors": [
+        "no_templates_for_vendor:cisco_ios"
+      ]
+    },
+    "CHU-NSWS-14-99-91": {
+      "vendor": "cisco_ios",
+      "raw_files": [
+        "10.20.99.91.txt"
+      ],
+      "parsed": {},
+      "errors": [
+        "no_templates_for_vendor:cisco_ios"
+      ]
+    },
+    "CHU-NSWS-14-99-92": {
+      "vendor": "cisco_ios",
+      "raw_files": [
+        "10.20.99.92.txt"
+      ],
+      "parsed": {},
+      "errors": [
+        "no_templates_for_vendor:cisco_ios"
+      ]
+    },
+    "CHU-NSWS-12-99-93": {
+      "vendor": "cisco_ios",
+      "raw_files": [
+        "10.20.99.93.txt"
+      ],
+      "parsed": {},
+      "errors": [
+        "no_templates_for_vendor:cisco_ios"
+      ]
+    },
+    "DEN-NSWS-59-99-94": {
+      "vendor": "cisco_ios",
+      "raw_files": [
+        "10.20.99.94.txt"
+      ],
+      "parsed": {},
+      "errors": [
+        "no_templates_for_vendor:cisco_ios"
+      ]
+    },
+    "INA-NSWS-13-99-95": {
+      "vendor": "cisco_ios",
+      "raw_files": [
+        "10.20.99.95.txt"
+      ],
+      "parsed": {},
+      "errors": [
+        "no_templates_for_vendor:cisco_ios"
+      ]
+    },
+    "10.20.99.96": {
+      "vendor": "cisco_ios",
+      "raw_files": [
+        "10.20.99.96.txt"
+      ],
+      "parsed": {},
+      "errors": [
+        "no_templates_for_vendor:cisco_ios"
+      ]
+    },
+    "INA-NSWS-39-99-97": {
+      "vendor": "cisco_ios",
+      "raw_files": [
+        "10.20.99.97.txt"
+      ],
+      "parsed": {},
+      "errors": [
+        "no_templates_for_vendor:cisco_ios"
+      ]
+    },
+    "DEN-NSWS-19-99-98": {
+      "vendor": "cisco_ios",
+      "raw_files": [
+        "10.20.99.98.txt"
+      ],
+      "parsed": {},
+      "errors": [
+        "no_templates_for_vendor:cisco_ios"
+      ]
+    },
+    "10.20.99.99": {
+      "vendor": "huawei_vrp",
+      "raw_files": [
+        "10.20.99.99.txt"
+      ],
+      "parsed": {},
+      "errors": [
+        "no_templates_for_vendor:huawei_vrp"
+      ]
+    }
+  },
+  "meta": {
+    "templates_total": 0,
+    "errors": []
+  }
+}

@@ -1,0 +1,5 @@
+# TextFSM template — mikrotik
+Value FillMeUp (.*)
+
+Start
+  ^.* -> Record

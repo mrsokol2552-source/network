@@ -1,0 +1,459 @@
+
+
+$ show running-config
+Building configuration...
+
+Current configuration : 4982 bytes
+!
+! Last configuration change at 19:37:33 UTC Fri Jun 19 1970
+!
+version 15.2
+no service pad
+service timestamps debug datetime msec
+service timestamps log datetime msec
+service password-encryption
+!
+hostname INA-NSWS-123-97-100
+!
+boot-start-marker
+boot-end-marker
+!
+!
+username ivashenko_vb privilege 15 secret 5 $1$bi7z$qTHuukwOKu/rACvOW/3hy.
+username volodin_s privilege 15 secret 9 $9$UvCsdImkVr2pAX$ZF/dvZ8RDVkH89ocitn142WRofzHROAyNC5Ks8RFHUw
+username zhiltsov_a privilege 15 secret 9 $9$1mdwZ2VzW4gELy$H27H8S2RDF6LVaU2sIXoUShnVBTpMCtE16FrBw345JE
+aaa new-model
+!
+!
+aaa group server radius KOLMAR
+ server name cis.kolmar.pro_210
+ server name cis.kolmar.pro_212
+!
+aaa authentication login login-RADIUS group KOLMAR local
+aaa authorization exec auth-RADIUS-exec group KOLMAR local 
+!
+!
+!
+!
+!
+!
+aaa session-id common
+switch 1 provision c1000-16t-2g-l
+system mtu routing 1500
+!
+!
+ip domain-name kolmar.local
+vtp mode transparent
+!
+!
+!
+!
+!
+!
+!
+!
+spanning-tree mode rapid-pvst
+spanning-tree extend system-id
+no errdisable detect cause gbic-invalid
+no errdisable detect cause sfp-config-mismatch
+errdisable recovery cause udld
+errdisable recovery cause bpduguard
+errdisable recovery cause security-violation
+errdisable recovery cause channel-misconfig
+errdisable recovery cause pagp-flap
+errdisable recovery cause dtp-flap
+errdisable recovery cause link-flap
+errdisable recovery cause sfp-config-mismatch
+errdisable recovery cause gbic-invalid
+errdisable recovery cause psecure-violation
+errdisable recovery cause port-mode-failure
+errdisable recovery cause dhcp-rate-limit
+errdisable recovery cause pppoe-ia-rate-limit
+errdisable recovery cause mac-limit
+errdisable recovery cause vmps
+errdisable recovery cause storm-control
+errdisable recovery cause inline-power
+errdisable recovery cause loopback
+errdisable recovery interval 180
+!
+vlan internal allocation policy ascending
+!
+vlan 9
+ name PhoneStation
+!
+vlan 10
+ name Servers
+!
+vlan 13 
+!
+vlan 17
+ name Transport
+!
+vlan 30
+ name Wi-Fi
+!
+vlan 31
+ name Wi-Fi_Guest
+!
+vlan 32
+ name Wi-Fi_Works
+!
+vlan 33
+ name Wi-Fi_Staff
+!
+vlan 34
+ name Wi-Fi_Generals
+!
+vlan 35
+ name Wi-Fi_Avic
+!
+vlan 37 
+!
+vlan 47
+ name REAL_IP_TTK
+!
+vlan 77
+ name SKUD
+!
+vlan 90
+ name Inagliksky
+!
+vlan 501
+ name DRSK
+!
+vlan 730
+ name Video-SB-Inagl
+!
+vlan 1090
+ name Server(Inag)
+!
+vlan 1091
+ name Camara(Inag)
+!
+vlan 1290
+ name Admins(Inagl)
+!
+vlan 1490
+ name VKS(1490)
+!
+vlan 1590
+ name Monitoring(Inag)
+!
+vlan 1701
+ name Transport_Endistroy
+!
+vlan 1790 
+!
+vlan 1890
+ name FIRE(INAG)
+!
+vlan 2001
+ name Users_Endistroy
+!
+vlan 3131
+ name NEW_Kitchen_Inagl
+!
+!
+!
+!
+!
+!
+interface GigabitEthernet1/0/1
+!
+interface GigabitEthernet1/0/2
+!
+interface GigabitEthernet1/0/3
+!
+interface GigabitEthernet1/0/4
+!
+interface GigabitEthernet1/0/5
+!
+interface GigabitEthernet1/0/6
+!
+interface GigabitEthernet1/0/7
+!
+interface GigabitEthernet1/0/8
+!
+interface GigabitEthernet1/0/9
+!
+interface GigabitEthernet1/0/10
+!
+interface GigabitEthernet1/0/11
+!
+interface GigabitEthernet1/0/12
+!
+interface GigabitEthernet1/0/13
+!
+interface GigabitEthernet1/0/14
+!
+interface GigabitEthernet1/0/15
+ description VIDEO-CHULBAS
+ switchport trunk allowed vlan 1,17,730
+ switchport mode trunk
+ logging event spanning-tree
+ logging event status
+ storm-control broadcast level 20.00 10.00
+ storm-control multicast level 20.00 10.00
+ storm-control action shutdown
+ storm-control action trap
+ ip dhcp snooping trust
+!
+interface GigabitEthernet1/0/16
+ description 96.1_twe1/0/24
+ switchport mode trunk
+ logging event spanning-tree
+ logging event status
+ no cdp enable
+ storm-control broadcast level 20.00 10.00
+ storm-control multicast level 20.00 10.00
+ storm-control action shutdown
+ storm-control action trap
+ no vtp
+ no lldp transmit
+ no lldp receive
+ ip dhcp snooping trust
+!
+interface GigabitEthernet1/0/17
+ description 97.1_twe1/1/8
+ switchport mode trunk
+ logging event spanning-tree
+ logging event status
+ storm-control broadcast level 20.00 10.00
+ storm-control multicast level 20.00 10.00
+ storm-control action shutdown
+ storm-control action trap
+ ip dhcp snooping trust
+!
+interface GigabitEthernet1/0/18
+ description 96.3_twe1/0/20
+ switchport mode trunk
+ logging event spanning-tree
+ logging event status
+ storm-control broadcast level 20.00 10.00
+ storm-control multicast level 20.00 10.00
+ storm-control action shutdown
+ storm-control action trap
+ ip dhcp snooping trust
+!
+interface Vlan1
+ no ip address
+!
+interface Vlan17
+ ip address 10.20.97.100 255.255.252.0
+!
+no ip http server
+no ip http secure-server
+!
+!
+!
+snmp-server community public RO
+snmp mib flash cache
+!
+!
+radius server cis.kolmar.pro_210
+ address ipv4 10.10.0.212 auth-port 1812 acct-port 1813
+ key 7 141B190109152423372435372E04
+!
+radius server cis.kolmar.pro_212
+ key 7 082D47440C080B1F01070A06263C
+!
+!
+line con 0
+line vty 0 4
+ exec-timeout 60 0
+ privilege level 15
+ logging synchronous
+ login authentication login-RADIUS
+ transport input ssh
+line vty 5 15
+!
+ntp server ip pool.ntp.org
+ntp server ip time-pnp.cisco.com
+end
+
+
+
+$ show version
+Cisco IOS Software, C1000 Software (C1000-UNIVERSALK9-M), Version 15.2(7)E2, RELEASE SOFTWARE (fc3)
+Technical Support: http://www.cisco.com/techsupport
+Copyright (c) 1986-2020 by Cisco Systems, Inc.
+Compiled Sat 14-Mar-20 15:28 by prod_rel_team
+
+ROM: Bootstrap program is c1000 boot loader
+BOOTLDR: C1000 Boot Loader (C1000-HBOOT-M), Version 15.2(7r)E RELEASE SOFTWARE (fc1)
+
+INA-NSWS-123-97-100 uptime is 1 day, 7 hours, 44 minutes
+System returned to ROM by power-on
+System image file is "flash:/c1000-universalk9-mz.152-7.E2/c1000-universalk9-mz.152-7.E2.bin"
+Last reload reason: power-on
+
+
+
+This product contains cryptographic features and is subject to United
+States and local country laws governing import, export, transfer and
+use. Delivery of Cisco cryptographic products does not imply
+third-party authority to import, export, distribute or use encryption.
+Importers, exporters, distributors and users are responsible for
+compliance with U.S. and local country laws. By using this product you
+agree to comply with applicable laws and regulations. If you are unable
+to comply with U.S. and local laws, return this product immediately.
+
+A summary of U.S. laws governing Cisco cryptographic products may be found at:
+http://www.cisco.com/wwl/export/crypto/tool/stqrg.html
+
+If you require further assistance please contact us by sending email to
+export@cisco.com.
+
+cisco C1000-16T-2G-L (Marvell PJ4B (584) v7 (Rev 2)) processor (revision D0) with 524288K bytes of memory.
+Processor board ID FCW2436A0MT
+Last reset from Reload
+2 Virtual Ethernet interfaces
+18 Gigabit Ethernet interfaces
+The password-recovery mechanism is enabled.
+
+512K bytes of flash-simulated non-volatile configuration memory.
+Base ethernet MAC Address       : A4:88:73:E4:B2:80
+Motherboard assembly number     : U58O342T26
+Power supply part number        : C387.00013.005
+Motherboard serial number       : FOC24342T34
+Power supply serial number      : H2005201370
+Model revision number           : D0
+Motherboard revision number     : 20
+Model number                    : C1000-16T-2G-L
+System serial number            : FCW2436A0MT
+Top Assembly Part Number        : 74-122900-01
+Top Assembly Revision Number    : D0
+Version ID                      : V01
+CLEI Code Number                : CMM5C00ARA
+Hardware Board Revision Number  : 0x03
+
+
+Switch Ports Model                     SW Version            SW Image                 
+------ ----- -----                     ----------            ----------               
+*    1 18    C1000-16T-2G-L            15.2(7)E2             C1000-UNIVERSALK9-M      
+
+
+Configuration register is 0xF
+
+
+
+$ show cdp neighbors detail
+-------------------------
+Device ID: INA-NSWR-03-97-1.kolmar.local
+Entry address(es): 
+  IP address: 10.20.97.1
+Platform: cisco C9300X-24Y,  Capabilities: Router Switch IGMP 
+Interface: GigabitEthernet1/0/17,  Port ID (outgoing port): TwentyFiveGigE1/1/3
+Holdtime : 152 sec
+
+Version :
+Cisco IOS Software [Cupertino], Catalyst L3 Switch Software (CAT9K_IOSXE), Version 17.9.3, RELEASE SOFTWARE (fc6)
+Technical Support: http://www.cisco.com/techsupport
+Copyright (c) 1986-2023 by Cisco Systems, Inc.
+Compiled Tue 14-Mar-23 18:26 by mcpre
+
+advertisement version: 2
+VTP Management Domain: 'tradc'
+Native VLAN: 1
+Duplex: full
+Management address(es): 
+  IP address: 10.20.97.1
+
+-------------------------
+Device ID: INA-NSWR-37-96-3.kolmar.local
+Entry address(es): 
+  IP address: 10.20.96.3
+Platform: cisco C9300X-24Y,  Capabilities: Switch IGMP 
+Interface: GigabitEthernet1/0/18,  Port ID (outgoing port): TwentyFiveGigE1/0/20
+Holdtime : 177 sec
+
+Version :
+Cisco IOS Software [Cupertino], Catalyst L3 Switch Software (CAT9K_IOSXE), Version 17.9.4a, RELEASE SOFTWARE (fc3)
+Technical Support: http://www.cisco.com/techsupport
+Copyright (c) 1986-2023 by Cisco Systems, Inc.
+Compiled Fri 20-Oct-23 10:44 by mcpre
+
+advertisement version: 2
+VTP Management Domain: 'tradc'
+Native VLAN: 1
+Duplex: full
+Management address(es): 
+  IP address: 10.20.96.3
+
+-------------------------
+Device ID: RocketM3
+Entry address(es): 
+  IP address: 10.90.17.10
+Platform: Rocket M3,  Capabilities: Trans-Bridge 
+Interface: GigabitEthernet1/0/15,  Port ID (outgoing port): br0
+Holdtime : 91 sec
+
+Version :
+XM.v6.3.6
+
+advertisement version: 1
+
+-------------------------
+Device ID: INA-NSWS-70-96-231.kolmar.ru
+Entry address(es): 
+  IP address: 10.20.96.231
+Platform: cisco WS-C2960CX-8PC-L,  Capabilities: Switch IGMP 
+Interface: GigabitEthernet1/0/15,  Port ID (outgoing port): GigabitEthernet0/10
+Holdtime : 179 sec
+
+Version :
+Cisco IOS Software, C2960CX Software (C2960CX-UNIVERSALK9-M), Version 15.2(4)E6, RELEASE SOFTWARE (fc4)
+Technical Support: http://www.cisco.com/techsupport
+Copyright (c) 1986-2018 by Cisco Systems, Inc.
+Compiled Thu 05-Apr-18 03:25 by prod_rel_team
+
+advertisement version: 2
+Protocol Hello:  OUI=0x00000C, Protocol ID=0x0112; payload len=27, value=00000000FFFFFFFF010221FF0000000000002C01B5E10480FF0000
+VTP Management Domain: ''
+Native VLAN: 1
+Duplex: full
+Management address(es): 
+  IP address: 10.20.96.231
+
+-------------------------
+Device ID: Rocket M3
+Entry address(es): 
+  IP address: 10.90.17.11
+Platform: Rocket M3,  Capabilities: Trans-Bridge 
+Interface: GigabitEthernet1/0/15,  Port ID (outgoing port): br0
+Holdtime : 71 sec
+
+Version :
+XM.v6.3.6
+
+advertisement version: 1
+
+
+Total cdp entries displayed : 5
+
+
+$ show lldp neighbors detail
+% LLDP is not enabled
+
+
+$ show interface status
+
+Port      Name               Status       Vlan       Duplex  Speed Type 
+Gi1/0/1                      notconnect   1            auto   auto 10/100/1000BaseTX
+Gi1/0/2                      notconnect   1            auto   auto 10/100/1000BaseTX
+Gi1/0/3                      notconnect   1            auto   auto 10/100/1000BaseTX
+Gi1/0/4                      notconnect   1            auto   auto 10/100/1000BaseTX
+Gi1/0/5                      notconnect   1            auto   auto 10/100/1000BaseTX
+Gi1/0/6                      notconnect   1            auto   auto 10/100/1000BaseTX
+Gi1/0/7                      notconnect   1            auto   auto 10/100/1000BaseTX
+Gi1/0/8                      notconnect   1            auto   auto 10/100/1000BaseTX
+Gi1/0/9                      notconnect   1            auto   auto 10/100/1000BaseTX
+Gi1/0/10                     notconnect   1            auto   auto 10/100/1000BaseTX
+Gi1/0/11                     notconnect   1            auto   auto 10/100/1000BaseTX
+Gi1/0/12                     notconnect   1            auto   auto 10/100/1000BaseTX
+Gi1/0/13                     notconnect   1            auto   auto 10/100/1000BaseTX
+Gi1/0/14                     notconnect   1            auto   auto 10/100/1000BaseTX
+Gi1/0/15  VIDEO-CHULBAS      connected    trunk      a-full  a-100 10/100/1000BaseTX
+Gi1/0/16  96.1_twe1/0/24     connected    trunk      a-full a-1000 10/100/1000BaseTX
+Gi1/0/17  97.1_twe1/1/8      connected    trunk      a-full a-1000 1000BaseLX SFP
+Gi1/0/18  96.3_twe1/0/20     connected    trunk      a-full a-1000 1000BaseBX10-U SFP

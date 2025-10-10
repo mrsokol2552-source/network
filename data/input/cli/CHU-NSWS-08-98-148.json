@@ -1,0 +1,10 @@
+{
+  "vendor": "cisco_ios",
+  "raw_files": [
+    "10.20.98.148.txt"
+  ],
+  "parsed": {},
+  "errors": [
+    "no_templates_for_vendor:cisco_ios"
+  ]
+}

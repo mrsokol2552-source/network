@@ -1,0 +1,6 @@
+# TextFSM template — Cisco IOS
+# TODO: заполнить парсинг конкретных команд (show cdp neighbors, show vlan brief, show interfaces ...)
+Value FillMeUp (.*)
+
+Start
+  ^.* -> Record

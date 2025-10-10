@@ -1,0 +1,1964 @@
+{
+  "version": "0.1.0",
+  "devices": [
+    {
+      "hostname": "ENS-NSWR-01-99-1",
+      "site": "ENS",
+      "role": "access",
+      "vendor": "eltex_mes",
+      "platform": null,
+      "model": "MES5324A",
+      "mgmt_ip": "10.1.99.1",
+      "interfaces": [],
+      "vlans": [
+        {
+          "id": 1701
+        },
+        {
+          "id": 2001
+        }
+      ]
+    },
+    {
+      "hostname": "ENS-NFRW-01-30-5",
+      "site": "ENS",
+      "role": "wan",
+      "vendor": "fortigate",
+      "platform": null,
+      "model": "FortiGate 81F",
+      "mgmt_ip": "172.16.30.5",
+      "interfaces": [],
+      "vlans": []
+    },
+    {
+      "hostname": "ENS-NSWS-01-99-2",
+      "site": "ENS",
+      "role": "access",
+      "vendor": "eltex_mes",
+      "platform": null,
+      "model": "MES2424P",
+      "mgmt_ip": "10.1.99.2",
+      "interfaces": [],
+      "vlans": [
+        {
+          "id": 1701
+        }
+      ]
+    },
+    {
+      "hostname": "ENS-NSWS-01-99-3",
+      "site": "ENS",
+      "role": "access",
+      "vendor": "eltex_mes",
+      "platform": null,
+      "model": "MES2448B",
+      "mgmt_ip": "10.1.99.3",
+      "interfaces": [],
+      "vlans": [
+        {
+          "id": 1701
+        }
+      ]
+    },
+    {
+      "hostname": "ENS-NSWS-01-99-11",
+      "site": "ENS",
+      "role": "access",
+      "vendor": "cisco_ios",
+      "platform": null,
+      "model": "WS-C2960X-24PS-L",
+      "mgmt_ip": "10.1.99.11",
+      "interfaces": [],
+      "vlans": []
+    },
+    {
+      "hostname": "Офис-Колмар",
+      "site": "Офис",
+      "role": "unknown",
+      "vendor": "fortigate",
+      "platform": null,
+      "model": null,
+      "mgmt_ip": null,
+      "interfaces": [],
+      "vlans": []
+    },
+    {
+      "hostname": "NER-NSWR-01-96-4",
+      "site": "NER",
+      "role": "access",
+      "vendor": "cisco_ios",
+      "platform": null,
+      "model": "C9200-24P",
+      "mgmt_ip": "10.20.96.4",
+      "interfaces": [],
+      "vlans": [
+        {
+          "id": 17
+        }
+      ]
+    },
+    {
+      "hostname": "NER-NSWR-01-99-1",
+      "site": "NER",
+      "role": "access",
+      "vendor": "cisco_ios",
+      "platform": null,
+      "model": "WS-C3750X-24",
+      "mgmt_ip": "10.20.99.1",
+      "interfaces": [],
+      "vlans": []
+    },
+    {
+      "hostname": "NER-NSWS-01-99-3",
+      "site": "NER",
+      "role": "access",
+      "vendor": "cisco_ios",
+      "platform": null,
+      "model": "WS-C3560X-24",
+      "mgmt_ip": "10.20.99.3",
+      "interfaces": [],
+      "vlans": [
+        {
+          "id": 17
+        }
+      ]
+    },
+    {
+      "hostname": "NER-NSWR-01-96-1",
+      "site": "NER",
+      "role": "access",
+      "vendor": "cisco_ios",
+      "platform": null,
+      "model": "C9500-24Y4C",
+      "mgmt_ip": "10.11.11.1",
+      "interfaces": [],
+      "vlans": []
+    },
+    {
+      "hostname": "NER-NSWS-01-99-58",
+      "site": "NER",
+      "role": "access",
+      "vendor": "cisco_ios",
+      "platform": null,
+      "model": "C1000-16FP-2G-L",
+      "mgmt_ip": "10.20.99.58",
+      "interfaces": [],
+      "vlans": [
+        {
+          "id": 17
+        }
+      ]
+    },
+    {
+      "hostname": "NER-NSWS-01-99-74",
+      "site": "NER",
+      "role": "access",
+      "vendor": "cisco_ios",
+      "platform": null,
+      "model": "WS-C2960R+48TC-L",
+      "mgmt_ip": "10.20.99.74",
+      "interfaces": [],
+      "vlans": [
+        {
+          "id": 17
+        }
+      ]
+    },
+    {
+      "hostname": "NER-NSWS-01-99-73",
+      "site": "NER",
+      "role": "access",
+      "vendor": "cisco_ios",
+      "platform": null,
+      "model": "WS-C2960R+48TC-L",
+      "mgmt_ip": "10.20.99.73",
+      "interfaces": [],
+      "vlans": [
+        {
+          "id": 17
+        }
+      ]
+    },
+    {
+      "hostname": "NER-NSWS-01-99-69",
+      "site": "NER",
+      "role": "access",
+      "vendor": "cisco_ios",
+      "platform": null,
+      "model": "WS-C2960R+48TC-L",
+      "mgmt_ip": "10.20.99.69",
+      "interfaces": [],
+      "vlans": [
+        {
+          "id": 17
+        }
+      ]
+    },
+    {
+      "hostname": "NER-NSWS-01-99-4",
+      "site": "NER",
+      "role": "access",
+      "vendor": "cisco_ios",
+      "platform": null,
+      "model": "WS-C2960R-48TT-S",
+      "mgmt_ip": "10.20.99.4",
+      "interfaces": [],
+      "vlans": [
+        {
+          "id": 17
+        }
+      ]
+    },
+    {
+      "hostname": "NER-NSWS-01-99-6",
+      "site": "NER",
+      "role": "access",
+      "vendor": "cisco_ios",
+      "platform": null,
+      "model": "WS-C2960X-48TS-L",
+      "mgmt_ip": "10.20.99.6",
+      "interfaces": [],
+      "vlans": [
+        {
+          "id": 17
+        }
+      ]
+    },
+    {
+      "hostname": "NER-NSWS-09-99-75",
+      "site": "NER",
+      "role": "access",
+      "vendor": "cisco_ios",
+      "platform": null,
+      "model": "WS-C2960+48TC-L",
+      "mgmt_ip": "10.20.99.75",
+      "interfaces": [],
+      "vlans": []
+    },
+    {
+      "hostname": "NER-NSWS-09-99-129",
+      "site": "NER",
+      "role": "access",
+      "vendor": "eltex_mes",
+      "platform": null,
+      "model": "MES2448B",
+      "mgmt_ip": "10.20.99.129",
+      "interfaces": [],
+      "vlans": []
+    },
+    {
+      "hostname": "NER-NSWR-01-96-5",
+      "site": "NER",
+      "role": "access",
+      "vendor": "eltex_mes",
+      "platform": null,
+      "model": "MES5316A",
+      "mgmt_ip": "10.20.96.5",
+      "interfaces": [],
+      "vlans": []
+    },
+    {
+      "hostname": "DEN-NSWS-01-99-87",
+      "site": "DEN",
+      "role": "access",
+      "vendor": "cisco_ios",
+      "platform": null,
+      "model": "C1000-48T-4X-L",
+      "mgmt_ip": "10.20.99.87",
+      "interfaces": [],
+      "vlans": []
+    },
+    {
+      "hostname": "NER-NSWS-01-0-32",
+      "site": "NER",
+      "role": "access",
+      "vendor": "brocade",
+      "platform": null,
+      "model": "Brocade DS-6610B",
+      "mgmt_ip": "10.15.0.32",
+      "interfaces": [],
+      "vlans": []
+    },
+    {
+      "hostname": "NER-NSWS-01-0-33",
+      "site": "NER",
+      "role": "access",
+      "vendor": "brocade",
+      "platform": null,
+      "model": "Brocade DS-6610B",
+      "mgmt_ip": "10.15.0.33",
+      "interfaces": [],
+      "vlans": []
+    },
+    {
+      "hostname": "NER-NSWS-06-96-14",
+      "site": "NER",
+      "role": "access",
+      "vendor": "eltex_mes",
+      "platform": null,
+      "model": "MES2448B",
+      "mgmt_ip": "10.20.96.14",
+      "interfaces": [],
+      "vlans": []
+    },
+    {
+      "hostname": "NER-NSWS-06-99-27",
+      "site": "NER",
+      "role": "access",
+      "vendor": "cisco_ios",
+      "platform": null,
+      "model": "WS-C2960C-8TC-L",
+      "mgmt_ip": "10.20.99.27",
+      "interfaces": [],
+      "vlans": []
+    },
+    {
+      "hostname": "NER-NSWS-06-99-67",
+      "site": "NER",
+      "role": "access",
+      "vendor": "cisco_ios",
+      "platform": null,
+      "model": "WS-C2960R+48TC-L",
+      "mgmt_ip": "10.20.99.67",
+      "interfaces": [],
+      "vlans": []
+    },
+    {
+      "hostname": "NER-NSWS-07-99-134",
+      "site": "NER",
+      "role": "access",
+      "vendor": "eltex_mes",
+      "platform": null,
+      "model": "MES2448B",
+      "mgmt_ip": "10.20.99.134",
+      "interfaces": [],
+      "vlans": []
+    },
+    {
+      "hostname": "NER-NSWS-07-99-36",
+      "site": "NER",
+      "role": "access",
+      "vendor": "cisco_ios",
+      "platform": null,
+      "model": "WS-C2960R+48TC-L",
+      "mgmt_ip": "10.20.99.36",
+      "interfaces": [],
+      "vlans": []
+    },
+    {
+      "hostname": "NER-NSWS-07-99-37",
+      "site": "NER",
+      "role": "access",
+      "vendor": "cisco_ios",
+      "platform": null,
+      "model": "WS-C2960R+48TC-L",
+      "mgmt_ip": "10.20.99.37",
+      "interfaces": [],
+      "vlans": []
+    },
+    {
+      "hostname": "NER-NSWS-05-99-128",
+      "site": "NER",
+      "role": "access",
+      "vendor": "eltex_mes",
+      "platform": null,
+      "model": "MES2448B",
+      "mgmt_ip": "10.20.99.128",
+      "interfaces": [],
+      "vlans": []
+    },
+    {
+      "hostname": "NER-NSWS-04-99-9",
+      "site": "NER",
+      "role": "access",
+      "vendor": "cisco_ios",
+      "platform": null,
+      "model": "WS-C2960-48TT-L",
+      "mgmt_ip": "10.20.99.9",
+      "interfaces": [],
+      "vlans": []
+    },
+    {
+      "hostname": "NER-NSWS-04-99-28",
+      "site": "NER",
+      "role": "access",
+      "vendor": "cisco_ios",
+      "platform": null,
+      "model": "WS-C2960-48TT-L",
+      "mgmt_ip": "10.20.99.28",
+      "interfaces": [],
+      "vlans": []
+    },
+    {
+      "hostname": "NER-NSWS-03-99-5",
+      "site": "NER",
+      "role": "access",
+      "vendor": "cisco_ios",
+      "platform": null,
+      "model": "WS-C2960-48TT-S",
+      "mgmt_ip": "10.20.99.5",
+      "interfaces": [],
+      "vlans": []
+    },
+    {
+      "hostname": "NER-NSWS-03-99-21",
+      "site": "NER",
+      "role": "access",
+      "vendor": "cisco_ios",
+      "platform": null,
+      "model": "WS-C1000-48T-4G-L",
+      "mgmt_ip": "10.20.99.21",
+      "interfaces": [],
+      "vlans": []
+    },
+    {
+      "hostname": "CHU-NSWS-03-99-14",
+      "site": "CHU",
+      "role": "access",
+      "vendor": "cisco_ios",
+      "platform": null,
+      "model": "WS-C2960C-8TC-L",
+      "mgmt_ip": "10.20.99.14",
+      "interfaces": [],
+      "vlans": []
+    },
+    {
+      "hostname": "CHU-NSWS-03-99-7",
+      "site": "CHU",
+      "role": "access",
+      "vendor": "cisco_ios",
+      "platform": null,
+      "model": "WS-C2960C-8TC-L",
+      "mgmt_ip": "10.20.99.7",
+      "interfaces": [],
+      "vlans": []
+    },
+    {
+      "hostname": "CHU-NSWR-14-99-45",
+      "site": "CHU",
+      "role": "access",
+      "vendor": "cisco_ios",
+      "platform": null,
+      "model": "WS-C3850R-24T",
+      "mgmt_ip": "10.20.99.45",
+      "interfaces": [],
+      "vlans": [
+        {
+          "id": 17
+        }
+      ]
+    },
+    {
+      "hostname": "CHU-NSWS-14-99-92",
+      "site": "CHU",
+      "role": "access",
+      "vendor": "cisco_ios",
+      "platform": null,
+      "model": "WS-C2960X-48TS-L",
+      "mgmt_ip": "10.20.99.92",
+      "interfaces": [],
+      "vlans": []
+    },
+    {
+      "hostname": "CHU-NSWS-14-99-91",
+      "site": "CHU",
+      "role": "access",
+      "vendor": "cisco_ios",
+      "platform": null,
+      "model": "WS-C2960X-48TS-L",
+      "mgmt_ip": "10.20.99.91",
+      "interfaces": [],
+      "vlans": []
+    },
+    {
+      "hostname": "CHU-NSWS-12-99-93",
+      "site": "CHU",
+      "role": "access",
+      "vendor": "cisco_ios",
+      "platform": null,
+      "model": "C1000-16T-2G-L",
+      "mgmt_ip": "10.20.99.93",
+      "interfaces": [],
+      "vlans": []
+    },
+    {
+      "hostname": "CHU-NSWS-04-99-71",
+      "site": "CHU",
+      "role": "access",
+      "vendor": "cisco_ios",
+      "platform": null,
+      "model": "WS-C2960C-8TC-L",
+      "mgmt_ip": "10.20.99.71",
+      "interfaces": [],
+      "vlans": []
+    },
+    {
+      "hostname": "DEN-NSWR-03-98-1",
+      "site": "DEN",
+      "role": "access",
+      "vendor": "cisco_ios",
+      "platform": null,
+      "model": "C9300X-24Y",
+      "mgmt_ip": "10.20.98.1",
+      "interfaces": [],
+      "vlans": [
+        {
+          "id": 17
+        },
+        {
+          "id": 40
+        }
+      ]
+    },
+    {
+      "hostname": "DEN-NSWS-15-99-18",
+      "site": "DEN",
+      "role": "access",
+      "vendor": "eltex_mes",
+      "platform": null,
+      "model": "MES2448B",
+      "mgmt_ip": "10.20.99.18",
+      "interfaces": [],
+      "vlans": []
+    },
+    {
+      "hostname": "DEN-NSWS-105-99-122",
+      "site": "DEN",
+      "role": "access",
+      "vendor": "cisco_ios",
+      "platform": null,
+      "model": "WS-C2960C-8TC-L",
+      "mgmt_ip": "10.20.99.122",
+      "interfaces": [],
+      "vlans": []
+    },
+    {
+      "hostname": "DEN-NSWS-41-99-157",
+      "site": "DEN",
+      "role": "access",
+      "vendor": "cisco_ios",
+      "platform": null,
+      "model": "C1000-8FP-2G-L",
+      "mgmt_ip": "10.20.99.157",
+      "interfaces": [],
+      "vlans": []
+    },
+    {
+      "hostname": "DEN-NSWS-03-99-11",
+      "site": "DEN",
+      "role": "access",
+      "vendor": "mikrotik",
+      "platform": null,
+      "model": null,
+      "mgmt_ip": "10.20.99.11",
+      "interfaces": [],
+      "vlans": [
+        {
+          "id": 17
+        }
+      ]
+    },
+    {
+      "hostname": "DEN-NSWS-03-99-25",
+      "site": "DEN",
+      "role": "access",
+      "vendor": "fortigate",
+      "platform": null,
+      "model": null,
+      "mgmt_ip": "10.20.99.25",
+      "interfaces": [],
+      "vlans": [
+        {
+          "id": 17
+        }
+      ]
+    },
+    {
+      "hostname": "DEN-NSWS-02-99-124",
+      "site": "DEN",
+      "role": "access",
+      "vendor": "eltex_mes",
+      "platform": null,
+      "model": "MES2424B",
+      "mgmt_ip": "10.20.99.124",
+      "interfaces": [],
+      "vlans": []
+    },
+    {
+      "hostname": "DEN-NSWS-02-99-105",
+      "site": "DEN",
+      "role": "access",
+      "vendor": "eltex_mes",
+      "platform": null,
+      "model": "MES2448B",
+      "mgmt_ip": "10.20.99.105",
+      "interfaces": [],
+      "vlans": []
+    },
+    {
+      "hostname": "DEN-NSWS-04-99-15",
+      "site": "DEN",
+      "role": "access",
+      "vendor": "cisco_ios",
+      "platform": null,
+      "model": "WS-C2960+24TC-L",
+      "mgmt_ip": "10.20.99.15",
+      "interfaces": [],
+      "vlans": []
+    },
+    {
+      "hostname": "DEN-NSWS-04-99-63",
+      "site": "DEN",
+      "role": "access",
+      "vendor": "eltex_mes",
+      "platform": null,
+      "model": "MES2448B",
+      "mgmt_ip": "10.20.99.63",
+      "interfaces": [],
+      "vlans": []
+    },
+    {
+      "hostname": "DEN-NSWS-04-99-135",
+      "site": "DEN",
+      "role": "access",
+      "vendor": "cisco_ios",
+      "platform": null,
+      "model": "WS-C2950T-24",
+      "mgmt_ip": "10.20.99.135",
+      "interfaces": [],
+      "vlans": []
+    },
+    {
+      "hostname": "DEN-NSWS-21-99-147",
+      "site": "DEN",
+      "role": "access",
+      "vendor": "cisco_ios",
+      "platform": null,
+      "model": "WS-C2960S-24TS-L",
+      "mgmt_ip": "10.20.99.147",
+      "interfaces": [],
+      "vlans": []
+    },
+    {
+      "hostname": "DEN-NSWS-06-99-8",
+      "site": "DEN",
+      "role": "access",
+      "vendor": "cisco_ios",
+      "platform": null,
+      "model": "C1000-48FP-4G-L",
+      "mgmt_ip": "10.20.99.8",
+      "interfaces": [],
+      "vlans": []
+    },
+    {
+      "hostname": "DEN-NSWS-06-99-43",
+      "site": "DEN",
+      "role": "access",
+      "vendor": "cisco_ios",
+      "platform": null,
+      "model": "WS-C2960CG-8TC-L",
+      "mgmt_ip": "10.20.99.43",
+      "interfaces": [],
+      "vlans": []
+    },
+    {
+      "hostname": "DEN-NSWS-19-99-98",
+      "site": "DEN",
+      "role": "access",
+      "vendor": "cisco_ios",
+      "platform": null,
+      "model": "C1000-16T-2G-L",
+      "mgmt_ip": "10.20.99.98",
+      "interfaces": [],
+      "vlans": []
+    },
+    {
+      "hostname": "DEN-NSWS-20-99-89",
+      "site": "DEN",
+      "role": "access",
+      "vendor": "cisco_ios",
+      "platform": null,
+      "model": "C1000-16T-2G-L",
+      "mgmt_ip": "10.20.99.89",
+      "interfaces": [],
+      "vlans": []
+    },
+    {
+      "hostname": "DEN-NSWS-10-99-16",
+      "site": "DEN",
+      "role": "access",
+      "vendor": "eltex_mes",
+      "platform": null,
+      "model": "MES2448B",
+      "mgmt_ip": "10.20.99.16",
+      "interfaces": [],
+      "vlans": []
+    },
+    {
+      "hostname": "DEN-NSWS-11-99-30",
+      "site": "DEN",
+      "role": "access",
+      "vendor": "dlink",
+      "platform": null,
+      "model": "Dlink-3200-28",
+      "mgmt_ip": "10.20.99.30",
+      "interfaces": [],
+      "vlans": []
+    },
+    {
+      "hostname": "DEN-NSWS-98-112-КПП-1",
+      "site": "DEN",
+      "role": "access",
+      "vendor": "cisco_ios",
+      "platform": null,
+      "model": "C2960R+24PC-L",
+      "mgmt_ip": "10.20.98.112",
+      "interfaces": [],
+      "vlans": []
+    },
+    {
+      "hostname": "DEN-NSWS-80-99-141",
+      "site": "DEN",
+      "role": "access",
+      "vendor": "cisco_ios",
+      "platform": null,
+      "model": "C1000-16-2G-L",
+      "mgmt_ip": "10.20.99.141",
+      "interfaces": [],
+      "vlans": []
+    },
+    {
+      "hostname": "DEN-NSWS-80-99-197",
+      "site": "DEN",
+      "role": "access",
+      "vendor": "osnova",
+      "platform": null,
+      "model": "OSNOVA SW-8182/L",
+      "mgmt_ip": "10.20.99.197",
+      "interfaces": [],
+      "vlans": [
+        {
+          "id": 17
+        },
+        {
+          "id": 1640
+        }
+      ]
+    },
+    {
+      "hostname": "DEN-NSWS-58-99-86",
+      "site": "DEN",
+      "role": "access",
+      "vendor": "cisco_ios",
+      "platform": null,
+      "model": "C1000-16FP-2G-L",
+      "mgmt_ip": "10.20.99.86",
+      "interfaces": [],
+      "vlans": []
+    },
+    {
+      "hostname": "DEN-NSWS-59-99-94",
+      "site": "DEN",
+      "role": "access",
+      "vendor": "cisco_ios",
+      "platform": null,
+      "model": "C1000-16FP-2G-L",
+      "mgmt_ip": "10.20.99.94",
+      "interfaces": [],
+      "vlans": []
+    },
+    {
+      "hostname": "DEN-NSWS-60-98-131",
+      "site": "DEN",
+      "role": "access",
+      "vendor": "cisco_ios",
+      "platform": null,
+      "model": "WS-C2960CX-8PC-L",
+      "mgmt_ip": "10.20.98.131",
+      "interfaces": [],
+      "vlans": []
+    },
+    {
+      "hostname": "DEN-NSWS-61-99-136",
+      "site": "DEN",
+      "role": "access",
+      "vendor": "eltex_mes",
+      "platform": null,
+      "model": "MES2424P",
+      "mgmt_ip": "10.20.99.136",
+      "interfaces": [],
+      "vlans": []
+    },
+    {
+      "hostname": "DEN-NSWS-62-99-90",
+      "site": "DEN",
+      "role": "access",
+      "vendor": "cisco_ios",
+      "platform": null,
+      "model": "C1000-16FP-2G-L",
+      "mgmt_ip": "10.20.99.90",
+      "interfaces": [],
+      "vlans": []
+    },
+    {
+      "hostname": "DEN-NSWS-23-99-17",
+      "site": "DEN",
+      "role": "access",
+      "vendor": "cisco_ios",
+      "platform": null,
+      "model": "WS-C1000-16T-2G-L",
+      "mgmt_ip": "10.20.99.17",
+      "interfaces": [],
+      "vlans": []
+    },
+    {
+      "hostname": "DEN-NSWS-26-99-19",
+      "site": "DEN",
+      "role": "access",
+      "vendor": "cisco_ios",
+      "platform": null,
+      "model": "WS-C2960C-8TC-L",
+      "mgmt_ip": "10.20.99.19",
+      "interfaces": [],
+      "vlans": []
+    },
+    {
+      "hostname": "DEN-NSWS-91-99-26",
+      "site": "DEN",
+      "role": "access",
+      "vendor": "cisco_ios",
+      "platform": null,
+      "model": "WS-C2960+24TC-L",
+      "mgmt_ip": "10.20.99.26",
+      "interfaces": [],
+      "vlans": []
+    },
+    {
+      "hostname": "DEN-NSWS-82-99-77",
+      "site": "DEN",
+      "role": "access",
+      "vendor": "cisco_ios",
+      "platform": null,
+      "model": "WS-C2960C-8TC-L",
+      "mgmt_ip": "10.20.99.77",
+      "interfaces": [],
+      "vlans": []
+    },
+    {
+      "hostname": "DEN-NSWS-83-99-46",
+      "site": "DEN",
+      "role": "access",
+      "vendor": "cisco_ios",
+      "platform": null,
+      "model": "WS-C2960C-8TC-L",
+      "mgmt_ip": "10.20.99.46",
+      "interfaces": [],
+      "vlans": []
+    },
+    {
+      "hostname": "DEN-NSWS-16-99-12",
+      "site": "DEN",
+      "role": "access",
+      "vendor": "cisco_ios",
+      "platform": null,
+      "model": "WS-C2960C-8TC-L",
+      "mgmt_ip": "10.20.99.12",
+      "interfaces": [],
+      "vlans": []
+    },
+    {
+      "hostname": "DEN-NSWS-09-99-42",
+      "site": "DEN",
+      "role": "access",
+      "vendor": "cisco_ios",
+      "platform": null,
+      "model": "WS-C2960G-48TC-L",
+      "mgmt_ip": "10.20.99.42",
+      "interfaces": [],
+      "vlans": []
+    },
+    {
+      "hostname": "DEN-NSWS-29-99-44",
+      "site": "DEN",
+      "role": "access",
+      "vendor": "cisco_ios",
+      "platform": null,
+      "model": "C1000-16T-2G-L",
+      "mgmt_ip": "10.20.99.44",
+      "interfaces": [],
+      "vlans": []
+    },
+    {
+      "hostname": "DEN-NSWS-47-99-65",
+      "site": "DEN",
+      "role": "access",
+      "vendor": "cisco_ios",
+      "platform": null,
+      "model": "C2960+24TC-L",
+      "mgmt_ip": "10.20.99.65",
+      "interfaces": [],
+      "vlans": [
+        {
+          "id": 17
+        }
+      ]
+    },
+    {
+      "hostname": "INA-NSWS-101-99-163",
+      "site": "INA",
+      "role": "access",
+      "vendor": "osnova",
+      "platform": null,
+      "model": "NIS-3500-5408PGE",
+      "mgmt_ip": "10.20.99.163",
+      "interfaces": [],
+      "vlans": []
+    },
+    {
+      "hostname": "INA-NSWS-100-99-166",
+      "site": "INA",
+      "role": "access",
+      "vendor": "dlink",
+      "platform": null,
+      "model": "NIS-3500-5408PGE",
+      "mgmt_ip": "10.20.99.166",
+      "interfaces": [],
+      "vlans": []
+    },
+    {
+      "hostname": "INA-NSWS-99-99-162",
+      "site": "INA",
+      "role": "access",
+      "vendor": "nis",
+      "platform": null,
+      "model": "NIS-3500-5408PGE",
+      "mgmt_ip": "10.20.99.162",
+      "interfaces": [],
+      "vlans": [
+        {
+          "id": 17
+        }
+      ]
+    },
+    {
+      "hostname": "INA-NSWS-98-99-165",
+      "site": "INA",
+      "role": "access",
+      "vendor": "nis",
+      "platform": null,
+      "model": "NIS-3500-5408PGE",
+      "mgmt_ip": "10.20.99.165",
+      "interfaces": [],
+      "vlans": [
+        {
+          "id": 17
+        }
+      ]
+    },
+    {
+      "hostname": "INA-NSWS-96-99-55",
+      "site": "INA",
+      "role": "access",
+      "vendor": "zyxel",
+      "platform": null,
+      "model": "ZES-2028-GPS",
+      "mgmt_ip": "10.20.99.55",
+      "interfaces": [],
+      "vlans": [
+        {
+          "id": 17
+        }
+      ]
+    },
+    {
+      "hostname": "INA-NSWS-95-99-64",
+      "site": "INA",
+      "role": "access",
+      "vendor": "zyxel",
+      "platform": null,
+      "model": "ZES-2028-GPS",
+      "mgmt_ip": "10.20.99.64",
+      "interfaces": [],
+      "vlans": [
+        {
+          "id": 17
+        }
+      ]
+    },
+    {
+      "hostname": "INA-NSWS-94-99-79",
+      "site": "INA",
+      "role": "access",
+      "vendor": "zyxel",
+      "platform": null,
+      "model": "ZES-3028GPCX",
+      "mgmt_ip": "10.20.99.79",
+      "interfaces": [],
+      "vlans": [
+        {
+          "id": 17
+        }
+      ]
+    },
+    {
+      "hostname": "INA-NSWS-104-99-148",
+      "site": "INA",
+      "role": "access",
+      "vendor": "zyxel",
+      "platform": null,
+      "model": "ZES-2028-GPS",
+      "mgmt_ip": "10.20.99.148",
+      "interfaces": [],
+      "vlans": [
+        {
+          "id": 17
+        }
+      ]
+    },
+    {
+      "hostname": "INA-NSWS-01-99-85",
+      "site": "INA",
+      "role": "access",
+      "vendor": "zyxel",
+      "platform": null,
+      "model": "ZES-2028GS",
+      "mgmt_ip": "10.20.99.85",
+      "interfaces": [],
+      "vlans": [
+        {
+          "id": 17
+        }
+      ]
+    },
+    {
+      "hostname": "INA-NSWR-01-99-84",
+      "site": "INA",
+      "role": "access",
+      "vendor": "zyxel",
+      "platform": null,
+      "model": "ZES-3028SCX",
+      "mgmt_ip": "10.20.99.84",
+      "interfaces": [],
+      "vlans": [
+        {
+          "id": 17
+        },
+        {
+          "id": 91
+        }
+      ]
+    },
+    {
+      "hostname": "INA-NSWS-01-99-83",
+      "site": "INA",
+      "role": "access",
+      "vendor": "zyxel",
+      "platform": null,
+      "model": "ZES-2028GS",
+      "mgmt_ip": "10.20.99.83",
+      "interfaces": [],
+      "vlans": [
+        {
+          "id": 17
+        }
+      ]
+    },
+    {
+      "hostname": "INA-NSWS-01-99-161",
+      "site": "INA",
+      "role": "access",
+      "vendor": "eltex_mes",
+      "platform": null,
+      "model": "MES2424P",
+      "mgmt_ip": "10.20.99.161",
+      "interfaces": [],
+      "vlans": [
+        {
+          "id": 17
+        }
+      ]
+    },
+    {
+      "hostname": "INA-NSWS-103-99-125",
+      "site": "INA",
+      "role": "access",
+      "vendor": "fortigate",
+      "platform": null,
+      "model": "EVIDENCE CROSS-8/HPoE (II)",
+      "mgmt_ip": "10.20.99.125",
+      "interfaces": [],
+      "vlans": [
+        {
+          "id": 17
+        }
+      ]
+    },
+    {
+      "hostname": "INA-NSWS-76-99-138",
+      "site": "INA",
+      "role": "access",
+      "vendor": "cisco_ios",
+      "platform": null,
+      "model": "WS-C2960CX-8TC-L",
+      "mgmt_ip": "10.20.99.138",
+      "interfaces": [],
+      "vlans": [
+        {
+          "id": 17
+        }
+      ]
+    },
+    {
+      "hostname": "INA-NSWS-76-99-59",
+      "site": "INA",
+      "role": "access",
+      "vendor": "cisco_ios",
+      "platform": null,
+      "model": "WS-C2960+8TC-L",
+      "mgmt_ip": "10.20.99.59",
+      "interfaces": [],
+      "vlans": [
+        {
+          "id": 17
+        }
+      ]
+    },
+    {
+      "hostname": "INA-NSWS-72-99-137",
+      "site": "INA",
+      "role": "access",
+      "vendor": "cisco_ios",
+      "platform": null,
+      "model": "C1000-16T-2G-L",
+      "mgmt_ip": "10.20.99.137",
+      "interfaces": [],
+      "vlans": [
+        {
+          "id": 17
+        }
+      ]
+    },
+    {
+      "hostname": "INA-NSWS-36-99-186",
+      "site": "INA",
+      "role": "access",
+      "vendor": "cisco_ios",
+      "platform": null,
+      "model": "WS-C2960CX-8TC-L",
+      "mgmt_ip": "10.20.99.186",
+      "interfaces": [],
+      "vlans": [
+        {
+          "id": 17
+        }
+      ]
+    },
+    {
+      "hostname": "INA-NSWS-36-99-78",
+      "site": "INA",
+      "role": "access",
+      "vendor": "cisco_ios",
+      "platform": null,
+      "model": "WS-C2960+24TC-L",
+      "mgmt_ip": "10.20.99.78",
+      "interfaces": [],
+      "vlans": []
+    },
+    {
+      "hostname": "INA-NSWS-36-99-179",
+      "site": "INA",
+      "role": "access",
+      "vendor": "cisco_ios",
+      "platform": null,
+      "model": "WS-C2960+24TC-L",
+      "mgmt_ip": "10.20.99.179",
+      "interfaces": [],
+      "vlans": []
+    },
+    {
+      "hostname": "INA-NSWS-39-99-72",
+      "site": "INA",
+      "role": "access",
+      "vendor": "cisco_ios",
+      "platform": null,
+      "model": "C1000-16T-2G-L",
+      "mgmt_ip": "10.20.99.72",
+      "interfaces": [],
+      "vlans": [
+        {
+          "id": 17
+        }
+      ]
+    },
+    {
+      "hostname": "INA-NSWS-39-99-97",
+      "site": "INA",
+      "role": "access",
+      "vendor": "cisco_ios",
+      "platform": null,
+      "model": "C1000-16T-2G-L",
+      "mgmt_ip": "10.20.99.97",
+      "interfaces": [],
+      "vlans": []
+    },
+    {
+      "hostname": "INA-NSWS-39-99-185",
+      "site": "INA",
+      "role": "access",
+      "vendor": "cisco_ios",
+      "platform": null,
+      "model": "C1000-16T-2G-L",
+      "mgmt_ip": "10.20.99.185",
+      "interfaces": [],
+      "vlans": [
+        {
+          "id": 17
+        }
+      ]
+    },
+    {
+      "hostname": "INA-NSWS-93-99-106",
+      "site": "INA",
+      "role": "access",
+      "vendor": "eltex_mes",
+      "platform": null,
+      "model": "MES2348B 52-port 1G/10G",
+      "mgmt_ip": "10.20.99.106",
+      "interfaces": [],
+      "vlans": [
+        {
+          "id": 17
+        }
+      ]
+    },
+    {
+      "hostname": "INA-NSWS-20-99-109",
+      "site": "INA",
+      "role": "access",
+      "vendor": "cisco_ios",
+      "platform": null,
+      "model": "C1000-16FP-2G-L",
+      "mgmt_ip": "10.20.99.109",
+      "interfaces": [],
+      "vlans": [
+        {
+          "id": 17
+        }
+      ]
+    },
+    {
+      "hostname": "INA-NSWS-13-99-95",
+      "site": "INA",
+      "role": "access",
+      "vendor": "cisco_ios",
+      "platform": null,
+      "model": "C1000-48P-4G-L",
+      "mgmt_ip": "10.20.99.95",
+      "interfaces": [],
+      "vlans": []
+    },
+    {
+      "hostname": "INA-NSWS-13-99-145",
+      "site": "INA",
+      "role": "access",
+      "vendor": "cisco_ios",
+      "platform": null,
+      "model": "C1000-16FP-2G-L",
+      "mgmt_ip": "10.20.99.145",
+      "interfaces": [],
+      "vlans": []
+    },
+    {
+      "hostname": "INA-NSWS-54-99-66",
+      "site": "INA",
+      "role": "access",
+      "vendor": "eltex_mes",
+      "platform": null,
+      "model": "MES2348B 52-port 1G/10G",
+      "mgmt_ip": "10.20.99.66",
+      "interfaces": [],
+      "vlans": [
+        {
+          "id": 17
+        }
+      ]
+    },
+    {
+      "hostname": "INA-NSWS-54-99-96",
+      "site": "INA",
+      "role": "access",
+      "vendor": "eltex_mes",
+      "platform": null,
+      "model": "MES2324P 28-port 1G/10G",
+      "mgmt_ip": "10.20.99.96",
+      "interfaces": [],
+      "vlans": [
+        {
+          "id": 17
+        }
+      ]
+    },
+    {
+      "hostname": "INA-NSWR-11-99-150",
+      "site": "INA",
+      "role": "access",
+      "vendor": "cisco_ios",
+      "platform": null,
+      "model": "WS-C3850-24S",
+      "mgmt_ip": "10.20.99.150",
+      "interfaces": [],
+      "vlans": []
+    },
+    {
+      "hostname": "INA-NSWS-11-99-196",
+      "site": "INA",
+      "role": "access",
+      "vendor": "cisco_ios",
+      "platform": null,
+      "model": "C1000-48P-4G-L",
+      "mgmt_ip": "10.20.99.196",
+      "interfaces": [],
+      "vlans": [
+        {
+          "id": 17
+        }
+      ]
+    },
+    {
+      "hostname": "INA-NSWS-35-99-139",
+      "site": "INA",
+      "role": "access",
+      "vendor": "cisco_ios",
+      "platform": null,
+      "model": "WS-C2960CX-8TC-L",
+      "mgmt_ip": "10.20.99.139",
+      "interfaces": [],
+      "vlans": [
+        {
+          "id": 17
+        }
+      ]
+    },
+    {
+      "hostname": "INA-NSWS-35-99-61",
+      "site": "INA",
+      "role": "access",
+      "vendor": "cisco_ios",
+      "platform": null,
+      "model": "WS-C2960CX-8TC-L",
+      "mgmt_ip": "10.20.99.61",
+      "interfaces": [],
+      "vlans": [
+        {
+          "id": 17
+        }
+      ]
+    },
+    {
+      "hostname": "INA-NSWS-43-99-170",
+      "site": "INA",
+      "role": "access",
+      "vendor": "cisco_ios",
+      "platform": null,
+      "model": "C1000-16T-2G-L",
+      "mgmt_ip": "10.20.99.170",
+      "interfaces": [],
+      "vlans": [
+        {
+          "id": 17
+        }
+      ]
+    },
+    {
+      "hostname": "INA-NSWS-38-99-50",
+      "site": "INA",
+      "role": "access",
+      "vendor": "eltex_mes",
+      "platform": null,
+      "model": "MES2348B 52-port 1G/10G",
+      "mgmt_ip": "10.20.99.50",
+      "interfaces": [],
+      "vlans": [
+        {
+          "id": 17
+        }
+      ]
+    },
+    {
+      "hostname": "INA-NSWS-38-99-60",
+      "site": "INA",
+      "role": "access",
+      "vendor": "cisco_ios",
+      "platform": null,
+      "model": "WS-C2960X-48TX",
+      "mgmt_ip": "10.20.99.60",
+      "interfaces": [],
+      "vlans": [
+        {
+          "id": 17
+        }
+      ]
+    },
+    {
+      "hostname": "INA-NSWR-37-96-3",
+      "site": "INA",
+      "role": "access",
+      "vendor": "cisco_ios",
+      "platform": null,
+      "model": "C9300X-24Y",
+      "mgmt_ip": "10.20.96.3",
+      "interfaces": [],
+      "vlans": []
+    },
+    {
+      "hostname": "INA-NSWR-37-99-48",
+      "site": "INA",
+      "role": "access",
+      "vendor": "eltex_mes",
+      "platform": null,
+      "model": "MES5324A 24-Port 10G SFP+",
+      "mgmt_ip": "10.20.99.48",
+      "interfaces": [],
+      "vlans": []
+    },
+    {
+      "hostname": "INA-NSWS-37-99-49",
+      "site": "INA",
+      "role": "access",
+      "vendor": "eltex_mes",
+      "platform": null,
+      "model": "MES2424P 28-port 1G/10G",
+      "mgmt_ip": "10.20.99.49",
+      "interfaces": [],
+      "vlans": []
+    },
+    {
+      "hostname": "INA-NSWS-37-99-149",
+      "site": "INA",
+      "role": "access",
+      "vendor": "nis",
+      "platform": null,
+      "model": "SNR-S3850G-24TX",
+      "mgmt_ip": "10.20.99.149",
+      "interfaces": [],
+      "vlans": []
+    },
+    {
+      "hostname": "INA-NSWS-04-99-102",
+      "site": "INA",
+      "role": "access",
+      "vendor": "dlink",
+      "platform": null,
+      "model": "D-Link DES-3200-52",
+      "mgmt_ip": "10.20.99.102",
+      "interfaces": [],
+      "vlans": []
+    },
+    {
+      "hostname": "INA-NSWS-05-99-22",
+      "site": "INA",
+      "role": "access",
+      "vendor": "cisco_ios",
+      "platform": null,
+      "model": "WS-C2960-24TC-L",
+      "mgmt_ip": "10.20.99.22",
+      "interfaces": [],
+      "vlans": []
+    },
+    {
+      "hostname": "INA-NSWS-75-99-29",
+      "site": "INA",
+      "role": "access",
+      "vendor": "cisco_ios",
+      "platform": null,
+      "model": "WS-C2960C-8TC-L",
+      "mgmt_ip": "10.20.99.29",
+      "interfaces": [],
+      "vlans": []
+    },
+    {
+      "hostname": "INA-NSWS-51-99-32",
+      "site": "INA",
+      "role": "access",
+      "vendor": "cisco_ios",
+      "platform": null,
+      "model": "WS-C2960X-48TS-L",
+      "mgmt_ip": "10.20.99.32",
+      "interfaces": [],
+      "vlans": []
+    },
+    {
+      "hostname": "INA-NSWS-48-99-52",
+      "site": "INA",
+      "role": "access",
+      "vendor": "cisco_ios",
+      "platform": null,
+      "model": "C1000-16P-2G-L",
+      "mgmt_ip": "10.20.99.52",
+      "interfaces": [],
+      "vlans": []
+    },
+    {
+      "hostname": "INA-NSWS-47-99-47",
+      "site": "INA",
+      "role": "access",
+      "vendor": "cisco_ios",
+      "platform": null,
+      "model": "C1000-16T-2G-L",
+      "mgmt_ip": "10.20.99.47",
+      "interfaces": [],
+      "vlans": []
+    },
+    {
+      "hostname": "INA-NSWS-53-99-70",
+      "site": "INA",
+      "role": "access",
+      "vendor": "cisco_ios",
+      "platform": null,
+      "model": "C1000-8T-2G-L",
+      "mgmt_ip": "10.20.99.70",
+      "interfaces": [],
+      "vlans": []
+    },
+    {
+      "hostname": "INA-NSWS-56-99-13",
+      "site": "INA",
+      "role": "access",
+      "vendor": "cisco_ios",
+      "platform": null,
+      "model": "WS-C2960C-8TC-L",
+      "mgmt_ip": "10.20.99.13",
+      "interfaces": [],
+      "vlans": []
+    },
+    {
+      "hostname": "INA-NSWS-55-99-107",
+      "site": "INA",
+      "role": "access",
+      "vendor": "cisco_ios",
+      "platform": null,
+      "model": "WS-C2960-24TT-L",
+      "mgmt_ip": "10.20.99.107",
+      "interfaces": [],
+      "vlans": []
+    },
+    {
+      "hostname": "INA-NSWS-03-99-101",
+      "site": "INA",
+      "role": "access",
+      "vendor": "dlink",
+      "platform": null,
+      "model": "D-Link DES-3200-52",
+      "mgmt_ip": "10.20.99.101",
+      "interfaces": [],
+      "vlans": []
+    },
+    {
+      "hostname": "INA-NSWS-105-99-68",
+      "site": "INA",
+      "role": "access",
+      "vendor": "cisco_ios",
+      "platform": null,
+      "model": "WS-C2960+48TC-L",
+      "mgmt_ip": "10.20.99.68",
+      "interfaces": [],
+      "vlans": []
+    },
+    {
+      "hostname": "INA-NSWS-92-99-108",
+      "site": "INA",
+      "role": "access",
+      "vendor": "cisco_ios",
+      "platform": null,
+      "model": "C1000-16T-2G-L",
+      "mgmt_ip": "10.20.99.108",
+      "interfaces": [],
+      "vlans": []
+    },
+    {
+      "hostname": "INA-NSWS-92-99-82",
+      "site": "INA",
+      "role": "access",
+      "vendor": "cisco_ios",
+      "platform": null,
+      "model": "C1000-8T-2G-L",
+      "mgmt_ip": "10.20.99.82",
+      "interfaces": [],
+      "vlans": []
+    },
+    {
+      "hostname": "INA-NSWS-03-99-10",
+      "site": "INA",
+      "role": "access",
+      "vendor": "cisco_ios",
+      "platform": null,
+      "model": "WS-C2960+24TC-L",
+      "mgmt_ip": "10.20.99.10",
+      "interfaces": [],
+      "vlans": []
+    },
+    {
+      "hostname": "INA-NSWR-03-99-20",
+      "site": "INA",
+      "role": "access",
+      "vendor": "cisco_ios",
+      "platform": null,
+      "model": "WS-C3560V2-24TS",
+      "mgmt_ip": "10.20.99.20",
+      "interfaces": [],
+      "vlans": []
+    },
+    {
+      "hostname": "INA-NSWR-03-97-1",
+      "site": "INA",
+      "role": "access",
+      "vendor": "cisco_ios",
+      "platform": null,
+      "model": "C9300X-24Y (ядро)",
+      "mgmt_ip": "10.20.97.1",
+      "interfaces": [],
+      "vlans": [
+        {
+          "id": 17
+        }
+      ]
+    },
+    {
+      "hostname": "sw-chulbas-97.100",
+      "site": "sw",
+      "role": "access",
+      "vendor": "cisco_ios",
+      "platform": null,
+      "model": "C1000-16T-2G-L",
+      "mgmt_ip": "10.20.97.100",
+      "interfaces": [],
+      "vlans": [
+        {
+          "id": 17
+        }
+      ]
+    },
+    {
+      "hostname": "INA-NSWS-08-99-99",
+      "site": "INA",
+      "role": "access",
+      "vendor": "dlink",
+      "platform": null,
+      "model": "D-Link DES-3200-52",
+      "mgmt_ip": "10.20.99.99",
+      "interfaces": [],
+      "vlans": []
+    },
+    {
+      "hostname": "INA-NSWS-08-99-76",
+      "site": "INA",
+      "role": "access",
+      "vendor": "cisco_ios",
+      "platform": null,
+      "model": "WS-C2960+48TC-L",
+      "mgmt_ip": "10.20.99.76",
+      "interfaces": [],
+      "vlans": []
+    },
+    {
+      "hostname": "sw-core-vstack-02",
+      "site": "sw",
+      "role": "core",
+      "vendor": "nis",
+      "platform": null,
+      "model": "Te1/0/16: 10,15,17,19,220,1749–1760,1930",
+      "mgmt_ip": "10.20.96.2",
+      "interfaces": [],
+      "vlans": [
+        {
+          "id": 17
+        }
+      ]
+    },
+    {
+      "hostname": "DEN-NSWS-02-99-87",
+      "site": "DEN",
+      "role": "access",
+      "vendor": "cisco_ios",
+      "platform": null,
+      "model": "C1000-48T-4X-L",
+      "mgmt_ip": "10.20.99.88",
+      "interfaces": [],
+      "vlans": []
+    },
+    {
+      "hostname": "NER-NSWS-02-0-31",
+      "site": "NER",
+      "role": "access",
+      "vendor": "brocade",
+      "platform": null,
+      "model": "BROCADE DS-6610B",
+      "mgmt_ip": "10.15.0.31",
+      "interfaces": [],
+      "vlans": []
+    },
+    {
+      "hostname": "NER-NSWS-02-0-30",
+      "site": "NER",
+      "role": "access",
+      "vendor": "brocade",
+      "platform": null,
+      "model": "BROCADE DS-6610B",
+      "mgmt_ip": "10.15.0.30",
+      "interfaces": [],
+      "vlans": []
+    },
+    {
+      "hostname": "NER-NSWR-02-96-6",
+      "site": "NER",
+      "role": "access",
+      "vendor": "eltex_mes",
+      "platform": null,
+      "model": "MES5316A",
+      "mgmt_ip": "10.20.96.6",
+      "interfaces": [],
+      "vlans": []
+    },
+    {
+      "hostname": "MSK-NSWS-02-2-40",
+      "site": "MSK",
+      "role": "access",
+      "vendor": "cisco_ios",
+      "platform": null,
+      "model": "C1000-48P-4G-L",
+      "mgmt_ip": "10.0.2.40",
+      "interfaces": [],
+      "vlans": []
+    },
+    {
+      "hostname": "MSK-NSWS-02-2-41",
+      "site": "MSK",
+      "role": "access",
+      "vendor": "cisco_ios",
+      "platform": null,
+      "model": "C1000-48P-4G-L",
+      "mgmt_ip": "10.0.2.41",
+      "interfaces": [],
+      "vlans": []
+    },
+    {
+      "hostname": "MSK-NSWR-01-2-11",
+      "site": "MSK",
+      "role": "access",
+      "vendor": "cisco_ios",
+      "platform": null,
+      "model": "WS-C3560G-48TS",
+      "mgmt_ip": "10.0.2.11",
+      "interfaces": [],
+      "vlans": [
+        {
+          "id": 1
+        },
+        {
+          "id": 9
+        },
+        {
+          "id": 10
+        },
+        {
+          "id": 12
+        },
+        {
+          "id": 14
+        },
+        {
+          "id": 17
+        },
+        {
+          "id": 20
+        },
+        {
+          "id": 130
+        },
+        {
+          "id": 136
+        }
+      ]
+    },
+    {
+      "hostname": "MSK-NRTR-01-12-1",
+      "site": "MSK",
+      "role": "wan",
+      "vendor": "cisco_ios",
+      "platform": null,
+      "model": "ISR4331/K9",
+      "mgmt_ip": "172.16.12.1",
+      "interfaces": [],
+      "vlans": []
+    },
+    {
+      "hostname": "MSK-NFRW-01-12-5",
+      "site": "MSK",
+      "role": "wan",
+      "vendor": "fortigate",
+      "platform": null,
+      "model": "Fortinet FG-100F",
+      "mgmt_ip": "172.16.12.5",
+      "interfaces": [],
+      "vlans": []
+    },
+    {
+      "hostname": "MSK-NSWS-03-2-10",
+      "site": "MSK",
+      "role": "access",
+      "vendor": "cisco_ios",
+      "platform": null,
+      "model": "WS-C2960G-48TC-L",
+      "mgmt_ip": "10.0.2.10",
+      "interfaces": [],
+      "vlans": []
+    },
+    {
+      "hostname": "MSK-NSWR-01-2-12",
+      "site": "MSK",
+      "role": "access",
+      "vendor": "cisco_ios",
+      "platform": null,
+      "model": "C9200L-48P-4G",
+      "mgmt_ip": "10.0.2.12",
+      "interfaces": [],
+      "vlans": []
+    },
+    {
+      "hostname": "NSK-NSWR-01-99-1",
+      "site": "NSK",
+      "role": "access",
+      "vendor": "cisco_ios",
+      "platform": null,
+      "model": "C9200L-24P-4G",
+      "mgmt_ip": "10.2.11.1",
+      "interfaces": [],
+      "vlans": [
+        {
+          "id": 17
+        }
+      ]
+    },
+    {
+      "hostname": "NSK-NFRW-01-11-5",
+      "site": "NSK",
+      "role": "wan",
+      "vendor": "fortigate",
+      "platform": null,
+      "model": "Fortinet FG-100F",
+      "mgmt_ip": "172.16.11.5",
+      "interfaces": [],
+      "vlans": []
+    },
+    {
+      "hostname": "NSK-NRTR-01-11-1",
+      "site": "NSK",
+      "role": "wan",
+      "vendor": "cisco_ios",
+      "platform": null,
+      "model": "ISR4331/K9",
+      "mgmt_ip": "172.16.11.1",
+      "interfaces": [],
+      "vlans": []
+    },
+    {
+      "hostname": "NSK-NSWS-01-99-11",
+      "site": "NSK",
+      "role": "access",
+      "vendor": "cisco_ios",
+      "platform": null,
+      "model": "WS-C2960X-48TS-L",
+      "mgmt_ip": "10.2.99.11",
+      "interfaces": [],
+      "vlans": [
+        {
+          "id": 17
+        }
+      ]
+    },
+    {
+      "hostname": "NSK-NSWS-01-99-7",
+      "site": "NSK",
+      "role": "access",
+      "vendor": "cisco_ios",
+      "platform": null,
+      "model": "WS-C2960C-8TC-L",
+      "mgmt_ip": "10.2.99.7",
+      "interfaces": [],
+      "vlans": []
+    },
+    {
+      "hostname": "NSK-NSWS-01-99-5",
+      "site": "NSK",
+      "role": "access",
+      "vendor": "cisco_ios",
+      "platform": null,
+      "model": "WS-C2960C-8TC-L",
+      "mgmt_ip": "10.2.99.5",
+      "interfaces": [],
+      "vlans": []
+    },
+    {
+      "hostname": "NSK-NSWS-01-20-252",
+      "site": "NSK",
+      "role": "access",
+      "vendor": "nis",
+      "platform": null,
+      "model": "Aruba 1930 24G",
+      "mgmt_ip": "10.2.20.252",
+      "interfaces": [],
+      "vlans": []
+    },
+    {
+      "hostname": "NSK-NSWS-01-10-11",
+      "site": "NSK",
+      "role": "access",
+      "vendor": "eltex_mes",
+      "platform": null,
+      "model": "Aruba 1930 24G PoE",
+      "mgmt_ip": "10.2.10.11",
+      "interfaces": [],
+      "vlans": []
+    },
+    {
+      "hostname": "END-NFRW-01-31-5",
+      "site": "END",
+      "role": "wan",
+      "vendor": "fortigate",
+      "platform": null,
+      "model": "Fortinet FG-100F",
+      "mgmt_ip": "172.16.31.5",
+      "interfaces": [],
+      "vlans": []
+    },
+    {
+      "hostname": "END-NSWR-01-1-1",
+      "site": "END",
+      "role": "access",
+      "vendor": "cisco_ios",
+      "platform": null,
+      "model": "C9200-24P",
+      "mgmt_ip": "192.168.1.1",
+      "interfaces": [],
+      "vlans": []
+    },
+    {
+      "hostname": "LEG-NRTR-01-0-1",
+      "site": "LEG",
+      "role": "wan",
+      "vendor": "mikrotik",
+      "platform": null,
+      "model": "MikroTik RB2011UiAS-2HnD",
+      "mgmt_ip": "172.16.0.2",
+      "interfaces": [],
+      "vlans": []
+    }
+  ],
+  "cli_files": [],
+  "overrides": {
+    "render": {
+      "use_subgraphs": false,
+      "label_verbosity": "full"
+    }
+  }
+}

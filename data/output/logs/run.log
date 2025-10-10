@@ -1,0 +1,11 @@
+===== RUN START 10.10.2025 13:53:08,68 ===== 
+[INFO] Steps: collect, parse, split, merge, safety, normalize, render
+[INFO] [..............................] 0% (0/7)
+[INFO] Start: collect
+[INFO] [STEP 1] Collect CLI (stage1_collect.py)
+Всего потенциальных целей: 1270
+[INFO] Done: collect
+[INFO] [####..........................] 14% (1/7)
+[INFO] Start: parse
+[INFO] [STEP 2] PARSE CLI (TextFSM -> parsed_textfsm.json)
+^C

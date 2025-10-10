@@ -1,0 +1,457 @@
+
+
+$ show running-config
+Building configuration...
+
+Current configuration : 12671 bytes
+!
+! Last configuration change at 02:09:44 UTC Fri Sep 19 2025 by november
+! NVRAM config last updated at 02:09:28 UTC Fri Sep 19 2025 by november
+!
+version 16.9
+no service pad
+service timestamps debug datetime msec
+service timestamps log datetime msec
+service password-encryption
+service call-home
+no platform punt-keepalive disable-kernel-core
+!
+hostname MSK-NSWR-01-2-12
+!
+!
+vrf definition Mgmt-vrf
+ !
+ address-family ipv4
+ exit-address-family
+ !
+ address-family ipv6
+ exit-address-family
+!
+logging console informational
+enable secret 5 $1$hI/6$r6Q37UtAKkVBTy2Qggddd1
+!
+!
+!
+!
+no aaa new-model
+switch 1 provision c9200l-48p-4g
+!
+!
+!
+!
+!
+!
+!
+!
+!
+ip routing
+ip arp entry learn 10240
+!
+no ip domain lookup
+ip domain name kolmar.local
+!
+!
+!
+ip dhcp snooping
+login on-success log
+call-home
+ ! If contact email address in call-home is configured as sch-smart-licensing@cisco.com
+ ! the email address configured in Cisco Smart License Portal will be used as contact email address to send SCH notifications.
+ contact-email-addr sch-smart-licensing@cisco.com
+ profile "CiscoTAC-1"
+  active
+  destination transport-method http
+  no destination transport-method email
+!
+crypto pki trustpoint SLA-TrustPoint
+ enrollment pkcs12
+ revocation-check crl
+!
+crypto pki trustpoint TP-self-signed-204915901
+ enrollment selfsigned
+ subject-name cn=IOS-Self-Signed-Certificate-204915901
+ revocation-check none
+ rsakeypair TP-self-signed-204915901
+!
+!
+crypto pki certificate chain SLA-TrustPoint
+ certificate ca 01
+  30820321 30820209 A0030201 02020101 300D0609 2A864886 F70D0101 0B050030 
+  32310E30 0C060355 040A1305 43697363 6F312030 1E060355 04031317 43697363 
+  6F204C69 63656E73 696E6720 526F6F74 20434130 1E170D31 33303533 30313934 
+  3834375A 170D3338 30353330 31393438 34375A30 32310E30 0C060355 040A1305 
+  43697363 6F312030 1E060355 04031317 43697363 6F204C69 63656E73 696E6720 
+  526F6F74 20434130 82012230 0D06092A 864886F7 0D010101 05000382 010F0030 
+  82010A02 82010100 A6BCBD96 131E05F7 145EA72C 2CD686E6 17222EA1 F1EFF64D 
+  CBB4C798 212AA147 C655D8D7 9471380D 8711441E 1AAF071A 9CAE6388 8A38E520 
+  1C394D78 462EF239 C659F715 B98C0A59 5BBB5CBD 0CFEBEA3 700A8BF7 D8F256EE 
+  4AA4E80D DB6FD1C9 60B1FD18 FFC69C96 6FA68957 A2617DE7 104FDC5F EA2956AC 
+  7390A3EB 2B5436AD C847A2C5 DAB553EB 69A9A535 58E9F3E3 C0BD23CF 58BD7188 
+  68E69491 20F320E7 948E71D7 AE3BCC84 F10684C7 4BC8E00F 539BA42B 42C68BB7 
+  C7479096 B4CB2D62 EA2F505D C7B062A4 6811D95B E8250FC4 5D5D5FB8 8F27D191 
+  C55F0D76 61F9A4CD 3D992327 A8BB03BD 4E6D7069 7CBADF8B DF5F4368 95135E44 
+  DFC7C6CF 04DD7FD1 02030100 01A34230 40300E06 03551D0F 0101FF04 04030201 
+  06300F06 03551D13 0101FF04 05300301 01FF301D 0603551D 0E041604 1449DC85 
+  4B3D31E5 1B3E6A17 606AF333 3D3B4C73 E8300D06 092A8648 86F70D01 010B0500 
+  03820101 00507F24 D3932A66 86025D9F E838AE5C 6D4DF6B0 49631C78 240DA905 
+  604EDCDE FF4FED2B 77FC460E CD636FDB DD44681E 3A5673AB 9093D3B1 6C9E3D8B 
+  D98987BF E40CBD9E 1AECA0C2 2189BB5C 8FA85686 CD98B646 5575B146 8DFC66A8 
+  467A3DF4 4D565700 6ADF0F0D CF835015 3C04FF7C 21E878AC 11BA9CD2 55A9232C 
+  7CA7B7E6 C1AF74F6 152E99B7 B1FCF9BB E973DE7F 5BDDEB86 C71E3B49 1765308B 
+  5FB0DA06 B92AFE7F 494E8A9E 07B85737 F3A58BE1 1A48A229 C37C1E69 39F08678 
+  80DDCD16 D6BACECA EEBC7CF9 8428787B 35202CDC 60E4616A B623CDBD 230E3AFB 
+  418616A9 4093E049 4D10AB75 27E86F73 932E35B5 8862FDAE 0275156F 719BB2F0 
+  D697DF7F 28
+  	quit
+crypto pki certificate chain TP-self-signed-204915901
+ certificate self-signed 01
+  3082032E 30820216 A0030201 02020101 300D0609 2A864886 F70D0101 05050030 
+  30312E30 2C060355 04031325 494F532D 53656C66 2D536967 6E65642D 43657274 
+  69666963 6174652D 32303439 31353930 31301E17 0D323030 37313530 35313931 
+  305A170D 33303031 30313030 30303030 5A303031 2E302C06 03550403 1325494F 
+  532D5365 6C662D53 69676E65 642D4365 72746966 69636174 652D3230 34393135 
+  39303130 82012230 0D06092A 864886F7 0D010101 05000382 010F0030 82010A02 
+  82010100 C3BC5CF3 FFF1D2E7 66833349 E9856C67 5BB01182 AA00D579 46889747 
+  F29037D5 AB995381 FD663B97 26ABAC8E B37437A3 48492376 BC25C036 6C6DD161 
+  A811F44B 6734DACE 17F1E619 20428030 5345AAD4 D7696F45 78A18490 C70069D2 
+  89E9C0A3 FAD7E5BE 52F52ABA 94EDEBA0 9F3C9E73 D74FBE57 29809C81 14A40589 
+  9449BA67 4EDF1BF5 D77B4C66 EA980D94 1A4DBE55 7078F431 0D99BA1B FFD03910 
+  48208201 FB233106 64F18FDD 3829D078 22CAFDB0 F8656C4A EE53C6EC 3F86C3F9 
+  1F1FBF85 2D2C39B9 C390EF4C C94D4272 D792E395 C8C3301C D6D086D4 E573DAC3 
+  16195FF1 5CD7BC91 EBE03893 6E286C7F EEECC0C5 C96323CB 03E2DD20 62E8F552 
+  28E9EE19 02030100 01A35330 51300F06 03551D13 0101FF04 05300301 01FF301F 
+  0603551D 23041830 16801497 316C8936 2E146439 57979AA9 1988ED5B 0F0E4D30 
+  1D060355 1D0E0416 04149731 6C89362E 14643957 979AA919 88ED5B0F 0E4D300D 
+  06092A86 4886F70D 01010505 00038201 01000691 B5B59483 8519603F A5180906 
+  59847B19 F76B1E6B CB24E0E4 1D80B4FC 0868C2CE D34B0187 6CFE99E0 C6DA9208 
+  4B01CDB4 50716B36 AA625CAB 6F93E204 1AD1583B 965129E0 74E854F5 30C54924 
+  84CC3F0B C527349A 78BB4BB7 7BC48DDD 4E7210B5 8C010F8C CD6CA7F2 C57140B0 
+  11D110D0 EF608D20 243783B7 1B7AC0F2 FC0D3FDF FD9C12F5 A3CDE297 56AC72CD 
+  B135E731 26F47AE8 4CADB889 33E4DEC1 06AB02BC 7F222233 016229DF 0A9C42F3 
+  9942175B 8E55027D 1DD11034 EEEC773D 8948B226 7AA75B66 048AB23F 0FBCFF0E 
+  EF599B9F D5284F04 93C5637C 82F5F12C D9D43A6F 45A18E90 39BE5277 BC2239F7 
+  86A8809C 174B20FA D3FA4096 0405DE7C A75C
+  	quit
+!
+license boot level network-essentials addon dna-essentials
+!
+!
+diagnostic bootup level minimal
+!
+spanning-tree mode rapid-pvst
+spanning-tree extend system-id
+!
+!
+username itdep privilege 15 secret 5 $1$6Bp4$B3Dwg237GUu8e1R/Ynf5M0
+username volodin_s privilege 15 secret 5 $1$onqF$qceAgGmDkIhE1Ab4vbNok.
+username zhiltsov_a privilege 15 secret 5 $1$4KJ5$KPMydkqBj1685gWJS4Ix/1
+!
+redundancy
+ mode sso
+!
+!
+!
+class-map match-any system-cpp-police-topology-control
+  description Topology control
+class-map match-any system-cpp-police-sw-forward
+  description Sw forwarding, L2 LVX data, LOGGING
+class-map match-any system-cpp-default
+  description Inter FED, EWLC control, EWLC data
+class-map match-any system-cpp-police-sys-data
+  description Learning cache ovfl, High Rate App, Exception, EGR Exception, NFL SAMPLED DATA, RPF Failed
+class-map match-any system-cpp-police-punt-webauth
+  description Punt Webauth
+class-map match-any system-cpp-police-l2lvx-control
+  description L2 LVX control packets
+class-map match-any system-cpp-police-forus
+  description Forus Address resolution and Forus traffic
+class-map match-any system-cpp-police-multicast-end-station
+  description MCAST END STATION
+class-map match-any system-cpp-police-multicast
+  description Transit Traffic and MCAST Data
+class-map match-any system-cpp-police-l2-control
+  description L2 control
+class-map match-any system-cpp-police-dot1x-auth
+  description DOT1X Auth
+class-map match-any system-cpp-police-data
+  description ICMP redirect, ICMP_GEN and BROADCAST
+class-map match-any system-cpp-police-stackwise-virt-control
+  description Stackwise Virtual
+class-map match-any non-client-nrt-class
+class-map match-any system-cpp-police-routing-control
+  description Routing control and Low Latency
+class-map match-any system-cpp-police-protocol-snooping
+  description Protocol snooping
+class-map match-any system-cpp-police-dhcp-snooping
+  description DHCP snooping
+class-map match-any system-cpp-police-system-critical
+  description System Critical and Gold Pkt
+!
+policy-map system-cpp-policy
+!
+!
+!
+!
+interface GigabitEthernet0/0
+ vrf forwarding Mgmt-vrf
+ no ip address
+ shutdown
+ speed 1000
+ negotiation auto
+!
+interface GigabitEthernet1/0/1
+!
+interface GigabitEthernet1/0/2
+!
+interface GigabitEthernet1/0/3
+!
+interface GigabitEthernet1/0/4
+!
+interface GigabitEthernet1/0/5
+!
+interface GigabitEthernet1/0/6
+!
+interface GigabitEthernet1/0/7
+!
+interface GigabitEthernet1/0/8
+!
+interface GigabitEthernet1/0/9
+!
+interface GigabitEthernet1/0/10
+!
+interface GigabitEthernet1/0/11
+!
+interface GigabitEthernet1/0/12
+!
+interface GigabitEthernet1/0/13
+ description Wi-Fi_Sales
+ switchport access vlan 130
+ switchport trunk allowed vlan 130-136
+ switchport mode trunk
+ logging event spanning-tree
+ logging event status
+ no cdp enable
+ no snmp trap link-status
+ storm-control broadcast level 3.00 1.00
+ storm-control multicast level 3.00 1.00
+ storm-control action shutdown
+ storm-control action trap
+ ip dhcp snooping trust
+!
+interface GigabitEthernet1/0/14
+ description Wi-Fi_UMTS
+ switchport access vlan 130
+ switchport trunk allowed vlan 130-136
+ switchport mode trunk
+ logging event spanning-tree
+ logging event status
+ no cdp enable
+ no snmp trap link-status
+ storm-control broadcast level 3.00 1.00
+ storm-control multicast level 3.00 1.00
+ storm-control action shutdown
+ storm-control action trap
+ ip dhcp snooping trust
+!
+interface GigabitEthernet1/0/15
+ description Wi-Fi_Rukovodstvo
+ switchport access vlan 130
+ switchport trunk allowed vlan 30-34
+ switchport mode access
+ logging event spanning-tree
+ logging event status
+ no cdp enable
+ no snmp trap link-status
+ storm-control broadcast level 3.00 1.00
+ storm-control multicast level 3.00 1.00
+ storm-control action shutdown
+ storm-control action trap
+ ip dhcp snooping trust
+!
+interface GigabitEthernet1/0/16
+ description Wi-Fi_DMTS
+ switchport access vlan 130
+ switchport trunk allowed vlan 130-136
+ switchport mode trunk
+ logging event spanning-tree
+ logging event status
+ no cdp enable
+ no snmp trap link-status
+ storm-control broadcast level 3.00 1.00
+ storm-control multicast level 3.00 1.00
+ storm-control action shutdown
+ storm-control action trap
+ ip dhcp snooping trust
+!
+interface GigabitEthernet1/0/17
+ description Finance
+ switchport access vlan 130
+ switchport trunk allowed vlan 130-136
+ switchport mode trunk
+ logging event spanning-tree
+ logging event status
+ no cdp enable
+ no snmp trap link-status
+ storm-control broadcast level 3.00 1.00
+ storm-control multicast level 3.00 1.00
+ storm-control action shutdown
+ storm-control action trap
+ ip dhcp snooping trust
+!
+interface GigabitEthernet1/0/18
+ description Swis
+ switchport access vlan 130
+ switchport trunk allowed vlan 130-136
+ switchport mode trunk
+ logging event spanning-tree
+ logging event status
+ no cdp enable
+ no snmp trap link-status
+ storm-control broadcast level 3.00 1.00
+ storm-control multicast level 3.00 1.00
+ storm-control action shutdown
+ storm-control action trap
+ ip dhcp snooping trust
+!
+interface GigabitEthernet1/0/19
+!
+interface GigabitEthernet1/0/20
+!
+interface GigabitEthernet1/0/21
+!
+interface GigabitEthernet1/0/22
+!
+interface GigabitEthernet1/0/23
+!
+interface GigabitEthernet1/0/24
+!
+interface GigabitEthernet1/0/25
+!
+interface GigabitEthernet1/0/26
+!
+interface GigabitEthernet1/0/27
+ switchport mode access
+ switchport nonegotiate
+ speed 1000
+ duplex full
+!
+interface GigabitEthernet1/0/28
+!
+interface GigabitEthernet1/0/29
+!
+interface GigabitEthernet1/0/30
+!
+interface GigabitEthernet1/0/31
+!
+interface GigabitEthernet1/0/32
+!
+interface GigabitEthernet1/0/33
+!
+interface GigabitEthernet1/0/34
+!
+interface GigabitEthernet1/0/35
+!
+interface GigabitEthernet1/0/36
+!
+interface GigabitEthernet1/0/37
+!
+interface GigabitEthernet1/0/38
+!
+interface GigabitEthernet1/0/39
+!
+interface GigabitEthernet1/0/40
+!
+interface GigabitEthernet1/0/41
+!
+interface GigabitEthernet1/0/42
+!
+interface GigabitEthernet1/0/43
+ switchport access vlan 12
+ switchport mode access
+!
+interface GigabitEthernet1/0/44
+!
+interface GigabitEthernet1/0/45
+!
+interface GigabitEthernet1/0/46
+!
+interface GigabitEthernet1/0/47
+!
+interface GigabitEthernet1/0/48
+ ip dhcp snooping trust
+!
+interface GigabitEthernet1/1/1
+!
+interface GigabitEthernet1/1/2
+!
+interface GigabitEthernet1/1/3
+!
+interface GigabitEthernet1/1/4
+!
+interface Vlan1
+ ip address 10.0.2.12 255.255.255.0
+!
+interface Vlan130
+ no ip address
+!
+interface Vlan131
+ no ip address
+!
+interface Vlan134
+ no ip address
+!
+ip default-gateway 10.0.2.252
+ip forward-protocol nd
+ip http server
+ip http authentication local
+ip http secure-server
+ip http client source-interface Vlan1
+ip route 0.0.0.0 0.0.0.0 10.0.2.11
+ip ssh time-out 30
+ip ssh rsa keypair-name SSH-KEY
+ip ssh version 2
+ip ssh dh min size 4096
+ip ssh dscp 0
+!
+!
+access-list 5 permit 10.10.0.6
+access-list 5 permit 10.0.2.180
+!
+snmp-server community public RO
+!
+control-plane
+ service-policy input system-cpp-policy
+!
+!
+line con 0
+ exec-timeout 60 0
+ password 7 097A651B4E152F0A035D01
+ login local
+ stopbits 1
+line aux 0
+ stopbits 1
+line vty 0 4
+ exec-timeout 90 0
+ privilege level 15
+ logging synchronous
+ login local
+ transport input telnet ssh
+line vty 5 15
+ exec-timeout 90 0
+ logging synchronous
+ login local
+ transport input ssh
+!
+ntp server 194.190.168.1
+!
+!
+!
+!
+!
+!
+end
+
+
+
+$ show lldp neighbors detail
+% LLDP is not enabled

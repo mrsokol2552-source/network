@@ -1,0 +1,233 @@
+
+
+$ show running-config
+!!
+switch convert mode stand-alone
+!!
+!
+service password-encryption
+!
+hostname INA-NSWS-120-99-79
+sysLocation Russia, 124365, Moscow, Zelenograd, Zavodskaya st., 1B, bldg 2
+sysContact +7 495 7487178
+!
+authentication logging enable
+!
+username admin privilege 15 password 7 21232f297a57a5a743894a0e4a801fc3
+username ivashenko_vb privilege 15 password 7 e54e9a0de704d07ec176e4a41636cebd
+username sib_uib privilege 15 password 7 c26d9204ca57b8b89972462d1f23ed99
+username volodin_s password 7 f95322e3d78136532349b29309368b91
+username zhiltsov_a password 7 bdb071180829d1b43bc11a60160e8513
+!
+authentication line console login radius local
+authentication line vty login radius local
+authentication line web login radius local
+!
+!
+!
+web login privilege open
+!
+clock timezone YAKT add 9 0
+!
+!
+ssh-server enable
+!
+info-center logfile 4 config count 40960 nandflash logfile.log
+info-center logfile 4 output-enable
+info-center logfile 4 match level warnings 
+no telnet-server enable
+!
+snmp-server enable
+snmp-server securityip disable
+snmp-server community ro 7 IUYE9jwIFmA=
+snmp-server community ro 7 wFbcsoAfrRQ=
+snmp-server enable traps
+!
+ip forward-protocol udp bootps
+!
+!
+!
+!
+!
+ spanning-tree mode rstp
+!
+!
+Interface Ethernet0
+!
+!
+!
+!
+!
+vlan 1;13;90;590;1091 
+!
+vlan 17
+ name Transport
+!
+radius-server key 7 B40+5eLXRE+AO366KTctQQ==
+radius-server authentication host 10.10.0.210 primary
+radius-server authentication host 10.10.0.212
+radius-server accounting host 10.10.0.210 primary
+radius-server accounting host 10.10.0.212
+aaa-accounting enable
+aaa enable
+!
+Interface Ethernet1/0/1
+ switchport access vlan 1091
+!
+Interface Ethernet1/0/2
+ switchport access vlan 1091
+!
+Interface Ethernet1/0/3
+ description 8397
+ storm-control broadcast 2000
+ storm-control multicast 2000
+ storm-control unicast 2000
+ switchport mode trunk
+ switchport trunk allowed vlan 13 
+ loopback-detection control shutdown
+!
+Interface Ethernet1/0/4
+ switchport access vlan 1091
+!
+Interface Ethernet1/0/5
+ storm-control broadcast 2000
+ storm-control multicast 2000
+ storm-control unicast 2000
+ switchport access vlan 90
+ loopback-detection control shutdown
+!
+Interface Ethernet1/0/6
+ storm-control broadcast 2000
+ storm-control multicast 2000
+ storm-control unicast 2000
+ switchport access vlan 1091
+ loopback-detection control shutdown
+!
+Interface Ethernet1/0/7
+ storm-control broadcast 2000
+ storm-control multicast 2000
+ storm-control unicast 2000
+ switchport access vlan 90
+ loopback-detection control shutdown
+!
+Interface Ethernet1/0/8
+ storm-control broadcast 2000
+ storm-control multicast 2000
+ storm-control unicast 2000
+ switchport access vlan 90
+ loopback-detection control shutdown
+!
+Interface Ethernet1/0/9
+ storm-control broadcast 2000
+ storm-control multicast 2000
+ storm-control unicast 2000
+ switchport access vlan 90
+ loopback-detection control shutdown
+!
+Interface Ethernet1/0/10
+ storm-control broadcast 2000
+ storm-control multicast 2000
+ storm-control unicast 2000
+ switchport access vlan 90
+ loopback-detection control shutdown
+!
+Interface Ethernet1/0/11
+!
+Interface Ethernet1/0/12
+!
+Interface Ethernet1/0/13
+!
+Interface Ethernet1/0/14
+!
+Interface Ethernet1/0/15
+!
+Interface Ethernet1/0/16
+!
+Interface Ethernet1/0/17
+!
+Interface Ethernet1/0/18
+!
+Interface Ethernet1/0/19
+!
+Interface Ethernet1/0/20
+!
+Interface Ethernet1/0/21
+!
+Interface Ethernet1/0/22
+!
+Interface Ethernet1/0/23
+!
+Interface Ethernet1/0/24
+ storm-control broadcast 2000
+ storm-control multicast 2000
+ storm-control unicast 2000
+ switchport access vlan 1091
+ loopback-detection control shutdown
+!
+Interface Ethernet1/0/25
+!
+Interface Ethernet1/0/26
+ storm-control broadcast 2000
+ storm-control multicast 2000
+ storm-control unicast 2000
+ switchport mode trunk
+ switchport trunk allowed vlan 1091 
+ switchport trunk native vlan 1091
+ loopback-detection control shutdown
+!
+Interface Ethernet1/0/27
+!
+Interface Ethernet1/0/28
+ switchport mode trunk
+!
+interface Vlan1
+ shutdown
+!
+interface Vlan17
+ ip address 10.20.99.79 255.255.252.0
+!
+ip route 0.0.0.0/0 10.20.99.1
+ip route 10.90.11.0/24 10.20.97.1
+!
+ntp server 10.10.0.210
+!
+!
+no login
+!
+voice-vlan vlan 13
+captive-portal
+!
+end
+
+
+
+$ show version
+  ZES-3028GPCX Device, Compiled on Sep 08 14:05:52 2021
+  sysLocation Russia, 124365, Moscow, Zelenograd, Zavodskaya st., 1B, bldg 2
+  CPU Mac 00:1a:81:02:1b:11
+  Vlan MAC 00:1a:81:02:1b:10
+  SoftWare Package Version 7.5.3.2(R0004.0377)
+  BootRom Version 7.5.30
+  HardWare Version 2.0.2
+  CPLD Version 2.02
+  Serial No.:2322726003850
+  Copyright 2021 by Zelax
+  All rights reserved
+  Last reboot is cold reset.
+  Uptime is 7 weeks, 5 days, 20 hours, 58 minutes
+
+
+$ show cdp neighbors detail
+                         ^
+% Invalid input detected at '^' marker.
+
+
+
+$ show lldp neighbors detail
+                                       ^
+% Invalid input detected at '^' marker.
+
+
+
+$ show interface status
+interface error!

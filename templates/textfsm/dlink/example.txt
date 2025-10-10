@@ -1,0 +1,5 @@
+# TextFSM template — dlink
+Value FillMeUp (.*)
+
+Start
+  ^.* -> Record
