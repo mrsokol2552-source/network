@@ -499,7 +499,7 @@ Compiled Thu 22-Sep-22 08:11 by mcpre
 ROM: Bootstrap program is c1000 boot loader
 BOOTLDR: C1000 Boot Loader (C1000-HBOOT-M) Version 15.2(7r)E3, RELEASE SOFTWARE (fc4)
 
-DEN-NSWS-29-99-44 uptime is 29 weeks, 12 hours, 42 minutes
+DEN-NSWS-29-99-44 uptime is 29 weeks, 14 hours, 8 minutes
 System returned to ROM by power-on
 System restarted at 00:40:27 YAKT Fri Mar 21 2025
 System image file is "flash:c1000-universalk9-mz.152-7.E7.bin"
@@ -562,7 +562,7 @@ Entry address(es):
   IP address: 10.20.98.1
 Platform: cisco C9300X-24Y,  Capabilities: Router Switch IGMP 
 Interface: GigabitEthernet1/0/17,  Port ID (outgoing port): TwentyFiveGigE1/0/9
-Holdtime : 166 sec
+Holdtime : 157 sec
 
 Version :
 Cisco IOS Software [Bengaluru], Catalyst L3 Switch Software (CAT9K_IOSXE), Version 17.6.1, RELEASE SOFTWARE (fc6)
@@ -583,6 +583,45 @@ Total cdp entries displayed : 1
 
 $ show lldp neighbors detail
 ------------------------------------------------
+Local Intf: Gi1/0/5
+Chassis id: 10.13.1.127
+Port id: 0c38.3e10.7413
+Port Description: WAN Port
+System Name: X1S/X1SP
+
+System Description: 
+Version:2.4.12.2
+
+Time remaining: 0 seconds
+System Capabilities: B,T
+Enabled Capabilities: B,T
+Management Addresses:
+    IP: 10.13.1.127
+Auto Negotiation - not supported
+Physical media capabilities - not advertised
+Media Attachment Unit type - not advertised
+Vlan ID: - not advertised
+
+MED Information:
+
+    MED Codes:
+          (NP) Network Policy, (LI) Location Identification
+          (PS) Power Source Entity, (PD) Power Device
+          (IN) Inventory
+
+    H/W revision: V1.0
+    S/W revision: 2.4.12.2
+    Serial number: 00100400FV02001000000c383e107413
+    Manufacturer: Fanvil
+    Model: X1S/X1SP
+    Capabilities: NP
+    Device type: Endpoint Class III
+    Network Policy(Voice): VLAN 13, tagged, Layer-2 priority: 0, DSCP: 0
+    Network Policy(Voice Signal): VLAN 0, untagged, Layer-2 priority: 0, DSCP: 0
+    Power requirements - not advertised
+    Location - not advertised
+
+------------------------------------------------
 Local Intf: Gi1/0/6
 Chassis id: 10.13.0.120
 Port id: c074.ad45.e1c1
@@ -592,7 +631,7 @@ System Name: DP750_c0:74:ad:45:e1:c1
 System Description: 
 DP750 1.0.19.3
 
-Time remaining: 111 seconds
+Time remaining: 99 seconds
 System Capabilities: B,T
 Enabled Capabilities: B,T
 Management Addresses - not advertised
@@ -633,7 +672,7 @@ Port Description - not advertised
 System Name - not advertised
 System Description - not advertised
 
-Time remaining: 3581 seconds
+Time remaining: 3178 seconds
 System Capabilities - not advertised
 Enabled Capabilities - not advertised
 Management Addresses - not advertised
@@ -665,7 +704,7 @@ Port Description - not advertised
 System Name - not advertised
 System Description - not advertised
 
-Time remaining: 3394 seconds
+Time remaining: 2991 seconds
 System Capabilities - not advertised
 Enabled Capabilities - not advertised
 Management Addresses - not advertised
@@ -697,7 +736,7 @@ Port Description - not advertised
 System Name - not advertised
 System Description - not advertised
 
-Time remaining: 3342 seconds
+Time remaining: 2939 seconds
 System Capabilities - not advertised
 Enabled Capabilities - not advertised
 Management Addresses - not advertised
@@ -722,7 +761,7 @@ MED Information:
     Location - not advertised
 
 
-Total entries displayed: 4
+Total entries displayed: 5
 
 
 

@@ -1115,7 +1115,7 @@ Compiled Wed 12-Jul-17 15:29 by prod_rel_team
 ROM: Bootstrap program is C2960 boot loader
 BOOTLDR: C2960 Boot Loader (C2960-HBOOT-M) Version 15.0(2r)EZ1, RELEASE SOFTWARE (fc1)
 
-NER-NSWS-01-99-73 uptime is 12 weeks, 3 days, 19 hours, 57 minutes
+NER-NSWS-01-99-73 uptime is 12 weeks, 3 days, 21 hours, 23 minutes
 System returned to ROM by power-on
 System image file is "flash:/c2960-lanbasek9-mz.152-2.E7/c2960-lanbasek9-mz.152-2.E7.bin"
 Last reload reason: power-on
@@ -1179,7 +1179,7 @@ Entry address(es):
   IP address: 10.20.96.4
 Platform: cisco C9200-24P,  Capabilities: Router Switch IGMP 
 Interface: GigabitEthernet0/1,  Port ID (outgoing port): GigabitEthernet1/0/2
-Holdtime : 140 sec
+Holdtime : 156 sec
 
 Version :
 Cisco IOS Software [Amsterdam], Catalyst L3 Switch Software (CAT9K_LITE_IOSXE), Version 17.3.4b, RELEASE SOFTWARE (fc1)
@@ -1200,7 +1200,7 @@ Entry address(es):
   IP address: 10.13.0.222
 Platform: X210,  Capabilities: Host Phone 
 Interface: FastEthernet0/32,  Port ID (outgoing port): WAN PORT
-Holdtime : 149 sec
+Holdtime : 145 sec
 
 Version :
 2.4.12
@@ -1213,7 +1213,7 @@ Entry address(es):
   IP address: 10.13.1.218
 Platform: X1S/X1SP,  Capabilities: Host Phone 
 Interface: FastEthernet0/28,  Port ID (outgoing port): WAN PORT
-Holdtime : 158 sec
+Holdtime : 122 sec
 
 Version :
 2.4.12.2
@@ -1226,7 +1226,7 @@ Entry address(es):
   IP address: 10.13.0.137
 Platform: X1S/X1SP,  Capabilities: Host Phone 
 Interface: FastEthernet0/17,  Port ID (outgoing port): WAN PORT
-Holdtime : 152 sec
+Holdtime : 177 sec
 
 Version :
 2.4.12.2
@@ -1239,7 +1239,7 @@ Entry address(es):
   IP address: 10.13.0.208
 Platform: X1S/X1SP,  Capabilities: Host Phone 
 Interface: FastEthernet0/16,  Port ID (outgoing port): WAN PORT
-Holdtime : 163 sec
+Holdtime : 127 sec
 
 Version :
 2.4.12.2
@@ -1259,7 +1259,7 @@ Port Description - not advertised
 System Name - not advertised
 System Description - not advertised
 
-Time remaining: 2837 seconds
+Time remaining: 3342 seconds
 System Capabilities - not advertised
 Enabled Capabilities - not advertised
 Management Addresses - not advertised
@@ -1293,7 +1293,7 @@ System Name: X1S/X1SP
 System Description: 
 Version:2.4.12.2
 
-Time remaining: 57 seconds
+Time remaining: 21 seconds
 System Capabilities: B,T
 Enabled Capabilities: B,T
 Management Addresses:
@@ -1332,7 +1332,7 @@ System Name: X1S/X1SP
 System Description: 
 Version:2.4.12.2
 
-Time remaining: 55 seconds
+Time remaining: 18 seconds
 System Capabilities: B,T
 Enabled Capabilities: B,T
 Management Addresses:
@@ -1371,7 +1371,7 @@ System Name: X1S/X1SP
 System Description: 
 Version:2.4.12.2
 
-Time remaining: 47 seconds
+Time remaining: 11 seconds
 System Capabilities: B,T
 Enabled Capabilities: B,T
 Management Addresses:
@@ -1408,7 +1408,7 @@ Port Description - not advertised
 System Name - not advertised
 System Description - not advertised
 
-Time remaining: 3053 seconds
+Time remaining: 3559 seconds
 System Capabilities - not advertised
 Enabled Capabilities - not advertised
 Management Addresses - not advertised
@@ -1440,7 +1440,7 @@ Port Description - not advertised
 System Name - not advertised
 System Description - not advertised
 
-Time remaining: 3120 seconds
+Time remaining: 2681 seconds
 System Capabilities - not advertised
 Enabled Capabilities - not advertised
 Management Addresses - not advertised
@@ -1472,7 +1472,7 @@ Port Description - not advertised
 System Name - not advertised
 System Description - not advertised
 
-Time remaining: 3367 seconds
+Time remaining: 2927 seconds
 System Capabilities - not advertised
 Enabled Capabilities - not advertised
 Management Addresses - not advertised

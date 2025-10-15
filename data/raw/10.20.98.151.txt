@@ -463,7 +463,7 @@ Compiled Thu 05-Apr-18 03:25 by prod_rel_team
 ROM: Bootstrap program is C2960CX boot loader
 BOOTLDR: C2960CX Boot Loader (C2960CX-HBOOT-M) Version 15.2(4r)E5, RELEASE SOFTWARE (fc4)
 
-CHU-NSWS-22-98-151 uptime is 8 weeks, 3 days, 19 hours, 40 minutes
+CHU-NSWS-22-98-151 uptime is 8 weeks, 3 days, 22 hours, 12 minutes
 System returned to ROM by power-on
 System restarted at 21:37:15 YAKT Mon Jan 29 2001
 System image file is "flash:/c2960cx-universalk9-mz.152-4.E6/c2960cx-universalk9-mz.152-4.E6.bin"
@@ -526,7 +526,7 @@ Entry address(es):
   IP address: 10.20.98.140
 Platform: cisco WS-C3850-24S,  Capabilities: Switch IGMP 
 Interface: GigabitEthernet0/11,  Port ID (outgoing port): GigabitEthernet1/0/13
-Holdtime : 132 sec
+Holdtime : 174 sec
 
 Version :
 Cisco IOS Software [Everest], Catalyst L3 Switch Software (CAT3K_CAA-UNIVERSALK9-M), Version 16.6.5, RELEASE SOFTWARE (fc1)

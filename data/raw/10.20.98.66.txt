@@ -875,7 +875,7 @@ Compiled Mon 18-Jul-16 01:45 by prod_rel_team
 ROM: Bootstrap program is C2960S board boot loader
 BOOTLDR: C2960S Boot Loader (C2960S-HBOOT-M) Version 12.2(53r)SE, RELEASE SOFTWARE (fc3)
 
-DEN-NSWS-01-98-66 uptime is 1 year, 4 weeks, 5 days, 42 minutes
+DEN-NSWS-01-98-66 uptime is 1 year, 4 weeks, 5 days, 3 hours, 32 minutes
 System returned to ROM by power-on
 System restarted at 12:08:58 YAKT Sat Sep 7 2024
 System image file is "flash:c2960s-universalk9-mz.150-2.SE10.bin"
@@ -940,7 +940,7 @@ Entry address(es):
   IP address: 10.20.98.96
 Platform: cisco WS-C2960+24PC-L,  Capabilities: Switch IGMP 
 Interface: GigabitEthernet1/0/26,  Port ID (outgoing port): GigabitEthernet0/1
-Holdtime : 167 sec
+Holdtime : 139 sec
 
 Version :
 Cisco IOS Software, C2960 Software (C2960-LANBASEK9-M), Version 15.2(2)E7, RELEASE SOFTWARE (fc3)
@@ -965,7 +965,7 @@ Entry address(es):
   IP address: 10.20.98.1
 Platform: cisco C9300X-24Y,  Capabilities: Router Switch IGMP 
 Interface: GigabitEthernet1/0/1,  Port ID (outgoing port): TwentyFiveGigE1/0/19
-Holdtime : 125 sec
+Holdtime : 137 sec
 
 Version :
 Cisco IOS Software [Bengaluru], Catalyst L3 Switch Software (CAT9K_IOSXE), Version 17.6.1, RELEASE SOFTWARE (fc6)
@@ -989,7 +989,7 @@ Entry address(es):
   IP address: 192.168.99.123
 Platform: cisco WS-C2960CX-8TC-L,  Capabilities: Switch IGMP 
 Interface: GigabitEthernet1/0/5,  Port ID (outgoing port): GigabitEthernet0/10
-Holdtime : 156 sec
+Holdtime : 129 sec
 
 Version :
 Cisco IOS Software, C2960CX Software (C2960CX-UNIVERSALK9-M), Version 15.2(4)E6, RELEASE SOFTWARE (fc4)
@@ -1014,7 +1014,7 @@ Entry address(es):
   IP address: 10.20.98.110
 Platform: cisco WS-C3850-24S,  Capabilities: Switch IGMP 
 Interface: GigabitEthernet1/0/25,  Port ID (outgoing port): GigabitEthernet1/1/1
-Holdtime : 128 sec
+Holdtime : 175 sec
 
 Version :
 Cisco IOS Software, Catalyst L3 Switch Software (CAT3K_CAA-UNIVERSALK9-M), Version 15.2(2)E, RELEASE SOFTWARE (fc3)
@@ -1038,7 +1038,7 @@ Entry address(es):
   IP address: 10.13.1.125
 Platform: X1S/X1SP,  Capabilities: Host Phone 
 Interface: GigabitEthernet1/0/19,  Port ID (outgoing port): WAN PORT
-Holdtime : 126 sec
+Holdtime : 144 sec
 
 Version :
 2.4.12.2
@@ -1055,7 +1055,7 @@ Entry address(es):
   IP address: 10.13.1.178
 Platform: X1S/X1SP,  Capabilities: Host Phone 
 Interface: GigabitEthernet1/0/2,  Port ID (outgoing port): WAN PORT
-Holdtime : 160 sec
+Holdtime : 174 sec
 
 Version :
 2.4.12.2
@@ -1072,7 +1072,7 @@ Entry address(es):
   IP address: 10.13.1.19
 Platform: X1S/X1SP,  Capabilities: Host Phone 
 Interface: GigabitEthernet1/0/21,  Port ID (outgoing port): WAN PORT
-Holdtime : 151 sec
+Holdtime : 162 sec
 
 Version :
 2.4.12.2
@@ -1089,7 +1089,7 @@ Entry address(es):
   IP address: 10.13.1.214
 Platform: X1S/X1SP,  Capabilities: Host Phone 
 Interface: GigabitEthernet1/0/18,  Port ID (outgoing port): WAN PORT
-Holdtime : 176 sec
+Holdtime : 126 sec
 
 Version :
 2.4.12.2
@@ -1122,7 +1122,7 @@ Gi1/0/10  ASUTP_OF           notconnect   1            auto   auto 10/100/1000Ba
 Gi1/0/11  Kabinet TSO        notconnect   40           full   1000 10/100/1000BaseTX
 Gi1/0/12  Kabinet TSO        connected    40           full   1000 10/100/1000BaseTX
 Gi1/0/13  CAM_15.149         connected    715        a-full a-1000 10/100/1000BaseTX
-Gi1/0/14  Kabinet TSO        connected    40         a-full a-1000 10/100/1000BaseTX
+Gi1/0/14  Kabinet TSO        connected    40         a-full  a-100 10/100/1000BaseTX
 Gi1/0/15  buro-prob TEPLICKA connected    40         a-full  a-100 10/100/1000BaseTX
 Gi1/0/16  Kabinet TSO        notconnect   40           full   1000 10/100/1000BaseTX
 Gi1/0/17  Kabinet TSO        connected    40           full   1000 10/100/1000BaseTX

@@ -169,7 +169,7 @@ $ show version
   Copyright (C) 2022 NAG LLC
   All rights reserved
   Last reboot is cold reset.
-  Uptime is 66 weeks, 2 days, 18 hours, 40 minutes
+  Uptime is 66 weeks, 2 days, 20 hours, 6 minutes
 
 
 $ show cdp neighbors detail

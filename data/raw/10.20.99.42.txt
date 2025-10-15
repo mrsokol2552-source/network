@@ -1047,7 +1047,7 @@ Compiled Thu 23-Oct-14 14:49 by prod_rel_team
 ROM: Bootstrap program is C2960 boot loader
 BOOTLDR: C2960 Boot Loader (C2960-HBOOT-M) Version 12.2(25r)SEE6, RELEASE SOFTWARE (fc1)
 
-DEN-NSWS-09-99-42 uptime is 12 weeks, 3 days, 21 hours, 9 minutes
+DEN-NSWS-09-99-42 uptime is 12 weeks, 3 days, 22 hours, 35 minutes
 System returned to ROM by power-on
 System restarted at 16:23:51 YAKT Mon Jul 14 2025
 System image file is "flash:/c2960-lanbasek9-mz.150-2.SE7.bin"
@@ -1108,7 +1108,7 @@ Entry address(es):
   IP address: 10.20.98.1
 Platform: cisco C9300X-24Y,  Capabilities: Router Switch IGMP 
 Interface: GigabitEthernet0/45,  Port ID (outgoing port): TwentyFiveGigE1/0/2
-Holdtime : 144 sec
+Holdtime : 142 sec
 
 Version :
 Cisco IOS Software [Bengaluru], Catalyst L3 Switch Software (CAT9K_IOSXE), Version 17.6.1, RELEASE SOFTWARE (fc6)
@@ -1132,7 +1132,7 @@ Entry address(es):
   IP address: 10.13.1.38
 Platform: X1S/X1SP,  Capabilities: Host Phone 
 Interface: GigabitEthernet0/15,  Port ID (outgoing port): WAN PORT
-Holdtime : 120 sec
+Holdtime : 165 sec
 
 Version :
 2.4.12.2

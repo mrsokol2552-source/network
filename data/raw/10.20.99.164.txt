@@ -118,7 +118,7 @@ end
 
 $ show version
 
-MEMORY           : Total=84966 KBytes, Free=69669 KBytes, Max=69631 KBytes
+MEMORY           : Total=84966 KBytes, Free=69643 KBytes, Max=69604 KBytes
 FLASH            : 0x40000000-0x40ffffff, 256 x 0x10000 blocks
 MAC Address      : 00-1d-77-29-21-a2
 S/N              : 54082022080006
@@ -129,8 +129,8 @@ Company Name     :
 Company Contact  : 
 System Location  : 
 Timezone Offset  : 0
-System Time      : 1970-03-08T21:27:08+00:00
-System Uptime    : 66d 21:27:08
+System Time      : 1970-03-08T22:52:44+00:00
+System Uptime    : 66d 22:52:44
 
 Active Image
 ------------

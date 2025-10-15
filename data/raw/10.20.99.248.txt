@@ -412,7 +412,7 @@ Compiled Thu 14-May-15 03:20 by prod_rel_team
 ROM: Bootstrap program is C2960C boot loader
 BOOTLDR: C2960C Boot Loader (C2960c405-HBOOT-M) Version 12.2(55r)EX9, RELEASE SOFTWARE (fc1)
 
-HRAM-RPBK uptime is 5 weeks, 22 hours, 7 minutes
+HRAM-RPBK uptime is 5 weeks, 23 hours, 33 minutes
 System returned to ROM by power-on
 System restarted at 15:36:14 YAKT Thu Sep 4 2025
 System image file is "flash:/c2960c405-universalk9-mz.150-2.SE8/c2960c405-universalk9-mz.150-2.SE8.bin"

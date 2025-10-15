@@ -248,7 +248,7 @@ Compiled Wed 12-Jul-17 13:06 by prod_rel_team
 ROM: Bootstrap program is C2960X boot loader
 BOOTLDR: C2960X Boot Loader (C2960X-HBOOT-M) Version 15.2(3r)E1, RELEASE SOFTWARE (fc1)
 
-NSK-NSWS-01-99-11 uptime is 5 weeks, 5 days, 17 hours, 34 minutes
+NSK-NSWS-01-99-11 uptime is 5 weeks, 5 days, 19 hours, 0 minutes
 System returned to ROM by power-on
 System restarted at 11:14:27 UTC Sat Aug 30 2025
 System image file is "flash:/c2960x-universalk9-mz.152-2.E7/c2960x-universalk9-mz.152-2.E7.bin"
@@ -314,7 +314,7 @@ Entry address(es):
   IP address: 10.2.11.1
 Platform: cisco C9200L-24P-4G,  Capabilities: Router Switch IGMP 
 Interface: GigabitEthernet1/0/35,  Port ID (outgoing port): GigabitEthernet1/0/23
-Holdtime : 133 sec
+Holdtime : 179 sec
 
 Version :
 Cisco IOS Software [Cupertino], Catalyst L3 Switch Software (CAT9K_LITE_IOSXE), Version 17.9.4, RELEASE SOFTWARE (fc5)
@@ -334,7 +334,7 @@ Device ID: Switch
 Entry address(es): 
 Platform: cisco WS-C3560CX-12PC-S,  Capabilities: Switch IGMP 
 Interface: GigabitEthernet1/0/6,  Port ID (outgoing port): GigabitEthernet0/13
-Holdtime : 143 sec
+Holdtime : 133 sec
 
 Version :
 Cisco IOS Software, C3560CX Software (C3560CX-UNIVERSALK9-M), Version 15.2(4)E6, RELEASE SOFTWARE (fc4)

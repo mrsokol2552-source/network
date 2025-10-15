@@ -50,6 +50,8 @@ import logging
 from dataclasses import dataclass
 from pathlib import Path
 from typing import Dict, List, Any, Tuple
+from concurrent.futures import ThreadPoolExecutor, as_completed
+import os
 
 # Внешние зависимости
 # YAML больше не используется; config и inventory читаем как JSON
@@ -319,6 +321,102 @@ class TextFSMParser:
                         host_entry["errors"].append(emsg)
 
             result["hosts"][hostname] = host_entry
+
+        return result
+
+    def parse_all_fast(self) -> Dict[str, Any]:
+        """Parallel version of parse_all() processing hosts concurrently.
+        Number of workers is controlled via env TEXTFSM_WORKERS (default: cpu_count or 4, capped at 32).
+        """
+        result: Dict[str, Any] = {
+            "hosts": {},
+            "meta": {"templates_total": 0, "errors": self.meta_errors},
+        }
+
+        # Fallback to discover devices from CLI dir if inventory missing
+        if not self.inventory.devices:
+            for p in sorted(self.config.cli_dir.glob("*.txt")):
+                try:
+                    head = p.read_text(encoding="utf-8", errors="ignore")[:4000]
+                except Exception:
+                    head = ""
+                m = re.search(r'(?m)^\s*hostname\s+([\w\-.]+)', head)
+                hostname = m.group(1) if m else p.stem
+                vendor = self._guess_vendor(head)
+                self.inventory.devices[hostname] = Device(hostname=hostname, vendor=vendor)
+                self.inventory.cli_files[hostname] = CliFilesEntry(hostname=hostname, files=[str(p.name)])
+
+        # Count templates for meta
+        total_templates = 0
+        seen_vendors: set[str] = set(d.vendor for d in self.inventory.devices.values() if d.vendor)
+        for v in seen_vendors:
+            total_templates += len(self._templates_for_vendor(v))
+        result["meta"]["templates_total"] = total_templates
+
+        def _process_host(hostname: str, device: Device) -> tuple[str, Dict[str, Any]]:
+            host_entry: Dict[str, Any] = {
+                "vendor": device.vendor,
+                "raw_files": [],
+                "parsed": {},
+                "errors": [],
+            }
+            cf = self.inventory.cli_files.get(hostname)
+            if not cf or not cf.files:
+                return hostname, host_entry
+            host_entry["raw_files"] = list(cf.files)
+            templates = self._templates_for_vendor(device.vendor or "")
+            if not templates:
+                msg = f"no_templates_for_vendor:{device.vendor}"
+                self.log.warning("%s -> %s", hostname, msg)
+                host_entry["errors"].append(msg)
+            for rel_path in cf.files:
+                cli_text, full_path = self._read_cli_text(rel_path)
+                if not cli_text:
+                    host_entry["errors"].append(f"empty_or_unreadable:{rel_path}")
+                    continue
+                for tpl in templates:
+                    try:
+                        with tpl.path.open("r", encoding="utf-8") as fh:
+                            fresh_fsm = textfsm.TextFSM(fh)
+                        records = fresh_fsm.ParseText(cli_text)
+                        if not records:
+                            continue
+                        headers = [h.strip() for h in fresh_fsm.header]
+                        dicts = [dict(zip(headers, row)) for row in records]
+                        bucket = host_entry["parsed"].setdefault(tpl.stem, [])
+                        for d in dicts:
+                            d["_source_file"] = str(full_path) if full_path else rel_path
+                            d["_template"] = tpl.path.name
+                            bucket.append(d)
+                    except Exception as e:
+                        emsg = f"parse_error:{rel_path}:{tpl.path.name}:{e}"
+                        self.log.error("%s -> %s", hostname, emsg)
+                        host_entry["errors"].append(emsg)
+            return hostname, host_entry
+
+        try:
+            workers = int(os.environ.get("TEXTFSM_WORKERS", "0"))
+        except Exception:
+            workers = 0
+        if workers <= 0:
+            workers = min(32, (os.cpu_count() or 4))
+
+        futures = []
+        with ThreadPoolExecutor(max_workers=workers) as ex:
+            for hostname, device in self.inventory.devices.items():
+                futures.append(ex.submit(_process_host, hostname, device))
+            total = len(futures)
+            done = 0
+            for fut in as_completed(futures):
+                try:
+                    hn, entry = fut.result()
+                    result["hosts"][hn] = entry
+                except Exception as e:
+                    self.log.error("host_task_error: %s", e)
+                finally:
+                    done += 1
+                    if done % 10 == 0 or done == total:
+                        self.log.info("textfsm_parse_progress: %d/%d", done, total)
 
         return result
 

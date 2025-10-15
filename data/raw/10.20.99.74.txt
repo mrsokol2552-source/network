@@ -1135,7 +1135,7 @@ Compiled Wed 12-Jul-17 15:29 by prod_rel_team
 ROM: Bootstrap program is C2960 boot loader
 BOOTLDR: C2960 Boot Loader (C2960-HBOOT-M) Version 15.0(2r)EZ1, RELEASE SOFTWARE (fc1)
 
-NER-NSWS-01-99-74 uptime is 12 weeks, 3 days, 19 hours, 57 minutes
+NER-NSWS-01-99-74 uptime is 12 weeks, 3 days, 21 hours, 22 minutes
 System returned to ROM by power-on
 System image file is "flash:/c2960-lanbasek9-mz.152-2.E7/c2960-lanbasek9-mz.152-2.E7.bin"
 Last reload reason: power-on
@@ -1199,7 +1199,7 @@ Entry address(es):
   IP address: 10.20.96.4
 Platform: cisco C9200-24P,  Capabilities: Router Switch IGMP 
 Interface: GigabitEthernet0/1,  Port ID (outgoing port): GigabitEthernet1/0/1
-Holdtime : 158 sec
+Holdtime : 169 sec
 
 Version :
 Cisco IOS Software [Amsterdam], Catalyst L3 Switch Software (CAT9K_LITE_IOSXE), Version 17.3.4b, RELEASE SOFTWARE (fc1)
@@ -1220,7 +1220,7 @@ Entry address(es):
   IP address: 10.13.0.99
 Platform: X1S/X1SP,  Capabilities: Host Phone 
 Interface: FastEthernet0/14,  Port ID (outgoing port): WAN PORT
-Holdtime : 146 sec
+Holdtime : 147 sec
 
 Version :
 2.4.12.2
@@ -1233,7 +1233,7 @@ Entry address(es):
   IP address: 10.13.1.174
 Platform: X1S/X1SP,  Capabilities: Host Phone 
 Interface: FastEthernet0/13,  Port ID (outgoing port): WAN PORT
-Holdtime : 147 sec
+Holdtime : 148 sec
 
 Version :
 2.4.12.2
@@ -1246,7 +1246,7 @@ Entry address(es):
   IP address: 10.13.1.140
 Platform: X1S/X1SP,  Capabilities: Host Phone 
 Interface: FastEthernet0/15,  Port ID (outgoing port): WAN PORT
-Holdtime : 155 sec
+Holdtime : 156 sec
 
 Version :
 2.4.12.2
@@ -1259,7 +1259,7 @@ Entry address(es):
   IP address: 10.13.0.78
 Platform: X1S/X1SP,  Capabilities: Host Phone 
 Interface: FastEthernet0/48,  Port ID (outgoing port): WAN PORT
-Holdtime : 167 sec
+Holdtime : 169 sec
 
 Version :
 2.4.12.2
@@ -1285,7 +1285,7 @@ Entry address(es):
   IP address: 10.13.1.180
 Platform: X1S/X1SP,  Capabilities: Host Phone 
 Interface: FastEthernet0/24,  Port ID (outgoing port): WAN PORT
-Holdtime : 137 sec
+Holdtime : 139 sec
 
 Version :
 2.4.12.2
@@ -1298,7 +1298,7 @@ Entry address(es):
   IP address: 10.13.1.27
 Platform: X1S/X1SP,  Capabilities: Host Phone 
 Interface: FastEthernet0/25,  Port ID (outgoing port): WAN PORT
-Holdtime : 169 sec
+Holdtime : 171 sec
 
 Version :
 2.4.12.2
@@ -1333,7 +1333,7 @@ System Name: X1S/X1SP
 System Description: 
 Version:2.4.12.2
 
-Time remaining: 4 seconds
+Time remaining: 6 seconds
 System Capabilities: B,T
 Enabled Capabilities: B,T
 Management Addresses:
@@ -1372,7 +1372,7 @@ System Name: X1S/X1SP
 System Description: 
 Version:2.4.12.2
 
-Time remaining: 6 seconds
+Time remaining: 8 seconds
 System Capabilities: B,T
 Enabled Capabilities: B,T
 Management Addresses:
@@ -1489,7 +1489,7 @@ System Name: X1S/X1SP
 System Description: 
 Version:2.4.12.2
 
-Time remaining: 37 seconds
+Time remaining: 38 seconds
 System Capabilities: B,T
 Enabled Capabilities: B,T
 Management Addresses:
@@ -1606,7 +1606,7 @@ System Name: X1S/X1SP
 System Description: 
 Version:2.4.12.2
 
-Time remaining: 43 seconds
+Time remaining: 42 seconds
 System Capabilities: B,T
 Enabled Capabilities: B,T
 Management Addresses:
@@ -1643,7 +1643,7 @@ Port Description - not advertised
 System Name - not advertised
 System Description - not advertised
 
-Time remaining: 3039 seconds
+Time remaining: 3582 seconds
 System Capabilities - not advertised
 Enabled Capabilities - not advertised
 Management Addresses - not advertised
@@ -1675,7 +1675,7 @@ Port Description - not advertised
 System Name - not advertised
 System Description - not advertised
 
-Time remaining: 3386 seconds
+Time remaining: 2984 seconds
 System Capabilities - not advertised
 Enabled Capabilities - not advertised
 Management Addresses - not advertised
@@ -1707,7 +1707,7 @@ Port Description - not advertised
 System Name - not advertised
 System Description - not advertised
 
-Time remaining: 3594 seconds
+Time remaining: 3192 seconds
 System Capabilities - not advertised
 Enabled Capabilities - not advertised
 Management Addresses - not advertised
@@ -1739,7 +1739,7 @@ Port Description - not advertised
 System Name - not advertised
 System Description - not advertised
 
-Time remaining: 3512 seconds
+Time remaining: 3110 seconds
 System Capabilities - not advertised
 Enabled Capabilities - not advertised
 Management Addresses - not advertised
@@ -1771,7 +1771,7 @@ Port Description - not advertised
 System Name - not advertised
 System Description - not advertised
 
-Time remaining: 3057 seconds
+Time remaining: 3552 seconds
 System Capabilities - not advertised
 Enabled Capabilities - not advertised
 Management Addresses - not advertised
@@ -1803,7 +1803,7 @@ Port Description - not advertised
 System Name - not advertised
 System Description - not advertised
 
-Time remaining: 3544 seconds
+Time remaining: 3142 seconds
 System Capabilities - not advertised
 Enabled Capabilities - not advertised
 Management Addresses - not advertised
@@ -1835,7 +1835,7 @@ Port Description - not advertised
 System Name - not advertised
 System Description - not advertised
 
-Time remaining: 3352 seconds
+Time remaining: 2950 seconds
 System Capabilities - not advertised
 Enabled Capabilities - not advertised
 Management Addresses - not advertised
@@ -1867,7 +1867,7 @@ Port Description - not advertised
 System Name - not advertised
 System Description - not advertised
 
-Time remaining: 3040 seconds
+Time remaining: 3583 seconds
 System Capabilities - not advertised
 Enabled Capabilities - not advertised
 Management Addresses - not advertised
@@ -1903,7 +1903,7 @@ Fa0/1     AVER_VKS_14.12     connected    1420       a-full  a-100 10/100BaseTX
 Fa0/2                        notconnect   1            auto   auto 10/100BaseTX
 Fa0/3     6144               notconnect   trunk        auto   auto 10/100BaseTX
 Fa0/4     Printer(Kab_307)   notconnect   21           auto   auto 10/100BaseTX
-Fa0/5                        connected    20         a-full   a-10 10/100BaseTX
+Fa0/5                        connected    20         a-full  a-100 10/100BaseTX
 Fa0/6                        notconnect   trunk        auto   auto 10/100BaseTX
 Fa0/7                        notconnect   1            auto   auto 10/100BaseTX
 Fa0/8                        notconnect   1            auto   auto 10/100BaseTX

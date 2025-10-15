@@ -2,7 +2,7 @@
 
 $ show running-config
 [ERROR executing command: 
-Pattern not detected: '\x1b\\[KINA\\-NSWS\\-54\\-99\\-66\\#' in output.
+Pattern not detected: '\x1b\\[K' in output.
 
 Things you might try to fix this:
 1. Explicitly set your pattern using the expect_string argument.
@@ -57,15 +57,26 @@ You can also look at the Netmiko session_log or debug log for more information.
 
 
 $ show interface status
-[ERROR executing command: 
-
-Pattern not detected: 'show\\ interface\\ status' in output.
-
-Things you might try to fix this:
-1. Adjust the regex pattern to better identify the terminating string. Note, in
-many situations the pattern is automatically based on the network device's prompt.
-2. Increase the read_timeout to a larger value.
-
-You can also look at the Netmiko session_log or debug log for more information.
-
-]
+                                             Flow Link           Uptime       Back   Mdix                            
+Port     Type         Duplex  Speed Neg      ctrl State         (d,h:m:s)   Pressure Mode    Port Mode (VLAN)        
+-------- ------------ ------  ----- -------- ---- ----------- ------------- -------- ------- ------------------------
+gi1/0/1  1G-Copper      --      --     --     --  Down (adm)        --         --     --     Access (3131)           
+gi1/0/2  1G-Copper      --      --     --     --  Down (adm)        --         --     --     Access (3131)           
+gi1/0/3  1G-Copper      --      --     --     --  Down (adm)        --         --     --     Access (3131)           
+gi1/0/4  1G-Copper      --      --     --     --  Down (adm)        --         --     --     Access (3131)           
+gi1/0/5  1G-Copper      --      --     --     --  Down (adm)        --         --     --     Access (3131)           
+gi1/0/6  1G-Copper      --      --     --     --  Down (adm)        --         --     --     Access (3131)           
+gi1/0/7  1G-Copper      --      --     --     --  Down (adm)        --         --     --     Access (3131)           
+gi1/0/8  1G-Copper      --      --     --     --  Down (adm)        --         --     --     Access (3131)           
+gi1/0/9  1G-Copper      --      --     --     --  Down (adm)        --         --     --     Access (1)              
+gi1/0/10 1G-Copper      --      --     --     --  Down (adm)        --         --     --     Access (1)              
+gi1/0/11 1G-Copper      --      --     --     --  Down (adm)        --         --     --     Access (90)             
+gi1/0/12 1G-Copper      --      --     --     --  Down (adm)        --         --     --     Access (1)              
+gi1/0/13 1G-Copper      --      --     --     --  Down (adm)        --         --     --     Access (1)              
+gi1/0/14 1G-Copper      --      --     --     --  Down (adm)        --         --     --     Access (1)              
+gi1/0/15 1G-Copper      --      --     --     --  Down (adm)        --         --     --     Access (1)              
+gi1/0/16 1G-Copper      --      --     --     --  Down (adm)        --         --     --     Access (1)              
+gi1/0/17 1G-Copper      --      --     --     --  Down (adm)        --         --     --     Access (1)              
+gi1/0/18 1G-Copper      --      --     --     --  Down (adm)        --         --     --     Access (1)              
+gi1/0/19 1G-Copper      --      --     --     --  Down (adm)        --         --     --     Access (1)              
+[0mMore: <space>,  Quit: q or CTRL+Z, One line: <return> 

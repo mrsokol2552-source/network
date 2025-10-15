@@ -1082,7 +1082,7 @@ Compiled Wed 12-Jul-17 15:29 by prod_rel_team
 ROM: Bootstrap program is C2960 boot loader
 BOOTLDR: C2960 Boot Loader (C2960-HBOOT-M) Version 15.0(2r)EZ1, RELEASE SOFTWARE (fc1)
 
-NER-NSWS-01-99-69 uptime is 12 weeks, 3 days, 19 hours, 58 minutes
+NER-NSWS-01-99-69 uptime is 12 weeks, 3 days, 21 hours, 23 minutes
 System returned to ROM by power-on
 System image file is "flash:/c2960-lanbasek9-mz.152-2.E7/c2960-lanbasek9-mz.152-2.E7.bin"
 Last reload reason: power-on
@@ -1146,7 +1146,7 @@ Entry address(es):
   IP address: 10.20.96.4
 Platform: cisco C9200-24P,  Capabilities: Router Switch IGMP 
 Interface: GigabitEthernet0/2,  Port ID (outgoing port): GigabitEthernet1/0/3
-Holdtime : 147 sec
+Holdtime : 169 sec
 
 Version :
 Cisco IOS Software [Amsterdam], Catalyst L3 Switch Software (CAT9K_LITE_IOSXE), Version 17.3.4b, RELEASE SOFTWARE (fc1)
@@ -1167,7 +1167,7 @@ Entry address(es):
   IP address: 10.13.0.230
 Platform: X1S/X1SP,  Capabilities: Host Phone 
 Interface: FastEthernet0/27,  Port ID (outgoing port): WAN PORT
-Holdtime : 169 sec
+Holdtime : 133 sec
 
 Version :
 2.4.12.2
@@ -1180,7 +1180,7 @@ Entry address(es):
   IP address: 10.13.1.61
 Platform: X1S/X1SP,  Capabilities: Host Phone 
 Interface: FastEthernet0/21,  Port ID (outgoing port): WAN PORT
-Holdtime : 132 sec
+Holdtime : 159 sec
 
 Version :
 2.4.12.2
@@ -1193,7 +1193,7 @@ Entry address(es):
   IP address: 10.13.0.126
 Platform: X1S/X1SP,  Capabilities: Host Phone 
 Interface: FastEthernet0/8,  Port ID (outgoing port): WAN PORT
-Holdtime : 141 sec
+Holdtime : 166 sec
 
 Version :
 2.4.12.2
@@ -1206,7 +1206,7 @@ Entry address(es):
   IP address: 10.13.1.215
 Platform: X1S/X1SP,  Capabilities: Host Phone 
 Interface: FastEthernet0/43,  Port ID (outgoing port): WAN PORT
-Holdtime : 179 sec
+Holdtime : 145 sec
 
 Version :
 2.4.12.2

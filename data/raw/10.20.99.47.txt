@@ -359,7 +359,7 @@ Compiled Mon 08-Mar-21 09:07 by prod_rel_team
 ROM: Bootstrap program is c1000 boot loader
 BOOTLDR: C1000 Boot Loader (C1000-HBOOT-M) Version 15.2(7r)E3, RELEASE SOFTWARE (fc4)
 
-INA-NSWS-47-99-47 uptime is 1 day, 21 hours, 39 minutes
+INA-NSWS-47-99-47 uptime is 1 day, 23 hours, 4 minutes
 System returned to ROM by power-on
 System restarted at 15:55:49 YAKT Wed Oct 8 2025
 System image file is "flash:/c1000-universalk9-mz.152-7.E4/c1000-universalk9-mz.152-7.E4.bin"
@@ -422,7 +422,7 @@ Entry address(es):
   IP address: 10.20.96.63
 Platform: cisco WS-C2960CX-8PC-L,  Capabilities: Switch IGMP 
 Interface: GigabitEthernet1/0/9,  Port ID (outgoing port): GigabitEthernet0/7
-Holdtime : 137 sec
+Holdtime : 158 sec
 
 Version :
 Cisco IOS Software, C2960CX Software (C2960CX-UNIVERSALK9-M), Version 15.2(4)E6, RELEASE SOFTWARE (fc4)
@@ -454,7 +454,7 @@ Gi1/0/2                      notconnect   90           auto   auto 10/100/1000Ba
 Gi1/0/3                      notconnect   90           full    100 10/100/1000BaseTX
 Gi1/0/4                      notconnect   90           auto   auto 10/100/1000BaseTX
 Gi1/0/5                      connected    90         a-full  a-100 10/100/1000BaseTX
-Gi1/0/6                      connected    90           full    100 10/100/1000BaseTX
+Gi1/0/6                      notconnect   90           full    100 10/100/1000BaseTX
 Gi1/0/7                      connected    90           full    100 10/100/1000BaseTX
 Gi1/0/8                      notconnect   90           auto   auto 10/100/1000BaseTX
 Gi1/0/9   TRUNK 99.63_Gi0/7  connected    trunk      a-full a-1000 10/100/1000BaseTX

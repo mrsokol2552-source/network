@@ -902,7 +902,7 @@ Compiled Wed 12-Jul-17 15:29 by prod_rel_team
 ROM: Bootstrap program is C2960 boot loader
 BOOTLDR: C2960 Boot Loader (C2960-HBOOT-M) Version 15.0(2r)EZ1, RELEASE SOFTWARE (fc1)
 
-INA-NSWS-131-99-68 uptime is 5 weeks, 6 days, 43 minutes
+INA-NSWS-131-99-68 uptime is 5 weeks, 6 days, 2 hours, 8 minutes
 System returned to ROM by power-on
 System restarted at 12:53:38 YAKT Sat Aug 30 2025
 System image file is "flash:/c2960-lanbasek9-mz.152-2.E7/c2960-lanbasek9-mz.152-2.E7.bin"
@@ -967,7 +967,7 @@ Entry address(es):
   IP address: 10.20.98.73
 Platform: cisco WS-C2960C-8TC-L,  Capabilities: Switch IGMP 
 Interface: GigabitEthernet0/1,  Port ID (outgoing port): FastEthernet0/5
-Holdtime : 141 sec
+Holdtime : 147 sec
 
 Version :
 Cisco IOS Software, C2960C Software (C2960c405-UNIVERSALK9-M), Version 15.2(2)E8, RELEASE SOFTWARE (fc1)
@@ -989,7 +989,7 @@ Entry address(es):
   IP address: 10.13.1.210
 Platform: X1S/X1SP,  Capabilities: Host Phone 
 Interface: FastEthernet0/8,  Port ID (outgoing port): WAN PORT
-Holdtime : 124 sec
+Holdtime : 125 sec
 
 Version :
 2.4.12.2
@@ -1022,16 +1022,16 @@ Fa0/12                       notconnect   90           auto   auto 10/100BaseTX
 Fa0/13                       notconnect   90           full    100 10/100BaseTX
 Fa0/14                       notconnect   90           auto   auto 10/100BaseTX
 Fa0/15                       notconnect   90           auto   auto 10/100BaseTX
-Fa0/16                       connected    90         a-full  a-100 10/100BaseTX
+Fa0/16                       notconnect   90           auto   auto 10/100BaseTX
 Fa0/17    DEAD               notconnect   90           auto   auto 10/100BaseTX
-Fa0/18                       connected    90         a-full  a-100 10/100BaseTX
-Fa0/19                       connected    90         a-full  a-100 10/100BaseTX
+Fa0/18                       notconnect   90           auto   auto 10/100BaseTX
+Fa0/19                       notconnect   90           auto   auto 10/100BaseTX
 Fa0/20                       connected    90         a-full  a-100 10/100BaseTX
 Fa0/21                       connected    90         a-full  a-100 10/100BaseTX
 Fa0/22                       notconnect   90           auto   auto 10/100BaseTX
 Fa0/23                       connected    90         a-full  a-100 10/100BaseTX
 Fa0/24                       notconnect   90           auto   auto 10/100BaseTX
-Fa0/25                       connected    90         a-full  a-100 10/100BaseTX
+Fa0/25                       notconnect   90           auto   auto 10/100BaseTX
 Fa0/26                       connected    90         a-full  a-100 10/100BaseTX
 Fa0/27                       notconnect   90           auto   auto 10/100BaseTX
 Fa0/28                       connected    90         a-full  a-100 10/100BaseTX

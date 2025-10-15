@@ -46,13 +46,25 @@ from src.renderers.mermaid_writer import Config as RenderConfig, MermaidWriter, 
 # Logging
 # -----------------------------
 
-def setup_logger(level: str = "INFO") -> logging.Logger:
+def setup_logger(level: str = "INFO", log_file: Path | None = None) -> logging.Logger:
     logger = logging.getLogger("pipeline")
     logger.setLevel(getattr(logging, level.upper(), logging.INFO))
     if not logger.handlers:
+        fmt = logging.Formatter("[%(levelname)s] %(message)s")
+        # Console handler
         ch = logging.StreamHandler()
-        ch.setFormatter(logging.Formatter("[%(levelname)s] %(message)s"))
+        ch.setFormatter(fmt)
         logger.addHandler(ch)
+        # Optional file handler
+        if log_file is not None:
+            try:
+                log_file.parent.mkdir(parents=True, exist_ok=True)
+                fh = logging.FileHandler(str(log_file), encoding="utf-8")
+                fh.setFormatter(fmt)
+                logger.addHandler(fh)
+            except Exception:
+                # Fallback to console-only if file handler fails
+                pass
     return logger
 
 
@@ -120,6 +132,8 @@ def step_collect(args, cfg: LoaderConfig, logs_dir: Path, log: logging.Logger) -
         str(args.max_workers),
         "--tcp-timeout",
         str(args.tcp_timeout),
+        "--tcp-workers",
+        str(args.tcp_workers),
         "--conn-timeout",
         str(args.conn_timeout),
         "--auth-timeout",
@@ -133,8 +147,35 @@ def step_collect(args, cfg: LoaderConfig, logs_dir: Path, log: logging.Logger) -
 
     log.info("[STEP 1] Collect CLI (stage1_collect.py)")
     env = os.environ.copy()
-    # Allow .env overrides already applied to os.environ by caller
-    subprocess.run(cmd, check=False, cwd=str(project_root_from_here()), env=env)
+    env.setdefault("PYTHONUNBUFFERED", "1")
+    # Tee child process output to console and optional log file
+    log_file_path = getattr(args, "log_file", None)
+    fh = None
+    try:
+        if log_file_path:
+            lf = Path(log_file_path)
+            lf.parent.mkdir(parents=True, exist_ok=True)
+            fh = lf.open("a", encoding="utf-8")
+        proc = subprocess.Popen(
+            cmd,
+            cwd=str(project_root_from_here()),
+            env=env,
+            stdout=subprocess.PIPE,
+            stderr=subprocess.STDOUT,
+            text=True,
+            bufsize=1,
+        )
+        assert proc.stdout is not None
+        for line in proc.stdout:
+            line = line.rstrip("\n")
+            print(line)
+            if fh:
+                fh.write(line + "\n")
+        proc.wait()
+    finally:
+        if fh:
+            fh.flush()
+            fh.close()
 
 
 def step_textfsm_parse(cfg_path: Path, inv_path: Path, parsed_out: Path, log: logging.Logger) -> None:
@@ -142,7 +183,8 @@ def step_textfsm_parse(cfg_path: Path, inv_path: Path, parsed_out: Path, log: lo
     cfg = LoaderConfig.load(cfg_path)
     inv = LoaderInventory.load(inv_path)
     parser = TextFSMParser(cfg, inv, log)
-    data = parser.parse_all()
+    parse = getattr(parser, "parse_all_fast", None) or parser.parse_all
+    data = parse()
     dump_json(parsed_out, data, log)
 
 
@@ -285,21 +327,25 @@ def parse_args(argv: List[str]) -> argparse.Namespace:
     p.add_argument("--config", type=Path, help="Path to config.json (defaults to config/config.json)")
     p.add_argument("--env", type=Path, help="Path to .env file to load")
     p.add_argument("--log-level", default="INFO")
+    p.add_argument("--log-file", type=Path, help="Optional log file to write duplicate logs")
     p.add_argument("--steps", default="collect,parse,split,merge,safety,normalize,render",
                    help="Comma-separated steps: collect,parse,split,merge,safety,normalize,render")
     # collect options
     p.add_argument("--targets", nargs="*", default=[], help="Targets (IPs/hosts)")
     p.add_argument("--cidr", nargs="*", default=[], help="CIDR subnets to scan")
     p.add_argument("--max-workers", type=int, default=int(os.environ.get("MAX_WORKERS", "32")))
+    p.add_argument("--tcp-workers", type=int, default=int(os.environ.get("TCP_WORKERS", "64")))
     p.add_argument("--tcp-timeout", type=float, default=float(os.environ.get("TCP_TIMEOUT", "0.8")))
     p.add_argument("--conn-timeout", type=float, default=float(os.environ.get("CONNECT_TIMEOUT", "3")))
     p.add_argument("--auth-timeout", type=float, default=float(os.environ.get("AUTH_TIMEOUT", "12")))
+    # parse options
+    p.add_argument("--parse-workers", type=int, help="Workers for TextFSM parsing (env TEXTFSM_WORKERS)")
     return p.parse_args(argv)
 
 
 def main(argv: List[str] | None = None) -> int:
     args = parse_args(argv or sys.argv[1:])
-    log = setup_logger(args.log_level)
+    log = setup_logger(args.log_level, args.log_file)
     root = project_root_from_here()
     dpaths = default_paths(root)
 
@@ -320,6 +366,10 @@ def main(argv: List[str] | None = None) -> int:
             os.environ[k] = v
 
     ensure_dirs([logs_dir, out_mmd.parent, cli_dir, raw_dir])
+
+    # Apply parse workers if provided
+    if getattr(args, "parse_workers", None):
+        os.environ["TEXTFSM_WORKERS"] = str(int(args.parse_workers))
 
     steps = [s.strip().lower() for s in (args.steps or "").split(",") if s.strip()]
     ordered = ["collect", "parse", "split", "merge", "safety", "normalize", "render"]

@@ -58,7 +58,7 @@ You can also look at the Netmiko session_log or debug log for more information.
 
 $ show interface status
 [ERROR executing command: 
-Pattern not detected: '\x1b\\[KSFZiR\\-MES2308P\\#' in output.
+Pattern not detected: '\x1b\\[K' in output.
 
 Things you might try to fix this:
 1. Explicitly set your pattern using the expect_string argument.

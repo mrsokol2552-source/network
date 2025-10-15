@@ -282,7 +282,7 @@ Compiled Sat 14-Mar-20 15:28 by prod_rel_team
 ROM: Bootstrap program is c1000 boot loader
 BOOTLDR: C1000 Boot Loader (C1000-HBOOT-M), Version 15.2(7r)E RELEASE SOFTWARE (fc1)
 
-INA-NSWS-123-97-100 uptime is 1 day, 7 hours, 44 minutes
+INA-NSWS-123-97-100 uptime is 1 day, 9 hours, 10 minutes
 System returned to ROM by power-on
 System image file is "flash:/c1000-universalk9-mz.152-7.E2/c1000-universalk9-mz.152-7.E2.bin"
 Last reload reason: power-on
@@ -344,7 +344,7 @@ Entry address(es):
   IP address: 10.20.97.1
 Platform: cisco C9300X-24Y,  Capabilities: Router Switch IGMP 
 Interface: GigabitEthernet1/0/17,  Port ID (outgoing port): TwentyFiveGigE1/1/3
-Holdtime : 152 sec
+Holdtime : 143 sec
 
 Version :
 Cisco IOS Software [Cupertino], Catalyst L3 Switch Software (CAT9K_IOSXE), Version 17.9.3, RELEASE SOFTWARE (fc6)
@@ -365,7 +365,7 @@ Entry address(es):
   IP address: 10.20.96.3
 Platform: cisco C9300X-24Y,  Capabilities: Switch IGMP 
 Interface: GigabitEthernet1/0/18,  Port ID (outgoing port): TwentyFiveGigE1/0/20
-Holdtime : 177 sec
+Holdtime : 134 sec
 
 Version :
 Cisco IOS Software [Cupertino], Catalyst L3 Switch Software (CAT9K_IOSXE), Version 17.9.4a, RELEASE SOFTWARE (fc3)
@@ -386,7 +386,7 @@ Entry address(es):
   IP address: 10.90.17.10
 Platform: Rocket M3,  Capabilities: Trans-Bridge 
 Interface: GigabitEthernet1/0/15,  Port ID (outgoing port): br0
-Holdtime : 91 sec
+Holdtime : 64 sec
 
 Version :
 XM.v6.3.6
@@ -399,7 +399,7 @@ Entry address(es):
   IP address: 10.20.96.231
 Platform: cisco WS-C2960CX-8PC-L,  Capabilities: Switch IGMP 
 Interface: GigabitEthernet1/0/15,  Port ID (outgoing port): GigabitEthernet0/10
-Holdtime : 179 sec
+Holdtime : 155 sec
 
 Version :
 Cisco IOS Software, C2960CX Software (C2960CX-UNIVERSALK9-M), Version 15.2(4)E6, RELEASE SOFTWARE (fc4)
@@ -421,7 +421,7 @@ Entry address(es):
   IP address: 10.90.17.11
 Platform: Rocket M3,  Capabilities: Trans-Bridge 
 Interface: GigabitEthernet1/0/15,  Port ID (outgoing port): br0
-Holdtime : 71 sec
+Holdtime : 104 sec
 
 Version :
 XM.v6.3.6

@@ -1205,7 +1205,7 @@ Compiled Wed 09-Apr-14 02:59 by prod_rel_team
 ROM: Bootstrap program is C3750E boot loader
 BOOTLDR: C3750E Boot Loader (C3750X-HBOOT-M) Version 12.2(58r)SE1, RELEASE SOFTWARE (fc1)
 
-sw-ner-main uptime is 12 weeks, 3 days, 19 hours, 58 minutes
+sw-ner-main uptime is 12 weeks, 3 days, 21 hours, 23 minutes
 System returned to ROM by power-on
 System restarted at 10:27:32 YAKT Wed Mar 30 2011
 System image file is "flash:/c3750e-universalk9npe-mz.150-2.SE6/c3750e-universalk9npe-mz.150-2.SE6.bin"
@@ -1272,7 +1272,7 @@ Entry address(es):
   IP address: 10.1.99.11
 Platform: cisco WS-C2960X-24PS-L,  Capabilities: Switch IGMP 
 Interface: GigabitEthernet1/1/4,  Port ID (outgoing port): GigabitEthernet1/0/25
-Holdtime : 177 sec
+Holdtime : 159 sec
 
 Version :
 Cisco IOS Software, C2960X Software (C2960X-UNIVERSALK9-M), Version 15.2(2)E6, RELEASE SOFTWARE (fc1)
@@ -1294,10 +1294,10 @@ Management address(es):
 -------------------------
 Device ID: X3S
 Entry address(es): 
-  IP address: 10.13.1.32
+  IP address: 10.13.1.0
 Platform: X3S,  Capabilities: Host Phone 
 Interface: GigabitEthernet1/1/4,  Port ID (outgoing port): WAN PORT
-Holdtime : 171 sec
+Holdtime : 170 sec
 
 Version :
 2.14.0.7387
@@ -1314,7 +1314,7 @@ Entry address(es):
   IP address: 10.11.11.1
 Platform: cisco C9500-24Y4C,  Capabilities: Router Switch IGMP 
 Interface: GigabitEthernet1/1/1,  Port ID (outgoing port): TwentyFiveGigE1/0/5
-Holdtime : 163 sec
+Holdtime : 168 sec
 
 Version :
 Cisco IOS Software [Bengaluru], Catalyst L3 Switch Software (CAT9K_IOSXE), Version 17.4.1, RELEASE SOFTWARE (fc5)
@@ -1347,7 +1347,7 @@ Technical Support: http://www.cisco.com/techsupport
 Copyright (c) 1986-2020 by Cisco Systems, Inc.
 Compiled Thu 26-Nov-20 23:35 by mcpre
 
-Time remaining: 101 seconds
+Time remaining: 105 seconds
 System Capabilities: B,R
 Enabled Capabilities: B,R
 Management Addresses:

@@ -835,7 +835,7 @@ Compiled Mon 18-Sep-17 07:54 by prod_rel_team
 ROM: Bootstrap program is C2960X boot loader
 BOOTLDR: C2960X Boot Loader (C2960X-HBOOT-M) Version 15.2(3r)E1, RELEASE SOFTWARE (fc1)
 
-NRG-NSWS-01-99-41 uptime is 27 weeks, 2 days, 20 hours, 16 minutes
+NRG-NSWS-01-99-41 uptime is 27 weeks, 2 days, 22 hours, 49 minutes
 System returned to ROM by power-on
 System restarted at 02:15:49 YAKT Wed Apr 2 2025
 System image file is "flash:c2960x-universalk9-mz.152-4.E5.bin"
@@ -898,10 +898,10 @@ $ show cdp neighbors detail
 -------------------------
 Device ID: Office kolmar
 Entry address(es): 
-  IP address: 10.100.10.137
+  IP address: 10.100.10.136
 Platform: NanoStation M2,  Capabilities: Trans-Bridge 
 Interface: GigabitEthernet1/0/22,  Port ID (outgoing port): br1
-Holdtime : 114 sec
+Holdtime : 88 sec
 
 Version :
 XW.v6.3.6
@@ -914,7 +914,7 @@ Entry address(es):
   IP address: 10.100.10.134
 Platform: PowerBeam M2 400,  Capabilities: Trans-Bridge 
 Interface: GigabitEthernet1/0/22,  Port ID (outgoing port): br1
-Holdtime : 85 sec
+Holdtime : 111 sec
 
 Version :
 XW.v6.3.6
@@ -927,7 +927,7 @@ Entry address(es):
   IP address: 10.20.99.38
 Platform: cisco WS-C3850-12S,  Capabilities: Router Switch IGMP 
 Interface: GigabitEthernet1/0/28,  Port ID (outgoing port): GigabitEthernet1/0/3
-Holdtime : 175 sec
+Holdtime : 142 sec
 
 Version :
 Cisco IOS Software [Gibraltar], Catalyst L3 Switch Software (CAT3K_CAA-UNIVERSALK9-M), Version 16.12.11, RELEASE SOFTWARE (fc2)
@@ -948,7 +948,7 @@ Entry address(es):
   IP address: 10.20.97.10
 Platform: cisco WS-C2960CX-8PC-L,  Capabilities: Switch IGMP 
 Interface: GigabitEthernet1/0/22,  Port ID (outgoing port): GigabitEthernet0/7
-Holdtime : 145 sec
+Holdtime : 167 sec
 
 Version :
 Cisco IOS Software, C2960CX Software (C2960CX-UNIVERSALK9-M), Version 15.2(7)E, RELEASE SOFTWARE (fc3)
@@ -969,7 +969,7 @@ Entry address(es):
   IP address: 10.100.10.135
 Platform: PowerBeam M2 400,  Capabilities: Trans-Bridge 
 Interface: GigabitEthernet1/0/22,  Port ID (outgoing port): br1
-Holdtime : 78 sec
+Holdtime : 104 sec
 
 Version :
 XW.v6.3.6

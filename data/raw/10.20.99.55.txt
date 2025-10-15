@@ -290,7 +290,7 @@ $ show version
   Copyright 2023 by Zelax
   All rights reserved
   Last reboot is cold reset.
-  Uptime is 12 weeks, 5 days, 3 hours, 47 minutes
+  Uptime is 12 weeks, 5 days, 5 hours, 12 minutes
 
 
 $ show cdp neighbors detail

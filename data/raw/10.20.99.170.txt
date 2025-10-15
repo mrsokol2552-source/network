@@ -445,7 +445,7 @@ Compiled Sat 17-Apr-21 07:21 by prod_rel_team
 ROM: Bootstrap program is c1000 boot loader
 BOOTLDR: C1000 Boot Loader (C1000-HBOOT-M) Version 15.2(7r)E3, RELEASE SOFTWARE (fc4)
 
-INA-NSWS-43-99-170 uptime is 10 weeks, 1 day, 20 hours, 17 minutes
+INA-NSWS-43-99-170 uptime is 10 weeks, 1 day, 21 hours, 44 minutes
 System returned to ROM by power-on
 System restarted at 08:20:38 UTC Wed Jul 30 2025
 System image file is "flash:/c1000-universalk9-mz.152-8.E/c1000-universalk9-mz.152-8.E.bin"
@@ -508,7 +508,7 @@ Entry address(es):
   IP address: 192.168.99.61
 Platform: cisco WS-C2960CX-8TC-L,  Capabilities: Switch IGMP 
 Interface: GigabitEthernet1/0/17,  Port ID (outgoing port): GigabitEthernet0/11
-Holdtime : 128 sec
+Holdtime : 129 sec
 
 Version :
 Cisco IOS Software, C2960CX Software (C2960CX-UNIVERSALK9-M), Version 15.2(4)E5, RELEASE SOFTWARE (fc2)
@@ -542,7 +542,7 @@ Technical Support: http://www.cisco.com/techsupport
 Copyright (c) 1986-2017 by Cisco Systems, Inc.
 Compiled Mon 18-Sep-17 08:41 by prod_rel_team
 
-Time remaining: 91 seconds
+Time remaining: 96 seconds
 System Capabilities: B,R
 Enabled Capabilities: B
 Management Addresses:

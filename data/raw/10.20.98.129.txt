@@ -556,7 +556,7 @@ Compiled Thu 05-Apr-18 03:17 by prod_rel_team
 ROM: Bootstrap program is C3560CX boot loader
 BOOTLDR: C3560CX Boot Loader (C3560CX-HBOOT-M) Version 15.2(4r)E5, RELEASE SOFTWARE (fc4)
 
-Switch_5 uptime is 4 weeks, 4 days, 5 hours, 12 minutes
+Switch_5 uptime is 4 weeks, 4 days, 8 hours, 0 minutes
 System returned to ROM by power-on
 System restarted at 17:12:34 YAKT Mon Sep 8 2025
 System image file is "flash:/c3560cx-universalk9-mz.152-4.E6/c3560cx-universalk9-mz.152-4.E6.bin"
@@ -644,7 +644,7 @@ Entry address(es):
   IP address: 10.20.98.128
 Platform: cisco WS-C2960CX-8PC-L,  Capabilities: Switch IGMP 
 Interface: GigabitEthernet0/15,  Port ID (outgoing port): GigabitEthernet0/12
-Holdtime : 160 sec
+Holdtime : 149 sec
 
 Version :
 Cisco IOS Software, C2960CX Software (C2960CX-UNIVERSALK9-M), Version 15.2(4)E6, RELEASE SOFTWARE (fc4)

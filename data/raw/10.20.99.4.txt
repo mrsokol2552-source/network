@@ -1237,7 +1237,7 @@ Image text-base: 0x00003000, data-base: 0x01000000
 ROM: Bootstrap program is C2960 boot loader
 BOOTLDR: C2960 Boot Loader (C2960-HBOOT-M) Version 12.2(46r)SE, RELEASE SOFTWARE (fc2)
 
-NER-NSWS-01-99-4 uptime is 12 weeks, 3 days, 19 hours, 55 minutes
+NER-NSWS-01-99-4 uptime is 12 weeks, 3 days, 22 hours, 28 minutes
 System returned to ROM by power-on
 System image file is "flash:/c2960-lanlitek9-mz.122-46.SE/c2960-lanlitek9-mz.122-46.SE.bin"
 
@@ -1298,7 +1298,7 @@ Entry address(es):
   IP address: 10.13.0.53
 Platform: X3S,  Capabilities: Host Phone 
 Interface: FastEthernet0/16,  Port ID (outgoing port): WAN PORT
-Holdtime : 130 sec
+Holdtime : 171 sec
 
 Version :
 2.14.0.7387
@@ -1312,7 +1312,7 @@ Entry address(es):
   IP address: 10.13.1.41
 Platform: Cisco IP Phone 3905,  Capabilities: Host Phone 
 Interface: FastEthernet0/4,  Port ID (outgoing port): Port 1
-Holdtime : 128 sec
+Holdtime : 146 sec
 
 Version :
 CP3905.9-4-1SR3
@@ -1330,7 +1330,7 @@ Entry address(es):
   IP address: 10.20.96.4
 Platform: cisco C9200-24P,  Capabilities: Router Switch IGMP 
 Interface: GigabitEthernet0/1,  Port ID (outgoing port): GigabitEthernet1/0/4
-Holdtime : 147 sec
+Holdtime : 166 sec
 
 Version :
 Cisco IOS Software [Amsterdam], Catalyst L3 Switch Software (CAT9K_LITE_IOSXE), Version 17.3.4b, RELEASE SOFTWARE (fc1)
@@ -1351,7 +1351,7 @@ Entry address(es):
   IP address: 10.13.0.85
 Platform: X1S/X1SP,  Capabilities: Host Phone 
 Interface: FastEthernet0/34,  Port ID (outgoing port): WAN PORT
-Holdtime : 144 sec
+Holdtime : 161 sec
 
 Version :
 2.4.12.2
@@ -1365,7 +1365,7 @@ Entry address(es):
   IP address: 10.13.0.210
 Platform: X1S/X1SP,  Capabilities: Host Phone 
 Interface: FastEthernet0/6,  Port ID (outgoing port): WAN PORT
-Holdtime : 131 sec
+Holdtime : 147 sec
 
 Version :
 2.4.12.2
@@ -1379,7 +1379,7 @@ Entry address(es):
   IP address: 10.13.0.167
 Platform: X1S/X1SP,  Capabilities: Host Phone 
 Interface: FastEthernet0/33,  Port ID (outgoing port): WAN PORT
-Holdtime : 172 sec
+Holdtime : 127 sec
 
 Version :
 2.4.12.2
@@ -1393,7 +1393,7 @@ Entry address(es):
   IP address: 10.13.0.212
 Platform: X1S/X1SP,  Capabilities: Host Phone 
 Interface: FastEthernet0/7,  Port ID (outgoing port): WAN PORT
-Holdtime : 125 sec
+Holdtime : 142 sec
 
 Version :
 2.4.12.2
@@ -1407,7 +1407,7 @@ Entry address(es):
   IP address: 10.13.1.15
 Platform: X1S/X1SP,  Capabilities: Host Phone 
 Interface: FastEthernet0/38,  Port ID (outgoing port): WAN PORT
-Holdtime : 174 sec
+Holdtime : 131 sec
 
 Version :
 2.4.12.2
@@ -1421,7 +1421,7 @@ Entry address(es):
   IP address: 10.13.0.182
 Platform: X1S/X1SP,  Capabilities: Host Phone 
 Interface: FastEthernet0/36,  Port ID (outgoing port): WAN PORT
-Holdtime : 123 sec
+Holdtime : 141 sec
 
 Version :
 2.4.12.2
@@ -1442,7 +1442,7 @@ System Name: X1S/X1SP
 System Description: 
 Version:2.4.12.2
 
-Time remaining: 15 seconds
+Time remaining: 33 seconds
 System Capabilities: B,T
 Enabled Capabilities: B,T
 Management Addresses:
@@ -1461,7 +1461,7 @@ System Name: X1S/X1SP
 System Description: 
 Version:2.4.12.2
 
-Time remaining: 25 seconds
+Time remaining: 42 seconds
 System Capabilities: B,T
 Enabled Capabilities: B,T
 Management Addresses:
@@ -1480,7 +1480,7 @@ System Name: X1S/X1SP
 System Description: 
 Version:2.4.12.2
 
-Time remaining: 24 seconds
+Time remaining: 41 seconds
 System Capabilities: B,T
 Enabled Capabilities: B,T
 Management Addresses:
@@ -1499,7 +1499,7 @@ System Name: X1S/X1SP
 System Description: 
 Version:2.4.12.2
 
-Time remaining: 16 seconds
+Time remaining: 35 seconds
 System Capabilities: B,T
 Enabled Capabilities: B,T
 Management Addresses:
@@ -1518,7 +1518,7 @@ System Name: X1S/X1SP
 System Description: 
 Version:2.4.12.2
 
-Time remaining: 13 seconds
+Time remaining: 29 seconds
 System Capabilities: B,T
 Enabled Capabilities: B,T
 Management Addresses:
@@ -1537,7 +1537,7 @@ System Name: X1S/X1SP
 System Description: 
 Version:2.4.12.2
 
-Time remaining: 39 seconds
+Time remaining: 56 seconds
 System Capabilities: B,T
 Enabled Capabilities: B,T
 Management Addresses:
@@ -1554,7 +1554,7 @@ Port Description - not advertised
 System Name - not advertised
 System Description - not advertised
 
-Time remaining: 3010 seconds
+Time remaining: 3320 seconds
 System Capabilities - not advertised
 Enabled Capabilities - not advertised
 Management Addresses - not advertised
@@ -1571,7 +1571,7 @@ Port Description - not advertised
 System Name - not advertised
 System Description - not advertised
 
-Time remaining: 3277 seconds
+Time remaining: 3586 seconds
 System Capabilities - not advertised
 Enabled Capabilities - not advertised
 Management Addresses - not advertised
@@ -1588,7 +1588,7 @@ Port Description - not advertised
 System Name - not advertised
 System Description - not advertised
 
-Time remaining: 3489 seconds
+Time remaining: 2854 seconds
 System Capabilities - not advertised
 Enabled Capabilities - not advertised
 Management Addresses - not advertised
@@ -1605,7 +1605,7 @@ Port Description - not advertised
 System Name - not advertised
 System Description - not advertised
 
-Time remaining: 3429 seconds
+Time remaining: 2794 seconds
 System Capabilities - not advertised
 Enabled Capabilities - not advertised
 Management Addresses - not advertised
@@ -1616,7 +1616,24 @@ Media Attachment Unit type - not advertised
 ---------------------------------------------
 
 
-Total entries displayed: 10
+Chassis id: 88d7.f63f.7a31
+Port id: 88d7.f63f.7a31
+Port Description - not advertised
+System Name - not advertised
+System Description - not advertised
+
+Time remaining: 3563 seconds
+System Capabilities - not advertised
+Enabled Capabilities - not advertised
+Management Addresses - not advertised
+Auto Negotiation - supported, enabled
+Physical media capabilities:
+    1000baseT(FD)
+Media Attachment Unit type - not advertised
+---------------------------------------------
+
+
+Total entries displayed: 11
 
 
 

@@ -814,7 +814,7 @@ Compiled Sat 14-Mar-20 16:53 by prod_rel_team
 ROM: Bootstrap program is C2960X boot loader
 BOOTLDR: C2960X Boot Loader (C2960X-HBOOT-M) Version 15.2(6r)E, RELEASE SOFTWARE (fc1)
 
-NER-NSWS-09-99-54 uptime is 1 week, 3 days, 16 hours, 20 minutes
+NER-NSWS-09-99-54 uptime is 1 week, 3 days, 17 hours, 45 minutes
 System returned to ROM by power-on
 System restarted at 21:15:01 YAKT Mon Sep 29 2025
 System image file is "flash:/c2960x-universalk9-mz.152-7.E2/c2960x-universalk9-mz.152-7.E2.bin"
@@ -881,7 +881,7 @@ Entry address(es):
   IP address: 10.20.99.38
 Platform: cisco WS-C3850-12S,  Capabilities: Router Switch IGMP 
 Interface: GigabitEthernet1/0/25,  Port ID (outgoing port): GigabitEthernet1/0/4
-Holdtime : 179 sec
+Holdtime : 145 sec
 
 Version :
 Cisco IOS Software [Gibraltar], Catalyst L3 Switch Software (CAT3K_CAA-UNIVERSALK9-M), Version 16.12.11, RELEASE SOFTWARE (fc2)

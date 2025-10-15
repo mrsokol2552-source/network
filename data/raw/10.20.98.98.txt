@@ -2,7 +2,7 @@
 
 $ show running-config
 [ERROR executing command: 
-Pattern not detected: '\x1b\\[KSFZiR\\-MSB\\#' in output.
+Pattern not detected: '\x1b\\[KDEN\\-NSWS\\-15\\-98\\-98\\#' in output.
 
 Things you might try to fix this:
 1. Explicitly set your pattern using the expect_string argument.
@@ -45,7 +45,7 @@ You can also look at the Netmiko session_log or debug log for more information.
 
 $ show lldp neighbors detail
 [ERROR executing command: 
-Pattern not detected: '\x1b\\[KSFZiR\\-MSB\\#' in output.
+Pattern not detected: '\x1b\\[KDEN\\-NSWS\\-15\\-98\\-98\\#' in output.
 
 Things you might try to fix this:
 1. Explicitly set your pattern using the expect_string argument.
@@ -58,7 +58,7 @@ You can also look at the Netmiko session_log or debug log for more information.
 
 $ show interface status
 [ERROR executing command: 
-Pattern not detected: '\x1b\\[KSFZiR\\-MSB\\#' in output.
+Pattern not detected: '\x1b\\[KDEN\\-NSWS\\-15\\-98\\-98\\#' in output.
 
 Things you might try to fix this:
 1. Explicitly set your pattern using the expect_string argument.

@@ -839,7 +839,7 @@ line vty 5 15
  authorization exec auth-RADIUS-exec
  login authentication login-RADIUS
 !
-ntp clock-period 36029055
+ntp clock-period 36029056
 ntp server 10.10.0.210
 mac address-table notification change interval 15
 mac address-table notification change history-size 500
@@ -858,7 +858,7 @@ Image text-base: 0x01000000, data-base: 0x02900000
 ROM: Bootstrap program is C3560 boot loader
 BOOTLDR: C3560 Boot Loader (C3560-HBOOT-M) Version 12.2(50r)SE, RELEASE SOFTWARE (fc1)
 
-INA-NSWR-03-99-20 uptime is 28 weeks, 2 days, 28 minutes
+INA-NSWR-03-99-20 uptime is 28 weeks, 2 days, 3 hours, 2 minutes
 System returned to ROM by power-on
 System restarted at 13:02:32 YAKT Wed Mar 26 2025
 System image file is "flash:/c3560-ipbasek9-mz.122-50.SE5/c3560-ipbasek9-mz.122-50.SE5.bin"
@@ -941,7 +941,7 @@ Entry address(es):
   IP address: 10.20.99.22
 Platform: cisco WS-C2960-24TC-L,  Capabilities: Switch IGMP 
 Interface: FastEthernet0/8,  Port ID (outgoing port): GigabitEthernet0/1
-Holdtime : 143 sec
+Holdtime : 149 sec
 
 Version :
 Cisco IOS Software, C2960 Software (C2960-LANBASEK9-M), Version 12.2(55)SE5, RELEASE SOFTWARE (fc1)
@@ -963,7 +963,7 @@ Entry address(es):
   IP address: 10.20.96.62
 Platform: cisco WS-C2960+24PC-L,  Capabilities: Switch IGMP 
 Interface: FastEthernet0/19,  Port ID (outgoing port): FastEthernet0/19
-Holdtime : 165 sec
+Holdtime : 169 sec
 
 Version :
 Cisco IOS Software, C2960 Software (C2960-LANBASEK9-M), Version 15.2(2)E7, RELEASE SOFTWARE (fc3)
@@ -985,7 +985,7 @@ Entry address(es):
   IP address: 10.20.98.73
 Platform: cisco WS-C2960C-8TC-L,  Capabilities: Switch IGMP 
 Interface: FastEthernet0/6,  Port ID (outgoing port): GigabitEthernet0/1
-Holdtime : 125 sec
+Holdtime : 148 sec
 
 Version :
 Cisco IOS Software, C2960C Software (C2960c405-UNIVERSALK9-M), Version 15.2(2)E8, RELEASE SOFTWARE (fc1)
@@ -1007,7 +1007,7 @@ Entry address(es):
   IP address: 10.20.99.29
 Platform: cisco WS-C2960C-8TC-L,  Capabilities: Switch IGMP 
 Interface: GigabitEthernet0/2,  Port ID (outgoing port): GigabitEthernet0/2
-Holdtime : 175 sec
+Holdtime : 145 sec
 
 Version :
 Cisco IOS Software, C2960C Software (C2960c405-UNIVERSALK9-M), Version 15.0(2)SE5, RELEASE SOFTWARE (fc1)
@@ -1029,7 +1029,7 @@ Entry address(es):
   IP address: 10.20.99.108
 Platform: cisco C1000-16FP-2G-L,  Capabilities: Switch IGMP 
 Interface: FastEthernet0/11,  Port ID (outgoing port): GigabitEthernet1/0/17
-Holdtime : 141 sec
+Holdtime : 134 sec
 
 Version :
 Cisco IOS Software, C1000 Software (C1000-UNIVERSALK9-M), Version 15.2(8)E, RELEASE SOFTWARE (fc3)
@@ -1050,7 +1050,7 @@ Entry address(es):
   IP address: 10.13.1.183
 Platform: X3S(P) Lite,  Capabilities: Host Phone 
 Interface: FastEthernet0/4,  Port ID (outgoing port): WAN PORT
-Holdtime : 143 sec
+Holdtime : 148 sec
 
 Version :
 2.4.5
@@ -1061,10 +1061,10 @@ Management address(es):
 -------------------------
 Device ID: X1S/X1SP
 Entry address(es): 
-  IP address: 10.13.1.201
+  IP address: 10.13.1.195
 Platform: X1S/X1SP,  Capabilities: Host Phone 
 Interface: FastEthernet0/4,  Port ID (outgoing port): WAN PORT
-Holdtime : 173 sec
+Holdtime : 174 sec
 
 Version :
 2.4.12.2

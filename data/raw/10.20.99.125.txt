@@ -124,8 +124,8 @@ Previous Restart : Cold
 System Contact   : 
 System Name      : INA-NSWS-129-99-125
 System Location  : 
-System Time      : 2011-02-06T20:35:54+00:00
-System Uptime    : 36d 20:35:54
+System Time      : 2011-02-06T22:03:19+00:00
+System Uptime    : 36d 22:03:19
 
 Active Image
 ------------

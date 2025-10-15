@@ -450,7 +450,7 @@ Compiled Sat 23-Mar-19 09:05 by prod_rel_team
 ROM: Bootstrap program is C2960CX boot loader
 BOOTLDR: C2960CX Boot Loader (C2960CX-HBOOT-M) Version 15.2(6r)E, RELEASE SOFTWARE (fc1)
 
-CHU-NSWS-24-98-232 uptime is 2 days, 1 hour, 42 minutes
+CHU-NSWS-24-98-232 uptime is 2 days, 3 hours, 7 minutes
 System returned to ROM by power-on
 System restarted at 11:50:45 YAKT Wed Oct 8 2025
 System image file is "flash:/c2960cx-universalk9-mz.152-7.E/c2960cx-universalk9-mz.152-7.E.bin"
@@ -513,7 +513,7 @@ Entry address(es):
   IP address: 10.20.98.93
 Platform: cisco WS-C2960CX-8PC-L,  Capabilities: Switch IGMP 
 Interface: GigabitEthernet0/11,  Port ID (outgoing port): GigabitEthernet0/12
-Holdtime : 146 sec
+Holdtime : 148 sec
 
 Version :
 Cisco IOS Software, C2960CX Software (C2960CX-UNIVERSALK9-M), Version 15.2(3)E2, RELEASE SOFTWARE (fc1)
@@ -536,7 +536,7 @@ Entry address(es):
   IP address: 169.254.186.173
 Platform: NanoStation M2,  Capabilities: Trans-Bridge 
 Interface: GigabitEthernet0/10,  Port ID (outgoing port): br0
-Holdtime : 111 sec
+Holdtime : 83 sec
 
 Version :
 XW.v6.3.6
@@ -549,7 +549,7 @@ Entry address(es):
   IP address: 10.20.98.231
 Platform: cisco WS-C3560CX-12PC-S,  Capabilities: Switch IGMP 
 Interface: GigabitEthernet0/12,  Port ID (outgoing port): GigabitEthernet0/15
-Holdtime : 137 sec
+Holdtime : 167 sec
 
 Version :
 Cisco IOS Software, C3560CX Software (C3560CX-UNIVERSALK9-M), Version 15.2(4)E4, RELEASE SOFTWARE (fc2)

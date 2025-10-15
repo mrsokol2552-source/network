@@ -360,7 +360,7 @@ line vty 5 15
  authorization exec auth-RADIUS-exec
  login authentication login-RADIUS
 !
-ntp clock-period 36029067
+ntp clock-period 36029064
 ntp server 10.10.0.210
 end
 
@@ -376,7 +376,7 @@ Image text-base: 0x00003000, data-base: 0x01A00000
 ROM: Bootstrap program is C2960C boot loader
 BOOTLDR: C2960C Boot Loader (C2960c405-HBOOT-M) Version 12.2(55r)EX9, RELEASE SOFTWARE (fc1)
 
-CHU-NSWS-03-99-14 uptime is 5 days, 5 hours, 53 minutes
+CHU-NSWS-03-99-14 uptime is 5 days, 8 hours, 28 minutes
 System returned to ROM by power-on
 System restarted at 07:39:28 YAKT Sun Oct 5 2025
 System image file is "flash:/c2960c405-universalk9-mz.122-55.EX3/c2960c405-universalk9-mz.122-55.EX3.bin"
@@ -442,7 +442,7 @@ Entry address(es):
   IP address: 10.20.99.222
 Platform: cisco WS-C2960C-8TC-L,  Capabilities: Switch IGMP 
 Interface: FastEthernet0/7,  Port ID (outgoing port): FastEthernet0/8
-Holdtime : 179 sec
+Holdtime : 158 sec
 
 Version :
 Cisco IOS Software, C2960C Software (C2960c405-UNIVERSALK9-M), Version 15.2(2)E7, RELEASE SOFTWARE (fc3)
@@ -467,7 +467,7 @@ Entry address(es):
   IP address: 10.20.99.7
 Platform: cisco WS-C2960C-8TC-L,  Capabilities: Switch IGMP 
 Interface: FastEthernet0/3,  Port ID (outgoing port): GigabitEthernet0/2
-Holdtime : 126 sec
+Holdtime : 133 sec
 
 Version :
 Cisco IOS Software, C2960C Software (C2960c405-UNIVERSALK9-M), Version 15.0(2)SE5, RELEASE SOFTWARE (fc1)

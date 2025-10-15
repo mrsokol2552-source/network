@@ -893,7 +893,7 @@ Compiled Mon 08-Mar-21 09:07 by prod_rel_team
 ROM: Bootstrap program is c1000 boot loader
 BOOTLDR: C1000 Boot Loader (C1000-HBOOT-M) Version 15.2(7r)E3, RELEASE SOFTWARE (fc4)
 
-NER-NSWS-03-99-21 uptime is 3 weeks, 3 hours, 27 minutes
+NER-NSWS-03-99-21 uptime is 3 weeks, 6 hours, 0 minutes
 System returned to ROM by power-on
 System image file is "flash:/c1000-universalk9-mz.152-7.E4/c1000-universalk9-mz.152-7.E4.bin"
 Last reload reason: power-on
@@ -955,7 +955,7 @@ Entry address(es):
   IP address: 10.20.96.4
 Platform: cisco C9200-24P,  Capabilities: Router Switch IGMP 
 Interface: GigabitEthernet1/0/48,  Port ID (outgoing port): GigabitEthernet1/0/16
-Holdtime : 146 sec
+Holdtime : 168 sec
 
 Version :
 Cisco IOS Software [Amsterdam], Catalyst L3 Switch Software (CAT9K_LITE_IOSXE), Version 17.3.4b, RELEASE SOFTWARE (fc1)
@@ -983,7 +983,7 @@ Port Description - not advertised
 System Name - not advertised
 System Description - not advertised
 
-Time remaining: 2924 seconds
+Time remaining: 3236 seconds
 System Capabilities - not advertised
 Enabled Capabilities - not advertised
 Management Addresses - not advertised
@@ -1015,7 +1015,7 @@ Port Description - not advertised
 System Name - not advertised
 System Description - not advertised
 
-Time remaining: 3270 seconds
+Time remaining: 2657 seconds
 System Capabilities - not advertised
 Enabled Capabilities - not advertised
 Management Addresses - not advertised

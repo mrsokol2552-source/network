@@ -1253,7 +1253,7 @@ line vty 5 15
  authorization exec auth-RADIUS-exec
  login authentication login-RADIUS
 !
-ntp clock-period 36028969
+ntp clock-period 36028973
 ntp server 10.10.0.210
 end
 
@@ -1268,7 +1268,7 @@ Image text-base: 0x00003000, data-base: 0x01300000
 ROM: Bootstrap program is C2960 boot loader
 BOOTLDR: C2960 Boot Loader (C2960-HBOOT-M) Version 12.2(46r)SE, RELEASE SOFTWARE (fc2)
 
-DEN-NSWS-03-99-11 uptime is 1 year, 30 weeks, 1 day, 24 minutes
+DEN-NSWS-03-99-11 uptime is 1 year, 30 weeks, 1 day, 2 hours, 56 minutes
 System returned to ROM by power-on
 System restarted at 13:05:08 YAKT Wed Mar 13 2024
 System image file is "flash:c2960-lanlitek9-mz.122-52.SE.bin"
@@ -1330,7 +1330,7 @@ Entry address(es):
   IP address: 10.13.1.122
 Platform: X3S,  Capabilities: Host Phone 
 Interface: FastEthernet0/11,  Port ID (outgoing port): WAN PORT
-Holdtime : 160 sec
+Holdtime : 142 sec
 
 Version :
 2.14.0.7387
@@ -1344,7 +1344,7 @@ Entry address(es):
   IP address: 10.20.99.25
 Platform: cisco WS-C2960C-8TC-L,  Capabilities: Switch IGMP 
 Interface: FastEthernet0/26,  Port ID (outgoing port): GigabitEthernet0/1
-Holdtime : 139 sec
+Holdtime : 141 sec
 
 Version :
 Cisco IOS Software, C2960C Software (C2960c405-UNIVERSALK9-M), Version 15.0(2)SE8, RELEASE SOFTWARE (fc1)
@@ -1366,7 +1366,7 @@ Entry address(es):
   IP address: 10.20.99.19
 Platform: cisco WS-C2960C-8TC-L,  Capabilities: Switch IGMP 
 Interface: FastEthernet0/30,  Port ID (outgoing port): GigabitEthernet0/1
-Holdtime : 159 sec
+Holdtime : 157 sec
 
 Version :
 Cisco IOS Software, C2960C Software (C2960c405-UNIVERSALK9-M), Version 15.2(2)E6, RELEASE SOFTWARE (fc1)
@@ -1388,7 +1388,7 @@ Entry address(es):
   IP address: 10.20.98.1
 Platform: cisco C9300X-24Y,  Capabilities: Router Switch IGMP 
 Interface: GigabitEthernet0/1,  Port ID (outgoing port): TwentyFiveGigE1/0/1
-Holdtime : 170 sec
+Holdtime : 166 sec
 
 Version :
 Cisco IOS Software [Bengaluru], Catalyst L3 Switch Software (CAT9K_IOSXE), Version 17.6.1, RELEASE SOFTWARE (fc6)
@@ -1409,7 +1409,7 @@ Entry address(es):
   IP address: 10.13.1.106
 Platform: X301,  Capabilities: Host Phone 
 Interface: FastEthernet0/3,  Port ID (outgoing port): WAN PORT
-Holdtime : 145 sec
+Holdtime : 126 sec
 
 Version :
 2.12.17.8
@@ -1423,7 +1423,7 @@ Entry address(es):
   IP address: 10.13.0.251
 Platform: X6U-V2,  Capabilities: Host Phone 
 Interface: FastEthernet0/34,  Port ID (outgoing port): WAN PORT
-Holdtime : 151 sec
+Holdtime : 132 sec
 
 Version :
 2.12.20
@@ -1437,7 +1437,7 @@ Entry address(es):
   IP address: 10.13.0.128
 Platform: X6U-V2,  Capabilities: Host Phone 
 Interface: FastEthernet0/18,  Port ID (outgoing port): WAN PORT
-Holdtime : 161 sec
+Holdtime : 141 sec
 
 Version :
 2.12.20
@@ -1451,7 +1451,7 @@ Entry address(es):
   IP address: 10.20.99.132
 Platform: cisco WS-C2960CX-8TC-L,  Capabilities: Switch IGMP 
 Interface: GigabitEthernet0/2,  Port ID (outgoing port): GigabitEthernet0/10
-Holdtime : 150 sec
+Holdtime : 139 sec
 
 Version :
 Cisco IOS Software, C2960CX Software (C2960CX-UNIVERSALK9-M), Version 15.2(4)E6, RELEASE SOFTWARE (fc4)
@@ -1473,7 +1473,7 @@ Entry address(es):
   IP address: 10.13.1.221
 Platform: X1S/X1SP,  Capabilities: Host Phone 
 Interface: FastEthernet0/2,  Port ID (outgoing port): WAN PORT
-Holdtime : 125 sec
+Holdtime : 144 sec
 
 Version :
 2.4.12.2
@@ -1493,7 +1493,7 @@ System Name: X1S/X1SP
 System Description: 
 Version:2.4.12.2
 
-Time remaining: 0 seconds
+Time remaining: 16 seconds
 System Capabilities: B,T
 Enabled Capabilities: B,T
 Management Addresses:
@@ -1512,7 +1512,7 @@ System Name: X1S/X1SP
 System Description: 
 Version:2.4.12.2
 
-Time remaining: 21 seconds
+Time remaining: 39 seconds
 System Capabilities: B,T
 Enabled Capabilities: B,T
 Management Addresses:
@@ -1534,7 +1534,7 @@ Technical Support: http://www.cisco.com/techsupport
 Copyright (c) 1986-2016 by Cisco Systems, Inc.
 Compiled Sat 17-Dec-16 00:36 by prod_rel_team
 
-Time remaining: 114 seconds
+Time remaining: 110 seconds
 System Capabilities: B
 Enabled Capabilities: B
 Management Addresses:
@@ -1558,7 +1558,7 @@ System Name: X1S/X1SP
 System Description: 
 Version:2.4.12.2
 
-Time remaining: 7 seconds
+Time remaining: 26 seconds
 System Capabilities: B,T
 Enabled Capabilities: B,T
 Management Addresses:
@@ -1577,7 +1577,7 @@ System Name: X6U-V2
 System Description: 
 Version:2.12.20
 
-Time remaining: 145 seconds
+Time remaining: 128 seconds
 System Capabilities: B,T
 Enabled Capabilities: B,T
 Management Addresses:
@@ -1596,7 +1596,7 @@ System Name: X6U-V2
 System Description: 
 Version:2.12.20
 
-Time remaining: 159 seconds
+Time remaining: 142 seconds
 System Capabilities: B,T
 Enabled Capabilities: B,T
 Management Addresses:
@@ -1615,7 +1615,7 @@ System Name: X1S/X1SP
 System Description: 
 Version:2.4.12.2
 
-Time remaining: 27 seconds
+Time remaining: 45 seconds
 System Capabilities: B,T
 Enabled Capabilities: B,T
 Management Addresses:
@@ -1634,7 +1634,7 @@ System Name: X1S/X1SP
 System Description: 
 Version:2.4.12.2
 
-Time remaining: 46 seconds
+Time remaining: 4 seconds
 System Capabilities: B,T
 Enabled Capabilities: B,T
 Management Addresses:
@@ -1653,7 +1653,7 @@ System Name: X1S/X1SP
 System Description: 
 Version:2.4.12.2
 
-Time remaining: 27 seconds
+Time remaining: 46 seconds
 System Capabilities: B,T
 Enabled Capabilities: B,T
 Management Addresses:
@@ -1672,7 +1672,7 @@ System Name: X1S/X1SP
 System Description: 
 Version:2.4.12.2
 
-Time remaining: 56 seconds
+Time remaining: 10 seconds
 System Capabilities: B,T
 Enabled Capabilities: B,T
 Management Addresses:
@@ -1691,7 +1691,7 @@ System Name: X1S/X1SP
 System Description: 
 Version:2.4.12.2
 
-Time remaining: 12 seconds
+Time remaining: 27 seconds
 System Capabilities: B,T
 Enabled Capabilities: B,T
 Management Addresses:
@@ -1710,7 +1710,7 @@ System Name: X301
 System Description: 
 Version:2.12.17.8
 
-Time remaining: 121 seconds
+Time remaining: 166 seconds
 System Capabilities: B,T
 Enabled Capabilities: B,T
 Management Addresses:
@@ -1729,7 +1729,7 @@ System Name: DENABK2LVLMgendir
 System Description: 
 UAP-HD-IW, 6.7.17.15512
 
-Time remaining: 111 seconds
+Time remaining: 95 seconds
 System Capabilities: B,W,R,S
 Enabled Capabilities: B,W,R
 Management Addresses:
@@ -1746,7 +1746,7 @@ Port Description - not advertised
 System Name - not advertised
 System Description - not advertised
 
-Time remaining: 3092 seconds
+Time remaining: 3401 seconds
 System Capabilities - not advertised
 Enabled Capabilities - not advertised
 Management Addresses - not advertised
@@ -1763,7 +1763,7 @@ Port Description - not advertised
 System Name - not advertised
 System Description - not advertised
 
-Time remaining: 2801 seconds
+Time remaining: 3110 seconds
 System Capabilities - not advertised
 Enabled Capabilities - not advertised
 Management Addresses - not advertised
@@ -1780,7 +1780,7 @@ Port Description - not advertised
 System Name - not advertised
 System Description - not advertised
 
-Time remaining: 3207 seconds
+Time remaining: 3516 seconds
 System Capabilities - not advertised
 Enabled Capabilities - not advertised
 Management Addresses - not advertised
@@ -1797,7 +1797,7 @@ Port Description - not advertised
 System Name - not advertised
 System Description - not advertised
 
-Time remaining: 3287 seconds
+Time remaining: 3596 seconds
 System Capabilities - not advertised
 Enabled Capabilities - not advertised
 Management Addresses - not advertised
@@ -1814,7 +1814,7 @@ Port Description - not advertised
 System Name - not advertised
 System Description - not advertised
 
-Time remaining: 3249 seconds
+Time remaining: 3559 seconds
 System Capabilities - not advertised
 Enabled Capabilities - not advertised
 Management Addresses - not advertised
@@ -1831,7 +1831,7 @@ Port Description - not advertised
 System Name - not advertised
 System Description - not advertised
 
-Time remaining: 3090 seconds
+Time remaining: 3399 seconds
 System Capabilities - not advertised
 Enabled Capabilities - not advertised
 Management Addresses - not advertised
@@ -1848,7 +1848,7 @@ Port Description - not advertised
 System Name - not advertised
 System Description - not advertised
 
-Time remaining: 2772 seconds
+Time remaining: 3081 seconds
 System Capabilities - not advertised
 Enabled Capabilities - not advertised
 Management Addresses - not advertised
@@ -1865,7 +1865,7 @@ Port Description - not advertised
 System Name - not advertised
 System Description - not advertised
 
-Time remaining: 3418 seconds
+Time remaining: 2782 seconds
 System Capabilities - not advertised
 Enabled Capabilities - not advertised
 Management Addresses - not advertised
@@ -1882,7 +1882,7 @@ Port Description - not advertised
 System Name - not advertised
 System Description - not advertised
 
-Time remaining: 2940 seconds
+Time remaining: 3249 seconds
 System Capabilities - not advertised
 Enabled Capabilities - not advertised
 Management Addresses - not advertised
@@ -1899,24 +1899,7 @@ Port Description - not advertised
 System Name - not advertised
 System Description - not advertised
 
-Time remaining: 3182 seconds
-System Capabilities - not advertised
-Enabled Capabilities - not advertised
-Management Addresses - not advertised
-Auto Negotiation - supported, enabled
-Physical media capabilities:
-    1000baseT(FD)
-Media Attachment Unit type - not advertised
-Vlan ID: - not advertised
-
-------------------------------------------------
-Chassis id: a036.bca6.b4f8
-Port id: a036.bca6.b4f8
-Port Description - not advertised
-System Name - not advertised
-System Description - not advertised
-
-Time remaining: 3401 seconds
+Time remaining: 3491 seconds
 System Capabilities - not advertised
 Enabled Capabilities - not advertised
 Management Addresses - not advertised
@@ -1933,7 +1916,24 @@ Port Description - not advertised
 System Name - not advertised
 System Description - not advertised
 
-Time remaining: 3184 seconds
+Time remaining: 3493 seconds
+System Capabilities - not advertised
+Enabled Capabilities - not advertised
+Management Addresses - not advertised
+Auto Negotiation - supported, enabled
+Physical media capabilities:
+    1000baseT(FD)
+Media Attachment Unit type - not advertised
+Vlan ID: - not advertised
+
+------------------------------------------------
+Chassis id: a036.bca6.b4f8
+Port id: a036.bca6.b4f8
+Port Description - not advertised
+System Name - not advertised
+System Description - not advertised
+
+Time remaining: 2692 seconds
 System Capabilities - not advertised
 Enabled Capabilities - not advertised
 Management Addresses - not advertised

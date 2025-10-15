@@ -452,7 +452,7 @@ Compiled Thu 05-Apr-18 03:25 by prod_rel_team
 ROM: Bootstrap program is C2960CX boot loader
 BOOTLDR: C2960CX Boot Loader (C2960CX-HBOOT-M) Version 15.2(4r)E5, RELEASE SOFTWARE (fc4)
 
-SRB-NSWS-02-99-56 uptime is 6 days, 19 hours, 18 minutes
+SRB-NSWS-02-99-56 uptime is 6 days, 20 hours, 44 minutes
 System returned to ROM by power-on
 System restarted at 17:16:16 YAKT Fri Oct 3 2025
 System image file is "flash:/c2960cx-universalk9-mz.152-4.E6/c2960cx-universalk9-mz.152-4.E6.bin"
@@ -515,7 +515,7 @@ Entry address(es):
   IP address: 10.20.99.57
 Platform: cisco WS-C2960X-24PS-L,  Capabilities: Switch IGMP 
 Interface: GigabitEthernet0/11,  Port ID (outgoing port): GigabitEthernet1/0/27
-Holdtime : 158 sec
+Holdtime : 149 sec
 
 Version :
 Cisco IOS Software, C2960X Software (C2960X-UNIVERSALK9-M), Version 15.2(2)E7, RELEASE SOFTWARE (fc3)

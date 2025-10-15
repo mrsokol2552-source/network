@@ -407,7 +407,7 @@ Compiled Mon 13-Sep-21 09:18 by mcpre
 ROM: Bootstrap program is c1000 boot loader
 BOOTLDR: C1000 Boot Loader (C1000-HBOOT-M) Version 15.2(7r)E3, RELEASE SOFTWARE (fc4)
 
-DEN-NSWS-58-99-86 uptime is 1 week, 2 days, 3 hours, 41 minutes
+DEN-NSWS-58-99-86 uptime is 1 week, 2 days, 5 hours, 5 minutes
 System returned to ROM by power-on
 System image file is "flash:/c1000-universalk9-mz.152-7.E5/c1000-universalk9-mz.152-7.E5.bin"
 Last reload reason: power-on
@@ -469,7 +469,7 @@ Entry address(es):
   IP address: 10.20.98.1
 Platform: cisco C9300X-24Y,  Capabilities: Router Switch IGMP 
 Interface: GigabitEthernet1/0/18,  Port ID (outgoing port): TwentyFiveGigE1/0/12
-Holdtime : 173 sec
+Holdtime : 171 sec
 
 Version :
 Cisco IOS Software [Bengaluru], Catalyst L3 Switch Software (CAT9K_IOSXE), Version 17.6.1, RELEASE SOFTWARE (fc6)

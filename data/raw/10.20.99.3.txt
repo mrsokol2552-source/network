@@ -603,7 +603,7 @@ Compiled Thu 21-Jul-11 01:34 by prod_rel_team
 ROM: Bootstrap program is C3560E boot loader
 BOOTLDR: C3560E Boot Loader (C3560X-HBOOT-M) Version 15.2(3r)E, RELEASE SOFTWARE (fc1)
 
-NER-NSWR-01-99-3 uptime is 12 weeks, 3 days, 20 hours, 2 minutes
+NER-NSWR-01-99-3 uptime is 12 weeks, 3 days, 22 hours, 34 minutes
 System returned to ROM by power-on
 System image file is "flash:/c3560e-universalk9-mz.122-58.SE2/c3560e-universalk9-mz.122-58.SE2.bin"
 

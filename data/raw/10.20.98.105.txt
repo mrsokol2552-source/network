@@ -410,7 +410,7 @@ Compiled Thu 14-May-15 03:20 by prod_rel_team
 ROM: Bootstrap program is C2960C boot loader
 BOOTLDR: C2960C Boot Loader (C2960c405-HBOOT-M) Version 12.2(55r)EX9, RELEASE SOFTWARE (fc1)
 
-DEN-NSWS-28-98-105 uptime is 12 weeks, 3 days, 21 hours, 4 minutes
+DEN-NSWS-28-98-105 uptime is 12 weeks, 3 days, 23 hours, 37 minutes
 System returned to ROM by power-on
 System restarted at 16:24:25 YAKT Mon Jul 14 2025
 System image file is "flash:/c2960c405-universalk9-mz.150-2.SE8/c2960c405-universalk9-mz.150-2.SE8.bin"
@@ -477,7 +477,7 @@ Entry address(es):
   IP address: 169.254.17.206
 Platform: NanoStation M2,  Capabilities: Trans-Bridge 
 Interface: FastEthernet0/2,  Port ID (outgoing port): br0
-Holdtime : 68 sec
+Holdtime : 110 sec
 
 Version :
 XW.v6.1.9
@@ -495,7 +495,7 @@ Entry address(es):
   IP address: 169.254.237.122
 Platform: NanoStation M2,  Capabilities: Trans-Bridge 
 Interface: FastEthernet0/2,  Port ID (outgoing port): br0
-Holdtime : 108 sec
+Holdtime : 89 sec
 
 Version :
 XW.v6.2.0
@@ -512,7 +512,7 @@ Entry address(es):
   IP address: 10.20.98.106
 Platform: cisco WS-C2960CX-8PC-L,  Capabilities: Switch IGMP 
 Interface: GigabitEthernet0/2,  Port ID (outgoing port): GigabitEthernet0/11
-Holdtime : 141 sec
+Holdtime : 160 sec
 
 Version :
 Cisco IOS Software, C2960CX Software (C2960CX-UNIVERSALK9-M), Version 15.2(4)E6, RELEASE SOFTWARE (fc4)
@@ -537,7 +537,7 @@ Entry address(es):
   IP address: 10.20.98.110
 Platform: cisco WS-C3850-24S,  Capabilities: Switch IGMP 
 Interface: GigabitEthernet0/1,  Port ID (outgoing port): GigabitEthernet1/0/5
-Holdtime : 162 sec
+Holdtime : 153 sec
 
 Version :
 Cisco IOS Software, Catalyst L3 Switch Software (CAT3K_CAA-UNIVERSALK9-M), Version 15.2(2)E, RELEASE SOFTWARE (fc3)

@@ -1248,7 +1248,7 @@ Image text-base: 0x00003000, data-base: 0x01400000
 ROM: Bootstrap program is C2960 boot loader
 BOOTLDR: C2960 Boot Loader (C2960-HBOOT-M) Version 12.2(44)SE5, RELEASE SOFTWARE (fc1)
 
-NER-NSWS-04-99-9 uptime is 27 weeks, 5 days, 22 hours, 0 minutes
+NER-NSWS-04-99-9 uptime is 27 weeks, 5 days, 23 hours, 25 minutes
 System returned to ROM by power-on
 System image file is "flash:/c2960-lanbase-mz.122-53.SE1/c2960-lanbase-mz.122-53.SE1.bin"
 
@@ -1307,7 +1307,7 @@ Entry address(es):
   IP address: 10.20.96.4
 Platform: cisco C9200-24P,  Capabilities: Router Switch IGMP 
 Interface: GigabitEthernet0/1,  Port ID (outgoing port): GigabitEthernet1/0/9
-Holdtime : 148 sec
+Holdtime : 167 sec
 
 Version :
 Cisco IOS Software [Amsterdam], Catalyst L3 Switch Software (CAT9K_LITE_IOSXE), Version 17.3.4b, RELEASE SOFTWARE (fc1)
@@ -1342,7 +1342,7 @@ Entry address(es):
   IP address: 10.13.0.247
 Platform: X1S/X1SP,  Capabilities: Host Phone 
 Interface: FastEthernet0/17,  Port ID (outgoing port): WAN PORT
-Holdtime : 134 sec
+Holdtime : 162 sec
 
 Version :
 2.4.12.2
@@ -1356,7 +1356,7 @@ Entry address(es):
   IP address: 10.13.1.250
 Platform: X1S/X1SP,  Capabilities: Host Phone 
 Interface: FastEthernet0/28,  Port ID (outgoing port): WAN PORT
-Holdtime : 129 sec
+Holdtime : 157 sec
 
 Version :
 2.4.12.2
@@ -1370,7 +1370,7 @@ Entry address(es):
   IP address: 10.13.1.37
 Platform: X1S/X1SP,  Capabilities: Host Phone 
 Interface: FastEthernet0/35,  Port ID (outgoing port): WAN PORT
-Holdtime : 133 sec
+Holdtime : 160 sec
 
 Version :
 2.4.12.2
@@ -1384,7 +1384,7 @@ Entry address(es):
   IP address: 10.13.1.28
 Platform: X1S/X1SP,  Capabilities: Host Phone 
 Interface: FastEthernet0/19,  Port ID (outgoing port): WAN PORT
-Holdtime : 176 sec
+Holdtime : 142 sec
 
 Version :
 2.4.12.2
@@ -1398,7 +1398,7 @@ Entry address(es):
   IP address: 10.13.1.186
 Platform: X1S/X1SP,  Capabilities: Host Phone 
 Interface: FastEthernet0/25,  Port ID (outgoing port): WAN PORT
-Holdtime : 174 sec
+Holdtime : 140 sec
 
 Version :
 2.4.12.2
@@ -1412,7 +1412,7 @@ Entry address(es):
   IP address: 10.13.0.70
 Platform: X1S/X1SP,  Capabilities: Host Phone 
 Interface: FastEthernet0/43,  Port ID (outgoing port): WAN PORT
-Holdtime : 139 sec
+Holdtime : 166 sec
 
 Version :
 2.4.12.2
@@ -1426,7 +1426,7 @@ Entry address(es):
   IP address: 10.13.1.2
 Platform: X1S/X1SP,  Capabilities: Host Phone 
 Interface: FastEthernet0/46,  Port ID (outgoing port): WAN PORT
-Holdtime : 167 sec
+Holdtime : 133 sec
 
 Version :
 2.4.12.2
@@ -1440,7 +1440,7 @@ Entry address(es):
   IP address: 10.13.1.77
 Platform: X1S/X1SP,  Capabilities: Host Phone 
 Interface: FastEthernet0/41,  Port ID (outgoing port): WAN PORT
-Holdtime : 146 sec
+Holdtime : 174 sec
 
 Version :
 2.4.12.2
@@ -1460,7 +1460,7 @@ System Name: X1S/X1SP
 System Description: 
 Version:2.4.12.2
 
-Time remaining: 7 seconds
+Time remaining: 34 seconds
 System Capabilities: B,T
 Enabled Capabilities: B,T
 Management Addresses:
@@ -1498,7 +1498,7 @@ System Name: X5U-V2
 System Description: 
 Version:2.12.17.7
 
-Time remaining: 148 seconds
+Time remaining: 149 seconds
 System Capabilities: B,T
 Enabled Capabilities: B,T
 Management Addresses:
@@ -1536,7 +1536,7 @@ System Name: X1S/X1SP
 System Description: 
 Version:2.4.12.2
 
-Time remaining: 23 seconds
+Time remaining: 51 seconds
 System Capabilities: B,T
 Enabled Capabilities: B,T
 Management Addresses:
@@ -1574,7 +1574,7 @@ System Name: X1S/X1SP
 System Description: 
 Version:2.4.12.2
 
-Time remaining: 43 seconds
+Time remaining: 10 seconds
 System Capabilities: B,T
 Enabled Capabilities: B,T
 Management Addresses:
@@ -1610,7 +1610,7 @@ Port Description - not advertised
 System Name - not advertised
 System Description - not advertised
 
-Time remaining: 3545 seconds
+Time remaining: 3170 seconds
 System Capabilities - not advertised
 Enabled Capabilities - not advertised
 Management Addresses - not advertised
@@ -1643,7 +1643,7 @@ System Name: X1S/X1SP
 System Description: 
 Version:2.4.12.2
 
-Time remaining: 16 seconds
+Time remaining: 44 seconds
 System Capabilities: B,T
 Enabled Capabilities: B,T
 Management Addresses:
@@ -1681,7 +1681,7 @@ System Name: X1S/X1SP
 System Description: 
 Version:2.4.12.2
 
-Time remaining: 30 seconds
+Time remaining: 58 seconds
 System Capabilities: B,T
 Enabled Capabilities: B,T
 Management Addresses:
@@ -1719,7 +1719,7 @@ System Name: X1S/X1SP
 System Description: 
 Version:2.4.12.2
 
-Time remaining: 12 seconds
+Time remaining: 40 seconds
 System Capabilities: B,T
 Enabled Capabilities: B,T
 Management Addresses:
@@ -1757,7 +1757,7 @@ System Name: X1S/X1SP
 System Description: 
 Version:2.4.12.2
 
-Time remaining: 39 seconds
+Time remaining: 5 seconds
 System Capabilities: B,T
 Enabled Capabilities: B,T
 Management Addresses:
@@ -1795,7 +1795,7 @@ System Name: X1S/X1SP
 System Description: 
 Version:2.4.12.2
 
-Time remaining: 12 seconds
+Time remaining: 39 seconds
 System Capabilities: B,T
 Enabled Capabilities: B,T
 Management Addresses:
@@ -1833,7 +1833,7 @@ System Name: X210-V2
 System Description: 
 Version:2.12.20
 
-Time remaining: 151 seconds
+Time remaining: 154 seconds
 System Capabilities: B,T
 Enabled Capabilities: B,T
 Management Addresses:
@@ -1869,7 +1869,7 @@ Port Description - not advertised
 System Name - not advertised
 System Description - not advertised
 
-Time remaining: 3578 seconds
+Time remaining: 3202 seconds
 System Capabilities - not advertised
 Enabled Capabilities - not advertised
 Management Addresses - not advertised
@@ -1900,7 +1900,7 @@ Port Description - not advertised
 System Name - not advertised
 System Description - not advertised
 
-Time remaining: 3179 seconds
+Time remaining: 2803 seconds
 System Capabilities - not advertised
 Enabled Capabilities - not advertised
 Management Addresses - not advertised
@@ -1931,7 +1931,7 @@ Port Description - not advertised
 System Name - not advertised
 System Description - not advertised
 
-Time remaining: 3190 seconds
+Time remaining: 2814 seconds
 System Capabilities - not advertised
 Enabled Capabilities - not advertised
 Management Addresses - not advertised
@@ -1962,7 +1962,7 @@ Port Description - not advertised
 System Name - not advertised
 System Description - not advertised
 
-Time remaining: 3201 seconds
+Time remaining: 2826 seconds
 System Capabilities - not advertised
 Enabled Capabilities - not advertised
 Management Addresses - not advertised
@@ -1993,7 +1993,7 @@ Port Description - not advertised
 System Name - not advertised
 System Description - not advertised
 
-Time remaining: 3452 seconds
+Time remaining: 3076 seconds
 System Capabilities - not advertised
 Enabled Capabilities - not advertised
 Management Addresses - not advertised
@@ -2024,7 +2024,7 @@ Port Description - not advertised
 System Name - not advertised
 System Description - not advertised
 
-Time remaining: 3459 seconds
+Time remaining: 3083 seconds
 System Capabilities - not advertised
 Enabled Capabilities - not advertised
 Management Addresses - not advertised
@@ -2055,38 +2055,7 @@ Port Description - not advertised
 System Name - not advertised
 System Description - not advertised
 
-Time remaining: 2876 seconds
-System Capabilities - not advertised
-Enabled Capabilities - not advertised
-Management Addresses - not advertised
-Auto Negotiation - supported, enabled
-Physical media capabilities:
-    1000baseT(FD)
-Media Attachment Unit type - not advertised
-Vlan ID: - not advertised
-
-MED Information:
-
-    MED Codes:
-          (NP) Network Policy, (LI) Location Identification
-          (PS) Power Source Entity, (PD) Power Device
-          (IN) Inventory
-
-    Inventory information - not advertised
-    Capabilities: 
-    Device type: Endpoint Class I
-    Network Policies - not advertised
-    Power requirements - not advertised
-    Location - not advertised
-
-------------------------------------------------
-Chassis id: 704d.7b6c.2467
-Port id: 704d.7b6c.2467
-Port Description - not advertised
-System Name - not advertised
-System Description - not advertised
-
-Time remaining: 3465 seconds
+Time remaining: 3446 seconds
 System Capabilities - not advertised
 Enabled Capabilities - not advertised
 Management Addresses - not advertised
@@ -2117,7 +2086,7 @@ Port Description - not advertised
 System Name - not advertised
 System Description - not advertised
 
-Time remaining: 3100 seconds
+Time remaining: 3129 seconds
 System Capabilities - not advertised
 Enabled Capabilities - not advertised
 Management Addresses - not advertised
@@ -2142,7 +2111,7 @@ MED Information:
     Location - not advertised
 
 
-Total entries displayed: 20
+Total entries displayed: 19
 
 
 

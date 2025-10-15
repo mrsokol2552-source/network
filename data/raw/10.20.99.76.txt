@@ -1064,7 +1064,7 @@ Compiled Wed 12-Jul-17 15:29 by prod_rel_team
 ROM: Bootstrap program is C2960 boot loader
 BOOTLDR: C2960 Boot Loader (C2960-HBOOT-M) Version 15.0(2r)EZ1, RELEASE SOFTWARE (fc1)
 
-INA-NSWS-08-99-76 uptime is 9 weeks, 3 days, 21 hours, 17 minutes
+INA-NSWS-08-99-76 uptime is 9 weeks, 3 days, 22 hours, 43 minutes
 System returned to ROM by power-on
 System image file is "flash:/c2960-lanbasek9-mz.152-2.E7/c2960-lanbasek9-mz.152-2.E7.bin"
 Last reload reason: power-on
@@ -1128,7 +1128,7 @@ Entry address(es):
   IP address: 10.13.1.44
 Platform: X3S,  Capabilities: Host Phone 
 Interface: GigabitEthernet0/1,  Port ID (outgoing port): WAN PORT
-Holdtime : 142 sec
+Holdtime : 143 sec
 
 Version :
 2.14.0.7387
@@ -1141,7 +1141,7 @@ Entry address(es):
   IP address: 10.20.99.10
 Platform: cisco WS-C2960+24TC-L,  Capabilities: Switch IGMP 
 Interface: GigabitEthernet0/1,  Port ID (outgoing port): GigabitEthernet0/1
-Holdtime : 137 sec
+Holdtime : 138 sec
 
 Version :
 Cisco IOS Software, C2960 Software (C2960-LANBASEK9-M), Version 15.2(2)E8, RELEASE SOFTWARE (fc1)
@@ -1163,7 +1163,7 @@ Entry address(es):
   IP address: 10.13.0.211
 Platform: X1S/X1SP,  Capabilities: Host Phone 
 Interface: FastEthernet0/4,  Port ID (outgoing port): WAN PORT
-Holdtime : 149 sec
+Holdtime : 179 sec
 
 Version :
 2.4.12.2
@@ -1176,7 +1176,7 @@ Entry address(es):
   IP address: 10.13.0.243
 Platform: X1S/X1SP,  Capabilities: Host Phone 
 Interface: FastEthernet0/23,  Port ID (outgoing port): WAN PORT
-Holdtime : 169 sec
+Holdtime : 136 sec
 
 Version :
 2.4.12.2
@@ -1189,7 +1189,7 @@ Entry address(es):
   IP address: 10.13.1.96
 Platform: X1S/X1SP,  Capabilities: Host Phone 
 Interface: FastEthernet0/27,  Port ID (outgoing port): WAN PORT
-Holdtime : 172 sec
+Holdtime : 140 sec
 
 Version :
 2.4.12.2
@@ -1199,10 +1199,10 @@ advertisement version: 2
 -------------------------
 Device ID: X1S/X1SP
 Entry address(es): 
-  IP address: 10.13.0.244
+  IP address: 10.13.1.60
 Platform: X1S/X1SP,  Capabilities: Host Phone 
 Interface: GigabitEthernet0/1,  Port ID (outgoing port): WAN PORT
-Holdtime : 168 sec
+Holdtime : 179 sec
 
 Version :
 2.4.12.2
@@ -1244,7 +1244,7 @@ Fa0/21                       connected    90         a-full  a-100 10/100BaseTX
 Fa0/22                       notconnect   90           auto   auto 10/100BaseTX
 Fa0/23    7589               connected    trunk      a-full  a-100 10/100BaseTX
 Fa0/24                       notconnect   90           auto   auto 10/100BaseTX
-Fa0/25                       connected    90         a-full  a-100 10/100BaseTX
+Fa0/25                       connected    90         a-full   a-10 10/100BaseTX
 Fa0/26                       notconnect   90           auto   auto 10/100BaseTX
 Fa0/27    7594               connected    trunk      a-full  a-100 10/100BaseTX
 Fa0/28                       notconnect   90           auto   auto 10/100BaseTX

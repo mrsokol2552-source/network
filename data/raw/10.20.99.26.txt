@@ -744,7 +744,7 @@ Compiled Thu 14-May-15 02:39 by prod_rel_team
 ROM: Bootstrap program is C2960 boot loader
 BOOTLDR: C2960 Boot Loader (C2960-HBOOT-M) Version 15.0(2r)EZ1, RELEASE SOFTWARE (fc1)
 
-DEN-NSWS-91-99-26 uptime is 4 weeks, 1 day, 22 hours, 47 minutes
+DEN-NSWS-91-99-26 uptime is 4 weeks, 2 days, 13 minutes
 System returned to ROM by power-on
 System restarted at 14:45:25 YAKT Wed Sep 10 2025
 System image file is "flash:/c2960-lanbasek9-mz.150-2.SE8/c2960-lanbasek9-mz.150-2.SE8.bin"
@@ -807,7 +807,7 @@ Entry address(es):
   IP address: 10.20.99.77
 Platform: cisco WS-C2960C-8TC-L,  Capabilities: Switch IGMP 
 Interface: FastEthernet0/21,  Port ID (outgoing port): GigabitEthernet0/2
-Holdtime : 127 sec
+Holdtime : 178 sec
 
 Version :
 Cisco IOS Software, C2960C Software (C2960c405-UNIVERSALK9-M), Version 15.2(2)E6, RELEASE SOFTWARE (fc1)
@@ -832,7 +832,7 @@ Entry address(es):
   IP address: 10.20.99.187
 Platform: cisco WS-C2960CX-8PC-L,  Capabilities: Switch IGMP 
 Interface: FastEthernet0/23,  Port ID (outgoing port): GigabitEthernet0/10
-Holdtime : 162 sec
+Holdtime : 148 sec
 
 Version :
 Cisco IOS Software, C2960CX Software (C2960CX-UNIVERSALK9-M), Version 15.2(7)E1, RELEASE SOFTWARE (fc4)
@@ -856,7 +856,7 @@ Entry address(es):
   IP address: 10.20.99.132
 Platform: cisco WS-C2960CX-8TC-L,  Capabilities: Switch IGMP 
 Interface: GigabitEthernet0/1,  Port ID (outgoing port): GigabitEthernet0/9
-Holdtime : 142 sec
+Holdtime : 138 sec
 
 Version :
 Cisco IOS Software, C2960CX Software (C2960CX-UNIVERSALK9-M), Version 15.2(4)E6, RELEASE SOFTWARE (fc4)
@@ -881,7 +881,7 @@ Entry address(es):
   IP address: 10.13.0.13
 Platform: X1S/X1SP,  Capabilities: Host Phone 
 Interface: FastEthernet0/22,  Port ID (outgoing port): WAN PORT
-Holdtime : 127 sec
+Holdtime : 176 sec
 
 Version :
 2.4.12.2
@@ -898,7 +898,7 @@ Entry address(es):
   IP address: 10.13.1.252
 Platform: X1S/X1SP,  Capabilities: Host Phone 
 Interface: FastEthernet0/14,  Port ID (outgoing port): WAN PORT
-Holdtime : 177 sec
+Holdtime : 164 sec
 
 Version :
 2.4.12.2
@@ -915,7 +915,7 @@ Entry address(es):
   IP address: 10.13.0.215
 Platform: X1S/X1SP,  Capabilities: Host Phone 
 Interface: FastEthernet0/17,  Port ID (outgoing port): WAN PORT
-Holdtime : 122 sec
+Holdtime : 170 sec
 
 Version :
 2.4.12.2

@@ -466,7 +466,7 @@ Compiled Sat 17-Apr-21 07:21 by prod_rel_team
 ROM: Bootstrap program is c1000 boot loader
 BOOTLDR: C1000 Boot Loader (C1000-HBOOT-M) Version 15.2(7r)E3, RELEASE SOFTWARE (fc4)
 
-INA-NSWS-118-99-108 uptime is 9 weeks, 2 days, 2 hours, 23 minutes
+INA-NSWS-118-99-108 uptime is 9 weeks, 2 days, 3 hours, 48 minutes
 System returned to ROM by power-on
 System restarted at 11:13:20 YAKT Wed Aug 6 2025
 System image file is "flash:/c1000-universalk9-mz.152-8.E/c1000-universalk9-mz.152-8.E.bin"
@@ -529,7 +529,7 @@ Entry address(es):
   IP address: 10.20.99.20
 Platform: cisco WS-C3560V2-24TS,  Capabilities: Router Switch IGMP 
 Interface: GigabitEthernet1/0/17,  Port ID (outgoing port): FastEthernet0/11
-Holdtime : 151 sec
+Holdtime : 124 sec
 
 Version :
 Cisco IOS Software, C3560 Software (C3560-IPBASEK9-M), Version 12.2(50)SE5, RELEASE SOFTWARE (fc1)
@@ -551,7 +551,7 @@ Entry address(es):
   IP address: 10.20.99.82
 Platform: cisco C1000-8T-2G-L,  Capabilities: Switch IGMP 
 Interface: GigabitEthernet1/0/11,  Port ID (outgoing port): GigabitEthernet1/0/9
-Holdtime : 174 sec
+Holdtime : 135 sec
 
 Version :
 Cisco IOS Software, C1000 Software (C1000-UNIVERSALK9-M), Version 15.2(7)E4, RELEASE SOFTWARE (fc2)
