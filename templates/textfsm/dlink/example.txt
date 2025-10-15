@@ -1,5 +1,8 @@
-# TextFSM template — dlink
-Value FillMeUp (.*)
+# Command list for D-Link collection (DES/DGS families)
+# pre_enable=0
+show version
+show lldp remote_ports
+show vlan
+show interfaces status
+show config effective
 
-Start
-  ^.* -> Record

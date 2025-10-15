@@ -1,0 +1,67 @@
+{
+  "vendor": "cisco_ios",
+  "raw_files": [
+    "CHU\\24\\10.20.98.93.txt"
+  ],
+  "parsed": {
+    "cisco_ios_show_cdp_neighbors": [
+      {
+        "Neighbor": "CHU-NSWS-24-98-93",
+        "LocalInterface": "uptime is",
+        "NeighborPort": "4 hours,",
+        "_source_file": "C:\\Users\\zhiltsov.aa\\Desktop\\net-auto-mermaid\\data\\raw\\CHU\\24\\10.20.98.93.txt",
+        "_template": "cisco_ios_show_cdp_neighbors.template"
+      },
+      {
+        "Neighbor": "Gig",
+        "LocalInterface": "0/12",
+        "NeighborPort": "I   WS-C2960C",
+        "_source_file": "C:\\Users\\zhiltsov.aa\\Desktop\\net-auto-mermaid\\data\\raw\\CHU\\24\\10.20.98.93.txt",
+        "_template": "cisco_ios_show_cdp_neighbors.template"
+      }
+    ],
+    "cisco_ios_show_cdp_neighbors_detail": [
+      {
+        "Neighbor": "CHU-NSWS-24-98-232.kolmar.ru",
+        "LocalInterface": "GigabitEthernet0/12",
+        "NeighborPort": "GigabitEthernet0/11",
+        "Platform": "cisco WS-C2960CX-8PC-L",
+        "_source_file": "C:\\Users\\zhiltsov.aa\\Desktop\\net-auto-mermaid\\data\\raw\\CHU\\24\\10.20.98.93.txt",
+        "_template": "cisco_ios_show_cdp_neighbors_detail.template"
+      }
+    ],
+    "cisco_ios_show_lldp_neighbors_detail": [
+      {
+        "LocalInterface": "Gi0/12",
+        "NeighborName": "",
+        "NeighborPort": "Gi0/11",
+        "_source_file": "C:\\Users\\zhiltsov.aa\\Desktop\\net-auto-mermaid\\data\\raw\\CHU\\24\\10.20.98.93.txt",
+        "_template": "cisco_ios_show_lldp_neighbors_detail.template"
+      },
+      {
+        "LocalInterface": "",
+        "NeighborName": "CHU-NSWS-24-98-232.kolmar.ru",
+        "NeighborPort": "",
+        "_source_file": "C:\\Users\\zhiltsov.aa\\Desktop\\net-auto-mermaid\\data\\raw\\CHU\\24\\10.20.98.93.txt",
+        "_template": "cisco_ios_show_lldp_neighbors_detail.template"
+      }
+    ],
+    "cisco_ios_show_version": [
+      {
+        "Version": "15.2(3)E2",
+        "Model": "",
+        "Uptime": "1 week, 4 hours, 43 minutes",
+        "_source_file": "C:\\Users\\zhiltsov.aa\\Desktop\\net-auto-mermaid\\data\\raw\\CHU\\24\\10.20.98.93.txt",
+        "_template": "cisco_ios_show_version.template"
+      },
+      {
+        "Version": "15.2(7)E",
+        "Model": "WS-C2960CX-8PC-L",
+        "Uptime": "",
+        "_source_file": "C:\\Users\\zhiltsov.aa\\Desktop\\net-auto-mermaid\\data\\raw\\CHU\\24\\10.20.98.93.txt",
+        "_template": "cisco_ios_show_version.template"
+      }
+    ]
+  },
+  "errors": []
+}

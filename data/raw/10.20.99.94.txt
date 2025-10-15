@@ -1,399 +1,6 @@
 
 
-$ show running-config
-Building configuration...
-
-Current configuration : 11225 bytes
-!
-! Last configuration change at 07:16:11 UTC Tue Oct 7 2025 by zhiltsov_a
-!
-version 15.2
-no service pad
-service timestamps debug datetime msec
-service timestamps log datetime msec
-service password-encryption
-!
-hostname DEN-NSWS-59-99-94
-!
-boot-start-marker
-boot-end-marker
-!
-!
-username ivashenko_vb privilege 15 secret 5 $1$bi7z$qTHuukwOKu/rACvOW/3hy.
-username sib_uib privilege 15 secret 9 $9$RJ64VWzV1YSKQU$a3dKPmGjU4GExZXjw04SfWQGQHhkCaV8ap0Wcmqfnig
-username volodin_s privilege 15 secret 9 $9$J6H6QuVVgZO.LS$COEoJIeKuM1lQlQA.d.hzIii79Bnc3GHS4XWdDp5L8A
-username zhiltsov_a privilege 15 secret 9 $9$xXpx46MArQyJNZ$3IibxCF6rp./pBN2yxP9QYc0tYgK/n0SlFwmf9O5Z8s
-aaa new-model
-!
-!
-aaa authentication login login-RADIUS group radius local
-aaa authorization console
-aaa authorization exec auth-RADIUS-exec group radius local 
-!
-!
-!
-!
-!
-!
-aaa session-id common
-switch 1 provision c1000-16fp-2g-l
-system mtu routing 1500
-!
-!
-ip domain-name kolmar.local
-!
-!
-!
-!
-!
-!
-crypto pki trustpoint TP-self-signed-4217438336
- enrollment selfsigned
- subject-name cn=IOS-Self-Signed-Certificate-4217438336
- revocation-check none
- rsakeypair TP-self-signed-4217438336
-!
-!
-crypto pki certificate chain TP-self-signed-4217438336
- certificate self-signed 01
-  3082022B 30820194 A0030201 02020101 300D0609 2A864886 F70D0101 05050030 
-  31312F30 2D060355 04031326 494F532D 53656C66 2D536967 6E65642D 43657274 
-  69666963 6174652D 34323137 34333833 3336301E 170D3234 30343032 30323539 
-  34395A17 0D333030 31303130 30303030 305A3031 312F302D 06035504 03132649 
-  4F532D53 656C662D 5369676E 65642D43 65727469 66696361 74652D34 32313734 
-  33383333 3630819F 300D0609 2A864886 F70D0101 01050003 818D0030 81890281 
-  8100B16C 8C9708F8 839F3237 5608DABD F24302B1 10AE60C1 D3ECF600 3AAF9136 
-  4056F984 0756BB37 94E14241 461FAADF 1EF71AA8 7F60379D ACCC23A8 A0063264 
-  308D78E3 31CB6FF1 B8F2CB74 B8B92969 24EB6088 F61D2DDA 0E674EB9 A4DA9914 
-  D56D5F1C 10DCC5AC 3F6582F8 9FF63F95 7DFA1914 ED90624F 531C26F9 54E75CD5 
-  2F790203 010001A3 53305130 0F060355 1D130101 FF040530 030101FF 301F0603 
-  551D2304 18301680 14B07EDD B770626F 8AF0482C 009246A9 29904251 E7301D06 
-  03551D0E 04160414 B07EDDB7 70626F8A F0482C00 9246A929 904251E7 300D0609 
-  2A864886 F70D0101 05050003 8181004E 03285AFD B70E988A 1473777B B3345901 
-  4EEC89CA E6C31B28 1F156604 5B85F4DC B42EA3A8 E82BC9F2 54137785 EDE52203 
-  007F4B23 BC6603B8 9F3106FB 253FC2DD BA522899 5E82807D 453AB895 74AAE7D2 
-  220AE710 E1A57F58 D8C82E8C 49BC9A14 B2A902AD EC836EBD 0226295C 2AB14E65 
-  531F9C4A 044A06CF 3691B76B 32E0CF
-  	quit
-!
-spanning-tree mode rapid-pvst
-spanning-tree extend system-id
-no errdisable detect cause gbic-invalid
-no errdisable detect cause sfp-config-mismatch
-errdisable recovery cause udld
-errdisable recovery cause bpduguard
-errdisable recovery cause security-violation
-errdisable recovery cause channel-misconfig
-errdisable recovery cause pagp-flap
-errdisable recovery cause dtp-flap
-errdisable recovery cause link-flap
-errdisable recovery cause sfp-config-mismatch
-errdisable recovery cause gbic-invalid
-errdisable recovery cause psecure-violation
-errdisable recovery cause port-mode-failure
-errdisable recovery cause dhcp-rate-limit
-errdisable recovery cause pppoe-ia-rate-limit
-errdisable recovery cause mac-limit
-errdisable recovery cause vmps
-errdisable recovery cause storm-control
-errdisable recovery cause inline-power
-errdisable recovery cause arp-inspection
-errdisable recovery cause loopback
-errdisable recovery cause psp
-errdisable recovery interval 180
-!
-vlan internal allocation policy ascending
-!
-!
-!
-!
-!
-!
-interface GigabitEthernet1/0/1
- description DEN-HOTEL-2/8
- switchport trunk allowed vlan 13,30-34,37
- switchport mode trunk
- logging event spanning-tree
- logging event status
- no cdp tlv app
- no snmp trap link-status
- storm-control broadcast level 5.00 3.00
- storm-control multicast level 5.00 3.00
- storm-control action shutdown
- storm-control action trap
-!
-interface GigabitEthernet1/0/2
- description DEN-HOTEL-2/3
- switchport trunk allowed vlan 13,30-34,37
- switchport mode trunk
- logging event spanning-tree
- logging event status
- no cdp tlv app
- no snmp trap link-status
- storm-control broadcast level 5.00 3.00
- storm-control multicast level 5.00 3.00
- storm-control action shutdown
- storm-control action trap
-!
-interface GigabitEthernet1/0/3
- description DEN-HOTEL-2/7
- switchport trunk allowed vlan 13,30-34,37
- switchport mode trunk
- logging event spanning-tree
- logging event status
- no cdp tlv app
- no snmp trap link-status
- storm-control broadcast level 5.00 3.00
- storm-control multicast level 5.00 3.00
- storm-control action shutdown
- storm-control action trap
-!
-interface GigabitEthernet1/0/4
- description DEN-HOTEL-2/6
- switchport trunk allowed vlan 13,30-34,37
- switchport mode trunk
- logging event spanning-tree
- logging event status
- no cdp tlv app
- no snmp trap link-status
- storm-control broadcast level 5.00 3.00
- storm-control multicast level 5.00 3.00
- storm-control action shutdown
- storm-control action trap
-!
-interface GigabitEthernet1/0/5
- description DEN-HOTEL-2/2
- switchport trunk allowed vlan 13,30-34,37
- switchport mode trunk
- logging event spanning-tree
- logging event status
- no cdp tlv app
- no snmp trap link-status
- storm-control broadcast level 5.00 3.00
- storm-control multicast level 5.00 3.00
- storm-control action shutdown
- storm-control action trap
-!
-interface GigabitEthernet1/0/6
- description DEN-HOTEL-2/4
- switchport trunk allowed vlan 13,30-34,37
- switchport mode trunk
- logging event spanning-tree
- logging event status
- no cdp tlv app
- no snmp trap link-status
- storm-control broadcast level 5.00 3.00
- storm-control multicast level 5.00 3.00
- storm-control action shutdown
- storm-control action trap
-!
-interface GigabitEthernet1/0/7
- description DEN-HOTEL-2/1
- switchport trunk allowed vlan 13,30-34,37
- switchport mode trunk
- logging event spanning-tree
- logging event status
- no cdp tlv app
- no snmp trap link-status
- storm-control broadcast level 5.00 3.00
- storm-control multicast level 5.00 3.00
- storm-control action shutdown
- storm-control action trap
-!
-interface GigabitEthernet1/0/8
- description DEN-HOTEL-2/5
- switchport trunk allowed vlan 13,30-34,37
- switchport mode trunk
- logging event spanning-tree
- logging event status
- no cdp tlv app
- no snmp trap link-status
- storm-control broadcast level 5.00 3.00
- storm-control multicast level 5.00 3.00
- storm-control action shutdown
- storm-control action trap
-!
-interface GigabitEthernet1/0/9
- switchport trunk allowed vlan 13,30-34,37
- switchport mode trunk
- logging event spanning-tree
- logging event status
- no cdp tlv app
- no snmp trap link-status
- storm-control broadcast level 3.00 1.00
- storm-control multicast level 3.00 1.00
- storm-control unicast level 5.00 3.00
- storm-control action shutdown
- storm-control action trap
-!
-interface GigabitEthernet1/0/10
- switchport trunk allowed vlan 13,30-34
- switchport mode trunk
- logging event spanning-tree
- logging event status
- no cdp tlv app
- no snmp trap link-status
- storm-control broadcast level 3.00 1.00
- storm-control multicast level 3.00 1.00
- storm-control unicast level 5.00 3.00
- storm-control action shutdown
- storm-control action trap
-!
-interface GigabitEthernet1/0/11
- switchport trunk allowed vlan 13,30-34
- switchport mode trunk
- logging event spanning-tree
- logging event status
- no cdp tlv app
- no snmp trap link-status
- storm-control broadcast level 3.00 1.00
- storm-control multicast level 3.00 1.00
- storm-control unicast level 5.00 3.00
- storm-control action shutdown
- storm-control action trap
-!
-interface GigabitEthernet1/0/12
- switchport trunk allowed vlan 13,30-34
- switchport mode trunk
- logging event spanning-tree
- logging event status
- no cdp tlv app
- no snmp trap link-status
- storm-control broadcast level 3.00 1.00
- storm-control multicast level 3.00 1.00
- storm-control unicast level 5.00 3.00
- storm-control action shutdown
- storm-control action trap
-!
-interface GigabitEthernet1/0/13
- switchport trunk allowed vlan 13,30-34
- switchport mode trunk
- logging event spanning-tree
- logging event status
- no cdp tlv app
- no snmp trap link-status
- storm-control broadcast level 3.00 1.00
- storm-control multicast level 3.00 1.00
- storm-control unicast level 5.00 3.00
- storm-control action shutdown
- storm-control action trap
-!
-interface GigabitEthernet1/0/14
- switchport trunk allowed vlan 13,30-34
- switchport mode trunk
- logging event spanning-tree
- logging event status
- no cdp tlv app
- no snmp trap link-status
- storm-control broadcast level 3.00 1.00
- storm-control multicast level 3.00 1.00
- storm-control unicast level 5.00 3.00
- storm-control action shutdown
- storm-control action trap
-!
-interface GigabitEthernet1/0/15
- description TV
- switchport access vlan 34
- switchport trunk allowed vlan 13,30-34
- switchport mode access
- logging event spanning-tree
- logging event status
- no cdp tlv app
- no snmp trap link-status
- storm-control broadcast level 3.00 1.00
- storm-control multicast level 3.00 1.00
- storm-control action shutdown
- storm-control action trap
-!
-interface GigabitEthernet1/0/16
- switchport trunk allowed vlan 13,30-34
- switchport mode trunk
- logging event spanning-tree
- logging event status
- no cdp tlv app
- no snmp trap link-status
- storm-control broadcast level 3.00 1.00
- storm-control multicast level 3.00 1.00
- storm-control unicast level 5.00 3.00
- storm-control action shutdown
- storm-control action trap
-!
-interface GigabitEthernet1/0/17
- description 98.1_twe1/0/24
- switchport trunk allowed vlan 13,17,30-34,37
- switchport mode trunk
- logging event spanning-tree
- logging event status
- storm-control broadcast level 20.00 10.00
- storm-control multicast level 20.00 10.00
- storm-control action trap
- ip dhcp snooping trust
-!
-interface GigabitEthernet1/0/18
- switchport trunk allowed vlan 13,17,30-34
- switchport mode trunk
- logging event spanning-tree
- logging event status
- storm-control broadcast level 20.00 10.00
- storm-control multicast level 20.00 10.00
- storm-control action trap
- ip dhcp snooping trust
-!
-interface Vlan1
- no ip address
- shutdown
-!
-interface Vlan17
- ip address 10.20.99.94 255.255.252.0
-!
-no ip http server
-ip http banner
-ip http authentication aaa login-authentication login-RADIUS
-ip http authentication aaa exec-authorization auth-RADIUS-exec
-ip http secure-server
-ip http max-connections 3
-ip ssh version 2
-!
-kron policy-list backup
- cli copy vlan.dat tftp://dump.kolmar.pro/10.20.99.94_vlan
-!
-logging trap debugging
-logging host 10.10.0.142 transport udp port 5014
-!
-!
-snmp-server community public RO
-snmp mib flash cache
-!
-radius-server retransmit 1
-radius-server timeout 2
-radius-server key 7 0457000C0A3042461A1503151E1C
-!
-radius server login-RADIUS
- address ipv4 10.10.0.210 auth-port 1812 acct-port 1813
- key 7 141B190109152423372435372E04
-!
-!
-line con 0
- exec-timeout 13 0
- privilege level 15
- authorization exec auth-RADIUS-exec
- logging synchronous
- login authentication login-RADIUS
-line vty 0 4
- access-class 12 in
- exec-timeout 60 0
- privilege level 15
- authorization exec auth-RADIUS-exec
- logging synchronous
- login authentication login-RADIUS
- length 0
- transport input ssh
-line vty 5 15
- authorization exec auth-RADIUS-exec
- login authentication login-RADIUS
- transport input none
-!
-end
+$ terminal length 0
 
 
 
@@ -406,7 +13,7 @@ Compiled Tue 22-Mar-22 10:25 by mcpre
 ROM: Bootstrap program is c1000 boot loader
 BOOTLDR: C1000 Boot Loader (C1000-HBOOT-M) Version 15.2(7r)E3, RELEASE SOFTWARE (fc4)
 
-DEN-NSWS-59-99-94 uptime is 12 weeks, 3 days, 22 hours, 34 minutes
+DEN-NSWS-59-99-94 uptime is 13 weeks, 1 day, 23 hours, 27 minutes
 System returned to ROM by power-on
 System image file is "flash:/c1000-universalk9-mz.152-7.E6/c1000-universalk9-mz.152-7.E6.bin"
 Last reload reason: power-on
@@ -461,6 +68,316 @@ Configuration register is 0xF
 
 
 
+$ show lldp neighbors detail
+------------------------------------------------
+Local Intf: Gi1/0/4
+Chassis id: 265a.4c3e.9520
+Port id: 245a.4c7e.951e
+Port Description: eth0
+System Name: DEN-HOTEL-26
+
+System Description: 
+UAP-HD-IW, 6.7.17.15512
+
+Time remaining: 96 seconds
+System Capabilities: B,W,R,S
+Enabled Capabilities: B,W,R
+Management Addresses:
+    IP: 10.31.0.34
+    IPV6: FE80::265A:4CFF:FE7E:951E
+Auto Negotiation - not supported
+Physical media capabilities - not advertised
+Media Attachment Unit type - not advertised
+Vlan ID: - not advertised
+
+MED Information:
+
+    MED Codes:
+          (NP) Network Policy, (LI) Location Identification
+          (PS) Power Source Entity, (PD) Power Device
+          (IN) Inventory
+
+    S/W revision: 4.4.153
+    Capabilities: NP, LI, PS, PD, IN
+    Device type: Network connectivity
+    Network Policies - not advertised
+    PD device, Power source: PSE, Power Priority: High, Wattage: 12.9
+    Location - not advertised
+
+------------------------------------------------
+Local Intf: Gi1/0/17
+Chassis id: e069.ba83.1580
+Port id: Twe1/0/24
+Port Description: hotel-2_99.94_gi1/0/17
+System Name: DEN-NSWR-03-98-1
+
+System Description: 
+Cisco IOS Software [Bengaluru], Catalyst L3 Switch Software (CAT9K_IOSXE), Version 17.6.1, RELEASE SOFTWARE (fc6)
+Technical Support: http://www.cisco.com/techsupport
+Copyright (c) 1986-2021 by Cisco Systems, Inc.
+Compiled Fri 30-Jul-21 15:15 by mcpre
+
+Time remaining: 94 seconds
+System Capabilities: B,R
+Enabled Capabilities: B,R
+Management Addresses:
+    IP: 10.20.98.1
+Auto Negotiation - not supported
+Physical media capabilities:
+    1000baseT(FD)
+Media Attachment Unit type: 26
+Vlan ID: 1
+
+------------------------------------------------
+Local Intf: Gi1/0/8
+Chassis id: 245a.4c7e.95cb
+Port id: 245a.4c7e.95ca
+Port Description: eth0
+System Name: DEN-HOTEL-25
+
+System Description: 
+UAP-HD-IW, 6.7.17.15512
+
+Time remaining: 90 seconds
+System Capabilities: B,W,R,S
+Enabled Capabilities: B,W,R
+Management Addresses:
+    IP: 10.31.0.23
+    IPV6: FE80::265A:4CFF:FE7E:95CA
+Auto Negotiation - not supported
+Physical media capabilities - not advertised
+Media Attachment Unit type - not advertised
+Vlan ID: - not advertised
+
+MED Information:
+
+    MED Codes:
+          (NP) Network Policy, (LI) Location Identification
+          (PS) Power Source Entity, (PD) Power Device
+          (IN) Inventory
+
+    S/W revision: 4.4.153
+    Capabilities: NP, LI, PS, PD, IN
+    Device type: Network connectivity
+    Network Policies - not advertised
+    PD device, Power source: PSE, Power Priority: High, Wattage: 12.9
+    Location - not advertised
+
+------------------------------------------------
+Local Intf: Gi1/0/6
+Chassis id: 245a.4c7e.959f
+Port id: 245a.4c7e.959e
+Port Description: eth0
+System Name: DEN-HOTEL-24
+
+System Description: 
+UAP-HD-IW, 6.7.17.15512
+
+Time remaining: 96 seconds
+System Capabilities: B,W,R,S
+Enabled Capabilities: B,W,R
+Management Addresses:
+    IP: 10.31.0.85
+    IPV6: FE80::265A:4CFF:FE7E:959E
+Auto Negotiation - not supported
+Physical media capabilities - not advertised
+Media Attachment Unit type - not advertised
+Vlan ID: - not advertised
+
+MED Information:
+
+    MED Codes:
+          (NP) Network Policy, (LI) Location Identification
+          (PS) Power Source Entity, (PD) Power Device
+          (IN) Inventory
+
+    S/W revision: 4.4.153
+    Capabilities: NP, LI, PS, PD, IN
+    Device type: Network connectivity
+    Network Policies - not advertised
+    PD device, Power source: PSE, Power Priority: High, Wattage: 12.9
+    Location - not advertised
+
+------------------------------------------------
+Local Intf: Gi1/0/2
+Chassis id: 245a.4c7e.9de7
+Port id: 245a.4c7e.9de6
+Port Description: eth0
+System Name: DEN-HOTEL-23
+
+System Description: 
+UAP-HD-IW, 6.7.17.15512
+
+Time remaining: 96 seconds
+System Capabilities: B,W,R,S
+Enabled Capabilities: B,W,R
+Management Addresses:
+    IP: 10.31.0.64
+    IPV6: FE80::265A:4CFF:FE7E:9DE6
+Auto Negotiation - not supported
+Physical media capabilities - not advertised
+Media Attachment Unit type - not advertised
+Vlan ID: - not advertised
+
+MED Information:
+
+    MED Codes:
+          (NP) Network Policy, (LI) Location Identification
+          (PS) Power Source Entity, (PD) Power Device
+          (IN) Inventory
+
+    S/W revision: 4.4.153
+    Capabilities: NP, LI, PS, PD, IN
+    Device type: Network connectivity
+    Network Policies - not advertised
+    PD device, Power source: PSE, Power Priority: High, Wattage: 12.9
+    Location - not advertised
+
+------------------------------------------------
+Local Intf: Gi1/0/1
+Chassis id: 245a.4c7e.9547
+Port id: 245a.4c7e.9546
+Port Description: eth0
+System Name: DEN-HOTEL-28
+
+System Description: 
+UAP-HD-IW, 6.7.17.15512
+
+Time remaining: 97 seconds
+System Capabilities: B,W,R,S
+Enabled Capabilities: B,W,R
+Management Addresses:
+    IP: 10.31.0.55
+    IPV6: FE80::265A:4CFF:FE7E:9546
+Auto Negotiation - not supported
+Physical media capabilities - not advertised
+Media Attachment Unit type - not advertised
+Vlan ID: - not advertised
+
+MED Information:
+
+    MED Codes:
+          (NP) Network Policy, (LI) Location Identification
+          (PS) Power Source Entity, (PD) Power Device
+          (IN) Inventory
+
+    S/W revision: 4.4.153
+    Capabilities: NP, LI, PS, PD, IN
+    Device type: Network connectivity
+    Network Policies - not advertised
+    PD device, Power source: PSE, Power Priority: High, Wattage: 12.9
+    Location - not advertised
+
+------------------------------------------------
+Local Intf: Gi1/0/3
+Chassis id: 245a.4c7e.948f
+Port id: 245a.4c7e.948e
+Port Description: eth0
+System Name: DEN-HOTEL-27
+
+System Description: 
+UAP-HD-IW, 6.7.17.15512
+
+Time remaining: 104 seconds
+System Capabilities: B,W,R,S
+Enabled Capabilities: B,W,R
+Management Addresses:
+    IP: 10.31.0.67
+    IPV6: FE80::265A:4CFF:FE7E:948E
+Auto Negotiation - not supported
+Physical media capabilities - not advertised
+Media Attachment Unit type - not advertised
+Vlan ID: - not advertised
+
+MED Information:
+
+    MED Codes:
+          (NP) Network Policy, (LI) Location Identification
+          (PS) Power Source Entity, (PD) Power Device
+          (IN) Inventory
+
+    S/W revision: 4.4.153
+    Capabilities: NP, LI, PS, PD, IN
+    Device type: Network connectivity
+    Network Policies - not advertised
+    PD device, Power source: PSE, Power Priority: High, Wattage: 12.9
+    Location - not advertised
+
+------------------------------------------------
+Local Intf: Gi1/0/5
+Chassis id: 245a.4c7e.9d13
+Port id: 245a.4c7e.9d12
+Port Description: eth0
+System Name: DEN-HOTEL-22
+
+System Description: 
+UAP-HD-IW, 6.7.17.15512
+
+Time remaining: 108 seconds
+System Capabilities: B,W,R,S
+Enabled Capabilities: B,W,R
+Management Addresses:
+    IP: 10.31.0.24
+    IPV6: FE80::265A:4CFF:FE7E:9D12
+Auto Negotiation - not supported
+Physical media capabilities - not advertised
+Media Attachment Unit type - not advertised
+Vlan ID: - not advertised
+
+MED Information:
+
+    MED Codes:
+          (NP) Network Policy, (LI) Location Identification
+          (PS) Power Source Entity, (PD) Power Device
+          (IN) Inventory
+
+    S/W revision: 4.4.153
+    Capabilities: NP, LI, PS, PD, IN
+    Device type: Network connectivity
+    Network Policies - not advertised
+    PD device, Power source: PSE, Power Priority: High, Wattage: 12.9
+    Location - not advertised
+
+------------------------------------------------
+Local Intf: Gi1/0/7
+Chassis id: 245a.4c7e.9516
+Port id: 245a.4c7e.9516
+Port Description: eth0
+System Name: DEN-HOTEL-21
+
+System Description: 
+UAP-HD-IW, 6.7.17.15512
+
+Time remaining: 100 seconds
+System Capabilities: B,W,R,S
+Enabled Capabilities: B,W,R
+Management Addresses:
+    IP: 10.31.0.62
+    IPV6: FE80::265A:4CFF:FE7E:9516
+Auto Negotiation - not supported
+Physical media capabilities - not advertised
+Media Attachment Unit type - not advertised
+Vlan ID: - not advertised
+
+MED Information:
+
+    MED Codes:
+          (NP) Network Policy, (LI) Location Identification
+          (PS) Power Source Entity, (PD) Power Device
+          (IN) Inventory
+
+    S/W revision: 4.4.153
+    Capabilities: NP, LI, PS, PD, IN
+    Device type: Network connectivity
+    Network Policies - not advertised
+    PD device, Power source: PSE, Power Priority: High, Wattage: 12.9
+    Location - not advertised
+
+
+Total entries displayed: 9
+
+
+
 $ show cdp neighbors detail
 -------------------------
 Device ID: DEN-NSWR-03-98-1
@@ -468,7 +385,7 @@ Entry address(es):
   IP address: 10.20.98.1
 Platform: cisco C9300X-24Y,  Capabilities: Router Switch IGMP 
 Interface: GigabitEthernet1/0/17,  Port ID (outgoing port): TwentyFiveGigE1/0/24
-Holdtime : 142 sec
+Holdtime : 149 sec
 
 Version :
 Cisco IOS Software [Bengaluru], Catalyst L3 Switch Software (CAT9K_IOSXE), Version 17.6.1, RELEASE SOFTWARE (fc6)
@@ -487,28 +404,12 @@ Management address(es):
 Total cdp entries displayed : 1
 
 
-$ show lldp neighbors detail
-% LLDP is not enabled
+$ show cdp neighbors
+Capability Codes: R - Router, T - Trans Bridge, B - Source Route Bridge
+                  S - Switch, H - Host, I - IGMP, r - Repeater, P - Phone, 
+                  D - Remote, C - CVTA, M - Two-port Mac Relay 
 
+Device ID        Local Intrfce     Holdtme    Capability  Platform  Port ID
+DEN-NSWR-03-98-1 Gig 1/0/17        149             R S I  C9300X-24 Twe 1/0/24
 
-$ show interface status
-
-Port      Name               Status       Vlan       Duplex  Speed Type 
-Gi1/0/1   DEN-HOTEL-2/8      connected    trunk      a-full a-1000 10/100/1000BaseTX
-Gi1/0/2   DEN-HOTEL-2/3      connected    trunk      a-full a-1000 10/100/1000BaseTX
-Gi1/0/3   DEN-HOTEL-2/7      connected    trunk      a-full a-1000 10/100/1000BaseTX
-Gi1/0/4   DEN-HOTEL-2/6      connected    trunk      a-full a-1000 10/100/1000BaseTX
-Gi1/0/5   DEN-HOTEL-2/2      connected    trunk      a-full a-1000 10/100/1000BaseTX
-Gi1/0/6   DEN-HOTEL-2/4      connected    trunk      a-full a-1000 10/100/1000BaseTX
-Gi1/0/7   DEN-HOTEL-2/1      connected    trunk      a-full a-1000 10/100/1000BaseTX
-Gi1/0/8   DEN-HOTEL-2/5      connected    trunk      a-full a-1000 10/100/1000BaseTX
-Gi1/0/9                      notconnect   1            auto   auto 10/100/1000BaseTX
-Gi1/0/10                     notconnect   1            auto   auto 10/100/1000BaseTX
-Gi1/0/11                     notconnect   1            auto   auto 10/100/1000BaseTX
-Gi1/0/12                     notconnect   1            auto   auto 10/100/1000BaseTX
-Gi1/0/13                     notconnect   1            auto   auto 10/100/1000BaseTX
-Gi1/0/14                     notconnect   1            auto   auto 10/100/1000BaseTX
-Gi1/0/15  TV                 notconnect   34           auto   auto 10/100/1000BaseTX
-Gi1/0/16                     notconnect   1            auto   auto 10/100/1000BaseTX
-Gi1/0/17  98.1_twe1/0/24     connected    trunk      a-full a-1000 1000BaseBX10-D SFP
-Gi1/0/18                     notconnect   1            auto   auto Not Present
+Total cdp entries displayed : 1

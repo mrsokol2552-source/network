@@ -3,8 +3,563 @@
   "raw_files": [
     "10.0.2.10.txt"
   ],
-  "parsed": {},
-  "errors": [
-    "no_templates_for_vendor:cisco_ios"
-  ]
+  "parsed": {
+    "cisco_ios_show_cdp_neighbors": [
+      {
+        "Neighbor": "username",
+        "LocalInterface": "itdep privilege",
+        "NeighborPort": "5 $1$9HdO$ztL3aP8Dz2JwgocybNZEW.",
+        "_source_file": "C:\\Users\\zhiltsov.aa\\Desktop\\net-auto-mermaid\\data\\raw\\10.0.2.10.txt",
+        "_template": "cisco_ios_show_cdp_neighbors.template"
+      },
+      {
+        "Neighbor": "username",
+        "LocalInterface": "volodin_s privilege",
+        "NeighborPort": "5 $1$GIRL$Ev13kaRaAp9iLsN1.0/eQ0",
+        "_source_file": "C:\\Users\\zhiltsov.aa\\Desktop\\net-auto-mermaid\\data\\raw\\10.0.2.10.txt",
+        "_template": "cisco_ios_show_cdp_neighbors.template"
+      },
+      {
+        "Neighbor": "username",
+        "LocalInterface": "zhiltsov_a privilege",
+        "NeighborPort": "5 $1$HMnS$O065YMPk8WaAxugb83O3e1",
+        "_source_file": "C:\\Users\\zhiltsov.aa\\Desktop\\net-auto-mermaid\\data\\raw\\10.0.2.10.txt",
+        "_template": "cisco_ios_show_cdp_neighbors.template"
+      },
+      {
+        "Neighbor": "30820249",
+        "LocalInterface": "308201B2 A0030201",
+        "NeighborPort": "2A864886 F70D0101",
+        "_source_file": "C:\\Users\\zhiltsov.aa\\Desktop\\net-auto-mermaid\\data\\raw\\10.0.2.10.txt",
+        "_template": "cisco_ios_show_cdp_neighbors.template"
+      },
+      {
+        "Neighbor": "30312E30",
+        "LocalInterface": "2C060355",
+        "NeighborPort": "53656C66 2D536967",
+        "_source_file": "C:\\Users\\zhiltsov.aa\\Desktop\\net-auto-mermaid\\data\\raw\\10.0.2.10.txt",
+        "_template": "cisco_ios_show_cdp_neighbors.template"
+      },
+      {
+        "Neighbor": "69666963",
+        "LocalInterface": "6174652D 36363637",
+        "NeighborPort": "0D393330 33303130",
+        "_source_file": "C:\\Users\\zhiltsov.aa\\Desktop\\net-auto-mermaid\\data\\raw\\10.0.2.10.txt",
+        "_template": "cisco_ios_show_cdp_neighbors.template"
+      },
+      {
+        "Neighbor": "355A170D",
+        "LocalInterface": "32303031 30313030",
+        "NeighborPort": "2E302C06 03550403",
+        "_source_file": "C:\\Users\\zhiltsov.aa\\Desktop\\net-auto-mermaid\\data\\raw\\10.0.2.10.txt",
+        "_template": "cisco_ios_show_cdp_neighbors.template"
+      },
+      {
+        "Neighbor": "11041730",
+        "LocalInterface": "15821373",
+        "NeighborPort": "6C6D6172 2E6C6F63",
+        "_source_file": "C:\\Users\\zhiltsov.aa\\Desktop\\net-auto-mermaid\\data\\raw\\10.0.2.10.txt",
+        "_template": "cisco_ios_show_cdp_neighbors.template"
+      },
+      {
+        "Neighbor": "4886F70D",
+        "LocalInterface": "01010405",
+        "NeighborPort": "F34A874A 1C4DE9F8",
+        "_source_file": "C:\\Users\\zhiltsov.aa\\Desktop\\net-auto-mermaid\\data\\raw\\10.0.2.10.txt",
+        "_template": "cisco_ios_show_cdp_neighbors.template"
+      },
+      {
+        "Neighbor": "MSK-NSWS-03-2-10",
+        "LocalInterface": "uptime is",
+        "NeighborPort": "17 weeks,",
+        "_source_file": "C:\\Users\\zhiltsov.aa\\Desktop\\net-auto-mermaid\\data\\raw\\10.0.2.10.txt",
+        "_template": "cisco_ios_show_cdp_neighbors.template"
+      },
+      {
+        "Neighbor": "Gi0/5",
+        "LocalInterface": "SERVERS            notconnect",
+        "NeighborPort": "auto 10/100/1000BaseTX",
+        "_source_file": "C:\\Users\\zhiltsov.aa\\Desktop\\net-auto-mermaid\\data\\raw\\10.0.2.10.txt",
+        "_template": "cisco_ios_show_cdp_neighbors.template"
+      },
+      {
+        "Neighbor": "Gi0/6",
+        "LocalInterface": "SERVERS            connected",
+        "NeighborPort": "100 10/100/1000BaseTX",
+        "_source_file": "C:\\Users\\zhiltsov.aa\\Desktop\\net-auto-mermaid\\data\\raw\\10.0.2.10.txt",
+        "_template": "cisco_ios_show_cdp_neighbors.template"
+      },
+      {
+        "Neighbor": "Gi0/7",
+        "LocalInterface": "SERVERS            notconnect",
+        "NeighborPort": "auto 10/100/1000BaseTX",
+        "_source_file": "C:\\Users\\zhiltsov.aa\\Desktop\\net-auto-mermaid\\data\\raw\\10.0.2.10.txt",
+        "_template": "cisco_ios_show_cdp_neighbors.template"
+      },
+      {
+        "Neighbor": "Gi0/8",
+        "LocalInterface": "SERVERS            notconnect",
+        "NeighborPort": "auto 10/100/1000BaseTX",
+        "_source_file": "C:\\Users\\zhiltsov.aa\\Desktop\\net-auto-mermaid\\data\\raw\\10.0.2.10.txt",
+        "_template": "cisco_ios_show_cdp_neighbors.template"
+      },
+      {
+        "Neighbor": "Gi0/9",
+        "LocalInterface": "connected",
+        "NeighborPort": "a-1000 10/100/1000BaseTX",
+        "_source_file": "C:\\Users\\zhiltsov.aa\\Desktop\\net-auto-mermaid\\data\\raw\\10.0.2.10.txt",
+        "_template": "cisco_ios_show_cdp_neighbors.template"
+      },
+      {
+        "Neighbor": "Gi0/10",
+        "LocalInterface": "notconnect",
+        "NeighborPort": "auto 10/100/1000BaseTX",
+        "_source_file": "C:\\Users\\zhiltsov.aa\\Desktop\\net-auto-mermaid\\data\\raw\\10.0.2.10.txt",
+        "_template": "cisco_ios_show_cdp_neighbors.template"
+      },
+      {
+        "Neighbor": "Gi0/11",
+        "LocalInterface": "notconnect",
+        "NeighborPort": "auto 10/100/1000BaseTX",
+        "_source_file": "C:\\Users\\zhiltsov.aa\\Desktop\\net-auto-mermaid\\data\\raw\\10.0.2.10.txt",
+        "_template": "cisco_ios_show_cdp_neighbors.template"
+      },
+      {
+        "Neighbor": "Gi0/12",
+        "LocalInterface": "notconnect",
+        "NeighborPort": "auto 10/100/1000BaseTX",
+        "_source_file": "C:\\Users\\zhiltsov.aa\\Desktop\\net-auto-mermaid\\data\\raw\\10.0.2.10.txt",
+        "_template": "cisco_ios_show_cdp_neighbors.template"
+      },
+      {
+        "Neighbor": "Gi0/13",
+        "LocalInterface": "notconnect",
+        "NeighborPort": "auto 10/100/1000BaseTX",
+        "_source_file": "C:\\Users\\zhiltsov.aa\\Desktop\\net-auto-mermaid\\data\\raw\\10.0.2.10.txt",
+        "_template": "cisco_ios_show_cdp_neighbors.template"
+      },
+      {
+        "Neighbor": "Gi0/14",
+        "LocalInterface": "connected",
+        "NeighborPort": "a-100 10/100/1000BaseTX",
+        "_source_file": "C:\\Users\\zhiltsov.aa\\Desktop\\net-auto-mermaid\\data\\raw\\10.0.2.10.txt",
+        "_template": "cisco_ios_show_cdp_neighbors.template"
+      },
+      {
+        "Neighbor": "Gi0/15",
+        "LocalInterface": "connected",
+        "NeighborPort": "a-1000 10/100/1000BaseTX",
+        "_source_file": "C:\\Users\\zhiltsov.aa\\Desktop\\net-auto-mermaid\\data\\raw\\10.0.2.10.txt",
+        "_template": "cisco_ios_show_cdp_neighbors.template"
+      },
+      {
+        "Neighbor": "Gi0/16",
+        "LocalInterface": "notconnect",
+        "NeighborPort": "auto 10/100/1000BaseTX",
+        "_source_file": "C:\\Users\\zhiltsov.aa\\Desktop\\net-auto-mermaid\\data\\raw\\10.0.2.10.txt",
+        "_template": "cisco_ios_show_cdp_neighbors.template"
+      },
+      {
+        "Neighbor": "Gi0/17",
+        "LocalInterface": "notconnect",
+        "NeighborPort": "auto 10/100/1000BaseTX",
+        "_source_file": "C:\\Users\\zhiltsov.aa\\Desktop\\net-auto-mermaid\\data\\raw\\10.0.2.10.txt",
+        "_template": "cisco_ios_show_cdp_neighbors.template"
+      },
+      {
+        "Neighbor": "Gi0/18",
+        "LocalInterface": "notconnect",
+        "NeighborPort": "auto 10/100/1000BaseTX",
+        "_source_file": "C:\\Users\\zhiltsov.aa\\Desktop\\net-auto-mermaid\\data\\raw\\10.0.2.10.txt",
+        "_template": "cisco_ios_show_cdp_neighbors.template"
+      },
+      {
+        "Neighbor": "Gi0/19",
+        "LocalInterface": "notconnect",
+        "NeighborPort": "auto 10/100/1000BaseTX",
+        "_source_file": "C:\\Users\\zhiltsov.aa\\Desktop\\net-auto-mermaid\\data\\raw\\10.0.2.10.txt",
+        "_template": "cisco_ios_show_cdp_neighbors.template"
+      },
+      {
+        "Neighbor": "Gi0/20",
+        "LocalInterface": "notconnect",
+        "NeighborPort": "auto 10/100/1000BaseTX",
+        "_source_file": "C:\\Users\\zhiltsov.aa\\Desktop\\net-auto-mermaid\\data\\raw\\10.0.2.10.txt",
+        "_template": "cisco_ios_show_cdp_neighbors.template"
+      },
+      {
+        "Neighbor": "Gi0/21",
+        "LocalInterface": "connected",
+        "NeighborPort": "a-100 10/100/1000BaseTX",
+        "_source_file": "C:\\Users\\zhiltsov.aa\\Desktop\\net-auto-mermaid\\data\\raw\\10.0.2.10.txt",
+        "_template": "cisco_ios_show_cdp_neighbors.template"
+      },
+      {
+        "Neighbor": "Gi0/22",
+        "LocalInterface": "notconnect",
+        "NeighborPort": "auto 10/100/1000BaseTX",
+        "_source_file": "C:\\Users\\zhiltsov.aa\\Desktop\\net-auto-mermaid\\data\\raw\\10.0.2.10.txt",
+        "_template": "cisco_ios_show_cdp_neighbors.template"
+      },
+      {
+        "Neighbor": "Gi0/23",
+        "LocalInterface": "notconnect",
+        "NeighborPort": "auto 10/100/1000BaseTX",
+        "_source_file": "C:\\Users\\zhiltsov.aa\\Desktop\\net-auto-mermaid\\data\\raw\\10.0.2.10.txt",
+        "_template": "cisco_ios_show_cdp_neighbors.template"
+      },
+      {
+        "Neighbor": "Gi0/24",
+        "LocalInterface": "hohlov             connected",
+        "NeighborPort": "a-1000 10/100/1000BaseTX",
+        "_source_file": "C:\\Users\\zhiltsov.aa\\Desktop\\net-auto-mermaid\\data\\raw\\10.0.2.10.txt",
+        "_template": "cisco_ios_show_cdp_neighbors.template"
+      },
+      {
+        "Neighbor": "Gi0/25",
+        "LocalInterface": "err-disabled",
+        "NeighborPort": "auto 10/100/1000BaseTX",
+        "_source_file": "C:\\Users\\zhiltsov.aa\\Desktop\\net-auto-mermaid\\data\\raw\\10.0.2.10.txt",
+        "_template": "cisco_ios_show_cdp_neighbors.template"
+      },
+      {
+        "Neighbor": "Gi0/26",
+        "LocalInterface": "notconnect",
+        "NeighborPort": "auto 10/100/1000BaseTX",
+        "_source_file": "C:\\Users\\zhiltsov.aa\\Desktop\\net-auto-mermaid\\data\\raw\\10.0.2.10.txt",
+        "_template": "cisco_ios_show_cdp_neighbors.template"
+      },
+      {
+        "Neighbor": "Gi0/27",
+        "LocalInterface": "notconnect",
+        "NeighborPort": "auto 10/100/1000BaseTX",
+        "_source_file": "C:\\Users\\zhiltsov.aa\\Desktop\\net-auto-mermaid\\data\\raw\\10.0.2.10.txt",
+        "_template": "cisco_ios_show_cdp_neighbors.template"
+      },
+      {
+        "Neighbor": "Gi0/28",
+        "LocalInterface": "notconnect",
+        "NeighborPort": "auto 10/100/1000BaseTX",
+        "_source_file": "C:\\Users\\zhiltsov.aa\\Desktop\\net-auto-mermaid\\data\\raw\\10.0.2.10.txt",
+        "_template": "cisco_ios_show_cdp_neighbors.template"
+      },
+      {
+        "Neighbor": "Gi0/29",
+        "LocalInterface": "notconnect",
+        "NeighborPort": "auto 10/100/1000BaseTX",
+        "_source_file": "C:\\Users\\zhiltsov.aa\\Desktop\\net-auto-mermaid\\data\\raw\\10.0.2.10.txt",
+        "_template": "cisco_ios_show_cdp_neighbors.template"
+      },
+      {
+        "Neighbor": "Gi0/30",
+        "LocalInterface": "notconnect",
+        "NeighborPort": "100 10/100/1000BaseTX",
+        "_source_file": "C:\\Users\\zhiltsov.aa\\Desktop\\net-auto-mermaid\\data\\raw\\10.0.2.10.txt",
+        "_template": "cisco_ios_show_cdp_neighbors.template"
+      },
+      {
+        "Neighbor": "Gi0/31",
+        "LocalInterface": "notconnect",
+        "NeighborPort": "auto 10/100/1000BaseTX",
+        "_source_file": "C:\\Users\\zhiltsov.aa\\Desktop\\net-auto-mermaid\\data\\raw\\10.0.2.10.txt",
+        "_template": "cisco_ios_show_cdp_neighbors.template"
+      },
+      {
+        "Neighbor": "Gi0/32",
+        "LocalInterface": "mishina            notconnect",
+        "NeighborPort": "auto 10/100/1000BaseTX",
+        "_source_file": "C:\\Users\\zhiltsov.aa\\Desktop\\net-auto-mermaid\\data\\raw\\10.0.2.10.txt",
+        "_template": "cisco_ios_show_cdp_neighbors.template"
+      },
+      {
+        "Neighbor": "Gi0/33",
+        "LocalInterface": "connected",
+        "NeighborPort": "a-10 10/100/1000BaseTX",
+        "_source_file": "C:\\Users\\zhiltsov.aa\\Desktop\\net-auto-mermaid\\data\\raw\\10.0.2.10.txt",
+        "_template": "cisco_ios_show_cdp_neighbors.template"
+      },
+      {
+        "Neighbor": "Gi0/34",
+        "LocalInterface": "notconnect",
+        "NeighborPort": "auto 10/100/1000BaseTX",
+        "_source_file": "C:\\Users\\zhiltsov.aa\\Desktop\\net-auto-mermaid\\data\\raw\\10.0.2.10.txt",
+        "_template": "cisco_ios_show_cdp_neighbors.template"
+      },
+      {
+        "Neighbor": "Gi0/35",
+        "LocalInterface": "notconnect",
+        "NeighborPort": "auto 10/100/1000BaseTX",
+        "_source_file": "C:\\Users\\zhiltsov.aa\\Desktop\\net-auto-mermaid\\data\\raw\\10.0.2.10.txt",
+        "_template": "cisco_ios_show_cdp_neighbors.template"
+      },
+      {
+        "Neighbor": "Gi0/36",
+        "LocalInterface": "notconnect",
+        "NeighborPort": "auto 10/100/1000BaseTX",
+        "_source_file": "C:\\Users\\zhiltsov.aa\\Desktop\\net-auto-mermaid\\data\\raw\\10.0.2.10.txt",
+        "_template": "cisco_ios_show_cdp_neighbors.template"
+      },
+      {
+        "Neighbor": "Gi0/37",
+        "LocalInterface": "connected",
+        "NeighborPort": "a-1000 10/100/1000BaseTX",
+        "_source_file": "C:\\Users\\zhiltsov.aa\\Desktop\\net-auto-mermaid\\data\\raw\\10.0.2.10.txt",
+        "_template": "cisco_ios_show_cdp_neighbors.template"
+      },
+      {
+        "Neighbor": "Gi0/38",
+        "LocalInterface": "notconnect",
+        "NeighborPort": "auto 10/100/1000BaseTX",
+        "_source_file": "C:\\Users\\zhiltsov.aa\\Desktop\\net-auto-mermaid\\data\\raw\\10.0.2.10.txt",
+        "_template": "cisco_ios_show_cdp_neighbors.template"
+      },
+      {
+        "Neighbor": "Gi0/39",
+        "LocalInterface": "notconnect",
+        "NeighborPort": "auto 10/100/1000BaseTX",
+        "_source_file": "C:\\Users\\zhiltsov.aa\\Desktop\\net-auto-mermaid\\data\\raw\\10.0.2.10.txt",
+        "_template": "cisco_ios_show_cdp_neighbors.template"
+      },
+      {
+        "Neighbor": "Gi0/40",
+        "LocalInterface": "connected",
+        "NeighborPort": "a-1000 10/100/1000BaseTX",
+        "_source_file": "C:\\Users\\zhiltsov.aa\\Desktop\\net-auto-mermaid\\data\\raw\\10.0.2.10.txt",
+        "_template": "cisco_ios_show_cdp_neighbors.template"
+      },
+      {
+        "Neighbor": "Gi0/41",
+        "LocalInterface": "connected",
+        "NeighborPort": "a-1000 10/100/1000BaseTX",
+        "_source_file": "C:\\Users\\zhiltsov.aa\\Desktop\\net-auto-mermaid\\data\\raw\\10.0.2.10.txt",
+        "_template": "cisco_ios_show_cdp_neighbors.template"
+      },
+      {
+        "Neighbor": "Gi0/42",
+        "LocalInterface": "notconnect",
+        "NeighborPort": "auto 10/100/1000BaseTX",
+        "_source_file": "C:\\Users\\zhiltsov.aa\\Desktop\\net-auto-mermaid\\data\\raw\\10.0.2.10.txt",
+        "_template": "cisco_ios_show_cdp_neighbors.template"
+      },
+      {
+        "Neighbor": "Gi0/43",
+        "LocalInterface": "notconnect",
+        "NeighborPort": "auto 10/100/1000BaseTX",
+        "_source_file": "C:\\Users\\zhiltsov.aa\\Desktop\\net-auto-mermaid\\data\\raw\\10.0.2.10.txt",
+        "_template": "cisco_ios_show_cdp_neighbors.template"
+      },
+      {
+        "Neighbor": "Gi0/44",
+        "LocalInterface": "notconnect",
+        "NeighborPort": "auto 10/100/1000BaseTX",
+        "_source_file": "C:\\Users\\zhiltsov.aa\\Desktop\\net-auto-mermaid\\data\\raw\\10.0.2.10.txt",
+        "_template": "cisco_ios_show_cdp_neighbors.template"
+      },
+      {
+        "Neighbor": "Gi0/45",
+        "LocalInterface": "WIFI               notconnect",
+        "NeighborPort": "auto Not",
+        "_source_file": "C:\\Users\\zhiltsov.aa\\Desktop\\net-auto-mermaid\\data\\raw\\10.0.2.10.txt",
+        "_template": "cisco_ios_show_cdp_neighbors.template"
+      },
+      {
+        "Neighbor": "Gi0/46",
+        "LocalInterface": "WIFI               notconnect",
+        "NeighborPort": "auto Not",
+        "_source_file": "C:\\Users\\zhiltsov.aa\\Desktop\\net-auto-mermaid\\data\\raw\\10.0.2.10.txt",
+        "_template": "cisco_ios_show_cdp_neighbors.template"
+      }
+    ],
+    "cisco_ios_show_cdp_neighbors_detail": [
+      {
+        "Neighbor": "MSK-NSWR-01-2-11.kolmar.local",
+        "LocalInterface": "GigabitEthernet0/48",
+        "NeighborPort": "GigabitEthernet0/48",
+        "Platform": "cisco WS-C3560G-48TS",
+        "_source_file": "C:\\Users\\zhiltsov.aa\\Desktop\\net-auto-mermaid\\data\\raw\\10.0.2.10.txt",
+        "_template": "cisco_ios_show_cdp_neighbors_detail.template"
+      },
+      {
+        "Neighbor": "MSK-NSWS-01-2-41",
+        "LocalInterface": "GigabitEthernet0/47",
+        "NeighborPort": "GigabitEthernet1/0/18",
+        "Platform": "cisco C1000-48P-4G-L",
+        "_source_file": "C:\\Users\\zhiltsov.aa\\Desktop\\net-auto-mermaid\\data\\raw\\10.0.2.10.txt",
+        "_template": "cisco_ios_show_cdp_neighbors_detail.template"
+      }
+    ],
+    "cisco_ios_show_interfaces_status": [
+      {
+        "Port": "Gi0/1",
+        "Name": "ISR",
+        "Status": "Router",
+        "Vlan": "connected",
+        "Duplex": "trunk",
+        "Speed": "a-full",
+        "Type": "a-1000 10/100/1000BaseTX",
+        "_source_file": "C:\\Users\\zhiltsov.aa\\Desktop\\net-auto-mermaid\\data\\raw\\10.0.2.10.txt",
+        "_template": "cisco_ios_show_interfaces_status.template"
+      },
+      {
+        "Port": "Gi0/2",
+        "Name": "ISR",
+        "Status": "Router",
+        "Vlan": "connected",
+        "Duplex": "trunk",
+        "Speed": "a-full",
+        "Type": "a-1000 10/100/1000BaseTX",
+        "_source_file": "C:\\Users\\zhiltsov.aa\\Desktop\\net-auto-mermaid\\data\\raw\\10.0.2.10.txt",
+        "_template": "cisco_ios_show_interfaces_status.template"
+      },
+      {
+        "Port": "Gi0/3",
+        "Name": "HYPER-V",
+        "Status": "connected",
+        "Vlan": "trunk",
+        "Duplex": "a-full",
+        "Speed": "a-1000",
+        "Type": "10/100/1000BaseTX",
+        "_source_file": "C:\\Users\\zhiltsov.aa\\Desktop\\net-auto-mermaid\\data\\raw\\10.0.2.10.txt",
+        "_template": "cisco_ios_show_interfaces_status.template"
+      },
+      {
+        "Port": "Gi0/4",
+        "Name": "HYPER-V",
+        "Status": "connected",
+        "Vlan": "trunk",
+        "Duplex": "a-full",
+        "Speed": "a-1000",
+        "Type": "10/100/1000BaseTX",
+        "_source_file": "C:\\Users\\zhiltsov.aa\\Desktop\\net-auto-mermaid\\data\\raw\\10.0.2.10.txt",
+        "_template": "cisco_ios_show_interfaces_status.template"
+      },
+      {
+        "Port": "Gi0/5",
+        "Name": "SERVERS",
+        "Status": "notconnect",
+        "Vlan": "1",
+        "Duplex": "auto",
+        "Speed": "auto",
+        "Type": "10/100/1000BaseTX",
+        "_source_file": "C:\\Users\\zhiltsov.aa\\Desktop\\net-auto-mermaid\\data\\raw\\10.0.2.10.txt",
+        "_template": "cisco_ios_show_interfaces_status.template"
+      },
+      {
+        "Port": "Gi0/6",
+        "Name": "SERVERS",
+        "Status": "connected",
+        "Vlan": "1",
+        "Duplex": "full",
+        "Speed": "100",
+        "Type": "10/100/1000BaseTX",
+        "_source_file": "C:\\Users\\zhiltsov.aa\\Desktop\\net-auto-mermaid\\data\\raw\\10.0.2.10.txt",
+        "_template": "cisco_ios_show_interfaces_status.template"
+      },
+      {
+        "Port": "Gi0/7",
+        "Name": "SERVERS",
+        "Status": "notconnect",
+        "Vlan": "1",
+        "Duplex": "auto",
+        "Speed": "auto",
+        "Type": "10/100/1000BaseTX",
+        "_source_file": "C:\\Users\\zhiltsov.aa\\Desktop\\net-auto-mermaid\\data\\raw\\10.0.2.10.txt",
+        "_template": "cisco_ios_show_interfaces_status.template"
+      },
+      {
+        "Port": "Gi0/8",
+        "Name": "SERVERS",
+        "Status": "notconnect",
+        "Vlan": "1",
+        "Duplex": "auto",
+        "Speed": "auto",
+        "Type": "10/100/1000BaseTX",
+        "_source_file": "C:\\Users\\zhiltsov.aa\\Desktop\\net-auto-mermaid\\data\\raw\\10.0.2.10.txt",
+        "_template": "cisco_ios_show_interfaces_status.template"
+      },
+      {
+        "Port": "Gi0/24",
+        "Name": "hohlov",
+        "Status": "connected",
+        "Vlan": "1",
+        "Duplex": "a-full",
+        "Speed": "a-1000",
+        "Type": "10/100/1000BaseTX",
+        "_source_file": "C:\\Users\\zhiltsov.aa\\Desktop\\net-auto-mermaid\\data\\raw\\10.0.2.10.txt",
+        "_template": "cisco_ios_show_interfaces_status.template"
+      },
+      {
+        "Port": "Gi0/32",
+        "Name": "mishina",
+        "Status": "notconnect",
+        "Vlan": "1",
+        "Duplex": "auto",
+        "Speed": "auto",
+        "Type": "10/100/1000BaseTX",
+        "_source_file": "C:\\Users\\zhiltsov.aa\\Desktop\\net-auto-mermaid\\data\\raw\\10.0.2.10.txt",
+        "_template": "cisco_ios_show_interfaces_status.template"
+      },
+      {
+        "Port": "Gi0/45",
+        "Name": "WIFI",
+        "Status": "notconnect",
+        "Vlan": "1",
+        "Duplex": "auto",
+        "Speed": "auto",
+        "Type": "Not Present",
+        "_source_file": "C:\\Users\\zhiltsov.aa\\Desktop\\net-auto-mermaid\\data\\raw\\10.0.2.10.txt",
+        "_template": "cisco_ios_show_interfaces_status.template"
+      },
+      {
+        "Port": "Gi0/46",
+        "Name": "WIFI",
+        "Status": "notconnect",
+        "Vlan": "1",
+        "Duplex": "auto",
+        "Speed": "auto",
+        "Type": "Not Present",
+        "_source_file": "C:\\Users\\zhiltsov.aa\\Desktop\\net-auto-mermaid\\data\\raw\\10.0.2.10.txt",
+        "_template": "cisco_ios_show_interfaces_status.template"
+      },
+      {
+        "Port": "Gi0/47",
+        "Name": "SWITCH",
+        "Status": "connected",
+        "Vlan": "trunk",
+        "Duplex": "a-full",
+        "Speed": "a-1000",
+        "Type": "10/100/1000BaseTX",
+        "_source_file": "C:\\Users\\zhiltsov.aa\\Desktop\\net-auto-mermaid\\data\\raw\\10.0.2.10.txt",
+        "_template": "cisco_ios_show_interfaces_status.template"
+      },
+      {
+        "Port": "Gi0/48",
+        "Name": "SWITCH",
+        "Status": "connected",
+        "Vlan": "trunk",
+        "Duplex": "a-full",
+        "Speed": "a-1000",
+        "Type": "10/100/1000BaseTX",
+        "_source_file": "C:\\Users\\zhiltsov.aa\\Desktop\\net-auto-mermaid\\data\\raw\\10.0.2.10.txt",
+        "_template": "cisco_ios_show_interfaces_status.template"
+      }
+    ],
+    "cisco_ios_show_version": [
+      {
+        "Version": "12.2(53)SE2",
+        "Model": "",
+        "Uptime": "1 year, 17 weeks, 5 days, 23 hours, 42 minutes",
+        "_source_file": "C:\\Users\\zhiltsov.aa\\Desktop\\net-auto-mermaid\\data\\raw\\10.0.2.10.txt",
+        "_template": "cisco_ios_show_version.template"
+      },
+      {
+        "Version": "15.2(7)E4",
+        "Model": "WS-C2960G-48TC-L",
+        "Uptime": "",
+        "_source_file": "C:\\Users\\zhiltsov.aa\\Desktop\\net-auto-mermaid\\data\\raw\\10.0.2.10.txt",
+        "_template": "cisco_ios_show_version.template"
+      }
+    ]
+  },
+  "errors": []
 }

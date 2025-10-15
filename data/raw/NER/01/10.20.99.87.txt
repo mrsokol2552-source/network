@@ -1,0 +1,136 @@
+
+
+$ terminal length 0
+
+
+
+$ show version
+Cisco IOS Software, C1000 Software (C1000-UNIVERSALK9-M), Version 15.2(7)E4, RELEASE SOFTWARE (fc2)
+Technical Support: http://www.cisco.com/techsupport
+Copyright (c) 1986-2021 by Cisco Systems, Inc.
+Compiled Mon 08-Mar-21 09:07 by prod_rel_team
+
+ROM: Bootstrap program is c1000 boot loader
+BOOTLDR: C1000 Boot Loader (C1000-HBOOT-M) Version 15.2(7r)E3, RELEASE SOFTWARE (fc4)
+
+NER-NSWS-01-99-87 uptime is 6 weeks, 3 days, 7 hours, 10 minutes
+System returned to ROM by power-on
+System image file is "flash:/c1000-universalk9-mz.152-7.E4/c1000-universalk9-mz.152-7.E4.bin"
+Last reload reason: power-on
+
+
+
+This product contains cryptographic features and is subject to United
+States and local country laws governing import, export, transfer and
+use. Delivery of Cisco cryptographic products does not imply
+third-party authority to import, export, distribute or use encryption.
+Importers, exporters, distributors and users are responsible for
+compliance with U.S. and local country laws. By using this product you
+agree to comply with applicable laws and regulations. If you are unable
+to comply with U.S. and local laws, return this product immediately.
+
+A summary of U.S. laws governing Cisco cryptographic products may be found at:
+http://www.cisco.com/wwl/export/crypto/tool/stqrg.html
+
+If you require further assistance please contact us by sending email to
+export@cisco.com.
+
+cisco C1000-48T-4X-L (Marvell PJ4B (584) v7 (Rev 2)) processor (revision A0) with 524288K bytes of memory.
+Processor board ID PSZ26401RSH
+Last reset from Reload
+2 Virtual Ethernet interfaces
+52 Gigabit Ethernet interfaces
+4 Ten Gigabit Ethernet interfaces
+The password-recovery mechanism is enabled.
+
+512K bytes of flash-simulated non-volatile configuration memory.
+Base ethernet MAC Address       : 78:F1:C6:75:1F:80
+Motherboard assembly number     : 69BBA5M1NA01
+Power supply part number        : 341-100561-01
+Motherboard serial number       : 2276754800116
+Power supply serial number      : LIT2634AKFR
+Model revision number           : A0
+Motherboard revision number     : 2
+Model number                    : C1000-48T-4X-L
+System serial number            : PSZ26401RSH
+Top Assembly Part Number        : 74-122922-02
+Top Assembly Revision Number    : A0
+Version ID                      : V02
+CLEI Code Number                : CMM5J00ARB
+Hardware Board Revision Number  : 0x01
+
+
+Switch Ports Model                     SW Version            SW Image                 
+------ ----- -----                     ----------            ----------               
+*    1 56    C1000-48T-4X-L            15.2(7)E4             C1000-UNIVERSALK9-M      
+
+
+Configuration register is 0xF
+
+
+
+$ show lldp neighbors detail
+------------------------------------------------
+Local Intf: Te1/0/1
+Chassis id: 3473.2dad.a5a0
+Port id: Twe1/0/6
+Port Description: TRUNK 99.87_gi0/18
+System Name: NER-NSWR-01-96-1
+
+System Description: 
+Cisco IOS Software [Bengaluru], Catalyst L3 Switch Software (CAT9K_IOSXE), Version 17.4.1, RELEASE SOFTWARE (fc5)
+Technical Support: http://www.cisco.com/techsupport
+Copyright (c) 1986-2020 by Cisco Systems, Inc.
+Compiled Thu 26-Nov-20 23:35 by mcpre
+
+Time remaining: 105 seconds
+System Capabilities: B,R
+Enabled Capabilities: B,R
+Management Addresses:
+    IP: 10.20.96.1
+Auto Negotiation - not supported
+Physical media capabilities:
+    Other/unknown
+Media Attachment Unit type: 26
+Vlan ID: 1
+
+
+Total entries displayed: 1
+
+
+
+$ show cdp neighbors detail
+-------------------------
+Device ID: NER-NSWR-01-96-1
+Entry address(es): 
+  IP address: 10.20.96.1
+Platform: cisco C9500-24Y4C,  Capabilities: Router Switch IGMP 
+Interface: TenGigabitEthernet1/0/1,  Port ID (outgoing port): TwentyFiveGigE1/0/6
+Holdtime : 142 sec
+
+Version :
+Cisco IOS Software [Bengaluru], Catalyst L3 Switch Software (CAT9K_IOSXE), Version 17.4.1, RELEASE SOFTWARE (fc5)
+Technical Support: http://www.cisco.com/techsupport
+Copyright (c) 1986-2020 by Cisco Systems, Inc.
+Compiled Thu 26-Nov-20 23:35 by mcpre
+
+advertisement version: 2
+VTP Management Domain: 'tradc'
+Native VLAN: 1
+Duplex: full
+Management address(es): 
+  IP address: 10.20.96.1
+
+
+Total cdp entries displayed : 1
+
+
+$ show cdp neighbors
+Capability Codes: R - Router, T - Trans Bridge, B - Source Route Bridge
+                  S - Switch, H - Host, I - IGMP, r - Repeater, P - Phone, 
+                  D - Remote, C - CVTA, M - Two-port Mac Relay 
+
+Device ID        Local Intrfce     Holdtme    Capability  Platform  Port ID
+NER-NSWR-01-96-1 Ten 1/0/1         142             R S I  C9500-24Y Twe 1/0/6
+
+Total cdp entries displayed : 1

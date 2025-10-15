@@ -1,0 +1,110 @@
+{
+  "vendor": "cisco_ios",
+  "raw_files": [
+    "10.20.99.107.txt"
+  ],
+  "parsed": {
+    "cisco_ios_show_cdp_neighbors": [
+      {
+        "Neighbor": "INA-NSWS-08-99-107",
+        "LocalInterface": "uptime is",
+        "NeighborPort": "1 day,",
+        "_source_file": "C:\\Users\\zhiltsov.aa\\Desktop\\net-auto-mermaid\\data\\raw\\10.20.99.107.txt",
+        "_template": "cisco_ios_show_cdp_neighbors.template"
+      },
+      {
+        "Neighbor": "Gig",
+        "LocalInterface": "0/1",
+        "NeighborPort": "I   WS-C2960C",
+        "_source_file": "C:\\Users\\zhiltsov.aa\\Desktop\\net-auto-mermaid\\data\\raw\\10.20.99.107.txt",
+        "_template": "cisco_ios_show_cdp_neighbors.template"
+      },
+      {
+        "Neighbor": "Gig",
+        "LocalInterface": "0/2",
+        "NeighborPort": "I   C1000-8T-",
+        "_source_file": "C:\\Users\\zhiltsov.aa\\Desktop\\net-auto-mermaid\\data\\raw\\10.20.99.107.txt",
+        "_template": "cisco_ios_show_cdp_neighbors.template"
+      }
+    ],
+    "cisco_ios_show_cdp_neighbors_detail": [
+      {
+        "Neighbor": "INA-NSWS-56-99-13.kolmar.local",
+        "LocalInterface": "GigabitEthernet0/1",
+        "NeighborPort": "FastEthernet0/8",
+        "Platform": "cisco WS-C2960C-8TC-L",
+        "_source_file": "C:\\Users\\zhiltsov.aa\\Desktop\\net-auto-mermaid\\data\\raw\\10.20.99.107.txt",
+        "_template": "cisco_ios_show_cdp_neighbors_detail.template"
+      },
+      {
+        "Neighbor": "INA-NSWS-53-99-70.kolmar.ru",
+        "LocalInterface": "GigabitEthernet0/2",
+        "NeighborPort": "GigabitEthernet1/0/9",
+        "Platform": "cisco C1000-8T-2G-L",
+        "_source_file": "C:\\Users\\zhiltsov.aa\\Desktop\\net-auto-mermaid\\data\\raw\\10.20.99.107.txt",
+        "_template": "cisco_ios_show_cdp_neighbors_detail.template"
+      }
+    ],
+    "cisco_ios_show_lldp_neighbors_detail": [
+      {
+        "LocalInterface": "",
+        "NeighborName": "",
+        "NeighborPort": "Gi1/0/9",
+        "_source_file": "C:\\Users\\zhiltsov.aa\\Desktop\\net-auto-mermaid\\data\\raw\\10.20.99.107.txt",
+        "_template": "cisco_ios_show_lldp_neighbors_detail.template"
+      },
+      {
+        "LocalInterface": "",
+        "NeighborName": "INA-NSWS-53-99-70.kolmar.ru",
+        "NeighborPort": "bridge-WAN0",
+        "_source_file": "C:\\Users\\zhiltsov.aa\\Desktop\\net-auto-mermaid\\data\\raw\\10.20.99.107.txt",
+        "_template": "cisco_ios_show_lldp_neighbors_detail.template"
+      },
+      {
+        "LocalInterface": "",
+        "NeighborName": "MikroTik",
+        "NeighborPort": "Fa0/8",
+        "_source_file": "C:\\Users\\zhiltsov.aa\\Desktop\\net-auto-mermaid\\data\\raw\\10.20.99.107.txt",
+        "_template": "cisco_ios_show_lldp_neighbors_detail.template"
+      },
+      {
+        "LocalInterface": "",
+        "NeighborName": "INA-NSWS-56-99-13.kolmar.local",
+        "NeighborPort": "18e8.29cc.935d",
+        "_source_file": "C:\\Users\\zhiltsov.aa\\Desktop\\net-auto-mermaid\\data\\raw\\10.20.99.107.txt",
+        "_template": "cisco_ios_show_lldp_neighbors_detail.template"
+      },
+      {
+        "LocalInterface": "",
+        "NeighborName": "INACHINA-2",
+        "NeighborPort": "18e8.29cc.8b74",
+        "_source_file": "C:\\Users\\zhiltsov.aa\\Desktop\\net-auto-mermaid\\data\\raw\\10.20.99.107.txt",
+        "_template": "cisco_ios_show_lldp_neighbors_detail.template"
+      },
+      {
+        "LocalInterface": "",
+        "NeighborName": "INACHINA-1",
+        "NeighborPort": "",
+        "_source_file": "C:\\Users\\zhiltsov.aa\\Desktop\\net-auto-mermaid\\data\\raw\\10.20.99.107.txt",
+        "_template": "cisco_ios_show_lldp_neighbors_detail.template"
+      }
+    ],
+    "cisco_ios_show_version": [
+      {
+        "Version": "12.2(55)EX3",
+        "Model": "",
+        "Uptime": "5 weeks, 1 day, 18 hours, 41 minutes",
+        "_source_file": "C:\\Users\\zhiltsov.aa\\Desktop\\net-auto-mermaid\\data\\raw\\10.20.99.107.txt",
+        "_template": "cisco_ios_show_version.template"
+      },
+      {
+        "Version": "15.2(7)E4",
+        "Model": "WS-C2960C-8TC-L",
+        "Uptime": "",
+        "_source_file": "C:\\Users\\zhiltsov.aa\\Desktop\\net-auto-mermaid\\data\\raw\\10.20.99.107.txt",
+        "_template": "cisco_ios_show_version.template"
+      }
+    ]
+  },
+  "errors": []
+}

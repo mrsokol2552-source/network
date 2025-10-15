@@ -1,0 +1,51 @@
+{
+  "vendor": "cisco_ios",
+  "raw_files": [
+    "DEN\\92\\10.20.99.187.txt"
+  ],
+  "parsed": {
+    "cisco_ios_show_cdp_neighbors": [
+      {
+        "Neighbor": "DEN-NSWS-92-99-187",
+        "LocalInterface": "uptime is",
+        "NeighborPort": "6 hours,",
+        "_source_file": "C:\\Users\\zhiltsov.aa\\Desktop\\net-auto-mermaid\\data\\raw\\DEN\\92\\10.20.99.187.txt",
+        "_template": "cisco_ios_show_cdp_neighbors.template"
+      },
+      {
+        "Neighbor": "Gig",
+        "LocalInterface": "0/10",
+        "NeighborPort": "I   WS-C2960+",
+        "_source_file": "C:\\Users\\zhiltsov.aa\\Desktop\\net-auto-mermaid\\data\\raw\\DEN\\92\\10.20.99.187.txt",
+        "_template": "cisco_ios_show_cdp_neighbors.template"
+      }
+    ],
+    "cisco_ios_show_cdp_neighbors_detail": [
+      {
+        "Neighbor": "DEN-NSWS-91-99-26.kolmar.ru",
+        "LocalInterface": "GigabitEthernet0/10",
+        "NeighborPort": "FastEthernet0/23",
+        "Platform": "cisco WS-C2960+24TC-L",
+        "_source_file": "C:\\Users\\zhiltsov.aa\\Desktop\\net-auto-mermaid\\data\\raw\\DEN\\92\\10.20.99.187.txt",
+        "_template": "cisco_ios_show_cdp_neighbors_detail.template"
+      }
+    ],
+    "cisco_ios_show_version": [
+      {
+        "Version": "15.2(7)E1",
+        "Model": "",
+        "Uptime": "16 weeks, 6 hours, 35 minutes",
+        "_source_file": "C:\\Users\\zhiltsov.aa\\Desktop\\net-auto-mermaid\\data\\raw\\DEN\\92\\10.20.99.187.txt",
+        "_template": "cisco_ios_show_version.template"
+      },
+      {
+        "Version": "15.0(2)SE8",
+        "Model": "WS-C2960CX-8PC-L",
+        "Uptime": "",
+        "_source_file": "C:\\Users\\zhiltsov.aa\\Desktop\\net-auto-mermaid\\data\\raw\\DEN\\92\\10.20.99.187.txt",
+        "_template": "cisco_ios_show_version.template"
+      }
+    ]
+  },
+  "errors": []
+}

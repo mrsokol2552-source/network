@@ -1,0 +1,51 @@
+{
+  "vendor": "cisco_ios",
+  "raw_files": [
+    "CHU\\12\\10.20.98.142.txt"
+  ],
+  "parsed": {
+    "cisco_ios_show_cdp_neighbors": [
+      {
+        "Neighbor": "CHU-NSWS-12-98-142",
+        "LocalInterface": "uptime is",
+        "NeighborPort": "1 hour,",
+        "_source_file": "C:\\Users\\zhiltsov.aa\\Desktop\\net-auto-mermaid\\data\\raw\\CHU\\12\\10.20.98.142.txt",
+        "_template": "cisco_ios_show_cdp_neighbors.template"
+      },
+      {
+        "Neighbor": "Gig",
+        "LocalInterface": "1/0/25",
+        "NeighborPort": "I   WS-C3850-",
+        "_source_file": "C:\\Users\\zhiltsov.aa\\Desktop\\net-auto-mermaid\\data\\raw\\CHU\\12\\10.20.98.142.txt",
+        "_template": "cisco_ios_show_cdp_neighbors.template"
+      }
+    ],
+    "cisco_ios_show_cdp_neighbors_detail": [
+      {
+        "Neighbor": "CHU-NSWR-14-98-140.kolmar.ru",
+        "LocalInterface": "GigabitEthernet1/0/25",
+        "NeighborPort": "GigabitEthernet1/0/10",
+        "Platform": "cisco WS-C3850-24S",
+        "_source_file": "C:\\Users\\zhiltsov.aa\\Desktop\\net-auto-mermaid\\data\\raw\\CHU\\12\\10.20.98.142.txt",
+        "_template": "cisco_ios_show_cdp_neighbors_detail.template"
+      }
+    ],
+    "cisco_ios_show_version": [
+      {
+        "Version": "15.2(2)E7",
+        "Model": "",
+        "Uptime": "12 weeks, 1 hour, 5 minutes",
+        "_source_file": "C:\\Users\\zhiltsov.aa\\Desktop\\net-auto-mermaid\\data\\raw\\CHU\\12\\10.20.98.142.txt",
+        "_template": "cisco_ios_show_version.template"
+      },
+      {
+        "Version": "16.6.5",
+        "Model": "WS-C2960X-24PS-L",
+        "Uptime": "",
+        "_source_file": "C:\\Users\\zhiltsov.aa\\Desktop\\net-auto-mermaid\\data\\raw\\CHU\\12\\10.20.98.142.txt",
+        "_template": "cisco_ios_show_version.template"
+      }
+    ]
+  },
+  "errors": []
+}

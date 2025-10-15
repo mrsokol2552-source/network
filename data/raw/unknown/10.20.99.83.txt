@@ -1,0 +1,16 @@
+
+
+$ show running-config
+                        ^
+% Invalid input detected at '^' marker.
+
+
+
+$ show interface detail
+              0 output errors, 0 collisions, 0 late collisions, 0 pause frame
+ --More-- 
+
+
+$ show lldp neighbors brief
+          	(512~1023)  bytes:  19588243, (1024~1518) bytes: 240263758 
+ --More-- 

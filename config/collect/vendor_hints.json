@@ -1,3 +1,48 @@
 {
-  "ranges": []
+  "ranges": [
+    {"cidr": "10.20.99.124/32", "vendor": "eltex_mes"},
+    {"cidr": "10.20.99.134/32", "vendor": "eltex_mes"},
+    {"cidr": "10.20.96.14/32",  "vendor": "eltex_mes"},
+    {"cidr": "10.20.99.161/32", "vendor": "eltex_mes"},
+    {"cidr": "10.20.96.5/32",   "vendor": "eltex_mes"},
+    {"cidr": "10.20.99.128/32", "vendor": "eltex_mes"},
+    {"cidr": "10.1.99.2/32",    "vendor": "eltex_mes"},
+    {"cidr": "10.1.99.3/32",    "vendor": "eltex_mes"},
+    {"cidr": "10.1.99.1/32",    "vendor": "eltex_mes"},
+    {"cidr": "10.20.99.105/32", "vendor": "eltex_mes"},
+    {"cidr": "10.20.99.136/32", "vendor": "eltex_mes"},
+    {"cidr": "10.20.99.18/32",  "vendor": "eltex_mes"},
+    {"cidr": "10.20.99.16/32",  "vendor": "eltex_mes"},
+    {"cidr": "10.20.99.50/32",  "vendor": "eltex_mes"},
+    {"cidr": "10.20.99.49/32",  "vendor": "eltex_mes"},
+    {"cidr": "10.20.99.106/32", "vendor": "eltex_mes"},
+    {"cidr": "10.20.99.48/32",  "vendor": "eltex_mes"},
+    {"cidr": "10.20.99.66/32",  "vendor": "eltex_mes"},
+    {"cidr": "10.20.99.96/32",  "vendor": "eltex_mes"},
+    {"cidr": "10.20.99.129/32", "vendor": "eltex_mes"},
+
+    {"cidr": "10.20.99.30/32",  "vendor": "dlink"},
+    {"cidr": "10.20.99.101/32", "vendor": "dlink"},
+    {"cidr": "10.20.99.99/32",  "vendor": "dlink"},
+    {"cidr": "10.20.99.102/32", "vendor": "dlink"},
+
+    {"cidr": "10.20.99.198/32", "vendor": "osnova"},
+    {"cidr": "10.20.99.199/32", "vendor": "osnova"},
+
+    {"cidr": "10.20.99.162/32", "vendor": "nis"},
+    {"cidr": "10.20.99.163/32", "vendor": "nis"},
+    {"cidr": "10.20.99.164/32", "vendor": "nis"},
+    {"cidr": "10.20.99.165/32", "vendor": "nis"},
+    {"cidr": "10.20.99.166/32", "vendor": "nis"},
+
+    {"cidr": "10.20.99.85/32",  "vendor": "zes"},
+    {"cidr": "10.20.99.83/32",  "vendor": "zes"},
+    {"cidr": "10.20.99.84/32",  "vendor": "zes"},
+    {"cidr": "10.20.99.148/32", "vendor": "zes"},
+    {"cidr": "10.20.99.79/32",  "vendor": "zes"},
+    {"cidr": "10.20.99.64/32",  "vendor": "zes"},
+    {"cidr": "10.20.99.55/32",  "vendor": "zes"},
+    {"cidr": "10.20.99.135/32", "vendor": "cisco_ios"},
+    {"cidr": "10.20.99.149/32", "vendor": "snr"}
+  ]
 }

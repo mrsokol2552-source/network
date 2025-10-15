@@ -1,0 +1,5 @@
+# Command list for NIS collection (Cisco-like)
+# pre_enable=0
+show running-config
+show interface * status
+show lldp neighbors

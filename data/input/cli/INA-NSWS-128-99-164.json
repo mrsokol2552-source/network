@@ -1,10 +1,39 @@
 {
-  "vendor": "cisco_ios",
+  "vendor": "nis",
   "raw_files": [
-    "10.20.99.164.txt"
+    "INA\\128\\10.20.99.164.txt"
   ],
-  "parsed": {},
-  "errors": [
-    "no_templates_for_vendor:cisco_ios"
-  ]
+  "parsed": {
+    "nis_running_config_hostname": [
+      {
+        "Hostname": "INA-NSWS-128-99-164",
+        "_source_file": "C:\\Users\\zhiltsov.aa\\Desktop\\net-auto-mermaid\\data\\raw\\INA\\128\\10.20.99.164.txt",
+        "_template": "nis_running_config_hostname.template"
+      }
+    ],
+    "nis_running_config_interfaces": [
+      {
+        "Interface": "GigabitEthernet 1/1",
+        "Mode": "",
+        "Vlan": "4003",
+        "_source_file": "C:\\Users\\zhiltsov.aa\\Desktop\\net-auto-mermaid\\data\\raw\\INA\\128\\10.20.99.164.txt",
+        "_template": "nis_running_config_interfaces.template"
+      },
+      {
+        "Interface": "GigabitEthernet 1/9",
+        "Mode": "",
+        "Vlan": "",
+        "_source_file": "C:\\Users\\zhiltsov.aa\\Desktop\\net-auto-mermaid\\data\\raw\\INA\\128\\10.20.99.164.txt",
+        "_template": "nis_running_config_interfaces.template"
+      },
+      {
+        "Interface": "GigabitEthernet 1/12",
+        "Mode": "",
+        "Vlan": "",
+        "_source_file": "C:\\Users\\zhiltsov.aa\\Desktop\\net-auto-mermaid\\data\\raw\\INA\\128\\10.20.99.164.txt",
+        "_template": "nis_running_config_interfaces.template"
+      }
+    ]
+  },
+  "errors": []
 }

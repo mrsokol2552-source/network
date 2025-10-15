@@ -1,8 +1,6 @@
 
 
-$ show running-config
-             ^
-% Invalid input detected at '^' marker.
+$ terminal length 0
 
 
 
@@ -17,17 +15,18 @@ Bootrom:
 
 
 
-$ show cdp neighbors detail
-             ^
+$ show lldp neighbors detail
+                                     ^
 % Invalid input detected at '^' marker.
 
 
 
-$ show lldp neighbors detail
+$ show cdp neighbors detail
                          ^
 % Invalid input detected at '^' marker.
 
 
 
-$ show interface status
-% Can't find interface status
+$ show cdp neighbors
+                         ^
+% Invalid input detected at '^' marker.

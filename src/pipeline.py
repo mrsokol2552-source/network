@@ -32,6 +32,7 @@ import re
 import shutil
 import subprocess
 import sys
+import ipaddress
 from dataclasses import dataclass
 from pathlib import Path
 from typing import Dict, Iterable, List, Tuple
@@ -171,7 +172,9 @@ def step_collect(args, cfg: LoaderConfig, logs_dir: Path, log: logging.Logger) -
             print(line)
             if fh:
                 fh.write(line + "\n")
-        proc.wait()
+        rc = proc.wait()
+        if rc != 0:
+            raise RuntimeError(f"stage1_collect exited with code {rc}")
     finally:
         if fh:
             fh.flush()
@@ -219,28 +222,311 @@ def step_merge_inventory(base_inv: Path, cli_dir: Path, out_inv: Path, log: logg
     except Exception as e:
         log.warning("Failed to read base inventory %s: %s", base_inv, e)
 
-    known = {str((d.get("hostname") or d.get("mgmt_ip") or "").strip()) for d in devs if isinstance(d, dict)}
+    # Helper: create/merge device
+    def add_or_update(dev: Dict[str, Any]) -> None:
+        host = (dev.get("hostname") or "").strip()
+        ip = (str(dev.get("mgmt_ip")) or "").strip()
+        if not host and not ip:
+            return
+        # Try to find existing by hostname OR by mgmt_ip to avoid duplicates
+        for existing in devs:
+            e_host = (existing.get("hostname") or "").strip()
+            e_ip = (str(existing.get("mgmt_ip")) or "").strip()
+            if (host and e_host and e_host == host) or (ip and e_ip and e_ip == ip):
+                # Prefer human hostname over IP-like
+                if e_host and e_host.replace(".", "").isdigit() and host and not host.replace(".", "").isdigit():
+                    existing["hostname"] = host
+                # Merge shallow fields without overwriting non-empty values
+                for k, v in dev.items():
+                    if k in ("interfaces", "vlans"):
+                        if v:
+                            existing[k] = v
+                    else:
+                        if v and not existing.get(k):
+                            existing[k] = v
+                return
+        # No match — append
+        devs.append(dev)
+
     rx = re.compile(r'(?:^|[^0-9])(\d{1,3}(?:\.\d{1,3}){3})(?:[^0-9]|$)')
     added = 0
+
+    def _short(name: str) -> str:
+        return name.split(".")[0] if name else name
+
+    project_root = Path(__file__).resolve().parents[1]
+    raw_dir = project_root / "data" / "raw"
+
     for fp in sorted(cli_dir.glob("*.json")):
         try:
-            d = json.loads(fp.read_text(encoding="utf-8"))
+            data = json.loads(fp.read_text(encoding="utf-8"))
         except Exception:
             continue
-        name = fp.name
-        m = rx.search(name)
+        m = rx.search(fp.name)
         ip = m.group(1) if m else ""
-        host = (d.get("hostname") or d.get("host") or ip or "").strip()
-        mgmt = str(d.get("mgmt_ip") or d.get("ip") or ip or "").strip()
-        key = host or mgmt
-        if key and key not in known:
-            devs.append({"hostname": host or mgmt, "mgmt_ip": mgmt})
-            known.add(key)
-            added += 1
+        host = (data.get("hostname") or data.get("host") or ip or "").strip()
+        mgmt = str(data.get("mgmt_ip") or data.get("ip") or ip or "").strip()
+        vendor = (data.get("vendor") or "").strip() or None
+        parsed = data.get("parsed", {}) or {}
+
+        device: Dict[str, Any] = {"hostname": host or mgmt, "mgmt_ip": mgmt}
+        if vendor:
+            device["vendor"] = vendor
+
+        # Try to read real hostname from raw file if present
+        try:
+            raw_files = data.get("raw_files", []) or []
+            if raw_files:
+                rf = raw_dir / str(raw_files[0])
+                if rf.exists():
+                    txt = rf.read_text(encoding="utf-8", errors="ignore")
+                    mhn = re.search(r'(?m)^\s*hostname\s+([\w\-.]+)', txt)
+                    if not mhn:
+                        # Cisco-like banner: '<hostname> uptime is ...'
+                        mhn = re.search(r'(?m)^\s*([\w\-.]+)\s+uptime is\s+', txt)
+                    if mhn:
+                        device["hostname"] = mhn.group(1)
+                        # Infer site as prefix before first dash (e.g., DEN-...)
+                        if not device.get("site"):
+                            ms = re.match(r'^([A-Za-z]{3})-', device["hostname"])  # type: ignore[index]
+                            if ms:
+                                device["site"] = ms.group(1).upper()
+                    # Extract model hints from raw for certain vendors
+                    if (device.get("vendor") or "").lower() == "dlink" or re.search(r'(?m)^#\s*(DES|DGS)-', txt):
+                        mm = re.search(r'(?m)^#\s*((?:DES|DGS)-[0-9A-Za-z\-]+)\b', txt)
+                        if mm and not device.get("model"):
+                            device["model"] = mm.group(1)
+                    if (device.get("vendor") or "").lower() == "eltex_mes" and not device.get("model"):
+                        msd = re.search(r'(?m)^\s*System Description\s*:\s*(.+)', txt)
+                        if msd:
+                            sdesc = msd.group(1).strip()
+                            mm = re.search(r'\b(MES\S+)', sdesc)
+                            device["model"] = (mm.group(1) if mm else sdesc)
+        except Exception:
+            pass
+
+        # Site mapping by IP (CIDR rules)
+        try:
+            site_map = [
+                ("MSK", ipaddress.ip_network("10.0.2.0/24")),
+                ("NSK", ipaddress.ip_network("10.2.99.0/24")),
+            ]
+            if mgmt:
+                ip = ipaddress.ip_address(mgmt)
+                for name, net in site_map:
+                    if ip in net:
+                        device["site"] = name
+                        break
+        except Exception:
+            pass
+
+        # Model/version per vendor
+        if parsed.get("cisco_ios_show_version"):
+            v0 = parsed["cisco_ios_show_version"][0]
+            device["model"] = v0.get("Model") or device.get("model")
+        if parsed.get("osnova_show_version"):
+            v0 = parsed["osnova_show_version"][0]
+            device["model"] = device.get("model") or (v0.get("Firmware") or "OSNOVA")
+        if parsed.get("eltex_mes_show_system_information"):
+            v0 = parsed["eltex_mes_show_system_information"][0]
+            # Derive model from SystemDescription (e.g., 'MES2424P rev.C1 ...')
+            sdesc = (v0.get("SystemDescription") or "").strip()
+            mm = re.search(r'\b(MES\S+)', sdesc)
+            if mm:
+                device["model"] = device.get("model") or mm.group(1)
+            else:
+                device["model"] = device.get("model") or sdesc or None
+        if parsed.get("dlink_show_config_header"):
+            v0 = parsed["dlink_show_config_header"][0]
+            mdl = (v0.get("Model") or "").strip()
+            if mdl:
+                device["model"] = device.get("model") or mdl
+
+        # VLANs per vendor
+        vlan_map: Dict[int, Dict[str, Any]] = {}
+        for key in ("cisco_ios_show_vlan_brief", "eltex_mes_show_vlan", "dlink_show_vlan"):
+            for row in parsed.get(key, []) or []:
+                vid = str(row.get("VlanId") or "").strip()
+                name = str(row.get("VlanName") or "").strip() or None
+                if vid.isdigit():
+                    try:
+                        vi = int(vid)
+                    except Exception:
+                        continue
+                    if 1 <= vi <= 4094:  # filter noise
+                        # Filter out obvious counter words accidentally matched
+                        bad = {"packets", "input", "output", "unknown", "minute", "runts", "runts,",
+                               "watchdog", "watchdog,", "babbles", "babbles,", "lost", "errors", "symbol",
+                               "oversize", "pause", "broadcasts", "excessive"}
+                        nm = (name or "").strip()
+                        if nm.lower() in bad:
+                            nm = None
+                        vlan_map[vi] = {"id": vi, "name": nm or None}
+        if vlan_map:
+            device["vlans"] = sorted(vlan_map.values(), key=lambda x: x["id"])  # dedup + order
+
+        # Interfaces / links from CDP/LLDP
+        if parsed.get("cisco_ios_show_cdp_neighbors_detail"):
+            ifs: List[Dict[str, Any]] = device.get("interfaces", []) or []
+            for row in parsed["cisco_ios_show_cdp_neighbors_detail"]:
+                if_name = str(row.get("LocalInterface") or "").strip()
+                peer_name = _short(str(row.get("Neighbor") or "").strip())
+                peer_if = str(row.get("NeighborPort") or "").strip()
+                if if_name and peer_name:
+                    ifs.append({
+                        "name": if_name,
+                        "peer": {"hostname": peer_name, "interface": peer_if},
+                        "speed": None,
+                        "desc": None,
+                    })
+            if ifs:
+                device["interfaces"] = ifs
+        # Cisco CDP neighbors (brief)
+        if parsed.get("cisco_ios_show_cdp_neighbors"):
+            ifs: List[Dict[str, Any]] = device.get("interfaces", []) or []
+            for row in parsed["cisco_ios_show_cdp_neighbors"]:
+                if_name = str(row.get("LocalInterface") or "").strip()
+                peer_name = _short(str(row.get("Neighbor") or "").strip())
+                peer_if = str(row.get("NeighborPort") or "").strip()
+                if if_name and peer_name:
+                    ifs.append({
+                        "name": if_name,
+                        "peer": {"hostname": peer_name, "interface": peer_if},
+                        "speed": None,
+                        "desc": None,
+                    })
+            if ifs:
+                device["interfaces"] = ifs
+        if parsed.get("eltex_mes_show_lldp_neighbors_detail"):
+            ifs: List[Dict[str, Any]] = device.get("interfaces", []) or []
+            for row in parsed["eltex_mes_show_lldp_neighbors_detail"]:
+                if_name = str(row.get("LocalInterface") or "").strip()
+                peer_name = _short(str(row.get("NeighborName") or "").strip())
+                peer_if = str(row.get("NeighborPort") or "").strip()
+                if if_name and peer_name:
+                    ifs.append({
+                        "name": if_name,
+                        "peer": {"hostname": peer_name, "interface": peer_if},
+                        "speed": None,
+                        "desc": None,
+                    })
+            if ifs:
+                device["interfaces"] = ifs
+
+        # D-Link LLDP neighbors
+        if parsed.get("dlink_show_lldp_remote_ports_detail"):
+            ifs: List[Dict[str, Any]] = device.get("interfaces", []) or []
+            for row in parsed["dlink_show_lldp_remote_ports_detail"]:
+                if_name = str(row.get("LocalInterface") or "").strip()
+                peer_name = _short(str(row.get("NeighborName") or "").strip())
+                peer_if = str(row.get("NeighborPort") or "").strip()
+                if if_name and peer_name:
+                    ifs.append({
+                        "name": if_name,
+                        "peer": {"hostname": peer_name, "interface": peer_if},
+                        "speed": None,
+                        "desc": None,
+                    })
+            if ifs:
+                device["interfaces"] = ifs
+        if parsed.get("dlink_show_lldp_remote_ports"):
+            ifs: List[Dict[str, Any]] = device.get("interfaces", []) or []
+            for row in parsed["dlink_show_lldp_remote_ports"]:
+                if_name = str(row.get("LocalInterface") or "").strip()
+                peer_name = _short(str(row.get("NeighborName") or "").strip())
+                peer_if = str(row.get("NeighborPort") or "").strip()
+                if if_name and peer_name:
+                    ifs.append({
+                        "name": if_name,
+                        "peer": {"hostname": peer_name, "interface": peer_if},
+                        "speed": None,
+                        "desc": None,
+                    })
+            if ifs:
+                device["interfaces"] = ifs
+
+        # OSNOVA LLDP neighbors
+        if parsed.get("osnova_show_lldp_neighbor_information"):
+            ifs: List[Dict[str, Any]] = device.get("interfaces", []) or []
+            for row in parsed["osnova_show_lldp_neighbor_information"]:
+                if_name = str(row.get("LocalInterface") or "").strip()
+                peer_name = _short(str(row.get("NeighborName") or "").strip())
+                peer_if = str(row.get("NeighborPort") or "").strip()
+                if if_name and peer_name:
+                    ifs.append({
+                        "name": if_name,
+                        "peer": {"hostname": peer_name, "interface": peer_if},
+                        "speed": None,
+                        "desc": None,
+                    })
+            if ifs:
+                device["interfaces"] = ifs
+
+        # SNR LLDP neighbors (brief)
+        if parsed.get("snr_show_lldp_neighbors_brief"):
+            ifs: List[Dict[str, Any]] = device.get("interfaces", []) or []
+            for row in parsed["snr_show_lldp_neighbors_brief"]:
+                if_name = str(row.get("LocalInterface") or "").strip()
+                peer_name = _short(str(row.get("NeighborName") or "").strip())
+                peer_if = str(row.get("NeighborPort") or "").strip()
+                if if_name and peer_name:
+                    ifs.append({
+                        "name": if_name,
+                        "peer": {"hostname": peer_name, "interface": peer_if},
+                        "speed": None,
+                        "desc": None,
+                    })
+            if ifs:
+                device["interfaces"] = ifs
+        # ZES LLDP neighbors (brief)
+        if parsed.get("zes_show_lldp_neighbors_brief"):
+            ifs: List[Dict[str, Any]] = device.get("interfaces", []) or []
+            for row in parsed["zes_show_lldp_neighbors_brief"]:
+                if_name = str(row.get("LocalInterface") or "").strip()
+                peer_name = _short(str(row.get("NeighborName") or "").strip())
+                peer_if = str(row.get("NeighborPort") or "").strip()
+                if if_name and peer_name:
+                    ifs.append({
+                        "name": if_name,
+                        "peer": {"hostname": peer_name, "interface": peer_if},
+                        "speed": None,
+                        "desc": None,
+                    })
+            if ifs:
+                device["interfaces"] = ifs
+        if parsed.get("nis_show_lldp_neighbors"):
+            ifs: List[Dict[str, Any]] = device.get("interfaces", []) or []
+            for row in parsed["nis_show_lldp_neighbors"]:
+                if_name = str(row.get("LocalInterface") or "").strip()
+                peer_name = _short(str(row.get("NeighborName") or "").strip())
+                peer_if = str(row.get("NeighborPort") or "").strip()
+                if if_name and peer_name:
+                    ifs.append({
+                        "name": if_name,
+                        "peer": {"hostname": peer_name, "interface": peer_if},
+                        "speed": None,
+                        "desc": None,
+                    })
+            if ifs:
+                device["interfaces"] = ifs
+
+        # Interfaces from NIS/ZES/SNR running-config (no peers)
+        for key in ("nis_running_config_interfaces", "zes_running_config_interfaces", "snr_running_config_interfaces"):
+            if parsed.get(key):
+                ifs: List[Dict[str, Any]] = device.get("interfaces", []) or []
+                for row in parsed[key]:
+                    n = str(row.get("Interface") or "").strip()
+                    if n:
+                        ifs.append({"name": n, "peer": {}, "speed": None, "desc": None})
+                if ifs:
+                    device["interfaces"] = ifs
+
+        add_or_update(device)
+        added += 1
 
     out_data = {"devices": devs}
     dump_json(out_inv, out_data, log)
-    log.info("[MERGE] added_from_cli=%d, total=%d", added, len(devs))
+    log.info("[MERGE] from_cli=%d, total=%d", added, len(devs))
     return added, len(devs)
 
 
@@ -288,8 +574,28 @@ def step_render(cfg_path: Path, normalized_path: Path, out_mmd: Path, log: loggi
     log.info("[STEP 5] RENDER -> %s", out_mmd)
     rcfg = RenderConfig.load(cfg_path)
     norm = load_normalized(normalized_path)
+    # Optionally hide isolated nodes (no edges) to improve readability
+    try:
+        if os.environ.get("HIDE_ISOLATED", "1") != "0":
+            touched = {e.get("src") for e in norm.edges} | {e.get("dst") for e in norm.edges}
+            before = len(norm.nodes)
+            norm.nodes = {k: v for k, v in norm.nodes.items() if k in touched}
+            after = len(norm.nodes)
+            if before != after:
+                log.info("[RENDER] hide_isolated: %d -> %d nodes", before, after)
+    except Exception:
+        pass
     writer = MermaidWriter(rcfg, norm, log)
     text = writer.render()
+    # Force ELK renderer in Mermaid init for better layout if not already set
+    try:
+        if 'defaultRenderer' not in text:
+            needle = '"flowchart": {"htmlLabels": true, "curve": "basis"}'
+            repl = '"flowchart": {"htmlLabels": true, "curve": "basis", "defaultRenderer": "elk"}'
+            if needle in text:
+                text = text.replace(needle, repl, 1)
+    except Exception:
+        pass
     out_mmd.parent.mkdir(parents=True, exist_ok=True)
     out_mmd.write_text(text, encoding="utf-8")
     log.info("Wrote %s", out_mmd)

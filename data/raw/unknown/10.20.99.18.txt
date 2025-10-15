@@ -1,0 +1,506 @@
+
+
+$ show system information
+
+
+Hardware Version                  : 2v3
+Software Version                  : 10.3.4
+Firmware Version                  : 10.3.4
+
+Hardware Serial Number            : ESC6000213
+Switch Base MAC Address           : cc:9d:a2:66:b4:40
+Software Serial Number            : c6313afa
+System Contact                    : 
+System Name                       : DEN-NSWS-15-99-18
+System Location                   : 
+System Description                : MES2448B rev.B AC 52-port 1G/10G Managed Switch
+Logging Option                    : Flash Logging
+Device Uptime                     : 57 Days, 9 Hrs, 15 Mins, 39 Secs
+Login Authentication Mode         : Local
+Config Save Status                : Successful
+Remote Save Status                : Not Initiated
+Config Restore Status             : Not Initiated
+Traffic Separation Control        : none
+
+
+
+
+$ show lldp neighbors detail
+
+                
+
+
+--More--
+                
+
+
+--More--
+                
+
+
+--More--
+                
+
+
+--More--
+                
+
+Extended 802.3 TLV Info 
+-MAC PHY Configuration & Status
+100base-TX(FD)
+Symm PAUSE(FD)
+Asym and Symm PAUSE(FD)
+1000base-X, -LX, -SX, -CX(FD)
+1000base-T(HD)
+1000base-T(FD)
+-Link Aggregation
+Capability & Status           : Not Capable, Not In Aggregation
+Aggregated Port Id            : 0
+-Maximum Frame Size           : 0
+
+Extended 802.1 TLV Info 
+-Port VLAN Id                 : 1
+-Port & Protocol VLAN Id 
+Protocol Vlan Tlv             : Not Advertised
+-Vlan Name
+Vlan Name Tlv                 : Not Advertised
+
+-LLDP MED Capability TLV      : Not Advertised 
+Capabilities Supported        : 0 
+Capabilities Enabled          : 0 
+
+
+--More--
+                
+
+
+--More--
+                
+
+
+--More--
+                
+
+
+--More--
+                
+
+
+--More--
+                
+Device Class                  : 0 
+
+-LLDP MED Inventory TLV       : Not Advertised
+
+-LLDP-MED Nw Policy TLV       : Not Advertised 
+
+-LLDP-MED Location Info TLV   : Not Advertised 
+
+-LLDP-MED Ex-PowerViaMDI TLV  : Not Advertised 
+------------------------------------------------------------
+Chassis Id SubType            : Mac Address 
+Chassis Id                    : 80:e8:6f:cf:f1:00
+Port Id SubType               : Interface Name 
+Port Id                       : Gi0/1
+Port Description              : GigabitEthernet0/1
+System Name                   : DEN-NSWS-47-99-65.kolmar.ru
+System Desc                   : Cisco IOS Software, C2960 Software (C2960-LANBASEK9-M), Version 15.0(2)SE6, RELEASE SOFTWARE (fc2)
+Technical Support: http://www.cisco.com/techsupport
+Copyright (c) 1986-2014 by Cisco Systems, Inc.
+Compiled Wed 09-Apr-14 03:40 by prod_rel_team
+Local Intf                    : te 0/4
+Time Remaining                : 108 Seconds 
+System Capabilities Supported : B               
+System Capabilities Enabled   : B
+
+
+--More--
+                
+
+
+--More--
+                
+
+
+--More--
+                
+
+
+--More--
+                
+
+
+--More--
+                
+
+
+--More--
+                
+
+
+--More--
+                
+
+
+--More--
+                
+
+
+--More--
+                
+
+
+--More--
+                
+Management Addresses          : 
+IfId SubType Address                         OID                               
+---- ------- -------                         ---                               
+17   IPv4    10.20.99.65                                                       
+
+Extended 802.3 TLV Info 
+-MAC PHY Configuration & Status
+Auto-Neg Support & Status     : Supported, Enabled
+Advertised Capability Bits    : 2000
+10base-T(FD)
+Operational MAU Type          : 24
+-Link Aggregation
+Capability & Status           : Not Capable, Not In Aggregation
+Aggregated Port Id            : 0
+-Maximum Frame Size           : 0
+
+Extended 802.1 TLV Info 
+-Port VLAN Id                 : 1
+-Port & Protocol VLAN Id 
+Protocol Vlan Tlv             : Not Advertised
+-Vlan Name
+Vlan Name Tlv                 : Not Advertised
+
+-LLDP MED Capability TLV      : Not Advertised 
+
+
+--More--
+                
+
+
+--More--
+                
+
+
+--More--
+                
+
+
+--More--
+                
+
+
+--More--
+                
+
+
+--More--
+                
+
+
+--More--
+                
+Capabilities Supported        : 0 
+
+
+--More--
+
+
+$ show vlan
+
+Vlan database 
+------------- 
+Vlan ID             : 1
+Member Ports        : gi 0/6, gi 0/48, te 0/1, te 0/2, te 0/3, te 0/4
+                      po 1, po 2, po 3, po 4, po 5, po 6
+                      po 7, po 8, po 9, po 10, po 11, po 12
+                      po 13, po 14, po 15, po 16, po 17, po 18
+                      po 19, po 20, po 21, po 22, po 23, po 24
+Untagged Ports      : gi 0/6, gi 0/48, te 0/1, te 0/2, te 0/3, te 0/4
+                      po 1, po 2, po 3, po 4, po 5, po 6
+                      po 7, po 8, po 9, po 10, po 11, po 12
+                      po 13, po 14, po 15, po 16, po 17, po 18
+                      po 19, po 20, po 21, po 22, po 23, po 24
+Forbidden Ports     : None 
+Name                : default
+Status              : Permanent
+Egress Ethertype    : 0x8100
+Service Loopback Status   : Disabled 
+----------------------------------------------------
+Vlan ID             : 13
+Member Ports        : gi 0/1, gi 0/5, gi 0/7, gi 0/9, gi 0/10, gi 0/11
+                      gi 0/16, gi 0/19, gi 0/21, gi 0/25, gi 0/30, gi 0/38
+
+
+--More--
+
+
+$ show interfaces status
+
+                
+
+
+--More--
+                
+
+
+--More--
+                
+
+
+--More--
+                
+
+
+--More--
+                
+Egress Ethertype    : 0x8100
+Service Loopback Status   : Disabled 
+----------------------------------------------------
+Vlan ID             : 34
+Member Ports        : gi 0/48, te 0/1
+Untagged Ports      : None 
+Forbidden Ports     : None 
+Name                : Wifi_General
+Status              : Permanent
+Egress Ethertype    : 0x8100
+Service Loopback Status   : Disabled 
+----------------------------------------------------
+Vlan ID             : 40
+Member Ports        : gi 0/1, gi 0/4, gi 0/5, gi 0/7, gi 0/9, gi 0/10
+                      gi 0/11, gi 0/12, gi 0/13, gi 0/14, gi 0/15, gi 0/16
+                      gi 0/17, gi 0/18, gi 0/19, gi 0/21, gi 0/22, gi 0/24
+                      gi 0/25, gi 0/26, gi 0/27, gi 0/28, gi 0/29, gi 0/30
+                      gi 0/31, gi 0/32, gi 0/35, gi 0/36, gi 0/37, gi 0/38
+                      gi 0/39, gi 0/40, gi 0/41, gi 0/42, gi 0/43, gi 0/44
+                      gi 0/45, gi 0/46, gi 0/47, te 0/1, te 0/2, te 0/3
+                      te 0/4
+Untagged Ports      : gi 0/1, gi 0/4, gi 0/5, gi 0/7, gi 0/9, gi 0/10
+                      gi 0/11, gi 0/12, gi 0/13, gi 0/14, gi 0/15, gi 0/16
+                      gi 0/17, gi 0/18, gi 0/19, gi 0/21, gi 0/22, gi 0/24
+
+
+--More--
+                
+
+
+--More--
+                
+
+
+--More--
+                
+
+
+--More--
+                
+
+
+--More--
+                
+
+
+--More--
+                
+
+
+--More--
+                
+
+
+--More--
+                
+
+
+--More--
+                
+
+
+--More--
+                
+
+
+--More--
+                
+                      gi 0/25, gi 0/26, gi 0/27, gi 0/28, gi 0/29, gi 0/30
+                      gi 0/31, gi 0/32, gi 0/35, gi 0/36, gi 0/37, gi 0/38
+                      gi 0/39, gi 0/40, gi 0/41, gi 0/42, gi 0/43, gi 0/44
+                      gi 0/45, gi 0/46, gi 0/47
+Forbidden Ports     : None 
+Name                : Users(Nerungry)
+Status              : Permanent
+Egress Ethertype    : 0x8100
+Service Loopback Status   : Disabled 
+----------------------------------------------------
+Vlan ID             : 41
+Member Ports        : te 0/1, te 0/2, te 0/3, te 0/4
+Untagged Ports      : None 
+Forbidden Ports     : None 
+Name                : Printers(Nerungry)
+Status              : Permanent
+Egress Ethertype    : 0x8100
+Service Loopback Status   : Disabled 
+----------------------------------------------------
+Vlan ID             : 143
+Member Ports        : gi 0/6, te 0/1
+Untagged Ports      : None 
+Forbidden Ports     : None 
+Name                : TCPD_OF_P-t-P
+
+
+--More--
+                
+
+
+--More--
+                
+
+
+--More--
+                
+
+
+--More--
+                
+
+
+--More--
+                
+
+
+--More--
+                
+
+
+--More--
+                
+Status              : Permanent
+
+
+--More--
+
+
+$ show interfaces
+
+                
+
+
+--More--
+                
+
+
+--More--
+                
+
+
+--More--
+                
+
+
+--More--
+                
+Status              : Permanent
+Egress Ethertype    : 0x8100
+Service Loopback Status   : Disabled 
+----------------------------------------------------
+Vlan ID             : 1440
+Member Ports        : gi 0/20, te 0/1
+Untagged Ports      : gi 0/20
+Forbidden Ports     : None 
+Name                : VKS(1440)
+Status              : Permanent
+Egress Ethertype    : 0x8100
+Service Loopback Status   : Disabled 
+----------------------------------------------------
+Vlan ID             : 1540
+Member Ports        : gi 0/3, gi 0/6, gi 0/33, te 0/1
+Untagged Ports      : gi 0/3, gi 0/33
+Forbidden Ports     : None 
+Name                : 
+Status              : Permanent
+Egress Ethertype    : 0x8100
+Service Loopback Status   : Disabled 
+----------------------------------------------------
+Vlan ID             : 1930
+Member Ports        : te 0/1
+
+
+--More--
+                
+
+
+--More--
+                
+
+
+--More--
+                
+
+
+--More--
+                
+
+
+--More--
+                
+
+
+--More--
+                
+
+
+--More--
+                
+
+
+--More--
+                
+
+
+--More--
+                
+
+
+--More--
+                
+
+
+--More--
+                
+Untagged Ports      : None 
+
+
+--More--
+
+
+$ show running-config
+
+#Building configuration...
+#ISS config ver. 9; SW ver. 10.3.4 (c6313afa) for MES2448B rev.B. Do not remove or edit this line
+!   
+hostname "DEN-NSWS-15-99-18"  
+aaa authentication user-defined KOLMAR radius local
+aaa authentication default radius local
+aaa authentication mode chain
+!
+line console
+  aaa authentication login KOLMAR
+  aaa authentication enable KOLMAR
+!
+line telnet
+  aaa authentication login KOLMAR
+  aaa authentication enable KOLMAR
+!
+line ssh
+  aaa authentication login KOLMAR
+  aaa authentication enable KOLMAR
+!
+logging-server facility local0 severity emergencies ipv4 10.10.0.142 port  5014
+logging-server facility local0 severity alerts ipv4 10.10.0.142 port  5014
+
+
+--More--

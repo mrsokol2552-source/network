@@ -1,0 +1,252 @@
+
+
+$ terminal length 0
+
+
+
+$ show version
+Cisco IOS Software, C1000 Software (C1000-UNIVERSALK9-M), Version 15.2(7)E2, RELEASE SOFTWARE (fc3)
+Technical Support: http://www.cisco.com/techsupport
+Copyright (c) 1986-2020 by Cisco Systems, Inc.
+Compiled Sat 14-Mar-20 15:28 by prod_rel_team
+
+ROM: Bootstrap program is c1000 boot loader
+BOOTLDR: C1000 Boot Loader (C1000-HBOOT-M), Version 15.2(7r)E RELEASE SOFTWARE (fc1)
+
+INA-NSWS-123-97-100 uptime is 6 days, 10 hours, 34 minutes
+System returned to ROM by power-on
+System image file is "flash:/c1000-universalk9-mz.152-7.E2/c1000-universalk9-mz.152-7.E2.bin"
+Last reload reason: power-on
+
+
+
+This product contains cryptographic features and is subject to United
+States and local country laws governing import, export, transfer and
+use. Delivery of Cisco cryptographic products does not imply
+third-party authority to import, export, distribute or use encryption.
+Importers, exporters, distributors and users are responsible for
+compliance with U.S. and local country laws. By using this product you
+agree to comply with applicable laws and regulations. If you are unable
+to comply with U.S. and local laws, return this product immediately.
+
+A summary of U.S. laws governing Cisco cryptographic products may be found at:
+http://www.cisco.com/wwl/export/crypto/tool/stqrg.html
+
+If you require further assistance please contact us by sending email to
+export@cisco.com.
+
+cisco C1000-16T-2G-L (Marvell PJ4B (584) v7 (Rev 2)) processor (revision D0) with 524288K bytes of memory.
+Processor board ID FCW2436A0MT
+Last reset from Reload
+2 Virtual Ethernet interfaces
+18 Gigabit Ethernet interfaces
+The password-recovery mechanism is enabled.
+
+512K bytes of flash-simulated non-volatile configuration memory.
+Base ethernet MAC Address       : A4:88:73:E4:B2:80
+Motherboard assembly number     : U58O342T26
+Power supply part number        : C387.00013.005
+Motherboard serial number       : FOC24342T34
+Power supply serial number      : H2005201370
+Model revision number           : D0
+Motherboard revision number     : 20
+Model number                    : C1000-16T-2G-L
+System serial number            : FCW2436A0MT
+Top Assembly Part Number        : 74-122900-01
+Top Assembly Revision Number    : D0
+Version ID                      : V01
+CLEI Code Number                : CMM5C00ARA
+Hardware Board Revision Number  : 0x03
+
+
+Switch Ports Model                     SW Version            SW Image                 
+------ ----- -----                     ----------            ----------               
+*    1 18    C1000-16T-2G-L            15.2(7)E2             C1000-UNIVERSALK9-M      
+
+
+Configuration register is 0xF
+
+
+
+$ show lldp neighbors detail
+------------------------------------------------
+Local Intf: Gi1/0/17
+Chassis id: c47e.e096.8680
+Port id: Twe1/1/3
+Port Description: UP 99.10_Fa0/20
+System Name: INA-NSWR-03-97-1.kolmar.local
+
+System Description: 
+Cisco IOS Software [Cupertino], Catalyst L3 Switch Software (CAT9K_IOSXE), Version 17.9.3, RELEASE SOFTWARE (fc6)
+Technical Support: http://www.cisco.com/techsupport
+Copyright (c) 1986-2023 by Cisco Systems, Inc.
+Compiled Tue 14-Mar-23 18:26 by mcpre
+
+Time remaining: 117 seconds
+System Capabilities: B,R
+Enabled Capabilities: B,R
+Management Addresses:
+    IP: 10.20.97.1
+Auto Negotiation - not supported
+Physical media capabilities:
+    1000baseT(FD)
+Media Attachment Unit type: 26
+Vlan ID: 1
+
+------------------------------------------------
+Local Intf: Gi1/0/18
+Chassis id: cc36.cf9a.de80
+Port id: Twe1/0/20
+Port Description: TwentyFiveGigE1/0/20
+System Name: INA-NSWR-37-96-3.kolmar.local
+
+System Description: 
+Cisco IOS Software [Cupertino], Catalyst L3 Switch Software (CAT9K_IOSXE), Version 17.9.4a, RELEASE SOFTWARE (fc3)
+Technical Support: http://www.cisco.com/techsupport
+Copyright (c) 1986-2023 by Cisco Systems, Inc.
+Compiled Fri 20-Oct-23 10:44 by mcpre
+
+Time remaining: 106 seconds
+System Capabilities: B,R
+Enabled Capabilities: B
+Management Addresses:
+    IP: 10.20.96.3
+Auto Negotiation - not supported
+Physical media capabilities:
+    1000baseT(FD)
+Media Attachment Unit type: 26
+Vlan ID: 1
+
+------------------------------------------------
+Local Intf: Gi1/0/15
+Chassis id: 6872.518a.48eb
+Port id: eth0
+Port Description - not advertised
+System Name - not advertised
+System Description - not advertised
+
+Time remaining: 191 seconds
+System Capabilities - not advertised
+Enabled Capabilities - not advertised
+Management Addresses - not advertised
+Auto Negotiation - not supported
+Physical media capabilities - not advertised
+Media Attachment Unit type - not advertised
+Vlan ID: - not advertised
+
+
+Total entries displayed: 3
+
+
+
+$ show cdp neighbors detail
+-------------------------
+Device ID: INA-NSWR-03-97-1.kolmar.local
+Entry address(es): 
+  IP address: 10.20.97.1
+Platform: cisco C9300X-24Y,  Capabilities: Router Switch IGMP 
+Interface: GigabitEthernet1/0/17,  Port ID (outgoing port): TwentyFiveGigE1/1/3
+Holdtime : 175 sec
+
+Version :
+Cisco IOS Software [Cupertino], Catalyst L3 Switch Software (CAT9K_IOSXE), Version 17.9.3, RELEASE SOFTWARE (fc6)
+Technical Support: http://www.cisco.com/techsupport
+Copyright (c) 1986-2023 by Cisco Systems, Inc.
+Compiled Tue 14-Mar-23 18:26 by mcpre
+
+advertisement version: 2
+VTP Management Domain: 'tradc'
+Native VLAN: 1
+Duplex: full
+Management address(es): 
+  IP address: 10.20.97.1
+
+-------------------------
+Device ID: INA-NSWR-37-96-3.kolmar.local
+Entry address(es): 
+  IP address: 10.20.96.3
+Platform: cisco C9300X-24Y,  Capabilities: Switch IGMP 
+Interface: GigabitEthernet1/0/18,  Port ID (outgoing port): TwentyFiveGigE1/0/20
+Holdtime : 129 sec
+
+Version :
+Cisco IOS Software [Cupertino], Catalyst L3 Switch Software (CAT9K_IOSXE), Version 17.9.4a, RELEASE SOFTWARE (fc3)
+Technical Support: http://www.cisco.com/techsupport
+Copyright (c) 1986-2023 by Cisco Systems, Inc.
+Compiled Fri 20-Oct-23 10:44 by mcpre
+
+advertisement version: 2
+VTP Management Domain: 'tradc'
+Native VLAN: 1
+Duplex: full
+Management address(es): 
+  IP address: 10.20.96.3
+
+-------------------------
+Device ID: RocketM3
+Entry address(es): 
+  IP address: 10.90.17.10
+Platform: Rocket M3,  Capabilities: Trans-Bridge 
+Interface: GigabitEthernet1/0/15,  Port ID (outgoing port): br0
+Holdtime : 87 sec
+
+Version :
+XM.v6.3.6
+
+advertisement version: 1
+
+-------------------------
+Device ID: INA-NSWS-70-96-231.kolmar.ru
+Entry address(es): 
+  IP address: 10.20.96.231
+Platform: cisco WS-C2960CX-8PC-L,  Capabilities: Switch IGMP 
+Interface: GigabitEthernet1/0/15,  Port ID (outgoing port): GigabitEthernet0/10
+Holdtime : 162 sec
+
+Version :
+Cisco IOS Software, C2960CX Software (C2960CX-UNIVERSALK9-M), Version 15.2(4)E6, RELEASE SOFTWARE (fc4)
+Technical Support: http://www.cisco.com/techsupport
+Copyright (c) 1986-2018 by Cisco Systems, Inc.
+Compiled Thu 05-Apr-18 03:25 by prod_rel_team
+
+advertisement version: 2
+Protocol Hello:  OUI=0x00000C, Protocol ID=0x0112; payload len=27, value=00000000FFFFFFFF010221FF0000000000002C01B5E10480FF0000
+VTP Management Domain: ''
+Native VLAN: 1
+Duplex: full
+Management address(es): 
+  IP address: 10.20.96.231
+
+-------------------------
+Device ID: Rocket M3
+Entry address(es): 
+  IP address: 10.90.17.11
+Platform: Rocket M3,  Capabilities: Trans-Bridge 
+Interface: GigabitEthernet1/0/15,  Port ID (outgoing port): br0
+Holdtime : 68 sec
+
+Version :
+XM.v6.3.6
+
+advertisement version: 1
+
+
+Total cdp entries displayed : 5
+
+
+$ show cdp neighbors
+Capability Codes: R - Router, T - Trans Bridge, B - Source Route Bridge
+                  S - Switch, H - Host, I - IGMP, r - Repeater, P - Phone, 
+                  D - Remote, C - CVTA, M - Two-port Mac Relay 
+
+Device ID        Local Intrfce     Holdtme    Capability  Platform  Port ID
+INA-NSWR-03-97-1.kolmar.local
+                 Gig 1/0/17        175             R S I  C9300X-24 Twe 1/1/3
+INA-NSWR-37-96-3.kolmar.local
+                 Gig 1/0/18        129              S I   C9300X-24 Twe 1/0/20
+RocketM3         Gig 1/0/15        87                T    Rocket M3 br0
+INA-NSWS-70-96-231.kolmar.ru
+                 Gig 1/0/15        162              S I   WS-C2960C Gig 0/10
+Rocket M3        Gig 1/0/15        68                T    Rocket M3 br0
+
+Total cdp entries displayed : 5

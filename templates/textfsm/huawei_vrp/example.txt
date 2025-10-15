@@ -1,5 +1,8 @@
-# TextFSM template — huawei_vrp
-Value FillMeUp (.*)
-
-Start
-  ^.* -> Record
+# Command list for Huawei VRP collection
+# pre_enable=0
+display version
+display lldp neighbor detail
+display vlan
+display interface brief
+display interface
+display current-configuration

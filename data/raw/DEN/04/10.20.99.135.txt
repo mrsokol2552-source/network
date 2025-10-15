@@ -1,0 +1,78 @@
+
+
+$ terminal length 0
+
+
+
+$ show version
+Cisco Internetwork Operating System Software 
+IOS (tm) C2950 Software (C2950-I6Q4L2-M), Version 12.1(19)EA1c, RELEASE SOFTWARE (fc2)
+Copyright (c) 1986-2004 by cisco Systems, Inc.
+Compiled Mon 02-Feb-04 23:29 by yenanh
+Image text-base: 0x80010000, data-base: 0x8058A000
+
+ROM: Bootstrap program is C2950 boot loader
+
+DEN-NSWS-04-99-135 uptime is 13 weeks, 2 days, 9 minutes
+System returned to ROM by power-on
+System restarted at 16:23:13 YAKT Mon Jul 14 2025
+System image file is "flash:/c2950-i6q4l2-mz.121-19.EA1c.bin"
+
+cisco WS-C2950T-24 (RC32300) processor (revision P0) with 20808K bytes of memory.
+Processor board ID FOC0816T22B
+Last reset from system-reset
+Running Enhanced Image
+24 FastEthernet/IEEE 802.3 interface(s)
+2 Gigabit Ethernet/IEEE 802.3 interface(s)
+
+32K bytes of flash-simulated non-volatile configuration memory.
+Base ethernet MAC Address: 00:0F:F7:CF:3F:00
+Motherboard assembly number: 73-6114-10
+Power supply part number: 34-0965-01
+Motherboard serial number: FOC08163V0S
+Power supply serial number: DAB08156NJ9
+Model revision number: P0
+Motherboard revision number: A0
+Model number: WS-C2950T-24
+System serial number: FOC0816T22B
+Configuration register is 0xF
+
+
+
+$ show lldp neighbors detail
+                         ^
+% Invalid input detected at '^' marker.
+
+
+
+$ show cdp neighbors detail
+-------------------------
+Device ID: DEN-NSWS-04-99-15.kolmar.ru
+Entry address(es): 
+  IP address: 10.20.99.15
+Platform: cisco WS-C2960+24TC-L,  Capabilities: Switch IGMP 
+Interface: GigabitEthernet0/1,  Port ID (outgoing port): FastEthernet0/8
+Holdtime : 167 sec
+
+Version :
+Cisco IOS Software, C2960 Software (C2960-LANBASEK9-M), Version 15.2(2)E6, RELEASE SOFTWARE (fc1)
+Technical Support: http://www.cisco.com/techsupport
+Copyright (c) 1986-2016 by Cisco Systems, Inc.
+Compiled Sat 17-Dec-16 00:27 by prod_rel_team
+
+advertisement version: 2
+Protocol Hello:  OUI=0x00000C, Protocol ID=0x0112; payload len=27, value=00000000FFFFFFFF010221FF000000000000009AD2F57C00FF0000
+VTP Management Domain: ''
+Native VLAN: 1
+Duplex: full
+Management address(es): 
+  IP address: 10.20.99.15
+
+
+
+$ show cdp neighbors
+Capability Codes: R - Router, T - Trans Bridge, B - Source Route Bridge
+                  S - Switch, H - Host, I - IGMP, r - Repeater, P - Phone
+
+Device ID        Local Intrfce     Holdtme    Capability  Platform  Port ID
+DEN-NSWS-04-99-15Gig 0/1            167          S I      WS-C2960+2Fas 0/8

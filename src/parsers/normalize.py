@@ -62,7 +62,17 @@ from typing import Any, Dict, List, Optional, Tuple
 # Вспомогательные нормализаторы
 # -----------------------------
 
-ROLE_ORDER = ["core", "dist", "access", "wan", "dmz", "mgmt"]
+ROLE_ORDER = ["core", "dist", "access", "wan", "dmz", "mgmt", "wifi"]
+
+def zone_from_hostname(hostname: str) -> str | None:
+    try:
+        parts = (hostname or "").split("-")
+        for tok in parts[1:]:
+            if tok.isdigit() and 1 <= len(tok) <= 4:
+                return tok
+    except Exception:
+        return None
+    return None
 
 def role_to_class(role: str) -> str:
     r = (role or "").lower()
@@ -205,10 +215,16 @@ class Normalizer:
         # 1) Узлы
         for hn, d in self.inv.devices.items():
             role = (d.role or "access").lower()
+            # Detect Wi-Fi class by role or model/name hints
             cls = role_to_class(role)
+            mdl = (d.model or "").lower()
+            if cls == "access":
+                if role == "wifi" or "wifi" in mdl or " ap" in (" " + mdl) or "air" in mdl:
+                    cls = "wifi"
             node = {
                 "hostname": hn,
                 "site": d.site,
+                "zone": zone_from_hostname(hn),
                 "role": role,
                 "vendor": d.vendor,
                 "platform": d.platform,
@@ -278,7 +294,7 @@ class Normalizer:
         # 4) Стабильная сортировка рёбер
         def edge_key(e: Dict[str, Any]) -> Tuple:
             return (
-                (self.inv.devices.get(e["src"]).site if self.inv.devices.get(e["src"]) else ""),
+                ((self.inv.devices.get(e["src"]).site or "") if self.inv.devices.get(e["src"]) else ""),
                 ROLE_ORDER.index(out.nodes[e["src"]]["role"]) if e["src"] in out.nodes and out.nodes[e["src"]]["role"] in ROLE_ORDER else 99,
                 e["src"],
                 iface_sort_key(e.get("src_intf") or ""),

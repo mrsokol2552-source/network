@@ -1,0 +1,409 @@
+
+
+$ terminal length 0
+
+
+
+$ show version
+Cisco IOS Software, C2960CX Software (C2960CX-UNIVERSALK9-M), Version 15.2(7)E, RELEASE SOFTWARE (fc3)
+Technical Support: http://www.cisco.com/techsupport
+Copyright (c) 1986-2019 by Cisco Systems, Inc.
+Compiled Sat 23-Mar-19 09:05 by prod_rel_team
+
+ROM: Bootstrap program is C2960CX boot loader
+BOOTLDR: C2960CX Boot Loader (C2960CX-HBOOT-M) Version 15.2(6r)E, RELEASE SOFTWARE (fc1)
+
+INA-NSWS-35-99-139 uptime is 28 weeks, 1 day, 4 hours, 16 minutes
+System returned to ROM by power-on
+System restarted at 12:06:45 YAKT Tue Apr 1 2025
+System image file is "flash:/c2960cx-universalk9-mz.152-7.E/c2960cx-universalk9-mz.152-7.E.bin"
+Last reload reason: power-on
+
+
+
+This product contains cryptographic features and is subject to United
+States and local country laws governing import, export, transfer and
+use. Delivery of Cisco cryptographic products does not imply
+third-party authority to import, export, distribute or use encryption.
+Importers, exporters, distributors and users are responsible for
+compliance with U.S. and local country laws. By using this product you
+agree to comply with applicable laws and regulations. If you are unable
+to comply with U.S. and local laws, return this product immediately.
+
+A summary of U.S. laws governing Cisco cryptographic products may be found at:
+http://www.cisco.com/wwl/export/crypto/tool/stqrg.html
+
+If you require further assistance please contact us by sending email to
+export@cisco.com.
+
+cisco WS-C2960CX-8TC-L (APM86XXX) processor (revision L0) with 524288K bytes of memory.
+Processor board ID FOC2445L59P
+Last reset from power-on
+2 Virtual Ethernet interfaces
+12 Gigabit Ethernet interfaces
+The password-recovery mechanism is enabled.
+
+512K bytes of flash-simulated non-volatile configuration memory.
+Base ethernet MAC Address       : C8:84:A1:5E:9F:80
+Motherboard assembly number     : 73-100861-04
+Power supply part number        : 341-0208-03
+Motherboard serial number       : FOC2444152W
+Power supply serial number      : LIT242829L9
+Model revision number           : L0
+Motherboard revision number     : D0
+Model number                    : WS-C2960CX-8TC-L
+System serial number            : FOC2445L59P
+Top Assembly Part Number        : 68-100565-01
+Top Assembly Revision Number    : H0
+Version ID                      : V04
+CLEI Code Number                : CMM1M10DRB
+Hardware Board Revision Number  : 0x09
+
+
+Switch Ports Model                     SW Version            SW Image                 
+------ ----- -----                     ----------            ----------               
+*    1 12    WS-C2960CX-8TC-L          15.2(7)E              C2960CX-UNIVERSALK9-M    
+
+
+Configuration register is 0xF
+
+
+
+$ show lldp neighbors detail
+------------------------------------------------
+Local Intf: Gi0/1
+Chassis id: c884.a18f.3d80
+Port id: Gi0/9
+Port Description: TRUNK 99.139
+System Name: INA-NSWS-36-99-186.kolmar.local
+
+System Description: 
+Cisco IOS Software, C2960CX Software (C2960CX-UNIVERSALK9-M), Version 15.2(7)E, RELEASE SOFTWARE (fc3)
+Technical Support: http://www.cisco.com/techsupport
+Copyright (c) 1986-2019 by Cisco Systems, Inc.
+Compiled Sat 23-Mar-19 09:05 by prod_rel_team
+
+Time remaining: 104 seconds
+System Capabilities: B,R
+Enabled Capabilities: B
+Management Addresses:
+    IP: 10.20.99.186
+Auto Negotiation - supported, enabled
+Physical media capabilities:
+    1000baseT(FD)
+    100base-TX(FD)
+    100base-TX(HD)
+    10base-T(FD)
+    10base-T(HD)
+Media Attachment Unit type: 30
+Vlan ID: 1
+
+------------------------------------------------
+Local Intf: Gi0/11
+Chassis id: d477.98ae.3f00
+Port id: Gi1/0/17
+Port Description: UP_99.139_Gi0/11_
+System Name: INA-NSWS-72-99-137.kolmar.local
+
+System Description: 
+Cisco IOS Software, C1000 Software (C1000-UNIVERSALK9-M), Version 15.2(8)E, RELEASE SOFTWARE (fc3)
+Technical Support: http://www.cisco.com/techsupport
+Copyright (c) 1986-2021 by Cisco Systems, Inc.
+Compiled Sat 17-Apr-21 07:21 by prod_rel_team
+
+Time remaining: 113 seconds
+System Capabilities: B,R
+Enabled Capabilities: B
+Management Addresses:
+    IP: 10.20.99.137
+Auto Negotiation - not supported
+Physical media capabilities:
+    1000baseX(FD)
+Media Attachment Unit type: 24
+Vlan ID: 1
+
+------------------------------------------------
+Local Intf: Gi0/10
+Chassis id: 0045.1d77.9180
+Port id: Gi0/9
+Port Description: UP 99.139
+System Name: INA-NSWS-35-99-61.kolmar.ru
+
+System Description: 
+Cisco IOS Software, C2960CX Software (C2960CX-UNIVERSALK9-M), Version 15.2(4)E5, RELEASE SOFTWARE (fc2)
+Technical Support: http://www.cisco.com/techsupport
+Copyright (c) 1986-2017 by Cisco Systems, Inc.
+Compiled Mon 18-Sep-17 08:41 by prod_rel_team
+
+Time remaining: 111 seconds
+System Capabilities: B,R
+Enabled Capabilities: B
+Management Addresses:
+    IP: 192.168.99.61
+Auto Negotiation - supported, enabled
+Physical media capabilities:
+    1000baseT(FD)
+    100base-TX(FD)
+    100base-TX(HD)
+    10base-T(FD)
+    10base-T(HD)
+Media Attachment Unit type: 30
+Vlan ID: 1
+
+------------------------------------------------
+Local Intf: Gi0/9
+Chassis id: 5061.bf89.8a80
+Port id: Gi1/0/48
+Port Description: 99.139_gi0/9
+System Name: INA-NSWS-38-99-60.kolmar.ru
+
+System Description: 
+Cisco IOS Software, C2960X Software (C2960X-UNIVERSALK9-M), Version 15.2(2)E7, RELEASE SOFTWARE (fc3)
+Technical Support: http://www.cisco.com/techsupport
+Copyright (c) 1986-2017 by Cisco Systems, Inc.
+Compiled Wed 12-Jul-17 13:06 by prod_rel_team
+
+Time remaining: 112 seconds
+System Capabilities: B,R
+Enabled Capabilities: B
+Management Addresses:
+    IP: 10.20.99.60
+Auto Negotiation - supported, enabled
+Physical media capabilities:
+    1000baseT(FD)
+    100base-TX(FD)
+    100base-TX(HD)
+    10base-T(FD)
+    10base-T(HD)
+Media Attachment Unit type: 30
+Vlan ID: 1
+
+------------------------------------------------
+Local Intf: Gi0/2
+Chassis id: 10.13.1.74
+Port id: 0c38.3e10.7405
+Port Description: WAN Port
+System Name: X1S/X1SP
+
+System Description: 
+Version:2.4.12.2
+
+Time remaining: 28 seconds
+System Capabilities: B,T
+Enabled Capabilities: B,T
+Management Addresses:
+    IP: 10.13.1.74
+Auto Negotiation - not supported
+Physical media capabilities - not advertised
+Media Attachment Unit type - not advertised
+Vlan ID: - not advertised
+
+MED Information:
+
+    MED Codes:
+          (NP) Network Policy, (LI) Location Identification
+          (PS) Power Source Entity, (PD) Power Device
+          (IN) Inventory
+
+    H/W revision: V1.0
+    S/W revision: 2.4.12.2
+    Serial number: 00100400FV02001000000c383e107405
+    Manufacturer: Fanvil
+    Model: X1S/X1SP
+    Capabilities: NP
+    Device type: Endpoint Class III
+    Network Policy(Voice): VLAN 13, tagged, Layer-2 priority: 0, DSCP: 0
+    Network Policy(Voice Signal): VLAN 0, untagged, Layer-2 priority: 0, DSCP: 0
+    Power requirements - not advertised
+    Location - not advertised
+
+------------------------------------------------
+Local Intf: Gi0/7
+Chassis id: 3cec.ef7f.e714
+Port id: 3cec.ef7f.e714
+Port Description - not advertised
+System Name - not advertised
+System Description - not advertised
+
+Time remaining: 2893 seconds
+System Capabilities - not advertised
+Enabled Capabilities - not advertised
+Management Addresses - not advertised
+Auto Negotiation - supported, enabled
+Physical media capabilities:
+    1000baseT(FD)
+Media Attachment Unit type - not advertised
+Vlan ID: - not advertised
+
+MED Information:
+
+    MED Codes:
+          (NP) Network Policy, (LI) Location Identification
+          (PS) Power Source Entity, (PD) Power Device
+          (IN) Inventory
+
+    Inventory information - not advertised
+    Capabilities: 
+    Device type: Endpoint Class I
+    Network Policies - not advertised
+    Power requirements - not advertised
+    Location - not advertised
+
+------------------------------------------------
+Local Intf: Gi0/2
+Chassis id: 309c.23cd.6b34
+Port id: 309c.23cd.6b34
+Port Description - not advertised
+System Name - not advertised
+System Description - not advertised
+
+Time remaining: 2861 seconds
+System Capabilities - not advertised
+Enabled Capabilities - not advertised
+Management Addresses - not advertised
+Auto Negotiation - supported, enabled
+Physical media capabilities:
+    1000baseT(FD)
+Media Attachment Unit type - not advertised
+Vlan ID: - not advertised
+
+MED Information:
+
+    MED Codes:
+          (NP) Network Policy, (LI) Location Identification
+          (PS) Power Source Entity, (PD) Power Device
+          (IN) Inventory
+
+    Inventory information - not advertised
+    Capabilities: 
+    Device type: Endpoint Class I
+    Network Policies - not advertised
+    Power requirements - not advertised
+    Location - not advertised
+
+
+Total entries displayed: 7
+
+
+
+$ show cdp neighbors detail
+-------------------------
+Device ID: INA-NSWS-72-99-137.kolmar.local
+Entry address(es): 
+  IP address: 10.20.99.137
+Platform: cisco C1000-16T-2G-L,  Capabilities: Switch IGMP 
+Interface: GigabitEthernet0/11,  Port ID (outgoing port): GigabitEthernet1/0/17
+Holdtime : 176 sec
+
+Version :
+Cisco IOS Software, C1000 Software (C1000-UNIVERSALK9-M), Version 15.2(8)E, RELEASE SOFTWARE (fc3)
+Technical Support: http://www.cisco.com/techsupport
+Copyright (c) 1986-2021 by Cisco Systems, Inc.
+Compiled Sat 17-Apr-21 07:21 by prod_rel_team
+
+advertisement version: 2
+VTP Management Domain: ''
+Native VLAN: 1
+Duplex: full
+Management address(es): 
+  IP address: 10.20.99.137
+
+-------------------------
+Device ID: INA-NSWS-36-99-186.kolmar.local
+Entry address(es): 
+  IP address: 10.20.99.186
+Platform: cisco WS-C2960CX-8TC-L,  Capabilities: Switch IGMP 
+Interface: GigabitEthernet0/1,  Port ID (outgoing port): GigabitEthernet0/9
+Holdtime : 136 sec
+
+Version :
+Cisco IOS Software, C2960CX Software (C2960CX-UNIVERSALK9-M), Version 15.2(7)E, RELEASE SOFTWARE (fc3)
+Technical Support: http://www.cisco.com/techsupport
+Copyright (c) 1986-2019 by Cisco Systems, Inc.
+Compiled Sat 23-Mar-19 09:05 by prod_rel_team
+
+advertisement version: 2
+VTP Management Domain: 'tradc'
+Native VLAN: 1
+Duplex: full
+Management address(es): 
+  IP address: 10.20.99.186
+
+-------------------------
+Device ID: INA-NSWS-38-99-60.kolmar.ru
+Entry address(es): 
+  IP address: 10.20.99.60
+Platform: cisco WS-C2960X-48TS-L,  Capabilities: Switch IGMP 
+Interface: GigabitEthernet0/9,  Port ID (outgoing port): GigabitEthernet1/0/48
+Holdtime : 131 sec
+
+Version :
+Cisco IOS Software, C2960X Software (C2960X-UNIVERSALK9-M), Version 15.2(2)E7, RELEASE SOFTWARE (fc3)
+Technical Support: http://www.cisco.com/techsupport
+Copyright (c) 1986-2017 by Cisco Systems, Inc.
+Compiled Wed 12-Jul-17 13:06 by prod_rel_team
+
+advertisement version: 2
+Protocol Hello:  OUI=0x00000C, Protocol ID=0x0112; payload len=27, value=00000000FFFFFFFF010221FF0000000000005061BF898A80FF0000
+VTP Management Domain: ''
+Native VLAN: 1
+Duplex: full
+Management address(es): 
+  IP address: 10.20.99.60
+
+-------------------------
+Device ID: INA-NSWS-35-99-61.kolmar.ru
+Entry address(es): 
+  IP address: 192.168.99.61
+Platform: cisco WS-C2960CX-8TC-L,  Capabilities: Switch IGMP 
+Interface: GigabitEthernet0/10,  Port ID (outgoing port): GigabitEthernet0/9
+Holdtime : 143 sec
+
+Version :
+Cisco IOS Software, C2960CX Software (C2960CX-UNIVERSALK9-M), Version 15.2(4)E5, RELEASE SOFTWARE (fc2)
+Technical Support: http://www.cisco.com/techsupport
+Copyright (c) 1986-2017 by Cisco Systems, Inc.
+Compiled Mon 18-Sep-17 08:41 by prod_rel_team
+
+advertisement version: 2
+Protocol Hello:  OUI=0x00000C, Protocol ID=0x0112; payload len=27, value=00000000FFFFFFFF010221FF00000000000000451D779180FF0000
+VTP Management Domain: ''
+Native VLAN: 1
+Duplex: full
+Management address(es): 
+  IP address: 192.168.99.61
+
+-------------------------
+Device ID: X1S/X1SP
+Entry address(es): 
+  IP address: 10.13.1.74
+Platform: X1S/X1SP,  Capabilities: Host Phone 
+Interface: GigabitEthernet0/2,  Port ID (outgoing port): WAN PORT
+Holdtime : 160 sec
+
+Version :
+2.4.12.2
+
+advertisement version: 2
+
+
+Total cdp entries displayed : 5
+
+
+$ show cdp neighbors
+Capability Codes: R - Router, T - Trans Bridge, B - Source Route Bridge
+                  S - Switch, H - Host, I - IGMP, r - Repeater, P - Phone, 
+                  D - Remote, C - CVTA, M - Two-port Mac Relay 
+
+Device ID        Local Intrfce     Holdtme    Capability  Platform  Port ID
+INA-NSWS-72-99-137.kolmar.local
+                 Gig 0/11          175              S I   C1000-16T Gig 1/0/17
+INA-NSWS-36-99-186.kolmar.local
+                 Gig 0/1           136              S I   WS-C2960C Gig 0/9
+INA-NSWS-38-99-60.kolmar.ru
+                 Gig 0/9           131              S I   WS-C2960X Gig 1/0/48
+INA-NSWS-35-99-61.kolmar.ru
+                 Gig 0/10          143              S I   WS-C2960C Gig 0/9
+X1S/X1SP         Gig 0/2           160              H P   X1S/X1SP  WAN PORT
+
+Total cdp entries displayed : 5

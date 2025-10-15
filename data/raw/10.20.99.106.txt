@@ -1,71 +1,90 @@
 
 
-$ show running-config
-[ERROR executing command: 
-Pattern not detected: '\x1b\\[KINA\\-NSWS\\-119\\-99\\-106\\#' in output.
-
-Things you might try to fix this:
-1. Explicitly set your pattern using the expect_string argument.
-2. Increase the read_timeout to a larger value.
-
-You can also look at the Netmiko session_log or debug log for more information.
-
-]
+$ terminal length 0
+% Unrecognized command
+INA-NSWS-119-99-106#
 
 
 $ show version
-[ERROR executing command: 
-
-Pattern not detected: 'show\\ version' in output.
-
-Things you might try to fix this:
-1. Adjust the regex pattern to better identify the terminating string. Note, in
-many situations the pattern is automatically based on the network device's prompt.
-2. Increase the read_timeout to a larger value.
-
-You can also look at the Netmiko session_log or debug log for more information.
-
-]
-
-
-$ show cdp neighbors detail
-[ERROR executing command: 
-
-Pattern not detected: 'show\\ cdp\\ neighbors\\ detail' in output.
-
-Things you might try to fix this:
-1. Adjust the regex pattern to better identify the terminating string. Note, in
-many situations the pattern is automatically based on the network device's prompt.
-2. Increase the read_timeout to a larger value.
-
-You can also look at the Netmiko session_log or debug log for more information.
-
-]
+Active-image: flash://system/images/_image1.bin
+  Version: 4.0.20
+  Commit: 796ae783
+  Build: 3 (master)
+  MD5 Digest: d5f336ee4a17ce7147ece6d1306a0c89
+  Date: 14-Apr-2023
+  Time: 16:30:53
+Inactive-image: flash://system/images/image1.bin
+  Version: 4.0.20
+  Commit: 796ae783
+  Build: 3 (master)
+  MD5 Digest: d5f336ee4a17ce7147ece6d1306a0c89
+  Date: 14-Apr-2023
+  Time: 16:30:53
+INA-NSWS-119-99-106#
 
 
 $ show lldp neighbors detail
-[ERROR executing command: 
 
-Pattern not detected: 'show\\ lldp\\ neighbors\\ detail' in output.
-
-Things you might try to fix this:
-1. Adjust the regex pattern to better identify the terminating string. Note, in
-many situations the pattern is automatically based on the network device's prompt.
-2. Increase the read_timeout to a larger value.
-
-You can also look at the Netmiko session_log or debug log for more information.
-
-]
+                                                      
+802.1 PVID: None
+802.1 PPVID: 
+802.1 VLAN:
+802.1 Protocol: 
 
 
-$ show interface status
-[ERROR executing command: 
-Pattern not detected: '\x1b\\[KINA\\-NSWS\\-119\\-99\\-106\\#' in output.
+LLDP-MED capabilities: Capabilities
+LLDP-MED Device Type: Endpoint Class1
 
-Things you might try to fix this:
-1. Explicitly set your pattern using the expect_string argument.
-2. Increase the read_timeout to a larger value.
 
-You can also look at the Netmiko session_log or debug log for more information.
 
-]
+
+----------------------------------------------------------------------------------
+
+Port: gi1/0/38
+Device ID: 70:a7:41:e7:ed:5e
+Port ID: 70:a7:41:e7:ed:5d
+Capabilities: Bridge, Router, Wlan-Access-Point
+System Name: INALAB
+System description: UAP-HD-IW, 6.7.17.15512
+Port description: eth0
+Management Address: 10.31.0.81
+Management Address: fe80::72a7:41ff:fee7:ed5d
+Time To Live: 96
+
+
+802.1 PVID: None
+802.1 PPVID: 
+802.1 VLAN:
+802.1 Protocol: 
+
+
+LLDP-MED capabilities: Capabilities, Network Policy, Location, POE-PSE, POE-PD, Inventory
+LLDP-MED Device Type: Network Connectivity
+
+LLDP-MED Power over Ethernet
+Device Type: Powered Device
+[0mMore: <space>,  Quit: q or CTRL+Z, One line: <return> 
+
+
+$ show cdp neighbors detail
+
+                                                      
+   Remote Rx Echo:    30 uSec
+
+
+802.1 PVID: 1
+802.1 PPVID: 
+802.1 VLAN:
+802.1 Protocol: 
+
+
+
+
+----------------------------------------------------------------------------------
+
+INA-NSWS-119-99-106#
+
+
+$ show cdp neighbors
+% Unrecognized command
+INA-NSWS-119-99-106#

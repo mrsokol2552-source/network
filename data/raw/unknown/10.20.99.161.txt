@@ -1,0 +1,562 @@
+
+
+$ show system information
+
+
+Hardware Version                  : 3v1
+Software Version                  : 10.2.9.3
+Firmware Version                  : 10.2.9.3
+
+Hardware Serial Number            : ESD1008785
+Switch Base MAC Address           : cc:9d:a2:a6:e4:00   
+Software Serial Number            : 1f0d464c
+System Contact                    : eltex@eltex-co.ru
+System Name                       : INA-NSWS-01-99-161
+System Location                   : Eltex Ltd, Russia
+System Description                : MES2424P rev.C1 AC 28-port 1G/10G Managed Switch with 24 POE+ ports
+Logging Option                    : Flash Logging
+Device Uptime                     : 319 Days, 5 Hrs, 54 Mins, 25 Secs
+Login Authentication Mode         : Local
+Config Save Status                : Successful
+Remote Save Status                : Not Initiated
+Config Restore Status             : Not Initiated
+Traffic Separation Control        : none
+
+
+
+
+$ show lldp neighbors detail
+
+                
+
+
+--More--
+                
+
+
+--More--
+                
+
+
+--More--
+                
+
+
+--More--
+                
+Symm PAUSE(FD)
+1000base-X, -LX, -SX, -CX(FD)
+1000base-T(FD)
+-Link Aggregation
+Capability & Status           : Not Capable, Not In Aggregation
+Aggregated Port Id            : 0
+-Maximum Frame Size           : 0
+
+Extended 802.1 TLV Info 
+-Port VLAN Id                 : 0
+-Port & Protocol VLAN Id 
+Protocol Vlan Tlv             : Not Advertised
+-Vlan Name
+Vlan Name Tlv                 : Not Advertised
+
+-LLDP MED Capability TLV      : Not Advertised 
+Capabilities Supported        : 0 
+Capabilities Enabled          : 0 
+Device Class                  : 0 
+
+-LLDP MED Inventory TLV       : Not Advertised
+
+-LLDP-MED Nw Policy TLV       : Not Advertised 
+
+
+
+--More--
+                
+
+
+--More--
+                
+
+
+--More--
+                
+
+
+--More--
+                
+
+
+--More--
+                
+-LLDP-MED Location Info TLV   : Not Advertised 
+
+-LLDP-MED Ex-PowerViaMDI TLV  : Not Advertised 
+------------------------------------------------------------
+Chassis Id SubType            : Mac Address 
+Chassis Id                    : 00:1d:77:29:21:a2
+Port Id SubType               : Local 
+Port Id                       : 10
+Port Description              : GigabitEthernet 1/10
+System Name                   : INA-NSWS-128-99-164
+System Desc                   : V2.1 2021-04-25T04:45:04-07:00
+Local Intf                    : gi 0/12
+Time Remaining                : 102 Seconds 
+System Capabilities Supported : B               
+System Capabilities Enabled   : B
+Management Addresses          : 
+IfId SubType Address                         OID                               
+---- ------- -------                         ---                               
+0    IPv4    192.168.2.1                                                       
+
+Extended 802.3 TLV Info 
+-MAC PHY Configuration & Status
+10base-T(HD)
+10base-T(FD)
+
+
+--More--
+                
+
+
+--More--
+                
+
+
+--More--
+                
+
+
+--More--
+                
+
+
+--More--
+                
+
+
+--More--
+                
+
+
+--More--
+                
+
+
+--More--
+                
+
+
+--More--
+                
+
+
+--More--
+                
+100base-TX(HD)
+100base-T2(HD)
+Asym PAUSE(FD)
+Symm PAUSE(FD)
+Asym and Symm PAUSE(FD)
+1000base-X, -LX, -SX, -CX(HD)
+1000base-X, -LX, -SX, -CX(FD)
+1000base-T(HD)
+1000base-T(FD)
+-Link Aggregation
+Capability & Status           : Not Capable, Not In Aggregation
+Aggregated Port Id            : 0
+-Maximum Frame Size           : 0
+
+Extended 802.1 TLV Info 
+-Port VLAN Id                 : 0
+-Port & Protocol VLAN Id 
+Protocol Vlan Tlv             : Not Advertised
+-Vlan Name
+Vlan Name Tlv                 : Not Advertised
+
+-LLDP MED Capability TLV      : Not Advertised 
+Capabilities Supported        : 0 
+Capabilities Enabled          : 0 
+
+
+--More--
+                
+
+
+--More--
+                
+
+
+--More--
+                
+
+
+--More--
+                
+
+
+--More--
+                
+
+
+--More--
+                
+
+
+--More--
+                
+Device Class                  : 0 
+
+
+--More--
+
+
+$ show vlan
+
+                
+
+
+--More--
+                
+
+
+--More--
+                
+
+
+--More--
+                
+
+
+--More--
+                
+10base-T(HD)
+10base-T(FD)
+100base-TX(HD)
+100base-T2(HD)
+Asym PAUSE(FD)
+Symm PAUSE(FD)
+Asym and Symm PAUSE(FD)
+1000base-X, -LX, -SX, -CX(HD)
+1000base-X, -LX, -SX, -CX(FD)
+1000base-T(HD)
+1000base-T(FD)
+-Link Aggregation
+Capability & Status           : Not Capable, Not In Aggregation
+Aggregated Port Id            : 0
+-Maximum Frame Size           : 0
+
+Extended 802.1 TLV Info 
+-Port VLAN Id                 : 0
+-Port & Protocol VLAN Id 
+Protocol Vlan Tlv             : Not Advertised
+-Vlan Name
+Vlan Name Tlv                 : Not Advertised
+
+-LLDP MED Capability TLV      : Not Advertised 
+
+
+--More--
+                
+
+
+--More--
+                
+
+
+--More--
+                
+
+
+--More--
+                
+
+
+--More--
+                
+Capabilities Supported        : 0 
+
+
+--More--
+
+
+$ show interfaces status
+
+                
+
+
+--More--
+                
+
+
+--More--
+                
+
+
+--More--
+                
+
+
+--More--
+                
+
+-LLDP-MED Ex-PowerViaMDI TLV  : Not Advertised 
+------------------------------------------------------------
+Chassis Id SubType            : Mac Address 
+Chassis Id                    : 00:1d:77:29:21:95
+Port Id SubType               : Local 
+Port Id                       : 12
+Port Description              : GigabitEthernet 1/12
+System Name                   : INA-NSWS-124-99-165
+System Desc                   : V2.1 2021-04-25T04:45:04-07:00
+Local Intf                    : te 0/1
+Time Remaining                : 106 Seconds 
+System Capabilities Supported : B               
+System Capabilities Enabled   : B
+Management Addresses          : 
+IfId SubType Address                         OID                               
+---- ------- -------                         ---                               
+0    IPv4    192.168.5.101                                                     
+
+Extended 802.3 TLV Info 
+-MAC PHY Configuration & Status
+10base-T(HD)
+10base-T(FD)
+100base-TX(HD)
+
+
+--More--
+                
+
+
+--More--
+                
+
+
+--More--
+                
+
+
+--More--
+                
+
+
+--More--
+                
+
+
+--More--
+                
+
+
+--More--
+                
+
+
+--More--
+                
+
+
+--More--
+                
+
+
+--More--
+                
+
+
+--More--
+                
+100base-T2(HD)
+Asym PAUSE(FD)
+Symm PAUSE(FD)
+Asym and Symm PAUSE(FD)
+1000base-X, -LX, -SX, -CX(HD)
+1000base-X, -LX, -SX, -CX(FD)
+1000base-T(HD)
+1000base-T(FD)
+-Link Aggregation
+Capability & Status           : Not Capable, Not In Aggregation
+Aggregated Port Id            : 0
+-Maximum Frame Size           : 0
+
+Extended 802.1 TLV Info 
+-Port VLAN Id                 : 0
+-Port & Protocol VLAN Id 
+Protocol Vlan Tlv             : Not Advertised
+-Vlan Name
+Vlan Name Tlv                 : Not Advertised
+
+-LLDP MED Capability TLV      : Not Advertised 
+Capabilities Supported        : 0 
+Capabilities Enabled          : 0 
+Device Class                  : 0 
+
+
+--More--
+                
+
+
+--More--
+                
+
+
+--More--
+                
+
+
+--More--
+                
+
+
+--More--
+                
+
+
+--More--
+                
+
+
+--More--
+                
+
+
+
+--More--
+
+
+$ show interfaces
+
+gi 0/1 up, line protocol is up (connected)
+Bridge Port Type: Customer Bridge Port
+
+Interface SubType: gigabitEthernet
+
+Hardware Address is cc:9d:a2:a6:e4:01   
+MTU  12288 bytes, Full duplex, 100 Mbps,  Auto-Negotiation default
+HOL Block Prevention enabled.
+CPU Controlled Learning disabled.
+Auto-MDIX on
+Input flow-control is off,output flow-control is off
+Media-type: prefer-fiber
+
+Link Up/Down Trap is enabled 
+
+Reception Counters
+   Octets                    : 3850704364
+   Unicast Packets           : 1707742944
+   Multicast Packets         : 4193
+   Broadcast Packets         : 921150
+   Discarded Packets         : 47
+   Error Packets             : 2
+
+
+--More--
+
+
+$ show running-config
+
+                
+
+
+--More--
+                
+
+
+--More--
+                
+
+
+--More--
+                
+
+
+--More--
+                
+
+Link Up/Down Trap is enabled 
+
+Reception Counters
+   Octets                    : 1939561804
+   Unicast Packets           : 1704276330
+   Multicast Packets         : 4186
+   Broadcast Packets         : 921139
+   Discarded Packets         : 26
+   Error Packets             : 0
+   Unknown Protocol          : 0
+   CRC Errors                : 0
+   Symbol Errors             : 0
+   Oversized w/ Bad CRC      : 0
+
+Transmission Counters
+   Octets                    : 272559864
+   Unicast Packets           : 3841707702
+   Multicast Packets         : 14385323
+   Broadcast Packets         : 96169641
+   Discarded Packets         : 0
+   Error Drops               : 0
+   Error Packets             : 0
+
+
+
+--More--
+                
+
+
+--More--
+                
+
+
+--More--
+                
+
+
+--More--
+                
+
+
+--More--
+                
+
+
+--More--
+                
+
+
+--More--
+                
+
+
+--More--
+                
+
+
+--More--
+                
+
+
+--More--
+                
+
+
+--More--
+                
+
+
+--More--
+                
+
+
+--More--
+                
+
+
+--More--
+                
+
+
+--More--
+                
+gi 0/3 up, line protocol is up (connected)
+
+
+--More--

@@ -1,0 +1,15 @@
+Value HardwareVersion (.+)
+Value SoftwareVersion (.+)
+Value FirmwareVersion (.+)
+Value HardwareSerial (.+)
+Value SystemName (.+)
+Value SystemDescription (.+)
+
+Start
+  ^Hardware Version\s*:\s*${HardwareVersion} -> Continue
+  ^Software Version\s*:\s*${SoftwareVersion} -> Continue
+  ^Firmware Version\s*:\s*${FirmwareVersion} -> Continue
+  ^Hardware Serial Number\s*:\s*${HardwareSerial} -> Continue
+  ^System Name\s*:\s*${SystemName} -> Continue
+  ^System Description\s*:\s*${SystemDescription} -> Record
+

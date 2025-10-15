@@ -1,0 +1,12 @@
+Value Interface (Ethernet[\d/]+)
+Value Mode (access|trunk)
+Value Vlan (\d+)
+
+Start
+  ^Interface\s+${Interface} -> INT
+
+INT
+  ^Interface\s+${Interface} -> Start
+  ^\s*switchport\s+mode\s+trunk -> Record
+  ^\s*switchport\s+access\s+vlan\s+${Vlan} -> Record
+

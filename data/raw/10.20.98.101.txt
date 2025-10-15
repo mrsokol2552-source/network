@@ -1,69 +1,77 @@
 
 
-$ show running-config
-[ERROR executing command: 
-Pattern not detected: '\x1b\\[KFOK\\#' in output.
-
-Things you might try to fix this:
-1. Explicitly set your pattern using the expect_string argument.
-2. Increase the read_timeout to a larger value.
-
-You can also look at the Netmiko session_log or debug log for more information.
-
-]
+$ terminal length 0
+% Unrecognized command
+INA-NSWS-135-98-101#
 
 
 $ show version
-[ERROR executing command: 
-
-Pattern not detected: 'show\\ version' in output.
-
-Things you might try to fix this:
-1. Adjust the regex pattern to better identify the terminating string. Note, in
-many situations the pattern is automatically based on the network device's prompt.
-2. Increase the read_timeout to a larger value.
-
-You can also look at the Netmiko session_log or debug log for more information.
-
-]
-
-
-$ show cdp neighbors detail
-[ERROR executing command: 
-
-Pattern not detected: 'show\\ cdp\\ neighbors\\ detail' in output.
-
-Things you might try to fix this:
-1. Adjust the regex pattern to better identify the terminating string. Note, in
-many situations the pattern is automatically based on the network device's prompt.
-2. Increase the read_timeout to a larger value.
-
-You can also look at the Netmiko session_log or debug log for more information.
-
-]
+Active-image: flash://system/images/rs
+  Version: 4.0.25.3
+  Commit: decca0a7
+  Build: 1 (master)
+  MD5 Digest: 71937cafad9a76552cd4be875b5eb90d
+  Date: 26-Aug-2025
+  Time: 17:03:28
+Inactive-image: flash://system/images/_image1.bin
+  Version: 4.0.14.1
+  Commit: 7d48bd92
+  Build: 1 (master)
+  MD5 Digest: edccba9fad1ed25ce7a1296bf4c84587
+  Date: 26-Aug-2020
+  Time: 11:20:49
+INA-NSWS-135-98-101#
 
 
 $ show lldp neighbors detail
-[ERROR executing command: 
-Pattern not detected: '\x1b\\[KFOK\\#' in output.
-
-Things you might try to fix this:
-1. Explicitly set your pattern using the expect_string argument.
-2. Increase the read_timeout to a larger value.
-
-You can also look at the Netmiko session_log or debug log for more information.
-
-]
+Port: gi1/0/11
+Device ID: e0:d9:e3:d9:94:c0
+Port ID: gi1/0/12
+Capabilities: Other
+System Name: 
+System description: 
+Port description: 
+Time To Live: 91
 
 
-$ show interface status
-[ERROR executing command: 
-Pattern not detected: '\x1b\\[KFOK\\#' in output.
+802.1 PVID: None
+802.1 PPVID: 
+802.1 VLAN:
+802.1 Protocol: 
 
-Things you might try to fix this:
-1. Explicitly set your pattern using the expect_string argument.
-2. Increase the read_timeout to a larger value.
 
-You can also look at the Netmiko session_log or debug log for more information.
 
-]
+
+----------------------------------------------------------------------------------
+
+Port: gi1/0/12
+Device ID: e4:5a:d4:25:d1:50
+Port ID: gi1/0/11
+Capabilities: Other
+System Name: 
+System description: 
+Port description: 
+Time To Live: 112
+
+
+802.1 PVID: None
+802.1 PPVID: 
+802.1 VLAN:
+802.1 Protocol: 
+
+
+
+
+----------------------------------------------------------------------------------
+
+INA-NSWS-135-98-101#
+
+
+$ show cdp neighbors detail
+% Unrecognized command
+INA-NSWS-135-98-101#
+
+
+$ show cdp neighbors
+% Unrecognized command
+INA-NSWS-135-98-101#

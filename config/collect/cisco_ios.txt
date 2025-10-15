@@ -1,0 +1,6 @@
+# pre_enable=1
+terminal length 0
+show version
+show lldp neighbors detail
+show cdp neighbors detail
+show cdp neighbors

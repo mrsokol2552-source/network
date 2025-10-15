@@ -1,10 +1,51 @@
 {
-  "vendor": "cisco_ios",
+  "vendor": "eltex_mes",
   "raw_files": [
-    "10.20.99.106.txt"
+    "INA\\119\\10.20.99.106.txt"
   ],
-  "parsed": {},
-  "errors": [
-    "no_templates_for_vendor:cisco_ios"
-  ]
+  "parsed": {
+    "eltex_mes_show_lldp_neighbors_detail": [
+      {
+        "LocalInterface": "",
+        "NeighborName": "",
+        "NeighborPort": "70:85:c2:96:60:74",
+        "_source_file": "C:\\Users\\zhiltsov.aa\\Desktop\\net-auto-mermaid\\data\\raw\\INA\\119\\10.20.99.106.txt",
+        "_template": "eltex_mes_show_lldp_neighbors_detail.template"
+      },
+      {
+        "LocalInterface": "",
+        "NeighborName": "",
+        "NeighborPort": "70:a7:41:e7:ed:5d",
+        "_source_file": "C:\\Users\\zhiltsov.aa\\Desktop\\net-auto-mermaid\\data\\raw\\INA\\119\\10.20.99.106.txt",
+        "_template": "eltex_mes_show_lldp_neighbors_detail.template"
+      },
+      {
+        "LocalInterface": "",
+        "NeighborName": "INALAB",
+        "NeighborPort": "Gi1/0/44",
+        "_source_file": "C:\\Users\\zhiltsov.aa\\Desktop\\net-auto-mermaid\\data\\raw\\INA\\119\\10.20.99.106.txt",
+        "_template": "eltex_mes_show_lldp_neighbors_detail.template"
+      },
+      {
+        "LocalInterface": "",
+        "NeighborName": "INA-NSWS-11-99-196.kolmar.ru",
+        "NeighborPort": "",
+        "_source_file": "C:\\Users\\zhiltsov.aa\\Desktop\\net-auto-mermaid\\data\\raw\\INA\\119\\10.20.99.106.txt",
+        "_template": "eltex_mes_show_lldp_neighbors_detail.template"
+      }
+    ],
+    "eltex_mes_show_system_information": [
+      {
+        "HardwareVersion": "",
+        "SoftwareVersion": "",
+        "FirmwareVersion": "",
+        "HardwareSerial": "",
+        "SystemName": "INA-NSWS-11-99-196.kolmar.ru",
+        "SystemDescription": "",
+        "_source_file": "C:\\Users\\zhiltsov.aa\\Desktop\\net-auto-mermaid\\data\\raw\\INA\\119\\10.20.99.106.txt",
+        "_template": "eltex_mes_show_system_information.template"
+      }
+    ]
+  },
+  "errors": []
 }

@@ -1,0 +1,6 @@
+# pre_enable=0
+show version
+show lldp remote_ports
+show vlan
+show interfaces status
+show config effective

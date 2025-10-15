@@ -1,886 +1,6 @@
 
 
-$ show running-config
-Building configuration...
-
-Current configuration : 23986 bytes
-!
-! Last configuration change at 11:58:05 YAKT Fri Sep 19 2025
-!
-version 15.2
-no service pad
-service timestamps debug datetime msec localtime show-timezone
-service timestamps log datetime msec
-service password-encryption
-!
-hostname NER-NSWS-03-99-21
-!
-boot-start-marker
-boot-end-marker
-!
-logging buffered 16386
-logging rate-limit 100 except warnings
-logging console critical
-!
-username ivashenko_vb privilege 15 secret 5 $1$bi7z$qTHuukwOKu/rACvOW/3hy.
-username sib_uib privilege 15 secret 5 $1$kiup$HvvhC1tZ1yUVlP1kce0.Y.
-username volodin_s privilege 15 secret 9 $9$uAJdfEZE.HWz8x$wmBBqDtUHvbzauBXWtkr9jLceeTFWMOaVdIke4d.SZc
-username zhiltsov_a privilege 15 secret 9 $9$l8wdnEaHfVRREJ$K3ysTYf8FuOlq4WEQZ0DEF0BRFcPzkzZhwwMQ4pFc46
-aaa new-model
-!
-!
-aaa group server radius KOLMAR
- server name cis.kolmar.pro_210
- server name cis.kolmar.pro_212
- deadtime 333
-!
-aaa authentication fail-message ^CC=== Authentication failed ===^C
-aaa authentication login login-RADIUS group radius local
-aaa authorization console
-aaa authorization exec auth-RADIUS-exec group radius local 
-!
-!
-!
-!
-!
-aaa server radius dynamic-author
- client 10.10.0.210 server-key 7 060A042B495F0711161B14090013
- client 10.10.0.212 server-key 7 05070D05245D40010A091110071B
-!
-aaa session-id common
-clock timezone YAKT 9 0
-switch 1 provision c1000-48t-4g-l
-system mtu routing 1500
-!
-!
-ip domain-name kolmar.ru
-login on-failure log
-login on-success log
-!
-!
-!
-!
-!
-!
-crypto pki trustpoint TP-self-signed-390505728
- enrollment selfsigned
- subject-name cn=IOS-Self-Signed-Certificate-390505728
- revocation-check none
- rsakeypair TP-self-signed-390505728
-!
-!
-crypto pki certificate chain TP-self-signed-390505728
- certificate self-signed 01
-  30820229 30820192 A0030201 02020101 300D0609 2A864886 F70D0101 05050030 
-  30312E30 2C060355 04031325 494F532D 53656C66 2D536967 6E65642D 43657274 
-  69666963 6174652D 33393035 30353732 38301E17 0D323530 37333130 36353033 
-  315A170D 33303031 30313030 30303030 5A303031 2E302C06 03550403 1325494F 
-  532D5365 6C662D53 69676E65 642D4365 72746966 69636174 652D3339 30353035 
-  37323830 819F300D 06092A86 4886F70D 01010105 0003818D 00308189 02818100 
-  E0B941A3 F098690F B1529BD6 F44E7081 39FF854F 4AC0AB5C 2CC826AB 4C8D24F5 
-  5B78DCC1 D67C1882 EF55510A 280C3691 FD29EAC0 506D1CF6 8ABFF18F 9A2314DF 
-  987B80A8 DBF2DDD5 8855F410 F35FACFE 7881672A 0EA4D5DC 65FF505F EDAD9D45 
-  7A99E3D6 35CAF979 D6CA3DD6 9876C0D0 5B28601F 619B3C71 4F6A07E5 2EC103E5 
-  02030100 01A35330 51300F06 03551D13 0101FF04 05300301 01FF301F 0603551D 
-  23041830 16801413 A471AE8C 6298ADCA 97A54082 E059C475 C4BAA530 1D060355 
-  1D0E0416 041413A4 71AE8C62 98ADCA97 A54082E0 59C475C4 BAA5300D 06092A86 
-  4886F70D 01010505 00038181 00257EF0 E8AF8365 98E12EC9 71378091 4B0FDC3B 
-  5F2E5FCA 74943A14 BABE658C 09372A22 44648CB4 505A0B27 1176F057 8D0E5798 
-  71D386D0 BD293398 5E101164 6C60D925 060169F0 04BD705C DC9FE1B9 AB36BAD0 
-  7A92F1C8 F179AE6C 317DA61C 4A78F784 657BA473 DF227BA4 E49C1A8D 835FF541 
-  762EC16E 8888DB3D D8D94404 34
-  	quit
-file prompt quiet
-!
-spanning-tree mode rapid-pvst
-spanning-tree loopguard default
-spanning-tree extend system-id
-errdisable recovery cause udld
-errdisable recovery cause bpduguard
-errdisable recovery cause security-violation
-errdisable recovery cause channel-misconfig
-errdisable recovery cause pagp-flap
-errdisable recovery cause dtp-flap
-errdisable recovery cause link-flap
-errdisable recovery cause sfp-config-mismatch
-errdisable recovery cause gbic-invalid
-errdisable recovery cause psecure-violation
-errdisable recovery cause port-mode-failure
-errdisable recovery cause dhcp-rate-limit
-errdisable recovery cause mac-limit
-errdisable recovery cause vmps
-errdisable recovery cause storm-control
-errdisable recovery cause loopback
-errdisable recovery interval 180
-!
-vlan internal allocation policy ascending
-!
-lldp run
-!
-!
-!
-!
-!
-interface GigabitEthernet1/0/1
- description kab_322
- switchport access vlan 20
- switchport mode access
- logging event spanning-tree
- logging event status
- no cdp tlv app
- no snmp trap link-status
- storm-control broadcast level 5.00 3.00
- storm-control multicast level 5.00 3.00
- storm-control action shutdown
- storm-control action trap
- spanning-tree portfast edge
- ip dhcp snooping limit rate 25
-!
-interface GigabitEthernet1/0/2
- description kab_322
- switchport access vlan 20
- switchport mode access
- logging event spanning-tree
- logging event status
- no cdp tlv app
- no snmp trap link-status
- storm-control broadcast level 5.00 3.00
- storm-control multicast level 5.00 3.00
- storm-control action shutdown
- storm-control action trap
- spanning-tree portfast edge
- ip dhcp snooping limit rate 25
-!
-interface GigabitEthernet1/0/3
- description kab_322
- switchport access vlan 21
- switchport mode access
- logging event spanning-tree
- logging event status
- no cdp tlv app
- no snmp trap link-status
- storm-control broadcast level 5.00 3.00
- storm-control multicast level 5.00 3.00
- storm-control action shutdown
- storm-control action trap
- spanning-tree portfast edge
- ip dhcp snooping limit rate 25
-!
-interface GigabitEthernet1/0/4
- description kab_322
- switchport access vlan 21
- switchport mode access
- logging event spanning-tree
- logging event status
- no cdp tlv app
- no snmp trap link-status
- storm-control broadcast level 5.00 3.00
- storm-control multicast level 5.00 3.00
- storm-control action shutdown
- storm-control action trap
- spanning-tree portfast edge
- ip dhcp snooping limit rate 25
-!
-interface GigabitEthernet1/0/5
- switchport access vlan 20
- switchport mode access
- logging event spanning-tree
- logging event status
- no cdp tlv app
- no snmp trap link-status
- storm-control broadcast level 5.00 3.00
- storm-control multicast level 5.00 3.00
- storm-control action shutdown
- storm-control action trap
- spanning-tree portfast edge
- ip dhcp snooping limit rate 25
-!
-interface GigabitEthernet1/0/6
- switchport access vlan 20
- switchport mode access
- logging event spanning-tree
- logging event status
- no cdp tlv app
- no snmp trap link-status
- storm-control broadcast level 5.00 3.00
- storm-control multicast level 5.00 3.00
- storm-control action shutdown
- storm-control action trap
- spanning-tree portfast edge
- ip dhcp snooping limit rate 25
-!
-interface GigabitEthernet1/0/7
- switchport access vlan 20
- switchport mode access
- logging event spanning-tree
- logging event status
- no cdp tlv app
- no snmp trap link-status
- storm-control broadcast level 5.00 3.00
- storm-control multicast level 5.00 3.00
- storm-control action shutdown
- storm-control action trap
- spanning-tree portfast edge
- ip dhcp snooping limit rate 25
-!
-interface GigabitEthernet1/0/8
- switchport access vlan 20
- switchport mode access
- logging event spanning-tree
- logging event status
- no cdp tlv app
- no snmp trap link-status
- storm-control broadcast level 5.00 3.00
- storm-control multicast level 5.00 3.00
- storm-control action shutdown
- storm-control action trap
- spanning-tree portfast edge
- ip dhcp snooping limit rate 25
-!
-interface GigabitEthernet1/0/9
- switchport access vlan 20
- switchport mode access
- logging event spanning-tree
- logging event status
- no cdp tlv app
- no snmp trap link-status
- storm-control broadcast level 5.00 3.00
- storm-control multicast level 5.00 3.00
- storm-control action shutdown
- storm-control action trap
- spanning-tree portfast edge
- ip dhcp snooping limit rate 25
-!
-interface GigabitEthernet1/0/10
- switchport access vlan 20
- switchport mode access
- logging event spanning-tree
- logging event status
- no cdp tlv app
- no snmp trap link-status
- storm-control broadcast level 5.00 3.00
- storm-control multicast level 5.00 3.00
- storm-control action shutdown
- storm-control action trap
- spanning-tree portfast edge
- ip dhcp snooping limit rate 25
-!
-interface GigabitEthernet1/0/11
- switchport access vlan 20
- switchport mode access
- logging event spanning-tree
- logging event status
- no cdp tlv app
- no snmp trap link-status
- storm-control broadcast level 5.00 3.00
- storm-control multicast level 5.00 3.00
- storm-control action shutdown
- storm-control action trap
- spanning-tree portfast edge
- ip dhcp snooping limit rate 25
-!
-interface GigabitEthernet1/0/12
- switchport access vlan 20
- switchport mode access
- logging event spanning-tree
- logging event status
- no cdp tlv app
- no snmp trap link-status
- storm-control broadcast level 5.00 3.00
- storm-control multicast level 5.00 3.00
- storm-control action shutdown
- storm-control action trap
- spanning-tree portfast edge
- ip dhcp snooping limit rate 25
-!
-interface GigabitEthernet1/0/13
- switchport access vlan 20
- switchport mode access
- logging event spanning-tree
- logging event status
- no cdp tlv app
- no snmp trap link-status
- storm-control broadcast level 5.00 3.00
- storm-control multicast level 5.00 3.00
- storm-control action shutdown
- storm-control action trap
- spanning-tree portfast edge
- ip dhcp snooping limit rate 25
-!
-interface GigabitEthernet1/0/14
- switchport access vlan 20
- switchport mode access
- logging event spanning-tree
- logging event status
- no cdp tlv app
- no snmp trap link-status
- storm-control broadcast level 5.00 3.00
- storm-control multicast level 5.00 3.00
- storm-control action shutdown
- storm-control action trap
- spanning-tree portfast edge
- ip dhcp snooping limit rate 25
-!
-interface GigabitEthernet1/0/15
- switchport access vlan 20
- switchport mode access
- logging event spanning-tree
- logging event status
- no cdp tlv app
- no snmp trap link-status
- storm-control broadcast level 5.00 3.00
- storm-control multicast level 5.00 3.00
- storm-control action shutdown
- storm-control action trap
- spanning-tree portfast edge
- ip dhcp snooping limit rate 25
-!
-interface GigabitEthernet1/0/16
- switchport access vlan 20
- switchport mode access
- logging event spanning-tree
- logging event status
- no cdp tlv app
- no snmp trap link-status
- storm-control broadcast level 5.00 3.00
- storm-control multicast level 5.00 3.00
- storm-control action shutdown
- storm-control action trap
- spanning-tree portfast edge
- ip dhcp snooping limit rate 25
-!
-interface GigabitEthernet1/0/17
- switchport access vlan 20
- switchport mode access
- logging event spanning-tree
- logging event status
- no cdp tlv app
- no snmp trap link-status
- storm-control broadcast level 5.00 3.00
- storm-control multicast level 5.00 3.00
- storm-control action shutdown
- storm-control action trap
- spanning-tree portfast edge
- ip dhcp snooping limit rate 25
-!
-interface GigabitEthernet1/0/18
- switchport access vlan 20
- switchport mode access
- logging event spanning-tree
- logging event status
- no cdp tlv app
- no snmp trap link-status
- storm-control broadcast level 5.00 3.00
- storm-control multicast level 5.00 3.00
- storm-control action shutdown
- storm-control action trap
- spanning-tree portfast edge
- ip dhcp snooping limit rate 25
-!
-interface GigabitEthernet1/0/19
- switchport access vlan 20
- switchport mode access
- logging event spanning-tree
- logging event status
- no cdp tlv app
- no snmp trap link-status
- storm-control broadcast level 5.00 3.00
- storm-control multicast level 5.00 3.00
- storm-control action shutdown
- storm-control action trap
- spanning-tree portfast edge
- ip dhcp snooping limit rate 25
-!
-interface GigabitEthernet1/0/20
- switchport access vlan 20
- switchport mode access
- logging event spanning-tree
- logging event status
- no cdp tlv app
- no snmp trap link-status
- storm-control broadcast level 5.00 3.00
- storm-control multicast level 5.00 3.00
- storm-control action shutdown
- storm-control action trap
- spanning-tree portfast edge
- ip dhcp snooping limit rate 25
-!
-interface GigabitEthernet1/0/21
- switchport access vlan 20
- switchport mode access
- logging event spanning-tree
- logging event status
- no cdp tlv app
- no snmp trap link-status
- storm-control broadcast level 5.00 3.00
- storm-control multicast level 5.00 3.00
- storm-control action shutdown
- storm-control action trap
- spanning-tree portfast edge
- ip dhcp snooping limit rate 25
-!
-interface GigabitEthernet1/0/22
- switchport access vlan 20
- switchport mode access
- logging event spanning-tree
- logging event status
- no cdp tlv app
- no snmp trap link-status
- storm-control broadcast level 5.00 3.00
- storm-control multicast level 5.00 3.00
- storm-control action shutdown
- storm-control action trap
- spanning-tree portfast edge
- ip dhcp snooping limit rate 25
-!
-interface GigabitEthernet1/0/23
- switchport access vlan 20
- switchport mode access
- logging event spanning-tree
- logging event status
- no cdp tlv app
- no snmp trap link-status
- storm-control broadcast level 5.00 3.00
- storm-control multicast level 5.00 3.00
- storm-control action shutdown
- storm-control action trap
- spanning-tree portfast edge
- ip dhcp snooping limit rate 25
-!
-interface GigabitEthernet1/0/24
- switchport access vlan 20
- switchport mode access
- logging event spanning-tree
- logging event status
- no cdp tlv app
- no snmp trap link-status
- storm-control broadcast level 5.00 3.00
- storm-control multicast level 5.00 3.00
- storm-control action shutdown
- storm-control action trap
- spanning-tree portfast edge
- ip dhcp snooping limit rate 25
-!
-interface GigabitEthernet1/0/25
- switchport access vlan 20
- switchport mode access
- logging event spanning-tree
- logging event status
- no cdp tlv app
- no snmp trap link-status
- storm-control broadcast level 5.00 3.00
- storm-control multicast level 5.00 3.00
- storm-control action shutdown
- storm-control action trap
- spanning-tree portfast edge
- ip dhcp snooping limit rate 25
-!
-interface GigabitEthernet1/0/26
- switchport access vlan 20
- switchport mode access
- logging event spanning-tree
- logging event status
- no cdp tlv app
- no snmp trap link-status
- storm-control broadcast level 5.00 3.00
- storm-control multicast level 5.00 3.00
- storm-control action shutdown
- storm-control action trap
- spanning-tree portfast edge
- ip dhcp snooping limit rate 25
-!
-interface GigabitEthernet1/0/27
- switchport access vlan 20
- switchport mode access
- logging event spanning-tree
- logging event status
- no cdp tlv app
- no snmp trap link-status
- storm-control broadcast level 5.00 3.00
- storm-control multicast level 5.00 3.00
- storm-control action shutdown
- storm-control action trap
- spanning-tree portfast edge
- ip dhcp snooping limit rate 25
-!
-interface GigabitEthernet1/0/28
- switchport access vlan 20
- switchport mode access
- logging event spanning-tree
- logging event status
- no cdp tlv app
- no snmp trap link-status
- storm-control broadcast level 5.00 3.00
- storm-control multicast level 5.00 3.00
- storm-control action shutdown
- storm-control action trap
- spanning-tree portfast edge
- ip dhcp snooping limit rate 25
-!
-interface GigabitEthernet1/0/29
- switchport access vlan 20
- switchport mode access
- logging event spanning-tree
- logging event status
- no cdp tlv app
- no snmp trap link-status
- storm-control broadcast level 5.00 3.00
- storm-control multicast level 5.00 3.00
- storm-control action shutdown
- storm-control action trap
- spanning-tree portfast edge
- ip dhcp snooping limit rate 25
-!
-interface GigabitEthernet1/0/30
- switchport access vlan 20
- switchport mode access
- logging event spanning-tree
- logging event status
- no cdp tlv app
- no snmp trap link-status
- storm-control broadcast level 5.00 3.00
- storm-control multicast level 5.00 3.00
- storm-control action shutdown
- storm-control action trap
- spanning-tree portfast edge
- ip dhcp snooping limit rate 25
-!
-interface GigabitEthernet1/0/31
- switchport access vlan 20
- switchport mode access
- logging event spanning-tree
- logging event status
- no cdp tlv app
- no snmp trap link-status
- storm-control broadcast level 5.00 3.00
- storm-control multicast level 5.00 3.00
- storm-control action shutdown
- storm-control action trap
- spanning-tree portfast edge
- ip dhcp snooping limit rate 25
-!
-interface GigabitEthernet1/0/32
- switchport access vlan 20
- switchport mode access
- logging event spanning-tree
- logging event status
- no cdp tlv app
- no snmp trap link-status
- storm-control broadcast level 5.00 3.00
- storm-control multicast level 5.00 3.00
- storm-control action shutdown
- storm-control action trap
- spanning-tree portfast edge
- ip dhcp snooping limit rate 25
-!
-interface GigabitEthernet1/0/33
- switchport access vlan 20
- switchport mode access
- logging event spanning-tree
- logging event status
- no cdp tlv app
- no snmp trap link-status
- storm-control broadcast level 5.00 3.00
- storm-control multicast level 5.00 3.00
- storm-control action shutdown
- storm-control action trap
- spanning-tree portfast edge
- ip dhcp snooping limit rate 25
-!
-interface GigabitEthernet1/0/34
- switchport access vlan 20
- switchport mode access
- logging event spanning-tree
- logging event status
- no cdp tlv app
- no snmp trap link-status
- storm-control broadcast level 5.00 3.00
- storm-control multicast level 5.00 3.00
- storm-control action shutdown
- storm-control action trap
- spanning-tree portfast edge
- ip dhcp snooping limit rate 25
-!
-interface GigabitEthernet1/0/35
- switchport access vlan 20
- switchport mode access
- logging event spanning-tree
- logging event status
- no cdp tlv app
- no snmp trap link-status
- storm-control broadcast level 5.00 3.00
- storm-control multicast level 5.00 3.00
- storm-control action shutdown
- storm-control action trap
- spanning-tree portfast edge
- ip dhcp snooping limit rate 25
-!
-interface GigabitEthernet1/0/36
- switchport access vlan 20
- switchport mode access
- logging event spanning-tree
- logging event status
- no cdp tlv app
- no snmp trap link-status
- storm-control broadcast level 5.00 3.00
- storm-control multicast level 5.00 3.00
- storm-control action shutdown
- storm-control action trap
- spanning-tree portfast edge
- ip dhcp snooping limit rate 25
-!
-interface GigabitEthernet1/0/37
- switchport access vlan 20
- switchport mode access
- logging event spanning-tree
- logging event status
- no cdp tlv app
- no snmp trap link-status
- storm-control broadcast level 5.00 3.00
- storm-control multicast level 5.00 3.00
- storm-control action shutdown
- storm-control action trap
- spanning-tree portfast edge
- ip dhcp snooping limit rate 25
-!
-interface GigabitEthernet1/0/38
- switchport access vlan 20
- switchport mode access
- logging event spanning-tree
- logging event status
- no cdp tlv app
- no snmp trap link-status
- storm-control broadcast level 5.00 3.00
- storm-control multicast level 5.00 3.00
- storm-control action shutdown
- storm-control action trap
- spanning-tree portfast edge
- ip dhcp snooping limit rate 25
-!
-interface GigabitEthernet1/0/39
- switchport access vlan 20
- switchport mode access
- logging event spanning-tree
- logging event status
- no cdp tlv app
- no snmp trap link-status
- storm-control broadcast level 5.00 3.00
- storm-control multicast level 5.00 3.00
- storm-control action shutdown
- storm-control action trap
- spanning-tree portfast edge
- ip dhcp snooping limit rate 25
-!
-interface GigabitEthernet1/0/40
- switchport access vlan 20
- switchport mode access
- logging event spanning-tree
- logging event status
- no cdp tlv app
- no snmp trap link-status
- storm-control broadcast level 5.00 3.00
- storm-control multicast level 5.00 3.00
- storm-control action shutdown
- storm-control action trap
- spanning-tree portfast edge
- ip dhcp snooping limit rate 25
-!
-interface GigabitEthernet1/0/41
- switchport access vlan 20
- switchport mode access
- logging event spanning-tree
- logging event status
- no cdp tlv app
- no snmp trap link-status
- storm-control broadcast level 5.00 3.00
- storm-control multicast level 5.00 3.00
- storm-control action shutdown
- storm-control action trap
- spanning-tree portfast edge
- ip dhcp snooping limit rate 25
-!
-interface GigabitEthernet1/0/42
- switchport access vlan 20
- switchport mode access
- logging event spanning-tree
- logging event status
- no cdp tlv app
- no snmp trap link-status
- storm-control broadcast level 5.00 3.00
- storm-control multicast level 5.00 3.00
- storm-control action shutdown
- storm-control action trap
- spanning-tree portfast edge
- ip dhcp snooping limit rate 25
-!
-interface GigabitEthernet1/0/43
- switchport access vlan 20
- switchport mode access
- logging event spanning-tree
- logging event status
- no cdp tlv app
- no snmp trap link-status
- storm-control broadcast level 5.00 3.00
- storm-control multicast level 5.00 3.00
- storm-control action shutdown
- storm-control action trap
- spanning-tree portfast edge
- ip dhcp snooping limit rate 25
-!
-interface GigabitEthernet1/0/44
- switchport access vlan 20
- switchport mode access
- logging event spanning-tree
- logging event status
- no cdp tlv app
- no snmp trap link-status
- storm-control broadcast level 5.00 3.00
- storm-control multicast level 5.00 3.00
- storm-control action shutdown
- storm-control action trap
- spanning-tree portfast edge
- ip dhcp snooping limit rate 25
-!
-interface GigabitEthernet1/0/45
- switchport access vlan 20
- switchport mode access
- logging event spanning-tree
- logging event status
- no cdp tlv app
- no snmp trap link-status
- storm-control broadcast level 5.00 3.00
- storm-control multicast level 5.00 3.00
- storm-control action shutdown
- storm-control action trap
- spanning-tree portfast edge
- ip dhcp snooping limit rate 25
-!
-interface GigabitEthernet1/0/46
- switchport access vlan 20
- switchport mode access
- logging event spanning-tree
- logging event status
- no cdp tlv app
- no snmp trap link-status
- storm-control broadcast level 5.00 3.00
- storm-control multicast level 5.00 3.00
- storm-control action shutdown
- storm-control action trap
- spanning-tree portfast edge
- ip dhcp snooping limit rate 25
-!
-interface GigabitEthernet1/0/47
- description kab_322
- switchport access vlan 20
- switchport mode access
- logging event spanning-tree
- logging event status
- no cdp tlv app
- no snmp trap link-status
- storm-control broadcast level 5.00 3.00
- storm-control multicast level 5.00 3.00
- storm-control action shutdown
- storm-control action trap
- spanning-tree portfast edge
- ip dhcp snooping limit rate 25
-!
-interface GigabitEthernet1/0/48
- description 96.4_gi1/0/16
- switchport trunk allowed vlan 12,13,17,20,21,30-34
- switchport mode trunk
- logging event trunk-status
- logging event spanning-tree
- logging event status
- logging event subif-link-status
- storm-control broadcast level 20.00 10.00
- storm-control multicast level 20.00 10.00
- storm-control action trap
-!
-interface GigabitEthernet1/0/49
- switchport trunk allowed vlan 17
- switchport mode trunk
- shutdown
-!
-interface GigabitEthernet1/0/50
- switchport trunk allowed vlan 17
- switchport mode trunk
- shutdown
-!
-interface GigabitEthernet1/0/51
-!
-interface GigabitEthernet1/0/52
-!
-interface Vlan1
- no ip address
- no ip route-cache
- shutdown
-!
-interface Vlan17
- ip address 10.20.99.21 255.255.252.0
- no ip route-cache
-!
-ip ftp username FTP1
-ip ftp password 7 132323225A
-ip http server
-ip http authentication aaa login-authentication login-RADIUS
-ip http authentication aaa exec-authorization auth-RADIUS-exec
-ip http secure-server
-ip ssh version 2
-!
-kron occurrence backup at 17:00 recurring
- policy-list backup
-!
-kron policy-list backup
- cli copy startup-config tftp://dump.kolmar.pro/10.20.99.5
- cli copy vlan.dat tftp://dump.kolmar.pro/10.20.99.5_vlan
-!
-logging trap debugging
-logging host 10.10.0.142 transport udp port 5014
-!
-!
-snmp-server community public RO
-snmp mib flash cache
-!
-radius-server retransmit 1
-radius-server timeout 2
-radius-server key 7 0008180C014A050E1C2D4A4C050E
-!
-radius server cis.kolmar.pro_210
- address ipv4 10.10.0.210 auth-port 1812 acct-port 1813
- timeout 5
- retransmit 3
- key 7 141B190109152423372435372E04
-!
-radius server cis.kolmar.pro_212
- address ipv4 10.10.0.212 auth-port 1812 acct-port 1813
- timeout 5
- retransmit 3
- key 7 082D47440C080B1F01070A06263C
-!
-!
-line con 0
- exec-timeout 13 0
- privilege level 15
- authorization exec auth-RADIUS-exec
- logging synchronous
- login authentication login-RADIUS
-line vty 0 4
- exec-timeout 60 0
- privilege level 15
- authorization exec auth-RADIUS-exec
- logging synchronous
- login authentication login-RADIUS
- length 0
- transport input ssh
-line vty 5 15
- exec-timeout 60 0
- privilege level 15
- authorization exec auth-RADIUS-exec
- logging synchronous
- login authentication login-RADIUS
- transport input ssh
-!
-end
+$ terminal length 0
 
 
 
@@ -893,7 +13,7 @@ Compiled Mon 08-Mar-21 09:07 by prod_rel_team
 ROM: Bootstrap program is c1000 boot loader
 BOOTLDR: C1000 Boot Loader (C1000-HBOOT-M) Version 15.2(7r)E3, RELEASE SOFTWARE (fc4)
 
-NER-NSWS-03-99-21 uptime is 3 weeks, 6 hours, 0 minutes
+NER-NSWS-03-99-21 uptime is 3 weeks, 5 days, 5 hours, 50 minutes
 System returned to ROM by power-on
 System image file is "flash:/c1000-universalk9-mz.152-7.E4/c1000-universalk9-mz.152-7.E4.bin"
 Last reload reason: power-on
@@ -948,6 +68,104 @@ Configuration register is 0xF
 
 
 
+$ show lldp neighbors detail
+------------------------------------------------
+Local Intf: Gi1/0/2
+Chassis id: DESKTOP-MHTTK8P
+Port id: 9c6b.0010.5510
+Port Description - not advertised
+System Name - not advertised
+System Description - not advertised
+
+Time remaining: 2891 seconds
+System Capabilities - not advertised
+Enabled Capabilities - not advertised
+Management Addresses - not advertised
+Auto Negotiation - supported, enabled
+Physical media capabilities:
+    1000baseT(FD)
+Media Attachment Unit type - not advertised
+Vlan ID: - not advertised
+
+MED Information:
+
+    MED Codes:
+          (NP) Network Policy, (LI) Location Identification
+          (PS) Power Source Entity, (PD) Power Device
+          (IN) Inventory
+
+    Inventory information - not advertised
+    Capabilities: 
+    Device type: Endpoint Class I
+    Network Policies - not advertised
+    Power requirements - not advertised
+    Location - not advertised
+
+------------------------------------------------
+Local Intf: Gi1/0/48
+Chassis id: a84f.b1a9.d000
+Port id: Gi1/0/16
+Port Description: 99.21_gi1/0/48
+System Name: NER-NSWR-01-96-4.kolmar.ru
+
+System Description: 
+Cisco IOS Software [Amsterdam], Catalyst L3 Switch Software (CAT9K_LITE_IOSXE), Version 17.3.4b, RELEASE SOFTWARE (fc1)
+Technical Support: http://www.cisco.com/techsupport
+Copyright (c) 1986-2021 by Cisco Systems, Inc.
+Compiled Tue 19-Oct-21 03:16 by mcpr
+
+Time remaining: 100 seconds
+System Capabilities: B,R
+Enabled Capabilities: B,R
+Management Addresses:
+    IP: 10.20.96.4
+Auto Negotiation - supported, enabled
+Physical media capabilities:
+    1000baseT(FD)
+    100base-TX(FD)
+    100base-TX(HD)
+    10base-T(FD)
+    10base-T(HD)
+Media Attachment Unit type: 30
+Vlan ID: 1
+
+------------------------------------------------
+Local Intf: Gi1/0/1
+Chassis id: 94c6.9178.89be
+Port id: 94c6.9178.89be
+Port Description - not advertised
+System Name - not advertised
+System Description - not advertised
+
+Time remaining: 3525 seconds
+System Capabilities - not advertised
+Enabled Capabilities - not advertised
+Management Addresses - not advertised
+Auto Negotiation - supported, enabled
+Physical media capabilities:
+    1000baseT(FD)
+Media Attachment Unit type - not advertised
+Vlan ID: - not advertised
+
+MED Information:
+
+    MED Codes:
+          (NP) Network Policy, (LI) Location Identification
+          (PS) Power Source Entity, (PD) Power Device
+          (IN) Inventory
+
+    Inventory information - not advertised
+    Capabilities: 
+    Device type: Endpoint Class I
+    Network Policies - not advertised
+    Power requirements - not advertised
+    Location - not advertised
+
+
+Total entries displayed: 3
+
+
+
 $ show cdp neighbors detail
 -------------------------
 Device ID: NER-NSWR-01-96-4.kolmar.ru
@@ -955,7 +173,7 @@ Entry address(es):
   IP address: 10.20.96.4
 Platform: cisco C9200-24P,  Capabilities: Router Switch IGMP 
 Interface: GigabitEthernet1/0/48,  Port ID (outgoing port): GigabitEthernet1/0/16
-Holdtime : 168 sec
+Holdtime : 173 sec
 
 Version :
 Cisco IOS Software [Amsterdam], Catalyst L3 Switch Software (CAT9K_LITE_IOSXE), Version 17.3.4b, RELEASE SOFTWARE (fc1)
@@ -974,128 +192,13 @@ Management address(es):
 Total cdp entries displayed : 1
 
 
-$ show lldp neighbors detail
-------------------------------------------------
-Local Intf: Gi1/0/2
-Chassis id: DESKTOP-MHTTK8P
-Port id: 9c6b.0010.5510
-Port Description - not advertised
-System Name - not advertised
-System Description - not advertised
+$ show cdp neighbors
+Capability Codes: R - Router, T - Trans Bridge, B - Source Route Bridge
+                  S - Switch, H - Host, I - IGMP, r - Repeater, P - Phone, 
+                  D - Remote, C - CVTA, M - Two-port Mac Relay 
 
-Time remaining: 3236 seconds
-System Capabilities - not advertised
-Enabled Capabilities - not advertised
-Management Addresses - not advertised
-Auto Negotiation - supported, enabled
-Physical media capabilities:
-    1000baseT(FD)
-Media Attachment Unit type - not advertised
-Vlan ID: - not advertised
+Device ID        Local Intrfce     Holdtme    Capability  Platform  Port ID
+NER-NSWR-01-96-4.kolmar.ru
+                 Gig 1/0/48        172             R S I  C9200-24P Gig 1/0/16
 
-MED Information:
-
-    MED Codes:
-          (NP) Network Policy, (LI) Location Identification
-          (PS) Power Source Entity, (PD) Power Device
-          (IN) Inventory
-
-    Inventory information - not advertised
-    Capabilities: 
-    Device type: Endpoint Class I
-    Network Policies - not advertised
-    Power requirements - not advertised
-    Location - not advertised
-
-------------------------------------------------
-Local Intf: Gi1/0/1
-Chassis id: 94c6.9178.89be
-Port id: 94c6.9178.89be
-Port Description - not advertised
-System Name - not advertised
-System Description - not advertised
-
-Time remaining: 2657 seconds
-System Capabilities - not advertised
-Enabled Capabilities - not advertised
-Management Addresses - not advertised
-Auto Negotiation - supported, enabled
-Physical media capabilities:
-    1000baseT(FD)
-Media Attachment Unit type - not advertised
-Vlan ID: - not advertised
-
-MED Information:
-
-    MED Codes:
-          (NP) Network Policy, (LI) Location Identification
-          (PS) Power Source Entity, (PD) Power Device
-          (IN) Inventory
-
-    Inventory information - not advertised
-    Capabilities: 
-    Device type: Endpoint Class I
-    Network Policies - not advertised
-    Power requirements - not advertised
-    Location - not advertised
-
-
-Total entries displayed: 2
-
-
-
-$ show interface status
-
-Port      Name               Status       Vlan       Duplex  Speed Type 
-Gi1/0/1   kab_322            connected    20         a-full a-1000 10/100/1000BaseTX
-Gi1/0/2   kab_322            connected    20         a-full a-1000 10/100/1000BaseTX
-Gi1/0/3   kab_322            connected    21         a-full a-1000 10/100/1000BaseTX
-Gi1/0/4   kab_322            connected    21         a-full a-1000 10/100/1000BaseTX
-Gi1/0/5                      notconnect   20           auto   auto 10/100/1000BaseTX
-Gi1/0/6                      notconnect   20           auto   auto 10/100/1000BaseTX
-Gi1/0/7                      notconnect   20           auto   auto 10/100/1000BaseTX
-Gi1/0/8                      notconnect   20           auto   auto 10/100/1000BaseTX
-Gi1/0/9                      notconnect   20           auto   auto 10/100/1000BaseTX
-Gi1/0/10                     notconnect   20           auto   auto 10/100/1000BaseTX
-Gi1/0/11                     notconnect   20           auto   auto 10/100/1000BaseTX
-Gi1/0/12                     notconnect   20           auto   auto 10/100/1000BaseTX
-Gi1/0/13                     notconnect   20           auto   auto 10/100/1000BaseTX
-Gi1/0/14                     notconnect   20           auto   auto 10/100/1000BaseTX
-Gi1/0/15                     notconnect   20           auto   auto 10/100/1000BaseTX
-Gi1/0/16                     notconnect   20           auto   auto 10/100/1000BaseTX
-Gi1/0/17                     notconnect   20           auto   auto 10/100/1000BaseTX
-Gi1/0/18                     notconnect   20           auto   auto 10/100/1000BaseTX
-Gi1/0/19                     notconnect   20           auto   auto 10/100/1000BaseTX
-Gi1/0/20                     notconnect   20           auto   auto 10/100/1000BaseTX
-Gi1/0/21                     notconnect   20           auto   auto 10/100/1000BaseTX
-Gi1/0/22                     notconnect   20           auto   auto 10/100/1000BaseTX
-Gi1/0/23                     notconnect   20           auto   auto 10/100/1000BaseTX
-Gi1/0/24                     notconnect   20           auto   auto 10/100/1000BaseTX
-Gi1/0/25                     notconnect   20           auto   auto 10/100/1000BaseTX
-Gi1/0/26                     notconnect   20           auto   auto 10/100/1000BaseTX
-Gi1/0/27                     notconnect   20           auto   auto 10/100/1000BaseTX
-Gi1/0/28                     notconnect   20           auto   auto 10/100/1000BaseTX
-Gi1/0/29                     notconnect   20           auto   auto 10/100/1000BaseTX
-Gi1/0/30                     notconnect   20           auto   auto 10/100/1000BaseTX
-Gi1/0/31                     notconnect   20           auto   auto 10/100/1000BaseTX
-Gi1/0/32                     notconnect   20           auto   auto 10/100/1000BaseTX
-Gi1/0/33                     notconnect   20           auto   auto 10/100/1000BaseTX
-Gi1/0/34                     notconnect   20           auto   auto 10/100/1000BaseTX
-Gi1/0/35                     notconnect   20           auto   auto 10/100/1000BaseTX
-Gi1/0/36                     notconnect   20           auto   auto 10/100/1000BaseTX
-Gi1/0/37                     notconnect   20           auto   auto 10/100/1000BaseTX
-Gi1/0/38                     notconnect   20           auto   auto 10/100/1000BaseTX
-Gi1/0/39                     notconnect   20           auto   auto 10/100/1000BaseTX
-Gi1/0/40                     notconnect   20           auto   auto 10/100/1000BaseTX
-Gi1/0/41                     notconnect   20           auto   auto 10/100/1000BaseTX
-Gi1/0/42                     notconnect   20           auto   auto 10/100/1000BaseTX
-Gi1/0/43                     notconnect   20           auto   auto 10/100/1000BaseTX
-Gi1/0/44                     notconnect   20           auto   auto 10/100/1000BaseTX
-Gi1/0/45                     notconnect   20           auto   auto 10/100/1000BaseTX
-Gi1/0/46                     notconnect   20           auto   auto 10/100/1000BaseTX
-Gi1/0/47  kab_322            notconnect   20           auto   auto 10/100/1000BaseTX
-Gi1/0/48  96.4_gi1/0/16      connected    trunk      a-full a-1000 10/100/1000BaseTX
-Gi1/0/49                     disabled     1            auto   auto Not Present
-Gi1/0/50                     disabled     1            auto   auto Not Present
-Gi1/0/51                     notconnect   1            auto   auto Not Present
-Gi1/0/52                     notconnect   1            auto   auto Not Present
+Total cdp entries displayed : 1

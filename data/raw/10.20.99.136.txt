@@ -1,73 +1,344 @@
 
 
-$ show running-config
-[ERROR executing command: 
-Pattern not detected: 'DEN\\-NSWS\\-61\\-99\\-136\\#' in output.
+$ show system information
 
-Things you might try to fix this:
-1. Explicitly set your pattern using the expect_string argument.
-2. Increase the read_timeout to a larger value.
+Hardware Version                  : 1v1
+Software Version                  : 10.3.5
+Firmware Version                  : 10.3.5
 
-You can also look at the Netmiko session_log or debug log for more information.
-
-]
-
-
-$ show version
-[ERROR executing command: 
-
-Pattern not detected: 'show\\ version' in output.
-
-Things you might try to fix this:
-1. Adjust the regex pattern to better identify the terminating string. Note, in
-many situations the pattern is automatically based on the network device's prompt.
-2. Increase the read_timeout to a larger value.
-
-You can also look at the Netmiko session_log or debug log for more information.
-
-]
+Hardware Serial Number            : ESD1007996
+Switch Base MAC Address           : cc:9d:a2:80:1c:80
+Software Serial Number            : c7ea93f0
+System Contact                    : 
+System Name                       : DEN-NSWS-61-99-136
+System Location                   : 
+System Description                : MES2424P rev.C1 AC 28-port 1G/10G Managed Switch with 24 POE+ ports
+Logging Option                    : Flash Logging
+Device Uptime                     : 92 Days, 10 Hrs, 7 Mins, 29 Secs
+Login Authentication Mode         : Local
+Config Save Status                : Successful
+Remote Save Status                : Not Initiated
+Config Restore Status             : Not Initiated
+Traffic Separation Control        : none
 
 
-$ show cdp neighbors detail
-[ERROR executing command: 
-
-Pattern not detected: 'show\\ cdp\\ neighbors\\ detail' in output.
-
-Things you might try to fix this:
-1. Adjust the regex pattern to better identify the terminating string. Note, in
-many situations the pattern is automatically based on the network device's prompt.
-2. Increase the read_timeout to a larger value.
-
-You can also look at the Netmiko session_log or debug log for more information.
-
-]
 
 
 $ show lldp neighbors detail
-[ERROR executing command: 
+
+                
+
 
-Pattern not detected: 'show\\ lldp\\ neighbors\\ detail' in output.
+--More--
+                
+
 
-Things you might try to fix this:
-1. Adjust the regex pattern to better identify the terminating string. Note, in
-many situations the pattern is automatically based on the network device's prompt.
-2. Increase the read_timeout to a larger value.
+--More--
+                
+
 
-You can also look at the Netmiko session_log or debug log for more information.
+--More--
+                
+
 
-]
+--More--
+                
+
+Extended 802.3 TLV Info 
+-MAC PHY Configuration & Status
+100base-TX(FD)
+Symm PAUSE(FD)
+1000base-X, -LX, -SX, -CX(FD)
+1000base-T(HD)
+1000base-T(FD)
+-Link Aggregation
+Capability & Status           : Not Capable, Not In Aggregation
+Aggregated Port Id            : 0
+-Maximum Frame Size           : 0
+
+Extended 802.1 TLV Info 
+-Port VLAN Id                 : 1
+-Port & Protocol VLAN Id 
+Protocol Vlan Tlv             : Not Advertised
+-Vlan Name
+Vlan Name Tlv                 : Not Advertised
+
+-LLDP MED Capability TLV      : Not Advertised 
+Capabilities Supported        : 0 
+Capabilities Enabled          : 0 
+Device Class                  : 0 
 
 
-$ show interface status
-[ERROR executing command: 
+--More--
+                
+
 
-Pattern not detected: 'show\\ interface\\ status' in output.
+--More--
+                
+
 
-Things you might try to fix this:
-1. Adjust the regex pattern to better identify the terminating string. Note, in
-many situations the pattern is automatically based on the network device's prompt.
-2. Increase the read_timeout to a larger value.
+--More--
+                
+
 
-You can also look at the Netmiko session_log or debug log for more information.
+--More--
+                
+
 
-]
+--More--
+                
+
+-LLDP MED Inventory TLV       : Not Advertised
+
+-LLDP-MED Nw Policy TLV       : Not Advertised 
+
+-LLDP-MED Location Info TLV   : Not Advertised 
+
+-LLDP-MED Ex-PowerViaMDI TLV  : Not Advertised 
+------------------------------------------------------------
+
+Total Entries Displayed : 1
+[27m
+                       
+
+DEN-NSWS-61-99-136#neighbors detail
+
+% Invalid Command
+
+
+
+$ show vlan
+
+                
+
+
+--More--
+                
+
+
+--More--
+                
+
+
+--More--
+                
+
+
+--More--
+                
+Name                : Transport
+Status              : Permanent
+Egress Ethertype    : 0x8100
+Service Loopback Status   : Disabled 
+----------------------------------------------------
+Vlan ID             : 30
+Member Ports        : gi 0/1, gi 0/2, gi 0/3, gi 0/4, gi 0/5, gi 0/6
+                      gi 0/23, gi 0/24, te 0/1, te 0/2, te 0/3, te 0/4
+Untagged Ports      : None 
+Forbidden Ports     : None 
+Name                : Wi-fi
+Status              : Permanent
+Egress Ethertype    : 0x8100
+Service Loopback Status   : Disabled 
+----------------------------------------------------
+Vlan ID             : 31
+Member Ports        : gi 0/1, gi 0/2, gi 0/3, gi 0/4, gi 0/5, gi 0/6
+                      gi 0/23, gi 0/24, te 0/1, te 0/2, te 0/3, te 0/4
+Untagged Ports      : None 
+Forbidden Ports     : None 
+Name                : Wi-fi_guest
+Status              : Permanent
+Egress Ethertype    : 0x8100
+Service Loopback Status   : Disabled 
+
+
+--More--
+                
+
+
+--More--
+                
+
+
+--More--
+                
+
+
+--More--
+                
+
+
+--More--
+                
+----------------------------------------------------
+
+
+--More--
+
+
+$ show interfaces status
+
+
+Port        Type          Status           Duplex   Speed       Negotiation     Capability      Uptime (d,h:m:s)
+----        ------------  ------           ------   -----       -----------     ----------      ----------------
+gi 0/1      1G-Copper     Up               Full     1 Gbps      No-Negotiation  Auto-MDIX on    47,2:18:24      
+gi 0/2      1G-Copper     Up               Full     1 Gbps      No-Negotiation  Auto-MDIX on    47,2:18:25      
+gi 0/3      1G-Copper     Up               Full     1 Gbps      No-Negotiation  Auto-MDIX on    47,2:18:24      
+gi 0/4      1G-Copper     Up               Full     1 Gbps      No-Negotiation  Auto-MDIX on    47,2:18:24      
+gi 0/5      1G-Copper     Up               Full     1 Gbps      No-Negotiation  Auto-MDIX on    47,2:18:24      
+gi 0/6      1G-Copper     Up               Full     1 Gbps      No-Negotiation  Auto-MDIX on    47,2:18:25      
+gi 0/7      1G-Copper     Up               Full     100 Mbps    Auto            Auto-MDIX on    51,1:38:52      
+gi 0/8      1G-Copper     Down (nc)        -        -           No-Negotiation  Auto-MDIX on    -               
+gi 0/9      1G-Copper     Down (nc)        -        -           No-Negotiation  Auto-MDIX on    -               
+gi 0/10     1G-Copper     Up               Full     100 Mbps    Auto            Auto-MDIX on    46,6:49:56      
+gi 0/11     1G-Copper     Up               Full     100 Mbps    No-Negotiation  Auto-MDIX on    47,2:28:1       
+gi 0/12     1G-Copper     Up               Full     100 Mbps    No-Negotiation  Auto-MDIX on    46,23:21:34     
+gi 0/13     1G-Copper     Down (nc)        -        -           No-Negotiation  Auto-MDIX on    -               
+gi 0/14     1G-Copper     Down (nc)        -        -           No-Negotiation  Auto-MDIX on    -               
+gi 0/15     1G-Copper     Down (nc)        -        -           No-Negotiation  Auto-MDIX on    -               
+gi 0/16     1G-Copper     Down (nc)        -        -           No-Negotiation  Auto-MDIX on    -               
+gi 0/17     1G-Copper     Down (nc)        -        -           No-Negotiation  Auto-MDIX on    -               
+gi 0/18     1G-Copper     Down (nc)        -        -           No-Negotiation  Auto-MDIX on    -               
+gi 0/19     1G-Copper     Down (nc)        -        -           No-Negotiation  Auto-MDIX on    -               
+gi 0/20     1G-Copper     Down (nc)        -        -           No-Negotiation  Auto-MDIX on    -               
+
+
+--More--
+
+
+$ show interfaces
+
+gi 0/1 up, line protocol is up (connected)
+Bridge Port Type: Customer Bridge Port
+
+Interface SubType: gigabitEthernet
+
+Hardware Address is cc:9d:a2:80:1c:81
+MTU  12288 bytes, Full duplex, 1 Gbps,  No-Negotiation
+HOL Block Prevention enabled.
+CPU Controlled Learning disabled.
+Auto-MDIX on
+Input flow-control is off,output flow-control is off
+Media-type: prefer-fiber
+
+Link Up/Down Trap is disabled 
+
+Reception Counters
+   Octets                    : 689685650
+   Unicast Packets           : 14992358
+   Multicast Packets         : 278376
+   Broadcast Packets         : 5752
+   Discarded Packets         : 4
+   Error Packets             : 0
+
+
+--More--
+
+
+$ show running-config
+
+                
+
+
+--More--
+                
+
+
+--More--
+                
+
+
+--More--
+                
+
+
+--More--
+                
+
+Link Up/Down Trap is disabled 
+
+Reception Counters
+   Octets                    : 4141284272
+   Unicast Packets           : 16159077
+   Multicast Packets         : 275353
+   Broadcast Packets         : 5672
+   Discarded Packets         : 3
+   Error Packets             : 0
+   Unknown Protocol          : 0
+   CRC Errors                : 0
+   Symbol Errors             : 0
+   Oversized w/ Bad CRC      : 0
+
+Transmission Counters
+   Octets                    : 2147376150
+   Unicast Packets           : 22646381
+   Multicast Packets         : 46070153
+   Broadcast Packets         : 37709440
+   Discarded Packets         : 0
+   Error Drops               : 0
+   Error Packets             : 0
+
+
+
+--More--
+                
+
+
+--More--
+                
+
+
+--More--
+                
+
+
+--More--
+                
+
+
+--More--
+                
+
+
+--More--
+                
+
+
+--More--
+                
+
+
+--More--
+                
+
+
+--More--
+                
+
+
+--More--
+                
+
+
+--More--
+                
+
+
+--More--
+                
+
+
+--More--
+                
+
+
+--More--
+                
+
+
+--More--
+                
+gi 0/3 up, line protocol is up (connected)
+
+
+--More--

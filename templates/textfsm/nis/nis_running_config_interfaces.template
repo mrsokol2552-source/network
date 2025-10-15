@@ -1,0 +1,12 @@
+Value Interface (GigabitEthernet\s+\d+/\d+)
+Value Mode (access|trunk)
+Value Vlan (\d+)
+
+Start
+  ^interface\s+${Interface} -> INT
+
+INT
+  ^interface\s+${Interface} -> Start
+  ^\s*switchport\s+mode\s+trunk -> Record
+  ^\s*switchport\s+access\s+vlan\s+${Vlan} -> Record
+

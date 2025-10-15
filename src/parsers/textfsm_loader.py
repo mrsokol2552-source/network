@@ -1,19 +1,19 @@
-# -*- coding: utf-8 -*-
+﻿# -*- coding: utf-8 -*-
 """
-textfsm_loader.py — лоадер TextFSM-шаблонов и парсер сырых CLI в нормализованный JSON.
+textfsm_loader.py вЂ” Р»РѕР°РґРµСЂ TextFSM-С€Р°Р±Р»РѕРЅРѕРІ Рё РїР°СЂСЃРµСЂ СЃС‹СЂС‹С… CLI РІ РЅРѕСЂРјР°Р»РёР·РѕРІР°РЅРЅС‹Р№ JSON.
 
-Назначение:
-- Загрузить шаблоны TextFSM согласно config.json (vendors.*.textfsm_glob).
-- Применить соответствующие шаблоны к сырым CLI-файлам из inventory.json (cli_files[]).
-- Вернуть структурированный JSON для последующей нормализации/рендера.
+РќР°Р·РЅР°С‡РµРЅРёРµ:
+- Р—Р°РіСЂСѓР·РёС‚СЊ С€Р°Р±Р»РѕРЅС‹ TextFSM СЃРѕРіР»Р°СЃРЅРѕ config.json (vendors.*.textfsm_glob).
+- РџСЂРёРјРµРЅРёС‚СЊ СЃРѕРѕС‚РІРµС‚СЃС‚РІСѓСЋС‰РёРµ С€Р°Р±Р»РѕРЅС‹ Рє СЃС‹СЂС‹Рј CLI-С„Р°Р№Р»Р°Рј РёР· inventory.json (cli_files[]).
+- Р’РµСЂРЅСѓС‚СЊ СЃС‚СЂСѓРєС‚СѓСЂРёСЂРѕРІР°РЅРЅС‹Р№ JSON РґР»СЏ РїРѕСЃР»РµРґСѓСЋС‰РµР№ РЅРѕСЂРјР°Р»РёР·Р°С†РёРё/СЂРµРЅРґРµСЂР°.
 
-Ожидаемые файлы:
+РћР¶РёРґР°РµРјС‹Рµ С„Р°Р№Р»С‹:
 - config/config.json
 - data/input/inventory.json
 - templates/textfsm/<vendor>/*.template
-- data/input/cli/<ФАЙЛЫ_ИЗ_inventory.yml>
+- data/input/cli/<Р¤РђР™Р›Р«_РР—_inventory.yml>
 
-Выход (в памяти): dict:
+Р’С‹С…РѕРґ (РІ РїР°РјСЏС‚Рё): dict:
 {
   "hosts": {
     "<hostname>": {
@@ -36,10 +36,10 @@ textfsm_loader.py — лоадер TextFSM-шаблонов и парсер сы
   }
 }
 
-Примечания:
-- Мы не «угадываем» соответствие конкретного шаблона к конкретной команде — применяем все шаблоны вендора, а записи,
-  где ничего не найдено, просто дают пустой список. На следующем этапе можно добавить маппинг шаблонов к файлам.
-- Ошибки не фатальны: аккумулируем и продолжаем.
+РџСЂРёРјРµС‡Р°РЅРёСЏ:
+- РњС‹ РЅРµ В«СѓРіР°РґС‹РІР°РµРјВ» СЃРѕРѕС‚РІРµС‚СЃС‚РІРёРµ РєРѕРЅРєСЂРµС‚РЅРѕРіРѕ С€Р°Р±Р»РѕРЅР° Рє РєРѕРЅРєСЂРµС‚РЅРѕР№ РєРѕРјР°РЅРґРµ вЂ” РїСЂРёРјРµРЅСЏРµРј РІСЃРµ С€Р°Р±Р»РѕРЅС‹ РІРµРЅРґРѕСЂР°, Р° Р·Р°РїРёСЃРё,
+  РіРґРµ РЅРёС‡РµРіРѕ РЅРµ РЅР°Р№РґРµРЅРѕ, РїСЂРѕСЃС‚Рѕ РґР°СЋС‚ РїСѓСЃС‚РѕР№ СЃРїРёСЃРѕРє. РќР° СЃР»РµРґСѓСЋС‰РµРј СЌС‚Р°РїРµ РјРѕР¶РЅРѕ РґРѕР±Р°РІРёС‚СЊ РјР°РїРїРёРЅРі С€Р°Р±Р»РѕРЅРѕРІ Рє С„Р°Р№Р»Р°Рј.
+- РћС€РёР±РєРё РЅРµ С„Р°С‚Р°Р»СЊРЅС‹: Р°РєРєСѓРјСѓР»РёСЂСѓРµРј Рё РїСЂРѕРґРѕР»Р¶Р°РµРј.
 """
 
 from __future__ import annotations
@@ -52,18 +52,19 @@ from pathlib import Path
 from typing import Dict, List, Any, Tuple
 from concurrent.futures import ThreadPoolExecutor, as_completed
 import os
+import ipaddress
 
-# Внешние зависимости
-# YAML больше не используется; config и inventory читаем как JSON
+# Р’РЅРµС€РЅРёРµ Р·Р°РІРёСЃРёРјРѕСЃС‚Рё
+# YAML Р±РѕР»СЊС€Рµ РЅРµ РёСЃРїРѕР»СЊР·СѓРµС‚СЃСЏ; config Рё inventory С‡РёС‚Р°РµРј РєР°Рє JSON
 
 try:
     import textfsm
 except Exception as e:  # pragma: no cover
-    raise RuntimeError("Отсутствует зависимость 'textfsm'. Установи: pip install textfsm") from e
+    raise RuntimeError("РћС‚СЃСѓС‚СЃС‚РІСѓРµС‚ Р·Р°РІРёСЃРёРјРѕСЃС‚СЊ 'textfsm'. РЈСЃС‚Р°РЅРѕРІРё: pip install textfsm") from e
 
 
 # -----------------------------
-# Конфиг и инвентарь — лёгкие DTO
+# РљРѕРЅС„РёРі Рё РёРЅРІРµРЅС‚Р°СЂСЊ вЂ” Р»С‘РіРєРёРµ DTO
 # -----------------------------
 
 @dataclass
@@ -82,7 +83,7 @@ class Config:
     @staticmethod
     def load(path: Path) -> "Config":
         raw = json.loads(path.read_text(encoding="utf-8"))
-        root = path.parent.parent  # .../config -> корень проекта
+        root = path.parent.parent  # .../config -> РєРѕСЂРµРЅСЊ РїСЂРѕРµРєС‚Р°
         cli_dir = (root / raw["paths"]["cli_dir"]).resolve()
         vendors: Dict[str, VendorSpec] = {}
 
@@ -135,7 +136,7 @@ class Inventory:
 
 
 # -----------------------------
-# Загрузка шаблонов
+# Р—Р°РіСЂСѓР·РєР° С€Р°Р±Р»РѕРЅРѕРІ
 # -----------------------------
 
 @dataclass
@@ -154,15 +155,15 @@ class TemplateLoader:
     def load_vendor_templates(self, vendor: str) -> List[CompiledTemplate]:
         spec = self.config.vendors.get(vendor)
         if not spec:
-            self.logger.warning("Вендор %s не задан в config.json->vendors", vendor)
+            self.logger.warning("Р’РµРЅРґРѕСЂ %s РЅРµ Р·Р°РґР°РЅ РІ config.json->vendors", vendor)
             return []
 
         pattern = spec.textfsm_glob
         if not pattern:
-            self.logger.warning("Для вендора %s не задан textfsm_glob", vendor)
+            self.logger.warning("Р”Р»СЏ РІРµРЅРґРѕСЂР° %s РЅРµ Р·Р°РґР°РЅ textfsm_glob", vendor)
             return []
 
-        glob_root = self.config.root  # glob относительный от корня проекта
+        glob_root = self.config.root  # glob РѕС‚РЅРѕСЃРёС‚РµР»СЊРЅС‹Р№ РѕС‚ РєРѕСЂРЅСЏ РїСЂРѕРµРєС‚Р°
         matches = sorted(glob_root.glob(pattern))
         compiled: List[CompiledTemplate] = []
 
@@ -179,14 +180,14 @@ class TemplateLoader:
                     )
                 )
             except Exception as e:
-                self.logger.error("Ошибка компиляции шаблона %s: %s", tpath, e)
+                self.logger.error("РћС€РёР±РєР° РєРѕРјРїРёР»СЏС†РёРё С€Р°Р±Р»РѕРЅР° %s: %s", tpath, e)
 
-        self.logger.info("Загружено шаблонов: vendor=%s count=%d", vendor, len(compiled))
+        self.logger.info("Р—Р°РіСЂСѓР¶РµРЅРѕ С€Р°Р±Р»РѕРЅРѕРІ: vendor=%s count=%d", vendor, len(compiled))
         return compiled
 
 
 # -----------------------------
-# Основной парсер
+# РћСЃРЅРѕРІРЅРѕР№ РїР°СЂСЃРµСЂ
 # -----------------------------
 
 class TextFSMParser:
@@ -215,6 +216,34 @@ class TextFSMParser:
             return "qtech"
         return "cisco_ios"
 
+    # Vendor hints support (config/collect/vendor_hints.json)
+    def _load_vendor_hints(self) -> List[Dict[str, str]]:
+        p = self.config.root / "config" / "collect" / "vendor_hints.json"
+        try:
+            if p.exists():
+                raw = json.loads(p.read_text(encoding="utf-8"))
+                items = raw.get("ranges") if isinstance(raw, dict) else raw
+                return [i for i in (items or []) if isinstance(i, dict) and i.get("cidr") and i.get("vendor")]
+        except Exception:
+            return []
+        return []
+
+    def _vendor_hint_for_ip(self, ip: str) -> str | None:
+        hints = getattr(self, "_vendor_hints_cache", None)
+        if hints is None:
+            hints = self._vendor_hints_cache = self._load_vendor_hints()
+        try:
+            addr = ipaddress.ip_address(ip)
+        except Exception:
+            return None
+        for item in hints:
+            try:
+                if addr in ipaddress.ip_network(str(item.get("cidr")), strict=False):
+                    return str(item.get("vendor"))
+            except Exception:
+                continue
+        return None
+
     def _templates_for_vendor(self, vendor: str) -> List[CompiledTemplate]:
         if vendor not in self._cache_vendor_templates:
             loader = TemplateLoader(self.config, self.log)
@@ -222,13 +251,13 @@ class TextFSMParser:
         return self._cache_vendor_templates[vendor]
 
     def _read_cli_text(self, rel_path: str) -> Tuple[str, Path | None]:
-        """Читает CLI-файл из paths.cli_dir. Возвращает (text, full_path|None)."""
+        """Р§РёС‚Р°РµС‚ CLI-С„Р°Р№Р» РёР· paths.cli_dir. Р’РѕР·РІСЂР°С‰Р°РµС‚ (text, full_path|None)."""
         full = (self.config.cli_dir / rel_path).resolve()
         try:
             text = full.read_text(encoding="utf-8", errors="replace")
             return text, full
         except Exception as e:
-            self.log.error("Не удалось прочитать CLI-файл %s: %s", full, e)
+            self.log.error("РќРµ СѓРґР°Р»РѕСЃСЊ РїСЂРѕС‡РёС‚Р°С‚СЊ CLI-С„Р°Р№Р» %s: %s", full, e)
             self.meta_errors.append(f"read_error:{rel_path}:{e}")
             return "", None
 
@@ -238,22 +267,26 @@ class TextFSMParser:
             "meta": {"templates_total": 0, "errors": self.meta_errors},
         }
 
-        # --- Fallback: если inventory пуст, собрать устройства прямо из cli_dir ---
+        # --- Fallback: если inventory пуст, собрать устройства прямо из cli_dir (включая подкаталоги) ---
         if not self.inventory.devices:
-            for p in sorted(self.config.cli_dir.glob("*.txt")):
+            for p in sorted(self.config.cli_dir.rglob("*.txt")):
                 try:
                     head = p.read_text(encoding="utf-8", errors="ignore")[:4000]
                 except Exception:
                     head = ""
                 m = re.search(r'(?m)^\s*hostname\s+([\w\-.]+)', head)
-                hostname = m.group(1) if m else p.stem  # p.stem = имя файла (IP)
-                vendor = self._guess_vendor(head)
+                hostname = m.group(1) if m else p.stem
+                vendor = self._vendor_hint_for_ip(p.stem) or self._guess_vendor(head)
                 # зарегистрировать устройство и список файлов
                 self.inventory.devices[hostname] = Device(hostname=hostname, vendor=vendor)
-                self.inventory.cli_files[hostname] = CliFilesEntry(hostname=hostname, files=[str(p.name)])
+                try:
+                    rel = str(p.relative_to(self.config.cli_dir))
+                except Exception:
+                    rel = p.name
+                self.inventory.cli_files[hostname] = CliFilesEntry(hostname=hostname, files=[rel])
         # --- /Fallback ---
 
-        # посчитать общее число шаблонов (для инфо)
+        # РїРѕСЃС‡РёС‚Р°С‚СЊ РѕР±С‰РµРµ С‡РёСЃР»Рѕ С€Р°Р±Р»РѕРЅРѕРІ (РґР»СЏ РёРЅС„Рѕ)
         total_templates = 0
         seen_vendors: set[str] = set(d.vendor for d in self.inventory.devices.values() if d.vendor)
         for v in seen_vendors:
@@ -268,23 +301,23 @@ class TextFSMParser:
                 "errors": [],
             }
 
-            # какие файлы нам нужно разобрать для этого хоста
+            # РєР°РєРёРµ С„Р°Р№Р»С‹ РЅР°Рј РЅСѓР¶РЅРѕ СЂР°Р·РѕР±СЂР°С‚СЊ РґР»СЏ СЌС‚РѕРіРѕ С…РѕСЃС‚Р°
             cf = self.inventory.cli_files.get(hostname)
             if not cf or not cf.files:
-                # это не ошибка — устройство может заполняться из inventory.json без CLI
+                # СЌС‚Рѕ РЅРµ РѕС€РёР±РєР° вЂ” СѓСЃС‚СЂРѕР№СЃС‚РІРѕ РјРѕР¶РµС‚ Р·Р°РїРѕР»РЅСЏС‚СЊСЃСЏ РёР· inventory.json Р±РµР· CLI
                 result["hosts"][hostname] = host_entry
                 continue
 
             host_entry["raw_files"] = list(cf.files)
 
-            # шаблоны по вендору
+            # С€Р°Р±Р»РѕРЅС‹ РїРѕ РІРµРЅРґРѕСЂСѓ
             templates = self._templates_for_vendor(device.vendor or "")
             if not templates:
                 msg = f"no_templates_for_vendor:{device.vendor}"
                 self.log.warning("%s -> %s", hostname, msg)
                 host_entry["errors"].append(msg)
 
-            # читаем каждый CLI-файл и прогоняем через все шаблоны вендора
+            # С‡РёС‚Р°РµРј РєР°Р¶РґС‹Р№ CLI-С„Р°Р№Р» Рё РїСЂРѕРіРѕРЅСЏРµРј С‡РµСЂРµР· РІСЃРµ С€Р°Р±Р»РѕРЅС‹ РІРµРЅРґРѕСЂР°
             for rel_path in cf.files:
                 cli_text, full_path = self._read_cli_text(rel_path)
                 if not cli_text:
@@ -293,23 +326,23 @@ class TextFSMParser:
 
                 for tpl in templates:
                     try:
-                        # Важно: TextFSM объект одноразовый, создаём fresh instance из таблицы
-                        # (иначе курсоры и состояния ломают повторные вызовы)
+                        # Р’Р°Р¶РЅРѕ: TextFSM РѕР±СЉРµРєС‚ РѕРґРЅРѕСЂР°Р·РѕРІС‹Р№, СЃРѕР·РґР°С‘Рј fresh instance РёР· С‚Р°Р±Р»РёС†С‹
+                        # (РёРЅР°С‡Рµ РєСѓСЂСЃРѕСЂС‹ Рё СЃРѕСЃС‚РѕСЏРЅРёСЏ Р»РѕРјР°СЋС‚ РїРѕРІС‚РѕСЂРЅС‹Рµ РІС‹Р·РѕРІС‹)
                         with tpl.path.open("r", encoding="utf-8") as fh:
                             fresh_fsm = textfsm.TextFSM(fh)
 
                         records = fresh_fsm.ParseText(cli_text)  # List[List[str]]
                         if not records:
-                            # пусто — это нормально, просто ничего не добавляем
+                            # РїСѓСЃС‚Рѕ вЂ” СЌС‚Рѕ РЅРѕСЂРјР°Р»СЊРЅРѕ, РїСЂРѕСЃС‚Рѕ РЅРёС‡РµРіРѕ РЅРµ РґРѕР±Р°РІР»СЏРµРј
                             continue
 
-                        # Маппим в dict по именам столбцов из шаблона
+                        # РњР°РїРїРёРј РІ dict РїРѕ РёРјРµРЅР°Рј СЃС‚РѕР»Р±С†РѕРІ РёР· С€Р°Р±Р»РѕРЅР°
                         headers = [h.strip() for h in fresh_fsm.header]
                         dicts = [dict(zip(headers, row)) for row in records]
 
-                        # Ключ для результатов — stem шаблона (уникально в рамках вендора)
+                        # РљР»СЋС‡ РґР»СЏ СЂРµР·СѓР»СЊС‚Р°С‚РѕРІ вЂ” stem С€Р°Р±Р»РѕРЅР° (СѓРЅРёРєР°Р»СЊРЅРѕ РІ СЂР°РјРєР°С… РІРµРЅРґРѕСЂР°)
                         bucket = host_entry["parsed"].setdefault(tpl.stem, [])
-                        # добавим источник файла для каждой записи:
+                        # РґРѕР±Р°РІРёРј РёСЃС‚РѕС‡РЅРёРє С„Р°Р№Р»Р° РґР»СЏ РєР°Р¶РґРѕР№ Р·Р°РїРёСЃРё:
                         for d in dicts:
                             d["_source_file"] = str(full_path) if full_path else rel_path
                             d["_template"] = tpl.path.name
@@ -333,18 +366,22 @@ class TextFSMParser:
             "meta": {"templates_total": 0, "errors": self.meta_errors},
         }
 
-        # Fallback to discover devices from CLI dir if inventory missing
+        # Fallback to discover devices from CLI dir if inventory missing (recursive)
         if not self.inventory.devices:
-            for p in sorted(self.config.cli_dir.glob("*.txt")):
+            for p in sorted(self.config.cli_dir.rglob("*.txt")):
                 try:
                     head = p.read_text(encoding="utf-8", errors="ignore")[:4000]
                 except Exception:
                     head = ""
                 m = re.search(r'(?m)^\s*hostname\s+([\w\-.]+)', head)
                 hostname = m.group(1) if m else p.stem
-                vendor = self._guess_vendor(head)
+                vendor = self._vendor_hint_for_ip(p.stem) or self._guess_vendor(head)
                 self.inventory.devices[hostname] = Device(hostname=hostname, vendor=vendor)
-                self.inventory.cli_files[hostname] = CliFilesEntry(hostname=hostname, files=[str(p.name)])
+                try:
+                    rel = str(p.relative_to(self.config.cli_dir))
+                except Exception:
+                    rel = p.name
+                self.inventory.cli_files[hostname] = CliFilesEntry(hostname=hostname, files=[rel])
 
         # Count templates for meta
         total_templates = 0
@@ -422,7 +459,7 @@ class TextFSMParser:
 
 
 # -----------------------------
-# Утилита CLI (по желанию)
+# РЈС‚РёР»РёС‚Р° CLI (РїРѕ Р¶РµР»Р°РЅРёСЋ)
 # -----------------------------
 
 def _setup_logger() -> logging.Logger:
@@ -438,18 +475,18 @@ def _setup_logger() -> logging.Logger:
 
 
 def _default_paths(root: Path) -> Tuple[Path, Path]:
-    """Возврат путей по умолчанию: (config_path, inventory_path)"""
+    """Р’РѕР·РІСЂР°С‚ РїСѓС‚РµР№ РїРѕ СѓРјРѕР»С‡Р°РЅРёСЋ: (config_path, inventory_path)"""
     return (root / "config" / "config.json", root / "data" / "input" / "inventory.json")
 
 
 if __name__ == "__main__":
     """
-    Пример использования:
+    РџСЂРёРјРµСЂ РёСЃРїРѕР»СЊР·РѕРІР°РЅРёСЏ:
       python -m src.parsers.textfsm_loader
-    Запишет результат в data/output/logs/parsed_textfsm.json
+    Р—Р°РїРёС€РµС‚ СЂРµР·СѓР»СЊС‚Р°С‚ РІ data/output/logs/parsed_textfsm.json
     """
     logger = _setup_logger()
-    project_root = Path(__file__).resolve().parents[2]  # .../src/parsers -> корень
+    project_root = Path(__file__).resolve().parents[2]  # .../src/parsers -> РєРѕСЂРµРЅСЊ
     cfg_path, inv_path = _default_paths(project_root)
 
     try:
@@ -462,7 +499,7 @@ if __name__ == "__main__":
         out_dir.mkdir(parents=True, exist_ok=True)
         out_file = out_dir / "parsed_textfsm.json"
         out_file.write_text(json.dumps(data, ensure_ascii=False, indent=2), encoding="utf-8")
-        logger.info("Готово: %s", out_file)
+        logger.info("Р“РѕС‚РѕРІРѕ: %s", out_file)
     except Exception as e:
-        logger.error("Фатальная ошибка: %s", e)
+        logger.error("Р¤Р°С‚Р°Р»СЊРЅР°СЏ РѕС€РёР±РєР°: %s", e)
         raise

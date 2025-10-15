@@ -1,0 +1,409 @@
+
+
+$ show system information
+
+Hardware Version                  : 2v3
+Software Version                  : 10.3.4
+Firmware Version                  : 10.3.4
+
+Hardware Serial Number            : ESC6001800
+Switch Base MAC Address           : cc:9d:a2:68:41:00
+Software Serial Number            : c6313afa
+System Contact                    : 
+System Name                       : NER-NSWS-05-99-128
+System Location                   : 
+System Description                : MES2448B rev.B AC 52-port 1G/10G Managed Switch
+Logging Option                    : Flash Logging
+Device Uptime                     : 25 Days, 22 Hrs, 34 Mins, 4 Secs
+Login Authentication Mode         : Local
+Config Save Status                : Successful
+Remote Save Status                : Not Initiated
+Config Restore Status             : Not Initiated
+Traffic Separation Control        : none
+
+
+
+
+$ show lldp neighbors detail
+
+                
+
+
+--More--
+                
+
+
+--More--
+                
+
+
+--More--
+                
+
+
+--More--
+                
+
+Extended 802.3 TLV Info 
+-MAC PHY Configuration & Status
+Auto-Neg Support & Status     : Supported, Enabled
+Advertised Capability Bits    : 8036
+Other
+Symm PAUSE(FD)
+Asym and Symm PAUSE(FD)
+1000base-X, -LX, -SX, -CX(FD)
+1000base-T(HD)
+Operational MAU Type          : 30
+-Link Aggregation
+Capability & Status           : Not Capable, Not In Aggregation
+Aggregated Port Id            : 0
+-Maximum Frame Size           : 0
+
+Extended 802.1 TLV Info 
+-Port VLAN Id                 : 1
+-Port & Protocol VLAN Id 
+Protocol Vlan Tlv             : Not Advertised
+-Vlan Name
+Vlan Name Tlv                 : Not Advertised
+
+-LLDP MED Capability TLV      : Not Advertised 
+
+
+--More--
+                
+
+
+--More--
+                
+
+
+--More--
+                
+
+
+--More--
+                
+
+
+--More--
+                
+Capabilities Supported        : 0 
+Capabilities Enabled          : 0 
+Device Class                  : 0 
+
+-LLDP MED Inventory TLV       : Not Advertised
+
+-LLDP-MED Nw Policy TLV       : Not Advertised 
+
+-LLDP-MED Location Info TLV   : Not Advertised 
+
+-LLDP-MED Ex-PowerViaMDI TLV  : Not Advertised 
+------------------------------------------------------------
+
+Total Entries Displayed : 1
+[27m
+                       
+
+NER-NSWS-05-99-128#neighbors detail
+
+% Invalid Command
+
+
+
+$ show vlan
+
+                
+
+
+--More--
+                
+
+
+--More--
+                
+
+
+--More--
+                
+
+
+--More--
+                
+Name                : Phones
+Status              : Permanent
+Egress Ethertype    : 0x8100
+Service Loopback Status   : Disabled 
+----------------------------------------------------
+Vlan ID             : 17
+Member Ports        : gi 0/48, te 0/1, te 0/2, te 0/3, te 0/4
+Untagged Ports      : None 
+Forbidden Ports     : None 
+Name                : Transport
+Status              : Permanent
+Egress Ethertype    : 0x8100
+Service Loopback Status   : Disabled 
+----------------------------------------------------
+Vlan ID             : 20
+Member Ports        : gi 0/1, gi 0/3, gi 0/4, gi 0/5, gi 0/6, gi 0/7
+                      gi 0/11, gi 0/14, gi 0/16, gi 0/17, gi 0/19, gi 0/20
+                      gi 0/22, gi 0/23, gi 0/24, gi 0/26, gi 0/27, gi 0/28
+                      gi 0/29, gi 0/30, gi 0/31, gi 0/32, gi 0/35, gi 0/36
+                      gi 0/38, gi 0/39, gi 0/42, gi 0/43, gi 0/44, gi 0/45
+                      gi 0/46, gi 0/47, gi 0/48, te 0/1, te 0/2, te 0/3
+                      te 0/4
+Untagged Ports      : gi 0/1, gi 0/3, gi 0/4, gi 0/5, gi 0/6, gi 0/7
+                      gi 0/11, gi 0/14, gi 0/16, gi 0/17, gi 0/19, gi 0/20
+
+
+--More--
+                
+
+
+--More--
+                
+
+
+--More--
+                
+
+
+--More--
+                
+
+
+--More--
+                
+                      gi 0/22, gi 0/23, gi 0/24, gi 0/26, gi 0/27, gi 0/28
+
+
+--More--
+
+
+$ show interfaces status
+
+                
+
+
+--More--
+                
+
+
+--More--
+                
+
+
+--More--
+                
+
+
+--More--
+                
+[27m
+                       
+
+NER-NSWS-05-99-128#interfaces status
+
+% Invalid Command
+
+
+
+$ show interfaces
+
+                
+
+
+--More--
+                
+
+
+--More--
+                
+
+
+--More--
+                
+
+
+--More--
+                
+   Error Packets             : 4282982
+   Unknown Protocol          : 0
+   CRC Errors                : 71553
+   Symbol Errors             : 171
+   Oversized w/ Bad CRC      : 0
+
+Transmission Counters
+   Octets                    : 1696223613
+   Unicast Packets           : 56526562
+   Multicast Packets         : 8305772
+   Broadcast Packets         : 29656578
+   Discarded Packets         : 0
+   Error Drops               : 0
+   Error Packets             : 0
+
+gi 0/2 up, line protocol is down (not connect)
+Bridge Port Type: Customer Bridge Port
+
+Interface SubType: gigabitEthernet
+
+Hardware Address is cc:9d:a2:68:41:02
+MTU  12288 bytes,  Auto-Negotiation default
+HOL Block Prevention enabled.
+CPU Controlled Learning disabled.
+
+
+--More--
+                
+
+
+--More--
+                
+
+
+--More--
+                
+
+
+--More--
+                
+
+
+--More--
+                
+
+
+--More--
+                
+
+
+--More--
+                
+
+
+--More--
+                
+
+
+--More--
+                
+
+
+--More--
+                
+
+
+--More--
+                
+Auto-MDIX on
+
+
+--More--
+
+
+$ show running-config
+
+                
+
+
+--More--
+                
+
+
+--More--
+                
+
+
+--More--
+                
+
+
+--More--
+                
+gi 0/3 up, line protocol is down (not connect)
+Bridge Port Type: Customer Bridge Port
+
+Interface SubType: gigabitEthernet
+
+Hardware Address is cc:9d:a2:68:41:03
+MTU  12288 bytes,  Auto-Negotiation default
+HOL Block Prevention enabled.
+CPU Controlled Learning disabled.
+Auto-MDIX on
+Input flow-control is off,output flow-control is off
+Media-type: prefer-fiber
+
+Link Up/Down Trap is disabled 
+
+Reception Counters
+   Octets                    : 0
+   Unicast Packets           : 0
+   Multicast Packets         : 0
+   Broadcast Packets         : 0
+   Discarded Packets         : 0
+   Error Packets             : 0
+   Unknown Protocol          : 0
+   CRC Errors                : 0
+
+
+--More--
+                
+
+
+--More--
+                
+
+
+--More--
+                
+
+
+--More--
+                
+
+
+--More--
+                
+
+
+--More--
+                
+
+
+--More--
+                
+
+
+--More--
+                
+
+
+--More--
+                
+
+
+--More--
+                
+
+
+--More--
+                
+
+
+--More--
+                
+
+
+--More--
+                
+
+
+--More--
+                
+
+
+--More--
+                
+   Symbol Errors             : 0
+
+
+--More--

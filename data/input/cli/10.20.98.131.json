@@ -1,0 +1,103 @@
+{
+  "vendor": "cisco_ios",
+  "raw_files": [
+    "DEN\\60\\10.20.98.131.txt"
+  ],
+  "parsed": {
+    "cisco_ios_show_cdp_neighbors": [
+      {
+        "Neighbor": "DEN-NSWS-60-98-131",
+        "LocalInterface": "uptime is",
+        "NeighborPort": "2 days,",
+        "_source_file": "C:\\Users\\zhiltsov.aa\\Desktop\\net-auto-mermaid\\data\\raw\\DEN\\60\\10.20.98.131.txt",
+        "_template": "cisco_ios_show_cdp_neighbors.template"
+      },
+      {
+        "Neighbor": "Gig",
+        "LocalInterface": "0/11",
+        "NeighborPort": "I   WS-C3560C",
+        "_source_file": "C:\\Users\\zhiltsov.aa\\Desktop\\net-auto-mermaid\\data\\raw\\DEN\\60\\10.20.98.131.txt",
+        "_template": "cisco_ios_show_cdp_neighbors.template"
+      },
+      {
+        "Neighbor": "Gig",
+        "LocalInterface": "0/12",
+        "NeighborPort": "I   WS-C3850-",
+        "_source_file": "C:\\Users\\zhiltsov.aa\\Desktop\\net-auto-mermaid\\data\\raw\\DEN\\60\\10.20.98.131.txt",
+        "_template": "cisco_ios_show_cdp_neighbors.template"
+      }
+    ],
+    "cisco_ios_show_cdp_neighbors_detail": [
+      {
+        "Neighbor": "DEN-NSWS-61-99-143.kolmar.ru",
+        "LocalInterface": "GigabitEthernet0/11",
+        "NeighborPort": "GigabitEthernet0/11",
+        "Platform": "cisco WS-C3560CX-8PC-S",
+        "_source_file": "C:\\Users\\zhiltsov.aa\\Desktop\\net-auto-mermaid\\data\\raw\\DEN\\60\\10.20.98.131.txt",
+        "_template": "cisco_ios_show_cdp_neighbors_detail.template"
+      },
+      {
+        "Neighbor": "DEN-NSWS-01-98-110.kolmar.ru",
+        "LocalInterface": "GigabitEthernet0/12",
+        "NeighborPort": "GigabitEthernet1/0/10",
+        "Platform": "cisco WS-C3850-24S",
+        "_source_file": "C:\\Users\\zhiltsov.aa\\Desktop\\net-auto-mermaid\\data\\raw\\DEN\\60\\10.20.98.131.txt",
+        "_template": "cisco_ios_show_cdp_neighbors_detail.template"
+      }
+    ],
+    "cisco_ios_show_lldp_neighbors_detail": [
+      {
+        "LocalInterface": "Gi0/11",
+        "NeighborName": "",
+        "NeighborPort": "Gi0/11",
+        "_source_file": "C:\\Users\\zhiltsov.aa\\Desktop\\net-auto-mermaid\\data\\raw\\DEN\\60\\10.20.98.131.txt",
+        "_template": "cisco_ios_show_lldp_neighbors_detail.template"
+      },
+      {
+        "LocalInterface": "Gi0/7",
+        "NeighborName": "DEN-NSWS-61-99-143.kolmar.ru",
+        "NeighborPort": "0c38.3e43.803c",
+        "_source_file": "C:\\Users\\zhiltsov.aa\\Desktop\\net-auto-mermaid\\data\\raw\\DEN\\60\\10.20.98.131.txt",
+        "_template": "cisco_ios_show_lldp_neighbors_detail.template"
+      },
+      {
+        "LocalInterface": "Gi0/12",
+        "NeighborName": "X1S/X1SP",
+        "NeighborPort": "Gi1/0/10",
+        "_source_file": "C:\\Users\\zhiltsov.aa\\Desktop\\net-auto-mermaid\\data\\raw\\DEN\\60\\10.20.98.131.txt",
+        "_template": "cisco_ios_show_lldp_neighbors_detail.template"
+      },
+      {
+        "LocalInterface": "Gi0/8",
+        "NeighborName": "DEN-NSWS-01-98-110.kolmar.ru",
+        "NeighborPort": "7483.c2c0.8083",
+        "_source_file": "C:\\Users\\zhiltsov.aa\\Desktop\\net-auto-mermaid\\data\\raw\\DEN\\60\\10.20.98.131.txt",
+        "_template": "cisco_ios_show_lldp_neighbors_detail.template"
+      },
+      {
+        "LocalInterface": "",
+        "NeighborName": "DEN-HATEAU-3",
+        "NeighborPort": "",
+        "_source_file": "C:\\Users\\zhiltsov.aa\\Desktop\\net-auto-mermaid\\data\\raw\\DEN\\60\\10.20.98.131.txt",
+        "_template": "cisco_ios_show_lldp_neighbors_detail.template"
+      }
+    ],
+    "cisco_ios_show_version": [
+      {
+        "Version": "15.2(4)E6",
+        "Model": "",
+        "Uptime": "13 weeks, 2 days, 8 minutes",
+        "_source_file": "C:\\Users\\zhiltsov.aa\\Desktop\\net-auto-mermaid\\data\\raw\\DEN\\60\\10.20.98.131.txt",
+        "_template": "cisco_ios_show_version.template"
+      },
+      {
+        "Version": "15.2(2)E",
+        "Model": "WS-C2960CX-8PC-L",
+        "Uptime": "",
+        "_source_file": "C:\\Users\\zhiltsov.aa\\Desktop\\net-auto-mermaid\\data\\raw\\DEN\\60\\10.20.98.131.txt",
+        "_template": "cisco_ios_show_version.template"
+      }
+    ]
+  },
+  "errors": []
+}

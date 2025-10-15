@@ -1,0 +1,5 @@
+# Command list for SNR collection
+# pre_enable=0
+show version
+show lldp neighbors brief
+show running-config

@@ -1,0 +1,139 @@
+
+
+$ terminal length 0
+
+
+
+$ show version
+Cisco IOS Software, C2960X Software (C2960X-UNIVERSALK9-M), Version 15.2(2)E7, RELEASE SOFTWARE (fc3)
+Technical Support: http://www.cisco.com/techsupport
+Copyright (c) 1986-2017 by Cisco Systems, Inc.
+Compiled Wed 12-Jul-17 13:06 by prod_rel_team
+
+ROM: Bootstrap program is C2960X boot loader
+BOOTLDR: C2960X Boot Loader (C2960X-HBOOT-M) Version 15.2(3r)E1, RELEASE SOFTWARE (fc1)
+
+CHU-NSWS-23-98-235 uptime is 9 weeks, 1 day, 22 hours, 42 minutes
+System returned to ROM by power-on
+System restarted at 17:48:16 YAKT Mon Aug 11 2025
+System image file is "flash:/c2960x-universalk9-mz.152-2.E7/c2960x-universalk9-mz.152-2.E7.bin"
+Last reload reason: power-on
+
+
+
+This product contains cryptographic features and is subject to United
+States and local country laws governing import, export, transfer and
+use. Delivery of Cisco cryptographic products does not imply
+third-party authority to import, export, distribute or use encryption.
+Importers, exporters, distributors and users are responsible for
+compliance with U.S. and local country laws. By using this product you
+agree to comply with applicable laws and regulations. If you are unable
+to comply with U.S. and local laws, return this product immediately.
+
+A summary of U.S. laws governing Cisco cryptographic products may be found at:
+http://www.cisco.com/wwl/export/crypto/tool/stqrg.html
+
+If you require further assistance please contact us by sending email to
+export@cisco.com.
+
+cisco WS-C2960X-24PS-L (APM86XXX) processor (revision C0) with 524288K bytes of memory.
+Processor board ID JTV222010CZ
+Last reset from power-on
+3 Virtual Ethernet interfaces
+1 FastEthernet interface
+28 Gigabit Ethernet interfaces
+The password-recovery mechanism is enabled.
+
+512K bytes of flash-simulated non-volatile configuration memory.
+Base ethernet MAC Address       : 00:7E:95:DB:AB:00
+Motherboard assembly number     : 73-16694-06
+Power supply part number        : 341-0528-02
+Motherboard serial number       : FOC22153CRQ
+Power supply serial number      : DCC215094X9
+Model revision number           : C0
+Motherboard revision number     : C0
+Model number                    : WS-C2960RX-24PS-L
+Daughterboard assembly number   : 73-14200-03
+Daughterboard serial number     : FOC221218G3
+System serial number            : JTV222010CZ
+Top Assembly Part Number        : 68-5895-03
+Top Assembly Revision Number    : D0
+Version ID                      : V03
+Daughterboard revision number   : B0
+Hardware Board Revision Number  : 0x19
+
+
+Switch Ports Model                     SW Version            SW Image                 
+------ ----- -----                     ----------            ----------               
+*    1 28    WS-C2960X-24PS-L          15.2(2)E7             C2960X-UNIVERSALK9-M     
+
+
+Configuration register is 0xF
+
+
+
+$ show lldp neighbors detail
+% LLDP is not enabled
+
+
+$ show cdp neighbors detail
+-------------------------
+Device ID: CHU-NSWS-25-98-231.kolmar.ru
+Entry address(es): 
+  IP address: 10.20.98.231
+Platform: cisco WS-C3560CX-12PC-S,  Capabilities: Switch IGMP 
+Interface: GigabitEthernet1/0/25,  Port ID (outgoing port): GigabitEthernet0/16
+Holdtime : 149 sec
+
+Version :
+Cisco IOS Software, C3560CX Software (C3560CX-UNIVERSALK9-M), Version 15.2(4)E4, RELEASE SOFTWARE (fc2)
+Technical Support: http://www.cisco.com/techsupport
+Copyright (c) 1986-2017 by Cisco Systems, Inc.
+Compiled Wed 05-Apr-17 05:59 by prod_rel_team
+
+advertisement version: 2
+Protocol Hello:  OUI=0x00000C, Protocol ID=0x0112; payload len=27, value=00000000FFFFFFFF010221FF0000000000006CDD30D88700FF0000
+VTP Management Domain: 'aapl-retail'
+Native VLAN: 1
+Duplex: full
+Management address(es): 
+  IP address: 10.20.98.231
+
+-------------------------
+Device ID: CHU-NSWS-26-98-233.kolmar.ru
+Entry address(es): 
+  IP address: 10.20.98.233
+Platform: cisco WS-C2960C-12PC-L,  Capabilities: Switch IGMP 
+Interface: GigabitEthernet1/0/26,  Port ID (outgoing port): GigabitEthernet0/1
+Holdtime : 179 sec
+
+Version :
+Cisco IOS Software, C2960C Software (C2960c405-UNIVERSALK9-M), Version 15.2(2)E8, RELEASE SOFTWARE (fc1)
+Technical Support: http://www.cisco.com/techsupport
+Copyright (c) 1986-2018 by Cisco Systems, Inc.
+Compiled Mon 22-Jan-18 07:16 by prod_rel_team
+
+advertisement version: 2
+Protocol Hello:  OUI=0x00000C, Protocol ID=0x0112; payload len=27, value=00000000FFFFFFFF010221FF0000000000007018A74DC380FF0000
+VTP Management Domain: ''
+Native VLAN: 1
+Duplex: full
+Management address(es): 
+  IP address: 10.20.98.233
+
+
+Total cdp entries displayed : 2
+
+
+$ show cdp neighbors
+Capability Codes: R - Router, T - Trans Bridge, B - Source Route Bridge
+                  S - Switch, H - Host, I - IGMP, r - Repeater, P - Phone, 
+                  D - Remote, C - CVTA, M - Two-port Mac Relay 
+
+Device ID        Local Intrfce     Holdtme    Capability  Platform  Port ID
+CHU-NSWS-25-98-231.kolmar.ru
+                 Gig 1/0/25        149              S I   WS-C3560C Gig 0/16
+CHU-NSWS-26-98-233.kolmar.ru
+                 Gig 1/0/26        179              S I   WS-C2960C Gig 0/1
+
+Total cdp entries displayed : 2

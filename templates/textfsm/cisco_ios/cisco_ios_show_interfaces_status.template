@@ -1,0 +1,15 @@
+Value Port (\S+)
+Value Name ([^\s].*?)
+Value Status (\S+)
+Value Vlan (\S+)
+Value Duplex (\S+)
+Value Speed (\S+)
+Value Type (.+)
+
+Start
+  ^Port\s+Name\s+Status\s+Vlan\s+Duplex\s+Speed\s+Type -> IFSTAT
+  ^.* -> Start
+
+IFSTAT
+  ^Port\s+Name\s+Status\s+Vlan\s+Duplex\s+Speed\s+Type -> Continue
+  ^${Port}\s+${Name}\s+${Status}\s+${Vlan}\s+${Duplex}\s+${Speed}\s+${Type} -> Record

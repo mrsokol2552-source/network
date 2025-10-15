@@ -1,255 +1,6 @@
 
 
-$ show running-config
-Building configuration...
-
-Current configuration : 4593 bytes
-!
-! Last configuration change at 09:04:02 UTC Fri Sep 19 2025 by november
-! NVRAM config last updated at 09:03:49 UTC Fri Sep 19 2025 by november
-!
-version 15.2
-no service pad
-service timestamps debug datetime msec
-service timestamps log datetime msec
-service password-encryption
-!
-hostname NSK-NSWS-01-99-7
-!
-boot-start-marker
-boot-end-marker
-!
-!
-username spgadmin privilege 15 password 7 143E14030600203F342C27252E0A0D0200135C5E53474D0C1749440A
-username vkorenskiy privilege 15 password 7 145320030A073338350F3B372607094256
-username volodin_s privilege 15 secret 5 $1$Ey8K$9LCHS49BQViCPpH.uTTN./
-username zhiltsov_a privilege 15 secret 5 $1$KTBG$vuZZwEMw2jrW9EsTpO2Cf1
-aaa new-model
-!
-!
-!
-!
-!
-!
-!
-!
-aaa session-id common
-switch 1 provision ws-c2960x-48ts-l
-!
-!
-ip domain-name sw-nsk-l2-1
-!
-!
-!
-!
-!
-!
-!
-!
-spanning-tree mode pvst
-spanning-tree extend system-id
-!
-!
-!
-!
-vlan internal allocation policy ascending
-!
-!
-! 
-!
-!
-!
-!
-!
-!
-!
-!
-interface FastEthernet0
- no ip address
-!
-interface GigabitEthernet1/0/1
-!
-interface GigabitEthernet1/0/2
- description 0.10_gi0/0/0
- switchport trunk allowed vlan 1,9,10,12-15,17,20,21,30-35,77,220
- switchport mode trunk
- logging event spanning-tree
- logging event status
- storm-control broadcast level 20.00 10.00
- storm-control multicast level 20.00 10.00
- storm-control action trap
-!
-interface GigabitEthernet1/0/3
- switchport access vlan 10
-!
-interface GigabitEthernet1/0/4
-!
-interface GigabitEthernet1/0/5
-!
-interface GigabitEthernet1/0/6
- switchport access vlan 10
-!
-interface GigabitEthernet1/0/7
-!
-interface GigabitEthernet1/0/8
- switchport access vlan 10
-!
-interface GigabitEthernet1/0/9
- switchport access vlan 10
-!
-interface GigabitEthernet1/0/10
-!
-interface GigabitEthernet1/0/11
-!
-interface GigabitEthernet1/0/12
-!
-interface GigabitEthernet1/0/13
-!
-interface GigabitEthernet1/0/14
- switchport access vlan 10
-!
-interface GigabitEthernet1/0/15
-!
-interface GigabitEthernet1/0/16
-!
-interface GigabitEthernet1/0/17
- switchport access vlan 10
-!
-interface GigabitEthernet1/0/18
-!
-interface GigabitEthernet1/0/19
- switchport access vlan 10
-!
-interface GigabitEthernet1/0/20
-!
-interface GigabitEthernet1/0/21
-!
-interface GigabitEthernet1/0/22
- switchport access vlan 10
-!
-interface GigabitEthernet1/0/23
- switchport access vlan 10
-!
-interface GigabitEthernet1/0/24
- switchport access vlan 10
-!
-interface GigabitEthernet1/0/25
-!
-interface GigabitEthernet1/0/26
- switchport access vlan 9
-!
-interface GigabitEthernet1/0/27
-!
-interface GigabitEthernet1/0/28
-!
-interface GigabitEthernet1/0/29
-!
-interface GigabitEthernet1/0/30
-!
-interface GigabitEthernet1/0/31
-!
-interface GigabitEthernet1/0/32
-!
-interface GigabitEthernet1/0/33
-!
-interface GigabitEthernet1/0/34
- switchport access vlan 20
-!
-interface GigabitEthernet1/0/35
- switchport mode trunk
-!
-interface GigabitEthernet1/0/36
-!
-interface GigabitEthernet1/0/37
- switchport access vlan 9
-!
-interface GigabitEthernet1/0/38
-!
-interface GigabitEthernet1/0/39
-!
-interface GigabitEthernet1/0/40
-!
-interface GigabitEthernet1/0/41
- switchport access vlan 10
-!
-interface GigabitEthernet1/0/42
-!
-interface GigabitEthernet1/0/43
-!
-interface GigabitEthernet1/0/44
- switchport access vlan 10
-!
-interface GigabitEthernet1/0/45
- switchport mode trunk
-!
-interface GigabitEthernet1/0/46
-!
-interface GigabitEthernet1/0/47
- switchport access vlan 14
- switchport mode access
- shutdown
- no cdp enable
- no lldp transmit
- no lldp receive
- spanning-tree bpduguard enable
-!
-interface GigabitEthernet1/0/48
- switchport access vlan 14
- switchport mode access
- no cdp enable
- no lldp receive
- spanning-tree portfast
- spanning-tree bpduguard enable
-!
-interface GigabitEthernet1/0/49
-!
-interface GigabitEthernet1/0/50
-!
-interface GigabitEthernet1/0/51
-!
-interface GigabitEthernet1/0/52
-!
-interface Vlan1
- ip address 192.168.0.241 255.255.255.0
-!
-interface Vlan14
- no ip address
-!
-interface Vlan17
- ip address 10.2.99.7 255.255.255.0
-!
-ip default-gateway 10.2.99.1
-ip http server
-ip http secure-server
-!
-ip route 0.0.0.0 0.0.0.0 192.168.0.10
-ip route 0.0.0.0 0.0.0.0 10.2.99.1
-ip ssh version 2
-!
-ip access-list extended VKS-SECURITY
- permit ip 95.170.149.0 0.0.0.255 95.170.149.0 0.0.0.255
- permit ip 95.170.149.0 0.0.0.255 212.44.138.0 0.0.0.255
- permit ip 95.170.149.0 0.0.0.255 31.173.228.0 0.0.0.255
- permit ip 95.170.149.0 0.0.0.255 host 188.43.4.0
- permit ip 95.170.149.0 0.0.0.255 host 62.33.87.0
-!
-snmp-server community public RO
-!
-!
-!
-!
-line con 0
-line vty 0 4
- exec-timeout 60 0
- privilege level 15
- logging synchronous
- transport input ssh
-line vty 5
- transport input ssh
-line vty 6 15
-!
-ntp server devicehelper.cisco.com
-end
+$ terminal length 0
 
 
 
@@ -262,7 +13,7 @@ Compiled Wed 26-Aug-15 07:12 by prod_rel_team
 ROM: Bootstrap program is C2960X boot loader
 BOOTLDR: C2960X Boot Loader (C2960X-HBOOT-M) Version 15.2(2r)E2, RELEASE SOFTWARE (fc1)
 
-NSK-NSWS-01-99-7 uptime is 5 weeks, 5 days, 18 hours, 57 minutes
+NSK-NSWS-01-99-7 uptime is 6 weeks, 3 days, 19 hours, 43 minutes
 System returned to ROM by power-on
 System restarted at 18:02:05 UTC Sat Aug 30 2025
 System image file is "flash:/c2960x-universalk9-mz.152-2.E3/c2960x-universalk9-mz.152-2.E3.bin"
@@ -321,6 +72,39 @@ Configuration register is 0xF
 
 
 
+$ show lldp neighbors detail
+------------------------------------------------
+Chassis id: cc36.cf60.ff00
+Port id: Gi1/0/22
+Port Description: GigabitEthernet1/0/22
+System Name: NSK-NSWR-01-99-1.kolmar.local
+
+System Description: 
+Cisco IOS Software [Cupertino], Catalyst L3 Switch Software (CAT9K_LITE_IOSXE), Version 17.9.4, RELEASE SOFTWARE (fc5)
+Technical Support: http://www.cisco.com/techsupport
+Copyright (c) 1986-2023 by Cisco Systems, Inc.
+Compiled Wed 26-Jul-23 10:43 by mcpre
+
+Time remaining: 92 seconds
+System Capabilities: B,R
+Enabled Capabilities: B,R
+Management Addresses:
+    IP: 10.2.11.1
+Auto Negotiation - supported, enabled
+Physical media capabilities:
+    1000baseT(FD)
+    100base-TX(FD)
+    100base-TX(HD)
+    10base-T(FD)
+    10base-T(HD)
+Media Attachment Unit type: 30
+Vlan ID: 1
+
+
+Total entries displayed: 1
+
+
+
 $ show cdp neighbors detail
 -------------------------
 Device ID: NSK-NSWR-01-99-1.kolmar.local
@@ -328,7 +112,7 @@ Entry address(es):
   IP address: 10.2.11.1
 Platform: cisco C9200L-24P-4G,  Capabilities: Router Switch IGMP 
 Interface: GigabitEthernet1/0/35,  Port ID (outgoing port): GigabitEthernet1/0/22
-Holdtime : 151 sec
+Holdtime : 174 sec
 
 Version :
 Cisco IOS Software [Cupertino], Catalyst L3 Switch Software (CAT9K_LITE_IOSXE), Version 17.9.4, RELEASE SOFTWARE (fc5)
@@ -347,63 +131,13 @@ Management address(es):
 Total cdp entries displayed : 1
 
 
-$ show lldp neighbors detail
-% LLDP is not enabled
+$ show cdp neighbors
+Capability Codes: R - Router, T - Trans Bridge, B - Source Route Bridge
+                  S - Switch, H - Host, I - IGMP, r - Repeater, P - Phone, 
+                  D - Remote, C - CVTA, M - Two-port Mac Relay 
 
+Device ID        Local Intrfce     Holdtme    Capability  Platform  Port ID
+NSK-NSWR-01-99-1.kolmar.local
+                 Gig 1/0/35        173             R S I  C9200L-24 Gig 1/0/22
 
-$ show interface status
-
-Port      Name               Status       Vlan       Duplex  Speed Type 
-Gi1/0/1                      notconnect   1            auto   auto 10/100/1000BaseTX
-Gi1/0/2   0.10_gi0/0/0       notconnect   1            auto   auto 10/100/1000BaseTX
-Gi1/0/3                      connected    10         a-full  a-100 10/100/1000BaseTX
-Gi1/0/4                      connected    1          a-full  a-100 10/100/1000BaseTX
-Gi1/0/5                      notconnect   1            auto   auto 10/100/1000BaseTX
-Gi1/0/6                      connected    10         a-full a-1000 10/100/1000BaseTX
-Gi1/0/7                      notconnect   1            auto   auto 10/100/1000BaseTX
-Gi1/0/8                      connected    10         a-full a-1000 10/100/1000BaseTX
-Gi1/0/9                      notconnect   10           auto   auto 10/100/1000BaseTX
-Gi1/0/10                     notconnect   1            auto   auto 10/100/1000BaseTX
-Gi1/0/11                     notconnect   1            auto   auto 10/100/1000BaseTX
-Gi1/0/12                     notconnect   1            auto   auto 10/100/1000BaseTX
-Gi1/0/13                     notconnect   1            auto   auto 10/100/1000BaseTX
-Gi1/0/14                     connected    10         a-full a-1000 10/100/1000BaseTX
-Gi1/0/15                     notconnect   1            auto   auto 10/100/1000BaseTX
-Gi1/0/16                     notconnect   1            auto   auto 10/100/1000BaseTX
-Gi1/0/17                     connected    10         a-full a-1000 10/100/1000BaseTX
-Gi1/0/18                     notconnect   1            auto   auto 10/100/1000BaseTX
-Gi1/0/19                     connected    10         a-full a-1000 10/100/1000BaseTX
-Gi1/0/20                     notconnect   1            auto   auto 10/100/1000BaseTX
-Gi1/0/21                     notconnect   1            auto   auto 10/100/1000BaseTX
-Gi1/0/22                     connected    10         a-full a-1000 10/100/1000BaseTX
-Gi1/0/23                     connected    10         a-full a-1000 10/100/1000BaseTX
-Gi1/0/24                     connected    10         a-full a-1000 10/100/1000BaseTX
-Gi1/0/25                     notconnect   1            auto   auto 10/100/1000BaseTX
-Gi1/0/26                     connected    9          a-full  a-100 10/100/1000BaseTX
-Gi1/0/27                     notconnect   1            auto   auto 10/100/1000BaseTX
-Gi1/0/28                     notconnect   1            auto   auto 10/100/1000BaseTX
-Gi1/0/29                     notconnect   1            auto   auto 10/100/1000BaseTX
-Gi1/0/30                     notconnect   1            auto   auto 10/100/1000BaseTX
-Gi1/0/31                     notconnect   1            auto   auto 10/100/1000BaseTX
-Gi1/0/32                     notconnect   1            auto   auto 10/100/1000BaseTX
-Gi1/0/33                     notconnect   1            auto   auto 10/100/1000BaseTX
-Gi1/0/34                     connected    20         a-full  a-100 10/100/1000BaseTX
-Gi1/0/35                     connected    trunk      a-full a-1000 10/100/1000BaseTX
-Gi1/0/36                     notconnect   1            auto   auto 10/100/1000BaseTX
-Gi1/0/37                     connected    9          a-full  a-100 10/100/1000BaseTX
-Gi1/0/38                     notconnect   1            auto   auto 10/100/1000BaseTX
-Gi1/0/39                     notconnect   1            auto   auto 10/100/1000BaseTX
-Gi1/0/40                     notconnect   1            auto   auto 10/100/1000BaseTX
-Gi1/0/41                     notconnect   10           auto   auto 10/100/1000BaseTX
-Gi1/0/42                     notconnect   1            auto   auto 10/100/1000BaseTX
-Gi1/0/43                     notconnect   1            auto   auto 10/100/1000BaseTX
-Gi1/0/44                     connected    10         a-full a-1000 10/100/1000BaseTX
-Gi1/0/45                     notconnect   1            auto   auto 10/100/1000BaseTX
-Gi1/0/46                     notconnect   1            auto   auto 10/100/1000BaseTX
-Gi1/0/47                     disabled     14           auto   auto 10/100/1000BaseTX
-Gi1/0/48                     connected    14         a-full a-1000 10/100/1000BaseTX
-Gi1/0/49                     notconnect   1            auto   auto Not Present
-Gi1/0/50                     notconnect   1            auto   auto Not Present
-Gi1/0/51                     notconnect   1            auto   auto Not Present
-Gi1/0/52                     notconnect   1            auto   auto Not Present
-Fa0                          notconnect   routed       auto   auto 10/100BaseTX
+Total cdp entries displayed : 1

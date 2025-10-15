@@ -1,0 +1,9 @@
+Value Neighbor (\S+)
+Value LocalInterface (\S+)
+Value NeighborPort ([\w./-]+)
+Value Platform (.+)
+
+Start
+  ^Device ID:\s+${Neighbor}
+  ^Platform:\s+${Platform}, -> Continue
+  ^Interface:\s+${LocalInterface},\s+Port ID.*:\s+${NeighborPort} -> Record

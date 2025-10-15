@@ -1,21 +1,21 @@
-# -*- coding: utf-8 -*-
+﻿# -*- coding: utf-8 -*-
 """
-mermaid_writer.py — генерация Mermaid (.mmd) из нормализованного графа.
+mermaid_writer.py вЂ” РіРµРЅРµСЂР°С†РёСЏ Mermaid (.mmd) РёР· РЅРѕСЂРјР°Р»РёР·РѕРІР°РЅРЅРѕРіРѕ РіСЂР°С„Р°.
 
-Вход:
+Р’С…РѕРґ:
 - config/config.json (render.*, paths.*)
-- data/output/logs/normalized.json (из normalize.py)
+- data/output/logs/normalized.json (РёР· normalize.py)
 
-Выход:
+Р’С‹С…РѕРґ:
 - data/output/network.mmd
 
-Подчиняется правилам из standards/mermaid_style.md:
-- flowchart LR, elk renderer (если включён в среде — добавляется отдельно)
-- классы core/dist/access/wan/dmz/mgmt
-- стабильный порядок узлов/рёбер
-- опциональные subgraph (по site/role в простом варианте — по site)
+РџРѕРґС‡РёРЅСЏРµС‚СЃСЏ РїСЂР°РІРёР»Р°Рј РёР· standards/mermaid_style.md:
+- flowchart LR, elk renderer (РµСЃР»Рё РІРєР»СЋС‡С‘РЅ РІ СЃСЂРµРґРµ вЂ” РґРѕР±Р°РІР»СЏРµС‚СЃСЏ РѕС‚РґРµР»СЊРЅРѕ)
+- РєР»Р°СЃСЃС‹ core/dist/access/wan/dmz/mgmt
+- СЃС‚Р°Р±РёР»СЊРЅС‹Р№ РїРѕСЂСЏРґРѕРє СѓР·Р»РѕРІ/СЂС‘Р±РµСЂ
+- РѕРїС†РёРѕРЅР°Р»СЊРЅС‹Рµ subgraph (РїРѕ site/role РІ РїСЂРѕСЃС‚РѕРј РІР°СЂРёР°РЅС‚Рµ вЂ” РїРѕ site)
 
-Примечание: htmlLabels=false, поэтому перенос строки — '\\n' в лейблах.
+РџСЂРёРјРµС‡Р°РЅРёРµ: htmlLabels=false, РїРѕСЌС‚РѕРјСѓ РїРµСЂРµРЅРѕСЃ СЃС‚СЂРѕРєРё вЂ” '\\n' РІ Р»РµР№Р±Р»Р°С….
 """
 
 from __future__ import annotations
@@ -25,17 +25,18 @@ import logging
 from dataclasses import dataclass
 from pathlib import Path
 from typing import Dict, List, Any, Tuple
+import re
 
-# YAML больше не используется; конфиг читаем как JSON
+# YAML Р±РѕР»СЊС€Рµ РЅРµ РёСЃРїРѕР»СЊР·СѓРµС‚СЃСЏ; РєРѕРЅС„РёРі С‡РёС‚Р°РµРј РєР°Рє JSON
 
 
 # -----------------------------
-# Конфиг DTO
+# РљРѕРЅС„РёРі DTO
 # -----------------------------
 
 @dataclass
 class RenderConfig:
-    layout_engine: str            # "elk" | "dagre" (мы печатаем пролог одинаково)
+    layout_engine: str            # "elk" | "dagre" (РјС‹ РїРµС‡Р°С‚Р°РµРј РїСЂРѕР»РѕРі РѕРґРёРЅР°РєРѕРІРѕ)
     flow_direction: str           # "LR" | "TD"
     use_subgraphs: bool
     label_verbosity: str          # "none" | "brief" | "full"
@@ -59,7 +60,7 @@ class Config:
     @staticmethod
     def load(path: Path) -> "Config":
         raw = json.loads(path.read_text(encoding="utf-8"))
-        root = path.parent.parent  # .../config -> корень
+        root = path.parent.parent  # .../config -> РєРѕСЂРµРЅСЊ
         r = raw.get("render", {})
         render = RenderConfig(
             layout_engine=r.get("layout_engine", "elk"),
@@ -79,7 +80,7 @@ class Config:
 
 
 # -----------------------------
-# Нормализованные данные
+# РќРѕСЂРјР°Р»РёР·РѕРІР°РЅРЅС‹Рµ РґР°РЅРЅС‹Рµ
 # -----------------------------
 
 @dataclass
@@ -97,10 +98,10 @@ def load_normalized(path: Path) -> Normalized:
 
 
 # -----------------------------
-# Вспомогательные
+# Р’СЃРїРѕРјРѕРіР°С‚РµР»СЊРЅС‹Рµ
 # -----------------------------
 
-ROLE_ORDER = ["core", "dist", "access", "wan", "dmz", "mgmt"]
+ROLE_ORDER = ["core", "dist", "access", "wan", "dmz", "mgmt", "wifi"]
 
 def role_order_idx(role: str) -> int:
     try:
@@ -115,20 +116,22 @@ def stable_node_key(item: Tuple[str, Dict[str, Any]]) -> Tuple:
             hn)
 
 def esc(text: str) -> str:
-    """Простой экранировщик для Mermaid label (без htmlLabels)."""
+    """РџСЂРѕСЃС‚РѕР№ СЌРєСЂР°РЅРёСЂРѕРІС‰РёРє РґР»СЏ Mermaid label (Р±РµР· htmlLabels)."""
     if text is None:
         return ""
-    # Mermaid нормально переносит \n, экранируем только кавычки
+    # Mermaid РЅРѕСЂРјР°Р»СЊРЅРѕ РїРµСЂРµРЅРѕСЃРёС‚ \n, СЌРєСЂР°РЅРёСЂСѓРµРј С‚РѕР»СЊРєРѕ РєР°РІС‹С‡РєРё
     return str(text).replace('"', '\\"')
 
 def build_node_line(node_id: str, n: Dict[str, Any], cfg: Config) -> str:
     """
-    Нода печатается как:
+    РќРѕРґР° РїРµС‡Р°С‚Р°РµС‚СЃСЏ РєР°Рє:
     ID["DEN-CORE-10-20-03\n10.10.0.1\nC9200"]:::core
     """
+    def safe_id(s: str) -> str:
+        return re.sub(r"[^0-9A-Za-z_]", "_", s)
     primary = n.get("labels", {}).get("primary") or n.get("hostname") or node_id
     extras: List[str] = n.get("labels", {}).get("extra") or []
-    # В зависимости от verbosity можно убрать extras
+    # Р’ Р·Р°РІРёСЃРёРјРѕСЃС‚Рё РѕС‚ verbosity РјРѕР¶РЅРѕ СѓР±СЂР°С‚СЊ extras
     extra_text = ""
     if cfg.render.label_verbosity == "full" and extras:
         extra_text = "<br/>" + "<br/>".join(extras[:5])
@@ -136,23 +139,25 @@ def build_node_line(node_id: str, n: Dict[str, Any], cfg: Config) -> str:
     pp = primary.replace("\\n", "<br/>").replace("\n", "<br/>")
     label = esc(pp) + extra_text
     cls = (n.get("class") or "access").lower()
-    return f'{node_id}["{label}"]:::{cls}'
+    return f'{safe_id(node_id)}["{label}"]:::{cls}'
 
 def build_edge_line(e: Dict[str, Any]) -> str:
     """
     A -- "Gi1/0/1 | 1G | Uplink to ACCESS" --- B
-    Если нет dst — рисуем висячее ребро к анонимной точке? В Mermaid так лучше не делать.
-    В нашем конвейере такие рёбра всё равно будут, но Mermaid требует валидного dst.
-    Поэтому пропускаем рёбра без dst.
+    Р•СЃР»Рё РЅРµС‚ dst вЂ” СЂРёСЃСѓРµРј РІРёСЃСЏС‡РµРµ СЂРµР±СЂРѕ Рє Р°РЅРѕРЅРёРјРЅРѕР№ С‚РѕС‡РєРµ? Р’ Mermaid С‚Р°Рє Р»СѓС‡С€Рµ РЅРµ РґРµР»Р°С‚СЊ.
+    Р’ РЅР°С€РµРј РєРѕРЅРІРµР№РµСЂРµ С‚Р°РєРёРµ СЂС‘Р±СЂР° РІСЃС‘ СЂР°РІРЅРѕ Р±СѓРґСѓС‚, РЅРѕ Mermaid С‚СЂРµР±СѓРµС‚ РІР°Р»РёРґРЅРѕРіРѕ dst.
+    РџРѕСЌС‚РѕРјСѓ РїСЂРѕРїСѓСЃРєР°РµРј СЂС‘Р±СЂР° Р±РµР· dst.
     """
+    def safe_id(s: str) -> str:
+        return re.sub(r"[^0-9A-Za-z_]", "_", s)
     src = e.get("src")
     dst = e.get("dst")
     if not src or not dst:
-        return ""  # пропустим
+        return ""  # РїСЂРѕРїСѓСЃС‚РёРј
     label = e.get("label")
     if label:
-        return f'{src} -- "{esc(label)}" --- {dst}'
-    return f"{src} --- {dst}"
+        return f'{safe_id(src)} -- "{esc(label)}" --- {safe_id(dst)}'
+    return f"{safe_id(src)} --- {safe_id(dst)}"
 
 def class_defs() -> str:
     return (
@@ -166,7 +171,7 @@ def class_defs() -> str:
     )
 
 # -----------------------------
-# Рендер
+# Р РµРЅРґРµСЂ
 # -----------------------------
 
 class MermaidWriter:
@@ -176,12 +181,12 @@ class MermaidWriter:
         self.log = logger or logging.getLogger("mermaid_writer")
 
     def _header(self) -> str:
-        # Пролог — без явного включения elk. Его (по стандарту) добавляет внешняя среда/экспортёр при необходимости.
+        # РџСЂРѕР»РѕРі вЂ” Р±РµР· СЏРІРЅРѕРіРѕ РІРєР»СЋС‡РµРЅРёСЏ elk. Р•РіРѕ (РїРѕ СЃС‚Р°РЅРґР°СЂС‚Сѓ) РґРѕР±Р°РІР»СЏРµС‚ РІРЅРµС€РЅСЏСЏ СЃСЂРµРґР°/СЌРєСЃРїРѕСЂС‚С‘СЂ РїСЂРё РЅРµРѕР±С…РѕРґРёРјРѕСЃС‚Рё.
         fd = self.cfg.render.flow_direction or "LR"
         header = (
-            "%% Диаграмма генерирована Mermaid NetDocs\n"
-            "%% Режимы: LR + (optional) elk\n"
-            "%%{init: {\"theme\": \"base\", \"flowchart\": {\"htmlLabels\": true, \"curve\": \"basis\"}}}%%\n"
+            "%% Р”РёР°РіСЂР°РјРјР° РіРµРЅРµСЂРёСЂРѕРІР°РЅР° Mermaid NetDocs\n"
+            "%% Р РµР¶РёРјС‹: LR + (optional) elk\n"
+            "%%{init: {\"theme\": \"base\", \"flowchart\": {\"htmlLabels\": false, \"curve\": \"basis\"}}}%%\n"
             f"flowchart {fd}\n"
             "\n"
         )
@@ -206,23 +211,28 @@ class MermaidWriter:
         lines: List[str] = []
         for site, items in self._group_by_site().items():
             lines.append(f'subgraph "{site}"')
-            # Внутри сайта дополнительная группировка по роли (плоско, без вложений глубже 2)
-            by_role: Dict[str, List[Tuple[str, Dict[str, Any]]]] = {}
+            # Group inside site by zone (first numeric token in hostname)
+            by_zone: Dict[str, List[Tuple[str, Dict[str, Any]]]] = {}
+            unzoned: List[Tuple[str, Dict[str, Any]]] = []
             for hn, n in items:
-                by_role.setdefault(str(n.get("role") or "access").lower(), []).append((hn, n))
-            for role in ROLE_ORDER:
-                if role not in by_role:
-                    continue
-                lines.append(f'  subgraph "{role}"')
-                for hn, n in by_role[role]:
+                z = str(n.get("zone") or "").strip()
+                if z:
+                    by_zone.setdefault(z, []).append((hn, n))
+                else:
+                    unzoned.append((hn, n))
+            for z in sorted(by_zone.keys(), key=lambda x: int(x) if str(x).isdigit() else 9999):
+                lines.append(f'  subgraph "{z}"')
+                for hn, n in sorted(by_zone[z], key=stable_node_key):
                     lines.append("    " + build_node_line(hn, n, self.cfg))
                 lines.append("  end")
+            for hn, n in sorted(unzoned, key=stable_node_key):
+                lines.append("  " + build_node_line(hn, n, self.cfg))
             lines.append("end")
         return lines
 
     def _render_edges(self) -> List[str]:
         lines: List[str] = []
-        # Стабильный порядок рёбер: как в normalize (уже отсортировано), просто печатаем
+        # РЎС‚Р°Р±РёР»СЊРЅС‹Р№ РїРѕСЂСЏРґРѕРє СЂС‘Р±РµСЂ: РєР°Рє РІ normalize (СѓР¶Рµ РѕС‚СЃРѕСЂС‚РёСЂРѕРІР°РЅРѕ), РїСЂРѕСЃС‚Рѕ РїРµС‡Р°С‚Р°РµРј
         for e in self.norm.edges:
             ln = build_edge_line(e)
             if ln:
@@ -232,20 +242,20 @@ class MermaidWriter:
     def render(self) -> str:
         parts: List[str] = [self._header()]
 
-        # Узлы
+        # РЈР·Р»С‹
         if self.cfg.render.use_subgraphs:
             parts.extend(self._render_nodes_with_subgraphs())
         else:
             parts.extend(self._render_nodes_plain())
 
-        parts.append("")  # пустая строка
+        parts.append("")  # РїСѓСЃС‚Р°СЏ СЃС‚СЂРѕРєР°
 
-        # Рёбра
+        # Р С‘Р±СЂР°
         parts.extend(self._render_edges())
 
-        parts.append("")  # пустая строка
+        parts.append("")  # РїСѓСЃС‚Р°СЏ СЃС‚СЂРѕРєР°
 
-        # classDef — один раз внизу диаграммы
+        # classDef вЂ” РѕРґРёРЅ СЂР°Р· РІРЅРёР·Сѓ РґРёР°РіСЂР°РјРјС‹
         parts.append(class_defs())
 
         return "\n".join(parts)
@@ -266,7 +276,7 @@ def _setup_logger() -> logging.Logger:
     return logger
 
 def _default_paths(root: Path) -> tuple[Path, Path, Path]:
-    """Возвращает (config.json, normalized.json, output.mmd)"""
+    """Р’РѕР·РІСЂР°С‰Р°РµС‚ (config.json, normalized.json, output.mmd)"""
     cfg = root / "config" / "config.json"
     normalized = root / "data" / "output" / "logs" / "normalized.json"
     out_mmd = root / "data" / "output" / "network.mmd"
@@ -274,15 +284,15 @@ def _default_paths(root: Path) -> tuple[Path, Path, Path]:
 
 if __name__ == "__main__":
     """
-    Запуск:
+    Р—Р°РїСѓСЃРє:
       python -m src.renderers.mermaid_writer
 
-    Предполагает, что:
-      - data/output/logs/normalized.json уже существует (из normalize.py)
-      - config/config.json существует
+    РџСЂРµРґРїРѕР»Р°РіР°РµС‚, С‡С‚Рѕ:
+      - data/output/logs/normalized.json СѓР¶Рµ СЃСѓС‰РµСЃС‚РІСѓРµС‚ (РёР· normalize.py)
+      - config/config.json СЃСѓС‰РµСЃС‚РІСѓРµС‚
     """
     log = _setup_logger()
-    project_root = Path(__file__).resolve().parents[2]  # .../src/renderers -> корень
+    project_root = Path(__file__).resolve().parents[2]  # .../src/renderers -> РєРѕСЂРµРЅСЊ
     cfg_path, norm_path, out_path = _default_paths(project_root)
 
     try:
@@ -293,7 +303,7 @@ if __name__ == "__main__":
 
         out_path.parent.mkdir(parents=True, exist_ok=True)
         out_path.write_text(text, encoding="utf-8")
-        log.info("Готово: %s", out_path)
+        log.info("Р“РѕС‚РѕРІРѕ: %s", out_path)
     except Exception as e:
-        log.error("Фатальная ошибка: %s", e)
+        log.error("Р¤Р°С‚Р°Р»СЊРЅР°СЏ РѕС€РёР±РєР°: %s", e)
         raise

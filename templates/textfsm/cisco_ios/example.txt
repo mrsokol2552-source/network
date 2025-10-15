@@ -1,6 +1,10 @@
-# TextFSM template — Cisco IOS
-# TODO: заполнить парсинг конкретных команд (show cdp neighbors, show vlan brief, show interfaces ...)
-Value FillMeUp (.*)
-
-Start
-  ^.* -> Record
+# Command list for Cisco IOS collection
+# pre_enable=1
+terminal length 0
+show version
+show cdp neighbors detail
+show lldp neighbors detail
+show vlan brief
+show interfaces status
+show interfaces
+show running-config

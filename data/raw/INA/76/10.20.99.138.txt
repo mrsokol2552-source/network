@@ -1,0 +1,210 @@
+
+
+$ terminal length 0
+
+
+
+$ show version
+Cisco IOS Software, C2960CX Software (C2960CX-UNIVERSALK9-M), Version 15.2(7)E, RELEASE SOFTWARE (fc3)
+Technical Support: http://www.cisco.com/techsupport
+Copyright (c) 1986-2019 by Cisco Systems, Inc.
+Compiled Sat 23-Mar-19 09:05 by prod_rel_team
+
+ROM: Bootstrap program is C2960CX boot loader
+BOOTLDR: C2960CX Boot Loader (C2960CX-HBOOT-M) Version 15.2(6r)E, RELEASE SOFTWARE (fc1)
+
+INA-NSWS-76-99-138 uptime is 1 week, 5 hours, 15 minutes
+System returned to ROM by power-on
+System restarted at 11:14:25 UTC Wed Oct 8 2025
+System image file is "flash:/c2960cx-universalk9-mz.152-7.E/c2960cx-universalk9-mz.152-7.E.bin"
+Last reload reason: power-on
+
+
+
+This product contains cryptographic features and is subject to United
+States and local country laws governing import, export, transfer and
+use. Delivery of Cisco cryptographic products does not imply
+third-party authority to import, export, distribute or use encryption.
+Importers, exporters, distributors and users are responsible for
+compliance with U.S. and local country laws. By using this product you
+agree to comply with applicable laws and regulations. If you are unable
+to comply with U.S. and local laws, return this product immediately.
+
+A summary of U.S. laws governing Cisco cryptographic products may be found at:
+http://www.cisco.com/wwl/export/crypto/tool/stqrg.html
+
+If you require further assistance please contact us by sending email to
+export@cisco.com.
+
+cisco WS-C2960CX-8TC-L (APM86XXX) processor (revision L0) with 524288K bytes of memory.
+Processor board ID FOC2416L8J1
+Last reset from power-on
+2 Virtual Ethernet interfaces
+12 Gigabit Ethernet interfaces
+The password-recovery mechanism is enabled.
+
+512K bytes of flash-simulated non-volatile configuration memory.
+Base ethernet MAC Address       : 4C:A6:4D:9B:42:00
+Motherboard assembly number     : 73-100861-04
+Power supply part number        : 341-0208-03
+Motherboard serial number       : FOC24148B01
+Power supply serial number      : LIT240934UW
+Model revision number           : L0
+Motherboard revision number     : C0
+Model number                    : WS-C2960CX-8TC-L
+System serial number            : FOC2416L8J1
+Top Assembly Part Number        : 68-100565-01
+Top Assembly Revision Number    : G0
+Version ID                      : V04
+CLEI Code Number                : CMM1M10DRB
+Hardware Board Revision Number  : 0x09
+
+
+Switch Ports Model                     SW Version            SW Image                 
+------ ----- -----                     ----------            ----------               
+*    1 12    WS-C2960CX-8TC-L          15.2(7)E              C2960CX-UNIVERSALK9-M    
+
+
+Configuration register is 0xF
+
+
+
+$ show lldp neighbors detail
+------------------------------------------------
+Local Intf: Gi0/2
+Chassis id: 245a.4c08.8117
+Port id: eth0
+Port Description - not advertised
+System Name - not advertised
+System Description - not advertised
+
+Time remaining: 187 seconds
+System Capabilities - not advertised
+Enabled Capabilities - not advertised
+Management Addresses - not advertised
+Auto Negotiation - not supported
+Physical media capabilities - not advertised
+Media Attachment Unit type - not advertised
+Vlan ID: - not advertised
+
+------------------------------------------------
+Local Intf: Gi0/1
+Chassis id: 245a.4c08.8124
+Port id: eth0
+Port Description - not advertised
+System Name - not advertised
+System Description - not advertised
+
+Time remaining: 184 seconds
+System Capabilities - not advertised
+Enabled Capabilities - not advertised
+Management Addresses - not advertised
+Auto Negotiation - not supported
+Physical media capabilities - not advertised
+Media Attachment Unit type - not advertised
+Vlan ID: - not advertised
+
+------------------------------------------------
+Local Intf: Gi0/12
+Chassis id: d477.98ae.3f00
+Port id: Gi1/0/18
+Port Description: 99.138_gi0/12
+System Name: INA-NSWS-72-99-137.kolmar.local
+
+System Description: 
+Cisco IOS Software, C1000 Software (C1000-UNIVERSALK9-M), Version 15.2(8)E, RELEASE SOFTWARE (fc3)
+Technical Support: http://www.cisco.com/techsupport
+Copyright (c) 1986-2021 by Cisco Systems, Inc.
+Compiled Sat 17-Apr-21 07:21 by prod_rel_team
+
+Time remaining: 115 seconds
+System Capabilities: B,R
+Enabled Capabilities: B
+Management Addresses:
+    IP: 10.20.99.137
+Auto Negotiation - not supported
+Physical media capabilities:
+    1000baseX(FD)
+Media Attachment Unit type: 24
+Vlan ID: 1
+
+
+Total entries displayed: 3
+
+
+
+$ show cdp neighbors detail
+-------------------------
+Device ID: INA-NSWS-72-99-137.kolmar.local
+Entry address(es): 
+  IP address: 10.20.99.137
+Platform: cisco C1000-16T-2G-L,  Capabilities: Switch IGMP 
+Interface: GigabitEthernet0/12,  Port ID (outgoing port): GigabitEthernet1/0/18
+Holdtime : 162 sec
+
+Version :
+Cisco IOS Software, C1000 Software (C1000-UNIVERSALK9-M), Version 15.2(8)E, RELEASE SOFTWARE (fc3)
+Technical Support: http://www.cisco.com/techsupport
+Copyright (c) 1986-2021 by Cisco Systems, Inc.
+Compiled Sat 17-Apr-21 07:21 by prod_rel_team
+
+advertisement version: 2
+VTP Management Domain: ''
+Native VLAN: 1
+Duplex: full
+Management address(es): 
+  IP address: 10.20.99.137
+
+-------------------------
+Device ID: INA-NSWS-75-98-94.kolmar.ru
+Entry address(es): 
+  IP address: 10.20.98.94
+Platform: cisco WS-C2960CX-8PC-L,  Capabilities: Switch IGMP 
+Interface: GigabitEthernet0/11,  Port ID (outgoing port): GigabitEthernet0/12
+Holdtime : 153 sec
+
+Version :
+Cisco IOS Software, C2960CX Software (C2960CX-UNIVERSALK9-M), Version 15.2(3)E3, RELEASE SOFTWARE (fc3)
+Technical Support: http://www.cisco.com/techsupport
+Copyright (c) 1986-2016 by Cisco Systems, Inc.
+Compiled Wed 13-Jan-16 23:18 by prod_rel_team
+
+advertisement version: 2
+Protocol Hello:  OUI=0x00000C, Protocol ID=0x0112; payload len=27, value=00000000FFFFFFFF010221FF00000000000000EBD58FE680FF0000
+VTP Management Domain: ''
+Native VLAN: 1
+Duplex: full
+Management address(es): 
+  IP address: 10.20.98.94
+
+-------------------------
+Device ID: LiteBeam_Energo
+Entry address(es): 
+  IP address: 10.200.10.53
+  IP address: 169.254.184.144
+Platform: LiteBeam M5,  Capabilities: Trans-Bridge 
+Interface: GigabitEthernet0/1,  Port ID (outgoing port): br0
+Holdtime : 87 sec
+
+Version :
+XW.v6.2.0
+
+advertisement version: 1
+
+
+Total cdp entries displayed : 3
+
+
+$ show cdp neighbors
+Capability Codes: R - Router, T - Trans Bridge, B - Source Route Bridge
+                  S - Switch, H - Host, I - IGMP, r - Repeater, P - Phone, 
+                  D - Remote, C - CVTA, M - Two-port Mac Relay 
+
+Device ID        Local Intrfce     Holdtme    Capability  Platform  Port ID
+INA-NSWS-72-99-137.kolmar.local
+                 Gig 0/12          162              S I   C1000-16T Gig 1/0/18
+INA-NSWS-75-98-94.kolmar.ru
+                 Gig 0/11          152              S I   WS-C2960C Gig 0/12
+LiteBeam_Energo  Gig 0/1           87                T    LiteBeam  br0
+
+Total cdp entries displayed : 3

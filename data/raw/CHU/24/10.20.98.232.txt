@@ -1,0 +1,194 @@
+
+
+$ terminal length 0
+
+
+
+$ show version
+Cisco IOS Software, C2960CX Software (C2960CX-UNIVERSALK9-M), Version 15.2(7)E, RELEASE SOFTWARE (fc3)
+Technical Support: http://www.cisco.com/techsupport
+Copyright (c) 1986-2019 by Cisco Systems, Inc.
+Compiled Sat 23-Mar-19 09:05 by prod_rel_team
+
+ROM: Bootstrap program is C2960CX boot loader
+BOOTLDR: C2960CX Boot Loader (C2960CX-HBOOT-M) Version 15.2(6r)E, RELEASE SOFTWARE (fc1)
+
+CHU-NSWS-24-98-232 uptime is 1 week, 4 hours, 42 minutes
+System returned to ROM by power-on
+System restarted at 11:50:45 YAKT Wed Oct 8 2025
+System image file is "flash:/c2960cx-universalk9-mz.152-7.E/c2960cx-universalk9-mz.152-7.E.bin"
+Last reload reason: power-on
+
+
+
+This product contains cryptographic features and is subject to United
+States and local country laws governing import, export, transfer and
+use. Delivery of Cisco cryptographic products does not imply
+third-party authority to import, export, distribute or use encryption.
+Importers, exporters, distributors and users are responsible for
+compliance with U.S. and local country laws. By using this product you
+agree to comply with applicable laws and regulations. If you are unable
+to comply with U.S. and local laws, return this product immediately.
+
+A summary of U.S. laws governing Cisco cryptographic products may be found at:
+http://www.cisco.com/wwl/export/crypto/tool/stqrg.html
+
+If you require further assistance please contact us by sending email to
+export@cisco.com.
+
+cisco WS-C2960CX-8PC-L (APM86XXX) processor (revision Q0) with 524288K bytes of memory.
+Processor board ID FOC2535YHYV
+Last reset from power-on
+3 Virtual Ethernet interfaces
+12 Gigabit Ethernet interfaces
+The password-recovery mechanism is enabled.
+
+512K bytes of flash-simulated non-volatile configuration memory.
+Base ethernet MAC Address       : 84:EB:EF:99:8B:80
+Motherboard assembly number     : 73-100862-04
+Power supply part number        : 341-0675-02
+Motherboard serial number       : FOC25340TNJ
+Power supply serial number      : LIT252622JZ
+Model revision number           : Q0
+Motherboard revision number     : E0
+Model number                    : WS-C2960CX-8PC-L
+System serial number            : FOC2535YHYV
+Top Assembly Part Number        : 68-100568-01
+Top Assembly Revision Number    : K0
+Version ID                      : V03
+CLEI Code Number                : CMMT410BRB
+Hardware Board Revision Number  : 0x09
+
+
+Switch Ports Model                     SW Version            SW Image                 
+------ ----- -----                     ----------            ----------               
+*    1 12    WS-C2960CX-8PC-L          15.2(7)E              C2960CX-UNIVERSALK9-M    
+
+
+Configuration register is 0xF
+
+
+
+$ show lldp neighbors detail
+------------------------------------------------
+Local Intf: Gi0/10
+Chassis id: fcec.da62.baad
+Port id: eth0
+Port Description - not advertised
+System Name - not advertised
+System Description - not advertised
+
+Time remaining: 226 seconds
+System Capabilities - not advertised
+Enabled Capabilities - not advertised
+Management Addresses - not advertised
+Auto Negotiation - not supported
+Physical media capabilities - not advertised
+Media Attachment Unit type - not advertised
+Vlan ID: - not advertised
+
+------------------------------------------------
+Local Intf: Gi0/11
+Chassis id: dcce.c140.e900
+Port id: Gi0/12
+Port Description: TRUNK
+System Name: CHU-NSWS-24-98-93.kolmar.ru
+
+System Description: 
+Cisco IOS Software, C2960CX Software (C2960CX-UNIVERSALK9-M), Version 15.2(3)E2, RELEASE SOFTWARE (fc1)
+Technical Support: http://www.cisco.com/techsupport
+Copyright (c) 1986-2015 by Cisco Systems, Inc.
+Compiled Tue 21-Jul-15 13:24 by prod_rel_team
+
+Time remaining: 113 seconds
+System Capabilities: B,R
+Enabled Capabilities: B
+Management Addresses:
+    IP: 10.20.98.93
+Auto Negotiation - not supported
+Physical media capabilities:
+    1000baseX(FD)
+Media Attachment Unit type: 24
+Vlan ID: 1
+
+
+Total entries displayed: 2
+
+
+
+$ show cdp neighbors detail
+-------------------------
+Device ID: NanoStation M2
+Entry address(es): 
+  IP address: 10.100.25.102
+  IP address: 169.254.187.90
+Platform: NanoStation M2,  Capabilities: Trans-Bridge 
+Interface: GigabitEthernet0/10,  Port ID (outgoing port): br0
+Holdtime : 111 sec
+
+Version :
+XW.v6.3.6
+
+advertisement version: 1
+
+-------------------------
+Device ID: CHU-NSWS-24-98-93.kolmar.ru
+Entry address(es): 
+  IP address: 10.20.98.93
+Platform: cisco WS-C2960CX-8PC-L,  Capabilities: Switch IGMP 
+Interface: GigabitEthernet0/11,  Port ID (outgoing port): GigabitEthernet0/12
+Holdtime : 140 sec
+
+Version :
+Cisco IOS Software, C2960CX Software (C2960CX-UNIVERSALK9-M), Version 15.2(3)E2, RELEASE SOFTWARE (fc1)
+Technical Support: http://www.cisco.com/techsupport
+Copyright (c) 1986-2015 by Cisco Systems, Inc.
+Compiled Tue 21-Jul-15 13:24 by prod_rel_team
+
+advertisement version: 2
+Protocol Hello:  OUI=0x00000C, Protocol ID=0x0112; payload len=27, value=00000000FFFFFFFF010221FF000000000000DCCEC140E900FF0000
+VTP Management Domain: ''
+Native VLAN: 1
+Duplex: full
+Management address(es): 
+  IP address: 10.20.98.93
+
+-------------------------
+Device ID: CHU-NSWS-25-98-231.kolmar.ru
+Entry address(es): 
+  IP address: 10.20.98.231
+Platform: cisco WS-C3560CX-12PC-S,  Capabilities: Switch IGMP 
+Interface: GigabitEthernet0/12,  Port ID (outgoing port): GigabitEthernet0/15
+Holdtime : 147 sec
+
+Version :
+Cisco IOS Software, C3560CX Software (C3560CX-UNIVERSALK9-M), Version 15.2(4)E4, RELEASE SOFTWARE (fc2)
+Technical Support: http://www.cisco.com/techsupport
+Copyright (c) 1986-2017 by Cisco Systems, Inc.
+Compiled Wed 05-Apr-17 05:59 by prod_rel_team
+
+advertisement version: 2
+Protocol Hello:  OUI=0x00000C, Protocol ID=0x0112; payload len=27, value=00000000FFFFFFFF010221FF0000000000006CDD30D88700FF0000
+VTP Management Domain: 'aapl-retail'
+Native VLAN: 1
+Duplex: full
+Management address(es): 
+  IP address: 10.20.98.231
+
+
+Total cdp entries displayed : 3
+
+
+$ show cdp neighbors
+Capability Codes: R - Router, T - Trans Bridge, B - Source Route Bridge
+                  S - Switch, H - Host, I - IGMP, r - Repeater, P - Phone, 
+                  D - Remote, C - CVTA, M - Two-port Mac Relay 
+
+Device ID        Local Intrfce     Holdtme    Capability  Platform  Port ID
+NanoStation M2   Gig 0/10          111               T    NanoStati br0
+CHU-NSWS-24-98-93.kolmar.ru
+                 Gig 0/11          140              S I   WS-C2960C Gig 0/12
+CHU-NSWS-25-98-231.kolmar.ru
+                 Gig 0/12          147              S I   WS-C3560C Gig 0/15
+
+Total cdp entries displayed : 3

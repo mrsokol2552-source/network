@@ -1,0 +1,21 @@
+{
+  "vendor": "eltex_mes",
+  "raw_files": [
+    "10.20.96.14.txt"
+  ],
+  "parsed": {
+    "eltex_mes_show_system_information": [
+      {
+        "HardwareVersion": "2v3",
+        "SoftwareVersion": "10.3.4",
+        "FirmwareVersion": "10.3.4",
+        "HardwareSerial": "ESC6000776",
+        "SystemName": "NER-NSWS-06-96-14",
+        "SystemDescription": "MES2448B rev.B AC 52-port 1G/10G Managed Switch",
+        "_source_file": "C:\\Users\\zhiltsov.aa\\Desktop\\net-auto-mermaid\\data\\raw\\10.20.96.14.txt",
+        "_template": "eltex_mes_show_system_information.template"
+      }
+    ]
+  },
+  "errors": []
+}

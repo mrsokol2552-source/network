@@ -1,10 +1,272 @@
 {
-  "vendor": "huawei_vrp",
+  "vendor": "dlink",
   "raw_files": [
-    "10.20.99.30.txt"
+    "DES\\3200\\10.20.99.30.txt"
   ],
-  "parsed": {},
-  "errors": [
-    "no_templates_for_vendor:huawei_vrp"
-  ]
+  "parsed": {
+    "dlink_show_lldp_remote_ports_detail": [
+      {
+        "LocalInterface": "",
+        "NeighborName": "",
+        "NeighborPort": "1 ",
+        "_source_file": "C:\\Users\\zhiltsov.aa\\Desktop\\net-auto-mermaid\\data\\raw\\DES\\3200\\10.20.99.30.txt",
+        "_template": "dlink_show_lldp_remote_ports_detail.template"
+      },
+      {
+        "LocalInterface": "",
+        "NeighborName": "",
+        "NeighborPort": "2 ",
+        "_source_file": "C:\\Users\\zhiltsov.aa\\Desktop\\net-auto-mermaid\\data\\raw\\DES\\3200\\10.20.99.30.txt",
+        "_template": "dlink_show_lldp_remote_ports_detail.template"
+      },
+      {
+        "LocalInterface": "",
+        "NeighborName": "",
+        "NeighborPort": "3 ",
+        "_source_file": "C:\\Users\\zhiltsov.aa\\Desktop\\net-auto-mermaid\\data\\raw\\DES\\3200\\10.20.99.30.txt",
+        "_template": "dlink_show_lldp_remote_ports_detail.template"
+      },
+      {
+        "LocalInterface": "",
+        "NeighborName": "",
+        "NeighborPort": "4 ",
+        "_source_file": "C:\\Users\\zhiltsov.aa\\Desktop\\net-auto-mermaid\\data\\raw\\DES\\3200\\10.20.99.30.txt",
+        "_template": "dlink_show_lldp_remote_ports_detail.template"
+      },
+      {
+        "LocalInterface": "",
+        "NeighborName": "",
+        "NeighborPort": "5 ",
+        "_source_file": "C:\\Users\\zhiltsov.aa\\Desktop\\net-auto-mermaid\\data\\raw\\DES\\3200\\10.20.99.30.txt",
+        "_template": "dlink_show_lldp_remote_ports_detail.template"
+      },
+      {
+        "LocalInterface": "",
+        "NeighborName": "",
+        "NeighborPort": "6 ",
+        "_source_file": "C:\\Users\\zhiltsov.aa\\Desktop\\net-auto-mermaid\\data\\raw\\DES\\3200\\10.20.99.30.txt",
+        "_template": "dlink_show_lldp_remote_ports_detail.template"
+      },
+      {
+        "LocalInterface": "",
+        "NeighborName": "",
+        "NeighborPort": "7 ",
+        "_source_file": "C:\\Users\\zhiltsov.aa\\Desktop\\net-auto-mermaid\\data\\raw\\DES\\3200\\10.20.99.30.txt",
+        "_template": "dlink_show_lldp_remote_ports_detail.template"
+      },
+      {
+        "LocalInterface": "",
+        "NeighborName": "",
+        "NeighborPort": "8 ",
+        "_source_file": "C:\\Users\\zhiltsov.aa\\Desktop\\net-auto-mermaid\\data\\raw\\DES\\3200\\10.20.99.30.txt",
+        "_template": "dlink_show_lldp_remote_ports_detail.template"
+      },
+      {
+        "LocalInterface": "",
+        "NeighborName": "",
+        "NeighborPort": "9 ",
+        "_source_file": "C:\\Users\\zhiltsov.aa\\Desktop\\net-auto-mermaid\\data\\raw\\DES\\3200\\10.20.99.30.txt",
+        "_template": "dlink_show_lldp_remote_ports_detail.template"
+      },
+      {
+        "LocalInterface": "",
+        "NeighborName": "",
+        "NeighborPort": "10 ",
+        "_source_file": "C:\\Users\\zhiltsov.aa\\Desktop\\net-auto-mermaid\\data\\raw\\DES\\3200\\10.20.99.30.txt",
+        "_template": "dlink_show_lldp_remote_ports_detail.template"
+      },
+      {
+        "LocalInterface": "",
+        "NeighborName": "",
+        "NeighborPort": "11 ",
+        "_source_file": "C:\\Users\\zhiltsov.aa\\Desktop\\net-auto-mermaid\\data\\raw\\DES\\3200\\10.20.99.30.txt",
+        "_template": "dlink_show_lldp_remote_ports_detail.template"
+      },
+      {
+        "LocalInterface": "",
+        "NeighborName": "",
+        "NeighborPort": "12 ",
+        "_source_file": "C:\\Users\\zhiltsov.aa\\Desktop\\net-auto-mermaid\\data\\raw\\DES\\3200\\10.20.99.30.txt",
+        "_template": "dlink_show_lldp_remote_ports_detail.template"
+      },
+      {
+        "LocalInterface": "",
+        "NeighborName": "",
+        "NeighborPort": "13 ",
+        "_source_file": "C:\\Users\\zhiltsov.aa\\Desktop\\net-auto-mermaid\\data\\raw\\DES\\3200\\10.20.99.30.txt",
+        "_template": "dlink_show_lldp_remote_ports_detail.template"
+      },
+      {
+        "LocalInterface": "",
+        "NeighborName": "",
+        "NeighborPort": "14 ",
+        "_source_file": "C:\\Users\\zhiltsov.aa\\Desktop\\net-auto-mermaid\\data\\raw\\DES\\3200\\10.20.99.30.txt",
+        "_template": "dlink_show_lldp_remote_ports_detail.template"
+      },
+      {
+        "LocalInterface": "",
+        "NeighborName": "",
+        "NeighborPort": "15 ",
+        "_source_file": "C:\\Users\\zhiltsov.aa\\Desktop\\net-auto-mermaid\\data\\raw\\DES\\3200\\10.20.99.30.txt",
+        "_template": "dlink_show_lldp_remote_ports_detail.template"
+      },
+      {
+        "LocalInterface": "",
+        "NeighborName": "",
+        "NeighborPort": "16 ",
+        "_source_file": "C:\\Users\\zhiltsov.aa\\Desktop\\net-auto-mermaid\\data\\raw\\DES\\3200\\10.20.99.30.txt",
+        "_template": "dlink_show_lldp_remote_ports_detail.template"
+      },
+      {
+        "LocalInterface": "",
+        "NeighborName": "",
+        "NeighborPort": "17 ",
+        "_source_file": "C:\\Users\\zhiltsov.aa\\Desktop\\net-auto-mermaid\\data\\raw\\DES\\3200\\10.20.99.30.txt",
+        "_template": "dlink_show_lldp_remote_ports_detail.template"
+      },
+      {
+        "LocalInterface": "",
+        "NeighborName": "",
+        "NeighborPort": "18 ",
+        "_source_file": "C:\\Users\\zhiltsov.aa\\Desktop\\net-auto-mermaid\\data\\raw\\DES\\3200\\10.20.99.30.txt",
+        "_template": "dlink_show_lldp_remote_ports_detail.template"
+      },
+      {
+        "LocalInterface": "",
+        "NeighborName": "",
+        "NeighborPort": "19 ",
+        "_source_file": "C:\\Users\\zhiltsov.aa\\Desktop\\net-auto-mermaid\\data\\raw\\DES\\3200\\10.20.99.30.txt",
+        "_template": "dlink_show_lldp_remote_ports_detail.template"
+      },
+      {
+        "LocalInterface": "",
+        "NeighborName": "",
+        "NeighborPort": "20 ",
+        "_source_file": "C:\\Users\\zhiltsov.aa\\Desktop\\net-auto-mermaid\\data\\raw\\DES\\3200\\10.20.99.30.txt",
+        "_template": "dlink_show_lldp_remote_ports_detail.template"
+      },
+      {
+        "LocalInterface": "",
+        "NeighborName": "",
+        "NeighborPort": "21 ",
+        "_source_file": "C:\\Users\\zhiltsov.aa\\Desktop\\net-auto-mermaid\\data\\raw\\DES\\3200\\10.20.99.30.txt",
+        "_template": "dlink_show_lldp_remote_ports_detail.template"
+      },
+      {
+        "LocalInterface": "",
+        "NeighborName": "",
+        "NeighborPort": "22 ",
+        "_source_file": "C:\\Users\\zhiltsov.aa\\Desktop\\net-auto-mermaid\\data\\raw\\DES\\3200\\10.20.99.30.txt",
+        "_template": "dlink_show_lldp_remote_ports_detail.template"
+      },
+      {
+        "LocalInterface": "",
+        "NeighborName": "",
+        "NeighborPort": "23 ",
+        "_source_file": "C:\\Users\\zhiltsov.aa\\Desktop\\net-auto-mermaid\\data\\raw\\DES\\3200\\10.20.99.30.txt",
+        "_template": "dlink_show_lldp_remote_ports_detail.template"
+      },
+      {
+        "LocalInterface": "",
+        "NeighborName": "",
+        "NeighborPort": "24 ",
+        "_source_file": "C:\\Users\\zhiltsov.aa\\Desktop\\net-auto-mermaid\\data\\raw\\DES\\3200\\10.20.99.30.txt",
+        "_template": "dlink_show_lldp_remote_ports_detail.template"
+      },
+      {
+        "LocalInterface": "",
+        "NeighborName": "",
+        "NeighborPort": "25 ",
+        "_source_file": "C:\\Users\\zhiltsov.aa\\Desktop\\net-auto-mermaid\\data\\raw\\DES\\3200\\10.20.99.30.txt",
+        "_template": "dlink_show_lldp_remote_ports_detail.template"
+      },
+      {
+        "LocalInterface": "",
+        "NeighborName": "",
+        "NeighborPort": "26 ",
+        "_source_file": "C:\\Users\\zhiltsov.aa\\Desktop\\net-auto-mermaid\\data\\raw\\DES\\3200\\10.20.99.30.txt",
+        "_template": "dlink_show_lldp_remote_ports_detail.template"
+      },
+      {
+        "LocalInterface": "",
+        "NeighborName": "",
+        "NeighborPort": "27 ",
+        "_source_file": "C:\\Users\\zhiltsov.aa\\Desktop\\net-auto-mermaid\\data\\raw\\DES\\3200\\10.20.99.30.txt",
+        "_template": "dlink_show_lldp_remote_ports_detail.template"
+      },
+      {
+        "LocalInterface": "",
+        "NeighborName": "",
+        "NeighborPort": "28 ",
+        "_source_file": "C:\\Users\\zhiltsov.aa\\Desktop\\net-auto-mermaid\\data\\raw\\DES\\3200\\10.20.99.30.txt",
+        "_template": "dlink_show_lldp_remote_ports_detail.template"
+      }
+    ],
+    "dlink_show_vlan": [
+      {
+        "VlanId": "1",
+        "VlanName": "default",
+        "Ports": "23,25-26            ",
+        "_source_file": "C:\\Users\\zhiltsov.aa\\Desktop\\net-auto-mermaid\\data\\raw\\DES\\3200\\10.20.99.30.txt",
+        "_template": "dlink_show_vlan.template"
+      },
+      {
+        "VlanId": "13",
+        "VlanName": "Phones",
+        "Ports": "1-28                ",
+        "_source_file": "C:\\Users\\zhiltsov.aa\\Desktop\\net-auto-mermaid\\data\\raw\\DES\\3200\\10.20.99.30.txt",
+        "_template": "dlink_show_vlan.template"
+      },
+      {
+        "VlanId": "17",
+        "VlanName": "Transport",
+        "Ports": "25                  ",
+        "_source_file": "C:\\Users\\zhiltsov.aa\\Desktop\\net-auto-mermaid\\data\\raw\\DES\\3200\\10.20.99.30.txt",
+        "_template": "dlink_show_vlan.template"
+      },
+      {
+        "VlanId": "30",
+        "VlanName": "Wi-Fi",
+        "Ports": "23,25               ",
+        "_source_file": "C:\\Users\\zhiltsov.aa\\Desktop\\net-auto-mermaid\\data\\raw\\DES\\3200\\10.20.99.30.txt",
+        "_template": "dlink_show_vlan.template"
+      },
+      {
+        "VlanId": "31",
+        "VlanName": "Wi-Fi_Guest",
+        "Ports": "23,25               ",
+        "_source_file": "C:\\Users\\zhiltsov.aa\\Desktop\\net-auto-mermaid\\data\\raw\\DES\\3200\\10.20.99.30.txt",
+        "_template": "dlink_show_vlan.template"
+      },
+      {
+        "VlanId": "32",
+        "VlanName": "Wi-Fi_Works",
+        "Ports": "23,25               ",
+        "_source_file": "C:\\Users\\zhiltsov.aa\\Desktop\\net-auto-mermaid\\data\\raw\\DES\\3200\\10.20.99.30.txt",
+        "_template": "dlink_show_vlan.template"
+      },
+      {
+        "VlanId": "33",
+        "VlanName": "Wi-Fi_Staff",
+        "Ports": "23,25               ",
+        "_source_file": "C:\\Users\\zhiltsov.aa\\Desktop\\net-auto-mermaid\\data\\raw\\DES\\3200\\10.20.99.30.txt",
+        "_template": "dlink_show_vlan.template"
+      },
+      {
+        "VlanId": "34",
+        "VlanName": "Wi-Fi_Generals",
+        "Ports": "23,25               ",
+        "_source_file": "C:\\Users\\zhiltsov.aa\\Desktop\\net-auto-mermaid\\data\\raw\\DES\\3200\\10.20.99.30.txt",
+        "_template": "dlink_show_vlan.template"
+      },
+      {
+        "VlanId": "40",
+        "VlanName": "Users(Den)",
+        "Ports": "1-22,24-25          ",
+        "_source_file": "C:\\Users\\zhiltsov.aa\\Desktop\\net-auto-mermaid\\data\\raw\\DES\\3200\\10.20.99.30.txt",
+        "_template": "dlink_show_vlan.template"
+      }
+    ]
+  },
+  "errors": []
 }

@@ -1,0 +1,48 @@
+
+
+$ terminal length 0
+
+
+
+$ show version
+
+MEMORY           : Total=81490 KBytes, Free=61736 KBytes, Max=61393 KBytes
+FLASH            : 0x40000000-0x41ffffff, 512 x 0x10000 blocks
+MAC Address      : 00-40-c7-fe-6f-c5
+Previous Restart : Cold
+
+System Contact   : 
+System Name      : INA-NSWS-129-99-125
+System Location  : 
+System Time      : 2011-02-11T23:32:44+00:00
+System Uptime    : 41d 23:32:44
+
+Active Image
+------------
+Image            : managed
+Version          : CROSS-8/HPoE (II) (standalone) v6.54.2607
+Date             : 2017-09-07T00:10:02+08:00
+
+Alternate Image
+---------------
+Image            : managed.bk
+Version          : 
+Date             : 0000-00-00T00:00:00
+
+
+
+$ show lldp neighbors detail
+                                         ^
+% Invalid word detected at '^' marker.
+
+
+
+$ show cdp neighbors detail
+                          ^
+% Invalid word detected at '^' marker.
+
+
+
+$ show cdp neighbors
+                          ^
+% Invalid word detected at '^' marker.

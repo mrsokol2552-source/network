@@ -1,5 +1,8 @@
-# TextFSM template — qtech
-Value FillMeUp (.*)
-
-Start
-  ^.* -> Record
+# Command list for QTech collection
+# pre_enable=0
+show version
+show lldp neighbors detail
+show vlan brief
+show interfaces status
+show interfaces
+show running-config

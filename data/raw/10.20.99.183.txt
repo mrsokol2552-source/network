@@ -1,7 +1,7 @@
 
 
-$ show running-config
-                  ^
+$ terminal length 0
+              ^
 % Invalid input detected at '^' marker.
 
 
@@ -19,13 +19,7 @@ $ show version
   Copyright (C) 2018 NAG LLC
   All rights reserved
   Last reboot is cold reset.
-  Uptime is 4 weeks, 4 days, 6 hours, 0 minutes
-
-
-$ show cdp neighbors detail
-                  ^
-% Invalid input detected at '^' marker.
-
+  Uptime is 5 weeks, 2 days, 6 hours, 51 minutes
 
 
 $ show lldp neighbors detail
@@ -34,5 +28,12 @@ $ show lldp neighbors detail
 
 
 
-$ show interface status
-interface error!
+$ show cdp neighbors detail
+                  ^
+% Invalid input detected at '^' marker.
+
+
+
+$ show cdp neighbors
+                  ^
+% Invalid input detected at '^' marker.

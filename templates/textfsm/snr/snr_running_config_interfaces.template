@@ -1,0 +1,6 @@
+Value Interface (.+)
+
+Start
+  ^\s*interface\s+${Interface} -> Record
+  ^.* -> Start
+

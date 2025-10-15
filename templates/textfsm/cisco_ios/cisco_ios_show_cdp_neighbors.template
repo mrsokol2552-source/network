@@ -1,0 +1,7 @@
+Value Neighbor (\S+)
+Value LocalInterface (\S+\s*\S+)
+Value NeighborPort (\S+\s*\S+)
+
+Start
+  ^\s*${Neighbor}\s+${LocalInterface}\s+\d+\s+.*?\s+${NeighborPort}\s* -> Record
+  ^.* -> Start

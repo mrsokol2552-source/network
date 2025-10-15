@@ -1,10 +1,19 @@
 {
   "vendor": "cisco_ios",
   "raw_files": [
-    "10.20.98.95.txt"
+    "unknown\\10.20.98.95.txt"
   ],
-  "parsed": {},
-  "errors": [
-    "no_templates_for_vendor:cisco_ios"
-  ]
+  "parsed": {
+    "cisco_ios_show_cdp_neighbors_detail": [
+      {
+        "Neighbor": "e4:5a:d4:39:f1:90",
+        "LocalInterface": "",
+        "NeighborPort": "",
+        "Platform": "",
+        "_source_file": "C:\\Users\\zhiltsov.aa\\Desktop\\net-auto-mermaid\\data\\raw\\unknown\\10.20.98.95.txt",
+        "_template": "cisco_ios_show_cdp_neighbors_detail.template"
+      }
+    ]
+  },
+  "errors": []
 }

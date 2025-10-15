@@ -1,5 +1,8 @@
-# TextFSM template — Eltex MES
-Value FillMeUp (.*)
-
-Start
-  ^.* -> Record
+# Command list for Eltex MES collection
+# pre_enable=0
+show system information
+show lldp neighbors detail
+show vlan
+show interfaces status
+show interfaces
+show running-config

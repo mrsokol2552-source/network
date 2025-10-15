@@ -1,0 +1,143 @@
+
+
+$ terminal length 0
+
+
+
+$ show version
+Cisco IOS Software, C2960X Software (C2960X-UNIVERSALK9-M), Version 15.2(2)E3, RELEASE SOFTWARE (fc3)
+Technical Support: http://www.cisco.com/techsupport
+Copyright (c) 1986-2015 by Cisco Systems, Inc.
+Compiled Wed 26-Aug-15 07:12 by prod_rel_team
+
+ROM: Bootstrap program is C2960X boot loader
+BOOTLDR: C2960X Boot Loader (C2960X-HBOOT-M) Version 15.2(2r)E2, RELEASE SOFTWARE (fc1)
+
+NSK-NSWS-01-99-7 uptime is 6 weeks, 3 days, 20 hours, 20 minutes
+System returned to ROM by power-on
+System restarted at 18:02:05 UTC Sat Aug 30 2025
+System image file is "flash:/c2960x-universalk9-mz.152-2.E3/c2960x-universalk9-mz.152-2.E3.bin"
+Last reload reason: power-on
+
+
+
+This product contains cryptographic features and is subject to United
+States and local country laws governing import, export, transfer and
+use. Delivery of Cisco cryptographic products does not imply
+third-party authority to import, export, distribute or use encryption.
+Importers, exporters, distributors and users are responsible for
+compliance with U.S. and local country laws. By using this product you
+agree to comply with applicable laws and regulations. If you are unable
+to comply with U.S. and local laws, return this product immediately.
+
+A summary of U.S. laws governing Cisco cryptographic products may be found at:
+http://www.cisco.com/wwl/export/crypto/tool/stqrg.html
+
+If you require further assistance please contact us by sending email to
+export@cisco.com.
+
+cisco WS-C2960X-48TS-L (APM86XXX) processor (revision A0) with 524288K bytes of memory.
+Processor board ID JTV20211052
+Last reset from power-on
+3 Virtual Ethernet interfaces
+1 FastEthernet interface
+52 Gigabit Ethernet interfaces
+The password-recovery mechanism is enabled.
+
+512K bytes of flash-simulated non-volatile configuration memory.
+Base ethernet MAC Address       : 00:5F:86:63:3C:00
+Motherboard assembly number     : 73-15971-02
+Power supply part number        : 341-0537-02
+Motherboard serial number       : FOC20162D99
+Power supply serial number      : DCB1938809M
+Model revision number           : A0
+Motherboard revision number     : C0
+Model number                    : WS-C2960RX-48TS-L
+Daughterboard assembly number   : 73-14200-03
+Daughterboard serial number     : FOC20156DJ8
+System serial number            : JTV20211052
+Top Assembly Part Number        : 68-5900-01
+Top Assembly Revision Number    : A0
+Version ID                      : V01
+Daughterboard revision number   : A0
+Hardware Board Revision Number  : 0x12
+
+
+Switch Ports Model                     SW Version            SW Image                 
+------ ----- -----                     ----------            ----------               
+*    1 52    WS-C2960X-48TS-L          15.2(2)E3             C2960X-UNIVERSALK9-M     
+
+
+Configuration register is 0xF
+
+
+
+$ show lldp neighbors detail
+------------------------------------------------
+Chassis id: cc36.cf60.ff00
+Port id: Gi1/0/22
+Port Description: GigabitEthernet1/0/22
+System Name: NSK-NSWR-01-99-1.kolmar.local
+
+System Description: 
+Cisco IOS Software [Cupertino], Catalyst L3 Switch Software (CAT9K_LITE_IOSXE), Version 17.9.4, RELEASE SOFTWARE (fc5)
+Technical Support: http://www.cisco.com/techsupport
+Copyright (c) 1986-2023 by Cisco Systems, Inc.
+Compiled Wed 26-Jul-23 10:43 by mcpre
+
+Time remaining: 105 seconds
+System Capabilities: B,R
+Enabled Capabilities: B,R
+Management Addresses:
+    IP: 10.2.11.1
+Auto Negotiation - supported, enabled
+Physical media capabilities:
+    1000baseT(FD)
+    100base-TX(FD)
+    100base-TX(HD)
+    10base-T(FD)
+    10base-T(HD)
+Media Attachment Unit type: 30
+Vlan ID: 1
+
+
+Total entries displayed: 1
+
+
+
+$ show cdp neighbors detail
+-------------------------
+Device ID: NSK-NSWR-01-99-1.kolmar.local
+Entry address(es): 
+  IP address: 10.2.11.1
+Platform: cisco C9200L-24P-4G,  Capabilities: Router Switch IGMP 
+Interface: GigabitEthernet1/0/35,  Port ID (outgoing port): GigabitEthernet1/0/22
+Holdtime : 161 sec
+
+Version :
+Cisco IOS Software [Cupertino], Catalyst L3 Switch Software (CAT9K_LITE_IOSXE), Version 17.9.4, RELEASE SOFTWARE (fc5)
+Technical Support: http://www.cisco.com/techsupport
+Copyright (c) 1986-2023 by Cisco Systems, Inc.
+Compiled Wed 26-Jul-23 10:43 by mcpre
+
+advertisement version: 2
+VTP Management Domain: ''
+Native VLAN: 1
+Duplex: full
+Management address(es): 
+  IP address: 10.2.11.1
+
+
+Total cdp entries displayed : 1
+
+
+$ show cdp neighbors
+Capability Codes: R - Router, T - Trans Bridge, B - Source Route Bridge
+                  S - Switch, H - Host, I - IGMP, r - Repeater, P - Phone, 
+                  D - Remote, C - CVTA, M - Two-port Mac Relay 
+
+Device ID        Local Intrfce     Holdtme    Capability  Platform  Port ID
+NSK-NSWR-01-99-1.kolmar.local
+                 Gig 1/0/35        160             R S I  C9200L-24 Gig 1/0/22
+
+Total cdp entries displayed : 1

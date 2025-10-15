@@ -1,0 +1,7 @@
+Value Firmware (.+)
+Value Bootrom (.+)
+
+Start
+  ^Firmware:\s+${Firmware} -> Continue
+  ^Bootrom:\s+${Bootrom} -> Record
+

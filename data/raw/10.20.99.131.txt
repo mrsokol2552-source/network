@@ -1,434 +1,6 @@
 
 
-$ show running-config
-Building configuration...
-
-Current configuration : 12057 bytes
-!
-! Last configuration change at 09:01:36 YAKT Mon Jan 2 2006
-!
-version 15.2
-no service pad
-service timestamps debug datetime localtime
-service timestamps log datetime localtime
-no service password-encryption
-service unsupported-transceiver
-!
-hostname INA-NSWS-65-99-131
-!
-boot-start-marker
-boot-end-marker
-!
-!
-no logging queue-limit
-logging buffered 16386
-logging rate-limit 100 except warnings
-no logging console
-enable secret 5 $1$..R1$2x0phwJn0ZV8/k4mHCxPF.
-!
-username november privilege 15 secret 5 $1$r8h6$dKXsd10plZZa/GEQbeZKF/
-username ivashenko_vb privilege 15 secret 5 $1$bi7z$qTHuukwOKu/rACvOW/3hy.
-username sib_uib privilege 15 secret 9 $9$RJ64VWzV1YSKQU$a3dKPmGjU4GExZXjw04SfWQGQHhkCaV8ap0Wcmqfnig
-aaa new-model
-!
-!
-aaa group server radius KOLMAR
- server name cis.kolmar.pro_210
- server name cis.kolmar.pro_212
- deadtime 333
-!
-aaa authentication login login-RADIUS group radius local
-aaa authorization console
-aaa authorization exec auth-RADIUS-exec group radius local 
-!
-!
-!
-!
-!
-aaa server radius dynamic-author
- client 10.10.0.210 server-key 7 060A042B495F0711161B14090013
- client 10.10.0.212 server-key 7 05070D05245D40010A091110071B
-!
-aaa session-id common
-clock timezone YAKT 9 0
-system mtu routing 1500
-!
-!
-ip dhcp snooping vlan 1-4094
-ip dhcp snooping
-!
-ip domain-name kolmar.ru
-ip name-server 10.10.0.210
-ip name-server 10.10.0.212
-vtp mode off
-!
-!
-!
-!
-!
-!
-!
-crypto pki trustpoint TP-self-signed-2806828032
- enrollment selfsigned
- subject-name cn=IOS-Self-Signed-Certificate-2806828032
- revocation-check none
- rsakeypair TP-self-signed-2806828032
-!
-!
-crypto pki certificate chain TP-self-signed-2806828032
- certificate self-signed 01
-  3082022B 30820194 A0030201 02020101 300D0609 2A864886 F70D0101 05050030 
-  31312F30 2D060355 04031326 494F532D 53656C66 2D536967 6E65642D 43657274 
-  69666963 6174652D 32383036 38323830 3332301E 170D3036 30313032 30303232 
-  33375A17 0D323030 31303130 30303030 305A3031 312F302D 06035504 03132649 
-  4F532D53 656C662D 5369676E 65642D43 65727469 66696361 74652D32 38303638 
-  32383033 3230819F 300D0609 2A864886 F70D0101 01050003 818D0030 81890281 
-  8100985D 2484B483 AB7DA5F3 C83F20AE BCF4E084 F68C2B03 01F5F7A6 EEFC5727 
-  2BA7D613 BBD072B5 9525033B 06E7E515 6AC963A1 0BD5B466 7614616E 6C7362B3 
-  85DF1584 BE431AF0 FCA5066C 3A2E510C 2D40E0F5 7370D346 E789BC1D 15D9CE7E 
-  C6259E94 8E40AF07 0ADEA534 460DD375 CA5A11BB 01436AB6 A02A9FAA 86AC54F7 
-  A3290203 010001A3 53305130 0F060355 1D130101 FF040530 030101FF 301F0603 
-  551D2304 18301680 14370EA0 9A864878 94ABF67C 496C79D3 4EF549F3 D5301D06 
-  03551D0E 04160414 370EA09A 86487894 ABF67C49 6C79D34E F549F3D5 300D0609 
-  2A864886 F70D0101 05050003 81810040 906FA009 F340F0D6 2CD7689A 5243F824 
-  6BFD6FFD 3B56B7A7 FDCF8BC2 3BC7227D 4C1036D1 EE4C396B 0D421E52 ACF562E6 
-  C33B37F3 4C31978B 27870647 F1A51248 C7B44E76 96D81C25 94721635 D77E7696 
-  0D44F476 CB857E18 45A897D4 744FB3A4 3DEB5D1E 5F5CCF5C B53733F4 7D3685AF 
-  F93DB0E4 8B947854 02A87185 DEF305
-  	quit
-archive
- log config
-  logging enable
-  notify syslog contenttype plaintext
-  hidekeys
-!
-spanning-tree mode rapid-pvst
-spanning-tree logging
-spanning-tree extend system-id
-no errdisable detect cause gbic-invalid
-no errdisable detect cause sfp-config-mismatch
-errdisable recovery cause udld
-errdisable recovery cause bpduguard
-errdisable recovery cause security-violation
-errdisable recovery cause channel-misconfig
-errdisable recovery cause pagp-flap
-errdisable recovery cause dtp-flap
-errdisable recovery cause link-flap
-errdisable recovery cause sfp-config-mismatch
-errdisable recovery cause gbic-invalid
-errdisable recovery cause psecure-violation
-errdisable recovery cause port-mode-failure
-errdisable recovery cause dhcp-rate-limit
-errdisable recovery cause pppoe-ia-rate-limit
-errdisable recovery cause mac-limit
-errdisable recovery cause vmps
-errdisable recovery cause storm-control
-errdisable recovery cause inline-power
-errdisable recovery cause arp-inspection
-errdisable recovery cause loopback
-errdisable recovery cause small-frame
-errdisable recovery cause psp
-errdisable recovery interval 180
-!
-!
-!
-!
-vlan internal allocation policy ascending
-!
-vlan 13
- name Phones
-!
-vlan 17
- name Transport
-!
-vlan 77
- name SKUD
-!
-!
-! 
-!
-!
-!
-!
-!
-!
-!
-!
-interface FastEthernet0/1
- description NC8000-77.212
- switchport access vlan 77
- switchport mode access
- switchport nonegotiate
- switchport port-security violation  restrict
- switchport port-security mac-address sticky
- switchport port-security mac-address sticky 0004.a301.3c13
- switchport port-security
- logging event spanning-tree
- no snmp trap link-status
- storm-control broadcast level 0.50 0.30
- storm-control multicast level 0.50 0.30
- storm-control action shutdown
- storm-control action trap
- no cdp enable
- spanning-tree portfast
- spanning-tree bpduguard enable
- ip dhcp snooping limit rate 10
-!
-interface FastEthernet0/2
- description NC8000-77.213
- switchport access vlan 77
- switchport mode access
- switchport nonegotiate
- switchport port-security violation  restrict
- switchport port-security mac-address sticky
- switchport port-security mac-address sticky 0004.a301.3c14
- switchport port-security
- logging event spanning-tree
- no snmp trap link-status
- storm-control broadcast level 0.50 0.30
- storm-control multicast level 0.50 0.30
- storm-control action shutdown
- storm-control action trap
- no cdp enable
- spanning-tree portfast
- spanning-tree bpduguard enable
- ip dhcp snooping limit rate 10
-!
-interface FastEthernet0/3
- description NC8000-77.214
- switchport access vlan 77
- switchport mode access
- switchport nonegotiate
- switchport port-security violation  restrict
- switchport port-security mac-address sticky
- switchport port-security mac-address sticky 0004.a301.13ef
- switchport port-security
- logging event spanning-tree
- no snmp trap link-status
- storm-control broadcast level 0.50 0.30
- storm-control multicast level 0.50 0.30
- storm-control action shutdown
- storm-control action trap
- no cdp enable
- spanning-tree portfast
- spanning-tree bpduguard enable
- ip dhcp snooping limit rate 10
-!
-interface FastEthernet0/4
- description NC8000-77.215
- switchport access vlan 77
- switchport mode access
- switchport nonegotiate
- switchport port-security violation  restrict
- switchport port-security mac-address sticky
- switchport port-security mac-address sticky 0004.a301.3c0d
- switchport port-security
- logging event spanning-tree
- no snmp trap link-status
- storm-control broadcast level 0.50 0.30
- storm-control multicast level 0.50 0.30
- storm-control action shutdown
- storm-control action trap
- no cdp enable
- spanning-tree portfast
- spanning-tree bpduguard enable
- ip dhcp snooping limit rate 10
-!
-interface FastEthernet0/5
- description Alkoramki-77.216
- switchport access vlan 77
- switchport mode access
- switchport nonegotiate
- switchport port-security violation  restrict
- switchport port-security mac-address sticky
- switchport port-security
- logging event spanning-tree
- shutdown
- no snmp trap link-status
- storm-control broadcast level 0.50 0.30
- storm-control multicast level 0.50 0.30
- storm-control action shutdown
- storm-control action trap
- no cdp enable
- spanning-tree portfast
- spanning-tree bpduguard enable
- ip dhcp snooping limit rate 10
-!
-interface FastEthernet0/6
- description Alkoramki-77.217
- switchport access vlan 77
- switchport mode access
- switchport nonegotiate
- switchport port-security violation  restrict
- switchport port-security mac-address sticky
- switchport port-security mac-address sticky 94c6.91a0.eb32
- switchport port-security
- logging event spanning-tree
- no snmp trap link-status
- storm-control broadcast level 0.50 0.30
- storm-control multicast level 0.50 0.30
- storm-control action shutdown
- storm-control action trap
- no cdp enable
- spanning-tree portfast
- spanning-tree bpduguard enable
- ip dhcp snooping limit rate 10
-!
-interface FastEthernet0/7
- description Alkoramki-77.218
- switchport access vlan 77
- switchport mode access
- switchport nonegotiate
- switchport port-security violation  restrict
- switchport port-security mac-address sticky
- switchport port-security mac-address sticky 94c6.91a0.eba7
- switchport port-security
- logging event spanning-tree
- no snmp trap link-status
- storm-control broadcast level 0.50 0.30
- storm-control multicast level 0.50 0.30
- storm-control action shutdown
- storm-control action trap
- no cdp enable
- spanning-tree portfast
- spanning-tree bpduguard enable
- ip dhcp snooping limit rate 10
-!
-interface FastEthernet0/8
- description Alkoramki-77.219
- switchport access vlan 77
- switchport mode access
- switchport nonegotiate
- switchport port-security violation  restrict
- switchport port-security mac-address sticky
- switchport port-security mac-address sticky 94c6.91a2.49c7
- switchport port-security
- logging event spanning-tree
- no snmp trap link-status
- storm-control broadcast level 0.50 0.30
- storm-control multicast level 0.50 0.30
- storm-control action shutdown
- storm-control action trap
- no cdp enable
- spanning-tree portfast
- spanning-tree bpduguard enable
- ip dhcp snooping limit rate 10
-!
-interface GigabitEthernet0/1
- description UP_99.130_Gi0/1
- switchport trunk allowed vlan 13,17,77
- switchport mode trunk
- logging event spanning-tree
- logging event status
- storm-control broadcast level 1.50 1.30
- storm-control multicast level 1.50 1.30
- storm-control action trap
- no vtp
- ip dhcp snooping trust
-!
-interface GigabitEthernet0/2
- description SKUD_PC_TEL_7583
- switchport trunk native vlan 77
- switchport trunk allowed vlan 13,77
- switchport mode trunk
- switchport nonegotiate
- switchport voice vlan 13
- switchport port-security maximum 3
- switchport port-security violation  protect
- switchport port-security mac-address sticky
- switchport port-security mac-address sticky 0c38.3e3e.ffc5 vlan 13
- switchport port-security mac-address sticky 002b.6728.cb9e
- switchport port-security mac-address sticky 0c38.3e3e.ffc5
- switchport port-security
- logging event spanning-tree
- logging event status
- no snmp trap link-status
- storm-control broadcast level 1.50 1.30
- storm-control multicast level 1.50 1.30
- storm-control action trap
- no vtp
- spanning-tree portfast trunk
- spanning-tree bpduguard enable
- ip dhcp snooping limit rate 30
-!
-interface Vlan1
- no ip address
- shutdown
-!
-interface Vlan17
- description Transport
- ip address 10.20.99.131 255.255.252.0
-!
-no ip http server
-ip http authentication aaa login-authentication login-RADIUS
-ip http authentication aaa exec-authorization auth-RADIUS-exec
-ip http secure-server
-ip http max-connections 3
-!
-ip ftp username FTP1
-ip ftp password 7 013532340A
-ip ssh time-out 60
-ip ssh authentication-retries 2
-ip ssh logging events
-ip ssh version 2
-!
-kron occurrence backup at 17:00 recurring
- policy-list backup
-!
-kron policy-list backup
- cli copy startup-config ftp://192.168.74.5
- cli copy startup-config tftp://dump.kolmar.pro/10.20.99.131
- cli copy vlan.dat tftp://dump.kolmar.pro/10.20.99.131_vlan
-!
-logging origin-id hostname
-logging facility local5
-logging host 10.10.0.19 transport udp port 1515
-logging host 10.10.0.74
-snmp-server community public RO
-!
-radius-server retransmit 1
-radius-server timeout 2
-radius-server key lkjeqnhslfblw
-!
-radius server cis.kolmar.pro_210
- address ipv4 10.10.0.210 auth-port 1812 acct-port 1813
- timeout 5
- retransmit 3
- key 7 141B190109152423372435372E04
-!
-radius server cis.kolmar.pro_212
- address ipv4 10.10.0.212 auth-port 1812 acct-port 1813
- timeout 5
- retransmit 3
- key 7 082D47440C080B1F01070A06263C
-!
-no vstack
-!
-line con 0
- exec-timeout 13 0
- privilege level 15
- authorization exec auth-RADIUS-exec
- logging synchronous
- login authentication login-RADIUS
- stopbits 1
-line vty 0 4
- exec-timeout 15 0
- authorization exec auth-RADIUS-exec
- logging synchronous
- login authentication login-RADIUS
- length 0
- transport input ssh
-line vty 5 15
- exec-timeout 15 0
- authorization exec auth-RADIUS-exec
- login authentication login-RADIUS
- transport input none
-!
-ntp server time.kolmar.pro
-mac address-table notification change interval 15
-mac address-table notification change history-size 500
-mac address-table notification change
-end
+$ terminal length 0
 
 
 
@@ -441,7 +13,7 @@ Compiled Mon 22-Jan-18 07:16 by prod_rel_team
 ROM: Bootstrap program is C2960C boot loader
 BOOTLDR: C2960C Boot Loader (C2960c405-HBOOT-M) Version 12.2(55r)EX9, RELEASE SOFTWARE (fc1)
 
-INA-NSWS-65-99-131 uptime is 9 weeks, 3 days, 22 hours, 44 minutes
+INA-NSWS-65-99-131 uptime is 10 weeks, 1 day, 23 hours, 35 minutes
 System returned to ROM by power-on
 System restarted at 16:17:53 YAKT Mon Aug 4 2025
 System image file is "flash:/c2960c405-universalk9-mz.152-2.E8/c2960c405-universalk9-mz.152-2.E8.bin"
@@ -502,6 +74,10 @@ Configuration register is 0xF
 
 
 
+$ show lldp neighbors detail
+% LLDP is not enabled
+
+
 $ show cdp neighbors detail
 -------------------------
 Device ID: INA-NSWS-64-99-130.kolmar.ru
@@ -509,7 +85,7 @@ Entry address(es):
   IP address: 10.20.99.130
 Platform: cisco WS-C2960+24PC-L,  Capabilities: Switch IGMP 
 Interface: GigabitEthernet0/1,  Port ID (outgoing port): FastEthernet0/24
-Holdtime : 145 sec
+Holdtime : 175 sec
 
 Version :
 Cisco IOS Software, C2960 Software (C2960-LANBASEK9-M), Version 15.2(2)E7, RELEASE SOFTWARE (fc3)
@@ -531,7 +107,7 @@ Entry address(es):
   IP address: 10.13.0.154
 Platform: X1S/X1SP,  Capabilities: Host Phone 
 Interface: GigabitEthernet0/2,  Port ID (outgoing port): WAN PORT
-Holdtime : 141 sec
+Holdtime : 146 sec
 
 Version :
 2.4.12.2
@@ -542,20 +118,14 @@ advertisement version: 2
 Total cdp entries displayed : 2
 
 
-$ show lldp neighbors detail
-% LLDP is not enabled
+$ show cdp neighbors
+Capability Codes: R - Router, T - Trans Bridge, B - Source Route Bridge
+                  S - Switch, H - Host, I - IGMP, r - Repeater, P - Phone, 
+                  D - Remote, C - CVTA, M - Two-port Mac Relay 
 
+Device ID        Local Intrfce     Holdtme    Capability  Platform  Port ID
+INA-NSWS-64-99-130.kolmar.ru
+                 Gig 0/1           175              S I   WS-C2960+ Fas 0/24
+X1S/X1SP         Gig 0/2           146              H P   X1S/X1SP  WAN PORT
 
-$ show interface status
-
-Port      Name               Status       Vlan       Duplex  Speed Type 
-Fa0/1     NC8000-77.212      connected    77         a-full  a-100 10/100BaseTX
-Fa0/2     NC8000-77.213      connected    77         a-full  a-100 10/100BaseTX
-Fa0/3     NC8000-77.214      connected    77         a-full  a-100 10/100BaseTX
-Fa0/4     NC8000-77.215      connected    77         a-full  a-100 10/100BaseTX
-Fa0/5     Alkoramki-77.216   disabled     77           auto   auto 10/100BaseTX
-Fa0/6     Alkoramki-77.217   connected    77         a-full  a-100 10/100BaseTX
-Fa0/7     Alkoramki-77.218   connected    77         a-full  a-100 10/100BaseTX
-Fa0/8     Alkoramki-77.219   connected    77         a-full  a-100 10/100BaseTX
-Gi0/1     UP_99.130_Gi0/1    connected    trunk      a-full  a-100 10/100/1000BaseTX
-Gi0/2     SKUD_PC_TEL_7583   connected    trunk      a-full  a-100 10/100/1000BaseTX
+Total cdp entries displayed : 2

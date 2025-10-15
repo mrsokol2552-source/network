@@ -1,5 +1,8 @@
-# TextFSM template — mikrotik
-Value FillMeUp (.*)
-
-Start
-  ^.* -> Record
+# Command list for MikroTik RouterOS collection
+# pre_enable=0
+/system resource print
+/interface print detail
+/interface bridge vlan print
+/interface vlan print
+/ip neighbor print detail
+/export terse

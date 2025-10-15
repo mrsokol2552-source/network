@@ -116,63 +116,18 @@ line vty 15
 end
 
 
-$ show version
-
-MEMORY           : Total=84966 KBytes, Free=69635 KBytes, Max=69608 KBytes
-FLASH            : 0x40000000-0x40ffffff, 256 x 0x10000 blocks
-MAC Address      : 00-1d-77-29-21-61
-S/N              : 54082022080001
-Previous Restart : Cold
-
-Host Name        : INA-NSWS-125-99-162
-Company Name     : 
-Company Contact  : 
-System Location  : 
-Timezone Offset  : 0
-System Time      : 1970-01-15T02:56:37+00:00
-System Uptime    : 14d 02:56:37
-
-Active Image
-------------
-Image            : NIS-3500-5408PGE.dat (primary)
-Version          : V2.1
-Date             : 2021-04-25T04:45:04-07:00
-
-Alternate Image
----------------
-Image            : 8G-4F_20211211.dat (backup)
-Version          : V2.1
-Date             : 2021-12-09T07:07:38-08:00
-
-Bootloader
-----------
-Image            : RedBoot (bootloader)
-Version          : version 1_20-Vitesse
-Date             : 02:22:43, Oct 18 2019
-
-------------------
-SID : 1 
-------------------
-Chipset ID       : ASIC 
-Board Type       : Switch Board
-Port Count       : 12
-Model Name       : NIS-3500-5408PGE
-Software Version : V2.1
-Build Date       : 2021-04-25T04:45:04-07:00
-
-
-
-$ show cdp neighbors detail
-                          ^
-% Invalid word detected at '^' marker.
-
-
-
-$ show lldp neighbors detail
-                                         ^
-% Invalid word detected at '^' marker.
-
-
-
-$ show interface status
-% No such interface type: status
+$ show interface * status
+Interface               Mode     Speed & Duplex  Flow Control  Max Frame  Excessive  Link      
+----------------------  -------  --------------  ------------  ---------  ---------  --------  
+GigabitEthernet 1/1     enabled  Auto            disabled      9600       Discard    Down       
+GigabitEthernet 1/2     enabled  Auto            disabled      9600       Discard    100fdx     
+GigabitEthernet 1/3     enabled  Auto            disabled      9600       Discard    Down       
+GigabitEthernet 1/4     enabled  Auto            disabled      9600       Discard    100fdx     
+GigabitEthernet 1/5     enabled  Auto            disabled      9600       Discard    Down       
+GigabitEthernet 1/6     enabled  Auto            disabled      9600       Discard    100fdx     
+GigabitEthernet 1/7     enabled  Auto            disabled      9600       Discard    Down       
+GigabitEthernet 1/8     enabled  Auto            disabled      9600       Discard    10hdx      
+GigabitEthernet 1/9     enabled  Auto            disabled      9600       Discard    Down       
+GigabitEthernet 1/10    enabled  Auto            disabled      9600       Discard    1Gfdx Fiber 
+GigabitEthernet 1/11    enabled  Auto            disabled      9600       Discard    Down       
+GigabitEthernet 1/12    enabled  Auto            disabled      9600       Discard    Down       

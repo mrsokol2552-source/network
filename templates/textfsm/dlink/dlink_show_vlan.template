@@ -1,0 +1,7 @@
+Value VlanId (\d+)
+Value VlanName (\S+)
+Value Ports (.*)
+
+Start
+  ^\s*VID\s*:\s*${VlanId}\s+VLAN Name\s*:\s*${VlanName} -> Continue
+  ^\s*Member Ports\s*:\s*${Ports} -> Record

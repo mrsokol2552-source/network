@@ -1,0 +1,469 @@
+
+
+$ show system information
+
+Hardware Version                  : 1v1
+Software Version                  : 10.3.4
+Firmware Version                  : 10.3.4
+
+Hardware Serial Number            : ESD1006156
+Switch Base MAC Address           : cc:9d:a2:7e:50:80
+Software Serial Number            : c6313afa
+System Contact                    : 
+System Name                       : INA-NSWS-37-99-49
+System Location                   : 
+System Description                : MES2424P rev.C1 AC 28-port 1G/10G Managed Switch with 24 POE+ ports
+Logging Option                    : Flash Logging
+Device Uptime                     : 502 Days, 5 Hrs, 50 Mins, 37 Secs
+Login Authentication Mode         : Local
+Config Save Status                : Successful
+Remote Save Status                : Not Initiated
+Config Restore Status             : Not Initiated
+Traffic Separation Control        : none
+
+
+
+
+$ show lldp neighbors detail
+
+                
+
+
+--More--
+                
+
+
+--More--
+                
+
+
+--More--
+                
+
+
+--More--
+                
+-MAC PHY Configuration & Status
+100base-TX(FD)
+Asym and Symm PAUSE(FD)
+1000base-X, -LX, -SX, -CX(HD)
+1000base-X, -LX, -SX, -CX(FD)
+1000base-T(HD)
+-Link Aggregation
+Capability & Status           : Not Capable, Not In Aggregation
+Aggregated Port Id            : 0
+-Maximum Frame Size           : 0
+
+Extended 802.1 TLV Info 
+-Port VLAN Id                 : 1
+-Port & Protocol VLAN Id 
+Protocol Vlan Tlv             : Not Advertised
+-Vlan Name
+Vlan Name Tlv                 : Not Advertised
+
+-LLDP MED Capability TLV      : Not Advertised 
+Capabilities Supported        : 0 
+Capabilities Enabled          : 0 
+Device Class                  : 0 
+
+-LLDP MED Inventory TLV       : Not Advertised
+
+
+--More--
+                
+
+
+--More--
+                
+
+
+--More--
+                
+
+
+--More--
+                
+
+
+--More--
+                
+
+-LLDP-MED Nw Policy TLV       : Not Advertised 
+
+-LLDP-MED Location Info TLV   : Not Advertised 
+
+-LLDP-MED Ex-PowerViaMDI TLV  : Not Advertised 
+------------------------------------------------------------
+Chassis Id SubType            : Mac Address 
+Chassis Id                    : f8:f0:82:76:33:19
+Port Id SubType               : Interface Name 
+Port Id                       : Ethernet1/0/11
+Port Description              : Not Advertised
+System Name                   : Not Advertised
+System Desc                   : Not Advertised
+Local Intf                    : gi 0/4
+Time Remaining                : 95 Seconds 
+System Capabilities Tlv       : Not Advertised
+Management Addresses          : Not Advertised
+
+Extended 802.3 TLV Info 
+-MAC PHY Configuration & Status
+10base-T(HD)
+10base-T(FD)
+100base-TX(HD)
+
+
+--More--
+                
+
+
+--More--
+                
+
+
+--More--
+                
+
+
+--More--
+                
+
+
+--More--
+                
+
+
+--More--
+                
+
+
+--More--
+                
+
+
+--More--
+                
+
+
+--More--
+                
+
+
+--More--
+                
+100base-T2(HD)
+FdxPause(FD)
+Asym PAUSE(FD)
+Asym and Symm PAUSE(FD)
+1000base-X, -LX, -SX, -CX(FD)
+1000base-T(HD)
+-Link Aggregation
+Capability & Status           : Not Capable, Not In Aggregation
+Aggregated Port Id            : 0
+-Maximum Frame Size           : 0
+
+Extended 802.1 TLV Info 
+-Port VLAN Id                 : 0
+-Port & Protocol VLAN Id 
+Protocol Vlan Tlv             : Not Advertised
+-Vlan Name
+Vlan Name Tlv                 : Not Advertised
+
+-LLDP MED Capability TLV      : Not Advertised 
+Capabilities Supported        : 0 
+Capabilities Enabled          : 0 
+Device Class                  : 0 
+
+-LLDP MED Inventory TLV       : Not Advertised
+
+
+--More--
+                
+
+
+--More--
+                
+
+
+--More--
+                
+
+
+--More--
+                
+
+
+--More--
+                
+
+
+--More--
+                
+
+
+--More--
+                
+
+
+
+--More--
+
+
+$ show vlan
+
+Vlan database 
+------------- 
+Vlan ID             : 1
+Member Ports        : gi 0/4, gi 0/5, gi 0/6, gi 0/7, gi 0/8, gi 0/9
+                      gi 0/10, gi 0/11, gi 0/12, gi 0/13, gi 0/14, gi 0/15
+                      gi 0/16, gi 0/17, gi 0/18, gi 0/19, gi 0/20, gi 0/21
+                      gi 0/22, gi 0/23, gi 0/24, te 0/1, te 0/2, te 0/3
+                      te 0/4, po 1, po 2, po 3, po 4, po 5
+                      po 6, po 7, po 8, po 9, po 10, po 11
+                      po 12, po 13, po 14, po 15, po 16, po 17
+                      po 18, po 19, po 20, po 21, po 22, po 23
+                      po 24
+Untagged Ports      : gi 0/4, gi 0/5, gi 0/6, gi 0/7, gi 0/8, gi 0/9
+                      gi 0/10, gi 0/11, gi 0/12, gi 0/13, gi 0/14, gi 0/15
+                      gi 0/16, gi 0/17, gi 0/18, gi 0/19, gi 0/20, gi 0/21
+                      gi 0/22, gi 0/23, gi 0/24, te 0/1, te 0/2, te 0/3
+                      te 0/4, po 1, po 2, po 3, po 4, po 5
+                      po 6, po 7, po 8, po 9, po 10, po 11
+                      po 12, po 13, po 14, po 15, po 16, po 17
+                      po 18, po 19, po 20, po 21, po 22, po 23
+                      po 24
+Forbidden Ports     : None 
+
+
+--More--
+
+
+$ show interfaces status
+
+                
+
+
+--More--
+                
+
+
+--More--
+                
+
+
+--More--
+                
+
+
+--More--
+                
+
+[27m
+                       
+
+INA-NSWS-37-99-49#interfaces status
+
+% Invalid Command
+
+
+
+$ show interfaces
+
+                
+
+
+--More--
+                
+
+
+--More--
+                
+
+
+--More--
+                
+
+
+--More--
+                
+   Unknown Protocol          : 0
+   CRC Errors                : 0
+   Symbol Errors             : 0
+   Oversized w/ Bad CRC      : 0
+
+Transmission Counters
+   Octets                    : 1241491880
+   Unicast Packets           : 3052469
+   Multicast Packets         : 84223578
+   Broadcast Packets         : 30929075
+   Discarded Packets         : 0
+   Error Drops               : 0
+   Error Packets             : 0
+
+gi 0/2 up, line protocol is up (connected)
+Bridge Port Type: Customer Bridge Port
+
+Interface SubType: gigabitEthernet
+
+Hardware Address is cc:9d:a2:7e:50:82
+MTU  12288 bytes, Full duplex, 1 Gbps,  Auto-Negotiation default
+HOL Block Prevention enabled.
+CPU Controlled Learning disabled.
+Auto-MDIX on
+
+
+--More--
+                
+
+
+--More--
+                
+
+
+--More--
+                
+
+
+--More--
+                
+
+
+--More--
+                
+
+
+--More--
+                
+
+
+--More--
+                
+
+
+--More--
+                
+
+
+--More--
+                
+
+
+--More--
+                
+
+
+--More--
+                
+Input flow-control is off,output flow-control is off
+
+
+--More--
+
+
+$ show running-config
+
+                
+
+
+--More--
+                
+
+
+--More--
+                
+
+
+--More--
+                
+
+
+--More--
+                
+Bridge Port Type: Customer Bridge Port
+
+Interface SubType: gigabitEthernet
+
+Hardware Address is cc:9d:a2:7e:50:83
+MTU  12288 bytes, Full duplex, 1 Gbps,  Auto-Negotiation default
+HOL Block Prevention enabled.
+CPU Controlled Learning disabled.
+Auto-MDIX on
+Input flow-control is off,output flow-control is off
+Media-type: prefer-fiber
+
+Link Up/Down Trap is enabled 
+
+Reception Counters
+   Octets                    : 1681445203
+   Unicast Packets           : 3351918
+   Multicast Packets         : 363784
+   Broadcast Packets         : 5393
+   Discarded Packets         : 3
+   Error Packets             : 0
+   Unknown Protocol          : 0
+   CRC Errors                : 0
+   Symbol Errors             : 0
+
+
+--More--
+                
+
+
+--More--
+                
+
+
+--More--
+                
+
+
+--More--
+                
+
+
+--More--
+                
+
+
+--More--
+                
+
+
+--More--
+                
+
+
+--More--
+                
+
+
+--More--
+                
+
+
+--More--
+                
+
+
+--More--
+                
+
+
+--More--
+                
+
+
+--More--
+                
+
+
+--More--
+                
+
+
+--More--
+                
+   Oversized w/ Bad CRC      : 0
+
+
+--More--

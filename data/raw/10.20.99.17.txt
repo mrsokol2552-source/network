@@ -1,478 +1,6 @@
 
 
-$ show running-config
-Building configuration...
-
-Current configuration : 13996 bytes
-!
-! Last configuration change at 16:02:38 UTC Thu Oct 9 2025
-!
-version 15.2
-no service pad
-service timestamps debug datetime msec
-service timestamps log datetime msec
-service password-encryption
-!
-hostname DEN-NSWS-23-99-17
-!
-boot-start-marker
-boot-end-marker
-!
-!
-username ivashenko_vb privilege 15 secret 5 $1$bi7z$qTHuukwOKu/rACvOW/3hy.
-username volodin_s privilege 15 secret 9 $9$18WfPyEm6wiTzA$MIKcpSUOuspj.C3nN5l//.lj1Cau10TnnaqqtJGXMAA
-username zhiltsov_a privilege 15 secret 9 $9$JLneWJF3n.QWB8$d9K/OTsT2aoZtl0P0Pr52XKzUo/5mXylMznMfbRsisw
-aaa new-model
-!
-!
-aaa authentication login login-RADIUS group radius local
-aaa authorization console
-aaa authorization exec auth-RADIUS-exec group radius local 
-!
-!
-!
-!
-!
-!
-aaa session-id common
-switch 1 provision c1000-16t-2g-l
-system mtu routing 1500
-!
-!
-ip domain-name kolmar.ru
-!
-!
-!
-!
-!
-!
-crypto pki trustpoint TP-self-signed-2707138560
- enrollment selfsigned
- subject-name cn=IOS-Self-Signed-Certificate-2707138560
- revocation-check none
- rsakeypair TP-self-signed-2707138560
-!
-!
-crypto pki certificate chain TP-self-signed-2707138560
- certificate self-signed 01
-  3082022B 30820194 A0030201 02020101 300D0609 2A864886 F70D0101 05050030 
-  31312F30 2D060355 04031326 494F532D 53656C66 2D536967 6E65642D 43657274 
-  69666963 6174652D 32373037 31333835 3630301E 170D3232 30323231 30393030 
-  32305A17 0D333030 31303130 30303030 305A3031 312F302D 06035504 03132649 
-  4F532D53 656C662D 5369676E 65642D43 65727469 66696361 74652D32 37303731 
-  33383536 3030819F 300D0609 2A864886 F70D0101 01050003 818D0030 81890281 
-  8100AF11 EB29D489 0BCDCCD1 FB5F4963 AAAB21A1 0072CA8A 49D4468F 316EF64F 
-  5166CBD3 20C2842D 59B7FB56 F6A5C0C5 40D615DD 995F5528 E91A5BF2 34F62AEA 
-  13F7333F 6BEAF1D3 708594B9 F6D07425 5D6C1B6C EA52C029 3D597E00 1E7DFB4A 
-  674EA7BC DABA6A0A 151E71B1 611E89EE 34B3AE8C 603786CF 79EF77B0 8C8B71F1 
-  E8BD0203 010001A3 53305130 0F060355 1D130101 FF040530 030101FF 301F0603 
-  551D2304 18301680 1434B224 344474D9 80F451AC AC667306 908748D0 A4301D06 
-  03551D0E 04160414 34B22434 4474D980 F451ACAC 66730690 8748D0A4 300D0609 
-  2A864886 F70D0101 05050003 81810058 2640FD3B B7218B2E A7AC563F EB7CB38D 
-  8528ADEA AF0E14CC 0589A756 E1F98C23 F945B2FC D3423856 2A982782 803C74EF 
-  4055EC55 E2034EBA B8A70FBC 011B9C1B D900C0B0 E3262B38 E5D9ADB5 03AD90DC 
-  E0185036 F8BDE530 AC3C7B66 85AD13A5 C7D8B2D8 4B5F5FEA 9297F44B D6D84E63 
-  72E014F8 AC507321 ABC48344 B8C472
-  	quit
-!
-spanning-tree mode rapid-pvst
-spanning-tree extend system-id
-no errdisable detect cause gbic-invalid
-no errdisable detect cause sfp-config-mismatch
-errdisable recovery cause udld
-errdisable recovery cause bpduguard
-errdisable recovery cause security-violation
-errdisable recovery cause channel-misconfig
-errdisable recovery cause pagp-flap
-errdisable recovery cause dtp-flap
-errdisable recovery cause link-flap
-errdisable recovery cause sfp-config-mismatch
-errdisable recovery cause gbic-invalid
-errdisable recovery cause psecure-violation
-errdisable recovery cause port-mode-failure
-errdisable recovery cause dhcp-rate-limit
-errdisable recovery cause pppoe-ia-rate-limit
-errdisable recovery cause mac-limit
-errdisable recovery cause vmps
-errdisable recovery cause storm-control
-errdisable recovery cause inline-power
-errdisable recovery cause arp-inspection
-errdisable recovery cause loopback
-errdisable recovery cause psp
-errdisable recovery interval 180
-!
-vlan internal allocation policy ascending
-!
-!
-!
-!
-!
-!
-interface GigabitEthernet1/0/1
- switchport access vlan 40
- switchport mode access
- switchport port-security violation protect
- switchport port-security mac-address sticky
- switchport port-security
- logging event spanning-tree
- logging event status
- no cdp enable
- no snmp trap link-status
- storm-control broadcast level 5.00 3.00
- storm-control multicast level 5.00 3.00
- storm-control action shutdown
- storm-control action trap
- spanning-tree portfast edge
- spanning-tree bpduguard enable
- ip dhcp snooping limit rate 10
-!
-interface GigabitEthernet1/0/2
- switchport access vlan 40
- switchport mode access
- switchport port-security violation protect
- switchport port-security mac-address sticky
- switchport port-security mac-address sticky b42e.992f.ffed
- switchport port-security
- logging event spanning-tree
- logging event status
- no cdp enable
- no snmp trap link-status
- storm-control broadcast level 5.00 3.00
- storm-control multicast level 5.00 3.00
- storm-control action shutdown
- storm-control action trap
- spanning-tree portfast edge
- spanning-tree bpduguard enable
- ip dhcp snooping limit rate 10
-!
-interface GigabitEthernet1/0/3
- switchport access vlan 40
- switchport mode access
- switchport port-security violation protect
- switchport port-security mac-address sticky
- switchport port-security mac-address sticky f02f.7417.67d2
- switchport port-security
- logging event spanning-tree
- logging event status
- no cdp enable
- no snmp trap link-status
- storm-control broadcast level 5.00 3.00
- storm-control multicast level 5.00 3.00
- storm-control action shutdown
- storm-control action trap
- spanning-tree portfast edge
- spanning-tree bpduguard enable
- ip dhcp snooping limit rate 10
-!
-interface GigabitEthernet1/0/4
- switchport access vlan 40
- switchport mode access
- switchport port-security violation protect
- switchport port-security mac-address sticky
- switchport port-security
- logging event spanning-tree
- logging event status
- no cdp enable
- no snmp trap link-status
- storm-control broadcast level 5.00 3.00
- storm-control multicast level 5.00 3.00
- storm-control action shutdown
- storm-control action trap
- spanning-tree portfast edge
- spanning-tree bpduguard enable
- ip dhcp snooping limit rate 10
-!
-interface GigabitEthernet1/0/5
- switchport access vlan 40
- switchport mode access
- logging event spanning-tree
- logging event status
- no cdp enable
- no snmp trap link-status
- storm-control broadcast level 5.00 3.00
- storm-control multicast level 5.00 3.00
- storm-control action shutdown
- storm-control action trap
- spanning-tree portfast edge
- spanning-tree bpduguard enable
- ip dhcp snooping limit rate 10
-!
-interface GigabitEthernet1/0/6
- switchport access vlan 40
- switchport mode access
- logging event spanning-tree
- logging event status
- speed 100
- no cdp enable
- no snmp trap link-status
- storm-control broadcast level 5.00 3.00
- storm-control multicast level 5.00 3.00
- storm-control action shutdown
- storm-control action trap
- spanning-tree portfast edge
- spanning-tree bpduguard enable
- ip dhcp snooping limit rate 10
-!
-interface GigabitEthernet1/0/7
- description 8674
- switchport trunk allowed vlan 13,40
- switchport trunk native vlan 40
- switchport mode trunk
- switchport nonegotiate
- switchport voice vlan 13
- switchport port-security maximum 2
- switchport port-security violation protect
- switchport port-security mac-address sticky
- switchport port-security mac-address sticky 0c38.3e52.989f vlan 13
- switchport port-security mac-address sticky b42e.992f.ffba
- switchport port-security
- logging event spanning-tree
- logging event status
- no cdp enable
- no snmp trap link-status
- storm-control broadcast level 5.00 3.00
- storm-control multicast level 5.00 3.00
- storm-control action shutdown
- storm-control action trap
- spanning-tree portfast edge trunk
- spanning-tree bpduguard enable
- ip dhcp snooping limit rate 25
-!
-interface GigabitEthernet1/0/8
- switchport access vlan 40
- switchport mode access
- switchport port-security violation protect
- switchport port-security mac-address sticky
- switchport port-security mac-address sticky f02f.74ce.3b33
- switchport port-security
- logging event spanning-tree
- logging event status
- no cdp enable
- no snmp trap link-status
- storm-control broadcast level 5.00 3.00
- storm-control multicast level 5.00 3.00
- storm-control action shutdown
- storm-control action trap
- spanning-tree portfast edge
- spanning-tree bpduguard enable
- ip dhcp snooping limit rate 10
-!
-interface GigabitEthernet1/0/9
- switchport access vlan 40
- switchport mode access
- switchport port-security violation protect
- switchport port-security mac-address sticky
- switchport port-security
- logging event spanning-tree
- logging event status
- no cdp enable
- no snmp trap link-status
- storm-control broadcast level 5.00 3.00
- storm-control multicast level 5.00 3.00
- storm-control action shutdown
- storm-control action trap
- spanning-tree portfast edge
- spanning-tree bpduguard enable
- ip dhcp snooping limit rate 10
-!
-interface GigabitEthernet1/0/10
- description 7042
- switchport access vlan 40
- switchport trunk allowed vlan 13,40
- switchport trunk native vlan 40
- switchport mode trunk
- switchport nonegotiate
- switchport voice vlan 13
- switchport port-security maximum 2
- switchport port-security violation protect
- switchport port-security mac-address sticky
- switchport port-security mac-address sticky 0c38.3e43.8130 vlan 13
- switchport port-security mac-address sticky f02f.7417.6313
- switchport port-security
- logging event spanning-tree
- logging event status
- no cdp enable
- no snmp trap link-status
- storm-control broadcast level 1.00 0.50
- storm-control multicast level 1.00 0.50
- storm-control action shutdown
- storm-control action trap
- spanning-tree portfast edge trunk
- spanning-tree bpduguard enable
- ip dhcp snooping limit rate 25
-!
-interface GigabitEthernet1/0/11
- switchport access vlan 40
- switchport mode access
- switchport port-security violation protect
- switchport port-security mac-address sticky
- switchport port-security mac-address sticky 0017.c832.ed81
- switchport port-security
- logging event spanning-tree
- logging event status
- no cdp enable
- no snmp trap link-status
- storm-control broadcast level 5.00 3.00
- storm-control multicast level 5.00 3.00
- storm-control action shutdown
- storm-control action trap
- spanning-tree portfast edge
- spanning-tree bpduguard enable
- ip dhcp snooping limit rate 10
-!
-interface GigabitEthernet1/0/12
- switchport access vlan 40
- switchport mode access
- switchport port-security violation protect
- switchport port-security mac-address sticky
- switchport port-security
- logging event spanning-tree
- logging event status
- no cdp enable
- no snmp trap link-status
- storm-control broadcast level 5.00 3.00
- storm-control multicast level 5.00 3.00
- storm-control action shutdown
- storm-control action trap
- spanning-tree portfast edge
- spanning-tree bpduguard enable
- ip dhcp snooping limit rate 10
-!
-interface GigabitEthernet1/0/13
- switchport access vlan 40
- switchport mode access
- switchport port-security violation protect
- switchport port-security mac-address sticky
- switchport port-security
- logging event spanning-tree
- logging event status
- no cdp enable
- no snmp trap link-status
- storm-control broadcast level 5.00 3.00
- storm-control multicast level 5.00 3.00
- storm-control action shutdown
- storm-control action trap
- spanning-tree portfast edge
- spanning-tree bpduguard enable
- ip dhcp snooping limit rate 10
-!
-interface GigabitEthernet1/0/14
- description 8604
- switchport access vlan 40
- switchport trunk allowed vlan 13,40
- switchport trunk native vlan 40
- switchport mode trunk
- switchport nonegotiate
- switchport voice vlan 13
- switchport port-security maximum 2
- switchport port-security violation protect
- switchport port-security mac-address sticky
- switchport port-security mac-address sticky 0c38.3e10.858d vlan 13
- switchport port-security mac-address sticky 94de.8088.d527
- switchport port-security
- logging event spanning-tree
- logging event status
- no cdp enable
- no snmp trap link-status
- storm-control broadcast level 1.00 0.50
- storm-control multicast level 1.00 0.50
- storm-control action shutdown
- storm-control action trap
- spanning-tree portfast edge trunk
- spanning-tree bpduguard enable
- ip dhcp snooping limit rate 25
-!
-interface GigabitEthernet1/0/15
- description WI-FI
- switchport access vlan 30
- switchport trunk allowed vlan 30-34
- switchport mode trunk
- logging event spanning-tree
- logging event status
- no cdp enable
- no snmp trap link-status
- storm-control broadcast level 5.00 3.00
- storm-control multicast level 5.00 3.00
- storm-control action shutdown
- storm-control action trap
- spanning-tree portfast edge
- spanning-tree bpduguard enable
- ip dhcp snooping limit rate 10
-!
-interface GigabitEthernet1/0/16
- description UP 99.121_Gi0/7
- switchport trunk allowed vlan 13,17,30-34,40,41
- switchport mode trunk
- logging event spanning-tree
- logging event status
- storm-control broadcast level 20.00 10.00
- storm-control multicast level 20.00 10.00
- storm-control action trap
- ip dhcp snooping trust
-!
-interface GigabitEthernet1/0/17
-!
-interface GigabitEthernet1/0/18
- switchport trunk allowed vlan 13,17,20
- switchport mode trunk
- logging event spanning-tree
- logging event status
- storm-control broadcast level 20.00 10.00
- storm-control multicast level 20.00 10.00
- storm-control action trap
- ip dhcp snooping trust
-!
-interface Vlan1
- no ip address
- shutdown
-!
-interface Vlan17
- ip address 10.20.99.17 255.255.252.0
- spanning-tree guard loop
-!
-ip default-gateway 10.20.99.1
-ip http server
-ip http authentication aaa login-authentication login-RADIUS
-ip http authentication aaa exec-authorization auth-RADIUS-exec
-ip http secure-server
-ip ssh version 2
-!
-logging trap debugging
-logging host 10.10.0.19 transport udp port 1515
-logging host 10.10.0.142 transport udp port 5014
-access-list 12 permit 10.12.0.0 0.0.0.255
-!
-!
-snmp-server community public RO
-snmp mib flash cache
-!
-radius-server retransmit 1
-radius-server timeout 2
-radius-server key 7 082D47440C080B1F01070A06263C
-!
-radius server login-RADIUS
- address ipv4 10.10.0.212 auth-port 1812 acct-port 1813
- key 7 141B190109152423372435372E04
-!
-!
-line con 0
- exec-timeout 13 0
- privilege level 15
- authorization exec auth-RADIUS-exec
- logging synchronous
- login authentication login-RADIUS
-line vty 0 4
- exec-timeout 60 0
- privilege level 15
- authorization exec auth-RADIUS-exec
- logging synchronous
- login authentication login-RADIUS
- transport input ssh
-line vty 5 15
- authorization exec auth-RADIUS-exec
- login authentication login-RADIUS
-!
-end
+$ terminal length 0
 
 
 
@@ -485,7 +13,7 @@ Compiled Sat 14-Mar-20 15:28 by prod_rel_team
 ROM: Bootstrap program is c1000 boot loader
 BOOTLDR: C1000 Boot Loader (C1000-HBOOT-M), Version 15.2(7r)E RELEASE SOFTWARE (fc1)
 
-DEN-NSWS-23-99-17 uptime is 1 day, 5 minutes
+DEN-NSWS-23-99-17 uptime is 5 days, 23 hours, 53 minutes
 System returned to ROM by power-on
 System image file is "flash:/c1000-universalk9-mz.152-7.E2/c1000-universalk9-mz.152-7.E2.bin"
 Last reload reason: power-on
@@ -540,6 +68,430 @@ Configuration register is 0xF
 
 
 
+$ show lldp neighbors detail
+------------------------------------------------
+Local Intf: Gi1/0/10
+Chassis id: 10.13.1.76
+Port id: 0c38.3e43.8130
+Port Description: WAN Port
+System Name: X1S/X1SP
+
+System Description: 
+Version:2.4.12.2
+
+Time remaining: 50 seconds
+System Capabilities: B,T
+Enabled Capabilities: B,T
+Management Addresses:
+    IP: 10.13.1.76
+Auto Negotiation - not supported
+Physical media capabilities - not advertised
+Media Attachment Unit type - not advertised
+Vlan ID: - not advertised
+
+MED Information:
+
+    MED Codes:
+          (NP) Network Policy, (LI) Location Identification
+          (PS) Power Source Entity, (PD) Power Device
+          (IN) Inventory
+
+    H/W revision: V1.0
+    S/W revision: 2.4.12.2
+    Serial number: 00100400FV02001000000c383e438130
+    Manufacturer: Fanvil
+    Model: X1S/X1SP
+    Capabilities: NP
+    Device type: Endpoint Class III
+    Network Policy(Voice): VLAN 13, tagged, Layer-2 priority: 0, DSCP: 0
+    Network Policy(Voice Signal): VLAN 0, untagged, Layer-2 priority: 0, DSCP: 0
+    Power requirements - not advertised
+    Location - not advertised
+
+------------------------------------------------
+Local Intf: Gi1/0/7
+Chassis id: 10.13.1.209
+Port id: 0c38.3e52.989f
+Port Description: WAN Port
+System Name: X301
+
+System Description: 
+Version:2.12.17.8
+
+Time remaining: 173 seconds
+System Capabilities: B,T
+Enabled Capabilities: B,T
+Management Addresses:
+    IP: 10.13.1.209
+Auto Negotiation - not supported
+Physical media capabilities - not advertised
+Media Attachment Unit type - not advertised
+Vlan ID: - not advertised
+
+MED Information:
+
+    MED Codes:
+          (NP) Network Policy, (LI) Location Identification
+          (PS) Power Source Entity, (PD) Power Device
+          (IN) Inventory
+
+    H/W revision: V2.1
+    S/W revision: 2.12.17.8
+    Serial number: 00100400FV02001000000c383e52989f
+    Manufacturer: Fanvil
+    Model: X301
+    Capabilities: NP
+    Device type: Endpoint Class III
+    Network Policy(Voice): VLAN 13, tagged, Layer-2 priority: 0, DSCP: 0
+    Network Policy(Voice Signal): VLAN 0, untagged, Layer-2 priority: 0, DSCP: 0
+    Power requirements - not advertised
+    Location - not advertised
+
+------------------------------------------------
+Local Intf: Gi1/0/16
+Chassis id: a478.06a5.fc00
+Port id: Gi0/7
+Port Description: TRUNK_99.17_Gi1/0/16
+System Name: DEN-NSWS-23-99-121.kolmar.ru
+
+System Description: 
+Cisco IOS Software, C2960CX Software (C2960CX-UNIVERSALK9-M), Version 15.2(7)E, RELEASE SOFTWARE (fc3)
+Technical Support: http://www.cisco.com/techsupport
+Copyright (c) 1986-2019 by Cisco Systems, Inc.
+Compiled Sat 23-Mar-19 09:05 by prod_rel_team
+
+Time remaining: 105 seconds
+System Capabilities: B,R
+Enabled Capabilities: B
+Management Addresses:
+    IP: 10.20.99.121
+Auto Negotiation - supported, enabled
+Physical media capabilities:
+    1000baseT(FD)
+    100base-TX(FD)
+    100base-TX(HD)
+    10base-T(FD)
+    10base-T(HD)
+Media Attachment Unit type: 16
+Vlan ID: 1
+
+------------------------------------------------
+Local Intf: Gi1/0/14
+Chassis id: 10.13.1.102
+Port id: 0c38.3e10.858d
+Port Description: WAN Port
+System Name: X1S/X1SP
+
+System Description: 
+Version:2.4.12.2
+
+Time remaining: 1 seconds
+System Capabilities: B,T
+Enabled Capabilities: B,T
+Management Addresses:
+    IP: 10.13.1.102
+Auto Negotiation - not supported
+Physical media capabilities - not advertised
+Media Attachment Unit type - not advertised
+Vlan ID: - not advertised
+
+MED Information:
+
+    MED Codes:
+          (NP) Network Policy, (LI) Location Identification
+          (PS) Power Source Entity, (PD) Power Device
+          (IN) Inventory
+
+    H/W revision: V1.0
+    S/W revision: 2.4.12.2
+    Serial number: 00100400FV02001000000c383e10858d
+    Manufacturer: Fanvil
+    Model: X1S/X1SP
+    Capabilities: NP
+    Device type: Endpoint Class III
+    Network Policy(Voice): VLAN 13, tagged, Layer-2 priority: 0, DSCP: 0
+    Network Policy(Voice Signal): VLAN 0, untagged, Layer-2 priority: 0, DSCP: 0
+    Power requirements - not advertised
+    Location - not advertised
+
+------------------------------------------------
+Local Intf: Gi1/0/2
+Chassis id: 10.13.0.177
+Port id: 0c38.3e59.a06b
+Port Description: WAN Port
+System Name: X1S/X1SP
+
+System Description: 
+Version:2.4.12.2
+
+Time remaining: 57 seconds
+System Capabilities: B,T
+Enabled Capabilities: B,T
+Management Addresses:
+    IP: 10.13.0.177
+Auto Negotiation - not supported
+Physical media capabilities - not advertised
+Media Attachment Unit type - not advertised
+Vlan ID: - not advertised
+
+MED Information:
+
+    MED Codes:
+          (NP) Network Policy, (LI) Location Identification
+          (PS) Power Source Entity, (PD) Power Device
+          (IN) Inventory
+
+    H/W revision: V1.0
+    S/W revision: 2.4.12.2
+    Serial number: 00100400FV02001000000c383e59a06b
+    Manufacturer: Fanvil
+    Model: X1S/X1SP
+    Capabilities: NP
+    Device type: Endpoint Class III
+    Network Policy(Voice): VLAN 13, tagged, Layer-2 priority: 0, DSCP: 0
+    Network Policy(Voice Signal): VLAN 0, untagged, Layer-2 priority: 0, DSCP: 0
+    Power requirements - not advertised
+    Location - not advertised
+
+------------------------------------------------
+Local Intf: Gi1/0/3
+Chassis id: 10.13.0.187
+Port id: 0c38.3e59.a06e
+Port Description: WAN Port
+System Name: X1S/X1SP
+
+System Description: 
+Version:2.4.12.2
+
+Time remaining: 9 seconds
+System Capabilities: B,T
+Enabled Capabilities: B,T
+Management Addresses:
+    IP: 10.13.0.187
+Auto Negotiation - not supported
+Physical media capabilities - not advertised
+Media Attachment Unit type - not advertised
+Vlan ID: - not advertised
+
+MED Information:
+
+    MED Codes:
+          (NP) Network Policy, (LI) Location Identification
+          (PS) Power Source Entity, (PD) Power Device
+          (IN) Inventory
+
+    H/W revision: V1.0
+    S/W revision: 2.4.12.2
+    Serial number: 00100400FV02001000000c383e59a06e
+    Manufacturer: Fanvil
+    Model: X1S/X1SP
+    Capabilities: NP
+    Device type: Endpoint Class III
+    Network Policy(Voice): VLAN 13, tagged, Layer-2 priority: 0, DSCP: 0
+    Network Policy(Voice Signal): VLAN 0, untagged, Layer-2 priority: 0, DSCP: 0
+    Power requirements - not advertised
+    Location - not advertised
+
+------------------------------------------------
+Local Intf: Gi1/0/10
+Chassis id: f02f.7417.6313
+Port id: f02f.7417.6313
+Port Description - not advertised
+System Name - not advertised
+System Description - not advertised
+
+Time remaining: 2954 seconds
+System Capabilities - not advertised
+Enabled Capabilities - not advertised
+Management Addresses - not advertised
+Auto Negotiation - supported, enabled
+Physical media capabilities:
+    1000baseT(FD)
+Media Attachment Unit type - not advertised
+Vlan ID: - not advertised
+
+MED Information:
+
+    MED Codes:
+          (NP) Network Policy, (LI) Location Identification
+          (PS) Power Source Entity, (PD) Power Device
+          (IN) Inventory
+
+    Inventory information - not advertised
+    Capabilities: 
+    Device type: Endpoint Class I
+    Network Policies - not advertised
+    Power requirements - not advertised
+    Location - not advertised
+
+------------------------------------------------
+Local Intf: Gi1/0/15
+Chassis id: 802a.a890.5f82
+Port id: 802a.a890.5f82
+Port Description: eth0
+System Name: DENUPK
+
+System Description: 
+UAP-AC-Pro-Gen2, 6.6.77.15402
+
+Time remaining: 113 seconds
+System Capabilities: B,W,R,S
+Enabled Capabilities: B,W,R
+Management Addresses:
+    IP: 10.31.0.26
+    IPV6: FE80::822A:A8FF:FE90:5F82
+Auto Negotiation - not supported
+Physical media capabilities - not advertised
+Media Attachment Unit type - not advertised
+Vlan ID: - not advertised
+
+MED Information:
+
+    MED Codes:
+          (NP) Network Policy, (LI) Location Identification
+          (PS) Power Source Entity, (PD) Power Device
+          (IN) Inventory
+
+    S/W revision: 4.4.153
+    Capabilities: NP, LI, PS, PD, IN
+    Device type: Network connectivity
+    Network Policies - not advertised
+    PD device, Power source: PSE, Power Priority: High, Wattage: 15.4
+    Location - not advertised
+
+------------------------------------------------
+Local Intf: Gi1/0/7
+Chassis id: b42e.992f.ffba
+Port id: b42e.992f.ffba
+Port Description - not advertised
+System Name - not advertised
+System Description - not advertised
+
+Time remaining: 2957 seconds
+System Capabilities - not advertised
+Enabled Capabilities - not advertised
+Management Addresses - not advertised
+Auto Negotiation - supported, enabled
+Physical media capabilities:
+    1000baseT(FD)
+Media Attachment Unit type - not advertised
+Vlan ID: - not advertised
+
+MED Information:
+
+    MED Codes:
+          (NP) Network Policy, (LI) Location Identification
+          (PS) Power Source Entity, (PD) Power Device
+          (IN) Inventory
+
+    Inventory information - not advertised
+    Capabilities: 
+    Device type: Endpoint Class I
+    Network Policies - not advertised
+    Power requirements - not advertised
+    Location - not advertised
+
+------------------------------------------------
+Local Intf: Gi1/0/14
+Chassis id: 94de.8088.d527
+Port id: 94de.8088.d527
+Port Description - not advertised
+System Name - not advertised
+System Description - not advertised
+
+Time remaining: 3353 seconds
+System Capabilities - not advertised
+Enabled Capabilities - not advertised
+Management Addresses - not advertised
+Auto Negotiation - supported, enabled
+Physical media capabilities:
+    1000baseT(FD)
+Media Attachment Unit type - not advertised
+Vlan ID: - not advertised
+
+MED Information:
+
+    MED Codes:
+          (NP) Network Policy, (LI) Location Identification
+          (PS) Power Source Entity, (PD) Power Device
+          (IN) Inventory
+
+    Inventory information - not advertised
+    Capabilities: 
+    Device type: Endpoint Class I
+    Network Policies - not advertised
+    Power requirements - not advertised
+    Location - not advertised
+
+------------------------------------------------
+Local Intf: Gi1/0/3
+Chassis id: f02f.7417.67d2
+Port id: f02f.7417.67d2
+Port Description - not advertised
+System Name - not advertised
+System Description - not advertised
+
+Time remaining: 2975 seconds
+System Capabilities - not advertised
+Enabled Capabilities - not advertised
+Management Addresses - not advertised
+Auto Negotiation - supported, enabled
+Physical media capabilities:
+    1000baseT(FD)
+Media Attachment Unit type - not advertised
+Vlan ID: - not advertised
+
+MED Information:
+
+    MED Codes:
+          (NP) Network Policy, (LI) Location Identification
+          (PS) Power Source Entity, (PD) Power Device
+          (IN) Inventory
+
+    Inventory information - not advertised
+    Capabilities: 
+    Device type: Endpoint Class I
+    Network Policies - not advertised
+    Power requirements - not advertised
+    Location - not advertised
+
+------------------------------------------------
+Local Intf: Gi1/0/8
+Chassis id: f02f.74ce.3b33
+Port id: f02f.74ce.3b33
+Port Description - not advertised
+System Name - not advertised
+System Description - not advertised
+
+Time remaining: 3031 seconds
+System Capabilities - not advertised
+Enabled Capabilities - not advertised
+Management Addresses - not advertised
+Auto Negotiation - supported, enabled
+Physical media capabilities:
+    1000baseT(FD)
+Media Attachment Unit type - not advertised
+Vlan ID: - not advertised
+
+MED Information:
+
+    MED Codes:
+          (NP) Network Policy, (LI) Location Identification
+          (PS) Power Source Entity, (PD) Power Device
+          (IN) Inventory
+
+    Inventory information - not advertised
+    Capabilities: 
+    Device type: Endpoint Class I
+    Network Policies - not advertised
+    Power requirements - not advertised
+    Location - not advertised
+
+
+Total entries displayed: 12
+
+
+
 $ show cdp neighbors detail
 -------------------------
 Device ID: DEN-NSWS-23-99-121.kolmar.ru
@@ -547,7 +499,7 @@ Entry address(es):
   IP address: 10.20.99.121
 Platform: cisco WS-C2960CX-8PC-L,  Capabilities: Switch IGMP 
 Interface: GigabitEthernet1/0/16,  Port ID (outgoing port): GigabitEthernet0/7
-Holdtime : 161 sec
+Holdtime : 166 sec
 
 Version :
 Cisco IOS Software, C2960CX Software (C2960CX-UNIVERSALK9-M), Version 15.2(7)E, RELEASE SOFTWARE (fc3)
@@ -566,28 +518,13 @@ Management address(es):
 Total cdp entries displayed : 1
 
 
-$ show lldp neighbors detail
-% LLDP is not enabled
+$ show cdp neighbors
+Capability Codes: R - Router, T - Trans Bridge, B - Source Route Bridge
+                  S - Switch, H - Host, I - IGMP, r - Repeater, P - Phone, 
+                  D - Remote, C - CVTA, M - Two-port Mac Relay 
 
+Device ID        Local Intrfce     Holdtme    Capability  Platform  Port ID
+DEN-NSWS-23-99-121.kolmar.ru
+                 Gig 1/0/16        166              S I   WS-C2960C Gig 0/7
 
-$ show interface status
-
-Port      Name               Status       Vlan       Duplex  Speed Type 
-Gi1/0/1                      notconnect   40           auto   auto 10/100/1000BaseTX
-Gi1/0/2                      connected    40         a-full  a-100 10/100/1000BaseTX
-Gi1/0/3                      connected    40         a-full  a-100 10/100/1000BaseTX
-Gi1/0/4                      notconnect   40           auto   auto 10/100/1000BaseTX
-Gi1/0/5                      connected    40         a-full  a-100 10/100/1000BaseTX
-Gi1/0/6                      notconnect   40           auto    100 10/100/1000BaseTX
-Gi1/0/7   8674               connected    trunk      a-full  a-100 10/100/1000BaseTX
-Gi1/0/8                      connected    40         a-full  a-100 10/100/1000BaseTX
-Gi1/0/9                      notconnect   40           auto   auto 10/100/1000BaseTX
-Gi1/0/10  7042               connected    trunk      a-full  a-100 10/100/1000BaseTX
-Gi1/0/11                     connected    40         a-full  a-100 10/100/1000BaseTX
-Gi1/0/12                     notconnect   40           auto   auto 10/100/1000BaseTX
-Gi1/0/13                     notconnect   40           auto   auto 10/100/1000BaseTX
-Gi1/0/14  8604               connected    trunk      a-full  a-100 10/100/1000BaseTX
-Gi1/0/15  WI-FI              connected    trunk      a-full a-1000 10/100/1000BaseTX
-Gi1/0/16  UP 99.121_Gi0/7    connected    trunk      a-full  a-100 10/100/1000BaseTX
-Gi1/0/17                     notconnect   1            auto   auto Not Present
-Gi1/0/18                     notconnect   1            auto   auto Not Present
+Total cdp entries displayed : 1

@@ -1,73 +1,415 @@
 
 
 $ show running-config
-[ERROR executing command: 
-Pattern not detected: 'DEN\\-NSWS\\-04\\-99\\-63\\#' in output.
+
+                
+[K
+[K
+--More--[K
+                
+[K
+[K
+--More--[K
+                
+[K
+[K
+--More--[K
+                
+[K
+[K
+--More--[K
+                
+[Kip dhcp snooping        
+!
+set lldp enable
+!
+radius-server host 10.10.0.210 timeout 5 key encrypted qOzM/0zDoUP2k3P672Uz7Q== primary
+radius-server host 10.10.0.212 timeout 5 key encrypted qOzM/0zDoUP2k3P672Uz7Q==
+!
+username sib_uib password encrypted OTl653mxxwDsJJPczavzcQ== privilege 15
+username volodin_s password encrypted EnRFlIo7gtBTjF6wrwtAzQ== privilege 15
+username zhiltsov_a password encrypted KFif9+pKXWb2ZGDs19fowLwWpY80c995 privilege 15
+username ivashenko_vb password encrypted ugP9QrpkPzxRxqq861YAOccx21jObESe privilege 15  
+!
+snmp user ReadUser
+snmp user WriteUser
+snmp community index 1 name encrypted EQn5sbCUAOw= security WriteUser
+snmp community index 2 name encrypted O3oDUaq4qkM= security ReadUser
+snmp group ReadGroup user ReadUser security-model v2c
+snmp group WriteGroup user WriteUser security-model v2c
+snmp access ReadGroup v2c read iso
+snmp access WriteGroup v2c read iso write iso
+snmp view iso 1 included
+!  
+errdisable recovery interval 180
+errdisable recovery cause storm-control
 
-Things you might try to fix this:
-1. Explicitly set your pattern using the expect_string argument.
-2. Increase the read_timeout to a larger value.
+[K
+--More--[K
+                
+[K
+[K
+--More--[K
+                
+[K
+[K
+--More--[K
+                
+[K
+[K
+--More--[K
+                
+[K
+[K
+--More--[K
+                
+[K
+[K
+--More--[K
+                
+[K
+[K
+--More--[K
+                
+[K
+[K
+--More--[K
+                
+[K
+[K
+--More--[K
+                
+[K
+[K
+--More--[K
+                
+[K
+[K
+--More--[K
+                
+[K
+[K
+--More--[K
+                
+[K
+[K
+--More--[K
+                
+[K
+[K
+--More--[K
+                
+[K
+[K
+--More--[K
+                
+[Kerrdisable recovery cause loopback-detection
 
-You can also look at the Netmiko session_log or debug log for more information.
-
-]
-
-
-$ show version
-[ERROR executing command: 
-
-Pattern not detected: 'show\\ version' in output.
-
-Things you might try to fix this:
-1. Adjust the regex pattern to better identify the terminating string. Note, in
-many situations the pattern is automatically based on the network device's prompt.
-2. Increase the read_timeout to a larger value.
-
-You can also look at the Netmiko session_log or debug log for more information.
-
-]
+[K
+--More--[K
 
 
-$ show cdp neighbors detail
-[ERROR executing command: 
+$ show interface * status
+
+                
+[K
+[K
+--More--[K
+                
+[K
+[K
+--More--[K
+                
+[K
+[K
+--More--[K
+                
+[K
+[K
+--More--[K
+                
+[K  switchport access vlan 40  
+  no lldp transmit
+  no lldp receive   
+! 
+interface gigabitethernet 0/7
+  no snmp trap link-status
+  no negotiation
+  speed 100
+  spanning-tree portfast
+  spanning-tree bpduguard enable
+  switchport mode access
+  switchport access vlan 40  
+  no lldp transmit
+  no lldp receive   
+! 
+interface gigabitethernet 0/8
+  no snmp trap link-status
+  no negotiation
+  speed 100
+  spanning-tree portfast
+  spanning-tree bpduguard enable
+  switchport mode access
+  switchport access vlan 40  
+  no lldp transmit
 
-Pattern not detected: 'show\\ cdp\\ neighbors\\ detail' in output.
+[K
+--More--[K
+                
+[K
+[K
+--More--[K
+                
+[K
+[K
+--More--[K
+                
+[K
+[K
+--More--[K
+                
+[K
+[K
+--More--[K
+                
+[K
+[K
+--More--[K
+                
+[K
+[K
+--More--[K
+                
+[K
+[K
+--More--[K
+                
+[K
+[K
+--More--[K
+                
+[K
+[K
+--More--[K
+                
+[K  no lldp receive   
+! 
+interface gigabitethernet 0/9
+  no snmp trap link-status
+  no negotiation
+  speed 100
+  spanning-tree portfast
+  spanning-tree bpduguard enable
+  switchport mode access
+  switchport access vlan 40  
+  no lldp transmit
+  no lldp receive   
+! 
+interface gigabitethernet 0/10
+  no snmp trap link-status
+  no negotiation
+  speed 100
+  spanning-tree portfast
+  spanning-tree bpduguard enable
+  switchport mode access
+  switchport access vlan 40  
+  no lldp transmit
+  no lldp receive   
+! 
 
-Things you might try to fix this:
-1. Adjust the regex pattern to better identify the terminating string. Note, in
-many situations the pattern is automatically based on the network device's prompt.
-2. Increase the read_timeout to a larger value.
+[K
+--More--[K
+                
+[K
+[K
+--More--[K
+                
+[Kinterface gigabitethernet 0/11
+  no snmp trap link-status
+  no negotiation
+  speed 100
+  spanning-tree portfast
+  spanning-tree bpduguard enable
+  switchport mode access
+  switchport access vlan 40  
+  no lldp transmit
+  no lldp receive   
+! 
+interface gigabitethernet 0/12
+  no snmp trap link-status
+  no negotiation
+  speed 100
+  spanning-tree portfast
+  spanning-tree bpduguard enable
+  switchport mode access
+  switchport access vlan 40  
+  no lldp transmit
+  no lldp receive   
+! 
+interface gigabitethernet 0/13
+  no snmp trap link-status
 
-You can also look at the Netmiko session_log or debug log for more information.
+[K
+--More--[K
+                
+[K
+[K
+--More--[K
+                
+[K
+[K
+--More--[K
+                
+[K
+[K
+--More--[K
+                
+[K
+[K
+--More--[K
+                
+[K
+[K
+--More--[K
+                
+[K
+[K
+--More--[K
+                
+[K  no negotiation
 
-]
+[K
+--More--[K
 
 
-$ show lldp neighbors detail
-[ERROR executing command: 
+$ show lldp neighbors
+
+                
+[K
+[K
+--More--[K
+                
+[K
+[K
+--More--[K
+                
+[K
+[K
+--More--[K
+                
+[K
+[K
+--More--[K
+                
+[K  no lldp receive   
+! 
+interface gigabitethernet 0/18
+  no snmp trap link-status
+  no negotiation
+  speed 100
+  spanning-tree portfast
+  spanning-tree bpduguard enable
+  switchport mode access
+  switchport access vlan 40  
+  no lldp transmit
+  no lldp receive   
+! 
+interface gigabitethernet 0/19
+  no snmp trap link-status
+  no negotiation
+  speed 100
+  spanning-tree portfast
+  spanning-tree bpduguard enable
+  switchport mode access
+  switchport access vlan 40  
+  no lldp transmit
+  no lldp receive   
+! 
 
-Pattern not detected: 'show\\ lldp\\ neighbors\\ detail' in output.
+[K
+--More--[K
+                
+[K
+[K
+--More--[K
+                
+[K
+[K
+--More--[K
+                
+[K
+[K
+--More--[K
+                
+[K
+[K
+--More--[K
+                
+[Kinterface gigabitethernet 0/20
+  no snmp trap link-status
+  no negotiation
+  speed 100
+  spanning-tree portfast
+  spanning-tree bpduguard enable
+  switchport mode access
+  switchport access vlan 40  
+  no lldp transmit
+  no lldp receive   
+! 
+interface gigabitethernet 0/21
+  no snmp trap link-status
+  no negotiation
+  speed 100
+  spanning-tree portfast
+  spanning-tree bpduguard enable
+  switchport mode access
+  switchport access vlan 40  
+  no lldp transmit
+  no lldp receive   
+! 
+interface gigabitethernet 0/22
+  no snmp trap link-status
 
-Things you might try to fix this:
-1. Adjust the regex pattern to better identify the terminating string. Note, in
-many situations the pattern is automatically based on the network device's prompt.
-2. Increase the read_timeout to a larger value.
+[K
+--More--[K
+                
+[K
+[K
+--More--[K
+                
+[K
+[K
+--More--[K
+                
+[K
+[K
+--More--[K
+                
+[K
+[K
+--More--[K
+                
+[K
+[K
+--More--[K
+                
+[K
+[K
+--More--[K
+                
+[K
+[K
+--More--[K
+                
+[K
+[K
+--More--[K
+                
+[K
+[K
+--More--[K
+                
+[K  no negotiation
 
-You can also look at the Netmiko session_log or debug log for more information.
-
-]
-
-
-$ show interface status
-[ERROR executing command: 
-
-Pattern not detected: 'show\\ interface\\ status' in output.
-
-Things you might try to fix this:
-1. Adjust the regex pattern to better identify the terminating string. Note, in
-many situations the pattern is automatically based on the network device's prompt.
-2. Increase the read_timeout to a larger value.
-
-You can also look at the Netmiko session_log or debug log for more information.
-
-]
+[K
+--More--[K

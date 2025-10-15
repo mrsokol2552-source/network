@@ -1,0 +1,9 @@
+Value LocalInterface (\S+)
+Value NeighborName (.*)
+Value NeighborPort (.*)
+
+Start
+  ^(?:Local\s+)?Port\s*:\s*${LocalInterface}\s*
+  ^System\s+Name\s*:\s*${NeighborName}\s*
+  ^Port\s+ID\s*:\s*${NeighborPort}\s* -> Record
+  ^\s*$$ -> Start

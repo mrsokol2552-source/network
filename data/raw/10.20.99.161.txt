@@ -1,62 +1,512 @@
 
 
-$ show running-config
-[ERROR executing command: 
-Pattern not detected: 'INA\\-NSWS\\-01\\-99\\-161\\#' in output.
+$ show system information
 
-Things you might try to fix this:
-1. Explicitly set your pattern using the expect_string argument.
-2. Increase the read_timeout to a larger value.
+Hardware Version                  : 3v1
+Software Version                  : 10.2.9.3
+Firmware Version                  : 10.2.9.3
 
-You can also look at the Netmiko session_log or debug log for more information.
-
-]
-
-
-$ show version
-[ERROR executing command: 
-
-Pattern not detected: 'show\\ version' in output.
-
-Things you might try to fix this:
-1. Adjust the regex pattern to better identify the terminating string. Note, in
-many situations the pattern is automatically based on the network device's prompt.
-2. Increase the read_timeout to a larger value.
-
-You can also look at the Netmiko session_log or debug log for more information.
-
-]
+Hardware Serial Number            : ESD1008785
+Switch Base MAC Address           : cc:9d:a2:a6:e4:00   
+Software Serial Number            : 1f0d464c
+System Contact                    : eltex@eltex-co.ru
+System Name                       : INA-NSWS-01-99-161
+System Location                   : Eltex Ltd, Russia
+System Description                : MES2424P rev.C1 AC 28-port 1G/10G Managed Switch with 24 POE+ ports
+Logging Option                    : Flash Logging
+Device Uptime                     : 319 Days, 5 Hrs, 16 Mins, 59 Secs
+Login Authentication Mode         : Local
+Config Save Status                : Successful
+Remote Save Status                : Not Initiated
+Config Restore Status             : Not Initiated
+Traffic Separation Control        : none
 
 
-$ show cdp neighbors detail
-[ERROR executing command: 
-
-Pattern not detected: 'show\\ cdp\\ neighbors\\ detail' in output.
-
-Things you might try to fix this:
-1. Adjust the regex pattern to better identify the terminating string. Note, in
-many situations the pattern is automatically based on the network device's prompt.
-2. Increase the read_timeout to a larger value.
-
-You can also look at the Netmiko session_log or debug log for more information.
-
-]
 
 
 $ show lldp neighbors detail
+
+                
+
 
-Total Entries Displayed : 0
+--More--
+                
+
+
+--More--
+                
+
+
+--More--
+                
+
+
+--More--
+                
+Symm PAUSE(FD)
+1000base-X, -LX, -SX, -CX(FD)
+1000base-T(FD)
+-Link Aggregation
+Capability & Status           : Not Capable, Not In Aggregation
+Aggregated Port Id            : 0
+-Maximum Frame Size           : 0
+
+Extended 802.1 TLV Info 
+-Port VLAN Id                 : 0
+-Port & Protocol VLAN Id 
+Protocol Vlan Tlv             : Not Advertised
+-Vlan Name
+Vlan Name Tlv                 : Not Advertised
+
+-LLDP MED Capability TLV      : Not Advertised 
+Capabilities Supported        : 0 
+Capabilities Enabled          : 0 
+Device Class                  : 0 
+
+-LLDP MED Inventory TLV       : Not Advertised
+
+-LLDP-MED Nw Policy TLV       : Not Advertised 
 
 
 
-$ show interface status
-[ERROR executing command: 
-Pattern not detected: 'INA\\-NSWS\\-01\\-99\\-161\\#' in output.
+--More--
+                
+
 
-Things you might try to fix this:
-1. Explicitly set your pattern using the expect_string argument.
-2. Increase the read_timeout to a larger value.
+--More--
+                
+
 
-You can also look at the Netmiko session_log or debug log for more information.
+--More--
+                
+
 
-]
+--More--
+                
+
+
+--More--
+                
+-LLDP-MED Location Info TLV   : Not Advertised 
+
+-LLDP-MED Ex-PowerViaMDI TLV  : Not Advertised 
+------------------------------------------------------------
+Chassis Id SubType            : Mac Address 
+Chassis Id                    : 00:1d:77:29:21:a2
+Port Id SubType               : Local 
+Port Id                       : 10
+Port Description              : GigabitEthernet 1/10
+System Name                   : INA-NSWS-128-99-164
+System Desc                   : V2.1 2021-04-25T04:45:04-07:00
+Local Intf                    : gi 0/12
+Time Remaining                : 102 Seconds 
+System Capabilities Supported : B               
+System Capabilities Enabled   : B
+Management Addresses          : 
+IfId SubType Address                         OID                               
+---- ------- -------                         ---                               
+0    IPv4    192.168.2.1                                                       
+
+Extended 802.3 TLV Info 
+-MAC PHY Configuration & Status
+10base-T(HD)
+10base-T(FD)
+
+
+--More--
+                
+
+
+--More--
+                
+
+
+--More--
+                
+
+
+--More--
+                
+
+
+--More--
+                
+
+
+--More--
+                
+
+
+--More--
+                
+
+
+--More--
+                
+
+
+--More--
+                
+
+
+--More--
+                
+100base-TX(HD)
+100base-T2(HD)
+Asym PAUSE(FD)
+Symm PAUSE(FD)
+Asym and Symm PAUSE(FD)
+1000base-X, -LX, -SX, -CX(HD)
+1000base-X, -LX, -SX, -CX(FD)
+1000base-T(HD)
+-Link Aggregation
+Capability & Status           : Not Capable, Not In Aggregation
+Aggregated Port Id            : 0
+-Maximum Frame Size           : 0
+
+Extended 802.1 TLV Info 
+-Port VLAN Id                 : 0
+-Port & Protocol VLAN Id 
+Protocol Vlan Tlv             : Not Advertised
+-Vlan Name
+Vlan Name Tlv                 : Not Advertised
+
+-LLDP MED Capability TLV      : Not Advertised 
+Capabilities Supported        : 0 
+Capabilities Enabled          : 0 
+Device Class                  : 0 
+
+
+--More--
+                
+
+
+--More--
+                
+
+
+--More--
+                
+
+
+--More--
+                
+
+
+--More--
+                
+
+
+--More--
+                
+
+
+--More--
+                
+
+
+
+--More--
+
+
+$ show vlan
+
+                
+
+
+--More--
+                
+
+
+--More--
+                
+
+
+--More--
+                
+
+
+--More--
+                
+10base-T(HD)
+10base-T(FD)
+100base-TX(HD)
+100base-T2(HD)
+Asym PAUSE(FD)
+Symm PAUSE(FD)
+Asym and Symm PAUSE(FD)
+1000base-X, -LX, -SX, -CX(HD)
+1000base-X, -LX, -SX, -CX(FD)
+1000base-T(HD)
+-Link Aggregation
+Capability & Status           : Not Capable, Not In Aggregation
+Aggregated Port Id            : 0
+-Maximum Frame Size           : 0
+
+Extended 802.1 TLV Info 
+-Port VLAN Id                 : 0
+-Port & Protocol VLAN Id 
+Protocol Vlan Tlv             : Not Advertised
+-Vlan Name
+Vlan Name Tlv                 : Not Advertised
+
+-LLDP MED Capability TLV      : Not Advertised 
+Capabilities Supported        : 0 
+
+
+--More--
+                
+
+
+--More--
+                
+
+
+--More--
+                
+
+
+--More--
+                
+
+
+--More--
+                
+Capabilities Enabled          : 0 
+
+
+--More--
+
+
+$ show interfaces status
+
+                
+
+
+--More--
+                
+
+
+--More--
+                
+
+
+--More--
+                
+
+
+--More--
+                
+-LLDP-MED Ex-PowerViaMDI TLV  : Not Advertised 
+------------------------------------------------------------
+
+Total Entries Displayed : 4
+[27m
+                       
+
+INA-NSWS-01-99-161#interfaces status
+
+% Invalid Command
+
+
+
+$ show interfaces
+
+                
+
+
+--More--
+                
+
+
+--More--
+                
+
+
+--More--
+                
+
+
+--More--
+                
+   Unknown Protocol          : 0
+   CRC Errors                : 1
+   Symbol Errors             : 1
+   Oversized w/ Bad CRC      : 0
+
+Transmission Counters
+   Octets                    : 3125369355
+   Unicast Packets           : 3821130841
+   Multicast Packets         : 14383987
+   Broadcast Packets         : 96154821
+   Discarded Packets         : 1
+   Error Drops               : 0
+   Error Packets             : 0
+
+gi 0/2 up, line protocol is up (connected)
+Bridge Port Type: Customer Bridge Port
+
+Interface SubType: gigabitEthernet
+
+Hardware Address is cc:9d:a2:a6:e4:02   
+MTU  12288 bytes, Full duplex, 100 Mbps,  Auto-Negotiation default
+HOL Block Prevention enabled.
+CPU Controlled Learning disabled.
+Auto-MDIX on
+
+
+--More--
+                
+
+
+--More--
+                
+
+
+--More--
+                
+
+
+--More--
+                
+
+
+--More--
+                
+
+
+--More--
+                
+
+
+--More--
+                
+
+
+--More--
+                
+
+
+--More--
+                
+
+
+--More--
+                
+
+
+--More--
+                
+Input flow-control is off,output flow-control is off
+
+
+--More--
+
+
+$ show running-config
+
+                
+
+
+--More--
+                
+
+
+--More--
+                
+
+
+--More--
+                
+
+
+--More--
+                
+Bridge Port Type: Customer Bridge Port
+
+Interface SubType: gigabitEthernet
+
+Hardware Address is cc:9d:a2:a6:e4:03   
+MTU  12288 bytes, Full duplex, 100 Mbps,  Auto-Negotiation default
+HOL Block Prevention enabled.
+CPU Controlled Learning disabled.
+Auto-MDIX on
+Input flow-control is off,output flow-control is off
+Media-type: prefer-fiber
+
+Link Up/Down Trap is enabled 
+
+Reception Counters
+   Octets                    : 922721569
+   Unicast Packets           : 1699021769
+   Multicast Packets         : 4187
+   Broadcast Packets         : 921074
+   Discarded Packets         : 23
+   Error Packets             : 2
+   Unknown Protocol          : 0
+   CRC Errors                : 1
+   Symbol Errors             : 1
+
+
+--More--
+                
+
+
+--More--
+                
+
+
+--More--
+                
+
+
+--More--
+                
+
+
+--More--
+                
+
+
+--More--
+                
+
+
+--More--
+                
+
+
+--More--
+                
+
+
+--More--
+                
+
+
+--More--
+                
+
+
+--More--
+                
+
+
+--More--
+                
+
+
+--More--
+                
+
+
+--More--
+                
+
+
+--More--
+                
+   Oversized w/ Bad CRC      : 0
+
+
+--More--

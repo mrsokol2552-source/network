@@ -1,0 +1,4 @@
+# Command list for OSNOVA collection (Cisco-like, limited)
+# pre_enable=0
+show version
+show lldp neighbor-information

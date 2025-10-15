@@ -1,73 +1,454 @@
 
 
-$ show running-config
-[ERROR executing command: 
-Pattern not detected: 'DEN\\-NSWS\\-10\\-99\\-16\\#' in output.
+$ show system information
 
-Things you might try to fix this:
-1. Explicitly set your pattern using the expect_string argument.
-2. Increase the read_timeout to a larger value.
+Hardware Version                  : 2v3
+Software Version                  : 10.3.4
+Firmware Version                  : 10.3.4
 
-You can also look at the Netmiko session_log or debug log for more information.
-
-]
-
-
-$ show version
-[ERROR executing command: 
-
-Pattern not detected: 'show\\ version' in output.
-
-Things you might try to fix this:
-1. Adjust the regex pattern to better identify the terminating string. Note, in
-many situations the pattern is automatically based on the network device's prompt.
-2. Increase the read_timeout to a larger value.
-
-You can also look at the Netmiko session_log or debug log for more information.
-
-]
+Hardware Serial Number            : ESC6001732
+Switch Base MAC Address           : cc:9d:a2:68:30:00
+Software Serial Number            : c6313afa
+System Contact                    : 
+System Name                       : DEN-NSWS-10-99-16
+System Location                   : 
+System Description                : MES2448B rev.B AC 52-port 1G/10G Managed Switch
+Logging Option                    : Flash Logging
+Device Uptime                     : 205 Days, 16 Hrs, 39 Mins, 51 Secs
+Login Authentication Mode         : Local
+Config Save Status                : Successful
+Remote Save Status                : Not Initiated
+Config Restore Status             : Not Initiated
+Traffic Separation Control        : none
 
 
-$ show cdp neighbors detail
-[ERROR executing command: 
-
-Pattern not detected: 'show\\ cdp\\ neighbors\\ detail' in output.
-
-Things you might try to fix this:
-1. Adjust the regex pattern to better identify the terminating string. Note, in
-many situations the pattern is automatically based on the network device's prompt.
-2. Increase the read_timeout to a larger value.
-
-You can also look at the Netmiko session_log or debug log for more information.
-
-]
 
 
 $ show lldp neighbors detail
-[ERROR executing command: 
+
+                
+
 
-Pattern not detected: 'show\\ lldp\\ neighbors\\ detail' in output.
+--More--
+                
+
 
-Things you might try to fix this:
-1. Adjust the regex pattern to better identify the terminating string. Note, in
-many situations the pattern is automatically based on the network device's prompt.
-2. Increase the read_timeout to a larger value.
+--More--
+                
+
 
-You can also look at the Netmiko session_log or debug log for more information.
+--More--
+                
+
 
-]
+--More--
+                
+-MAC PHY Configuration & Status
+100base-TX(FD)
+Symm PAUSE(FD)
+Asym and Symm PAUSE(FD)
+1000base-X, -LX, -SX, -CX(FD)
+1000base-T(HD)
+1000base-T(FD)
+-Link Aggregation
+Capability & Status           : Not Capable, Not In Aggregation
+Aggregated Port Id            : 0
+-Maximum Frame Size           : 0
+
+Extended 802.1 TLV Info 
+-Port VLAN Id                 : 0
+-Port & Protocol VLAN Id 
+Protocol Vlan Tlv             : Not Advertised
+-Vlan Name
+Vlan Name Tlv                 : Not Advertised
+
+-LLDP MED Capability TLV      : Not Advertised 
+Capabilities Supported        : 0 
+Capabilities Enabled          : 0 
+Device Class                  : 0 
 
 
-$ show interface status
-[ERROR executing command: 
 
-Pattern not detected: 'show\\ interface\\ status' in output.
+--More--
+                
+
 
-Things you might try to fix this:
-1. Adjust the regex pattern to better identify the terminating string. Note, in
-many situations the pattern is automatically based on the network device's prompt.
-2. Increase the read_timeout to a larger value.
+--More--
+                
+
 
-You can also look at the Netmiko session_log or debug log for more information.
+--More--
+                
+
 
-]
+--More--
+                
+
+
+--More--
+                
+-LLDP MED Inventory TLV       : Not Advertised
+
+-LLDP-MED Nw Policy TLV       : Not Advertised 
+
+-LLDP-MED Location Info TLV   : Not Advertised 
+
+-LLDP-MED Ex-PowerViaMDI TLV  : Not Advertised 
+------------------------------------------------------------
+Chassis Id SubType            : Mac Address 
+Chassis Id                    : e0:69:ba:83:15:80
+Port Id SubType               : Interface Name 
+Port Id                       : Twe1/0/7
+Port Description              : abk-east_99.16_te0/1
+System Name                   : DEN-NSWR-03-98-1
+System Desc                   : Cisco IOS Software [Bengaluru], Catalyst L3 Switch Software (CAT9K_IOSXE), Version 17.6.1, RELEASE SOFTWARE (fc6)
+Technical Support: http://www.cisco.com/techsupport
+Copyright (c) 1986-2021 by Cisco Systems, Inc.
+Compiled Fri 30-Jul-21 15:15 by mcpre
+Local Intf                    : te 0/1
+Time Remaining                : 101 Seconds 
+System Capabilities Supported : B,R             
+System Capabilities Enabled   : B,R
+Management Addresses          : 
+IfId SubType Address                         OID                               
+
+
+--More--
+                
+
+
+--More--
+                
+
+
+--More--
+                
+
+
+--More--
+                
+
+
+--More--
+                
+
+
+--More--
+                
+
+
+--More--
+                
+
+
+--More--
+                
+
+
+--More--
+                
+
+
+--More--
+                
+---- ------- -------                         ---                               
+68   IPv4    10.20.98.1                                                        
+
+Extended 802.3 TLV Info 
+-MAC PHY Configuration & Status
+10base-T(HD)
+10base-T(FD)
+100base-TX(FD)
+100base-T2(HD)
+100base-T2(FD)
+Symm PAUSE(FD)
+1000base-X, -LX, -SX, -CX(FD)
+1000base-T(HD)
+1000base-T(FD)
+-Link Aggregation
+Capability & Status           : Not Capable, Not In Aggregation
+Aggregated Port Id            : 0
+-Maximum Frame Size           : 0
+
+Extended 802.1 TLV Info 
+-Port VLAN Id                 : 1
+-Port & Protocol VLAN Id 
+Protocol Vlan Tlv             : Not Advertised
+-Vlan Name
+
+
+--More--
+                
+
+
+--More--
+                
+
+
+--More--
+                
+
+
+--More--
+                
+
+
+--More--
+                
+
+
+--More--
+                
+
+
+--More--
+                
+Vlan Name Tlv                 : Not Advertised
+
+
+--More--
+
+
+$ show vlan
+
+                
+
+
+--More--
+                
+
+
+--More--
+                
+
+
+--More--
+                
+
+
+--More--
+                
+Extended 802.3 TLV Info 
+-MAC PHY Configuration & Status
+10base-T(HD)
+10base-T(FD)
+100base-TX(FD)
+100base-T2(HD)
+100base-T2(FD)
+Symm PAUSE(FD)
+1000base-X, -LX, -SX, -CX(FD)
+1000base-T(HD)
+1000base-T(FD)
+-Link Aggregation
+Capability & Status           : Not Capable, Not In Aggregation
+Aggregated Port Id            : 0
+-Maximum Frame Size           : 0
+
+Extended 802.1 TLV Info 
+-Port VLAN Id                 : 0
+-Port & Protocol VLAN Id 
+Protocol Vlan Tlv             : Not Advertised
+-Vlan Name
+Vlan Name Tlv                 : Not Advertised
+
+-LLDP MED Capability TLV      : Not Advertised 
+
+
+--More--
+                
+
+
+--More--
+                
+
+
+--More--
+                
+
+
+--More--
+                
+
+
+--More--
+                
+Capabilities Supported        : 0 
+
+
+--More--
+
+
+$ show interfaces status
+
+Port        Type          Status           Duplex   Speed       Negotiation     Capability      Uptime (d,h:m:s)
+----        ------------  ------           ------   -----       -----------     ----------      ----------------
+gi 0/1      1G-Copper     Up               Full     100 Mbps    No-Negotiation  Auto-MDIX on    37,6:47:33      
+gi 0/2      1G-Copper     Up               Full     100 Mbps    No-Negotiation  Auto-MDIX on    37,6:47:35      
+gi 0/3      1G-Copper     Up               Full     100 Mbps    No-Negotiation  Auto-MDIX on    37,6:47:35      
+gi 0/4      1G-Copper     Down (nc)        -        -           No-Negotiation  Auto-MDIX on    -               
+gi 0/5      1G-Copper     Down (nc)        -        -           No-Negotiation  Auto-MDIX on    -               
+gi 0/6      1G-Copper     Up               Full     100 Mbps    No-Negotiation  Auto-MDIX on    2,8:29:21       
+gi 0/7      1G-Copper     Up               Full     100 Mbps    No-Negotiation  Auto-MDIX on    0,23:21:51      
+gi 0/8      1G-Copper     Up               Full     100 Mbps    No-Negotiation  Auto-MDIX on    37,6:47:34      
+gi 0/9      1G-Copper     Down (nc)        -        -           No-Negotiation  Auto-MDIX on    -               
+gi 0/10     1G-Copper     Up               Full     1 Gbps      Auto            Auto-MDIX on    37,6:46:44      
+gi 0/11     1G-Copper     Up               Full     100 Mbps    No-Negotiation  Auto-MDIX on    0,0:16:54       
+gi 0/12     1G-Copper     Up               Full     100 Mbps    No-Negotiation  Auto-MDIX on    37,6:47:33      
+gi 0/13     1G-Copper     Up               Full     100 Mbps    No-Negotiation  Auto-MDIX on    14,23:16:50     
+gi 0/14     1G-Copper     Up               Full     100 Mbps    No-Negotiation  Auto-MDIX on    0,7:2:5         
+gi 0/15     1G-Copper     Down (nc)        -        -           No-Negotiation  Auto-MDIX on    -               
+gi 0/16     1G-Copper     Down (nc)        -        -           No-Negotiation  Auto-MDIX on    -               
+gi 0/17     1G-Copper     Up               Full     100 Mbps    No-Negotiation  Auto-MDIX on    37,6:47:33      
+gi 0/18     1G-Copper     Down (nc)        -        -           No-Negotiation  Auto-MDIX on    -               
+gi 0/19     1G-Copper     Up               Full     100 Mbps    No-Negotiation  Auto-MDIX on    0,2:34:24       
+gi 0/20     1G-Copper     Up               Full     100 Mbps    No-Negotiation  Auto-MDIX on    35,8:54:29      
+
+
+--More--
+
+
+$ show interfaces
+
+                
+
+
+--More--
+                
+
+
+--More--
+                
+
+
+--More--
+                
+
+
+--More--
+                
+gi 0/47     1G-Copper     Down (adm)       -        -           Auto            Auto-MDIX on    -               
+gi 0/48     1G-Copper     Up               Full     100 Mbps    No-Negotiation  Auto-MDIX on    2,6:17:40       
+te 0/1      10G-Fiber     Up               Full     1 Gbps      No-Negotiation  Auto-MDIX on    96,4:28:46      
+te 0/2      10G-Fiber     Down (nc)        -        -           No-Negotiation  Auto-MDIX on    -               
+te 0/3      10G-Fiber     Down (nc)        -        -           No-Negotiation  Auto-MDIX on    -               
+te 0/4      10G-Fiber     Down (nc)        -        -           No-Negotiation  Auto-MDIX on    -               
+
+nc (not connected): The interface is not connected.
+err (error-disabled): The interface was suspended by the system.
+adm (admin.shutdown): The interface was suspended by administrator.
+[27m
+                       
+
+DEN-NSWS-10-99-16#interfaces
+
+% Invalid Command
+
+
+
+$ show running-config
+
+                
+
+
+--More--
+                
+
+
+--More--
+                
+
+
+--More--
+                
+
+
+--More--
+                
+logging-server facility local0 severity errors ipv4 10.10.0.142 port  5014
+logging-server facility local0 severity warnings ipv4 10.10.0.142 port  5014
+logging-server facility local0 severity notification ipv4 10.10.0.142 port  5014
+logging-server facility local0 severity informational ipv4 10.10.0.142 port  5014
+!
+vlan 9,13,17,30-34,37,40-41,556,715,1040,1440,1930
+  vlan active
+!              
+ip dhcp snooping        
+!
+set lldp enable
+!
+radius-server host 10.10.0.210 timeout 5 key encrypted qOzM/0zDoUP2k3P672Uz7Q== primary
+radius-server host 10.10.0.212 timeout 5 key encrypted qOzM/0zDoUP2k3P672Uz7Q==
+!
+username sib_uib password encrypted OTl653mxxwDsJJPczavzcQ== privilege 15
+username volodin_s password encrypted EnRFlIo7gtBTjF6wrwtAzQ== privilege 15
+username zhiltsov_a password encrypted KFif9+pKXWb2ZGDs19fowLwWpY80c995 privilege 15
+username ivashenko_vb password encrypted ugP9QrpkPzxRxqq861YAOccx21jObESe privilege 15  
+!
+snmp user ReadUser
+snmp user WriteUser
+snmp community index 1 name encrypted EQn5sbCUAOw= security WriteUser
+snmp community index 2 name encrypted O3oDUaq4qkM= security ReadUser
+
+
+--More--
+                
+
+
+--More--
+                
+
+
+--More--
+                
+
+
+--More--
+                
+
+
+--More--
+                
+
+
+--More--
+                
+
+
+--More--
+                
+
+
+--More--
+                
+
+
+--More--
+                
+
+
+--More--
+                
+
+
+--More--
+                
+
+
+--More--
+                
+
+
+--More--
+                
+
+
+--More--
+                
+
+
+--More--
+                
+snmp group ReadGroup user ReadUser security-model v2c
+
+
+--More--

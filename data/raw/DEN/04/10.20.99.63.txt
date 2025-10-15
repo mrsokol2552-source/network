@@ -1,0 +1,117 @@
+
+
+$ terminal length 0
+
+% Invalid Command
+
+
+
+$ show version
+
+show version
+
+     ^
+% Invalid input detected at '^' marker
+
+
+
+$ show lldp neighbors detail
+
+                
+[K
+[K
+--More--[K
+                
+[K
+[K
+--More--[K
+                
+[K
+[K
+--More--[K
+                
+[K
+[K
+--More--[K
+                
+[K
+Extended 802.3 TLV Info 
+-MAC PHY Configuration & Status
+Auto-Neg Support & Status     : Supported, Enabled
+Advertised Capability Bits    : 0036
+Symm PAUSE(FD)
+Asym and Symm PAUSE(FD)
+1000base-X, -LX, -SX, -CX(FD)
+1000base-T(HD)
+Operational MAU Type          : 16
+-Link Aggregation
+Capability & Status           : Not Capable, Not In Aggregation
+Aggregated Port Id            : 0
+-Maximum Frame Size           : 0
+
+Extended 802.1 TLV Info 
+-Port VLAN Id                 : 1
+-Port & Protocol VLAN Id 
+Protocol Vlan Tlv             : Not Advertised
+-Vlan Name
+Vlan Name Tlv                 : Not Advertised
+
+-LLDP MED Capability TLV      : Not Advertised 
+Capabilities Supported        : 0 
+
+[K
+--More--[K
+                
+[K
+[K
+--More--[K
+                
+[K
+[K
+--More--[K
+                
+[K
+[K
+--More--[K
+                
+[K
+[K
+--More--[K
+                
+[KCapabilities Enabled          : 0 
+Device Class                  : 0 
+
+-LLDP MED Inventory TLV       : Not Advertised
+
+-LLDP-MED Nw Policy TLV       : Not Advertised 
+
+-LLDP-MED Location Info TLV   : Not Advertised 
+
+-LLDP-MED Ex-PowerViaMDI TLV  : Not Advertised 
+------------------------------------------------------------
+
+Total Entries Displayed : 1
+[27m
+                       
+
+DEN-NSWS-04-99-63#neighbors detail
+
+% Invalid Command
+
+
+
+$ show cdp neighbors detail
+
+show cdp
+
+     ^
+% Invalid input detected at '^' marker
+
+
+
+$ show cdp neighbors
+
+show cdp
+
+     ^
+% Invalid input detected at '^' marker

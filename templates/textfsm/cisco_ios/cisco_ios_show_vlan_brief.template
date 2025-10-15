@@ -1,0 +1,11 @@
+Value VlanId (\d+)
+Value VlanName (\S+)
+Value Status (\S+)
+Value Ports (.*)
+
+Start
+  ^VLAN\s+Name\s+Status\s+Ports -> VLAN
+  ^.* -> Start
+
+VLAN
+  ^\s*${VlanId}\s+${VlanName}\s+${Status}\s*${Ports} -> Record

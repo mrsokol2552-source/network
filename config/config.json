@@ -18,11 +18,11 @@
     "layout_engine": "elk",
     "flow_direction": "LR",
     "use_subgraphs": true,
-    "label_verbosity": "full",
+    "label_verbosity": "brief",
     "show_ports": true,
     "show_vlans": true,
     "show_ips": true,
-    "classes": ["core", "dist", "access", "wan", "dmz", "mgmt"]
+    "classes": ["core", "dist", "access", "wan", "dmz", "mgmt", "wifi"]
   },
   "vendors": {
     "cisco_ios": {
@@ -48,6 +48,22 @@
     "mikrotik": {
       "platform_patterns": ["MikroTik", "RouterOS"],
       "textfsm_glob": "templates/textfsm/mikrotik/*.template"
+    },
+    "snr": {
+      "platform_patterns": ["SNR", "S3850", "SNR-S"],
+      "textfsm_glob": "templates/textfsm/snr/*.template"
+    },
+    "osnova": {
+      "platform_patterns": ["Firmware:", "Bootrom"],
+      "textfsm_glob": "templates/textfsm/osnova/*.template"
+    },
+    "zes": {
+      "platform_patterns": ["ssh-server enable", "info-center logfile", "Interface Ethernet"],
+      "textfsm_glob": "templates/textfsm/zes/*.template"
+    },
+    "nis": {
+      "platform_patterns": ["aggregation mode smac", "interface GigabitEthernet ", "radius-server deadtime"],
+      "textfsm_glob": "templates/textfsm/nis/*.template"
     }
   },
   "rules": {

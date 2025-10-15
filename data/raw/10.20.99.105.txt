@@ -1,73 +1,474 @@
 
 
-$ show running-config
-[ERROR executing command: 
-Pattern not detected: 'DEN\\-NSWS\\-02\\-99\\-105\\#' in output.
+$ show system information
 
-Things you might try to fix this:
-1. Explicitly set your pattern using the expect_string argument.
-2. Increase the read_timeout to a larger value.
+Hardware Version                  : 2v3
+Software Version                  : 10.3.6.13
+Firmware Version                  : 10.3.6.13
 
-You can also look at the Netmiko session_log or debug log for more information.
-
-]
-
-
-$ show version
-[ERROR executing command: 
-
-Pattern not detected: 'show\\ version' in output.
-
-Things you might try to fix this:
-1. Adjust the regex pattern to better identify the terminating string. Note, in
-many situations the pattern is automatically based on the network device's prompt.
-2. Increase the read_timeout to a larger value.
-
-You can also look at the Netmiko session_log or debug log for more information.
-
-]
+Hardware Serial Number            : ESC6001806
+Switch Base MAC Address           : cc:9d:a2:68:42:80
+Software Serial Number            : c71ff483
+System Contact                    : 
+System Name                       : DEN-NSWS-02-99-105
+System Location                   : 
+System Description                : MES2448B rev.B AC 52-port 1G/10G Managed Switch
+Logging Option                    : Flash Logging
+Device Uptime                     : 92 Days, 13 Hrs, 30 Mins, 59 Secs
+Login Authentication Mode         : Local
+Config Save Status                : Successful
+Remote Save Status                : Not Initiated
+Config Restore Status             : Not Initiated
+Traffic Separation Control        : none
 
 
-$ show cdp neighbors detail
-[ERROR executing command: 
-
-Pattern not detected: 'show\\ cdp\\ neighbors\\ detail' in output.
-
-Things you might try to fix this:
-1. Adjust the regex pattern to better identify the terminating string. Note, in
-many situations the pattern is automatically based on the network device's prompt.
-2. Increase the read_timeout to a larger value.
-
-You can also look at the Netmiko session_log or debug log for more information.
-
-]
 
 
 $ show lldp neighbors detail
-[ERROR executing command: 
+
+                
+
 
-Pattern not detected: 'show\\ lldp\\ neighbors\\ detail' in output.
+--More--
+                
+
 
-Things you might try to fix this:
-1. Adjust the regex pattern to better identify the terminating string. Note, in
-many situations the pattern is automatically based on the network device's prompt.
-2. Increase the read_timeout to a larger value.
+--More--
+                
+
 
-You can also look at the Netmiko session_log or debug log for more information.
+--More--
+                
+
 
-]
+--More--
+                
+
+Extended 802.3 TLV Info 
+-MAC PHY Configuration & Status
+100base-TX(FD)
+Symm PAUSE(FD)
+Asym and Symm PAUSE(FD)
+1000base-X, -LX, -SX, -CX(FD)
+-Link Aggregation
+Capability & Status           : Not Capable, Not In Aggregation
+Aggregated Port Id            : 0
+-Maximum Frame Size           : 0
+
+Extended 802.1 TLV Info 
+-Port VLAN Id                 : 1
+-Port & Protocol VLAN Id 
+Protocol Vlan Tlv             : Not Advertised
+-Vlan Name
+Vlan Name Tlv                 : Not Advertised
+
+-LLDP MED Capability TLV      : Not Advertised 
+Capabilities Supported        : 0 
+Capabilities Enabled          : 0 
+Device Class                  : 0 
 
 
-$ show interface status
-[ERROR executing command: 
 
-Pattern not detected: 'show\\ interface\\ status' in output.
+--More--
+                
+
 
-Things you might try to fix this:
-1. Adjust the regex pattern to better identify the terminating string. Note, in
-many situations the pattern is automatically based on the network device's prompt.
-2. Increase the read_timeout to a larger value.
+--More--
+                
+
 
-You can also look at the Netmiko session_log or debug log for more information.
+--More--
+                
+
 
-]
+--More--
+                
+
+
+--More--
+                
+-LLDP MED Inventory TLV       : Not Advertised
+
+-LLDP-MED Nw Policy TLV       : Not Advertised 
+
+-LLDP-MED Location Info TLV   : Not Advertised 
+
+-LLDP-MED Ex-PowerViaMDI TLV  : Not Advertised 
+------------------------------------------------------------
+
+Total Entries Displayed : 1
+[27m
+                       
+
+DEN-NSWS-02-99-105#neighbors detail
+
+% Invalid Command
+
+
+
+$ show vlan
+
+                
+
+
+--More--
+                
+
+
+--More--
+                
+
+
+--More--
+                
+
+
+--More--
+                
+                      gi 0/33, gi 0/38, gi 0/40, gi 0/42, gi 0/44, gi 0/47
+                      gi 0/48, te 0/1, te 0/2, te 0/3, te 0/4
+Untagged Ports      : None 
+Forbidden Ports     : None 
+Name                : Phone(Nerungry)
+Status              : Permanent
+Egress Ethertype    : 0x8100
+Service Loopback Status   : Disabled 
+----------------------------------------------------
+Vlan ID             : 17
+Member Ports        : gi 0/48, te 0/1, te 0/2, te 0/3, te 0/4
+Untagged Ports      : None 
+Forbidden Ports     : None 
+Name                : Transport
+Status              : Permanent
+Egress Ethertype    : 0x8100
+Service Loopback Status   : Disabled 
+----------------------------------------------------
+Vlan ID             : 30
+Member Ports        : gi 0/48, te 0/1
+Untagged Ports      : None 
+Forbidden Ports     : None 
+Name                : 
+Status              : Permanent
+
+
+--More--
+                
+
+
+--More--
+                
+
+
+--More--
+                
+
+
+--More--
+                
+
+
+--More--
+                
+Egress Ethertype    : 0x8100
+
+
+--More--
+
+
+$ show interfaces status
+
+                
+
+
+--More--
+                
+
+
+--More--
+                
+
+
+--More--
+                
+
+
+--More--
+                
+                      gi 0/21, gi 0/22, gi 0/23, gi 0/24, gi 0/25, gi 0/26
+                      gi 0/27, gi 0/28, gi 0/29, gi 0/30, gi 0/31, gi 0/32
+                      gi 0/33, gi 0/37, gi 0/38, gi 0/39, gi 0/40, gi 0/41
+                      gi 0/42, gi 0/43, gi 0/44, gi 0/45, gi 0/46, gi 0/47
+Forbidden Ports     : None 
+Name                : Users(Nerungry)
+Status              : Permanent
+Egress Ethertype    : 0x8100
+Service Loopback Status   : Disabled 
+----------------------------------------------------
+Vlan ID             : 41
+Member Ports        : gi 0/48, te 0/1, te 0/2, te 0/3, te 0/4
+Untagged Ports      : None 
+Forbidden Ports     : None 
+Name                : Printers(Nerungry)
+Status              : Permanent
+Egress Ethertype    : 0x8100
+Service Loopback Status   : Disabled 
+----------------------------------------------------
+Vlan ID             : 1240
+Member Ports        : gi 0/14, gi 0/34, gi 0/35, gi 0/36, gi 0/48, te 0/1
+Untagged Ports      : gi 0/14, gi 0/34, gi 0/35, gi 0/36
+Forbidden Ports     : None 
+Name                : Admins
+
+
+--More--
+                
+
+
+--More--
+                
+
+
+--More--
+                
+
+
+--More--
+                
+
+
+--More--
+                
+
+
+--More--
+                
+
+
+--More--
+                
+
+
+--More--
+                
+
+
+--More--
+                
+
+
+--More--
+                
+
+
+--More--
+                
+Status              : Permanent
+Egress Ethertype    : 0x8100
+Service Loopback Status   : Disabled 
+----------------------------------------------------
+Vlan ID             : 1440
+Member Ports        : te 0/1
+Untagged Ports      : None 
+Forbidden Ports     : None 
+Name                : VKS
+Status              : Permanent
+Egress Ethertype    : 0x8100
+Service Loopback Status   : Disabled 
+----------------------------------------------------
+Vlan ID             : 2001
+Member Ports        : gi 0/7, gi 0/48, te 0/1
+Untagged Ports      : gi 0/7
+Forbidden Ports     : None 
+Name                : Users(Endi)
+Status              : Permanent
+Egress Ethertype    : 0x8100
+Service Loopback Status   : Disabled 
+----------------------------------------------------
+Vlan ID             : 3040
+Member Ports        : gi 0/48, te 0/1
+
+
+--More--
+                
+
+
+--More--
+                
+
+
+--More--
+                
+
+
+--More--
+                
+
+
+--More--
+                
+
+
+--More--
+                
+
+
+--More--
+                
+Untagged Ports      : None 
+
+
+--More--
+
+
+$ show interfaces
+
+                
+
+
+--More--
+                
+
+
+--More--
+                
+
+
+--More--
+                
+
+
+--More--
+                
+Untagged Ports      : None 
+Forbidden Ports     : None 
+Name                : Wi-Fi_Den_Staff
+Status              : Permanent
+Egress Ethertype    : 0x8100
+Service Loopback Status   : Disabled 
+----------------------------------------------------
+Vlan ID             : 3440
+Member Ports        : gi 0/48, te 0/1
+Untagged Ports      : None 
+Forbidden Ports     : None 
+Name                : Wi-Fi_General
+Status              : Permanent
+Egress Ethertype    : 0x8100
+Service Loopback Status   : Disabled 
+----------------------------------------------------
+
+[27m
+                       
+
+DEN-NSWS-02-99-105#interfaces
+
+% Invalid Command
+
+
+
+$ show running-config
+
+                
+
+
+--More--
+                
+
+
+--More--
+                
+
+
+--More--
+                
+
+
+--More--
+                
+logging-server facility local0 severity errors ipv4 10.10.0.142 port 5014
+logging-server facility local0 severity warnings ipv4 10.10.0.142 port 5014
+logging-server facility local0 severity notification ipv4 10.10.0.142 port 5014
+logging-server facility local0 severity informational ipv4 10.10.0.142 port 5014
+!
+vlan 13,17,30-34,40-41,1240,1440,2001,3040,3140,3240,3340,3440
+  vlan active
+!                      
+set lldp enable
+!
+radius-server host 10.10.0.210 timeout 5 key encrypted qOzM/0zDoUP2k3P672Uz7Q== primary
+radius-server host 10.10.0.212 timeout 5 key encrypted qOzM/0zDoUP2k3P672Uz7Q==
+!
+username sib_uib password encrypted OTl653mxxwDsJJPczavzcQ== privilege 15  
+username volodin_s password encrypted EnRFlIo7gtBTjF6wrwtAzQ== privilege 15  
+username zhiltsov_a password encrypted KFif9+pKXWb2ZGDs19fowLwWpY80c995 privilege 15  
+username ivashenko_vb password encrypted ugP9QrpkPzxRxqq861YAOccx21jObESe privilege 15  
+enable password level 15 encrypted RlIc0PuA+TbvViNdvPvB3A==  
+!
+snmp user ReadUser
+snmp user WriteUser
+snmp community index 1 name encrypted EQn5sbCUAOw= security WriteUser
+snmp community index 2 name encrypted O3oDUaq4qkM= security ReadUser
+snmp group ReadGroup user ReadUser security-model v2c
+
+
+--More--
+                
+
+
+--More--
+                
+
+
+--More--
+                
+
+
+--More--
+                
+
+
+--More--
+                
+
+
+--More--
+                
+
+
+--More--
+                
+
+
+--More--
+                
+
+
+--More--
+                
+
+
+--More--
+                
+
+
+--More--
+                
+
+
+--More--
+                
+
+
+--More--
+                
+
+
+--More--
+                
+
+
+--More--
+                
+snmp group WriteGroup user WriteUser security-model v2c
+
+
+--More--

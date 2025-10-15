@@ -1,71 +1,777 @@
 
 
-$ show running-config
-[ERROR executing command: 
-Pattern not detected: '\x1b\\[KINA\\-NSWS\\-54\\-99\\-96\\#' in output.
-
-Things you might try to fix this:
-1. Explicitly set your pattern using the expect_string argument.
-2. Increase the read_timeout to a larger value.
-
-You can also look at the Netmiko session_log or debug log for more information.
-
-]
-
-
-$ show version
-[ERROR executing command: 
-
-Pattern not detected: 'show\\ version' in output.
-
-Things you might try to fix this:
-1. Adjust the regex pattern to better identify the terminating string. Note, in
-many situations the pattern is automatically based on the network device's prompt.
-2. Increase the read_timeout to a larger value.
-
-You can also look at the Netmiko session_log or debug log for more information.
-
-]
-
-
-$ show cdp neighbors detail
-[ERROR executing command: 
-
-Pattern not detected: 'show\\ cdp\\ neighbors\\ detail' in output.
-
-Things you might try to fix this:
-1. Adjust the regex pattern to better identify the terminating string. Note, in
-many situations the pattern is automatically based on the network device's prompt.
-2. Increase the read_timeout to a larger value.
-
-You can also look at the Netmiko session_log or debug log for more information.
-
-]
+$ show system information
+% Wrong number of parameters or invalid range, size or characters entered
 
 
 $ show lldp neighbors detail
-[ERROR executing command: 
-Pattern not detected: '\x1b\\[KINA\\-NSWS\\-54\\-99\\-96\\#' in output.
-
-Things you might try to fix this:
-1. Explicitly set your pattern using the expect_string argument.
-2. Increase the read_timeout to a larger value.
-
-You can also look at the Netmiko session_log or debug log for more information.
-
-]
+Port: gi1/0/24
+Device ID: 68:13:e2:a0:78:c0
+Port ID: gi1/0/47
+Capabilities: Other
+System Name: 
+System description: 
+Port description: 
+Time To Live: 109
 
 
-$ show interface status
-[ERROR executing command: 
+802.3 EEE:
 
-Pattern not detected: 'show\\ interface\\ status' in output.
+   Remote Tx:         17 uSec
+   Remote Rx:         17 uSec
+   Remote Tx Echo:    17 uSec
+   Remote Rx Echo:    17 uSec
 
-Things you might try to fix this:
-1. Adjust the regex pattern to better identify the terminating string. Note, in
-many situations the pattern is automatically based on the network device's prompt.
-2. Increase the read_timeout to a larger value.
 
-You can also look at the Netmiko session_log or debug log for more information.
+802.1 PVID: None
+802.1 PPVID: 
+802.1 VLAN:
+802.1 Protocol: 
 
-]
+
+
+
+----------------------------------------------------------------------------------
+
+
+
+$ show vlan
+Vlan mode: Basic
+Created by: D-Default, S-Static, G-GVRP, R-Radius Assigned VLAN, V-Voice VLAN
+
+Vlan       Name           Tagged Ports      UnTagged Ports      Created by    
+---- ----------------- ------------------ ------------------ ---------------- 
+ 1           -                                gi1/0/24,             D         
+                                           te1/0/1-4,Po1-48                   
+ 17      Transport          gi1/0/24                                S         
+730   Video-SB-Inagl        gi1/0/24          gi1/0/1-23            S         
+
+
+
+$ show interfaces status
+                                             Flow Link           Uptime       Back   Mdix                            
+Port     Type         Duplex  Speed Neg      ctrl State         (d,h:m:s)   Pressure Mode    Port Mode (VLAN)        
+-------- ------------ ------  ----- -------- ---- ----------- ------------- -------- ------- ------------------------
+gi1/0/1  1G-Copper    Full    100   Enabled  Off  Up          154,07:02:07  Disabled On      Access (730)            
+gi1/0/2  1G-Copper    Full    100   Enabled  Off  Up          154,07:02:11  Disabled On      Access (730)            
+gi1/0/3  1G-Copper    Full    100   Enabled  Off  Up          12,04:08:24   Disabled On      Access (730)            
+gi1/0/4  1G-Copper    Full    100   Enabled  Off  Up          154,07:00:51  Disabled Off     Access (730)            
+gi1/0/5  1G-Copper    Full    100   Enabled  Off  Up          14,07:41:30   Disabled On      Access (730)            
+gi1/0/6  1G-Copper      --      --     --     --  Down (nc)         --         --     --     Access (730)            
+gi1/0/7  1G-Copper    Full    100   Enabled  Off  Up          154,06:57:56  Disabled On      Access (730)            
+gi1/0/8  1G-Copper      --      --     --     --  Down (nc)         --         --     --     Access (730)            
+gi1/0/9  1G-Copper    Full    100   Enabled  Off  Up          154,07:07:55  Disabled Off     Access (730)            
+gi1/0/10 1G-Copper    Full    100   Enabled  Off  Up          154,07:07:55  Disabled On      Access (730)            
+gi1/0/11 1G-Copper    Full    100   Enabled  Off  Up          154,07:07:54  Disabled Off     Access (730)            
+gi1/0/12 1G-Copper    Full    1000  Enabled  Off  Up          154,07:08:40  Disabled On      Access (730)            
+gi1/0/13 1G-Copper      --      --     --     --  Down (nc)         --         --     --     Access (730)            
+gi1/0/14 1G-Copper      --      --     --     --  Down (nc)         --         --     --     Access (730)            
+gi1/0/15 1G-Copper      --      --     --     --  Down (nc)         --         --     --     Access (730)            
+gi1/0/16 1G-Copper      --      --     --     --  Down (nc)         --         --     --     Access (730)            
+gi1/0/17 1G-Copper      --      --     --     --  Down (nc)         --         --     --     Access (730)            
+gi1/0/18 1G-Copper      --      --     --     --  Down (nc)         --         --     --     Access (730)            
+gi1/0/19 1G-Copper      --      --     --     --  Down (nc)         --         --     --     Access (730)            
+gi1/0/20 1G-Copper      --      --     --     --  Down (nc)         --         --     --     Access (730)            
+gi1/0/21 1G-Copper      --      --     --     --  Down (nc)         --         --     --     Access (730)            
+gi1/0/22 1G-Copper      --      --     --     --  Down (nc)         --         --     --     Access (730)            
+gi1/0/23 1G-Copper      --      --     --     --  Down (nc)         --         --     --     Access (730)            
+gi1/0/24 1G-Copper    Full    1000  Enabled  Off  Up          79,02:13:19   Disabled Off     General                 
+te1/0/1  10G-Fiber      --      --     --     --  Down (nc)         --         --     --     Access (1)              
+te1/0/2  10G-Fiber      --      --     --     --  Down (nc)         --         --     --     Access (1)              
+te1/0/3  10G-Fiber      --      --     --     --  Down (nc)         --         --     --     Access (1)              
+te1/0/4  10G-Fiber      --      --     --     --  Down (nc)         --         --     --     Access (1)              
+
+                                          Flow    Link                                  
+Ch       Type    Duplex  Speed  Neg      control  State         Port Mode (VLAN)        
+-------- ------- ------  -----  -------- -------  ------------- ------------------------
+Po1         --     --      --      --       --    Not Present   Access (1)              
+Po2         --     --      --      --       --    Not Present   Access (1)              
+Po3         --     --      --      --       --    Not Present   Access (1)              
+Po4         --     --      --      --       --    Not Present   Access (1)              
+Po5         --     --      --      --       --    Not Present   Access (1)              
+Po6         --     --      --      --       --    Not Present   Access (1)              
+Po7         --     --      --      --       --    Not Present   Access (1)              
+Po8         --     --      --      --       --    Not Present   Access (1)              
+Po9         --     --      --      --       --    Not Present   Access (1)              
+Po10        --     --      --      --       --    Not Present   Access (1)              
+Po11        --     --      --      --       --    Not Present   Access (1)              
+Po12        --     --      --      --       --    Not Present   Access (1)              
+Po13        --     --      --      --       --    Not Present   Access (1)              
+Po14        --     --      --      --       --    Not Present   Access (1)              
+Po15        --     --      --      --       --    Not Present   Access (1)              
+Po16        --     --      --      --       --    Not Present   Access (1)              
+Po17        --     --      --      --       --    Not Present   Access (1)              
+Po18        --     --      --      --       --    Not Present   Access (1)              
+Po19        --     --      --      --       --    Not Present   Access (1)              
+Po20        --     --      --      --       --    Not Present   Access (1)              
+Po21        --     --      --      --       --    Not Present   Access (1)              
+Po22        --     --      --      --       --    Not Present   Access (1)              
+Po23        --     --      --      --       --    Not Present   Access (1)              
+Po24        --     --      --      --       --    Not Present   Access (1)              
+Po25        --     --      --      --       --    Not Present   Access (1)              
+Po26        --     --      --      --       --    Not Present   Access (1)              
+Po27        --     --      --      --       --    Not Present   Access (1)              
+Po28        --     --      --      --       --    Not Present   Access (1)              
+Po29        --     --      --      --       --    Not Present   Access (1)              
+Po30        --     --      --      --       --    Not Present   Access (1)              
+Po31        --     --      --      --       --    Not Present   Access (1)              
+Po32        --     --      --      --       --    Not Present   Access (1)              
+Po33        --     --      --      --       --    Not Present   Access (1)              
+Po34        --     --      --      --       --    Not Present   Access (1)              
+Po35        --     --      --      --       --    Not Present   Access (1)              
+Po36        --     --      --      --       --    Not Present   Access (1)              
+Po37        --     --      --      --       --    Not Present   Access (1)              
+Po38        --     --      --      --       --    Not Present   Access (1)              
+Po39        --     --      --      --       --    Not Present   Access (1)              
+Po40        --     --      --      --       --    Not Present   Access (1)              
+Po41        --     --      --      --       --    Not Present   Access (1)              
+Po42        --     --      --      --       --    Not Present   Access (1)              
+Po43        --     --      --      --       --    Not Present   Access (1)              
+Po44        --     --      --      --       --    Not Present   Access (1)              
+Po45        --     --      --      --       --    Not Present   Access (1)              
+Po46        --     --      --      --       --    Not Present   Access (1)              
+Po47        --     --      --      --       --    Not Present   Access (1)              
+Po48        --     --      --      --       --    Not Present   Access (1)              
+
+nc (not connected): The interface is not connected.
+err (error-disabled): The interface was suspended by the system.
+adm (admin.shutdown): The interface was suspended by administrator.
+
+
+
+$ show interfaces
+
+  Interface index is 1021
+  Hardware is aggregated ethernet interface(s), MAC address is 68:13:e2:ae:fe:c0
+  Interface MTU is 1500
+  15 second input rate is 0 Kbit/s
+  15 second output rate is 0 Kbit/s
+      0 packets input, 0 bytes received
+      0 broadcasts, 0 multicasts
+      0 input errors, 0 FCS, 0 alignment
+      0 oversize, 0 internal MAC
+      0 pause frames received
+      0 packets output, 0 bytes sent
+      0 broadcasts, 0 multicasts
+      0 output errors, 0 collisions
+      0 excessive collisions, 0 late collisions
+      0 pause frames transmitted
+      0 symbol errors, 0 carrier, 0 SQE test error
+------------------ show interfaces Po23 ------------------
+Po23 is down (not connected)
+  Interface index is 1022
+  Hardware is aggregated ethernet interface(s), MAC address is 68:13:e2:ae:fe:c0
+  Interface MTU is 1500
+  15 second input rate is 0 Kbit/s
+  15 second output rate is 0 Kbit/s
+      0 packets input, 0 bytes received
+      0 broadcasts, 0 multicasts
+      0 input errors, 0 FCS, 0 alignment
+      0 oversize, 0 internal MAC
+      0 pause frames received
+      0 packets output, 0 bytes sent
+      0 broadcasts, 0 multicasts
+      0 output errors, 0 collisions
+      0 excessive collisions, 0 late collisions
+      0 pause frames transmitted
+      0 symbol errors, 0 carrier, 0 SQE test error
+------------------ show interfaces Po24 ------------------
+Po24 is down (not connected)
+  Interface index is 1023
+  Hardware is aggregated ethernet interface(s), MAC address is 68:13:e2:ae:fe:c0
+  Interface MTU is 1500
+  15 second input rate is 0 Kbit/s
+  15 second output rate is 0 Kbit/s
+      0 packets input, 0 bytes received
+      0 broadcasts, 0 multicasts
+      0 input errors, 0 FCS, 0 alignment
+      0 oversize, 0 internal MAC
+      0 pause frames received
+      0 packets output, 0 bytes sent
+      0 broadcasts, 0 multicasts
+      0 output errors, 0 collisions
+      0 excessive collisions, 0 late collisions
+      0 pause frames transmitted
+      0 symbol errors, 0 carrier, 0 SQE test error
+------------------ show interfaces Po25 ------------------
+Po25 is down (not connected)
+  Interface index is 1024
+  Hardware is aggregated ethernet interface(s), MAC address is 68:13:e2:ae:fe:c0
+  Interface MTU is 1500
+  15 second input rate is 0 Kbit/s
+  15 second output rate is 0 Kbit/s
+      0 packets input, 0 bytes received
+      0 broadcasts, 0 multicasts
+      0 input errors, 0 FCS, 0 alignment
+      0 oversize, 0 internal MAC
+      0 pause frames received
+      0 packets output, 0 bytes sent
+      0 broadcasts, 0 multicasts
+      0 output errors, 0 collisions
+      0 excessive collisions, 0 late collisions
+      0 pause frames transmitted
+      0 symbol errors, 0 carrier, 0 SQE test error
+------------------ show interfaces Po26 ------------------
+Po26 is down (not connected)
+  Interface index is 1025
+  Hardware is aggregated ethernet interface(s), MAC address is 68:13:e2:ae:fe:c0
+  Interface MTU is 1500
+  15 second input rate is 0 Kbit/s
+  15 second output rate is 0 Kbit/s
+      0 packets input, 0 bytes received
+      0 broadcasts, 0 multicasts
+      0 input errors, 0 FCS, 0 alignment
+      0 oversize, 0 internal MAC
+      0 pause frames received
+      0 packets output, 0 bytes sent
+      0 broadcasts, 0 multicasts
+      0 output errors, 0 collisions
+      0 excessive collisions, 0 late collisions
+      0 pause frames transmitted
+      0 symbol errors, 0 carrier, 0 SQE test error
+------------------ show interfaces Po27 ------------------
+Po27 is down (not connected)
+  Interface index is 1026
+  Hardware is aggregated ethernet interface(s), MAC address is 68:13:e2:ae:fe:c0
+  Interface MTU is 1500
+  15 second input rate is 0 Kbit/s
+  15 second output rate is 0 Kbit/s
+      0 packets input, 0 bytes received
+      0 broadcasts, 0 multicasts
+      0 input errors, 0 FCS, 0 alignment
+      0 oversize, 0 internal MAC
+      0 pause frames received
+      0 packets output, 0 bytes sent
+      0 broadcasts, 0 multicasts
+      0 output errors, 0 collisions
+      0 excessive collisions, 0 late collisions
+      0 pause frames transmitted
+      0 symbol errors, 0 carrier, 0 SQE test error
+------------------ show interfaces Po28 ------------------
+Po28 is down (not connected)
+  Interface index is 1027
+  Hardware is aggregated ethernet interface(s), MAC address is 68:13:e2:ae:fe:c0
+  Interface MTU is 1500
+  15 second input rate is 0 Kbit/s
+  15 second output rate is 0 Kbit/s
+      0 packets input, 0 bytes received
+      0 broadcasts, 0 multicasts
+      0 input errors, 0 FCS, 0 alignment
+      0 oversize, 0 internal MAC
+      0 pause frames received
+      0 packets output, 0 bytes sent
+      0 broadcasts, 0 multicasts
+      0 output errors, 0 collisions
+      0 excessive collisions, 0 late collisions
+      0 pause frames transmitted
+      0 symbol errors, 0 carrier, 0 SQE test error
+------------------ show interfaces Po29 ------------------
+Po29 is down (not connected)
+  Interface index is 1028
+  Hardware is aggregated ethernet interface(s), MAC address is 68:13:e2:ae:fe:c0
+  Interface MTU is 1500
+  15 second input rate is 0 Kbit/s
+  15 second output rate is 0 Kbit/s
+      0 packets input, 0 bytes received
+      0 broadcasts, 0 multicasts
+      0 input errors, 0 FCS, 0 alignment
+      0 oversize, 0 internal MAC
+      0 pause frames received
+      0 packets output, 0 bytes sent
+      0 broadcasts, 0 multicasts
+      0 output errors, 0 collisions
+      0 excessive collisions, 0 late collisions
+      0 pause frames transmitted
+      0 symbol errors, 0 carrier, 0 SQE test error
+------------------ show interfaces Po30 ------------------
+Po30 is down (not connected)
+  Interface index is 1029
+  Hardware is aggregated ethernet interface(s), MAC address is 68:13:e2:ae:fe:c0
+  Interface MTU is 1500
+  15 second input rate is 0 Kbit/s
+  15 second output rate is 0 Kbit/s
+      0 packets input, 0 bytes received
+      0 broadcasts, 0 multicasts
+      0 input errors, 0 FCS, 0 alignment
+      0 oversize, 0 internal MAC
+      0 pause frames received
+      0 packets output, 0 bytes sent
+      0 broadcasts, 0 multicasts
+      0 output errors, 0 collisions
+      0 excessive collisions, 0 late collisions
+      0 pause frames transmitted
+      0 symbol errors, 0 carrier, 0 SQE test error
+------------------ show interfaces Po31 ------------------
+Po31 is down (not connected)
+  Interface index is 1030
+  Hardware is aggregated ethernet interface(s), MAC address is 68:13:e2:ae:fe:c0
+  Interface MTU is 1500
+  15 second input rate is 0 Kbit/s
+  15 second output rate is 0 Kbit/s
+      0 packets input, 0 bytes received
+      0 broadcasts, 0 multicasts
+      0 input errors, 0 FCS, 0 alignment
+      0 oversize, 0 internal MAC
+      0 pause frames received
+      0 packets output, 0 bytes sent
+      0 broadcasts, 0 multicasts
+      0 output errors, 0 collisions
+      0 excessive collisions, 0 late collisions
+      0 pause frames transmitted
+      0 symbol errors, 0 carrier, 0 SQE test error
+------------------ show interfaces Po32 ------------------
+Po32 is down (not connected)
+  Interface index is 1031
+  Hardware is aggregated ethernet interface(s), MAC address is 68:13:e2:ae:fe:c0
+  Interface MTU is 1500
+  15 second input rate is 0 Kbit/s
+  15 second output rate is 0 Kbit/s
+      0 packets input, 0 bytes received
+      0 broadcasts, 0 multicasts
+      0 input errors, 0 FCS, 0 alignment
+      0 oversize, 0 internal MAC
+      0 pause frames received
+      0 packets output, 0 bytes sent
+      0 broadcasts, 0 multicasts
+      0 output errors, 0 collisions
+      0 excessive collisions, 0 late collisions
+      0 pause frames transmitted
+      0 symbol errors, 0 carrier, 0 SQE test error
+------------------ show interfaces Po33 ------------------
+Po33 is down (not connected)
+  Interface index is 1032
+  Hardware is aggregated ethernet interface(s), MAC address is 68:13:e2:ae:fe:c0
+  Interface MTU is 1500
+  15 second input rate is 0 Kbit/s
+  15 second output rate is 0 Kbit/s
+      0 packets input, 0 bytes received
+      0 broadcasts, 0 multicasts
+      0 input errors, 0 FCS, 0 alignment
+      0 oversize, 0 internal MAC
+      0 pause frames received
+      0 packets output, 0 bytes sent
+      0 broadcasts, 0 multicasts
+      0 output errors, 0 collisions
+      0 excessive collisions, 0 late collisions
+      0 pause frames transmitted
+      0 symbol errors, 0 carrier, 0 SQE test error
+------------------ show interfaces Po34 ------------------
+Po34 is down (not connected)
+  Interface index is 1033
+  Hardware is aggregated ethernet interface(s), MAC address is 68:13:e2:ae:fe:c0
+  Interface MTU is 1500
+  15 second input rate is 0 Kbit/s
+  15 second output rate is 0 Kbit/s
+      0 packets input, 0 bytes received
+      0 broadcasts, 0 multicasts
+      0 input errors, 0 FCS, 0 alignment
+      0 oversize, 0 internal MAC
+      0 pause frames received
+      0 packets output, 0 bytes sent
+      0 broadcasts, 0 multicasts
+      0 output errors, 0 collisions
+      0 excessive collisions, 0 late collisions
+      0 pause frames transmitted
+      0 symbol errors, 0 carrier, 0 SQE test error
+------------------ show interfaces Po35 ------------------
+Po35 is down (not connected)
+  Interface index is 1034
+  Hardware is aggregated ethernet interface(s), MAC address is 68:13:e2:ae:fe:c0
+  Interface MTU is 1500
+  15 second input rate is 0 Kbit/s
+  15 second output rate is 0 Kbit/s
+      0 packets input, 0 bytes received
+      0 broadcasts, 0 multicasts
+      0 input errors, 0 FCS, 0 alignment
+      0 oversize, 0 internal MAC
+      0 pause frames received
+      0 packets output, 0 bytes sent
+      0 broadcasts, 0 multicasts
+      0 output errors, 0 collisions
+      0 excessive collisions, 0 late collisions
+      0 pause frames transmitted
+      0 symbol errors, 0 carrier, 0 SQE test error
+------------------ show interfaces Po36 ------------------
+Po36 is down (not connected)
+  Interface index is 1035
+  Hardware is aggregated ethernet interface(s), MAC address is 68:13:e2:ae:fe:c0
+  Interface MTU is 1500
+  15 second input rate is 0 Kbit/s
+  15 second output rate is 0 Kbit/s
+      0 packets input, 0 bytes received
+      0 broadcasts, 0 multicasts
+      0 input errors, 0 FCS, 0 alignment
+      0 oversize, 0 internal MAC
+      0 pause frames received
+      0 packets output, 0 bytes sent
+      0 broadcasts, 0 multicasts
+      0 output errors, 0 collisions
+      0 excessive collisions, 0 late collisions
+      0 pause frames transmitted
+      0 symbol errors, 0 carrier, 0 SQE test error
+------------------ show interfaces Po37 ------------------
+Po37 is down (not connected)
+  Interface index is 1036
+  Hardware is aggregated ethernet interface(s), MAC address is 68:13:e2:ae:fe:c0
+  Interface MTU is 1500
+  15 second input rate is 0 Kbit/s
+  15 second output rate is 0 Kbit/s
+      0 packets input, 0 bytes received
+      0 broadcasts, 0 multicasts
+      0 input errors, 0 FCS, 0 alignment
+      0 oversize, 0 internal MAC
+      0 pause frames received
+      0 packets output, 0 bytes sent
+      0 broadcasts, 0 multicasts
+      0 output errors, 0 collisions
+      0 excessive collisions, 0 late collisions
+      0 pause frames transmitted
+      0 symbol errors, 0 carrier, 0 SQE test error
+------------------ show interfaces Po38 ------------------
+Po38 is down (not connected)
+  Interface index is 1037
+  Hardware is aggregated ethernet interface(s), MAC address is 68:13:e2:ae:fe:c0
+  Interface MTU is 1500
+  15 second input rate is 0 Kbit/s
+  15 second output rate is 0 Kbit/s
+      0 packets input, 0 bytes received
+      0 broadcasts, 0 multicasts
+      0 input errors, 0 FCS, 0 alignment
+      0 oversize, 0 internal MAC
+      0 pause frames received
+      0 packets output, 0 bytes sent
+      0 broadcasts, 0 multicasts
+      0 output errors, 0 collisions
+      0 excessive collisions, 0 late collisions
+      0 pause frames transmitted
+      0 symbol errors, 0 carrier, 0 SQE test error
+------------------ show interfaces Po39 ------------------
+Po39 is down (not connected)
+  Interface index is 1038
+  Hardware is aggregated ethernet interface(s), MAC address is 68:13:e2:ae:fe:c0
+  Interface MTU is 1500
+  15 second input rate is 0 Kbit/s
+  15 second output rate is 0 Kbit/s
+      0 packets input, 0 bytes received
+      0 broadcasts, 0 multicasts
+      0 input errors, 0 FCS, 0 alignment
+      0 oversize, 0 internal MAC
+      0 pause frames received
+      0 packets output, 0 bytes sent
+      0 broadcasts, 0 multicasts
+      0 output errors, 0 collisions
+      0 excessive collisions, 0 late collisions
+      0 pause frames transmitted
+      0 symbol errors, 0 carrier, 0 SQE test error
+------------------ show interfaces Po40 ------------------
+Po40 is down (not connected)
+  Interface index is 1039
+  Hardware is aggregated ethernet interface(s), MAC address is 68:13:e2:ae:fe:c0
+  Interface MTU is 1500
+  15 second input rate is 0 Kbit/s
+  15 second output rate is 0 Kbit/s
+      0 packets input, 0 bytes received
+      0 broadcasts, 0 multicasts
+      0 input errors, 0 FCS, 0 alignment
+      0 oversize, 0 internal MAC
+      0 pause frames received
+      0 packets output, 0 bytes sent
+      0 broadcasts, 0 multicasts
+      0 output errors, 0 collisions
+      0 excessive collisions, 0 late collisions
+      0 pause frames transmitted
+      0 symbol errors, 0 carrier, 0 SQE test error
+------------------ show interfaces Po41 ------------------
+Po41 is down (not connected)
+  Interface index is 1040
+  Hardware is aggregated ethernet interface(s), MAC address is 68:13:e2:ae:fe:c0
+  Interface MTU is 1500
+  15 second input rate is 0 Kbit/s
+  15 second output rate is 0 Kbit/s
+      0 packets input, 0 bytes received
+      0 broadcasts, 0 multicasts
+      0 input errors, 0 FCS, 0 alignment
+      0 oversize, 0 internal MAC
+      0 pause frames received
+      0 packets output, 0 bytes sent
+      0 broadcasts, 0 multicasts
+      0 output errors, 0 collisions
+      0 excessive collisions, 0 late collisions
+      0 pause frames transmitted
+      0 symbol errors, 0 carrier, 0 SQE test error
+------------------ show interfaces Po42 ------------------
+Po42 is down (not connected)
+  Interface index is 1041
+  Hardware is aggregated ethernet interface(s), MAC address is 68:13:e2:ae:fe:c0
+  Interface MTU is 1500
+  15 second input rate is 0 Kbit/s
+  15 second output rate is 0 Kbit/s
+      0 packets input, 0 bytes received
+      0 broadcasts, 0 multicasts
+      0 input errors, 0 FCS, 0 alignment
+      0 oversize, 0 internal MAC
+      0 pause frames received
+      0 packets output, 0 bytes sent
+      0 broadcasts, 0 multicasts
+      0 output errors, 0 collisions
+      0 excessive collisions, 0 late collisions
+      0 pause frames transmitted
+      0 symbol errors, 0 carrier, 0 SQE test error
+------------------ show interfaces Po43 ------------------
+Po43 is down (not connected)
+  Interface index is 1042
+  Hardware is aggregated ethernet interface(s), MAC address is 68:13:e2:ae:fe:c0
+  Interface MTU is 1500
+  15 second input rate is 0 Kbit/s
+  15 second output rate is 0 Kbit/s
+      0 packets input, 0 bytes received
+      0 broadcasts, 0 multicasts
+      0 input errors, 0 FCS, 0 alignment
+      0 oversize, 0 internal MAC
+      0 pause frames received
+      0 packets output, 0 bytes sent
+      0 broadcasts, 0 multicasts
+      0 output errors, 0 collisions
+      0 excessive collisions, 0 late collisions
+      0 pause frames transmitted
+      0 symbol errors, 0 carrier, 0 SQE test error
+------------------ show interfaces Po44 ------------------
+Po44 is down (not connected)
+  Interface index is 1043
+  Hardware is aggregated ethernet interface(s), MAC address is 68:13:e2:ae:fe:c0
+  Interface MTU is 1500
+  15 second input rate is 0 Kbit/s
+  15 second output rate is 0 Kbit/s
+      0 packets input, 0 bytes received
+      0 broadcasts, 0 multicasts
+      0 input errors, 0 FCS, 0 alignment
+      0 oversize, 0 internal MAC
+      0 pause frames received
+      0 packets output, 0 bytes sent
+      0 broadcasts, 0 multicasts
+      0 output errors, 0 collisions
+      0 excessive collisions, 0 late collisions
+      0 pause frames transmitted
+      0 symbol errors, 0 carrier, 0 SQE test error
+------------------ show interfaces Po45 ------------------
+Po45 is down (not connected)
+  Interface index is 1044
+  Hardware is aggregated ethernet interface(s), MAC address is 68:13:e2:ae:fe:c0
+  Interface MTU is 1500
+  15 second input rate is 0 Kbit/s
+  15 second output rate is 0 Kbit/s
+      0 packets input, 0 bytes received
+      0 broadcasts, 0 multicasts
+      0 input errors, 0 FCS, 0 alignment
+      0 oversize, 0 internal MAC
+      0 pause frames received
+      0 packets output, 0 bytes sent
+      0 broadcasts, 0 multicasts
+      0 output errors, 0 collisions
+      0 excessive collisions, 0 late collisions
+      0 pause frames transmitted
+      0 symbol errors, 0 carrier, 0 SQE test error
+------------------ show interfaces Po46 ------------------
+Po46 is down (not connected)
+  Interface index is 1045
+  Hardware is aggregated ethernet interface(s), MAC address is 68:13:e2:ae:fe:c0
+  Interface MTU is 1500
+  15 second input rate is 0 Kbit/s
+  15 second output rate is 0 Kbit/s
+      0 packets input, 0 bytes received
+      0 broadcasts, 0 multicasts
+      0 input errors, 0 FCS, 0 alignment
+      0 oversize, 0 internal MAC
+      0 pause frames received
+      0 packets output, 0 bytes sent
+      0 broadcasts, 0 multicasts
+      0 output errors, 0 collisions
+      0 excessive collisions, 0 late collisions
+      0 pause frames transmitted
+      0 symbol errors, 0 carrier, 0 SQE test error
+------------------ show interfaces Po47 ------------------
+Po47 is down (not connected)
+  Interface index is 1046
+  Hardware is aggregated ethernet interface(s), MAC address is 68:13:e2:ae:fe:c0
+  Interface MTU is 1500
+  15 second input rate is 0 Kbit/s
+  15 second output rate is 0 Kbit/s
+      0 packets input, 0 bytes received
+      0 broadcasts, 0 multicasts
+      0 input errors, 0 FCS, 0 alignment
+      0 oversize, 0 internal MAC
+      0 pause frames received
+      0 packets output, 0 bytes sent
+      0 broadcasts, 0 multicasts
+      0 output errors, 0 collisions
+      0 excessive collisions, 0 late collisions
+      0 pause frames transmitted
+      0 symbol errors, 0 carrier, 0 SQE test error
+------------------ show interfaces Po48 ------------------
+Po48 is down (not connected)
+  Interface index is 1047
+  Hardware is aggregated ethernet interface(s), MAC address is 68:13:e2:ae:fe:c0
+  Interface MTU is 1500
+  15 second input rate is 0 Kbit/s
+  15 second output rate is 0 Kbit/s
+      0 packets input, 0 bytes received
+      0 broadcasts, 0 multicasts
+      0 input errors, 0 FCS, 0 alignment
+      0 oversize, 0 internal MAC
+      0 pause frames received
+      0 packets output, 0 bytes sent
+      0 broadcasts, 0 multicasts
+      0 output errors, 0 collisions
+      0 excessive collisions, 0 late collisions
+      0 pause frames transmitted
+      0 symbol errors, 0 carrier, 0 SQE test error
+INA-NSWS-54-99-96#faces
+% Unrecognized command
+
+
+$ show running-config
+vlan database
+ vlan 17,730
+exit
+!
+hostname INA-NSWS-54-99-96
+!
+encrypted radius-server host 10.10.0.210 timeout 5 key ApxBsOJ+tftE4JltMBA1NypstRcvMUIMBGDhMJg3DZ8=
+encrypted radius-server host 10.10.0.212 timeout 5 key ApxBsOJ+tftE4JltMBA1NypstRcvMUIMBGDhMJg3DZ8=
+!
+logging host 10.10.0.142 port 5014
+!
+username sib_uib password encrypted 8e4b9773ea54875af29b1ee3a88846c65301c52e privilege 15
+username volodin_s password encrypted c6ff25c3781b34389e7ad5e1c8cd8214d30e1d86 privilege 15
+username zhiltsov_a password encrypted 8457a07af6deb3a373ec5a903fe933d6c949e5dc privilege 15
+!
+ip ssh server
+!
+snmp-server server
+encrypted snmp-server community hXKI/nU2kUzqKGixTrnUEJk2X9/GnPd4ihiuEf9vIco= ro view Default
+!
+ip http authentication aaa login-authentication radius local
+aaa authentication login authorization default radius local
+aaa authentication enable default radius enable
+!
+backup server tftp://10.10.0.210
+backup path 10.20.99.96
+backup time-period 1440
+backup history enable
+!
+interface gigabitethernet1/0/1
+ switchport access vlan 730
+exit
+!
+interface gigabitethernet1/0/2
+ switchport access vlan 730
+exit
+!
+interface gigabitethernet1/0/3
+ switchport access vlan 730
+exit
+!
+interface gigabitethernet1/0/4
+ switchport access vlan 730
+exit
+!
+interface gigabitethernet1/0/5
+ switchport access vlan 730
+exit
+!
+interface gigabitethernet1/0/6
+ switchport access vlan 730
+exit
+!
+interface gigabitethernet1/0/7
+ switchport access vlan 730
+exit
+!
+interface gigabitethernet1/0/8
+ switchport access vlan 730
+exit
+!
+interface gigabitethernet1/0/9
+ switchport access vlan 730
+exit
+!
+interface gigabitethernet1/0/10
+ switchport access vlan 730
+exit
+!
+interface gigabitethernet1/0/11
+ switchport access vlan 730
+exit
+!
+interface gigabitethernet1/0/12
+ switchport access vlan 730
+exit
+!
+interface gigabitethernet1/0/13
+ switchport access vlan 730
+exit
+!
+interface gigabitethernet1/0/14
+ switchport access vlan 730
+exit
+!
+interface gigabitethernet1/0/15
+ switchport access vlan 730
+exit
+!
+interface gigabitethernet1/0/16
+ switchport access vlan 730
+exit
+!
+interface gigabitethernet1/0/17
+ switchport access vlan 730
+exit
+!
+interface gigabitethernet1/0/18
+ switchport access vlan 730
+exit
+!
+interface gigabitethernet1/0/19
+ switchport access vlan 730
+exit
+!
+interface gigabitethernet1/0/20
+ switchport access vlan 730
+exit
+!
+interface gigabitethernet1/0/21
+ switchport access vlan 730
+exit
+!
+interface gigabitethernet1/0/22
+ switchport access vlan 730
+exit
+!
+interface gigabitethernet1/0/23
+ switchport access vlan 730
+exit
+!
+interface gigabitethernet1/0/24
+ switchport mode general
+ switchport general allowed vlan add 17,730 tagged
+exit
+!
+interface vlan 1
+ ip address 192.168.1.239 255.255.255.0
+ no ip address dhcp
+ shutdown
+exit
+!
+interface vlan 17
+ name Transport
+ ip address 10.20.99.96 255.255.252.0
+exit
+!
+interface vlan 730
+ name Video-SB-Inagl
+exit
+!
+!
+ip default-gateway 10.20.99.1
+!
+end

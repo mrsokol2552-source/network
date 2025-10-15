@@ -1,0 +1,8 @@
+Value Version ([\w()./-]+)
+Value Model (\S+)
+Value Uptime (.+)
+
+Start
+  ^Cisco IOS.*Version\s+${Version} -> Continue
+  ^cisco\s+${Model}\s+\(.*\) processor -> Continue
+  ^[\w-]+\s+uptime is\s+${Uptime} -> Record

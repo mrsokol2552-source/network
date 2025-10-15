@@ -1,726 +1,6 @@
 
 
-$ show running-config
-Building configuration...
-
-Current configuration : 19116 bytes
-!
-! Last configuration change at 09:47:48 YAKT Fri Sep 19 2025 by zhiltsov_a
-! NVRAM config last updated at 09:47:34 YAKT Fri Sep 19 2025 by zhiltsov_a
-!
-version 15.2
-no service pad
-service timestamps debug datetime localtime
-service timestamps log datetime localtime
-service password-encryption
-service unsupported-transceiver
-!
-hostname INA-NSWS-03-99-10
-!
-boot-start-marker
-boot-end-marker
-!
-logging buffered 16386
-logging rate-limit 100 except warnings
-enable secret 5 $1$..R1$2x0phwJn0ZV8/k4mHCxPF.
-!
-username ivashenko_vb privilege 15 secret 5 $1$bi7z$qTHuukwOKu/rACvOW/3hy.
-username sib_uib privilege 15 secret 9 $9$RJ64VWzV1YSKQU$a3dKPmGjU4GExZXjw04SfWQGQHhkCaV8ap0Wcmqfnig
-username volodin_s privilege 15 secret 5 $1$fNt2$vH7UPGCkPznWo/ztHr594/
-username zhiltsov_a privilege 15 secret 5 $1$Ori.$FdfKyHuw0etnR2ETxU9tP/
-aaa new-model
-!
-!
-aaa authentication login login-RADIUS group radius local
-aaa authorization console
-aaa authorization exec auth-RADIUS-exec group radius local 
-!
-!
-!
-!
-!
-!
-aaa session-id common
-clock timezone YAKT 9 0
-system mtu routing 1500
-vtp mode transparent
-!
-!
-!
-!
-!
-!
-!
-ip dhcp snooping vlan 1-4094
-ip dhcp snooping
-ip domain-name kolmar.ru
-ip name-server 10.10.0.27
-ip name-server 10.10.0.42
-!
-!
-crypto pki trustpoint TP-self-signed-2501501056
- enrollment selfsigned
- subject-name cn=IOS-Self-Signed-Certificate-2501501056
- revocation-check none
- rsakeypair TP-self-signed-2501501056
-!
-!
-crypto pki certificate chain TP-self-signed-2501501056
- certificate self-signed 01
-  3082022B 30820194 A0030201 02020101 300D0609 2A864886 F70D0101 05050030 
-  31312F30 2D060355 04031326 494F532D 53656C66 2D536967 6E65642D 43657274 
-  69666963 6174652D 32353031 35303130 3536301E 170D3933 30333031 30303038 
-  31365A17 0D323030 31303130 30303030 305A3031 312F302D 06035504 03132649 
-  4F532D53 656C662D 5369676E 65642D43 65727469 66696361 74652D32 35303135 
-  30313035 3630819F 300D0609 2A864886 F70D0101 01050003 818D0030 81890281 
-  8100C9FC F0263A55 807D8F2A 14C53D17 B7F6603A EA74CDE1 F9174AC4 946C6414 
-  1F39669F D1130537 11E7B6FB 362609F9 AE13A48A 3CD7B888 6DDAD8BF A87C6AFA 
-  2CC0F47C 9512F076 F824BDF1 E3199079 E8963C19 2C3E397E C066AC72 5A59C034 
-  9D76417A 456A87AC 42D164CA EE3D9448 CA703C12 BD02F298 70626014 0B0DD050 
-  2E630203 010001A3 53305130 0F060355 1D130101 FF040530 030101FF 301F0603 
-  551D2304 18301680 14FC3DE6 BCD332B2 BAC16D65 F6339886 78A2AA51 AB301D06 
-  03551D0E 04160414 FC3DE6BC D332B2BA C16D65F6 33988678 A2AA51AB 300D0609 
-  2A864886 F70D0101 05050003 8181009B A2B53081 5BB46FAD 4DF7123D 446721E8 
-  67B1A63A 6668CF3C 4C788327 C8AD8692 D60F36F8 42AFCB8B CF624E13 77769758 
-  F480CC69 AA5FD588 CC4A3857 09B00F6A D582FFFF 090A3AAB 23864B01 6B9C281C 
-  10EBBB4E 6C10E8CD EB29E089 CA3D40B8 1A870EEF 5E21B106 3DA97B46 04CCCD6F 
-  C78B93B0 7263A393 67DACDD0 65F319
-  	quit
-no errdisable detect cause gbic-invalid
-no errdisable detect cause sfp-config-mismatch
-errdisable recovery cause udld
-errdisable recovery cause bpduguard
-errdisable recovery cause security-violation
-errdisable recovery cause channel-misconfig
-errdisable recovery cause pagp-flap
-errdisable recovery cause dtp-flap
-errdisable recovery cause link-flap
-errdisable recovery cause sfp-config-mismatch
-errdisable recovery cause gbic-invalid
-errdisable recovery cause psecure-violation
-errdisable recovery cause port-mode-failure
-errdisable recovery cause dhcp-rate-limit
-errdisable recovery cause pppoe-ia-rate-limit
-errdisable recovery cause mac-limit
-errdisable recovery cause vmps
-errdisable recovery cause storm-control
-errdisable recovery cause inline-power
-errdisable recovery cause arp-inspection
-errdisable recovery cause loopback
-errdisable recovery cause small-frame
-errdisable recovery cause psp
-errdisable recovery interval 180
-!
-spanning-tree mode rapid-pvst
-spanning-tree extend system-id
-!
-vlan internal allocation policy ascending
-!
-vlan 9
- name PhoneStation
-!
-vlan 10
- name Servers
-!
-vlan 12
- name Admin
-!
-vlan 13
- name Phones
-!
-vlan 14
- name VKS
-!
-vlan 15
- name blind_PLEXCom
-!
-vlan 17
- name Transport
-!
-vlan 19
- name VideoServers
-!
-vlan 20
- name Nerungry
-!
-vlan 30
- name Wi-Fi
-!
-vlan 31
- name Wi-Fi_Guest
-!
-vlan 32
- name Wi-Fi_Works
-!
-vlan 33
- name Wi-Fi_Directors
-!
-vlan 34
- name Wi-Fi_Generals
-!
-vlan 35
- name Wi-Fi_Avic
-!
-vlan 47
- name REAL_IP_TTK
-!
-vlan 48
- name TEMP
-!
-vlan 49
- name ROSTELECOM_MSK
-!
-vlan 50
- name MSB(Inaglinsky)
-!
-vlan 52
- name ASUTP(OF_Inagl-1)
-!
-vlan 54
- name blind_MSB(Inagli)
-!
-vlan 77
- name SKUD
-!
-vlan 90
- name Inagliksky
-!
-vlan 130
- name Phones(MSB-I)
-!
-vlan 150
- name REAL_TTK_62
-!
-vlan 220
- name IBP
-!
-vlan 501
- name DRSK
-!
-vlan 521
- name Cameras(OF_Inagl-1)
-!
-vlan 522
- name Server(OF_Inagl-1)
-!
-vlan 555
- name MedicalServ
-!
-vlan 571
- name MEGAFON_MSK
-!
-vlan 710
- name Video-SB-Office
-!
-vlan 715
- name Video-SB-Den
-!
-vlan 720
- name Video-SB-V-Den
-!
-vlan 725
- name Video-SB-Chulman
-!
-vlan 730
- name Video-SB-Inagl
-!
-vlan 1090
- name Server(Inag)
-!
-vlan 1091
- name Cameras(Inaglinsky)
-!
-vlan 1490
- name VKS(1490)
-!
-vlan 1930
- name REAL_IP_MEGAFON
-!
-!
-!
-!
-!
-!
-interface FastEthernet0/1
- switchport access vlan 1090
- switchport mode access
- logging event spanning-tree
- logging event status
- no snmp trap link-status
- storm-control broadcast level 5.00 3.00
- storm-control multicast level 5.00 3.00
- storm-control action shutdown
- storm-control action trap
- no cdp enable
- spanning-tree portfast
- spanning-tree bpduguard enable
- ip dhcp snooping limit rate 10
-!
-interface FastEthernet0/2
- description IP TA NASTROIKA
- switchport trunk native vlan 90
- switchport trunk allowed vlan 13,90
- switchport mode trunk
- switchport nonegotiate
- switchport voice vlan 13
- switchport port-security maximum 2
- switchport port-security violation  protect
- switchport port-security mac-address sticky
- switchport port-security
- logging event spanning-tree
- logging event status
- shutdown
- no snmp trap link-status
- down-when-looped
- storm-control broadcast level 5.00 3.00
- storm-control multicast level 5.00 3.00
- storm-control action shutdown
- storm-control action trap
- spanning-tree portfast trunk
- spanning-tree bpduguard enable
- ip dhcp snooping limit rate 15
-!
-interface FastEthernet0/3
- shutdown
-!
-interface FastEthernet0/4
- shutdown
-!
-interface FastEthernet0/5
- description VoIP-Nastroi
- switchport trunk native vlan 90
- switchport trunk allowed vlan 13,90
- switchport mode trunk
- switchport nonegotiate
- switchport voice vlan 13
- logging event spanning-tree
- logging event status
- no snmp trap link-status
- storm-control broadcast level 1.00 0.50
- storm-control multicast level 1.00 0.50
- storm-control action shutdown
- storm-control action trap
- no lldp transmit
- no lldp receive
- no cdp enable
- spanning-tree portfast trunk
- spanning-tree bpduguard enable
-!
-interface FastEthernet0/6
- description VoIP-Nastroi
- switchport trunk native vlan 90
- switchport trunk allowed vlan 13,90
- switchport mode trunk
- switchport nonegotiate
- switchport voice vlan 13
- logging event spanning-tree
- logging event status
- no snmp trap link-status
- storm-control broadcast level 1.00 0.50
- storm-control multicast level 1.00 0.50
- storm-control action shutdown
- storm-control action trap
- no lldp transmit
- no lldp receive
- no cdp enable
- spanning-tree portfast trunk
- spanning-tree bpduguard enable
-!
-interface FastEthernet0/7
- description VoIP-Nastroi
- switchport trunk native vlan 90
- switchport trunk allowed vlan 13,90
- switchport mode trunk
- switchport nonegotiate
- switchport voice vlan 13
- logging event spanning-tree
- logging event status
- no snmp trap link-status
- storm-control broadcast level 1.00 0.50
- storm-control multicast level 1.00 0.50
- storm-control action shutdown
- storm-control action trap
- no lldp transmit
- no lldp receive
- no cdp enable
- spanning-tree portfast trunk
- spanning-tree bpduguard enable
-!
-interface FastEthernet0/8
- description VoIP-Nastroi
- switchport trunk native vlan 90
- switchport trunk allowed vlan 13,90
- switchport mode trunk
- switchport nonegotiate
- switchport voice vlan 13
- switchport port-security violation  protect
- switchport port-security mac-address sticky
- logging event spanning-tree
- logging event status
- no snmp trap link-status
- storm-control broadcast level 1.00 0.50
- storm-control multicast level 1.00 0.50
- storm-control action shutdown
- storm-control action trap
- no lldp transmit
- no lldp receive
- no cdp enable
- spanning-tree portfast trunk
- spanning-tree bpduguard enable
-!
-interface FastEthernet0/9
- shutdown
-!
-interface FastEthernet0/10
- shutdown
-!
-interface FastEthernet0/11
- shutdown
-!
-interface FastEthernet0/12
- description NETTOP
- switchport access vlan 90
- logging event spanning-tree
- logging event status
- no snmp trap link-status
- storm-control broadcast level 5.00 3.00
- storm-control multicast level 5.00 3.00
- storm-control action shutdown
- storm-control action trap
- no cdp enable
- spanning-tree portfast
- spanning-tree bpduguard enable
- ip dhcp snooping limit rate 10
-!
-interface FastEthernet0/13
- description ServerAD
- switchport access vlan 1090
- switchport mode access
- logging event spanning-tree
- logging event status
- shutdown
- no snmp trap link-status
- storm-control broadcast level 1.00 0.50
- storm-control multicast level 1.00 0.50
- storm-control action trap
- no cdp enable
- spanning-tree portfast
- spanning-tree bpduguard enable
-!
-interface FastEthernet0/14
- description ServerAD
- switchport access vlan 1090
- switchport mode access
- logging event spanning-tree
- logging event status
- shutdown
- no snmp trap link-status
- storm-control broadcast level 1.00 0.50
- storm-control multicast level 1.00 0.50
- storm-control action trap
- no cdp enable
- spanning-tree portfast
- spanning-tree bpduguard enable
-!
-interface FastEthernet0/15
- description DRSK
- switchport access vlan 501
- switchport mode access
- logging event spanning-tree
- logging event status
- no snmp trap link-status
- storm-control broadcast level 5.00 3.00
- storm-control multicast level 5.00 3.00
- storm-control action shutdown
- storm-control action trap
- no cdp enable
- spanning-tree bpdufilter enable
-!
-interface FastEthernet0/16
- description SERVER-ENERGY
- switchport access vlan 90
- logging event spanning-tree
- logging event status
- speed 100
- no snmp trap link-status
- down-when-looped
- storm-control broadcast level 5.00 3.00
- storm-control multicast level 5.00 3.00
- storm-control action shutdown
- storm-control action trap
- no cdp enable
- spanning-tree portfast
- spanning-tree bpduguard enable
- ip dhcp snooping limit rate 10
-!
-interface FastEthernet0/17
- description Security
- switchport access vlan 90
- switchport mode access
- logging event spanning-tree
- logging event status
- no snmp trap link-status
- storm-control broadcast level 5.00 3.00
- storm-control multicast level 5.00 3.00
- storm-control action shutdown
- storm-control action trap
- no cdp enable
- spanning-tree portfast
- spanning-tree bpduguard enable
- ip dhcp snooping limit rate 10
-!
-interface FastEthernet0/18
- switchport trunk allowed vlan 1,13,17,66-68,77,220
- switchport mode trunk
- logging event spanning-tree
- logging event status
- storm-control broadcast level 20.00 10.00
- storm-control multicast level 20.00 10.00
- storm-control action trap
- spanning-tree guard loop
- ip dhcp snooping trust
-!
-interface FastEthernet0/19
- description CAMERA_100.245
- switchport access vlan 1091
- logging event spanning-tree
- logging event status
- no snmp trap link-status
- down-when-looped
- storm-control broadcast level 5.00 3.00
- storm-control multicast level 5.00 3.00
- storm-control action shutdown
- storm-control action trap
- no cdp enable
- spanning-tree portfast
- spanning-tree bpduguard enable
- ip dhcp snooping limit rate 10
-!
-interface FastEthernet0/20
- description TRUNK 96.11_Fa0/24
- switchport trunk allowed vlan 1,13,17,30-34,47,48,77,90,220,730,1930
- switchport mode trunk
- logging event spanning-tree
- logging event status
- storm-control broadcast level 20.00 10.00
- storm-control multicast level 20.00 10.00
- storm-control action trap
- spanning-tree guard loop
- ip dhcp snooping trust
-!
-interface FastEthernet0/21
- description TRASSIR NOT ON
- switchport mode access
- logging event spanning-tree
- logging event status
- shutdown
- no snmp trap link-status
- storm-control broadcast level 20.00 10.00
- storm-control multicast level 20.00 10.00
- storm-control action trap
- no cdp enable
- spanning-tree portfast
- spanning-tree bpduguard enable
- spanning-tree guard loop
-!
-interface FastEthernet0/22
- description CAMERA-ABK-LEVEL-1
- logging event spanning-tree
- logging event status
- shutdown
- no snmp trap link-status
- down-when-looped
- storm-control broadcast level 5.00 3.00
- storm-control multicast level 5.00 3.00
- storm-control action shutdown
- storm-control action trap
- no cdp enable
- spanning-tree portfast
- spanning-tree bpduguard enable
- ip dhcp snooping limit rate 10
-!
-interface FastEthernet0/23
- description PRINTER-KYOSERA_MG
- switchport access vlan 1090
- logging event spanning-tree
- logging event status
- no snmp trap link-status
- down-when-looped
- storm-control broadcast level 5.00 3.00
- storm-control multicast level 5.00 3.00
- storm-control action shutdown
- storm-control action trap
- no cdp enable
- spanning-tree portfast
- spanning-tree bpduguard enable
- ip dhcp snooping limit rate 10
-!
-interface FastEthernet0/24
- description UP 99.20_fa0/24
- switchport trunk allowed vlan 1,13,17,30-35,50,77,90,130,190,501,730,1090,1091
- switchport trunk allowed vlan add 1930
- switchport mode trunk
- logging event spanning-tree
- logging event status
- storm-control broadcast level 20.00 10.00
- storm-control multicast level 20.00 10.00
- storm-control action trap
- spanning-tree bpduguard disable
- spanning-tree guard loop
- ip dhcp snooping trust
-!
-interface GigabitEthernet0/1
- description TRUNK 99.99_50
- switchport trunk allowed vlan 1,13,17,30-34,47,50,52,54,90,130,1490,1930
- switchport mode trunk
- logging event spanning-tree
- logging event status
- storm-control broadcast level 20.00 10.00
- storm-control multicast level 20.00 10.00
- storm-control action trap
- spanning-tree guard loop
- ip dhcp snooping trust
-!
-interface GigabitEthernet0/2
- description UP_99.20_fa0/17
- switchport trunk allowed vlan 1,13,17,30-35,50,77,90,130,190,501,730,1090,1091
- switchport trunk allowed vlan add 1490,1930
- switchport mode trunk
- logging event spanning-tree
- logging event status
- storm-control broadcast level 20.00 10.00
- storm-control multicast level 20.00 10.00
- storm-control action trap
- spanning-tree bpduguard disable
- spanning-tree guard loop
- ip dhcp snooping trust
-!
-interface Vlan1
- no ip address
- shutdown
-!
-interface Vlan17
- ip address 10.20.99.10 255.255.252.0
-!
-no ip http server
-ip http authentication aaa login-authentication login-RADIUS
-ip http authentication aaa exec-authorization auth-RADIUS-exec
-ip http secure-server
-ip http max-connections 3
-ip ssh authentication-retries 2
-ip ssh logging events
-ip ssh version 2
-!
-ip access-list extended ATC-SECURITY
- permit ip 62.33.87.0 0.0.0.255 62.33.87.0 0.0.0.255
- permit ip 62.33.87.0 0.0.0.255 212.44.138.0 0.0.0.255
- permit ip 62.33.87.0 0.0.0.255 188.43.4.0 0.0.0.255
- permit ip 62.33.87.0 0.0.0.255 192.168.64.0 0.0.63.255
- permit ip 62.33.87.0 0.0.0.255 10.200.10.0 0.0.0.255
- permit ip 62.33.87.0 0.0.0.255 10.10.0.0 0.0.0.255
- permit ip 62.33.87.0 0.0.0.255 10.12.0.0 0.0.0.255
- permit ip 62.33.87.0 0.0.0.255 10.13.0.0 0.0.0.255
- deny   ip any any
-ip access-list extended ATS-SECURITY
- permit ip 62.33.87.0 0.0.0.255 62.33.87.0 0.0.0.255
- permit ip 62.33.87.0 0.0.0.255 212.44.138.0 0.0.0.255
- permit ip 62.33.87.0 0.0.0.255 188.43.4.0 0.0.0.255
- deny   ip any any
-ip access-list extended DENY_MedicalServ
- permit ip 10.200.55.10 0.0.0.1 10.10.0.16 0.0.0.1
- permit ip 10.10.0.16 0.0.0.1 10.200.55.10 0.0.0.1
- permit ip 10.200.55.10 0.0.0.1 10.10.0.26 0.0.0.1
- permit ip 10.10.0.26 0.0.0.1 10.200.55.10 0.0.0.1
- permit ip 10.200.55.0 0.0.0.255 10.12.0.0 0.0.0.255
- permit ip 10.12.0.0 0.0.0.255 10.200.55.0 0.0.0.255
- permit ip 10.200.55.10 0.0.0.1 192.168.65.88 0.0.0.1
- permit ip 192.168.65.88 0.0.0.1 10.200.55.10 0.0.0.1
- permit ip 10.200.55.10 0.0.0.1 192.168.74.110 0.0.0.1
- permit ip 192.168.74.110 0.0.0.1 10.200.55.10 0.0.0.1
- permit ip 10.200.55.10 0.0.0.1 192.168.74.212 0.0.0.1
- permit ip 192.168.74.212 0.0.0.1 10.200.55.10 0.0.0.1
- permit ip 10.200.55.10 0.0.0.1 192.168.64.174 0.0.0.1
- permit ip 192.168.64.174 0.0.0.1 10.200.55.10 0.0.0.1
- permit ip 10.200.55.10 0.0.0.1 192.168.74.210 0.0.0.1
- permit ip 192.168.74.210 0.0.0.1 10.200.55.10 0.0.0.1
- permit ip 10.200.55.10 0.0.0.1 10.10.0.210 0.0.0.1
- permit ip 10.10.0.210 0.0.0.1 10.200.55.10 0.0.0.1
- permit ip 10.200.55.10 0.0.0.1 192.168.74.6 0.0.0.1
- permit ip 192.168.74.6 0.0.0.1 10.200.55.10 0.0.0.1
- permit ip 10.200.55.10 0.0.0.1 10.100.77.20 0.0.0.1
- permit ip 10.100.77.20 0.0.0.1 10.200.55.10 0.0.0.1
- deny   ip any any
-ip access-list extended DENY_VLAN130
- permit ip 10.200.11.0 0.0.0.255 10.12.0.0 0.0.0.255
- permit ip 10.12.0.0 0.0.0.255 10.200.11.0 0.0.0.255
- deny   ip any any
-ip access-list extended DENY_VLAN_50
- permit ip host 10.200.10.12 10.12.0.0 0.0.0.255
- permit ip 10.12.0.0 0.0.0.255 host 10.200.10.12
- permit ip host 10.200.10.12 host 192.168.99.65
- permit ip host 192.168.99.65 host 10.200.10.12
- permit ip host 10.200.10.12 host 10.10.0.17
- permit ip host 10.10.0.17 host 10.200.10.12
- permit ip host 192.168.65.88 host 10.200.10.12
- permit ip host 10.200.10.12 host 192.168.65.88
- permit ip host 10.200.10.12 host 192.168.74.110
- permit ip host 192.168.74.110 host 10.200.10.12
- permit ip host 10.200.10.12 host 192.168.74.212
- permit ip host 192.168.74.212 host 10.200.10.12
- permit ip host 10.200.10.12 192.168.74.0 0.0.0.255
- permit ip 192.168.74.0 0.0.0.255 host 10.200.10.12
- permit ip host 10.200.10.12 10.10.0.0 0.0.0.255
- permit ip 10.10.0.0 0.0.0.255 host 10.200.10.12
- deny   ip any host 10.200.10.12
- deny   ip host 10.200.10.12 any
- permit ip any any
-ip radius source-interface Vlan17 
-kron occurrence backup at 17:00 recurring
- policy-list backup
-!
-kron policy-list backup
- cli copy startup-config tftp://dump.kolmar.pro/10.20.99.10
- cli copy vlan.dat tftp://dump.kolmar.pro/10.20.99.10_vlan
- cli copy startup-config tftp://10.10.0.210/10.20.99.10
-!
-logging trap debugging
-logging host 10.10.0.19 transport udp port 1515
-logging host 10.10.0.142 transport udp port 5014
-snmp-server community public RO
-radius-server host 10.10.0.210 auth-port 1812 acct-port 1813
-radius-server host 10.10.0.212 auth-port 1812 acct-port 1813
-radius-server key 7 05070D05245D40010A091110071B
-!
-!
-no vstack
-!
-line con 0
- exec-timeout 13 0
- privilege level 15
- authorization exec auth-RADIUS-exec
- logging synchronous
- login authentication login-RADIUS
- stopbits 1
-line vty 0 4
- exec-timeout 15 0
- privilege level 15
- authorization exec auth-RADIUS-exec
- logging synchronous
- login authentication login-RADIUS
- length 0
- transport input ssh
-line vty 5 15
- exec-timeout 15 0
- authorization exec auth-RADIUS-exec
- login authentication login-RADIUS
- transport input none
-!
-ntp server 10.10.0.210
-ntp server time.kolmar.pro
-mac address-table notification change interval 15
-mac address-table notification change history-size 500
-mac address-table notification change
-end
+$ terminal length 0
 
 
 
@@ -733,7 +13,7 @@ Compiled Mon 22-Jan-18 07:09 by prod_rel_team
 ROM: Bootstrap program is C2960 boot loader
 BOOTLDR: C2960 Boot Loader (C2960-HBOOT-M) Version 15.0(2r)EZ1, RELEASE SOFTWARE (fc1)
 
-INA-NSWS-03-99-10 uptime is 28 weeks, 2 days, 3 hours, 0 minutes
+INA-NSWS-03-99-10 uptime is 29 weeks, 2 hours, 50 minutes
 System returned to ROM by power-on
 System restarted at 13:01:16 YAKT Wed Mar 26 2025
 System image file is "flash:/c2960-lanbasek9-mz.152-2.E8/c2960-lanbasek9-mz.152-2.E8.bin"
@@ -791,6 +71,85 @@ Configuration register is 0xF
 
 
 
+$ show lldp neighbors detail
+------------------------------------------------
+Local Intf: Gi0/1
+Chassis id: 9cd6.43f6.eb68
+Port id: 9cd6.43f6.eb9a
+Port Description - not advertised
+System Name - not advertised
+System Description - not advertised
+
+Time remaining: 108 seconds
+System Capabilities - not advertised
+Enabled Capabilities - not advertised
+Management Addresses - not advertised
+Auto Negotiation - not supported
+Physical media capabilities - not advertised
+Media Attachment Unit type - not advertised
+Vlan ID: - not advertised
+
+------------------------------------------------
+Local Intf: Gi0/2
+Chassis id: c47e.e096.8680
+Port id: Twe1/1/1
+Port Description: 99.10_gi0/2
+System Name: INA-NSWR-03-97-1.kolmar.local
+
+System Description: 
+Cisco IOS Software [Cupertino], Catalyst L3 Switch Software (CAT9K_IOSXE), Version 17.9.3, RELEASE SOFTWARE (fc6)
+Technical Support: http://www.cisco.com/techsupport
+Copyright (c) 1986-2023 by Cisco Systems, Inc.
+Compiled Tue 14-Mar-23 18:26 by mcpre
+
+Time remaining: 92 seconds
+System Capabilities: B,R
+Enabled Capabilities: B,R
+Management Addresses:
+    IP: 10.20.97.1
+Auto Negotiation - not supported
+Physical media capabilities:
+    1000baseT(FD)
+Media Attachment Unit type: 26
+Vlan ID: 1
+
+------------------------------------------------
+Local Intf: Fa0/12
+Chassis id: 80ee.73f5.6e44
+Port id: 80ee.73f5.6e44
+Port Description - not advertised
+System Name - not advertised
+System Description - not advertised
+
+Time remaining: 2810 seconds
+System Capabilities - not advertised
+Enabled Capabilities - not advertised
+Management Addresses - not advertised
+Auto Negotiation - supported, enabled
+Physical media capabilities:
+    1000baseT(FD)
+Media Attachment Unit type - not advertised
+Vlan ID: - not advertised
+
+MED Information:
+
+    MED Codes:
+          (NP) Network Policy, (LI) Location Identification
+          (PS) Power Source Entity, (PD) Power Device
+          (IN) Inventory
+
+    Inventory information - not advertised
+    Capabilities: 
+    Device type: Endpoint Class I
+    Network Policies - not advertised
+    Power requirements - not advertised
+    Location - not advertised
+
+
+Total entries displayed: 3
+
+
+
 $ show cdp neighbors detail
 -------------------------
 Device ID: INA-NSWR-03-97-1.kolmar.local
@@ -798,7 +157,7 @@ Entry address(es):
   IP address: 10.20.97.1
 Platform: cisco C9300X-24Y,  Capabilities: Router Switch IGMP 
 Interface: GigabitEthernet0/2,  Port ID (outgoing port): TwentyFiveGigE1/1/1
-Holdtime : 178 sec
+Holdtime : 176 sec
 
 Version :
 Cisco IOS Software [Cupertino], Catalyst L3 Switch Software (CAT9K_IOSXE), Version 17.9.3, RELEASE SOFTWARE (fc6)
@@ -819,7 +178,7 @@ Entry address(es):
   IP address: 10.13.1.44
 Platform: X3S,  Capabilities: Host Phone 
 Interface: GigabitEthernet0/1,  Port ID (outgoing port): WAN PORT
-Holdtime : 146 sec
+Holdtime : 170 sec
 
 Version :
 2.14.0.7387
@@ -832,7 +191,7 @@ Entry address(es):
   IP address: 10.20.99.76
 Platform: cisco WS-C2960+48TC-L,  Capabilities: Switch IGMP 
 Interface: GigabitEthernet0/1,  Port ID (outgoing port): GigabitEthernet0/1
-Holdtime : 152 sec
+Holdtime : 164 sec
 
 Version :
 Cisco IOS Software, C2960 Software (C2960-LANBASEK9-M), Version 15.2(2)E7, RELEASE SOFTWARE (fc3)
@@ -851,10 +210,10 @@ Management address(es):
 -------------------------
 Device ID: X1S/X1SP
 Entry address(es): 
-  IP address: 10.13.0.244
+  IP address: 10.13.1.48
 Platform: X1S/X1SP,  Capabilities: Host Phone 
 Interface: GigabitEthernet0/1,  Port ID (outgoing port): WAN PORT
-Holdtime : 148 sec
+Holdtime : 179 sec
 
 Version :
 2.4.12.2
@@ -865,36 +224,17 @@ advertisement version: 2
 Total cdp entries displayed : 4
 
 
-$ show lldp neighbors detail
-% LLDP is not enabled
+$ show cdp neighbors
+Capability Codes: R - Router, T - Trans Bridge, B - Source Route Bridge
+                  S - Switch, H - Host, I - IGMP, r - Repeater, P - Phone, 
+                  D - Remote, C - CVTA, M - Two-port Mac Relay 
 
+Device ID        Local Intrfce     Holdtme    Capability  Platform  Port ID
+INA-NSWR-03-97-1.kolmar.local
+                 Gig 0/2           175             R S I  C9300X-24 TwentyFiveGigE1/1/1
+X3S              Gig 0/1           169              H P   X3S       WAN PORT
+INA-NSWS-08-99-76.kolmar.ru
+                 Gig 0/1           164              S I   WS-C2960+ Gig 0/1
+X1S/X1SP         Gig 0/1           179              H P   X1S/X1SP  WAN PORT
 
-$ show interface status
-
-Port      Name               Status       Vlan       Duplex  Speed Type 
-Fa0/1                        notconnect   1090         auto   auto 10/100BaseTX
-Fa0/2     IP TA NASTROIKA    disabled     trunk        auto   auto 10/100BaseTX
-Fa0/3                        disabled     1            auto   auto 10/100BaseTX
-Fa0/4                        disabled     1            auto   auto 10/100BaseTX
-Fa0/5     VoIP-Nastroi       notconnect   trunk        auto   auto 10/100BaseTX
-Fa0/6     VoIP-Nastroi       notconnect   trunk        auto   auto 10/100BaseTX
-Fa0/7     VoIP-Nastroi       notconnect   trunk        auto   auto 10/100BaseTX
-Fa0/8     VoIP-Nastroi       notconnect   trunk        auto   auto 10/100BaseTX
-Fa0/9                        disabled     1            auto   auto 10/100BaseTX
-Fa0/10                       disabled     1            auto   auto 10/100BaseTX
-Fa0/11                       disabled     1            auto   auto 10/100BaseTX
-Fa0/12    NETTOP             connected    90         a-full  a-100 10/100BaseTX
-Fa0/13    ServerAD           disabled     1090         auto   auto 10/100BaseTX
-Fa0/14    ServerAD           disabled     1090         auto   auto 10/100BaseTX
-Fa0/15    DRSK               connected    501        a-full  a-100 10/100BaseTX
-Fa0/16    SERVER-ENERGY      notconnect   90           auto    100 10/100BaseTX
-Fa0/17    Security           notconnect   90           auto   auto 10/100BaseTX
-Fa0/18                       connected    trunk      a-full  a-100 10/100BaseTX
-Fa0/19    CAMERA_100.245     notconnect   1091         auto   auto 10/100BaseTX
-Fa0/20    TRUNK 96.11_Fa0/24 notconnect   1            auto   auto 10/100BaseTX
-Fa0/21    TRASSIR NOT ON     disabled     1            auto   auto 10/100BaseTX
-Fa0/22    CAMERA-ABK-LEVEL-1 disabled     1            auto   auto 10/100BaseTX
-Fa0/23    PRINTER-KYOSERA_MG notconnect   1090         auto   auto 10/100BaseTX
-Fa0/24    UP 99.20_fa0/24    notconnect   1            auto   auto 10/100BaseTX
-Gi0/1     TRUNK 99.99_50     connected    trunk      a-full a-1000 unsupported
-Gi0/2     UP_99.20_fa0/17    connected    trunk      a-full a-1000 1000BaseLX SFP
+Total cdp entries displayed : 4

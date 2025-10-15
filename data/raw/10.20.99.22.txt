@@ -1,508 +1,6 @@
 
 
-$ show running-config
-Building configuration...
-
-Current configuration : 14281 bytes
-!
-version 12.2
-no service pad
-service timestamps debug datetime msec localtime show-timezone year
-service timestamps log datetime msec
-service password-encryption
-!
-hostname sw-ner-inag-22-l2
-!
-boot-start-marker
-boot-end-marker
-!
-logging buffered 16386
-logging rate-limit 100 except warnings
-logging console critical
-!
-username ivashenko_vb privilege 15 secret 5 $1$bi7z$qTHuukwOKu/rACvOW/3hy.
-username sib_uib privilege 15 secret 5 $1$XcEp$n6MCvXiubiCMxk9TQlBxP1
-username volodin_s privilege 15 secret 5 $1$PLwU$aDNknY1bIYP.HLah2WzrR.
-username zhiltsov_a privilege 15 secret 5 $1$WHt.$1h8vFgCZXk4IWbA6V6inp0
-!
-!
-aaa new-model
-!
-!
-aaa authentication login login-RADIUS group radius local
-aaa authorization console
-aaa authorization exec auth-RADIUS-exec group radius local 
-!
-!
-!
-aaa session-id common
-clock timezone YAKT 9
-system mtu routing 1500
-!
-!
-ip domain-name kolmar.ru
-ip name-server 192.168.74.6
-ip name-server 192.168.74.210
-!
-!
-crypto pki trustpoint TP-self-signed-2813107200
- enrollment selfsigned
- subject-name cn=IOS-Self-Signed-Certificate-2813107200
- revocation-check none
- rsakeypair TP-self-signed-2813107200
-!
-!
-crypto pki certificate chain TP-self-signed-2813107200
- certificate self-signed 01
-  30820253 308201BC A0030201 02020101 300D0609 2A864886 F70D0101 04050030 
-  31312F30 2D060355 04031326 494F532D 53656C66 2D536967 6E65642D 43657274 
-  69666963 6174652D 32383133 31303732 3030301E 170D3933 30333031 30303031 
-  35355A17 0D323030 31303130 30303030 305A3031 312F302D 06035504 03132649 
-  4F532D53 656C662D 5369676E 65642D43 65727469 66696361 74652D32 38313331 
-  30373230 3030819F 300D0609 2A864886 F70D0101 01050003 818D0030 81890281 
-  8100CCD1 AD2611C3 FA82AA31 1E99EE47 77E491B9 D9E68C35 5EDA3048 90844252 
-  12A49949 03892BF3 2C56B8D5 E2780CA8 B22F9ED2 CEAE8E3B EE6EBD61 6447308F 
-  650958C3 2A013946 B05298D5 896B5376 EEA6219E B014CDD3 70646473 60EDC8FB 
-  F2ECC5B0 D007F52C D4B3E54E 6CF62A2E BA2BE1D0 1D0CA5D5 E4969630 395BB296 
-  98FB0203 010001A3 7B307930 0F060355 1D130101 FF040530 030101FF 30260603 
-  551D1104 1F301D82 1B73772D 6E65722D 696E6167 2D32322D 6C322E6B 6F6C6D61 
-  722E7275 301F0603 551D2304 18301680 14E57562 F0E4DE76 C661351E EF057028 
-  ABF50EE5 E8301D06 03551D0E 04160414 E57562F0 E4DE76C6 61351EEF 057028AB 
-  F50EE5E8 300D0609 2A864886 F70D0101 04050003 8181000A 884C6167 1BEA0309 
-  024D4C04 6FA0ED66 4B491A37 C3855587 7D4833EF 434292B8 C965DDCC 1F2C652B 
-  A3C94D91 252A7147 F510D038 158BE294 648E7A4A 2FF1021F CA445D90 7D49279B 
-  9F728895 A55099B7 6AEEC06A A02E9C4E 3BA8C8A9 35A0E044 E0F51B66 5A669453 
-  4FC90DF8 9305A3AD E52D89BD 3F74941D 9B37034C E34563
-  quit
-!
-!
-!
-errdisable recovery cause udld
-errdisable recovery cause bpduguard
-errdisable recovery cause security-violation
-errdisable recovery cause channel-misconfig (STP)
-errdisable recovery cause pagp-flap
-errdisable recovery cause dtp-flap
-errdisable recovery cause link-flap
-errdisable recovery cause sfp-config-mismatch
-errdisable recovery cause gbic-invalid
-errdisable recovery cause psecure-violation
-errdisable recovery cause port-mode-failure
-errdisable recovery cause dhcp-rate-limit
-errdisable recovery cause pppoe-ia-rate-limit
-errdisable recovery cause mac-limit
-errdisable recovery cause vmps
-errdisable recovery cause storm-control
-errdisable recovery cause inline-power
-errdisable recovery cause arp-inspection
-errdisable recovery cause loopback
-errdisable recovery cause small-frame
-errdisable recovery interval 180
-file prompt quiet
-!
-spanning-tree mode rapid-pvst
-spanning-tree loopguard default
-spanning-tree extend system-id
-!
-vlan internal allocation policy ascending
-!
-ip ftp username FTP1
-ip ftp password 7 0729157C1F
-ip ssh version 2
-!
-!
-interface FastEthernet0/1
- logging event spanning-tree
- shutdown
- no snmp trap link-status
- storm-control broadcast level 5.00 3.00
- storm-control multicast level 5.00 3.00
- storm-control action shutdown
- storm-control action trap
- no cdp enable
- spanning-tree portfast
- spanning-tree bpduguard enable
- ip dhcp snooping limit rate 10
-!
-interface FastEthernet0/2
- logging event spanning-tree
- shutdown
- no snmp trap link-status
- storm-control broadcast level 5.00 3.00
- storm-control multicast level 5.00 3.00
- storm-control action shutdown
- storm-control action trap
- no cdp enable
- spanning-tree portfast
- spanning-tree bpduguard enable
- ip dhcp snooping limit rate 10
-!
-interface FastEthernet0/3
- logging event spanning-tree
- shutdown
- no snmp trap link-status
- storm-control broadcast level 5.00 3.00
- storm-control multicast level 5.00 3.00
- storm-control action shutdown
- storm-control action trap
- no cdp enable
- spanning-tree portfast
- spanning-tree bpduguard enable
- ip dhcp snooping limit rate 10
-!
-interface FastEthernet0/4
- switchport access vlan 90
- switchport mode access
- logging event spanning-tree
- no snmp trap link-status
- storm-control broadcast level 5.00 3.00
- storm-control multicast level 5.00 3.00
- storm-control action shutdown
- storm-control action trap
- no cdp enable
- spanning-tree portfast
- spanning-tree bpduguard enable
- ip dhcp snooping limit rate 10
-!
-interface FastEthernet0/5
- description SWITCH
- switchport access vlan 90
- logging event spanning-tree
- storm-control broadcast level 10.00 5.00
- storm-control multicast level 10.00 5.00
- storm-control action shutdown
- storm-control action trap
- no cdp enable
- spanning-tree bpduguard enable
- ip dhcp snooping limit rate 10
-!
-interface FastEthernet0/6
- switchport access vlan 90
- logging event spanning-tree
- no snmp trap link-status
- storm-control broadcast level 5.00 3.00
- storm-control multicast level 5.00 3.00
- storm-control action shutdown
- storm-control action trap
- no cdp enable
- spanning-tree portfast
- spanning-tree bpduguard enable
- ip dhcp snooping limit rate 10
-!
-interface FastEthernet0/7
- switchport access vlan 90
- logging event spanning-tree
- no snmp trap link-status
- storm-control broadcast level 5.00 3.00
- storm-control multicast level 5.00 3.00
- storm-control action shutdown
- storm-control action trap
- no cdp enable
- spanning-tree portfast
- spanning-tree bpduguard enable
- ip dhcp snooping limit rate 10
-!
-interface FastEthernet0/8
- description MikroTik_of1
- switchport access vlan 52
- logging event spanning-tree
- no snmp trap link-status
- storm-control broadcast level 5.00 3.00
- storm-control multicast level 5.00 3.00
- storm-control action shutdown
- storm-control action trap
- no cdp enable
- spanning-tree portfast
- spanning-tree bpduguard enable
- ip dhcp snooping limit rate 10
-!
-interface FastEthernet0/9
- switchport access vlan 90
- logging event spanning-tree
- no snmp trap link-status
- storm-control broadcast level 5.00 3.00
- storm-control multicast level 5.00 3.00
- storm-control action shutdown
- storm-control action trap
- no cdp enable
- spanning-tree portfast
- spanning-tree bpduguard enable
- ip dhcp snooping limit rate 10
-!
-interface FastEthernet0/10
- switchport access vlan 90
- logging event spanning-tree
- no snmp trap link-status
- storm-control broadcast level 5.00 3.00
- storm-control multicast level 5.00 3.00
- storm-control action shutdown
- storm-control action trap
- no cdp enable
- spanning-tree portfast
- spanning-tree bpduguard enable
- ip dhcp snooping limit rate 10
-!
-interface FastEthernet0/11
- description ELTEX_of1
- switchport access vlan 52
- logging event spanning-tree
- no snmp trap link-status
- storm-control broadcast level 5.00 3.00
- storm-control multicast level 5.00 3.00
- storm-control action shutdown
- storm-control action trap
- no cdp enable
- spanning-tree portfast
- spanning-tree bpduguard enable
- ip dhcp snooping limit rate 10
-!
-interface FastEthernet0/12
- switchport access vlan 90
- logging event spanning-tree
- no snmp trap link-status
- storm-control broadcast level 5.00 3.00
- storm-control multicast level 5.00 3.00
- storm-control action shutdown
- storm-control action trap
- no cdp enable
- spanning-tree portfast
- spanning-tree bpduguard enable
- ip dhcp snooping limit rate 10
-!
-interface FastEthernet0/13
- switchport access vlan 90
- logging event spanning-tree
- no snmp trap link-status
- storm-control broadcast level 5.00 3.00
- storm-control multicast level 5.00 3.00
- storm-control action shutdown
- storm-control action trap
- no cdp enable
- spanning-tree portfast
- spanning-tree bpduguard enable
- ip dhcp snooping limit rate 10
-!
-interface FastEthernet0/14
- description ARM-Fireprotect
- switchport access vlan 90
- logging event spanning-tree
- no snmp trap link-status
- storm-control broadcast level 5.00 3.00
- storm-control multicast level 5.00 3.00
- storm-control action shutdown
- storm-control action trap
- no cdp enable
- spanning-tree portfast
- spanning-tree bpduguard enable
- ip dhcp snooping limit rate 10
-!
-interface FastEthernet0/15
- switchport access vlan 90
- logging event spanning-tree
- no snmp trap link-status
- storm-control broadcast level 5.00 3.00
- storm-control multicast level 5.00 3.00
- storm-control action shutdown
- storm-control action trap
- no cdp enable
- spanning-tree portfast
- spanning-tree bpduguard enable
- ip dhcp snooping limit rate 10
-!
-interface FastEthernet0/16
- switchport access vlan 90
- logging event spanning-tree
- no snmp trap link-status
- storm-control broadcast level 5.00 3.00
- storm-control multicast level 5.00 3.00
- storm-control action shutdown
- storm-control action trap
- no cdp enable
- spanning-tree portfast
- spanning-tree bpduguard enable
- ip dhcp snooping limit rate 10
-!
-interface FastEthernet0/17
- switchport access vlan 90
- logging event spanning-tree
- no snmp trap link-status
- storm-control broadcast level 5.00 3.00
- storm-control multicast level 5.00 3.00
- storm-control action shutdown
- storm-control action trap
- no cdp enable
- spanning-tree portfast
- spanning-tree bpduguard enable
- ip dhcp snooping limit rate 10
-!
-interface FastEthernet0/18
- switchport access vlan 90
- logging event spanning-tree
- speed auto 10
- no snmp trap link-status
- storm-control broadcast level 5.00 3.00
- storm-control multicast level 5.00 3.00
- storm-control action shutdown
- storm-control action trap
- no cdp enable
- spanning-tree portfast
- spanning-tree bpduguard enable
- ip dhcp snooping limit rate 10
-!
-interface FastEthernet0/19
- switchport access vlan 90
- logging event spanning-tree
- no snmp trap link-status
- storm-control broadcast level 5.00 3.00
- storm-control multicast level 5.00 3.00
- storm-control action shutdown
- storm-control action trap
- no cdp enable
- spanning-tree portfast
- spanning-tree bpduguard enable
- ip dhcp snooping limit rate 10
-!
-interface FastEthernet0/20
- switchport access vlan 90
- switchport mode access
- logging event spanning-tree
- no snmp trap link-status
- storm-control broadcast level 5.00 3.00
- storm-control multicast level 5.00 3.00
- storm-control action shutdown
- storm-control action trap
- no cdp enable
- spanning-tree portfast
- spanning-tree bpduguard enable
- ip dhcp snooping limit rate 10
-!
-interface FastEthernet0/21
- description Wi-Fi
- switchport access vlan 30
- switchport trunk allowed vlan 30-34
- switchport mode trunk
- logging event spanning-tree
- no snmp trap link-status
- storm-control broadcast level 5.00 3.00
- storm-control multicast level 5.00 3.00
- storm-control action shutdown
- storm-control action trap
- no cdp enable
-!
-interface FastEthernet0/22
- description SKUD_NC60K
- switchport access vlan 77
- logging event spanning-tree
- storm-control broadcast level 10.00 5.00
- storm-control multicast level 10.00 5.00
- storm-control action shutdown
- storm-control action trap
- no cdp enable
- spanning-tree bpduguard enable
- ip dhcp snooping limit rate 10
-!
-interface FastEthernet0/23
- description kyosera
- switchport access vlan 52
- logging event spanning-tree
- no snmp trap link-status
- storm-control broadcast level 5.00 3.00
- storm-control multicast level 5.00 3.00
- storm-control action shutdown
- storm-control action trap
- no cdp enable
- spanning-tree portfast
- spanning-tree bpduguard enable
- ip dhcp snooping limit rate 10
-!
-interface FastEthernet0/24
- description SERVER VIDEO
- switchport access vlan 521
- logging event spanning-tree
- storm-control broadcast level 20.00 10.00
- storm-control multicast level 20.00 10.00
- storm-control action shutdown
- storm-control action trap
- no cdp enable
- ip dhcp snooping limit rate 10
-!
-interface GigabitEthernet0/1
- description UP 99.20_fa0/8
- switchport trunk allowed vlan 1,17,30-34,52,77,90,521
- switchport mode trunk
- logging event spanning-tree
- logging event status
- storm-control broadcast level 20.00 10.00
- storm-control multicast level 20.00 10.00
- storm-control action trap
- spanning-tree guard loop
- ip dhcp snooping trust
-!
-interface GigabitEthernet0/2
- description TRUNK 99.23_Gi0/1
- switchport trunk allowed vlan 1,17,521
- switchport mode trunk
- logging event spanning-tree
- logging event status
- storm-control broadcast level 20.00 10.00
- storm-control multicast level 20.00 10.00
- storm-control action trap
- no cdp enable
- spanning-tree guard loop
- ip dhcp snooping trust
-!
-interface Vlan1
- no ip address
- shutdown
- spanning-tree guard loop
-!
-interface Vlan17
- ip address 10.20.99.22 255.255.252.0
- spanning-tree guard loop
-!
-ip http server
-ip http authentication aaa login-authentication login-RADIUS
-ip http authentication aaa exec-authorization auth-RADIUS-exec
-ip http secure-server
-kron occurrence backup at 17:00 recurring
- policy-list backup
-!
-kron policy-list backup
- cli copy startup-config ftp://192.168.74.5
- cli copy startup-config tftp://dump.kolmar.pro/10.20.99.22
- cli copy vlan.dat tftp://dump.kolmar.pro/10.20.99.22_vlan
-!
-logging trap debugging
-logging host 10.10.0.19 transport udp port 1515
-logging host 10.10.0.142 transport udp port 5014
-snmp-server community public RO
-radius-server host 10.10.0.210 auth-port 1812 acct-port 1813
-radius-server host 10.10.0.212 auth-port 1812 acct-port 1813
-radius-server retransmit 1
-radius-server timeout 2
-radius-server key 7 03085001031E2F445D051F071B05
-no vstack
-!
-line con 0
- exec-timeout 13 0
- privilege level 15
- authorization exec auth-RADIUS-exec
- logging synchronous
- login authentication login-RADIUS
-line vty 0 4
- exec-timeout 60 0
- privilege level 15
- authorization exec auth-RADIUS-exec
- logging synchronous
- login authentication login-RADIUS
- transport input ssh
-line vty 5 15
- authorization exec auth-RADIUS-exec
- login authentication login-RADIUS
-!
-ntp clock-period 36029109
-ntp server 192.168.74.210
-end
+$ terminal length 0
 
 
 
@@ -516,7 +14,7 @@ Image text-base: 0x00003000, data-base: 0x01900000
 ROM: Bootstrap program is C2960 boot loader
 BOOTLDR: C2960 Boot Loader (C2960-HBOOT-M) Version 12.2(53r)SEY3, RELEASE SOFTWARE (fc1)
 
-sw-ner-inag-22-l2 uptime is 3 hours, 42 minutes
+INA-NSWS-05-99-22 uptime is 5 days, 3 hours, 31 minutes
 System returned to ROM by power-on
 System image file is "flash:/c2960-lanbasek9-mz.122-55.SE5/c2960-lanbasek9-mz.122-55.SE5.bin"
 
@@ -570,6 +68,258 @@ Configuration register is 0xF
 
 
 
+$ show lldp neighbors detail
+------------------------------------------------
+Chassis id: d4a0.2a56.f180
+Port id: Fa0/8
+Port Description: FastEthernet0/8
+System Name: INA-NSWR-03-99-20.kolmar.ru
+
+System Description: 
+Cisco IOS Software, C3560 Software (C3560-IPBASEK9-M), Version 12.2(50)SE5, RELEASE SOFTWARE (fc1)
+Technical Support: http://www.cisco.com/techsupport
+Copyright (c) 1986-2010 by Cisco Systems, Inc.
+Compiled Tue 28-Sep-10 13:21 by prod_rel_team
+
+Time remaining: 91 seconds
+System Capabilities: B,R
+Enabled Capabilities: B,R
+Management Addresses:
+    IP: 10.20.99.20
+Auto Negotiation - supported, enabled
+Physical media capabilities:
+    100base-TX(FD)
+    100base-TX(HD)
+    10base-T(FD)
+    10base-T(HD)
+Media Attachment Unit type: 16
+Vlan ID: 1
+
+------------------------------------------------
+Chassis id: 18e8.29cc.9a10
+Port id: 18e8.29cc.9a10
+Port Description: eth0
+System Name: INASHTABOF1SRV
+
+System Description: 
+UAP-AC-LR, 6.6.77.15402
+
+Time remaining: 109 seconds
+System Capabilities: B,W,R,S
+Enabled Capabilities: B,W,R
+Management Addresses:
+    IP: 192.168.1.20
+    IPV6: FE80::1AE8:29FF:FECC:9A10
+Auto Negotiation - not supported
+Physical media capabilities - not advertised
+Media Attachment Unit type - not advertised
+Vlan ID: - not advertised
+
+MED Information:
+
+    MED Codes:
+          (NP) Network Policy, (LI) Location Identification
+          (PS) Power Source Entity, (PD) Power Device
+          (IN) Inventory
+
+    S/W revision: 4.4.153
+    Capabilities: NP, LI, PS, PD, IN
+    Device type: Network connectivity
+    Network Policies - not advertised
+    PD device, Power source: PSE, Power Priority: High, Wattage: 15.4
+    Location - not advertised
+
+------------------------------------------------
+Chassis id: c07c.d1c0.a3a5
+Port id: c07c.d1c0.a3a5
+Port Description - not advertised
+System Name - not advertised
+System Description - not advertised
+
+Time remaining: 3060 seconds
+System Capabilities - not advertised
+Enabled Capabilities - not advertised
+Management Addresses - not advertised
+Auto Negotiation - supported, enabled
+Physical media capabilities:
+    1000baseT(FD)
+Media Attachment Unit type - not advertised
+Vlan ID: - not advertised
+
+MED Information:
+
+    MED Codes:
+          (NP) Network Policy, (LI) Location Identification
+          (PS) Power Source Entity, (PD) Power Device
+          (IN) Inventory
+
+    Inventory information - not advertised
+    Capabilities: 
+    Device type: Endpoint Class I
+    Network Policies - not advertised
+    Power requirements - not advertised
+    Location - not advertised
+
+------------------------------------------------
+Chassis id: d8bb.c15b.45a0
+Port id: d8bb.c15b.45a0
+Port Description - not advertised
+System Name - not advertised
+System Description - not advertised
+
+Time remaining: 3116 seconds
+System Capabilities - not advertised
+Enabled Capabilities - not advertised
+Management Addresses - not advertised
+Auto Negotiation - supported, enabled
+Physical media capabilities:
+    1000baseT(FD)
+Media Attachment Unit type - not advertised
+Vlan ID: - not advertised
+
+MED Information:
+
+    MED Codes:
+          (NP) Network Policy, (LI) Location Identification
+          (PS) Power Source Entity, (PD) Power Device
+          (IN) Inventory
+
+    Inventory information - not advertised
+    Capabilities: 
+    Device type: Endpoint Class I
+    Network Policies - not advertised
+    Power requirements - not advertised
+    Location - not advertised
+
+------------------------------------------------
+Chassis id: 309c.231b.170c
+Port id: 309c.231b.170c
+Port Description - not advertised
+System Name - not advertised
+System Description - not advertised
+
+Time remaining: 3189 seconds
+System Capabilities - not advertised
+Enabled Capabilities - not advertised
+Management Addresses - not advertised
+Auto Negotiation - supported, enabled
+Physical media capabilities:
+    1000baseT(FD)
+Media Attachment Unit type - not advertised
+Vlan ID: - not advertised
+
+MED Information:
+
+    MED Codes:
+          (NP) Network Policy, (LI) Location Identification
+          (PS) Power Source Entity, (PD) Power Device
+          (IN) Inventory
+
+    Inventory information - not advertised
+    Capabilities: 
+    Device type: Endpoint Class I
+    Network Policies - not advertised
+    Power requirements - not advertised
+    Location - not advertised
+
+------------------------------------------------
+Chassis id: 7085.c2aa.217c
+Port id: 7085.c2aa.217c
+Port Description - not advertised
+System Name - not advertised
+System Description - not advertised
+
+Time remaining: 3381 seconds
+System Capabilities - not advertised
+Enabled Capabilities - not advertised
+Management Addresses - not advertised
+Auto Negotiation - supported, enabled
+Physical media capabilities:
+    1000baseT(FD)
+Media Attachment Unit type - not advertised
+Vlan ID: - not advertised
+
+MED Information:
+
+    MED Codes:
+          (NP) Network Policy, (LI) Location Identification
+          (PS) Power Source Entity, (PD) Power Device
+          (IN) Inventory
+
+    Inventory information - not advertised
+    Capabilities: 
+    Device type: Endpoint Class I
+    Network Policies - not advertised
+    Power requirements - not advertised
+    Location - not advertised
+
+------------------------------------------------
+Chassis id: 9c5c.8e7a.1f07
+Port id: 9c5c.8e7a.1f07
+Port Description - not advertised
+System Name - not advertised
+System Description - not advertised
+
+Time remaining: 3395 seconds
+System Capabilities - not advertised
+Enabled Capabilities - not advertised
+Management Addresses - not advertised
+Auto Negotiation - supported, enabled
+Physical media capabilities:
+    1000baseT(FD)
+Media Attachment Unit type - not advertised
+Vlan ID: - not advertised
+
+MED Information:
+
+    MED Codes:
+          (NP) Network Policy, (LI) Location Identification
+          (PS) Power Source Entity, (PD) Power Device
+          (IN) Inventory
+
+    Inventory information - not advertised
+    Capabilities: 
+    Device type: Endpoint Class I
+    Network Policies - not advertised
+    Power requirements - not advertised
+    Location - not advertised
+
+------------------------------------------------
+Chassis id: c07c.d1c0.96ca
+Port id: c07c.d1c0.96ca
+Port Description - not advertised
+System Name - not advertised
+System Description - not advertised
+
+Time remaining: 2677 seconds
+System Capabilities - not advertised
+Enabled Capabilities - not advertised
+Management Addresses - not advertised
+Auto Negotiation - supported, enabled
+Physical media capabilities:
+    1000baseT(FD)
+Media Attachment Unit type - not advertised
+Vlan ID: - not advertised
+
+MED Information:
+
+    MED Codes:
+          (NP) Network Policy, (LI) Location Identification
+          (PS) Power Source Entity, (PD) Power Device
+          (IN) Inventory
+
+    Inventory information - not advertised
+    Capabilities: 
+    Device type: Endpoint Class I
+    Network Policies - not advertised
+    Power requirements - not advertised
+    Location - not advertised
+
+
+Total entries displayed: 8
+
+
+
 $ show cdp neighbors detail
 -------------------------
 Device ID: INA-NSWR-03-99-20.kolmar.ru
@@ -577,7 +327,7 @@ Entry address(es):
   IP address: 10.20.99.20
 Platform: cisco WS-C3560V2-24TS,  Capabilities: Router Switch IGMP 
 Interface: GigabitEthernet0/1,  Port ID (outgoing port): FastEthernet0/8
-Holdtime : 126 sec
+Holdtime : 146 sec
 
 Version :
 Cisco IOS Software, C3560 Software (C3560-IPBASEK9-M), Version 12.2(50)SE5, RELEASE SOFTWARE (fc1)
@@ -595,36 +345,11 @@ Management address(es):
 
 
 
-$ show lldp neighbors detail
-% LLDP is not enabled
+$ show cdp neighbors
+Capability Codes: R - Router, T - Trans Bridge, B - Source Route Bridge
+                  S - Switch, H - Host, I - IGMP, r - Repeater, P - Phone, 
+                  D - Remote, C - CVTA, M - Two-port Mac Relay 
 
-
-$ show interface status
-
-Port      Name               Status       Vlan       Duplex  Speed Type
-Fa0/1                        disabled     1            auto   auto 10/100BaseTX
-Fa0/2                        disabled     1            auto   auto 10/100BaseTX
-Fa0/3                        disabled     1            auto   auto 10/100BaseTX
-Fa0/4                        notconnect   90           auto   auto 10/100BaseTX
-Fa0/5     SWITCH             connected    90         a-full  a-100 10/100BaseTX
-Fa0/6                        connected    90         a-full  a-100 10/100BaseTX
-Fa0/7                        connected    90         a-full  a-100 10/100BaseTX
-Fa0/8     MikroTik_of1       notconnect   52           auto   auto 10/100BaseTX
-Fa0/9                        connected    90         a-full  a-100 10/100BaseTX
-Fa0/10                       connected    90         a-full  a-100 10/100BaseTX
-Fa0/11    ELTEX_of1          connected    52         a-full  a-100 10/100BaseTX
-Fa0/12                       notconnect   90           auto   auto 10/100BaseTX
-Fa0/13                       connected    90         a-full  a-100 10/100BaseTX
-Fa0/14    ARM-Fireprotect    connected    90         a-full  a-100 10/100BaseTX
-Fa0/15                       connected    90         a-full  a-100 10/100BaseTX
-Fa0/16                       connected    90         a-full  a-100 10/100BaseTX
-Fa0/17                       notconnect   90           auto   auto 10/100BaseTX
-Fa0/18                       connected    90         a-full   a-10 10/100BaseTX
-Fa0/19                       connected    90         a-full  a-100 10/100BaseTX
-Fa0/20                       connected    90         a-full  a-100 10/100BaseTX
-Fa0/21    Wi-Fi              notconnect   30           auto   auto 10/100BaseTX
-Fa0/22    SKUD_NC60K         connected    77         a-full  a-100 10/100BaseTX
-Fa0/23    kyosera            notconnect   52           auto   auto 10/100BaseTX
-Fa0/24    SERVER VIDEO       connected    521        a-full  a-100 10/100BaseTX
-Gi0/1     UP 99.20_fa0/8     connected    trunk      a-full  a-100 10/100/1000BaseTX
-Gi0/2     TRUNK 99.23_Gi0/1  notconnect   1            auto   auto Not Present
+Device ID        Local Intrfce     Holdtme    Capability  Platform  Port ID
+INA-NSWR-03-99-20.kolmar.ru
+                 Gig 0/1           146             R S I  WS-C3560V Fas 0/8

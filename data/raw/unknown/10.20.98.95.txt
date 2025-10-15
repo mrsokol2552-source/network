@@ -1,0 +1,57 @@
+
+
+$ terminal length 0
+% Unrecognized command
+INA-NSWS-11-98-95#
+
+
+$ show version
+Active-image: flash://system/images/rs
+  Version: 4.0.24.5
+  Commit: 7dffeace
+  Build: 1 (master)
+  MD5 Digest: 281ee7b6716d8d6bfeabe96ae1981148
+  Date: 21-Apr-2025
+  Time: 17:25:17
+Inactive-image: flash://system/images/_image1.bin
+  Version: 4.0.13.9
+  Commit: d5fcaa6f
+  Build: 1 (master-4.0.13.9)
+  MD5 Digest: 0e8489e2681caaee63cc741f51d18403
+  Date: 29-May-2020
+  Time: 20:58:42
+INA-NSWS-11-98-95#
+
+
+$ show lldp neighbors detail
+Port: gi1/0/11
+Device ID: e4:5a:d4:39:f1:90
+Port ID: gi1/0/11
+Capabilities: Other
+System Name: 
+System description: 
+Port description: 
+Time To Live: 118
+
+
+802.1 PVID: None
+802.1 PPVID: 
+802.1 VLAN:
+802.1 Protocol: 
+
+
+
+
+----------------------------------------------------------------------------------
+
+INA-NSWS-11-98-95#
+
+
+$ show cdp neighbors detail
+% Unrecognized command
+INA-NSWS-11-98-95#
+
+
+$ show cdp neighbors
+% Unrecognized command
+INA-NSWS-11-98-95#
