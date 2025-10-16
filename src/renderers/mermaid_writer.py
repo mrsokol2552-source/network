@@ -154,9 +154,7 @@ def build_edge_line(e: Dict[str, Any]) -> str:
     dst = e.get("dst")
     if not src or not dst:
         return ""  # РїСЂРѕРїСѓСЃС‚РёРј
-    label = e.get("label")
-    if label:
-        return f'{safe_id(src)} -- "{esc(label)}" --- {safe_id(dst)}'
+    # Показываем только факт связи, без текстовой подписи
     return f"{safe_id(src)} --- {safe_id(dst)}"
 
 def class_defs() -> str:

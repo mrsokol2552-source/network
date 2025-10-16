@@ -292,6 +292,26 @@ class Normalizer:
                 out.nodes[hn]["labels"]["extra"].append(f"+{len(labels)-5} VLANs")
 
         # 4) Стабильная сортировка рёбер
+        # Очистка и дедупликация рёбер: только связи между известными устройствами (без Wi‑Fi)
+        cleaned: List[Dict[str, Any]] = []
+        seen: set[Tuple[str, str, str, str]] = set()
+        for e in out.edges:
+            src = e.get("src")
+            dst = e.get("dst")
+            if not src or not dst:
+                continue
+            if src not in out.nodes or dst not in out.nodes:
+                continue
+            if out.nodes[src].get("class") == "wifi" or out.nodes[dst].get("class") == "wifi":
+                continue
+            key = tuple(sorted([src, dst])) + (str(e.get("src_intf") or ""), str(e.get("dst_intf") or ""))
+            if key in seen:
+                continue
+            seen.add(key)
+            cleaned.append(e)
+        out.edges = cleaned
+
+        # Стабильная сортировка рёбер
         def edge_key(e: Dict[str, Any]) -> Tuple:
             return (
                 ((self.inv.devices.get(e["src"]).site or "") if self.inv.devices.get(e["src"]) else ""),

@@ -254,6 +254,24 @@ def step_merge_inventory(base_inv: Path, cli_dir: Path, out_inv: Path, log: logg
     def _short(name: str) -> str:
         return name.split(".")[0] if name else name
 
+    _HN_BAD = {"is", "and", "or", "port", "interface", "unknown", "name", "local", "remote", "ip"}
+    _HN_RX = re.compile(r"^[A-Za-z0-9_.\-]{3,}$")
+
+    def _is_sane_hostname(name: str) -> bool:
+        if not name:
+            return False
+        n = name.strip()
+        if not n or " " in n:
+            return False
+        if n.lower() in _HN_BAD:
+            return False
+        if not _HN_RX.match(n):
+            return False
+        # require at least one letter
+        if not re.search(r"[A-Za-z]", n):
+            return False
+        return True
+
     project_root = Path(__file__).resolve().parents[1]
     raw_dir = project_root / "data" / "raw"
 
@@ -372,7 +390,7 @@ def step_merge_inventory(base_inv: Path, cli_dir: Path, out_inv: Path, log: logg
                 if_name = str(row.get("LocalInterface") or "").strip()
                 peer_name = _short(str(row.get("Neighbor") or "").strip())
                 peer_if = str(row.get("NeighborPort") or "").strip()
-                if if_name and peer_name:
+                if if_name and _is_sane_hostname(peer_name):
                     ifs.append({
                         "name": if_name,
                         "peer": {"hostname": peer_name, "interface": peer_if},
@@ -388,7 +406,7 @@ def step_merge_inventory(base_inv: Path, cli_dir: Path, out_inv: Path, log: logg
                 if_name = str(row.get("LocalInterface") or "").strip()
                 peer_name = _short(str(row.get("Neighbor") or "").strip())
                 peer_if = str(row.get("NeighborPort") or "").strip()
-                if if_name and peer_name:
+                if if_name and _is_sane_hostname(peer_name):
                     ifs.append({
                         "name": if_name,
                         "peer": {"hostname": peer_name, "interface": peer_if},
@@ -403,7 +421,7 @@ def step_merge_inventory(base_inv: Path, cli_dir: Path, out_inv: Path, log: logg
                 if_name = str(row.get("LocalInterface") or "").strip()
                 peer_name = _short(str(row.get("NeighborName") or "").strip())
                 peer_if = str(row.get("NeighborPort") or "").strip()
-                if if_name and peer_name:
+                if if_name and _is_sane_hostname(peer_name):
                     ifs.append({
                         "name": if_name,
                         "peer": {"hostname": peer_name, "interface": peer_if},
@@ -420,7 +438,7 @@ def step_merge_inventory(base_inv: Path, cli_dir: Path, out_inv: Path, log: logg
                 if_name = str(row.get("LocalInterface") or "").strip()
                 peer_name = _short(str(row.get("NeighborName") or "").strip())
                 peer_if = str(row.get("NeighborPort") or "").strip()
-                if if_name and peer_name:
+                if if_name and _is_sane_hostname(peer_name):
                     ifs.append({
                         "name": if_name,
                         "peer": {"hostname": peer_name, "interface": peer_if},
@@ -435,7 +453,7 @@ def step_merge_inventory(base_inv: Path, cli_dir: Path, out_inv: Path, log: logg
                 if_name = str(row.get("LocalInterface") or "").strip()
                 peer_name = _short(str(row.get("NeighborName") or "").strip())
                 peer_if = str(row.get("NeighborPort") or "").strip()
-                if if_name and peer_name:
+                if if_name and _is_sane_hostname(peer_name):
                     ifs.append({
                         "name": if_name,
                         "peer": {"hostname": peer_name, "interface": peer_if},
@@ -452,7 +470,7 @@ def step_merge_inventory(base_inv: Path, cli_dir: Path, out_inv: Path, log: logg
                 if_name = str(row.get("LocalInterface") or "").strip()
                 peer_name = _short(str(row.get("NeighborName") or "").strip())
                 peer_if = str(row.get("NeighborPort") or "").strip()
-                if if_name and peer_name:
+                if if_name and _is_sane_hostname(peer_name):
                     ifs.append({
                         "name": if_name,
                         "peer": {"hostname": peer_name, "interface": peer_if},
@@ -469,7 +487,7 @@ def step_merge_inventory(base_inv: Path, cli_dir: Path, out_inv: Path, log: logg
                 if_name = str(row.get("LocalInterface") or "").strip()
                 peer_name = _short(str(row.get("NeighborName") or "").strip())
                 peer_if = str(row.get("NeighborPort") or "").strip()
-                if if_name and peer_name:
+                if if_name and _is_sane_hostname(peer_name):
                     ifs.append({
                         "name": if_name,
                         "peer": {"hostname": peer_name, "interface": peer_if},
@@ -485,7 +503,7 @@ def step_merge_inventory(base_inv: Path, cli_dir: Path, out_inv: Path, log: logg
                 if_name = str(row.get("LocalInterface") or "").strip()
                 peer_name = _short(str(row.get("NeighborName") or "").strip())
                 peer_if = str(row.get("NeighborPort") or "").strip()
-                if if_name and peer_name:
+                if if_name and _is_sane_hostname(peer_name):
                     ifs.append({
                         "name": if_name,
                         "peer": {"hostname": peer_name, "interface": peer_if},
@@ -500,7 +518,7 @@ def step_merge_inventory(base_inv: Path, cli_dir: Path, out_inv: Path, log: logg
                 if_name = str(row.get("LocalInterface") or "").strip()
                 peer_name = _short(str(row.get("NeighborName") or "").strip())
                 peer_if = str(row.get("NeighborPort") or "").strip()
-                if if_name and peer_name:
+                if if_name and _is_sane_hostname(peer_name):
                     ifs.append({
                         "name": if_name,
                         "peer": {"hostname": peer_name, "interface": peer_if},

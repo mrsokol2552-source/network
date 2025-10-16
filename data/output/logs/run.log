@@ -1,17 +1,17 @@
-===== RUN START 15.10.2025 16:42:24,40 (NO-SCAN) ===== 
+===== RUN START 16.10.2025  9:09:38,95 (NO-SCAN) ===== 
 [INFO] Steps: parse, split, merge, safety, normalize, render
 [INFO] [..............................] 0% (0/6)
 [INFO] Start: parse
 [INFO] [STEP 2] PARSE CLI (TextFSM -> parsed_textfsm.json)
-[INFO] Р—Р°РіСЂСѓР¶РµРЅРѕ С€Р°Р±Р»РѕРЅРѕРІ: vendor=snr count=2
-[INFO] Р—Р°РіСЂСѓР¶РµРЅРѕ С€Р°Р±Р»РѕРЅРѕРІ: vendor=cisco_ios count=6
-[INFO] Р—Р°РіСЂСѓР¶РµРЅРѕ С€Р°Р±Р»РѕРЅРѕРІ: vendor=zes count=3
-[INFO] Р—Р°РіСЂСѓР¶РµРЅРѕ С€Р°Р±Р»РѕРЅРѕРІ: vendor=eltex_mes count=3
-[ERROR] РћС€РёР±РєР° РєРѕРјРїРёР»СЏС†РёРё С€Р°Р±Р»РѕРЅР° templates\textfsm\dlink\dlink_show_config_header.template: Duplicate or invalid variable substitution: '^#\s*(?<Model>DES-[0-9A-Za-z\-]+|DGS-[0-9A-Za-z\-]+|[A-Za-z0-9\-]+)\s+.*Switch\s*$'. Line: 5.
-[INFO] Р—Р°РіСЂСѓР¶РµРЅРѕ С€Р°Р±Р»РѕРЅРѕРІ: vendor=dlink count=2
 [INFO] Р—Р°РіСЂСѓР¶РµРЅРѕ С€Р°Р±Р»РѕРЅРѕРІ: vendor=osnova count=2
+[INFO] Р—Р°РіСЂСѓР¶РµРЅРѕ С€Р°Р±Р»РѕРЅРѕРІ: vendor=eltex_mes count=3
+[INFO] Р—Р°РіСЂСѓР¶РµРЅРѕ С€Р°Р±Р»РѕРЅРѕРІ: vendor=zes count=3
+[INFO] Р—Р°РіСЂСѓР¶РµРЅРѕ С€Р°Р±Р»РѕРЅРѕРІ: vendor=cisco_ios count=6
 [ERROR] РћС€РёР±РєР° РєРѕРјРїРёР»СЏС†РёРё С€Р°Р±Р»РѕРЅР° templates\textfsm\nis\nis_show_lldp_neighbors.template: No Value definitions found.
 [INFO] Р—Р°РіСЂСѓР¶РµРЅРѕ С€Р°Р±Р»РѕРЅРѕРІ: vendor=nis count=2
+[INFO] Р—Р°РіСЂСѓР¶РµРЅРѕ С€Р°Р±Р»РѕРЅРѕРІ: vendor=snr count=2
+[ERROR] РћС€РёР±РєР° РєРѕРјРїРёР»СЏС†РёРё С€Р°Р±Р»РѕРЅР° templates\textfsm\dlink\dlink_show_config_header.template: Duplicate or invalid variable substitution: '^#\s*(?<Model>DES-[0-9A-Za-z\-]+|DGS-[0-9A-Za-z\-]+|[A-Za-z0-9\-]+)\s+.*Switch\s*$'. Line: 5.
+[INFO] Р—Р°РіСЂСѓР¶РµРЅРѕ С€Р°Р±Р»РѕРЅРѕРІ: vendor=dlink count=2
 [INFO] textfsm_parse_progress: 10/264
 [INFO] textfsm_parse_progress: 20/264
 [INFO] textfsm_parse_progress: 30/264
