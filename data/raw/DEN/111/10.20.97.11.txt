@@ -13,9 +13,9 @@ Compiled Thu 14-May-15 03:20 by prod_rel_team
 ROM: Bootstrap program is C2960C boot loader
 BOOTLDR: C2960C Boot Loader (C2960c405-HBOOT-M) Version 12.2(55r)EX9, RELEASE SOFTWARE (fc1)
 
-DEN-NSWS-111-97-11 uptime is 10 weeks, 2 days, 23 hours, 51 minutes
+DEN-NSWS-111-97-11 uptime is 4 days, 22 hours, 16 minutes
 System returned to ROM by power-on
-System restarted at 16:42:25 YAKT Sun Aug 3 2025
+System restarted at 14:48:09 YAKT Wed Oct 22 2025
 System image file is "flash:/c2960c405-universalk9-mz.150-2.SE8/c2960c405-universalk9-mz.150-2.SE8.bin"
 
 
@@ -83,7 +83,7 @@ Entry address(es):
   IP address: 10.20.99.151
 Platform: Cisco SG300-10SFP (PID:SG300-10SFP-K9)-,  Capabilities: Switch IGMP 
 Interface: GigabitEthernet0/1,  Port ID (outgoing port): gi5
-Holdtime : 156 sec
+Holdtime : 151 sec
 
 Version :
 1.4.11.5
@@ -93,7 +93,7 @@ Duplex: full
 Application: VoIP using vlan 13
 Power Available TLV:
 
-    Power request id: 0, Power management id: 14337, Power available: 0, Power management level: -1
+    Power request id: 0, Power management id: 32619, Power available: 0, Power management level: -1
 Management address(es): 
 
 
@@ -104,4 +104,4 @@ Capability Codes: R - Router, T - Trans Bridge, B - Source Route Bridge
                   D - Remote, C - CVTA, M - Two-port Mac Relay 
 
 Device ID        Local Intrfce     Holdtme    Capability  Platform  Port ID
-b4a8b9cbcee1     Gig 0/1           156              S I   SG300-10S gi5
+b4a8b9cbcee1     Gig 0/1           151              S I   SG300-10S gi5

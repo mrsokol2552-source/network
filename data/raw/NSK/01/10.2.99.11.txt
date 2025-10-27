@@ -13,7 +13,7 @@ Compiled Wed 12-Jul-17 13:06 by prod_rel_team
 ROM: Bootstrap program is C2960X boot loader
 BOOTLDR: C2960X Boot Loader (C2960X-HBOOT-M) Version 15.2(3r)E1, RELEASE SOFTWARE (fc1)
 
-NSK-NSWS-01-99-11 uptime is 6 weeks, 3 days, 20 hours, 24 minutes
+NSK-NSWS-01-99-11 uptime is 8 weeks, 1 day, 16 hours, 53 minutes
 System returned to ROM by power-on
 System restarted at 11:14:27 UTC Sat Aug 30 2025
 System image file is "flash:/c2960x-universalk9-mz.152-2.E7/c2960x-universalk9-mz.152-2.E7.bin"
@@ -78,7 +78,7 @@ Local Intf: Gi1/0/35
 Chassis id: cc36.cf60.ff00
 Port id: Gi1/0/23
 Port Description: GigabitEthernet1/0/23
-System Name: NSK-NSWR-01-99-1.kolmar.local
+System Name: NSK-NSWR-01-99-1.kolmar.ru
 
 System Description: 
 Cisco IOS Software [Cupertino], Catalyst L3 Switch Software (CAT9K_LITE_IOSXE), Version 17.9.4, RELEASE SOFTWARE (fc5)
@@ -86,7 +86,7 @@ Technical Support: http://www.cisco.com/techsupport
 Copyright (c) 1986-2023 by Cisco Systems, Inc.
 Compiled Wed 26-Jul-23 10:43 by mcpre
 
-Time remaining: 107 seconds
+Time remaining: 103 seconds
 System Capabilities: B,R
 Enabled Capabilities: B,R
 Management Addresses:
@@ -106,12 +106,12 @@ Local Intf: Gi1/0/2
 Chassis id: 445b.ed11.84d7
 Port id: 1
 Port Description: 1
-System Name: NSK-NSWS-01-20-252
+System Name: NSK-NSWS-01-99-13
 
 System Description: 
 Aruba Instant On 1930 24G 4SFP/SFP+ Switch JL682A, InstantOn_1930_1.0.2.0 (125), Linux 4.4.120, U-Boot 2013.01 (V1.0.1.28)
 
-Time remaining: 110 seconds
+Time remaining: 93 seconds
 System Capabilities: B,R
 Enabled Capabilities: B,R
 Management Addresses:
@@ -130,7 +130,7 @@ Port Description - not advertised
 System Name - not advertised
 System Description - not advertised
 
-Time remaining: 3540 seconds
+Time remaining: 2663 seconds
 System Capabilities - not advertised
 Enabled Capabilities - not advertised
 Management Addresses - not advertised
@@ -162,7 +162,39 @@ Port Description - not advertised
 System Name - not advertised
 System Description - not advertised
 
-Time remaining: 2811 seconds
+Time remaining: 2711 seconds
+System Capabilities - not advertised
+Enabled Capabilities - not advertised
+Management Addresses - not advertised
+Auto Negotiation - supported, enabled
+Physical media capabilities:
+    1000baseT(FD)
+Media Attachment Unit type - not advertised
+Vlan ID: - not advertised
+
+MED Information:
+
+    MED Codes:
+          (NP) Network Policy, (LI) Location Identification
+          (PS) Power Source Entity, (PD) Power Device
+          (IN) Inventory
+
+    Inventory information - not advertised
+    Capabilities: 
+    Device type: Endpoint Class I
+    Network Policies - not advertised
+    Power requirements - not advertised
+    Location - not advertised
+
+------------------------------------------------
+Local Intf: Gi1/0/13
+Chassis id: b06e.bfc5.11d7
+Port id: b06e.bfc5.11d7
+Port Description - not advertised
+System Name - not advertised
+System Description - not advertised
+
+Time remaining: 2888 seconds
 System Capabilities - not advertised
 Enabled Capabilities - not advertised
 Management Addresses - not advertised
@@ -194,7 +226,7 @@ Port Description - not advertised
 System Name - not advertised
 System Description - not advertised
 
-Time remaining: 2816 seconds
+Time remaining: 3112 seconds
 System Capabilities - not advertised
 Enabled Capabilities - not advertised
 Management Addresses - not advertised
@@ -219,18 +251,37 @@ MED Information:
     Location - not advertised
 
 
-Total entries displayed: 5
+Total entries displayed: 6
 
 
 
 $ show cdp neighbors detail
 -------------------------
-Device ID: NSK-NSWR-01-99-1.kolmar.local
+Device ID: Switch
+Entry address(es): 
+Platform: cisco WS-C3560CX-12PC-S,  Capabilities: Switch IGMP 
+Interface: GigabitEthernet1/0/6,  Port ID (outgoing port): GigabitEthernet0/13
+Holdtime : 126 sec
+
+Version :
+Cisco IOS Software, C3560CX Software (C3560CX-UNIVERSALK9-M), Version 15.2(4)E6, RELEASE SOFTWARE (fc4)
+Technical Support: http://www.cisco.com/techsupport
+Copyright (c) 1986-2018 by Cisco Systems, Inc.
+Compiled Thu 05-Apr-18 03:17 by prod_rel_team
+
+advertisement version: 2
+Protocol Hello:  OUI=0x00000C, Protocol ID=0x0112; payload len=27, value=00000000FFFFFFFF010231FF000000000000C064E48F9380FF0000
+VTP Management Domain: ''
+Native VLAN: 1 (Mismatch)
+Duplex: full
+
+-------------------------
+Device ID: NSK-NSWR-01-99-1.kolmar.ru
 Entry address(es): 
   IP address: 10.2.11.1
 Platform: cisco C9200L-24P-4G,  Capabilities: Router Switch IGMP 
 Interface: GigabitEthernet1/0/35,  Port ID (outgoing port): GigabitEthernet1/0/23
-Holdtime : 161 sec
+Holdtime : 139 sec
 
 Version :
 Cisco IOS Software [Cupertino], Catalyst L3 Switch Software (CAT9K_LITE_IOSXE), Version 17.9.4, RELEASE SOFTWARE (fc5)
@@ -245,25 +296,6 @@ Duplex: full
 Management address(es): 
   IP address: 10.2.11.1
 
--------------------------
-Device ID: Switch
-Entry address(es): 
-Platform: cisco WS-C3560CX-12PC-S,  Capabilities: Switch IGMP 
-Interface: GigabitEthernet1/0/6,  Port ID (outgoing port): GigabitEthernet0/13
-Holdtime : 142 sec
-
-Version :
-Cisco IOS Software, C3560CX Software (C3560CX-UNIVERSALK9-M), Version 15.2(4)E6, RELEASE SOFTWARE (fc4)
-Technical Support: http://www.cisco.com/techsupport
-Copyright (c) 1986-2018 by Cisco Systems, Inc.
-Compiled Thu 05-Apr-18 03:17 by prod_rel_team
-
-advertisement version: 2
-Protocol Hello:  OUI=0x00000C, Protocol ID=0x0112; payload len=27, value=00000000FFFFFFFF010231FF000000000000C064E48F9380FF0000
-VTP Management Domain: ''
-Native VLAN: 1 (Mismatch)
-Duplex: full
-
 
 Total cdp entries displayed : 2
 
@@ -274,8 +306,8 @@ Capability Codes: R - Router, T - Trans Bridge, B - Source Route Bridge
                   D - Remote, C - CVTA, M - Two-port Mac Relay 
 
 Device ID        Local Intrfce     Holdtme    Capability  Platform  Port ID
-NSK-NSWR-01-99-1.kolmar.local
-                 Gig 1/0/35        161             R S I  C9200L-24 Gig 1/0/23
-Switch           Gig 1/0/6         141              S I   WS-C3560C Gig 0/13
+Switch           Gig 1/0/6         126              S I   WS-C3560C Gig 0/13
+NSK-NSWR-01-99-1.kolmar.ru
+                 Gig 1/0/35        138             R S I  C9200L-24 Gig 1/0/23
 
 Total cdp entries displayed : 2

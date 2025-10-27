@@ -8,7 +8,7 @@
       {
         "Neighbor": "NER-NSWR-01-99-1",
         "LocalInterface": "uptime is",
-        "NeighborPort": "1 day,",
+        "NeighborPort": "6 days,",
         "_source_file": "C:\\Users\\zhiltsov.aa\\Desktop\\net-auto-mermaid\\data\\raw\\NER\\01\\10.20.99.1.txt",
         "_template": "cisco_ios_show_cdp_neighbors.template"
       },
@@ -60,34 +60,11 @@
         "_template": "cisco_ios_show_cdp_neighbors_detail.template"
       }
     ],
-    "cisco_ios_show_lldp_neighbors_detail": [
-      {
-        "LocalInterface": "",
-        "NeighborName": "",
-        "NeighborPort": "Twe1/0/5",
-        "_source_file": "C:\\Users\\zhiltsov.aa\\Desktop\\net-auto-mermaid\\data\\raw\\NER\\01\\10.20.99.1.txt",
-        "_template": "cisco_ios_show_lldp_neighbors_detail.template"
-      },
-      {
-        "LocalInterface": "",
-        "NeighborName": "NER-NSWR-01-96-1",
-        "NeighborPort": "Gi0/24",
-        "_source_file": "C:\\Users\\zhiltsov.aa\\Desktop\\net-auto-mermaid\\data\\raw\\NER\\01\\10.20.99.1.txt",
-        "_template": "cisco_ios_show_lldp_neighbors_detail.template"
-      },
-      {
-        "LocalInterface": "",
-        "NeighborName": "NER-NSWR-01-99-3.kolmar",
-        "NeighborPort": "",
-        "_source_file": "C:\\Users\\zhiltsov.aa\\Desktop\\net-auto-mermaid\\data\\raw\\NER\\01\\10.20.99.1.txt",
-        "_template": "cisco_ios_show_lldp_neighbors_detail.template"
-      }
-    ],
     "cisco_ios_show_version": [
       {
         "Version": "15.0(2)SE6",
         "Model": "",
-        "Uptime": "13 weeks, 1 day, 22 hours, 58 minutes",
+        "Uptime": "14 weeks, 6 days, 19 hours, 28 minutes",
         "_source_file": "C:\\Users\\zhiltsov.aa\\Desktop\\net-auto-mermaid\\data\\raw\\NER\\01\\10.20.99.1.txt",
         "_template": "cisco_ios_show_version.template"
       },

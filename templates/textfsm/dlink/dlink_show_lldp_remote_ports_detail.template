@@ -1,9 +1,11 @@
-Value LocalInterface (\S+)
+Value Filldown LocalInterface (\d+)
 Value NeighborName (.*)
-Value NeighborPort (.*)
+Value NeighborPort (.+)
+
+# D-Link DES/DGS: "show lldp remote_ports" per-port blocks
 
 Start
-  ^(?:Local\s+)?Port\s*:\s*${LocalInterface}\s*
-  ^System\s+Name\s*:\s*${NeighborName}\s*
-  ^Port\s+ID\s*:\s*${NeighborPort}\s* -> Record
-  ^\s*$$ -> Start
+  ^\s*Port\s+ID\s*:\s*${LocalInterface}\s*$ -> Start
+  ^\s*System\s+Name\s*:\s*${NeighborName}\s*
+  ^\s*Port\s+ID\s*:\s*${NeighborPort}\s* -> Record
+  ^.* -> Start

@@ -13,7 +13,7 @@ Compiled Wed 12-Jul-17 15:29 by prod_rel_team
 ROM: Bootstrap program is C2960 boot loader
 BOOTLDR: C2960 Boot Loader (C2960-HBOOT-M) Version 15.0(2r)EZ1, RELEASE SOFTWARE (fc1)
 
-NER-NSWS-01-99-74 uptime is 13 weeks, 1 day, 22 hours, 53 minutes
+NER-NSWS-01-99-74 uptime is 14 weeks, 6 days, 19 hours, 23 minutes
 System returned to ROM by power-on
 System image file is "flash:/c2960-lanbasek9-mz.152-2.E7/c2960-lanbasek9-mz.152-2.E7.bin"
 Last reload reason: power-on
@@ -81,7 +81,7 @@ System Name: X1S/X1SP
 System Description: 
 Version:2.4.12.2
 
-Time remaining: 24 seconds
+Time remaining: 35 seconds
 System Capabilities: B,T
 Enabled Capabilities: B,T
 Management Addresses:
@@ -159,7 +159,7 @@ System Name: X1S/X1SP
 System Description: 
 Version:2.4.12.2
 
-Time remaining: 12 seconds
+Time remaining: 8 seconds
 System Capabilities: B,T
 Enabled Capabilities: B,T
 Management Addresses:
@@ -198,7 +198,7 @@ System Name: X1S/X1SP
 System Description: 
 Version:2.4.12.2
 
-Time remaining: 13 seconds
+Time remaining: 51 seconds
 System Capabilities: B,T
 Enabled Capabilities: B,T
 Management Addresses:
@@ -228,6 +228,45 @@ MED Information:
     Location - not advertised
 
 ------------------------------------------------
+Local Intf: Fa0/3
+Chassis id: 10.13.0.249
+Port id: 0c38.3e4e.35eb
+Port Description: WAN Port
+System Name: X210-V2
+
+System Description: 
+Version:2.12.20
+
+Time remaining: 146 seconds
+System Capabilities: B,T
+Enabled Capabilities: B,T
+Management Addresses:
+    IP: 10.13.0.249
+Auto Negotiation - not supported
+Physical media capabilities - not advertised
+Media Attachment Unit type - not advertised
+Vlan ID: - not advertised
+
+MED Information:
+
+    MED Codes:
+          (NP) Network Policy, (LI) Location Identification
+          (PS) Power Source Entity, (PD) Power Device
+          (IN) Inventory
+
+    H/W revision: V2.0
+    S/W revision: 2.12.20
+    Serial number: 00100400FV02001000000c383e4e35eb
+    Manufacturer: Fanvil
+    Model: X210-V2
+    Capabilities: NP
+    Device type: Endpoint Class III
+    Network Policy(Voice): VLAN 13, tagged, Layer-2 priority: 0, DSCP: 0
+    Network Policy(Voice Signal): VLAN 0, untagged, Layer-2 priority: 0, DSCP: 0
+    PD device, Power source: PSE, Power Priority: High, Wattage: 7.3
+    Location - not advertised
+
+------------------------------------------------
 Local Intf: Fa0/24
 Chassis id: 10.13.1.180
 Port id: 0c38.3e10.7588
@@ -237,7 +276,7 @@ System Name: X1S/X1SP
 System Description: 
 Version:2.4.12.2
 
-Time remaining: 11 seconds
+Time remaining: 36 seconds
 System Capabilities: B,T
 Enabled Capabilities: B,T
 Management Addresses:
@@ -276,7 +315,7 @@ System Name: X1S/X1SP
 System Description: 
 Version:2.4.12.2
 
-Time remaining: 5 seconds
+Time remaining: 12 seconds
 System Capabilities: B,T
 Enabled Capabilities: B,T
 Management Addresses:
@@ -318,7 +357,7 @@ Technical Support: http://www.cisco.com/techsupport
 Copyright (c) 1986-2021 by Cisco Systems, Inc.
 Compiled Tue 19-Oct-21 03:16 by mcpr
 
-Time remaining: 96 seconds
+Time remaining: 107 seconds
 System Capabilities: B,R
 Enabled Capabilities: B,R
 Management Addresses:
@@ -343,7 +382,7 @@ System Name: X1S/X1SP
 System Description: 
 Version:2.4.12.2
 
-Time remaining: 23 seconds
+Time remaining: 5 seconds
 System Capabilities: B,T
 Enabled Capabilities: B,T
 Management Addresses:
@@ -382,7 +421,7 @@ System Name: X1S/X1SP
 System Description: 
 Version:2.4.12.2
 
-Time remaining: 32 seconds
+Time remaining: 58 seconds
 System Capabilities: B,T
 Enabled Capabilities: B,T
 Management Addresses:
@@ -419,7 +458,7 @@ Port Description - not advertised
 System Name - not advertised
 System Description - not advertised
 
-Time remaining: 3426 seconds
+Time remaining: 3554 seconds
 System Capabilities - not advertised
 Enabled Capabilities - not advertised
 Management Addresses - not advertised
@@ -451,39 +490,7 @@ Port Description - not advertised
 System Name - not advertised
 System Description - not advertised
 
-Time remaining: 2929 seconds
-System Capabilities - not advertised
-Enabled Capabilities - not advertised
-Management Addresses - not advertised
-Auto Negotiation - supported, enabled
-Physical media capabilities:
-    1000baseT(FD)
-Media Attachment Unit type - not advertised
-Vlan ID: - not advertised
-
-MED Information:
-
-    MED Codes:
-          (NP) Network Policy, (LI) Location Identification
-          (PS) Power Source Entity, (PD) Power Device
-          (IN) Inventory
-
-    Inventory information - not advertised
-    Capabilities: 
-    Device type: Endpoint Class I
-    Network Policies - not advertised
-    Power requirements - not advertised
-    Location - not advertised
-
-------------------------------------------------
-Local Intf: Fa0/14
-Chassis id: e0d5.5e7e.9182
-Port id: e0d5.5e7e.9182
-Port Description - not advertised
-System Name - not advertised
-System Description - not advertised
-
-Time remaining: 3305 seconds
+Time remaining: 3322 seconds
 System Capabilities - not advertised
 Enabled Capabilities - not advertised
 Management Addresses - not advertised
@@ -515,7 +522,7 @@ Port Description - not advertised
 System Name - not advertised
 System Description - not advertised
 
-Time remaining: 2947 seconds
+Time remaining: 3465 seconds
 System Capabilities - not advertised
 Enabled Capabilities - not advertised
 Management Addresses - not advertised
@@ -547,71 +554,7 @@ Port Description - not advertised
 System Name - not advertised
 System Description - not advertised
 
-Time remaining: 2935 seconds
-System Capabilities - not advertised
-Enabled Capabilities - not advertised
-Management Addresses - not advertised
-Auto Negotiation - supported, enabled
-Physical media capabilities:
-    1000baseT(FD)
-Media Attachment Unit type - not advertised
-Vlan ID: - not advertised
-
-MED Information:
-
-    MED Codes:
-          (NP) Network Policy, (LI) Location Identification
-          (PS) Power Source Entity, (PD) Power Device
-          (IN) Inventory
-
-    Inventory information - not advertised
-    Capabilities: 
-    Device type: Endpoint Class I
-    Network Policies - not advertised
-    Power requirements - not advertised
-    Location - not advertised
-
-------------------------------------------------
-Local Intf: Fa0/48
-Chassis id: 9c6b.0011.0b2a
-Port id: 9c6b.0011.0b2a
-Port Description - not advertised
-System Name - not advertised
-System Description - not advertised
-
-Time remaining: 3116 seconds
-System Capabilities - not advertised
-Enabled Capabilities - not advertised
-Management Addresses - not advertised
-Auto Negotiation - supported, enabled
-Physical media capabilities:
-    1000baseT(FD)
-Media Attachment Unit type - not advertised
-Vlan ID: - not advertised
-
-MED Information:
-
-    MED Codes:
-          (NP) Network Policy, (LI) Location Identification
-          (PS) Power Source Entity, (PD) Power Device
-          (IN) Inventory
-
-    Inventory information - not advertised
-    Capabilities: 
-    Device type: Endpoint Class I
-    Network Policies - not advertised
-    Power requirements - not advertised
-    Location - not advertised
-
-------------------------------------------------
-Local Intf: Fa0/25
-Chassis id: 7085.c2aa.2825
-Port id: 7085.c2aa.2825
-Port Description - not advertised
-System Name - not advertised
-System Description - not advertised
-
-Time remaining: 3183 seconds
+Time remaining: 3569 seconds
 System Capabilities - not advertised
 Enabled Capabilities - not advertised
 Management Addresses - not advertised
@@ -643,7 +586,39 @@ Port Description - not advertised
 System Name - not advertised
 System Description - not advertised
 
-Time remaining: 2899 seconds
+Time remaining: 3185 seconds
+System Capabilities - not advertised
+Enabled Capabilities - not advertised
+Management Addresses - not advertised
+Auto Negotiation - supported, enabled
+Physical media capabilities:
+    1000baseT(FD)
+Media Attachment Unit type - not advertised
+Vlan ID: - not advertised
+
+MED Information:
+
+    MED Codes:
+          (NP) Network Policy, (LI) Location Identification
+          (PS) Power Source Entity, (PD) Power Device
+          (IN) Inventory
+
+    Inventory information - not advertised
+    Capabilities: 
+    Device type: Endpoint Class I
+    Network Policies - not advertised
+    Power requirements - not advertised
+    Location - not advertised
+
+------------------------------------------------
+Local Intf: Fa0/13
+Chassis id: b42e.992f.ffc9
+Port id: b42e.992f.ffc9
+Port Description - not advertised
+System Name - not advertised
+System Description - not advertised
+
+Time remaining: 3313 seconds
 System Capabilities - not advertised
 Enabled Capabilities - not advertised
 Management Addresses - not advertised
@@ -668,18 +643,31 @@ MED Information:
     Location - not advertised
 
 
-Total entries displayed: 17
+Total entries displayed: 16
 
 
 
 $ show cdp neighbors detail
+-------------------------
+Device ID: X210-V2
+Entry address(es): 
+  IP address: 10.13.0.249
+Platform: X210-V2,  Capabilities: Host Phone 
+Interface: FastEthernet0/3,  Port ID (outgoing port): WAN PORT
+Holdtime : 138 sec
+
+Version :
+2.12.20
+
+advertisement version: 2
+
 -------------------------
 Device ID: NER-NSWR-01-96-4.kolmar.ru
 Entry address(es): 
   IP address: 10.20.96.4
 Platform: cisco C9200-24P,  Capabilities: Router Switch IGMP 
 Interface: GigabitEthernet0/1,  Port ID (outgoing port): GigabitEthernet1/0/1
-Holdtime : 148 sec
+Holdtime : 132 sec
 
 Version :
 Cisco IOS Software [Amsterdam], Catalyst L3 Switch Software (CAT9K_LITE_IOSXE), Version 17.3.4b, RELEASE SOFTWARE (fc1)
@@ -700,7 +688,7 @@ Entry address(es):
   IP address: 10.13.0.99
 Platform: X1S/X1SP,  Capabilities: Host Phone 
 Interface: FastEthernet0/14,  Port ID (outgoing port): WAN PORT
-Holdtime : 171 sec
+Holdtime : 154 sec
 
 Version :
 2.4.12.2
@@ -713,7 +701,7 @@ Entry address(es):
   IP address: 10.13.1.174
 Platform: X1S/X1SP,  Capabilities: Host Phone 
 Interface: FastEthernet0/13,  Port ID (outgoing port): WAN PORT
-Holdtime : 172 sec
+Holdtime : 171 sec
 
 Version :
 2.4.12.2
@@ -726,7 +714,7 @@ Entry address(es):
   IP address: 10.13.1.140
 Platform: X1S/X1SP,  Capabilities: Host Phone 
 Interface: FastEthernet0/15,  Port ID (outgoing port): WAN PORT
-Holdtime : 122 sec
+Holdtime : 156 sec
 
 Version :
 2.4.12.2
@@ -739,7 +727,7 @@ Entry address(es):
   IP address: 10.13.0.78
 Platform: X1S/X1SP,  Capabilities: Host Phone 
 Interface: FastEthernet0/48,  Port ID (outgoing port): WAN PORT
-Holdtime : 122 sec
+Holdtime : 124 sec
 
 Version :
 2.4.12.2
@@ -752,7 +740,7 @@ Entry address(es):
   IP address: 10.13.0.72
 Platform: X1S/X1SP,  Capabilities: Host Phone 
 Interface: FastEthernet0/20,  Port ID (outgoing port): WAN PORT
-Holdtime : 162 sec
+Holdtime : 129 sec
 
 Version :
 2.4.12.2
@@ -765,7 +753,7 @@ Entry address(es):
   IP address: 10.13.1.180
 Platform: X1S/X1SP,  Capabilities: Host Phone 
 Interface: FastEthernet0/24,  Port ID (outgoing port): WAN PORT
-Holdtime : 166 sec
+Holdtime : 120 sec
 
 Version :
 2.4.12.2
@@ -778,7 +766,7 @@ Entry address(es):
   IP address: 10.13.1.27
 Platform: X1S/X1SP,  Capabilities: Host Phone 
 Interface: FastEthernet0/25,  Port ID (outgoing port): WAN PORT
-Holdtime : 130 sec
+Holdtime : 176 sec
 
 Version :
 2.4.12.2
@@ -791,7 +779,7 @@ Entry address(es):
   IP address: 10.13.1.219
 Platform: X1S/X1SP,  Capabilities: Host Phone 
 Interface: FastEthernet0/35,  Port ID (outgoing port): WAN PORT
-Holdtime : 178 sec
+Holdtime : 129 sec
 
 Version :
 2.4.12.2
@@ -799,7 +787,7 @@ Version :
 advertisement version: 2
 
 
-Total cdp entries displayed : 9
+Total cdp entries displayed : 10
 
 
 $ show cdp neighbors
@@ -808,15 +796,16 @@ Capability Codes: R - Router, T - Trans Bridge, B - Source Route Bridge
                   D - Remote, C - CVTA, M - Two-port Mac Relay 
 
 Device ID        Local Intrfce     Holdtme    Capability  Platform  Port ID
+X210-V2          Fas 0/3           138              H P   X210-V2   WAN PORT
 NER-NSWR-01-96-4.kolmar.ru
-                 Gig 0/1           148             R S I  C9200-24P Gig 1/0/1
-X1S/X1SP         Fas 0/14          171              H P   X1S/X1SP  WAN PORT
-X1S/X1SP         Fas 0/13          171              H P   X1S/X1SP  WAN PORT
-X1S/X1SP         Fas 0/15          122              H P   X1S/X1SP  WAN PORT
-X1S/X1SP         Fas 0/48          122              H P   X1S/X1SP  WAN PORT
-X1S/X1SP         Fas 0/20          162              H P   X1S/X1SP  WAN PORT
-X1S/X1SP         Fas 0/24          166              H P   X1S/X1SP  WAN PORT
-X1S/X1SP         Fas 0/25          130              H P   X1S/X1SP  WAN PORT
-X1S/X1SP         Fas 0/35          178              H P   X1S/X1SP  WAN PORT
+                 Gig 0/1           132             R S I  C9200-24P Gig 1/0/1
+X1S/X1SP         Fas 0/14          154              H P   X1S/X1SP  WAN PORT
+X1S/X1SP         Fas 0/13          170              H P   X1S/X1SP  WAN PORT
+X1S/X1SP         Fas 0/15          156              H P   X1S/X1SP  WAN PORT
+X1S/X1SP         Fas 0/48          124              H P   X1S/X1SP  WAN PORT
+X1S/X1SP         Fas 0/20          129              H P   X1S/X1SP  WAN PORT
+X1S/X1SP         Fas 0/24          119              H P   X1S/X1SP  WAN PORT
+X1S/X1SP         Fas 0/25          176              H P   X1S/X1SP  WAN PORT
+X1S/X1SP         Fas 0/35          129              H P   X1S/X1SP  WAN PORT
 
-Total cdp entries displayed : 9
+Total cdp entries displayed : 10

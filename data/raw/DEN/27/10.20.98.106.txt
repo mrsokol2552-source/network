@@ -13,7 +13,7 @@ Compiled Thu 05-Apr-18 03:25 by prod_rel_team
 ROM: Bootstrap program is C2960CX boot loader
 BOOTLDR: C2960CX Boot Loader (C2960CX-HBOOT-M) Version 15.2(4r)E5, RELEASE SOFTWARE (fc4)
 
-DEN-NSWS-27-98-106 uptime is 1 year, 16 weeks, 1 day, 6 hours, 27 minutes
+DEN-NSWS-27-98-106 uptime is 1 year, 17 weeks, 6 days, 2 hours, 56 minutes
 System returned to ROM by power-on
 System restarted at 18:13:42 YAKT Mon Jun 24 2024
 System image file is "flash:/c2960cx-universalk9-mz.152-4.E6/c2960cx-universalk9-mz.152-4.E6.bin"
@@ -80,7 +80,7 @@ Entry address(es):
   IP address: 10.20.98.105
 Platform: cisco WS-C2960C-8TC-L,  Capabilities: Switch IGMP 
 Interface: GigabitEthernet0/11,  Port ID (outgoing port): GigabitEthernet0/2
-Holdtime : 155 sec
+Holdtime : 162 sec
 
 Version :
 Cisco IOS Software, C2960C Software (C2960c405-UNIVERSALK9-M), Version 15.0(2)SE8, RELEASE SOFTWARE (fc1)
@@ -102,7 +102,7 @@ Entry address(es):
   IP address: 10.20.98.108
 Platform: cisco WS-C2960CX-8PC-L,  Capabilities: Switch IGMP 
 Interface: GigabitEthernet0/12,  Port ID (outgoing port): GigabitEthernet0/11
-Holdtime : 148 sec
+Holdtime : 176 sec
 
 Version :
 Cisco IOS Software, C2960CX Software (C2960CX-UNIVERSALK9-M), Version 15.2(7)E, RELEASE SOFTWARE (fc3)
@@ -128,8 +128,8 @@ Capability Codes: R - Router, T - Trans Bridge, B - Source Route Bridge
 
 Device ID        Local Intrfce     Holdtme    Capability  Platform  Port ID
 DEN-NSWS-28-98-105.kolmar.ru
-                 Gig 0/11          154              S I   WS-C2960C Gig 0/2
+                 Gig 0/11          162              S I   WS-C2960C Gig 0/2
 DEN-NSWS-27-98-108.kolmar.ru
-                 Gig 0/12          148              S I   WS-C2960C Gig 0/11
+                 Gig 0/12          176              S I   WS-C2960C Gig 0/11
 
 Total cdp entries displayed : 2

@@ -31,7 +31,7 @@ Capabilities: Other
 System Name: 
 System description: 
 Port description: 
-Time To Live: 118
+Time To Live: 116
 
 
 802.1 PVID: None

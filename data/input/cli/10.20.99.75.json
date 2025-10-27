@@ -8,7 +8,7 @@
       {
         "Neighbor": "NER-NSWS-09-99-75",
         "LocalInterface": "uptime is",
-        "NeighborPort": "5 days,",
+        "NeighborPort": "3 days,",
         "_source_file": "C:\\Users\\zhiltsov.aa\\Desktop\\net-auto-mermaid\\data\\raw\\NER\\09\\10.20.99.75.txt",
         "_template": "cisco_ios_show_cdp_neighbors.template"
       },
@@ -30,41 +30,11 @@
         "_template": "cisco_ios_show_cdp_neighbors_detail.template"
       }
     ],
-    "cisco_ios_show_lldp_neighbors_detail": [
-      {
-        "LocalInterface": "Gi0/2",
-        "NeighborName": "",
-        "NeighborPort": "Gi1/0/6",
-        "_source_file": "C:\\Users\\zhiltsov.aa\\Desktop\\net-auto-mermaid\\data\\raw\\NER\\09\\10.20.99.75.txt",
-        "_template": "cisco_ios_show_lldp_neighbors_detail.template"
-      },
-      {
-        "LocalInterface": "Fa0/9",
-        "NeighborName": "NER-NSWR-01-96-4.kolmar.ru",
-        "NeighborPort": "18e8.29cc.9a47",
-        "_source_file": "C:\\Users\\zhiltsov.aa\\Desktop\\net-auto-mermaid\\data\\raw\\NER\\09\\10.20.99.75.txt",
-        "_template": "cisco_ios_show_lldp_neighbors_detail.template"
-      },
-      {
-        "LocalInterface": "Fa0/7",
-        "NeighborName": "OFFICEHALLWAY-20LVL",
-        "NeighborPort": "18e8.29cc.9520",
-        "_source_file": "C:\\Users\\zhiltsov.aa\\Desktop\\net-auto-mermaid\\data\\raw\\NER\\09\\10.20.99.75.txt",
-        "_template": "cisco_ios_show_lldp_neighbors_detail.template"
-      },
-      {
-        "LocalInterface": "",
-        "NeighborName": "OFFICECONFHALL0LVL",
-        "NeighborPort": "",
-        "_source_file": "C:\\Users\\zhiltsov.aa\\Desktop\\net-auto-mermaid\\data\\raw\\NER\\09\\10.20.99.75.txt",
-        "_template": "cisco_ios_show_lldp_neighbors_detail.template"
-      }
-    ],
     "cisco_ios_show_version": [
       {
         "Version": "15.2(2)E7",
         "Model": "",
-        "Uptime": "3 weeks, 5 days, 6 hours, 27 minutes",
+        "Uptime": "5 weeks, 3 days, 2 hours, 56 minutes",
         "_source_file": "C:\\Users\\zhiltsov.aa\\Desktop\\net-auto-mermaid\\data\\raw\\NER\\09\\10.20.99.75.txt",
         "_template": "cisco_ios_show_version.template"
       },

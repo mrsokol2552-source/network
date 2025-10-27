@@ -8,7 +8,7 @@
       {
         "Neighbor": "DEN-NSWS-59-98-134",
         "LocalInterface": "uptime is",
-        "NeighborPort": "2 days,",
+        "NeighborPort": "2 hours,",
         "_source_file": "C:\\Users\\zhiltsov.aa\\Desktop\\net-auto-mermaid\\data\\raw\\DEN\\59\\10.20.98.134.txt",
         "_template": "cisco_ios_show_cdp_neighbors.template"
       },
@@ -45,34 +45,11 @@
         "_template": "cisco_ios_show_cdp_neighbors_detail.template"
       }
     ],
-    "cisco_ios_show_lldp_neighbors_detail": [
-      {
-        "LocalInterface": "Gi0/11",
-        "NeighborName": "",
-        "NeighborPort": "Gi0/12",
-        "_source_file": "C:\\Users\\zhiltsov.aa\\Desktop\\net-auto-mermaid\\data\\raw\\DEN\\59\\10.20.98.134.txt",
-        "_template": "cisco_ios_show_lldp_neighbors_detail.template"
-      },
-      {
-        "LocalInterface": "Gi0/12",
-        "NeighborName": "DEN-NSWS-62-98-87.kolmar.ru",
-        "NeighborPort": "Gi0/11",
-        "_source_file": "C:\\Users\\zhiltsov.aa\\Desktop\\net-auto-mermaid\\data\\raw\\DEN\\59\\10.20.98.134.txt",
-        "_template": "cisco_ios_show_lldp_neighbors_detail.template"
-      },
-      {
-        "LocalInterface": "",
-        "NeighborName": "DEN-NSWS-63-99-112.kolmar.ru",
-        "NeighborPort": "",
-        "_source_file": "C:\\Users\\zhiltsov.aa\\Desktop\\net-auto-mermaid\\data\\raw\\DEN\\59\\10.20.98.134.txt",
-        "_template": "cisco_ios_show_lldp_neighbors_detail.template"
-      }
-    ],
     "cisco_ios_show_version": [
       {
         "Version": "15.2(4)E6",
         "Model": "",
-        "Uptime": "27 weeks, 2 days, 5 hours, 39 minutes",
+        "Uptime": "29 weeks, 2 hours, 7 minutes",
         "_source_file": "C:\\Users\\zhiltsov.aa\\Desktop\\net-auto-mermaid\\data\\raw\\DEN\\59\\10.20.98.134.txt",
         "_template": "cisco_ios_show_version.template"
       },

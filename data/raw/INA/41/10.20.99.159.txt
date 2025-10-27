@@ -13,7 +13,7 @@ Compiled Sat 07-Dec-19 10:12 by prod_rel_team
 ROM: Bootstrap program is C2960CX boot loader
 BOOTLDR: C2960CX Boot Loader (C2960CX-HBOOT-M) Version 15.2(6r)E, RELEASE SOFTWARE (fc1)
 
-INA-NSWS-41-99-159 uptime is 10 weeks, 4 days, 22 hours, 56 minutes
+INA-NSWS-41-99-159 uptime is 12 weeks, 2 days, 19 hours, 25 minutes
 System returned to ROM by power-on
 System restarted at 17:32:51 YAKT Fri Aug 1 2025
 System image file is "flash:/c2960cx-universalk9-mz.152-7.E1.bin"
@@ -80,7 +80,7 @@ Entry address(es):
   IP address: 10.20.99.150
 Platform: cisco WS-C3850-24S,  Capabilities: Switch IGMP 
 Interface: GigabitEthernet0/9,  Port ID (outgoing port): GigabitEthernet1/0/4
-Holdtime : 142 sec
+Holdtime : 174 sec
 
 Version :
 Cisco IOS Software [Denali], Catalyst L3 Switch Software (CAT3K_CAA-UNIVERSALK9-M), Version 16.3.7, RELEASE SOFTWARE (fc4)
@@ -101,7 +101,7 @@ Entry address(es):
   IP address: 10.20.99.160
 Platform: cisco WS-C2960CX-8PC-L,  Capabilities: Switch IGMP 
 Interface: GigabitEthernet0/10,  Port ID (outgoing port): GigabitEthernet0/9
-Holdtime : 174 sec
+Holdtime : 135 sec
 
 Version :
 Cisco IOS Software, C2960CX Software (C2960CX-UNIVERSALK9-M), Version 15.2(7)E, RELEASE SOFTWARE (fc3)
@@ -127,8 +127,8 @@ Capability Codes: R - Router, T - Trans Bridge, B - Source Route Bridge
 
 Device ID        Local Intrfce     Holdtme    Capability  Platform  Port ID
 INA-NSWS-11-99-150.kolmar.ru
-                 Gig 0/9           142              S I   WS-C3850- Gig 1/0/4
+                 Gig 0/9           174              S I   WS-C3850- Gig 1/0/4
 INA-NSWS-51-99-160.kolmar.ru
-                 Gig 0/10          174              S I   WS-C2960C Gig 0/9
+                 Gig 0/10          135              S I   WS-C2960C Gig 0/9
 
 Total cdp entries displayed : 2

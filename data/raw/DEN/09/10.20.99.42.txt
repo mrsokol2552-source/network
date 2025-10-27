@@ -13,7 +13,7 @@ Compiled Thu 23-Oct-14 14:49 by prod_rel_team
 ROM: Bootstrap program is C2960 boot loader
 BOOTLDR: C2960 Boot Loader (C2960-HBOOT-M) Version 12.2(25r)SEE6, RELEASE SOFTWARE (fc1)
 
-DEN-NSWS-09-99-42 uptime is 13 weeks, 2 days, 7 minutes
+DEN-NSWS-09-99-42 uptime is 14 weeks, 6 days, 20 hours, 37 minutes
 System returned to ROM by power-on
 System restarted at 16:23:51 YAKT Mon Jul 14 2025
 System image file is "flash:/c2960-lanbasek9-mz.150-2.SE7.bin"
@@ -77,7 +77,7 @@ System Name: X1S/X1SP
 System Description: 
 Version:2.4.12.2
 
-Time remaining: 21 seconds
+Time remaining: 2 seconds
 System Capabilities: B,T
 Enabled Capabilities: B,T
 Management Addresses:
@@ -115,7 +115,7 @@ System Name: X1S/X1SP
 System Description: 
 Version:2.4.12.2
 
-Time remaining: 41 seconds
+Time remaining: 25 seconds
 System Capabilities: B,T
 Enabled Capabilities: B,T
 Management Addresses:
@@ -139,8 +139,8 @@ MED Information:
     Model: X1S/X1SP
     Capabilities: NP
     Device type: Endpoint Class III
-    Network Policy(Voice): VLAN 13, tagged, Layer-2 priority: 0, DSCP: 0
-    Network Policy(Voice Signal): VLAN 0, untagged, Layer-2 priority: 0, DSCP: 0
+    Network Policy(Voice): VLAN 13, tagged, Layer-2 priority: 5, DSCP: 46
+    Network Policy(Voice Signal): Unknown
     Power requirements - not advertised
     Location - not advertised
 
@@ -156,7 +156,7 @@ Technical Support: http://www.cisco.com/techsupport
 Copyright (c) 1986-2021 by Cisco Systems, Inc.
 Compiled Fri 30-Jul-21 15:15 by mcpre
 
-Time remaining: 119 seconds
+Time remaining: 109 seconds
 System Capabilities: B,R
 Enabled Capabilities: B,R
 Management Addresses:
@@ -168,44 +168,6 @@ Media Attachment Unit type: 26
 Vlan ID: 1
 
 ------------------------------------------------
-Chassis id: 0.0.0.0
-Port id: 0c38.3e10.8592
-Port Description: WAN Port
-System Name: X1S/X1SP
-
-System Description: 
-Version:2.4.12.2
-
-Time remaining: 26 seconds
-System Capabilities: B,T
-Enabled Capabilities: B,T
-Management Addresses:
-    IP: 0.0.0.0
-Auto Negotiation - not supported
-Physical media capabilities - not advertised
-Media Attachment Unit type - not advertised
-Vlan ID: - not advertised
-
-MED Information:
-
-    MED Codes:
-          (NP) Network Policy, (LI) Location Identification
-          (PS) Power Source Entity, (PD) Power Device
-          (IN) Inventory
-
-    H/W revision: V1.0
-    S/W revision: 2.4.12.2
-    Serial number: 00100400FV02001000000c383e108592
-    Manufacturer: Fanvil
-    Model: X1S/X1SP
-    Capabilities: NP
-    Device type: Endpoint Class III
-    Network Policy(Voice): VLAN 13, tagged, Layer-2 priority: 5, DSCP: 46
-    Network Policy(Voice Signal): Unknown
-    Power requirements - not advertised
-    Location - not advertised
-
-------------------------------------------------
 Chassis id: 10.13.1.38
 Port id: 0c38.3e43.82e8
 Port Description: WAN Port
@@ -214,7 +176,7 @@ System Name: X1S/X1SP
 System Description: 
 Version:2.4.12.2
 
-Time remaining: 11 seconds
+Time remaining: 16 seconds
 System Capabilities: B,T
 Enabled Capabilities: B,T
 Management Addresses:
@@ -244,13 +206,13 @@ MED Information:
     Location - not advertised
 
 ------------------------------------------------
-Chassis id: b42e.992f.ffe5
-Port id: b42e.992f.ffe5
+Chassis id: 7085.c2aa.26b1
+Port id: 7085.c2aa.26b1
 Port Description - not advertised
 System Name - not advertised
 System Description - not advertised
 
-Time remaining: 3460 seconds
+Time remaining: 3443 seconds
 System Capabilities - not advertised
 Enabled Capabilities - not advertised
 Management Addresses - not advertised
@@ -281,7 +243,7 @@ Port Description - not advertised
 System Name - not advertised
 System Description - not advertised
 
-Time remaining: 3460 seconds
+Time remaining: 3432 seconds
 System Capabilities - not advertised
 Enabled Capabilities - not advertised
 Management Addresses - not advertised
@@ -306,44 +268,13 @@ MED Information:
     Location - not advertised
 
 ------------------------------------------------
-Chassis id: 7085.c2aa.26b1
-Port id: 7085.c2aa.26b1
+Chassis id: b42e.992f.ffe5
+Port id: b42e.992f.ffe5
 Port Description - not advertised
 System Name - not advertised
 System Description - not advertised
 
-Time remaining: 3290 seconds
-System Capabilities - not advertised
-Enabled Capabilities - not advertised
-Management Addresses - not advertised
-Auto Negotiation - supported, enabled
-Physical media capabilities:
-    1000baseT(FD)
-Media Attachment Unit type - not advertised
-Vlan ID: - not advertised
-
-MED Information:
-
-    MED Codes:
-          (NP) Network Policy, (LI) Location Identification
-          (PS) Power Source Entity, (PD) Power Device
-          (IN) Inventory
-
-    Inventory information - not advertised
-    Capabilities: 
-    Device type: Endpoint Class I
-    Network Policies - not advertised
-    Power requirements - not advertised
-    Location - not advertised
-
-------------------------------------------------
-Chassis id: 7085.c2a6.9500
-Port id: 7085.c2a6.9500
-Port Description - not advertised
-System Name - not advertised
-System Description - not advertised
-
-Time remaining: 3466 seconds
+Time remaining: 3582 seconds
 System Capabilities - not advertised
 Enabled Capabilities - not advertised
 Management Addresses - not advertised
@@ -374,7 +305,38 @@ Port Description - not advertised
 System Name - not advertised
 System Description - not advertised
 
-Time remaining: 3292 seconds
+Time remaining: 2710 seconds
+System Capabilities - not advertised
+Enabled Capabilities - not advertised
+Management Addresses - not advertised
+Auto Negotiation - supported, enabled
+Physical media capabilities:
+    1000baseT(FD)
+Media Attachment Unit type - not advertised
+Vlan ID: - not advertised
+
+MED Information:
+
+    MED Codes:
+          (NP) Network Policy, (LI) Location Identification
+          (PS) Power Source Entity, (PD) Power Device
+          (IN) Inventory
+
+    Inventory information - not advertised
+    Capabilities: 
+    Device type: Endpoint Class I
+    Network Policies - not advertised
+    Power requirements - not advertised
+    Location - not advertised
+
+------------------------------------------------
+Chassis id: fc34.9714.5fb1
+Port id: fc34.9714.5fb1
+Port Description - not advertised
+System Name - not advertised
+System Description - not advertised
+
+Time remaining: 2772 seconds
 System Capabilities - not advertised
 Enabled Capabilities - not advertised
 Management Addresses - not advertised
@@ -399,7 +361,7 @@ MED Information:
     Location - not advertised
 
 
-Total entries displayed: 10
+Total entries displayed: 9
 
 
 
@@ -410,7 +372,7 @@ Entry address(es):
   IP address: 10.20.98.1
 Platform: cisco C9300X-24Y,  Capabilities: Router Switch IGMP 
 Interface: GigabitEthernet0/45,  Port ID (outgoing port): TwentyFiveGigE1/0/2
-Holdtime : 142 sec
+Holdtime : 143 sec
 
 Version :
 Cisco IOS Software [Bengaluru], Catalyst L3 Switch Software (CAT9K_IOSXE), Version 17.6.1, RELEASE SOFTWARE (fc6)
@@ -434,7 +396,7 @@ Entry address(es):
   IP address: 10.13.1.38
 Platform: X1S/X1SP,  Capabilities: Host Phone 
 Interface: GigabitEthernet0/15,  Port ID (outgoing port): WAN PORT
-Holdtime : 128 sec
+Holdtime : 121 sec
 
 Version :
 2.4.12.2
@@ -453,5 +415,5 @@ Capability Codes: R - Router, T - Trans Bridge, B - Source Route Bridge
                   D - Remote, C - CVTA, M - Two-port Mac Relay 
 
 Device ID        Local Intrfce     Holdtme    Capability  Platform  Port ID
-DEN-NSWR-03-98-1 Gig 0/45          142             R S I  C9300X-24 TwentyFiveGigE1/0/2
-X1S/X1SP         Gig 0/15          128              H P   X1S/X1SP  WAN PORT
+DEN-NSWR-03-98-1 Gig 0/45          143             R S I  C9300X-24 TwentyFiveGigE1/0/2
+X1S/X1SP         Gig 0/15          120              H P   X1S/X1SP  WAN PORT

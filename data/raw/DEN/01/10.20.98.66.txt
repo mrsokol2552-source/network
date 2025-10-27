@@ -13,7 +13,7 @@ Compiled Mon 18-Jul-16 01:45 by prod_rel_team
 ROM: Bootstrap program is C2960S board boot loader
 BOOTLDR: C2960S Boot Loader (C2960S-HBOOT-M) Version 12.2(53r)SE, RELEASE SOFTWARE (fc3)
 
-DEN-NSWS-01-98-66 uptime is 1 year, 5 weeks, 3 days, 3 hours, 45 minutes
+DEN-NSWS-01-98-66 uptime is 1 year, 7 weeks, 1 day, 14 minutes
 System returned to ROM by power-on
 System restarted at 12:08:58 YAKT Sat Sep 7 2024
 System image file is "flash:c2960s-universalk9-mz.150-2.SE10.bin"
@@ -81,7 +81,7 @@ System Name: X1S/X1SP
 System Description: 
 Version:2.4.12.2
 
-Time remaining: 44 seconds
+Time remaining: 28 seconds
 System Capabilities: B,T
 Enabled Capabilities: B,T
 Management Addresses:
@@ -122,7 +122,7 @@ Technical Support: http://www.cisco.com/techsupport
 Copyright (c) 1986-2021 by Cisco Systems, Inc.
 Compiled Fri 30-Jul-21 15:15 by mcpre
 
-Time remaining: 102 seconds
+Time remaining: 96 seconds
 System Capabilities: B,R
 Enabled Capabilities: B,R
 Management Addresses:
@@ -142,7 +142,7 @@ System Name: X1S/X1SP
 System Description: 
 Version:2.4.12.2
 
-Time remaining: 22 seconds
+Time remaining: 18 seconds
 System Capabilities: B,T
 Enabled Capabilities: B,T
 Management Addresses:
@@ -180,7 +180,7 @@ System Name: X1S/X1SP
 System Description: 
 Version:2.4.12.2
 
-Time remaining: 54 seconds
+Time remaining: 4 seconds
 System Capabilities: B,T
 Enabled Capabilities: B,T
 Management Addresses:
@@ -218,7 +218,7 @@ System Name: X1S/X1SP
 System Description: 
 Version:2.4.12.2
 
-Time remaining: 48 seconds
+Time remaining: 36 seconds
 System Capabilities: B,T
 Enabled Capabilities: B,T
 Management Addresses:
@@ -256,7 +256,7 @@ System Name: X1S/X1SP
 System Description: 
 Version:2.4.12.2
 
-Time remaining: 20 seconds
+Time remaining: 1 seconds
 System Capabilities: B,T
 Enabled Capabilities: B,T
 Management Addresses:
@@ -286,75 +286,13 @@ MED Information:
     Location - not advertised
 
 ------------------------------------------------
-Chassis id: 04d4.c4ee.bc40
-Port id: 04d4.c4ee.bc40
-Port Description - not advertised
-System Name - not advertised
-System Description - not advertised
-
-Time remaining: 3019 seconds
-System Capabilities - not advertised
-Enabled Capabilities - not advertised
-Management Addresses - not advertised
-Auto Negotiation - supported, enabled
-Physical media capabilities:
-    1000baseT(FD)
-Media Attachment Unit type - not advertised
-Vlan ID: - not advertised
-
-MED Information:
-
-    MED Codes:
-          (NP) Network Policy, (LI) Location Identification
-          (PS) Power Source Entity, (PD) Power Device
-          (IN) Inventory
-
-    Inventory information - not advertised
-    Capabilities: 
-    Device type: Endpoint Class I
-    Network Policies - not advertised
-    Power requirements - not advertised
-    Location - not advertised
-
-------------------------------------------------
 Chassis id: 309c.2344.de39
 Port id: 309c.2344.de39
 Port Description - not advertised
 System Name - not advertised
 System Description - not advertised
 
-Time remaining: 3109 seconds
-System Capabilities - not advertised
-Enabled Capabilities - not advertised
-Management Addresses - not advertised
-Auto Negotiation - supported, enabled
-Physical media capabilities:
-    1000baseT(FD)
-Media Attachment Unit type - not advertised
-Vlan ID: - not advertised
-
-MED Information:
-
-    MED Codes:
-          (NP) Network Policy, (LI) Location Identification
-          (PS) Power Source Entity, (PD) Power Device
-          (IN) Inventory
-
-    Inventory information - not advertised
-    Capabilities: 
-    Device type: Endpoint Class I
-    Network Policies - not advertised
-    Power requirements - not advertised
-    Location - not advertised
-
-------------------------------------------------
-Chassis id: 7085.c2b6.6c6b
-Port id: 7085.c2b6.6c6b
-Port Description - not advertised
-System Name - not advertised
-System Description - not advertised
-
-Time remaining: 3139 seconds
+Time remaining: 3133 seconds
 System Capabilities - not advertised
 Enabled Capabilities - not advertised
 Management Addresses - not advertised
@@ -385,7 +323,7 @@ Port Description - not advertised
 System Name - not advertised
 System Description - not advertised
 
-Time remaining: 3375 seconds
+Time remaining: 3415 seconds
 System Capabilities - not advertised
 Enabled Capabilities - not advertised
 Management Addresses - not advertised
@@ -416,38 +354,7 @@ Port Description - not advertised
 System Name - not advertised
 System Description - not advertised
 
-Time remaining: 3381 seconds
-System Capabilities - not advertised
-Enabled Capabilities - not advertised
-Management Addresses - not advertised
-Auto Negotiation - supported, enabled
-Physical media capabilities:
-    1000baseT(FD)
-Media Attachment Unit type - not advertised
-Vlan ID: - not advertised
-
-MED Information:
-
-    MED Codes:
-          (NP) Network Policy, (LI) Location Identification
-          (PS) Power Source Entity, (PD) Power Device
-          (IN) Inventory
-
-    Inventory information - not advertised
-    Capabilities: 
-    Device type: Endpoint Class I
-    Network Policies - not advertised
-    Power requirements - not advertised
-    Location - not advertised
-
-------------------------------------------------
-Chassis id: d8bb.c156.e2bf
-Port id: d8bb.c156.e2bf
-Port Description - not advertised
-System Name - not advertised
-System Description - not advertised
-
-Time remaining: 2756 seconds
+Time remaining: 3410 seconds
 System Capabilities - not advertised
 Enabled Capabilities - not advertised
 Management Addresses - not advertised
@@ -478,7 +385,7 @@ Port Description - not advertised
 System Name - not advertised
 System Description - not advertised
 
-Time remaining: 2795 seconds
+Time remaining: 2845 seconds
 System Capabilities - not advertised
 Enabled Capabilities - not advertised
 Management Addresses - not advertised
@@ -509,7 +416,100 @@ Port Description - not advertised
 System Name - not advertised
 System Description - not advertised
 
-Time remaining: 2798 seconds
+Time remaining: 3503 seconds
+System Capabilities - not advertised
+Enabled Capabilities - not advertised
+Management Addresses - not advertised
+Auto Negotiation - supported, enabled
+Physical media capabilities:
+    1000baseT(FD)
+Media Attachment Unit type - not advertised
+Vlan ID: - not advertised
+
+MED Information:
+
+    MED Codes:
+          (NP) Network Policy, (LI) Location Identification
+          (PS) Power Source Entity, (PD) Power Device
+          (IN) Inventory
+
+    Inventory information - not advertised
+    Capabilities: 
+    Device type: Endpoint Class I
+    Network Policies - not advertised
+    Power requirements - not advertised
+    Location - not advertised
+
+------------------------------------------------
+Chassis id: d8bb.c156.e2bf
+Port id: d8bb.c156.e2bf
+Port Description - not advertised
+System Name - not advertised
+System Description - not advertised
+
+Time remaining: 3370 seconds
+System Capabilities - not advertised
+Enabled Capabilities - not advertised
+Management Addresses - not advertised
+Auto Negotiation - supported, enabled
+Physical media capabilities:
+    1000baseT(FD)
+Media Attachment Unit type - not advertised
+Vlan ID: - not advertised
+
+MED Information:
+
+    MED Codes:
+          (NP) Network Policy, (LI) Location Identification
+          (PS) Power Source Entity, (PD) Power Device
+          (IN) Inventory
+
+    Inventory information - not advertised
+    Capabilities: 
+    Device type: Endpoint Class I
+    Network Policies - not advertised
+    Power requirements - not advertised
+    Location - not advertised
+
+------------------------------------------------
+Chassis id: 7085.c2b6.6c6b
+Port id: 7085.c2b6.6c6b
+Port Description - not advertised
+System Name - not advertised
+System Description - not advertised
+
+Time remaining: 2850 seconds
+System Capabilities - not advertised
+Enabled Capabilities - not advertised
+Management Addresses - not advertised
+Auto Negotiation - supported, enabled
+Physical media capabilities:
+    1000baseT(FD)
+Media Attachment Unit type - not advertised
+Vlan ID: - not advertised
+
+MED Information:
+
+    MED Codes:
+          (NP) Network Policy, (LI) Location Identification
+          (PS) Power Source Entity, (PD) Power Device
+          (IN) Inventory
+
+    Inventory information - not advertised
+    Capabilities: 
+    Device type: Endpoint Class I
+    Network Policies - not advertised
+    Power requirements - not advertised
+    Location - not advertised
+
+------------------------------------------------
+Chassis id: 04d4.c4ee.bc40
+Port id: 04d4.c4ee.bc40
+Port Description - not advertised
+System Name - not advertised
+System Description - not advertised
+
+Time remaining: 3158 seconds
 System Capabilities - not advertised
 Enabled Capabilities - not advertised
 Management Addresses - not advertised
@@ -545,7 +545,7 @@ Entry address(es):
   IP address: 10.20.98.96
 Platform: cisco WS-C2960+24PC-L,  Capabilities: Switch IGMP 
 Interface: GigabitEthernet1/0/26,  Port ID (outgoing port): GigabitEthernet0/1
-Holdtime : 176 sec
+Holdtime : 151 sec
 
 Version :
 Cisco IOS Software, C2960 Software (C2960-LANBASEK9-M), Version 15.2(2)E7, RELEASE SOFTWARE (fc3)
@@ -570,7 +570,7 @@ Entry address(es):
   IP address: 10.20.98.1
 Platform: cisco C9300X-24Y,  Capabilities: Router Switch IGMP 
 Interface: GigabitEthernet1/0/1,  Port ID (outgoing port): TwentyFiveGigE1/0/19
-Holdtime : 169 sec
+Holdtime : 167 sec
 
 Version :
 Cisco IOS Software [Bengaluru], Catalyst L3 Switch Software (CAT9K_IOSXE), Version 17.6.1, RELEASE SOFTWARE (fc6)
@@ -594,7 +594,7 @@ Entry address(es):
   IP address: 192.168.99.123
 Platform: cisco WS-C2960CX-8TC-L,  Capabilities: Switch IGMP 
 Interface: GigabitEthernet1/0/5,  Port ID (outgoing port): GigabitEthernet0/10
-Holdtime : 136 sec
+Holdtime : 147 sec
 
 Version :
 Cisco IOS Software, C2960CX Software (C2960CX-UNIVERSALK9-M), Version 15.2(4)E6, RELEASE SOFTWARE (fc4)
@@ -619,7 +619,7 @@ Entry address(es):
   IP address: 10.20.98.110
 Platform: cisco WS-C3850-24S,  Capabilities: Switch IGMP 
 Interface: GigabitEthernet1/0/25,  Port ID (outgoing port): GigabitEthernet1/1/1
-Holdtime : 162 sec
+Holdtime : 147 sec
 
 Version :
 Cisco IOS Software, Catalyst L3 Switch Software (CAT3K_CAA-UNIVERSALK9-M), Version 15.2(2)E, RELEASE SOFTWARE (fc3)
@@ -643,7 +643,7 @@ Entry address(es):
   IP address: 10.13.1.125
 Platform: X1S/X1SP,  Capabilities: Host Phone 
 Interface: GigabitEthernet1/0/19,  Port ID (outgoing port): WAN PORT
-Holdtime : 170 sec
+Holdtime : 151 sec
 
 Version :
 2.4.12.2
@@ -660,7 +660,7 @@ Entry address(es):
   IP address: 10.13.1.178
 Platform: X1S/X1SP,  Capabilities: Host Phone 
 Interface: GigabitEthernet1/0/2,  Port ID (outgoing port): WAN PORT
-Holdtime : 169 sec
+Holdtime : 139 sec
 
 Version :
 2.4.12.2
@@ -677,7 +677,7 @@ Entry address(es):
   IP address: 10.13.1.19
 Platform: X1S/X1SP,  Capabilities: Host Phone 
 Interface: GigabitEthernet1/0/21,  Port ID (outgoing port): WAN PORT
-Holdtime : 140 sec
+Holdtime : 138 sec
 
 Version :
 2.4.12.2
@@ -694,7 +694,7 @@ Entry address(es):
   IP address: 10.13.1.214
 Platform: X1S/X1SP,  Capabilities: Host Phone 
 Interface: GigabitEthernet1/0/18,  Port ID (outgoing port): WAN PORT
-Holdtime : 143 sec
+Holdtime : 177 sec
 
 Version :
 2.4.12.2
@@ -714,13 +714,13 @@ Capability Codes: R - Router, T - Trans Bridge, B - Source Route Bridge
 
 Device ID        Local Intrfce     Holdtme    Capability  Platform  Port ID
 DEN-NSWS-01-98-96.kolmar.ru
-                 Gig 1/0/26        176              S I   WS-C2960+ Gig 0/1
-DEN-NSWR-03-98-1 Gig 1/0/1         169             R S I  C9300X-24 TwentyFiveGigE1/0/19
+                 Gig 1/0/26        151              S I   WS-C2960+ Gig 0/1
+DEN-NSWR-03-98-1 Gig 1/0/1         167             R S I  C9300X-24 TwentyFiveGigE1/0/19
 DEN-NSWS-01-99-123.kolmar.ru
-                 Gig 1/0/5         135              S I   WS-C2960C Gig 0/10
+                 Gig 1/0/5         147              S I   WS-C2960C Gig 0/10
 DEN-NSWS-01-98-110.kolmar.ru
-                 Gig 1/0/25        162              S I   WS-C3850- Gig 1/1/1
-X1S/X1SP         Gig 1/0/19        170              H P   X1S/X1SP  WAN PORT
-X1S/X1SP         Gig 1/0/2         169              H P   X1S/X1SP  WAN PORT
-X1S/X1SP         Gig 1/0/21        140              H P   X1S/X1SP  WAN PORT
-X1S/X1SP         Gig 1/0/18        143              H P   X1S/X1SP  WAN PORT
+                 Gig 1/0/25        147              S I   WS-C3850- Gig 1/1/1
+X1S/X1SP         Gig 1/0/19        151              H P   X1S/X1SP  WAN PORT
+X1S/X1SP         Gig 1/0/2         139              H P   X1S/X1SP  WAN PORT
+X1S/X1SP         Gig 1/0/21        138              H P   X1S/X1SP  WAN PORT
+X1S/X1SP         Gig 1/0/18        177              H P   X1S/X1SP  WAN PORT

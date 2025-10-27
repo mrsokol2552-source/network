@@ -26,8 +26,8 @@ software.
 ROM: IOS-XE ROMMON
 BOOTLDR: System Bootstrap, Version 17.5.1r, RELEASE SOFTWARE (P)
 
-DEN-NSWR-03-98-1 uptime is 1 year, 19 weeks, 2 days, 20 hours, 2 minutes
-Uptime for this control processor is 1 year, 19 weeks, 2 days, 20 hours, 4 minutes
+DEN-NSWR-03-98-1 uptime is 1 year, 21 weeks, 16 hours, 32 minutes
+Uptime for this control processor is 1 year, 21 weeks, 16 hours, 34 minutes
 System returned to ROM by Reload Command at 20:28:01 YAKT Sat Jun 1 2024
 System restarted at 20:30:40 YAKT Sat Jun 1 2024
 System image file is "flash:packages.conf"
@@ -109,7 +109,7 @@ Technical Support: http://www.cisco.com/techsupport
 Copyright (c) 1986-2022 by Cisco Systems, Inc.
 Compiled Tue 22-Mar-22 10:25 by mcpre
 
-Time remaining: 99 seconds
+Time remaining: 93 seconds
 System Capabilities: B,R
 Enabled Capabilities: B
 Management Addresses:
@@ -130,7 +130,7 @@ System Name: X1S/X1SP
 System Description: 
 Version:2.4.12.2
 
-Time remaining: 41 seconds
+Time remaining: 19 seconds
 System Capabilities: B,T
 Enabled Capabilities: B,T
 Management Addresses:
@@ -172,7 +172,7 @@ Technical Support: http://www.cisco.com/techsupport
 Copyright (c) 1986-2021 by Cisco Systems, Inc.
 Compiled Mon 13-Sep-21 09:18 by mcpre
 
-Time remaining: 109 seconds
+Time remaining: 91 seconds
 System Capabilities: B,R
 Enabled Capabilities: B
 Management Addresses:
@@ -196,7 +196,7 @@ Technical Support: http://www.cisco.com/techsupport
 Copyright (c) 1986-2019 by Cisco Systems, Inc.
 Compiled Sat 07-Dec-19 09:15 by prod_rel_team
 
-Time remaining: 102 seconds
+Time remaining: 98 seconds
 System Capabilities: B,R
 Enabled Capabilities: B
 Management Addresses:
@@ -220,7 +220,7 @@ Technical Support: http://www.cisco.com/techsupport
 Copyright (c) 1986-2014 by Cisco Systems, Inc.
 Compiled Thu 23-Oct-14 14:49 by prod_rel_team
 
-Time remaining: 109 seconds
+Time remaining: 91 seconds
 System Capabilities: B
 Enabled Capabilities: B
 Management Addresses:
@@ -239,7 +239,7 @@ Port Description - not advertised
 System Name: DEN-NSWS-02-99-124
 System Description - not advertised
 
-Time remaining: 101 seconds
+Time remaining: 98 seconds
 System Capabilities - not advertised
 Enabled Capabilities - not advertised
 Management Addresses - not advertised
@@ -256,7 +256,7 @@ Port Description - not advertised
 System Name: DEN-NSWS-61-99-136
 System Description - not advertised
 
-Time remaining: 90 seconds
+Time remaining: 98 seconds
 System Capabilities - not advertised
 Enabled Capabilities - not advertised
 Management Addresses - not advertised
@@ -273,7 +273,7 @@ Port Description - not advertised
 System Name: DEN-NSWS-15-99-18
 System Description - not advertised
 
-Time remaining: 115 seconds
+Time remaining: 107 seconds
 System Capabilities - not advertised
 Enabled Capabilities - not advertised
 Management Addresses - not advertised
@@ -295,7 +295,7 @@ Technical Support: http://www.cisco.com/techsupport
 Copyright (c) 1986-2016 by Cisco Systems, Inc.
 Compiled Mon 18-Jul-16 01:45 by prod_rel_team
 
-Time remaining: 119 seconds
+Time remaining: 109 seconds
 System Capabilities: B,R
 Enabled Capabilities: B
 Management Addresses:
@@ -323,7 +323,7 @@ Technical Support: http://www.cisco.com/techsupport
 Copyright (c) 1986-2021 by Cisco Systems, Inc.
 Compiled Mon 13-Sep-21 09:18 by mcpre
 
-Time remaining: 105 seconds
+Time remaining: 107 seconds
 System Capabilities: B,R
 Enabled Capabilities: B
 Management Addresses:
@@ -347,7 +347,7 @@ Technical Support: http://www.cisco.com/techsupport
 Copyright (c) 1986-2022 by Cisco Systems, Inc.
 Compiled Thu 22-Sep-22 08:11 by mcpre
 
-Time remaining: 119 seconds
+Time remaining: 114 seconds
 System Capabilities: B,R
 Enabled Capabilities: B
 Management Addresses:
@@ -366,7 +366,7 @@ Port Description - not advertised
 System Name: DEN-NSWS-10-99-16
 System Description - not advertised
 
-Time remaining: 100 seconds
+Time remaining: 96 seconds
 System Capabilities - not advertised
 Enabled Capabilities - not advertised
 Management Addresses - not advertised
@@ -383,7 +383,7 @@ Port Description - not advertised
 System Name: DEN-NSWS-02-99-105
 System Description - not advertised
 
-Time remaining: 97 seconds
+Time remaining: 109 seconds
 System Capabilities - not advertised
 Enabled Capabilities - not advertised
 Management Addresses - not advertised
@@ -429,7 +429,7 @@ Technical Support: http://www.cisco.com/techsupport
 Copyright (c) 1986-2016 by Cisco Systems, Inc.
 Compiled Sat 17-Dec-16 00:27 by prod_rel_team
 
-Time remaining: 111 seconds
+Time remaining: 102 seconds
 System Capabilities: B
 Enabled Capabilities: B
 Management Addresses:
@@ -452,7 +452,7 @@ Cisco IOS Software, C2960 Software (C2960-LANLITEK9-M), Version 12.2(52)SE, RELE
 Copyright (c) 1986-2009 by Cisco Systems, Inc.
 Compiled Fri 25-Sep-09 08:49 by sasyamal
 
-Time remaining: 99 seconds
+Time remaining: 101 seconds
 System Capabilities: B
 Enabled Capabilities: B
 Management Addresses:
@@ -475,7 +475,7 @@ Technical Support: http://www.cisco.com/techsupport
 Copyright (c) 1986-2017 by Cisco Systems, Inc.
 Compiled Wed 12-Jul-17 15:29 by prod_rel_team
 
-Time remaining: 111 seconds
+Time remaining: 105 seconds
 System Capabilities: B
 Enabled Capabilities: B
 Management Addresses:
@@ -499,7 +499,7 @@ Technical Support: http://www.cisco.com/techsupport
 Copyright (c) 1986-2015 by Cisco Systems, Inc.
 Compiled Thu 14-May-15 03:20 by prod_rel_team
 
-Time remaining: 102 seconds
+Time remaining: 92 seconds
 System Capabilities: B
 Enabled Capabilities: B
 Management Addresses:
@@ -518,7 +518,7 @@ Port Description - not advertised
 System Name - not advertised
 System Description - not advertised
 
-Time remaining: 2687 seconds
+Time remaining: 3140 seconds
 System Capabilities - not advertised
 Enabled Capabilities - not advertised
 Management Addresses - not advertised
@@ -550,7 +550,7 @@ Port Description - not advertised
 System Name - not advertised
 System Description - not advertised
 
-Time remaining: 2687 seconds
+Time remaining: 2824 seconds
 System Capabilities - not advertised
 Enabled Capabilities - not advertised
 Management Addresses - not advertised
@@ -586,7 +586,7 @@ Entry address(es):
   IP address: 10.20.99.94
 Platform: cisco C1000-16FP-2G-L,  Capabilities: Switch IGMP 
 Interface: TwentyFiveGigE1/0/24,  Port ID (outgoing port): GigabitEthernet1/0/17
-Holdtime : 137 sec
+Holdtime : 162 sec
 
 Version :
 Cisco IOS Software, C1000 Software (C1000-UNIVERSALK9-M), Version 15.2(7)E6, RELEASE SOFTWARE (fc2)
@@ -607,7 +607,7 @@ Entry address(es):
   IP address: 10.13.1.7
 Platform: X3S,  Capabilities: Host Phone 
 Interface: TwentyFiveGigE1/0/7,  Port ID (outgoing port): WAN PORT
-Holdtime : 162 sec
+Holdtime : 153 sec
 
 Version :
 2.14.0.7387
@@ -617,10 +617,10 @@ advertisement version: 2
 -------------------------
 Device ID: X3S
 Entry address(es): 
-  IP address: 10.13.0.45
+  IP address: 10.13.1.154
 Platform: X3S,  Capabilities: Host Phone 
 Interface: TwentyFiveGigE1/0/18,  Port ID (outgoing port): WAN PORT
-Holdtime : 176 sec
+Holdtime : 175 sec
 
 Version :
 2.14.0.7387
@@ -633,7 +633,7 @@ Entry address(es):
   IP address: 10.20.99.12
 Platform: cisco WS-C2960C-8TC-L,  Capabilities: Switch IGMP 
 Interface: TwentyFiveGigE1/0/10,  Port ID (outgoing port): GigabitEthernet0/1
-Holdtime : 155 sec
+Holdtime : 134 sec
 
 Version :
 Cisco IOS Software, C2960C Software (C2960c405-UNIVERSALK9-M), Version 15.0(2)SE8, RELEASE SOFTWARE (fc1)
@@ -655,7 +655,7 @@ Entry address(es):
   IP address: 10.20.99.86
 Platform: cisco C1000-16FP-2G-L,  Capabilities: Switch IGMP 
 Interface: TwentyFiveGigE1/0/12,  Port ID (outgoing port): GigabitEthernet1/0/18
-Holdtime : 144 sec
+Holdtime : 131 sec
 
 Version :
 Cisco IOS Software, C1000 Software (C1000-UNIVERSALK9-M), Version 15.2(7)E5, RELEASE SOFTWARE (fc3)
@@ -676,7 +676,7 @@ Entry address(es):
   IP address: 10.20.99.11
 Platform: cisco WS-C2960-48TT-S,  Capabilities: Switch IGMP 
 Interface: TwentyFiveGigE1/0/1,  Port ID (outgoing port): GigabitEthernet0/1
-Holdtime : 159 sec
+Holdtime : 165 sec
 
 Version :
 Cisco IOS Software, C2960 Software (C2960-LANLITEK9-M), Version 12.2(52)SE, RELEASE SOFTWARE (fc3)
@@ -697,7 +697,7 @@ Entry address(es):
   IP address: 10.20.98.66
 Platform: cisco WS-C2960S-24TS-L,  Capabilities: Switch IGMP 
 Interface: TwentyFiveGigE1/0/19,  Port ID (outgoing port): GigabitEthernet1/0/1
-Holdtime : 157 sec
+Holdtime : 136 sec
 
 Version :
 Cisco IOS Software, C2960S Software (C2960S-UNIVERSALK9-M), Version 15.0(2)SE10, RELEASE SOFTWARE (fc2)
@@ -719,7 +719,7 @@ Entry address(es):
   IP address: 10.20.99.65
 Platform: cisco WS-C2960+24TC-L,  Capabilities: Switch IGMP 
 Interface: TwentyFiveGigE1/0/5,  Port ID (outgoing port): GigabitEthernet0/1
-Holdtime : 150 sec
+Holdtime : 135 sec
 
 Version :
 Cisco IOS Software, C2960 Software (C2960-LANBASEK9-M), Version 15.0(2)SE6, RELEASE SOFTWARE (fc2)
@@ -741,7 +741,7 @@ Entry address(es):
   IP address: 10.20.96.34
 Platform: cisco WS-C2960+24PC-L,  Capabilities: Switch IGMP 
 Interface: TwentyFiveGigE1/0/18,  Port ID (outgoing port): GigabitEthernet0/2
-Holdtime : 153 sec
+Holdtime : 170 sec
 
 Version :
 Cisco IOS Software, C2960 Software (C2960-LANBASEK9-M), Version 15.2(2)E7, RELEASE SOFTWARE (fc3)
@@ -763,7 +763,7 @@ Entry address(es):
   IP address: 10.20.99.15
 Platform: cisco WS-C2960+24TC-L,  Capabilities: Switch IGMP 
 Interface: TwentyFiveGigE1/0/4,  Port ID (outgoing port): GigabitEthernet0/1
-Holdtime : 173 sec
+Holdtime : 144 sec
 
 Version :
 Cisco IOS Software, C2960 Software (C2960-LANBASEK9-M), Version 15.2(2)E6, RELEASE SOFTWARE (fc1)
@@ -785,7 +785,7 @@ Entry address(es):
   IP address: 10.20.99.42
 Platform: cisco WS-C2960G-48TC-L,  Capabilities: Switch IGMP 
 Interface: TwentyFiveGigE1/0/2,  Port ID (outgoing port): GigabitEthernet0/45
-Holdtime : 136 sec
+Holdtime : 132 sec
 
 Version :
 Cisco IOS Software, C2960 Software (C2960-LANBASEK9-M), Version 15.0(2)SE7, RELEASE SOFTWARE (fc1)
@@ -807,7 +807,7 @@ Entry address(es):
   IP address: 10.20.99.90
 Platform: cisco C1000-16FP-2G-L,  Capabilities: Switch IGMP 
 Interface: TwentyFiveGigE1/0/20,  Port ID (outgoing port): GigabitEthernet1/0/17
-Holdtime : 149 sec
+Holdtime : 150 sec
 
 Version :
 Cisco IOS Software, C1000 Software (C1000-UNIVERSALK9-M), Version 15.2(7)E5, RELEASE SOFTWARE (fc3)
@@ -828,7 +828,7 @@ Entry address(es):
   IP address: 10.20.99.44
 Platform: cisco C1000-16T-2G-L,  Capabilities: Switch IGMP 
 Interface: TwentyFiveGigE1/0/9,  Port ID (outgoing port): GigabitEthernet1/0/17
-Holdtime : 170 sec
+Holdtime : 179 sec
 
 Version :
 Cisco IOS Software, C1000 Software (C1000-UNIVERSALK9-M), Version 15.2(7)E7, RELEASE SOFTWARE (fc10)
@@ -844,12 +844,33 @@ Management address(es):
   IP address: 10.20.99.44
 
 -------------------------
+Device ID: DEN-NSWS-19-99-98.kolmar.ru
+Entry address(es): 
+  IP address: 10.20.99.98
+Platform: cisco C1000-16T-2G-L,  Capabilities: Switch IGMP 
+Interface: TwentyFiveGigE1/0/3,  Port ID (outgoing port): GigabitEthernet1/0/18
+Holdtime : 128 sec
+
+Version :
+Cisco IOS Software, C1000 Software (C1000-UNIVERSALK9-M), Version 15.2(7)E1, RELEASE SOFTWARE (fc4)
+Technical Support: http://www.cisco.com/techsupport
+Copyright (c) 1986-2019 by Cisco Systems, Inc.
+Compiled Sat 07-Dec-19 09:15 by prod_rel_team
+
+advertisement version: 2
+VTP Management Domain: 'tradc'
+Native VLAN: 1
+Duplex: full
+Management address(es): 
+  IP address: 10.20.99.98
+
+-------------------------
 Device ID: DEN-NSWS-109-99-122.kolmar.ru
 Entry address(es): 
   IP address: 10.20.99.122
 Platform: cisco WS-C2960C-8TC-L,  Capabilities: Switch IGMP 
 Interface: TwentyFiveGigE1/0/6,  Port ID (outgoing port): GigabitEthernet0/2
-Holdtime : 146 sec
+Holdtime : 130 sec
 
 Version :
 Cisco IOS Software, C2960C Software (C2960c405-UNIVERSALK9-M), Version 12.2(55)EX3, RELEASE SOFTWARE (fc2)
@@ -866,33 +887,12 @@ Management address(es):
   IP address: 10.20.99.122
 
 -------------------------
-Device ID: DEN-NSWS-19-99-98.kolmar.ru
-Entry address(es): 
-  IP address: 10.20.99.98
-Platform: cisco C1000-16T-2G-L,  Capabilities: Switch IGMP 
-Interface: TwentyFiveGigE1/0/3,  Port ID (outgoing port): GigabitEthernet1/0/18
-Holdtime : 137 sec
-
-Version :
-Cisco IOS Software, C1000 Software (C1000-UNIVERSALK9-M), Version 15.2(7)E1, RELEASE SOFTWARE (fc4)
-Technical Support: http://www.cisco.com/techsupport
-Copyright (c) 1986-2019 by Cisco Systems, Inc.
-Compiled Sat 07-Dec-19 09:15 by prod_rel_team
-
-advertisement version: 2
-VTP Management Domain: 'tradc'
-Native VLAN: 1
-Duplex: full
-Management address(es): 
-  IP address: 10.20.99.98
-
--------------------------
 Device ID: DEN-NSWS-98-112.kolmar.ru
 Entry address(es): 
   IP address: 10.20.98.112
 Platform: cisco WS-C2960+24PC-L,  Capabilities: Switch IGMP 
 Interface: TwentyFiveGigE1/0/21,  Port ID (outgoing port): GigabitEthernet0/1
-Holdtime : 130 sec
+Holdtime : 170 sec
 
 Version :
 Cisco IOS Software, C2960 Software (C2960-LANBASEK9-M), Version 15.2(2)E7, RELEASE SOFTWARE (fc3)
@@ -911,10 +911,23 @@ Management address(es):
 -------------------------
 Device ID: X301
 Entry address(es): 
-  IP address: 10.13.0.152
+  IP address: 10.13.0.150
+Platform: X301,  Capabilities: Host Phone 
+Interface: TwentyFiveGigE1/0/13,  Port ID (outgoing port): WAN PORT
+Holdtime : 172 sec
+
+Version :
+2.12.17.8
+
+advertisement version: 2
+
+-------------------------
+Device ID: X301
+Entry address(es): 
+  IP address: 10.13.0.201
 Platform: X301,  Capabilities: Host Phone 
 Interface: TwentyFiveGigE1/0/5,  Port ID (outgoing port): WAN PORT
-Holdtime : 167 sec
+Holdtime : 173 sec
 
 Version :
 2.12.17.8
@@ -927,20 +940,7 @@ Entry address(es):
   IP address: 10.13.0.155
 Platform: X301,  Capabilities: Host Phone 
 Interface: TwentyFiveGigE1/0/7,  Port ID (outgoing port): WAN PORT
-Holdtime : 124 sec
-
-Version :
-2.12.17.8
-
-advertisement version: 2
-
--------------------------
-Device ID: X301
-Entry address(es): 
-  IP address: 10.13.1.204
-Platform: X301,  Capabilities: Host Phone 
-Interface: TwentyFiveGigE1/0/13,  Port ID (outgoing port): WAN PORT
-Holdtime : 156 sec
+Holdtime : 140 sec
 
 Version :
 2.12.17.8
@@ -953,7 +953,7 @@ Entry address(es):
   IP address: 10.13.1.237
 Platform: X210,  Capabilities: Host Phone 
 Interface: TwentyFiveGigE1/0/18,  Port ID (outgoing port): WAN PORT
-Holdtime : 175 sec
+Holdtime : 171 sec
 
 Version :
 2.4.12
@@ -966,7 +966,7 @@ Entry address(es):
   IP address: 10.11.11.1
 Platform: cisco C9500-24Y4C,  Capabilities: Router Switch IGMP 
 Interface: TwentyFiveGigE1/0/23,  Port ID (outgoing port): TwentyFiveGigE1/0/23
-Holdtime : 163 sec
+Holdtime : 171 sec
 
 Version :
 Cisco IOS Software [Bengaluru], Catalyst L3 Switch Software (CAT9K_IOSXE), Version 17.4.1, RELEASE SOFTWARE (fc5)
@@ -987,7 +987,7 @@ Entry address(es):
   IP address: 10.11.11.1
 Platform: cisco C9500-24Y4C,  Capabilities: Router Switch IGMP 
 Interface: TwentyFiveGigE1/0/18,  Port ID (outgoing port): TwentyFiveGigE1/0/24
-Holdtime : 163 sec
+Holdtime : 146 sec
 
 Version :
 Cisco IOS Software [Bengaluru], Catalyst L3 Switch Software (CAT9K_IOSXE), Version 17.4.1, RELEASE SOFTWARE (fc5)
@@ -1005,10 +1005,36 @@ Management address(es):
 -------------------------
 Device ID: X1S/X1SP
 Entry address(es): 
+  IP address: 10.13.0.46
+Platform: X1S/X1SP,  Capabilities: Host Phone 
+Interface: TwentyFiveGigE1/0/13,  Port ID (outgoing port): WAN PORT
+Holdtime : 175 sec
+
+Version :
+2.4.12.2
+
+advertisement version: 2
+
+-------------------------
+Device ID: X1S/X1SP
+Entry address(es): 
+  IP address: 10.13.0.183
+Platform: X1S/X1SP,  Capabilities: Host Phone 
+Interface: TwentyFiveGigE1/0/15,  Port ID (outgoing port): WAN PORT
+Holdtime : 173 sec
+
+Version :
+2.4.12.2
+
+advertisement version: 2
+
+-------------------------
+Device ID: X1S/X1SP
+Entry address(es): 
   IP address: 10.13.1.142
 Platform: X1S/X1SP,  Capabilities: Host Phone 
 Interface: TwentyFiveGigE1/0/16,  Port ID (outgoing port): WAN PORT
-Holdtime : 160 sec
+Holdtime : 133 sec
 
 Version :
 2.4.12.2
@@ -1018,10 +1044,10 @@ advertisement version: 2
 -------------------------
 Device ID: X1S/X1SP
 Entry address(es): 
-  IP address: 10.13.1.91
+  IP address: 10.13.0.160
 Platform: X1S/X1SP,  Capabilities: Host Phone 
 Interface: TwentyFiveGigE1/0/7,  Port ID (outgoing port): WAN PORT
-Holdtime : 175 sec
+Holdtime : 177 sec
 
 Version :
 2.4.12.2
@@ -1031,22 +1057,9 @@ advertisement version: 2
 -------------------------
 Device ID: X1S/X1SP
 Entry address(es): 
-  IP address: 10.13.1.45
+  IP address: 10.13.0.143
 Platform: X1S/X1SP,  Capabilities: Host Phone 
 Interface: TwentyFiveGigE1/0/5,  Port ID (outgoing port): WAN PORT
-Holdtime : 175 sec
-
-Version :
-2.4.12.2
-
-advertisement version: 2
-
--------------------------
-Device ID: X1S/X1SP
-Entry address(es): 
-  IP address: 10.13.0.198
-Platform: X1S/X1SP,  Capabilities: Host Phone 
-Interface: TwentyFiveGigE1/0/13,  Port ID (outgoing port): WAN PORT
 Holdtime : 173 sec
 
 Version :
@@ -1055,7 +1068,7 @@ Version :
 advertisement version: 2
 
 
-Total cdp entries displayed : 26
+Total cdp entries displayed : 27
 
 
 $ show cdp neighbors
@@ -1065,44 +1078,45 @@ Capability Codes: R - Router, T - Trans Bridge, B - Source Route Bridge
 
 Device ID        Local Intrfce     Holdtme    Capability  Platform  Port ID
 DEN-NSWS-59-99-94.kolmar.local
-                 Twe 1/0/24        137              S I   C1000-16F Gig 1/0/17
-X3S              Twe 1/0/7         162              H P   X3S       WAN PORT
-X3S              Twe 1/0/18        176              H P   X3S       WAN PORT
+                 Twe 1/0/24        161              S I   C1000-16F Gig 1/0/17
+X3S              Twe 1/0/7         153              H P   X3S       WAN PORT
+X3S              Twe 1/0/18        175              H P   X3S       WAN PORT
 DEN-NSWS-16-99-12.kolmar.ru
-                 Twe 1/0/10        155              S I   WS-C2960C Gig 0/1
+                 Twe 1/0/10        134              S I   WS-C2960C Gig 0/1
 DEN-NSWS-58-99-86.kolmar.ru
-                 Twe 1/0/12        144              S I   C1000-16F Gig 1/0/18
+                 Twe 1/0/12        131              S I   C1000-16F Gig 1/0/18
 DEN-NSWS-03-99-11.kolmar.ru
-                 Twe 1/0/1         159              S I   WS-C2960- Gig 0/1
+                 Twe 1/0/1         165              S I   WS-C2960- Gig 0/1
 DEN-NSWS-01-98-66.kolmar.ru
-                 Twe 1/0/19        157              S I   WS-C2960S Gig 1/0/1
+                 Twe 1/0/19        136              S I   WS-C2960S Gig 1/0/1
 DEN-NSWS-47-99-65.kolmar.ru
-                 Twe 1/0/5         150              S I   WS-C2960+ Gig 0/1
+                 Twe 1/0/5         135              S I   WS-C2960+ Gig 0/1
 INA-NSWS-01-96-34.kolmar.ru
-                 Twe 1/0/18        153              S I   WS-C2960+ Gig 0/2
+                 Twe 1/0/18        170              S I   WS-C2960+ Gig 0/2
 DEN-NSWS-04-99-15.kolmar.ru
-                 Twe 1/0/4         173              S I   WS-C2960+ Gig 0/1
+                 Twe 1/0/4         144              S I   WS-C2960+ Gig 0/1
 DEN-NSWS-09-99-42.kolmar.ru
-                 Twe 1/0/2         136              S I   WS-C2960G Gig 0/45
+                 Twe 1/0/2         132              S I   WS-C2960G Gig 0/45
 DEN-NSWS-62-99-90.kolmar.ru
-                 Twe 1/0/20        149              S I   C1000-16F Gig 1/0/17
+                 Twe 1/0/20        150              S I   C1000-16F Gig 1/0/17
 DEN-NSWS-29-99-44.kolmar.ru
-                 Twe 1/0/9         170              S I   C1000-16T Gig 1/0/17
-DEN-NSWS-109-99-122.kolmar.ru
-                 Twe 1/0/6         145              S I   WS-C2960C Gig 0/2
+                 Twe 1/0/9         179              S I   C1000-16T Gig 1/0/17
 DEN-NSWS-19-99-98.kolmar.ru
-                 Twe 1/0/3         137              S I   C1000-16T Gig 1/0/18
+                 Twe 1/0/3         128              S I   C1000-16T Gig 1/0/18
+DEN-NSWS-109-99-122.kolmar.ru
+                 Twe 1/0/6         130              S I   WS-C2960C Gig 0/2
 DEN-NSWS-98-112.kolmar.ru
-                 Twe 1/0/21        130              S I   WS-C2960+ Gig 0/1
-X301             Twe 1/0/5         167              H P   X301      WAN PORT
-X301             Twe 1/0/7         124              H P   X301      WAN PORT
-X301             Twe 1/0/13        155              H P   X301      WAN PORT
-X210             Twe 1/0/18        175              H P   X210      WAN PORT
-NER-NSWR-01-96-1 Twe 1/0/23        163             R S I  C9500-24Y Twe 1/0/23
-NER-NSWR-01-96-1 Twe 1/0/18        163             R S I  C9500-24Y Twe 1/0/24
-X1S/X1SP         Twe 1/0/16        160              H P   X1S/X1SP  WAN PORT
-X1S/X1SP         Twe 1/0/7         175              H P   X1S/X1SP  WAN PORT
-X1S/X1SP         Twe 1/0/5         175              H P   X1S/X1SP  WAN PORT
-X1S/X1SP         Twe 1/0/13        173              H P   X1S/X1SP  WAN PORT
+                 Twe 1/0/21        170              S I   WS-C2960+ Gig 0/1
+X301             Twe 1/0/13        172              H P   X301      WAN PORT
+X301             Twe 1/0/5         173              H P   X301      WAN PORT
+X301             Twe 1/0/7         140              H P   X301      WAN PORT
+X210             Twe 1/0/18        171              H P   X210      WAN PORT
+NER-NSWR-01-96-1 Twe 1/0/23        171             R S I  C9500-24Y Twe 1/0/23
+NER-NSWR-01-96-1 Twe 1/0/18        146             R S I  C9500-24Y Twe 1/0/24
+X1S/X1SP         Twe 1/0/13        175              H P   X1S/X1SP  WAN PORT
+X1S/X1SP         Twe 1/0/15        173              H P   X1S/X1SP  WAN PORT
+X1S/X1SP         Twe 1/0/16        133              H P   X1S/X1SP  WAN PORT
+X1S/X1SP         Twe 1/0/7         177              H P   X1S/X1SP  WAN PORT
+X1S/X1SP         Twe 1/0/5         173              H P   X1S/X1SP  WAN PORT
 
-Total cdp entries displayed : 26
+Total cdp entries displayed : 27

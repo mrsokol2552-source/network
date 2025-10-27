@@ -13,9 +13,9 @@ Compiled Tue 21-Jul-15 13:24 by prod_rel_team
 ROM: Bootstrap program is C2960CX boot loader
 BOOTLDR: C2960CX Boot Loader (C2960CX-HBOOT-M) Version 15.2(3r)E, RELEASE SOFTWARE (fc1)
 
-CHU-NSWS-13-99-219 uptime is 1 week, 4 hours, 43 minutes
+CHU-NSWS-13-99-219 uptime is 4 days, 22 hours, 9 minutes
 System returned to ROM by power-on
-System restarted at 11:49:52 YAKT Wed Oct 8 2025
+System restarted at 14:53:51 YAKT Wed Oct 22 2025
 System image file is "flash:/c2960cx-universalk9-mz.152-3.E2.bin"
 Last reload reason: power-on
 

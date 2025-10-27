@@ -111,6 +111,7 @@ show cdp
 
 $ show cdp neighbors
 
+
 show cdp
 
      ^

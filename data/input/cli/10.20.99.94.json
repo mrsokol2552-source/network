@@ -8,7 +8,7 @@
       {
         "Neighbor": "DEN-NSWS-59-99-94",
         "LocalInterface": "uptime is",
-        "NeighborPort": "2 days,",
+        "NeighborPort": "6 days,",
         "_source_file": "C:\\Users\\zhiltsov.aa\\Desktop\\net-auto-mermaid\\data\\raw\\DEN\\59\\10.20.99.94.txt",
         "_template": "cisco_ios_show_cdp_neighbors.template"
       },
@@ -30,83 +30,11 @@
         "_template": "cisco_ios_show_cdp_neighbors_detail.template"
       }
     ],
-    "cisco_ios_show_lldp_neighbors_detail": [
-      {
-        "LocalInterface": "Gi1/0/4",
-        "NeighborName": "",
-        "NeighborPort": "245a.4c7e.951e",
-        "_source_file": "C:\\Users\\zhiltsov.aa\\Desktop\\net-auto-mermaid\\data\\raw\\DEN\\59\\10.20.99.94.txt",
-        "_template": "cisco_ios_show_lldp_neighbors_detail.template"
-      },
-      {
-        "LocalInterface": "Gi1/0/17",
-        "NeighborName": "DEN-HOTEL-26",
-        "NeighborPort": "Twe1/0/24",
-        "_source_file": "C:\\Users\\zhiltsov.aa\\Desktop\\net-auto-mermaid\\data\\raw\\DEN\\59\\10.20.99.94.txt",
-        "_template": "cisco_ios_show_lldp_neighbors_detail.template"
-      },
-      {
-        "LocalInterface": "Gi1/0/8",
-        "NeighborName": "DEN-NSWR-03-98-1",
-        "NeighborPort": "245a.4c7e.95ca",
-        "_source_file": "C:\\Users\\zhiltsov.aa\\Desktop\\net-auto-mermaid\\data\\raw\\DEN\\59\\10.20.99.94.txt",
-        "_template": "cisco_ios_show_lldp_neighbors_detail.template"
-      },
-      {
-        "LocalInterface": "Gi1/0/6",
-        "NeighborName": "DEN-HOTEL-25",
-        "NeighborPort": "245a.4c7e.959e",
-        "_source_file": "C:\\Users\\zhiltsov.aa\\Desktop\\net-auto-mermaid\\data\\raw\\DEN\\59\\10.20.99.94.txt",
-        "_template": "cisco_ios_show_lldp_neighbors_detail.template"
-      },
-      {
-        "LocalInterface": "Gi1/0/2",
-        "NeighborName": "DEN-HOTEL-24",
-        "NeighborPort": "245a.4c7e.9de6",
-        "_source_file": "C:\\Users\\zhiltsov.aa\\Desktop\\net-auto-mermaid\\data\\raw\\DEN\\59\\10.20.99.94.txt",
-        "_template": "cisco_ios_show_lldp_neighbors_detail.template"
-      },
-      {
-        "LocalInterface": "Gi1/0/1",
-        "NeighborName": "DEN-HOTEL-23",
-        "NeighborPort": "245a.4c7e.9546",
-        "_source_file": "C:\\Users\\zhiltsov.aa\\Desktop\\net-auto-mermaid\\data\\raw\\DEN\\59\\10.20.99.94.txt",
-        "_template": "cisco_ios_show_lldp_neighbors_detail.template"
-      },
-      {
-        "LocalInterface": "Gi1/0/3",
-        "NeighborName": "DEN-HOTEL-28",
-        "NeighborPort": "245a.4c7e.948e",
-        "_source_file": "C:\\Users\\zhiltsov.aa\\Desktop\\net-auto-mermaid\\data\\raw\\DEN\\59\\10.20.99.94.txt",
-        "_template": "cisco_ios_show_lldp_neighbors_detail.template"
-      },
-      {
-        "LocalInterface": "Gi1/0/5",
-        "NeighborName": "DEN-HOTEL-27",
-        "NeighborPort": "245a.4c7e.9d12",
-        "_source_file": "C:\\Users\\zhiltsov.aa\\Desktop\\net-auto-mermaid\\data\\raw\\DEN\\59\\10.20.99.94.txt",
-        "_template": "cisco_ios_show_lldp_neighbors_detail.template"
-      },
-      {
-        "LocalInterface": "Gi1/0/7",
-        "NeighborName": "DEN-HOTEL-22",
-        "NeighborPort": "245a.4c7e.9516",
-        "_source_file": "C:\\Users\\zhiltsov.aa\\Desktop\\net-auto-mermaid\\data\\raw\\DEN\\59\\10.20.99.94.txt",
-        "_template": "cisco_ios_show_lldp_neighbors_detail.template"
-      },
-      {
-        "LocalInterface": "",
-        "NeighborName": "DEN-HOTEL-21",
-        "NeighborPort": "",
-        "_source_file": "C:\\Users\\zhiltsov.aa\\Desktop\\net-auto-mermaid\\data\\raw\\DEN\\59\\10.20.99.94.txt",
-        "_template": "cisco_ios_show_lldp_neighbors_detail.template"
-      }
-    ],
     "cisco_ios_show_version": [
       {
         "Version": "15.2(7)E6",
         "Model": "",
-        "Uptime": "13 weeks, 2 days, 4 minutes",
+        "Uptime": "14 weeks, 6 days, 20 hours, 33 minutes",
         "_source_file": "C:\\Users\\zhiltsov.aa\\Desktop\\net-auto-mermaid\\data\\raw\\DEN\\59\\10.20.99.94.txt",
         "_template": "cisco_ios_show_version.template"
       },

@@ -6,7 +6,7 @@ $ terminal length 0
 
 $ show version
 
-MEMORY           : Total=81490 KBytes, Free=61736 KBytes, Max=61393 KBytes
+MEMORY           : Total=81490 KBytes, Free=60733 KBytes, Max=60693 KBytes
 FLASH            : 0x40000000-0x41ffffff, 512 x 0x10000 blocks
 MAC Address      : 00-40-c7-fe-6f-c5
 Previous Restart : Cold
@@ -14,8 +14,8 @@ Previous Restart : Cold
 System Contact   : 
 System Name      : INA-NSWS-129-99-125
 System Location  : 
-System Time      : 2011-02-11T23:32:44+00:00
-System Uptime    : 41d 23:32:44
+System Time      : 2011-02-23T20:02:18+00:00
+System Uptime    : 53d 20:02:18
 
 Active Image
 ------------

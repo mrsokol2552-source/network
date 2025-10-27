@@ -36,13 +36,17 @@ import re
 
 @dataclass
 class RenderConfig:
-    layout_engine: str            # "elk" | "dagre" (РјС‹ РїРµС‡Р°С‚Р°РµРј РїСЂРѕР»РѕРі РѕРґРёРЅР°РєРѕРІРѕ)
+    layout_engine: str            # "elk" | "dagre"
     flow_direction: str           # "LR" | "TD"
     use_subgraphs: bool
     label_verbosity: str          # "none" | "brief" | "full"
     show_ports: bool
     show_vlans: bool
     show_ips: bool
+    font_size: str | None = None  # e.g. "18px"
+    node_spacing: int | None = None
+    rank_spacing: int | None = None
+    diagram_padding: int | None = None
 
 
 @dataclass
@@ -70,6 +74,10 @@ class Config:
             show_ports=bool(r.get("show_ports", True)),
             show_vlans=bool(r.get("show_vlans", True)),
             show_ips=bool(r.get("show_ips", True)),
+            font_size=r.get("font_size"),
+            node_spacing=r.get("node_spacing"),
+            rank_spacing=r.get("rank_spacing"),
+            diagram_padding=r.get("diagram_padding"),
         )
         p = raw.get("paths", {})
         paths = PathsConfig(
@@ -154,18 +162,30 @@ def build_edge_line(e: Dict[str, Any]) -> str:
     dst = e.get("dst")
     if not src or not dst:
         return ""  # РїСЂРѕРїСѓСЃС‚РёРј
-    # Показываем только факт связи, без текстовой подписи
+    # Печатаем порты у каждого конца, чтобы различать параллельные линki
+    s_if = (e.get("src_intf") or "").strip()
+    d_if = (e.get("dst_intf") or "").strip()
+    label = ""
+    if s_if or d_if:
+        if s_if and d_if:
+            label = f'({s_if}) <-> ({d_if})'
+        elif s_if:
+            label = f'({s_if})'
+        else:
+            label = f'({d_if})'
+    if label:
+        return f'{safe_id(src)} -- "{esc(label)}" --- {safe_id(dst)}'
     return f"{safe_id(src)} --- {safe_id(dst)}"
 
 def class_defs() -> str:
     return (
-        "classDef core   stroke-width:2px,stroke:#1f77b4,fill:#e6f1fb,color:#111;\n"
-        "classDef dist   stroke-width:2px,stroke:#2ca02c,fill:#eaf7ea,color:#111;\n"
-        "classDef access stroke-width:1.5px,stroke:#7f7f7f,fill:#f6f6f6,color:#111;\n"
-        "classDef wan    stroke-width:2px,stroke:#9467bd,fill:#f2e9fb,color:#111;\n"
-        "classDef dmz    stroke-width:2px,stroke:#d62728,fill:#fdeaea,color:#111;\n"
-        "classDef mgmt   stroke-width:1.5px,stroke:#bcbd22,fill:#fbfbe6,color:#111;\n"
-        "classDef wifi  stroke-width:1.5px,stroke:#1f77b4,fill:#eef7ff,color:#111;\n"
+        "classDef core   stroke-width:2px,stroke:#1f77b4,fill:#e6f1fb,color:#111,font-size:40px;\n"
+        "classDef dist   stroke-width:2px,stroke:#2ca02c,fill:#eaf7ea,color:#111,font-size:40px;\n"
+        "classDef access stroke-width:1.5px,stroke:#7f7f7f,fill:#f6f6f6,color:#111,font-size:40px;\n"
+        "classDef wan    stroke-width:2px,stroke:#9467bd,fill:#f2e9fb,color:#111,font-size:40px;\n"
+        "classDef dmz    stroke-width:2px,stroke:#d62728,fill:#fdeaea,color:#111,font-size:40px;\n"
+        "classDef mgmt   stroke-width:1.5px,stroke:#bcbd22,fill:#fbfbe6,color:#111,font-size:40px;\n"
+        "classDef wifi  stroke-width:1.5px,stroke:#1f77b4,fill:#eef7ff,color:#111,font-size:40px;\n"
     )
 
 # -----------------------------
@@ -181,12 +201,29 @@ class MermaidWriter:
     def _header(self) -> str:
         # РџСЂРѕР»РѕРі вЂ” Р±РµР· СЏРІРЅРѕРіРѕ РІРєР»СЋС‡РµРЅРёСЏ elk. Р•РіРѕ (РїРѕ СЃС‚Р°РЅРґР°СЂС‚Сѓ) РґРѕР±Р°РІР»СЏРµС‚ РІРЅРµС€РЅСЏСЏ СЃСЂРµРґР°/СЌРєСЃРїРѕСЂС‚С‘СЂ РїСЂРё РЅРµРѕР±С…РѕРґРёРјРѕСЃС‚Рё.
         fd = self.cfg.render.flow_direction or "LR"
+        fs = self.cfg.render.font_size or "18px"
+        ns = self.cfg.render.node_spacing or 60
+        rs = self.cfg.render.rank_spacing or 60
+        dp = self.cfg.render.diagram_padding or 16
+        init_cfg = {
+            "theme": "base",
+            "themeVariables": {"fontSize": fs},
+            "flowchart": {
+                "htmlLabels": False,
+                "curve": "basis",
+                "defaultRenderer": "elk",
+                "nodeSpacing": ns,
+                "rankSpacing": rs,
+                "diagramPadding": dp,
+            },
+            "themeCSS": ".edgeLabel .label{font-size:" + fs + ";}.nodeLabel{font-size:" + fs + ";}.cluster-label span{font-size:" + fs + ";}",
+        }
         header = (
-            "%% Р”РёР°РіСЂР°РјРјР° РіРµРЅРµСЂРёСЂРѕРІР°РЅР° Mermaid NetDocs\n"
+            "%% Р”РёР°РіС€Р°РјРјР° Mermaid NetDocs\n"
             "%% Р РµР¶РёРјС‹: LR + (optional) elk\n"
-            "%%{init: {\"theme\": \"base\", \"flowchart\": {\"htmlLabels\": false, \"curve\": \"basis\"}}}%%\n"
-            f"flowchart {fd}\n"
-            "\n"
+            + "%%" + "{init: " + json.dumps(init_cfg).replace(" ", " ") + "}" + "%%\n"
+            + f"flowchart {fd}\n"
+            + "\n"
         )
         return header
 
@@ -207,8 +244,11 @@ class MermaidWriter:
 
     def _render_nodes_with_subgraphs(self) -> List[str]:
         lines: List[str] = []
-        for site, items in self._group_by_site().items():
+        # Precompute (site -> items) and build nodes
+        site_groups = list(self._group_by_site().items())
+        for site, items in site_groups:
             lines.append(f'subgraph "{site}"')
+            lines.append('  direction TB')
             # Group inside site by zone (first numeric token in hostname)
             by_zone: Dict[str, List[Tuple[str, Dict[str, Any]]]] = {}
             unzoned: List[Tuple[str, Dict[str, Any]]] = []
@@ -218,14 +258,32 @@ class MermaidWriter:
                     by_zone.setdefault(z, []).append((hn, n))
                 else:
                     unzoned.append((hn, n))
+            # Print zones
             for z in sorted(by_zone.keys(), key=lambda x: int(x) if str(x).isdigit() else 9999):
                 lines.append(f'  subgraph "{z}"')
+                lines.append('    direction TB')
                 for hn, n in sorted(by_zone[z], key=stable_node_key):
                     lines.append("    " + build_node_line(hn, n, self.cfg))
                 lines.append("  end")
+            # Unzoned nodes
             for hn, n in sorted(unzoned, key=stable_node_key):
                 lines.append("  " + build_node_line(hn, n, self.cfg))
             lines.append("end")
+
+            # After site block: print zone-local edges
+            zone_nodes: Dict[str, set] = {z: {hn for hn, _ in lst} for z, lst in by_zone.items()}
+            for z in sorted(zone_nodes.keys(), key=lambda x: int(x) if str(x).isdigit() else 9999):
+                lines.append(f'%% ===== Новые связи: {z} =====')
+                znodes = zone_nodes[z]
+                for e in self.norm.edges:
+                    s = e.get("src"); d = e.get("dst")
+                    if not s or not d:
+                        continue
+                    # Assign edge to zone if src in zone; otherwise if dst in zone and src not in zone
+                    if s in znodes or (d in znodes and s not in znodes):
+                        ln = build_edge_line(e)
+                        if ln:
+                            lines.append(ln)
         return lines
 
     def _render_edges(self) -> List[str]:
@@ -249,8 +307,19 @@ class MermaidWriter:
         parts.append("")  # РїСѓСЃС‚Р°СЏ СЃС‚СЂРѕРєР°
 
         # Р С‘Р±СЂР°
-        parts.extend(self._render_edges())
-
+                # Рёбра
+        if self.cfg.render.use_subgraphs:
+            node_site: Dict[str, str] = {hn: str(n.get("site") or "UNSPEC") for hn, n in self.norm.nodes.items()}
+            for e in self.norm.edges:
+                s = e.get("src"); d = e.get("dst")
+                if not s or not d:
+                    continue
+                if node_site.get(s) != node_site.get(d):
+                    ln = build_edge_line(e)
+                    if ln:
+                        parts.append(ln)
+        else:
+            parts.extend(self._render_edges())
         parts.append("")  # РїСѓСЃС‚Р°СЏ СЃС‚СЂРѕРєР°
 
         # classDef вЂ” РѕРґРёРЅ СЂР°Р· РІРЅРёР·Сѓ РґРёР°РіСЂР°РјРјС‹
@@ -305,3 +374,6 @@ if __name__ == "__main__":
     except Exception as e:
         log.error("Р¤Р°С‚Р°Р»СЊРЅР°СЏ РѕС€РёР±РєР°: %s", e)
         raise
+
+
+

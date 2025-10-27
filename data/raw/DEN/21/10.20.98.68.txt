@@ -13,7 +13,7 @@ Compiled Fri 25-Oct-13 14:35 by prod_rel_team
 ROM: Bootstrap program is C2960C boot loader
 BOOTLDR: C2960C Boot Loader (C2960c405-HBOOT-M) Version 12.2(55r)EX9, RELEASE SOFTWARE (fc1)
 
-DEN-NSWS-21-98-68 uptime is 6 weeks, 6 hours, 13 minutes
+DEN-NSWS-21-98-68 uptime is 7 weeks, 5 days, 2 hours, 42 minutes
 System returned to ROM by power-on
 System restarted at 10:19:08 YAKT Wed Sep 3 2025
 System image file is "flash:/c2960c405-universalk9-mz.150-2.SE5/c2960c405-universalk9-mz.150-2.SE5.bin"
@@ -83,7 +83,7 @@ Entry address(es):
   IP address: 10.20.98.67
 Platform: cisco WS-C2960C-8TC-L,  Capabilities: Switch IGMP 
 Interface: GigabitEthernet0/2,  Port ID (outgoing port): GigabitEthernet0/1
-Holdtime : 176 sec
+Holdtime : 156 sec
 
 Version :
 Cisco IOS Software, C2960C Software (C2960c405-UNIVERSALK9-M), Version 15.0(2)SE5, RELEASE SOFTWARE (fc1)
@@ -108,7 +108,7 @@ Entry address(es):
   IP address: 10.20.98.69
 Platform: cisco WS-C2960C-8TC-L,  Capabilities: Switch IGMP 
 Interface: GigabitEthernet0/2,  Port ID (outgoing port): GigabitEthernet0/2
-Holdtime : 143 sec
+Holdtime : 174 sec
 
 Version :
 Cisco IOS Software, C2960C Software (C2960c405-UNIVERSALK9-M), Version 15.0(2)SE5, RELEASE SOFTWARE (fc1)
@@ -133,7 +133,7 @@ Entry address(es):
   IP address: 10.20.99.98
 Platform: cisco C1000-16T-2G-L,  Capabilities: Switch IGMP 
 Interface: GigabitEthernet0/2,  Port ID (outgoing port): GigabitEthernet1/0/17
-Holdtime : 129 sec
+Holdtime : 137 sec
 
 Version :
 Cisco IOS Software, C1000 Software (C1000-UNIVERSALK9-M), Version 15.2(7)E1, RELEASE SOFTWARE (fc4)
@@ -160,8 +160,8 @@ Capability Codes: R - Router, T - Trans Bridge, B - Source Route Bridge
 
 Device ID        Local Intrfce     Holdtme    Capability  Platform  Port ID
 DEN-NSWS-22-98-67.kolmar.ru
-                 Gig 0/2           176              S I   WS-C2960C Gig 0/1
+                 Gig 0/2           156              S I   WS-C2960C Gig 0/1
 DEN-NSWS-21-98-69.kolmar.ru
-                 Gig 0/2           143              S I   WS-C2960C Gig 0/2
+                 Gig 0/2           174              S I   WS-C2960C Gig 0/2
 DEN-NSWS-19-99-98.kolmar.ru
-                 Gig 0/2           129              S I   C1000-16T Gig 1/0/17
+                 Gig 0/2           137              S I   C1000-16T Gig 1/0/17

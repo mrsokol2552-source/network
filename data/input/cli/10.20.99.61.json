@@ -8,7 +8,7 @@
       {
         "Neighbor": "INA-NSWS-35-99-61",
         "LocalInterface": "uptime is",
-        "NeighborPort": "1 day,",
+        "NeighborPort": "6 days,",
         "_source_file": "C:\\Users\\zhiltsov.aa\\Desktop\\net-auto-mermaid\\data\\raw\\INA\\35\\10.20.99.61.txt",
         "_template": "cisco_ios_show_cdp_neighbors.template"
       },
@@ -60,41 +60,11 @@
         "_template": "cisco_ios_show_cdp_neighbors_detail.template"
       }
     ],
-    "cisco_ios_show_lldp_neighbors_detail": [
-      {
-        "LocalInterface": "Gi0/11",
-        "NeighborName": "",
-        "NeighborPort": "Gi1/0/17",
-        "_source_file": "C:\\Users\\zhiltsov.aa\\Desktop\\net-auto-mermaid\\data\\raw\\INA\\35\\10.20.99.61.txt",
-        "_template": "cisco_ios_show_lldp_neighbors_detail.template"
-      },
-      {
-        "LocalInterface": "Gi0/8",
-        "NeighborName": "INA-NSWS-43-99-170.kolmar.ru",
-        "NeighborPort": "805e.0c87.8793",
-        "_source_file": "C:\\Users\\zhiltsov.aa\\Desktop\\net-auto-mermaid\\data\\raw\\INA\\35\\10.20.99.61.txt",
-        "_template": "cisco_ios_show_lldp_neighbors_detail.template"
-      },
-      {
-        "LocalInterface": "Gi0/9",
-        "NeighborName": "SIP-T46U",
-        "NeighborPort": "Gi0/10",
-        "_source_file": "C:\\Users\\zhiltsov.aa\\Desktop\\net-auto-mermaid\\data\\raw\\INA\\35\\10.20.99.61.txt",
-        "_template": "cisco_ios_show_lldp_neighbors_detail.template"
-      },
-      {
-        "LocalInterface": "",
-        "NeighborName": "INA-NSWS-35-99-139.kolmar.ru",
-        "NeighborPort": "",
-        "_source_file": "C:\\Users\\zhiltsov.aa\\Desktop\\net-auto-mermaid\\data\\raw\\INA\\35\\10.20.99.61.txt",
-        "_template": "cisco_ios_show_lldp_neighbors_detail.template"
-      }
-    ],
     "cisco_ios_show_version": [
       {
         "Version": "15.2(4)E5",
         "Model": "",
-        "Uptime": "28 weeks, 1 day, 4 hours, 16 minutes",
+        "Uptime": "29 weeks, 6 days, 45 minutes",
         "_source_file": "C:\\Users\\zhiltsov.aa\\Desktop\\net-auto-mermaid\\data\\raw\\INA\\35\\10.20.99.61.txt",
         "_template": "cisco_ios_show_version.template"
       },

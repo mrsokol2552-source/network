@@ -13,7 +13,7 @@ Compiled Sat 23-Mar-19 09:05 by prod_rel_team
 ROM: Bootstrap program is C2960CX boot loader
 BOOTLDR: C2960CX Boot Loader (C2960CX-HBOOT-M) Version 15.2(6r)E, RELEASE SOFTWARE (fc1)
 
-INA-NSWS-35-99-139 uptime is 28 weeks, 1 day, 4 hours, 16 minutes
+INA-NSWS-35-99-139 uptime is 29 weeks, 6 days, 45 minutes
 System returned to ROM by power-on
 System restarted at 12:06:45 YAKT Tue Apr 1 2025
 System image file is "flash:/c2960cx-universalk9-mz.152-7.E/c2960cx-universalk9-mz.152-7.E.bin"
@@ -83,7 +83,7 @@ Technical Support: http://www.cisco.com/techsupport
 Copyright (c) 1986-2019 by Cisco Systems, Inc.
 Compiled Sat 23-Mar-19 09:05 by prod_rel_team
 
-Time remaining: 104 seconds
+Time remaining: 102 seconds
 System Capabilities: B,R
 Enabled Capabilities: B
 Management Addresses:
@@ -111,7 +111,7 @@ Technical Support: http://www.cisco.com/techsupport
 Copyright (c) 1986-2021 by Cisco Systems, Inc.
 Compiled Sat 17-Apr-21 07:21 by prod_rel_team
 
-Time remaining: 113 seconds
+Time remaining: 110 seconds
 System Capabilities: B,R
 Enabled Capabilities: B
 Management Addresses:
@@ -135,7 +135,7 @@ Technical Support: http://www.cisco.com/techsupport
 Copyright (c) 1986-2017 by Cisco Systems, Inc.
 Compiled Mon 18-Sep-17 08:41 by prod_rel_team
 
-Time remaining: 111 seconds
+Time remaining: 99 seconds
 System Capabilities: B,R
 Enabled Capabilities: B
 Management Addresses:
@@ -163,7 +163,7 @@ Technical Support: http://www.cisco.com/techsupport
 Copyright (c) 1986-2017 by Cisco Systems, Inc.
 Compiled Wed 12-Jul-17 13:06 by prod_rel_team
 
-Time remaining: 112 seconds
+Time remaining: 106 seconds
 System Capabilities: B,R
 Enabled Capabilities: B
 Management Addresses:
@@ -188,7 +188,7 @@ System Name: X1S/X1SP
 System Description: 
 Version:2.4.12.2
 
-Time remaining: 28 seconds
+Time remaining: 22 seconds
 System Capabilities: B,T
 Enabled Capabilities: B,T
 Management Addresses:
@@ -225,7 +225,7 @@ Port Description - not advertised
 System Name - not advertised
 System Description - not advertised
 
-Time remaining: 2893 seconds
+Time remaining: 2929 seconds
 System Capabilities - not advertised
 Enabled Capabilities - not advertised
 Management Addresses - not advertised
@@ -257,7 +257,7 @@ Port Description - not advertised
 System Name - not advertised
 System Description - not advertised
 
-Time remaining: 2861 seconds
+Time remaining: 3124 seconds
 System Capabilities - not advertised
 Enabled Capabilities - not advertised
 Management Addresses - not advertised
@@ -293,7 +293,7 @@ Entry address(es):
   IP address: 10.20.99.137
 Platform: cisco C1000-16T-2G-L,  Capabilities: Switch IGMP 
 Interface: GigabitEthernet0/11,  Port ID (outgoing port): GigabitEthernet1/0/17
-Holdtime : 176 sec
+Holdtime : 170 sec
 
 Version :
 Cisco IOS Software, C1000 Software (C1000-UNIVERSALK9-M), Version 15.2(8)E, RELEASE SOFTWARE (fc3)
@@ -314,7 +314,7 @@ Entry address(es):
   IP address: 10.20.99.186
 Platform: cisco WS-C2960CX-8TC-L,  Capabilities: Switch IGMP 
 Interface: GigabitEthernet0/1,  Port ID (outgoing port): GigabitEthernet0/9
-Holdtime : 136 sec
+Holdtime : 161 sec
 
 Version :
 Cisco IOS Software, C2960CX Software (C2960CX-UNIVERSALK9-M), Version 15.2(7)E, RELEASE SOFTWARE (fc3)
@@ -335,7 +335,7 @@ Entry address(es):
   IP address: 10.20.99.60
 Platform: cisco WS-C2960X-48TS-L,  Capabilities: Switch IGMP 
 Interface: GigabitEthernet0/9,  Port ID (outgoing port): GigabitEthernet1/0/48
-Holdtime : 131 sec
+Holdtime : 132 sec
 
 Version :
 Cisco IOS Software, C2960X Software (C2960X-UNIVERSALK9-M), Version 15.2(2)E7, RELEASE SOFTWARE (fc3)
@@ -357,7 +357,7 @@ Entry address(es):
   IP address: 192.168.99.61
 Platform: cisco WS-C2960CX-8TC-L,  Capabilities: Switch IGMP 
 Interface: GigabitEthernet0/10,  Port ID (outgoing port): GigabitEthernet0/9
-Holdtime : 143 sec
+Holdtime : 168 sec
 
 Version :
 Cisco IOS Software, C2960CX Software (C2960CX-UNIVERSALK9-M), Version 15.2(4)E5, RELEASE SOFTWARE (fc2)
@@ -379,7 +379,7 @@ Entry address(es):
   IP address: 10.13.1.74
 Platform: X1S/X1SP,  Capabilities: Host Phone 
 Interface: GigabitEthernet0/2,  Port ID (outgoing port): WAN PORT
-Holdtime : 160 sec
+Holdtime : 144 sec
 
 Version :
 2.4.12.2
@@ -397,13 +397,13 @@ Capability Codes: R - Router, T - Trans Bridge, B - Source Route Bridge
 
 Device ID        Local Intrfce     Holdtme    Capability  Platform  Port ID
 INA-NSWS-72-99-137.kolmar.local
-                 Gig 0/11          175              S I   C1000-16T Gig 1/0/17
+                 Gig 0/11          170              S I   C1000-16T Gig 1/0/17
 INA-NSWS-36-99-186.kolmar.local
-                 Gig 0/1           136              S I   WS-C2960C Gig 0/9
+                 Gig 0/1           161              S I   WS-C2960C Gig 0/9
 INA-NSWS-38-99-60.kolmar.ru
                  Gig 0/9           131              S I   WS-C2960X Gig 1/0/48
 INA-NSWS-35-99-61.kolmar.ru
-                 Gig 0/10          143              S I   WS-C2960C Gig 0/9
-X1S/X1SP         Gig 0/2           160              H P   X1S/X1SP  WAN PORT
+                 Gig 0/10          168              S I   WS-C2960C Gig 0/9
+X1S/X1SP         Gig 0/2           144              H P   X1S/X1SP  WAN PORT
 
 Total cdp entries displayed : 5

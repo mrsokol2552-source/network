@@ -8,7 +8,7 @@
       {
         "Neighbor": "NER-NSWS-12-97-5",
         "LocalInterface": "uptime is",
-        "NeighborPort": "5 days,",
+        "NeighborPort": "3 days,",
         "_source_file": "C:\\Users\\zhiltsov.aa\\Desktop\\net-auto-mermaid\\data\\raw\\NER\\12\\10.20.97.5.txt",
         "_template": "cisco_ios_show_cdp_neighbors.template"
       },
@@ -49,7 +49,7 @@
       {
         "Version": "15.0(2)SE8",
         "Model": "",
-        "Uptime": "3 weeks, 5 days, 6 hours, 45 minutes",
+        "Uptime": "5 weeks, 3 days, 3 hours, 15 minutes",
         "_source_file": "C:\\Users\\zhiltsov.aa\\Desktop\\net-auto-mermaid\\data\\raw\\NER\\12\\10.20.97.5.txt",
         "_template": "cisco_ios_show_version.template"
       },

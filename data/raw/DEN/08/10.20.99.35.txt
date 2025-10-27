@@ -13,7 +13,7 @@ Compiled Thu 14-May-15 03:20 by prod_rel_team
 ROM: Bootstrap program is C2960C boot loader
 BOOTLDR: C2960C Boot Loader (C2960c405-HBOOT-M) Version 12.2(55r)EX9, RELEASE SOFTWARE (fc1)
 
-DEN-NSWS-08-99-35 uptime is 13 weeks, 2 days, 8 minutes
+DEN-NSWS-08-99-35 uptime is 14 weeks, 6 days, 20 hours, 37 minutes
 System returned to ROM by power-on
 System restarted at 16:24:24 YAKT Mon Jul 14 2025
 System image file is "flash:/c2960c405-universalk9-mz.150-2.SE8/c2960c405-universalk9-mz.150-2.SE8.bin"
@@ -83,7 +83,7 @@ Entry address(es):
   IP address: 10.20.99.15
 Platform: cisco WS-C2960+24TC-L,  Capabilities: Switch IGMP 
 Interface: GigabitEthernet0/2,  Port ID (outgoing port): FastEthernet0/20
-Holdtime : 170 sec
+Holdtime : 137 sec
 
 Version :
 Cisco IOS Software, C2960 Software (C2960-LANBASEK9-M), Version 15.2(2)E6, RELEASE SOFTWARE (fc1)
@@ -111,4 +111,4 @@ Capability Codes: R - Router, T - Trans Bridge, B - Source Route Bridge
 
 Device ID        Local Intrfce     Holdtme    Capability  Platform  Port ID
 DEN-NSWS-04-99-15.kolmar.ru
-                 Gig 0/2           170              S I   WS-C2960+ Fas 0/20
+                 Gig 0/2           137              S I   WS-C2960+ Fas 0/20

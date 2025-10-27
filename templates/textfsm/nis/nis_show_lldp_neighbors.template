@@ -1,14 +1,13 @@
 ﻿Value LocalInterface (\S+)
-Value NeighborName (.*)
-Value NeighborPort (.*)
+Value NeighborName (.+)
+Value NeighborPort (.+)
 
 Start
-  ^\s*Local\s+Interface\s*:\s*${LocalInterface}\s* -> Detail
+  ^\s*Local\s+Interface\s*:\s*${LocalInterface}\s* -> Neigh
   ^.* -> Start
 
-Detail
-  ^\s*System\s+Name\s*:\s*${NeighborName}\s* -> Detail
-  ^\s*Port\s+ID\s*:\s*${NeighborPort}\s* -> Detail
-  ^\s*$$ -> Record Start
-  ^.* -> Detail
-
+Neigh
+  ^\s*System\s+Name\s*:\s*${NeighborName}\s*
+  ^\s*Port\s+ID\s*:\s*${NeighborPort}\s* -> Record
+  ^\s*$ -> Start
+  ^.* -> Neigh

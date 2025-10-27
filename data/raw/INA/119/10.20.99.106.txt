@@ -12,7 +12,7 @@ Capabilities: Other
 System Name: 
 System description: 
 Port description: 
-Time To Live: 2988
+Time To Live: 2815
 
 
 802.3 MAC/PHY Configuration/Status
@@ -50,9 +50,9 @@ Capabilities: Bridge, Router, Wlan-Access-Point
 System Name: INALAB
 System description: UAP-HD-IW, 6.7.17.15512
 Port description: eth0
-Management Address: 10.31.0.81
+Management Address: 10.30.0.64
 Management Address: fe80::72a7:41ff:fee7:ed5d
-Time To Live: 111
+Time To Live: 112
 
 
 802.1 PVID: None
@@ -93,7 +93,7 @@ Technical Support: http://www.cisco.com/techsupport
 Copyrigh
 Port description: 99.106_gi0/48
 Management Address: 10.20.99.196
-Time To Live: 119
+Time To Live: 106
 
 
 802.3 MAC/PHY Configuration/Status
@@ -153,9 +153,9 @@ gi1/0/3  1G-Copper      --      --     --     --  Down (nc)         --         -
 gi1/0/4  1G-Copper      --      --     --     --  Down (nc)         --         --     --     Access (90)             
 gi1/0/5  1G-Copper      --      --     --     --  Down (nc)         --         --     --     Access (90)             
 gi1/0/6  1G-Copper      --      --     --     --  Down (nc)         --         --     --     Access (90)             
-gi1/0/7  1G-Copper    Full    100   Disabled Off  Up          01,00:46:27   Disabled Off     Access (90)             
+gi1/0/7  1G-Copper    Full    100   Disabled Off  Up          12,21:16:20   Disabled Off     Access (90)             
 gi1/0/8  1G-Copper      --      --     --     --  Down (nc)         --         --     --     Access (90)             
-gi1/0/9  1G-Copper    Full    100   Disabled Off  Up          01,00:46:49   Disabled Off     Access (90)             
+gi1/0/9  1G-Copper    Full    100   Disabled Off  Up          00,01:21:23   Disabled Off     Access (90)             
 gi1/0/10 1G-Copper      --      --     --     --  Down (nc)         --         --     --     Access (90)             
 gi1/0/11 1G-Copper      --      --     --     --  Down (nc)         --         --     --     Access (90)             
 gi1/0/12 1G-Copper      --      --     --     --  Down (nc)         --         --     --     Access (90)             
@@ -165,36 +165,36 @@ gi1/0/15 1G-Copper      --      --     --     --  Down (nc)         --         -
 gi1/0/16 1G-Copper      --      --     --     --  Down (nc)         --         --     --     Access (90)             
 gi1/0/17 1G-Copper      --      --     --     --  Down (nc)         --         --     --     Access (90)             
 gi1/0/18 1G-Copper      --      --     --     --  Down (nc)         --         --     --     General                 
-gi1/0/19 1G-Copper    Full    1000  Enabled  Off  Up          00,07:31:23   Disabled Off     Access (90)             
-gi1/0/20 1G-Copper    Full    100   Disabled Off  Up          00,06:01:08   Disabled On      Access (90)             
-gi1/0/21 1G-Copper    Full    100   Disabled Off  Up          01,05:40:04   Disabled Off     General                 
+gi1/0/19 1G-Copper    Full    1000  Enabled  Off  Up          00,03:53:48   Disabled Off     Access (90)             
+gi1/0/20 1G-Copper    Full    100   Disabled Off  Up          04,02:05:24   Disabled On      Access (90)             
+gi1/0/21 1G-Copper    Full    100   Disabled Off  Up          13,02:09:57   Disabled Off     General                 
 gi1/0/22 1G-Copper      --      --     --     --  Down (nc)         --         --     --     Access (90)             
 gi1/0/23 1G-Copper      --      --     --     --  Down (nc)         --         --     --     Access (90)             
-gi1/0/24 1G-Copper    Full    100   Disabled Off  Up          00,02:19:07   Disabled On      Access (90)             
-gi1/0/25 1G-Copper    Full    100   Disabled Off  Up          01,05:39:40   Disabled On      Access (90)             
-gi1/0/26 1G-Copper    Full    100   Disabled Off  Up          00,01:39:49   Disabled Off     Access (90)             
+gi1/0/24 1G-Copper    Full    100   Disabled Off  Up          04,02:19:28   Disabled On      Access (90)             
+gi1/0/25 1G-Copper    Full    100   Disabled Off  Up          05,21:52:06   Disabled On      Access (90)             
+gi1/0/26 1G-Copper    Full    100   Disabled Off  Up          00,03:57:34   Disabled Off     Access (90)             
 gi1/0/27 1G-Copper      --      --     --     --  Down (nc)         --         --     --     Access (90)             
 gi1/0/28 1G-Copper      --      --     --     --  Down (nc)         --         --     --     Access (90)             
 gi1/0/29 1G-Copper      --      --     --     --  Down (nc)         --         --     --     Access (90)             
-gi1/0/30 1G-Copper    Full    100   Disabled Off  Up          27,23:32:56   Disabled Off     Access (90)             
-gi1/0/31 1G-Copper    Full    100   Disabled Off  Up          00,08:52:35   Disabled Off     Access (90)             
+gi1/0/30 1G-Copper    Full    100   Disabled Off  Up          39,20:02:49   Disabled Off     Access (90)             
+gi1/0/31 1G-Copper    Full    100   Disabled Off  Up          00,03:54:20   Disabled Off     Access (90)             
 gi1/0/32 1G-Copper      --      --     --     --  Down (nc)         --         --     --     Access (90)             
 gi1/0/33 1G-Copper      --      --     --     --  Down (nc)         --         --     --     Access (90)             
 gi1/0/34 1G-Copper      --      --     --     --  Down (nc)         --         --     --     Access (90)             
 gi1/0/35 1G-Copper      --      --     --     --  Down (nc)         --         --     --     Access (90)             
 gi1/0/36 1G-Copper      --      --     --     --  Down (nc)         --         --     --     Access (90)             
 gi1/0/37 1G-Copper      --      --     --     --  Down (nc)         --         --     --     Access (90)             
-gi1/0/38 1G-Copper    Full    100   Disabled Off  Up          147,06:31:03  Disabled Off     Trunk                   
+gi1/0/38 1G-Copper    Full    100   Disabled Off  Up          159,03:00:56  Disabled Off     Trunk                   
 gi1/0/39 1G-Copper      --      --     --     --  Down (nc)         --         --     --     Access (90)             
-gi1/0/40 1G-Copper    Full    100   Disabled Off  Up          01,05:36:33   Disabled On      Access (90)             
-gi1/0/41 1G-Copper    Full    100   Disabled Off  Up          00,00:34:20   Disabled On      Access (90)             
+gi1/0/40 1G-Copper    Full    100   Disabled Off  Up          00,15:31:25   Disabled On      Access (90)             
+gi1/0/41 1G-Copper    Full    100   Disabled Off  Up          00,00:06:39   Disabled On      Access (90)             
 gi1/0/42 1G-Copper      --      --     --     --  Down (nc)         --         --     --     Access (90)             
 gi1/0/43 1G-Copper      --      --     --     --  Down (nc)         --         --     --     Access (90)             
 gi1/0/44 1G-Copper      --      --     --     --  Down (nc)         --         --     --     Access (90)             
 gi1/0/45 1G-Copper      --      --     --     --  Down (nc)         --         --     --     Access (90)             
 gi1/0/46 1G-Copper      --      --     --     --  Down (nc)         --         --     --     Access (90)             
 gi1/0/47 1G-Copper      --      --     --     --  Down (nc)         --         --     --     Access (90)             
-gi1/0/48 1G-Copper    Full    100   Enabled  Off  Up          01,08:06:37   Disabled On      Trunk                   
+gi1/0/48 1G-Copper    Full    100   Enabled  Off  Up          03,10:42:52   Disabled On      Trunk                   
 te1/0/1  10G-Fiber      --      --     --     --  Down (nc)         --         --     --     Access (1)              
 te1/0/2  10G-Fiber      --      --     --     --  Down (nc)         --         --     --     Access (1)              
 te1/0/3  10G-Fiber      --      --     --     --  Down (nc)         --         --     --     Access (1)              
@@ -260,7 +260,6 @@ adm (admin.shutdown): The interface was suspended by administrator.
 
 $ show interfaces
 
-      4: 0/0
       5: 0/0
       6: 0/0
       7: 0/0
@@ -270,7 +269,7 @@ tengigabitethernet1/0/1 is down (not connected)
   Interface index is 105
   Hardware is tengigabitethernet, MAC address is ec:b1:e0:56:a6:f1
   Interface MTU is 1500
-  Link is down for 306 days, 3 hours, 52 minutes and 44 seconds
+  Link is down for 318 days, 0 hours, 22 minutes and 37 seconds
   Flow control is off, MDIX mode is normal
   FEC is disabled
   15 second input rate is 0 Kbit/s
@@ -300,7 +299,7 @@ tengigabitethernet1/0/2 is down (not connected)
   Interface index is 106
   Hardware is tengigabitethernet, MAC address is ec:b1:e0:56:a6:f2
   Interface MTU is 1500
-  Link is down for 306 days, 3 hours, 52 minutes and 45 seconds
+  Link is down for 318 days, 0 hours, 22 minutes and 38 seconds
   Flow control is off, MDIX mode is normal
   FEC is disabled
   15 second input rate is 0 Kbit/s
@@ -330,7 +329,7 @@ tengigabitethernet1/0/3 is down (not connected)
   Interface index is 107
   Hardware is tengigabitethernet, MAC address is ec:b1:e0:56:a6:f3
   Interface MTU is 1500
-  Link is down for 306 days, 3 hours, 52 minutes and 46 seconds
+  Link is down for 318 days, 0 hours, 22 minutes and 38 seconds
   Flow control is off, MDIX mode is normal
   FEC is disabled
   15 second input rate is 0 Kbit/s
@@ -360,7 +359,7 @@ tengigabitethernet1/0/4 is down (not connected)
   Interface index is 108
   Hardware is tengigabitethernet, MAC address is ec:b1:e0:56:a6:f4
   Interface MTU is 1500
-  Link is down for 306 days, 3 hours, 52 minutes and 45 seconds
+  Link is down for 318 days, 0 hours, 22 minutes and 38 seconds
   Flow control is off, MDIX mode is normal
   FEC is disabled
   15 second input rate is 0 Kbit/s

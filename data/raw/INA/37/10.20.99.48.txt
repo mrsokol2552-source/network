@@ -46,8 +46,8 @@ $ show interfaces status
                                               Flow Link           Uptime       Back   Mdix                            
 Port     Type         Duplex  Speed  Neg      ctrl State         (d,h:m:s)   Pressure Mode    Port Mode (VLAN)        
 -------- ------------ ------  ------ -------- ---- ----------- ------------- -------- ------- ------------------------
-te1/0/1  10G-Fiber    Full    10000  Disabled Off  Up          08,03:58:03   Disabled Off     Access (1090)           
-te1/0/2  10G-Fiber    Full    10000  Disabled Off  Up          08,03:58:03   Disabled Off     Access (1090)           
+te1/0/1  10G-Fiber    Full    10000  Disabled Off  Up          20,00:27:45   Disabled Off     Access (1090)           
+te1/0/2  10G-Fiber    Full    10000  Disabled Off  Up          20,00:27:45   Disabled Off     Access (1090)           
 te1/0/3  10G-Fiber    Full    10000  Disabled Off  Up                --      Disabled Off     Trunk                   
 te1/0/4  10G-Fiber      --      --      --     --  Down (nc)         --         --     --     Access (1)              
 te1/0/5  10G-Fiber      --      --      --     --  Down (nc)         --         --     --     Access (1)              
@@ -216,20 +216,6 @@ adm (admin.shutdown): The interface was suspended by administrator.
 
 $ show interfaces
 
-      0 input errors, 0 FCS
-      0 oversize, 0 internal MAC
-      0 pause frames received
-      0 packets output, 0 bytes sent
-      0 broadcasts, 0 multicasts
-      0 output errors, 0 collisions
-      0 excessive collisions, 0 late collisions
-      0 pause frames transmitted
------------------- show interfaces Po82 ------------------
-Port-Channel82 is down (not connected)
-  Interface index is 1081
-  Hardware is aggregated ethernet interface(s), MAC address is e8:28:c1:19:25:80
-  Interface MTU is 1500
-  15 second input rate is 0 Kbit/s
   15 second output rate is 0 Kbit/s
       0 packets input, 0 bytes received
       0 broadcasts, 0 multicasts

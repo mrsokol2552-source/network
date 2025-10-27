@@ -1,0 +1,67 @@
+
+
+$ terminal length 0
+
+
+
+$ show version
+
+MEMORY           : Total=85138 KBytes, Free=70035 KBytes, Max=70018 KBytes
+FLASH            : 0x40000000-0x40ffffff, 256 x 0x10000 blocks
+MAC Address      : 00-1d-77-29-d3-ea
+S/N              : 5408PGE2023120111
+Previous Restart : Cold
+
+Host Name        : INA-NSWS-121-97-15
+Company Name     : 
+Company Contact  : 
+System Location  : 
+Timezone Offset  : 0
+System Time      : 1970-01-05T23:47:40+00:00
+System Uptime    : 4d 23:47:40
+
+Active Image
+------------
+Image            : NIS-3500-5408PGE_V2.1.dat (primary)
+Version          : V2.1
+Date             : 2023-07-21T12:29:28+08:00
+
+Alternate Image
+---------------
+Image            :  (backup)
+Version          : build-dev-2.1
+Date             : 2020-09-03T18:49:38-07:00
+
+Bootloader
+----------
+Image            : RedBoot (bootloader)
+Version          : version 1_20-Vitesse
+Date             : 02:22:43, Oct 18 2019
+
+------------------
+SID : 1 
+------------------
+Chipset ID       : ASIC 
+Board Type       : Switch Board
+Port Count       : 12
+Model Name       : NIS-3500-5408PGE
+Software Version : V2.1
+Build Date       : 2023-07-21T12:29:28+08:00
+
+
+
+$ show lldp neighbors detail
+                                        ^
+% Invalid word detected at '^' marker.
+
+
+
+$ show cdp neighbors detail
+                         ^
+% Invalid word detected at '^' marker.
+
+
+
+$ show cdp neighbors
+                         ^
+% Invalid word detected at '^' marker.

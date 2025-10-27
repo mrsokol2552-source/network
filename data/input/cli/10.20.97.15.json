@@ -1,0 +1,18 @@
+{
+  "vendor": "cisco_ios",
+  "raw_files": [
+    "INA\\121\\10.20.97.15.txt"
+  ],
+  "parsed": {
+    "cisco_ios_show_cdp_neighbors": [
+      {
+        "Neighbor": "FLASH",
+        "LocalInterface": ": 0x40000000-0x40ffffff,",
+        "NeighborPort": "0x10000 blocks",
+        "_source_file": "C:\\Users\\zhiltsov.aa\\Desktop\\net-auto-mermaid\\data\\raw\\INA\\121\\10.20.97.15.txt",
+        "_template": "cisco_ios_show_cdp_neighbors.template"
+      }
+    ]
+  },
+  "errors": []
+}

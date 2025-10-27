@@ -1,56 +1,67 @@
-%%{init: {"theme": "base", "flowchart": {"htmlLabels": false, "curve": "basis"}}}%%
+%% Р”РёР°РіС€Р°РјРјР° Mermaid NetDocs
+%% Р РµР¶РёРјС‹: LR + (optional) elk
+%%{init: {"theme": "base", "themeVariables": {"fontSize": "40px"}, "flowchart": {"htmlLabels": false, "curve": "basis", "defaultRenderer": "elk", "nodeSpacing": 160, "rankSpacing": 160, "diagramPadding": 48}, "themeCSS": ".edgeLabel .label{font-size:40px;}.nodeLabel{font-size:40px;}.cluster-label span{font-size:40px;}"}}%%
 flowchart LR
 
-subgraph "UNSPEC"
-  10_20_99_113["10.20.99.113<br/>10.20.99.113"]:::access
-  10_20_99_151["10.20.99.151<br/>10.20.99.151"]:::access
-  HRAM_RPBK["HRAM-RPBK<br/>10.20.99.248"]:::access
-  Switch["Switch<br/>10.20.98.99"]:::access
-end
+
 subgraph "CHU"
+  direction TB
   subgraph "01"
+    direction TB
     CHU_NSWS_01_98_143["CHU-NSWS-01-98-143<br/>10.20.98.143"]:::access
   end
   subgraph "02"
+    direction TB
     CHU_NSWS_02_99_223["CHU-NSWS-02-99-223<br/>10.20.99.223"]:::access
   end
   subgraph "03"
+    direction TB
     CHU_NSWS_03_98_144["CHU-NSWS-03-98-144<br/>10.20.98.144"]:::access
     CHU_NSWS_03_99_14["CHU-NSWS-03-99-14<br/>10.20.99.14"]:::access
     CHU_NSWS_03_99_224["CHU-NSWS-03-99-224<br/>10.20.99.224"]:::access
     CHU_NSWS_03_99_7["CHU-NSWS-03-99-7<br/>10.20.99.7"]:::access
   end
   subgraph "04"
+    direction TB
     CHU_NSWS_04_99_222["CHU-NSWS-04-99-222<br/>10.20.99.222"]:::access
     CHU_NSWS_04_99_71["CHU-NSWS-04-99-71<br/>10.20.99.71"]:::access
   end
   subgraph "05"
+    direction TB
     CHU_NSWS_05_98_146["CHU-NSWS-05-98-146<br/>10.20.98.146"]:::access
   end
   subgraph "06"
+    direction TB
     CHU_NSWS_06_98_147["CHU-NSWS-06-98-147<br/>10.20.98.147"]:::access
   end
   subgraph "07"
+    direction TB
     CHU_NSWS_07_98_145["CHU-NSWS-07-98-145<br/>10.20.98.145"]:::access
   end
   subgraph "08"
-    CHU_NSWS_08_98_148["CHU-NSWS-08-98-148"]:::access
+    direction TB
+    CHU_NSWS_08_98_148["CHU-NSWS-08-98-148<br/>10.20.98.148"]:::access
   end
   subgraph "10"
+    direction TB
     CHU_NSWS_10_98_149["CHU-NSWS-10-98-149<br/>10.20.98.149"]:::access
   end
   subgraph "11"
+    direction TB
     CHU_NSWS_11_98_150["CHU-NSWS-11-98-150<br/>10.20.98.150"]:::access
   end
   subgraph "12"
+    direction TB
     CHU_NSWS_12_98_142["CHU-NSWS-12-98-142<br/>10.20.98.142"]:::access
     CHU_NSWS_12_99_93["CHU-NSWS-12-99-93<br/>10.20.99.93"]:::access
   end
   subgraph "13"
+    direction TB
     CHU_NSWS_13_99_218["CHU-NSWS-13-99-218<br/>10.20.99.218"]:::access
     CHU_NSWS_13_99_219["CHU-NSWS-13-99-219<br/>10.20.99.219"]:::access
   end
   subgraph "14"
+    direction TB
     CHU_NSWR_14_98_140["CHU-NSWR-14-98-140<br/>10.20.98.140"]:::access
     CHU_NSWR_14_99_45["CHU-NSWR-14-99-45<br/>10.20.99.45<br/>Cisco IOS Software [Everest], Catalyst L3 Switch Software (CAT3K_CAA-UNIVERSALK9-M), Version 16.6.5, RELEASE SOFTWARE (fc1)"]:::access
     CHU_NSWS_14_98_141["CHU-NSWS-14-98-141<br/>10.20.98.141"]:::access
@@ -58,1058 +69,1022 @@ subgraph "CHU"
     CHU_NSWS_14_99_92["CHU-NSWS-14-99-92<br/>10.20.99.92"]:::access
   end
   subgraph "15"
+    direction TB
     CHU_NSWS_15_99_217["CHU-NSWS-15-99-217<br/>10.20.99.217"]:::access
   end
   subgraph "16"
+    direction TB
     CHU_NSWS_16_99_225["CHU-NSWS-16-99-225<br/>10.20.99.225"]:::access
   end
   subgraph "17"
+    direction TB
     CHU_NSWS_17_99_226["CHU-NSWS-17-99-226<br/>10.20.99.226"]:::access
     CHU_NSWS_17_99_227["CHU-NSWS-17-99-227<br/>10.20.99.227"]:::access
   end
   subgraph "22"
+    direction TB
     CHU_NSWS_22_98_151["CHU-NSWS-22-98-151<br/>10.20.98.151"]:::access
   end
   subgraph "23"
+    direction TB
     CHU_NSWS_23_98_235["CHU-NSWS-23-98-235<br/>10.20.98.235"]:::access
   end
   subgraph "24"
+    direction TB
     CHU_NSWS_24_98_232["CHU-NSWS-24-98-232<br/>10.20.98.232"]:::access
     CHU_NSWS_24_98_93["CHU-NSWS-24-98-93<br/>10.20.98.93"]:::access
   end
   subgraph "25"
+    direction TB
     CHU_NSWS_25_98_231["CHU-NSWS-25-98-231<br/>10.20.98.231"]:::access
   end
   subgraph "26"
+    direction TB
     CHU_NSWS_26_98_233["CHU-NSWS-26-98-233<br/>10.20.98.233"]:::access
   end
 end
+%% ===== Новые связи: 01 =====
+CHU_NSWR_14_98_140 -- "(GigabitEthernet1/0/1) <-> (GigabitEthernet0/11)" --- CHU_NSWS_01_98_143
+%% ===== Новые связи: 02 =====
+CHU_NSWR_14_98_140 -- "(GigabitEthernet1/0/3) <-> (GigabitEthernet0/1)" --- CHU_NSWS_02_99_223
+%% ===== Новые связи: 03 =====
+CHU_NSWR_14_98_140 -- "(GigabitEthernet1/0/5) <-> (GigabitEthernet0/11)" --- CHU_NSWS_03_98_144
+CHU_NSWR_14_98_140 -- "(GigabitEthernet1/0/2) <-> (GigabitEthernet0/1)" --- CHU_NSWS_03_99_224
+CHU_NSWS_03_99_14 -- "(Fas 0/3) <-> (I   WS-C2960C)" --- CHU_NSWS_03_99_7
+CHU_NSWS_03_99_14 -- "(FastEthernet0/7) <-> (FastEthernet0/8)" --- CHU_NSWS_04_99_222
+%% ===== Новые связи: 04 =====
+CHU_NSWR_14_98_140 -- "(GigabitEthernet1/0/4) <-> (GigabitEthernet0/1)" --- CHU_NSWS_04_99_222
+CHU_NSWS_03_99_14 -- "(FastEthernet0/7) <-> (FastEthernet0/8)" --- CHU_NSWS_04_99_222
+CHU_NSWS_04_99_71 -- "(GigabitEthernet0/2) <-> (GigabitEthernet1/0/41)" --- CHU_NSWS_14_99_91
+CHU_NSWS_10_98_149 -- "(GigabitEthernet0/11) <-> (GigabitEthernet0/2)" --- CHU_NSWS_04_99_222
+%% ===== Новые связи: 05 =====
+CHU_NSWR_14_98_140 -- "(GigabitEthernet1/0/7) <-> (GigabitEthernet0/11)" --- CHU_NSWS_05_98_146
+CHU_NSWS_05_98_146 -- "(GigabitEthernet0/12) <-> (GigabitEthernet0/11)" --- CHU_NSWS_06_98_147
+%% ===== Новые связи: 06 =====
+CHU_NSWS_05_98_146 -- "(GigabitEthernet0/12) <-> (GigabitEthernet0/11)" --- CHU_NSWS_06_98_147
+%% ===== Новые связи: 07 =====
+CHU_NSWR_14_98_140 -- "(GigabitEthernet1/0/6) <-> (GigabitEthernet0/11)" --- CHU_NSWS_07_98_145
+%% ===== Новые связи: 08 =====
+CHU_NSWR_14_98_140 -- "(GigabitEthernet1/0/8) <-> (GigabitEthernet0/11)" --- CHU_NSWS_08_98_148
+%% ===== Новые связи: 10 =====
+CHU_NSWS_10_98_149 -- "(GigabitEthernet0/11) <-> (GigabitEthernet0/2)" --- CHU_NSWS_04_99_222
+CHU_NSWS_10_98_149 -- "(GigabitEthernet0/12) <-> (GigabitEthernet0/11)" --- CHU_NSWS_11_98_150
+%% ===== Новые связи: 11 =====
+CHU_NSWS_10_98_149 -- "(GigabitEthernet0/12) <-> (GigabitEthernet0/11)" --- CHU_NSWS_11_98_150
+%% ===== Новые связи: 12 =====
+CHU_NSWR_14_98_140 -- "(GigabitEthernet1/0/10) <-> (GigabitEthernet1/0/25)" --- CHU_NSWS_12_98_142
+CHU_NSWR_14_99_45 -- "(GigabitEthernet1/0/22) <-> (GigabitEthernet1/0/16)" --- CHU_NSWS_12_99_93
+%% ===== Новые связи: 13 =====
+CHU_NSWR_14_98_140 -- "(GigabitEthernet1/0/12) <-> (GigabitEthernet0/11)" --- CHU_NSWS_13_99_218
+CHU_NSWS_13_99_218 -- "(GigabitEthernet0/12) <-> (GigabitEthernet0/11)" --- CHU_NSWS_13_99_219
+%% ===== Новые связи: 14 =====
+CHU_NSWR_14_98_140 -- "(GigabitEthernet1/1/1) <-> (GigabitEthernet1/1/2)" --- CHU_NSWR_14_99_45
+CHU_NSWR_14_98_140 -- "(GigabitEthernet1/0/1) <-> (GigabitEthernet0/11)" --- CHU_NSWS_01_98_143
+CHU_NSWR_14_98_140 -- "(GigabitEthernet1/0/3) <-> (GigabitEthernet0/1)" --- CHU_NSWS_02_99_223
+CHU_NSWR_14_98_140 -- "(GigabitEthernet1/0/5) <-> (GigabitEthernet0/11)" --- CHU_NSWS_03_98_144
+CHU_NSWR_14_98_140 -- "(GigabitEthernet1/0/2) <-> (GigabitEthernet0/1)" --- CHU_NSWS_03_99_224
+CHU_NSWR_14_98_140 -- "(GigabitEthernet1/0/4) <-> (GigabitEthernet0/1)" --- CHU_NSWS_04_99_222
+CHU_NSWR_14_98_140 -- "(GigabitEthernet1/0/7) <-> (GigabitEthernet0/11)" --- CHU_NSWS_05_98_146
+CHU_NSWR_14_98_140 -- "(GigabitEthernet1/0/6) <-> (GigabitEthernet0/11)" --- CHU_NSWS_07_98_145
+CHU_NSWR_14_98_140 -- "(GigabitEthernet1/0/8) <-> (GigabitEthernet0/11)" --- CHU_NSWS_08_98_148
+CHU_NSWR_14_98_140 -- "(GigabitEthernet1/0/10) <-> (GigabitEthernet1/0/25)" --- CHU_NSWS_12_98_142
+CHU_NSWR_14_98_140 -- "(GigabitEthernet1/0/12) <-> (GigabitEthernet0/11)" --- CHU_NSWS_13_99_218
+CHU_NSWR_14_98_140 -- "(GigabitEthernet1/0/24) <-> (GigabitEthernet1/0/25)" --- CHU_NSWS_14_98_141
+CHU_NSWR_14_98_140 -- "(GigabitEthernet1/0/11) <-> (GigabitEthernet0/11)" --- CHU_NSWS_15_99_217
+CHU_NSWR_14_98_140 -- "(GigabitEthernet1/0/9) <-> (GigabitEthernet0/11)" --- CHU_NSWS_16_99_225
+CHU_NSWR_14_98_140 -- "(GigabitEthernet1/0/13) <-> (GigabitEthernet0/11)" --- CHU_NSWS_22_98_151
+CHU_NSWR_14_99_45 -- "(GigabitEthernet1/0/22) <-> (GigabitEthernet1/0/16)" --- CHU_NSWS_12_99_93
+CHU_NSWR_14_99_45 -- "(GigabitEthernet1/0/8) <-> (GigabitEthernet1/0/48)" --- CHU_NSWS_14_99_91
+CHU_NSWR_14_99_45 -- "(GigabitEthernet1/0/4) <-> (GigabitEthernet1/0/48)" --- CHU_NSWS_14_99_92
+CHU_NSWS_04_99_71 -- "(GigabitEthernet0/2) <-> (GigabitEthernet1/0/41)" --- CHU_NSWS_14_99_91
+%% ===== Новые связи: 15 =====
+CHU_NSWR_14_98_140 -- "(GigabitEthernet1/0/11) <-> (GigabitEthernet0/11)" --- CHU_NSWS_15_99_217
+%% ===== Новые связи: 16 =====
+CHU_NSWR_14_98_140 -- "(GigabitEthernet1/0/9) <-> (GigabitEthernet0/11)" --- CHU_NSWS_16_99_225
+CHU_NSWS_16_99_225 -- "(GigabitEthernet0/7) <-> (GigabitEthernet0/10)" --- CHU_NSWS_17_99_226
+%% ===== Новые связи: 17 =====
+CHU_NSWS_16_99_225 -- "(GigabitEthernet0/7) <-> (GigabitEthernet0/10)" --- CHU_NSWS_17_99_226
+CHU_NSWS_17_99_226 -- "(GigabitEthernet0/12) <-> (GigabitEthernet0/1)" --- CHU_NSWS_17_99_227
+%% ===== Новые связи: 22 =====
+CHU_NSWR_14_98_140 -- "(GigabitEthernet1/0/13) <-> (GigabitEthernet0/11)" --- CHU_NSWS_22_98_151
+%% ===== Новые связи: 23 =====
+CHU_NSWS_25_98_231 -- "(GigabitEthernet0/16) <-> (GigabitEthernet1/0/25)" --- CHU_NSWS_23_98_235
+CHU_NSWS_26_98_233 -- "(GigabitEthernet0/1) <-> (GigabitEthernet1/0/26)" --- CHU_NSWS_23_98_235
+%% ===== Новые связи: 24 =====
+CHU_NSWS_24_98_232 -- "(GigabitEthernet0/11) <-> (GigabitEthernet0/12)" --- CHU_NSWS_24_98_93
+CHU_NSWS_25_98_231 -- "(GigabitEthernet0/15) <-> (GigabitEthernet0/12)" --- CHU_NSWS_24_98_232
+%% ===== Новые связи: 25 =====
+CHU_NSWS_25_98_231 -- "(GigabitEthernet0/16) <-> (GigabitEthernet1/0/25)" --- CHU_NSWS_23_98_235
+CHU_NSWS_25_98_231 -- "(GigabitEthernet0/15) <-> (GigabitEthernet0/12)" --- CHU_NSWS_24_98_232
+%% ===== Новые связи: 26 =====
+CHU_NSWS_26_98_233 -- "(GigabitEthernet0/1) <-> (GigabitEthernet1/0/26)" --- CHU_NSWS_23_98_235
 subgraph "DEN"
+  direction TB
   subgraph "01"
+    direction TB
     DEN_NSWS_01_98_110["DEN-NSWS-01-98-110<br/>10.20.98.110"]:::access
     DEN_NSWS_01_98_66["DEN-NSWS-01-98-66<br/>10.20.98.66"]:::access
     DEN_NSWS_01_98_96["DEN-NSWS-01-98-96<br/>10.20.98.96"]:::access
     DEN_NSWS_01_98_97["DEN-NSWS-01-98-97<br/>10.20.98.97"]:::access
     DEN_NSWS_01_99_123["DEN-NSWS-01-99-123<br/>10.20.99.123"]:::access
   end
-  subgraph "02"
-    DEN_NSWS_02_99_87["DEN-NSWS-02-99-87<br/>10.20.99.88"]:::access
-  end
   subgraph "03"
+    direction TB
     DEN_NSWR_03_98_1["DEN-NSWR-03-98-1<br/>10.20.98.1"]:::access
     DEN_NSWS_03_99_11["DEN-NSWS-03-99-11<br/>10.20.99.11<br/>Version:2.4.12.2"]:::access
     DEN_NSWS_03_99_25["DEN-NSWS-03-99-25<br/>10.20.99.25"]:::access
   end
   subgraph "04"
+    direction TB
     DEN_NSWS_04_98_125["DEN-NSWS-04-98-125<br/>10.20.98.125"]:::access
     DEN_NSWS_04_99_135["DEN-NSWS-04-99-135<br/>10.20.99.135"]:::access
     DEN_NSWS_04_99_147["DEN-NSWS-04-99-147<br/>10.20.99.147"]:::access
     DEN_NSWS_04_99_15["DEN-NSWS-04-99-15<br/>10.20.99.15"]:::access
   end
   subgraph "06"
+    direction TB
     DEN_NSWS_06_99_43["DEN-NSWS-06-99-43<br/>10.20.99.43"]:::access
     DEN_NSWS_06_99_8["DEN-NSWS-06-99-8<br/>10.20.99.8"]:::access
   end
   subgraph "08"
+    direction TB
     DEN_NSWS_08_98_128["DEN-NSWS-08-98-128<br/>10.20.98.128"]:::access
     DEN_NSWS_08_99_35["DEN-NSWS-08-99-35<br/>10.20.99.35"]:::access
   end
   subgraph "09"
+    direction TB
     DEN_NSWS_09_99_42["DEN-NSWS-09-99-42<br/>10.20.99.42"]:::access
   end
   subgraph "10"
+    direction TB
     DEN_NSWS_10_98_127["DEN-NSWS-10-98-127<br/>10.20.98.127"]:::access
   end
   subgraph "14"
+    direction TB
     DEN_NSWS_14_98_129["DEN-NSWS-14-98-129<br/>10.20.98.129"]:::access
   end
   subgraph "16"
+    direction TB
     DEN_NSWS_16_98_126["DEN-NSWS-16-98-126<br/>10.20.98.126"]:::access
     DEN_NSWS_16_99_12["DEN-NSWS-16-99-12<br/>10.20.99.12"]:::access
   end
   subgraph "17"
+    direction TB
     DEN_NSWS_17_98_130["DEN-NSWS-17-98-130<br/>10.20.98.130"]:::access
   end
   subgraph "18"
+    direction TB
     DEN_NSWS_18_98_65["DEN-NSWS-18-98-65<br/>10.20.98.65"]:::access
   end
   subgraph "19"
+    direction TB
     DEN_NSWS_19_99_98["DEN-NSWS-19-99-98<br/>10.20.99.98"]:::access
   end
   subgraph "20"
+    direction TB
     DEN_NSWS_20_99_89["DEN-NSWS-20-99-89<br/>10.20.99.89"]:::access
   end
   subgraph "21"
+    direction TB
     DEN_NSWS_21_98_68["DEN-NSWS-21-98-68<br/>10.20.98.68"]:::access
     DEN_NSWS_21_98_69["DEN-NSWS-21-98-69<br/>10.20.98.69"]:::access
   end
   subgraph "22"
+    direction TB
     DEN_NSWS_22_98_67["DEN-NSWS-22-98-67<br/>10.20.98.67"]:::access
   end
   subgraph "23"
+    direction TB
     DEN_NSWS_23_99_121["DEN-NSWS-23-99-121<br/>10.20.99.121"]:::access
     DEN_NSWS_23_99_17["DEN-NSWS-23-99-17<br/>10.20.99.17"]:::access
   end
   subgraph "24"
+    direction TB
     DEN_NSWS_24_99_114["DEN-NSWS-24-99-114<br/>10.20.99.114"]:::access
     DEN_NSWS_24_99_115["DEN-NSWS-24-99-115<br/>10.20.99.115"]:::access
     DEN_NSWS_24_99_116["DEN-NSWS-24-99-116<br/>10.20.99.116"]:::access
     DEN_NSWS_24_99_117["DEN-NSWS-24-99-117<br/>10.20.99.117"]:::access
   end
   subgraph "26"
+    direction TB
     DEN_NSWS_26_99_19["DEN-NSWS-26-99-19<br/>10.20.99.19"]:::access
   end
   subgraph "27"
+    direction TB
     DEN_NSWS_27_98_106["DEN-NSWS-27-98-106<br/>10.20.98.106"]:::access
     DEN_NSWS_27_98_107["DEN-NSWS-27-98-107<br/>10.20.98.107"]:::access
     DEN_NSWS_27_98_108["DEN-NSWS-27-98-108<br/>10.20.98.108"]:::access
   end
   subgraph "28"
+    direction TB
     DEN_NSWS_28_98_105["DEN-NSWS-28-98-105<br/>10.20.98.105"]:::access
   end
   subgraph "29"
+    direction TB
     DEN_NSWS_29_99_118["DEN-NSWS-29-99-118<br/>10.20.99.118"]:::access
     DEN_NSWS_29_99_44["DEN-NSWS-29-99-44<br/>10.20.99.44"]:::access
   end
   subgraph "41"
+    direction TB
     DEN_NSWS_41_98_114["DEN-NSWS-41-98-114<br/>10.20.98.114"]:::access
   end
   subgraph "47"
+    direction TB
     DEN_NSWS_47_99_65["DEN-NSWS-47-99-65<br/>10.20.99.65"]:::access
   end
   subgraph "49"
+    direction TB
     DEN_NSWS_49_98_117["DEN-NSWS-49-98-117<br/>10.20.98.117"]:::access
   end
   subgraph "50"
+    direction TB
     DEN_NSWS_50_98_119["DEN-NSWS-50-98-119<br/>10.20.98.119"]:::access
   end
   subgraph "51"
+    direction TB
     DEN_NSWS_51_98_118["DEN-NSWS-51-98-118<br/>10.20.98.118"]:::access
   end
   subgraph "58"
+    direction TB
     DEN_NSWS_58_98_132["DEN-NSWS-58-98-132<br/>10.20.98.132"]:::access
     DEN_NSWS_58_99_86["DEN-NSWS-58-99-86<br/>10.20.99.86"]:::access
   end
   subgraph "59"
+    direction TB
     DEN_NSWS_59_98_134["DEN-NSWS-59-98-134<br/>10.20.98.134"]:::access
     DEN_NSWS_59_99_94["DEN-NSWS-59-99-94<br/>10.20.99.94"]:::access
   end
   subgraph "60"
+    direction TB
     DEN_NSWS_60_98_131["DEN-NSWS-60-98-131<br/>10.20.98.131"]:::access
   end
   subgraph "61"
+    direction TB
     DEN_NSWS_61_99_143["DEN-NSWS-61-99-143<br/>10.20.99.143"]:::access
   end
   subgraph "62"
+    direction TB
     DEN_NSWS_62_98_87["DEN-NSWS-62-98-87<br/>10.20.98.87"]:::access
     DEN_NSWS_62_99_90["DEN-NSWS-62-99-90<br/>10.20.99.90"]:::access
   end
   subgraph "63"
+    direction TB
     DEN_NSWS_63_99_112["DEN-NSWS-63-99-112<br/>10.20.99.112"]:::access
   end
   subgraph "64"
+    direction TB
     DEN_NSWS_64_99_120["DEN-NSWS-64-99-120<br/>10.20.99.120"]:::access
   end
   subgraph "65"
+    direction TB
     DEN_NSWS_65_98_115["DEN-NSWS-65-98-115<br/>10.20.98.115"]:::access
   end
   subgraph "80"
+    direction TB
     DEN_NSWS_80_99_141["DEN-NSWS-80-99-141<br/>10.20.99.141"]:::access
   end
   subgraph "81"
+    direction TB
     DEN_NSWS_81_98_113["DEN-NSWS-81-98-113<br/>10.20.98.113"]:::access
     DEN_NSWS_81_99_34["DEN-NSWS-81-99-34<br/>10.20.99.34"]:::access
   end
   subgraph "82"
+    direction TB
     DEN_NSWS_82_99_77["DEN-NSWS-82-99-77<br/>10.20.99.77"]:::access
   end
   subgraph "83"
-    DEN_NSWS_83_98_51["DEN-NSWS-83-98-51<br/>10.20.98.51"]:::access
+    direction TB
     DEN_NSWS_83_99_46["DEN-NSWS-83-99-46<br/>10.20.99.46"]:::access
   end
   subgraph "86"
+    direction TB
     DEN_NSWS_86_98_56["DEN-NSWS-86-98-56<br/>10.20.98.56"]:::access
   end
   subgraph "87"
+    direction TB
     DEN_NSWS_87_98_58["DEN-NSWS-87-98-58<br/>10.20.98.58"]:::access
   end
   subgraph "88"
+    direction TB
     DEN_NSWS_88_98_57["DEN-NSWS-88-98-57<br/>10.20.98.57"]:::access
   end
   subgraph "89"
+    direction TB
     DEN_NSWS_89_98_55["DEN-NSWS-89-98-55<br/>10.20.98.55"]:::access
   end
   subgraph "90"
+    direction TB
     DEN_NSWS_90_98_54["DEN-NSWS-90-98-54<br/>10.20.98.54"]:::access
   end
   subgraph "91"
+    direction TB
     DEN_NSWS_91_99_26["DEN-NSWS-91-99-26<br/>10.20.99.26"]:::access
   end
   subgraph "92"
+    direction TB
     DEN_NSWS_92_99_187["DEN-NSWS-92-99-187<br/>10.20.99.187"]:::access
   end
   subgraph "93"
+    direction TB
     DEN_NSWS_93_99_132["DEN-NSWS-93-99-132<br/>10.20.99.132"]:::access
   end
   subgraph "98"
+    direction TB
     DEN_NSWS_98_112["DEN-NSWS-98-112<br/>10.20.98.112"]:::access
   end
   subgraph "106"
+    direction TB
     DEN_NSWS_106_98_53["DEN-NSWS-106-98-53<br/>10.20.98.53"]:::access
   end
   subgraph "109"
+    direction TB
     DEN_NSWS_109_99_122["DEN-NSWS-109-99-122<br/>10.20.99.122"]:::access
   end
   subgraph "111"
+    direction TB
     DEN_NSWS_111_97_11["DEN-NSWS-111-97-11<br/>10.20.97.11"]:::access
   end
   subgraph "112"
+    direction TB
     DEN_NSWS_112_98_103["DEN-NSWS-112-98-103<br/>10.20.98.103"]:::access
   end
+  10_20_99_113["10.20.99.113<br/>10.20.99.113"]:::access
 end
+%% ===== Новые связи: 01 =====
+10_20_99_113 -- "(gi9      2) <-> (I     cisco)" --- DEN_NSWS_01_98_110
+DEN_NSWR_03_98_1 -- "(TwentyFiveGigE1/0/19) <-> (GigabitEthernet1/0/1)" --- DEN_NSWS_01_98_66
+DEN_NSWS_01_98_110 -- "(GigabitEthernet1/1/1) <-> (GigabitEthernet1/0/25)" --- DEN_NSWS_01_98_66
+DEN_NSWS_01_98_110 -- "(GigabitEthernet1/0/6) <-> (GigabitEthernet0/11)" --- DEN_NSWS_04_98_125
+DEN_NSWS_01_98_110 -- "(GigabitEthernet1/0/9) <-> (GigabitEthernet0/11)" --- DEN_NSWS_23_99_121
+DEN_NSWS_01_98_110 -- "(GigabitEthernet1/0/8) <-> (GigabitEthernet0/1)" --- DEN_NSWS_29_99_118
+DEN_NSWS_01_98_110 -- "(GigabitEthernet1/0/7) <-> (GigabitEthernet0/1)" --- DEN_NSWS_41_98_114
+DEN_NSWS_01_98_110 -- "(GigabitEthernet1/0/3) <-> (GigabitEthernet0/2)" --- DEN_NSWS_50_98_119
+DEN_NSWS_01_98_110 -- "(GigabitEthernet1/0/2) <-> (GigabitEthernet0/11)" --- DEN_NSWS_58_98_132
+DEN_NSWS_01_98_110 -- "(GigabitEthernet1/0/10) <-> (GigabitEthernet0/12)" --- DEN_NSWS_60_98_131
+DEN_NSWS_01_98_110 -- "(GigabitEthernet1/0/11) <-> (GigabitEthernet0/11)" --- DEN_NSWS_65_98_115
+DEN_NSWS_01_98_66 -- "(GigabitEthernet1/0/26) <-> (GigabitEthernet0/1)" --- DEN_NSWS_01_98_96
+DEN_NSWS_01_98_66 -- "(GigabitEthernet1/0/5) <-> (GigabitEthernet0/10)" --- DEN_NSWS_01_99_123
+DEN_NSWS_01_98_96 -- "(GigabitEthernet0/2) <-> (GigabitEthernet1/0/25)" --- DEN_NSWS_01_98_97
+DEN_NSWS_112_98_103 -- "(GigabitEthernet0/11) <-> (GigabitEthernet1/0/14)" --- DEN_NSWS_01_98_110
+DEN_NSWS_28_98_105 -- "(GigabitEthernet0/1) <-> (GigabitEthernet1/0/5)" --- DEN_NSWS_01_98_110
+%% ===== Новые связи: 03 =====
+DEN_NSWR_03_98_1 -- "(TwentyFiveGigE1/0/19) <-> (GigabitEthernet1/0/1)" --- DEN_NSWS_01_98_66
+DEN_NSWR_03_98_1 -- "(TwentyFiveGigE1/0/1) <-> (GigabitEthernet0/1)" --- DEN_NSWS_03_99_11
+DEN_NSWR_03_98_1 -- "(TwentyFiveGigE1/0/4) <-> (GigabitEthernet0/1)" --- DEN_NSWS_04_99_15
+DEN_NSWR_03_98_1 -- "(TwentyFiveGigE1/0/2) <-> (GigabitEthernet0/45)" --- DEN_NSWS_09_99_42
+DEN_NSWR_03_98_1 -- "(TwentyFiveGigE1/0/6) <-> (GigabitEthernet0/2)" --- DEN_NSWS_109_99_122
+DEN_NSWR_03_98_1 -- "(TwentyFiveGigE1/0/10) <-> (GigabitEthernet0/1)" --- DEN_NSWS_16_99_12
+DEN_NSWR_03_98_1 -- "(TwentyFiveGigE1/0/3) <-> (GigabitEthernet1/0/18)" --- DEN_NSWS_19_99_98
+DEN_NSWR_03_98_1 -- "(TwentyFiveGigE1/0/9) <-> (GigabitEthernet1/0/17)" --- DEN_NSWS_29_99_44
+DEN_NSWR_03_98_1 -- "(TwentyFiveGigE1/0/5) <-> (GigabitEthernet0/1)" --- DEN_NSWS_47_99_65
+DEN_NSWR_03_98_1 -- "(TwentyFiveGigE1/0/12) <-> (GigabitEthernet1/0/18)" --- DEN_NSWS_58_99_86
+DEN_NSWR_03_98_1 -- "(TwentyFiveGigE1/0/24) <-> (GigabitEthernet1/0/17)" --- DEN_NSWS_59_99_94
+DEN_NSWR_03_98_1 -- "(TwentyFiveGigE1/0/20) <-> (GigabitEthernet1/0/17)" --- DEN_NSWS_62_99_90
+DEN_NSWR_03_98_1 -- "(TwentyFiveGigE1/0/21) <-> (GigabitEthernet0/1)" --- DEN_NSWS_98_112
+DEN_NSWS_03_99_11 -- "(FastEthernet0/26) <-> (GigabitEthernet0/1)" --- DEN_NSWS_03_99_25
+DEN_NSWS_03_99_11 -- "(FastEthernet0/30) <-> (GigabitEthernet0/1)" --- DEN_NSWS_26_99_19
+DEN_NSWS_03_99_11 -- "(GigabitEthernet0/2) <-> (GigabitEthernet0/10)" --- DEN_NSWS_93_99_132
+NER_NSWR_01_96_1 -- "(TwentyFiveGigE1/0/23) <-> (TwentyFiveGigE1/0/23)" --- DEN_NSWR_03_98_1
+%% ===== Новые связи: 04 =====
+DEN_NSWR_03_98_1 -- "(TwentyFiveGigE1/0/4) <-> (GigabitEthernet0/1)" --- DEN_NSWS_04_99_15
+DEN_NSWS_01_98_110 -- "(GigabitEthernet1/0/6) <-> (GigabitEthernet0/11)" --- DEN_NSWS_04_98_125
+DEN_NSWS_04_98_125 -- "(GigabitEthernet0/12) <-> (GigabitEthernet0/11)" --- DEN_NSWS_16_98_126
+DEN_NSWS_04_99_135 -- "(GigabitEthernet0/1) <-> (FastEthernet0/8)" --- DEN_NSWS_04_99_15
+DEN_NSWS_04_99_147 -- "(GigabitEthernet1/0/16) <-> (FastEthernet0/22)" --- DEN_NSWS_04_99_15
+DEN_NSWS_04_99_15 -- "(FastEthernet0/20) <-> (GigabitEthernet0/2)" --- DEN_NSWS_08_99_35
+DEN_NSWS_04_99_15 -- "(GigabitEthernet0/2) <-> (GigabitEthernet1/0/48)" --- DEN_NSWS_06_99_8
+%% ===== Новые связи: 06 =====
+DEN_NSWS_04_99_15 -- "(GigabitEthernet0/2) <-> (GigabitEthernet1/0/48)" --- DEN_NSWS_06_99_8
+DEN_NSWS_06_99_43 -- "(GigabitEthernet0/10) <-> (GigabitEthernet1/0/24)" --- DEN_NSWS_06_99_8
+%% ===== Новые связи: 08 =====
+DEN_NSWS_04_99_15 -- "(FastEthernet0/20) <-> (GigabitEthernet0/2)" --- DEN_NSWS_08_99_35
+DEN_NSWS_08_98_128 -- "(GigabitEthernet0/12) <-> (GigabitEthernet0/15)" --- DEN_NSWS_14_98_129
+DEN_NSWS_10_98_127 -- "(GigabitEthernet0/12) <-> (GigabitEthernet0/11)" --- DEN_NSWS_08_98_128
+%% ===== Новые связи: 09 =====
+DEN_NSWR_03_98_1 -- "(TwentyFiveGigE1/0/2) <-> (GigabitEthernet0/45)" --- DEN_NSWS_09_99_42
+%% ===== Новые связи: 10 =====
+DEN_NSWS_10_98_127 -- "(GigabitEthernet0/12) <-> (GigabitEthernet0/11)" --- DEN_NSWS_08_98_128
+DEN_NSWS_16_98_126 -- "(GigabitEthernet0/12) <-> (GigabitEthernet0/11)" --- DEN_NSWS_10_98_127
+%% ===== Новые связи: 14 =====
+DEN_NSWS_08_98_128 -- "(GigabitEthernet0/12) <-> (GigabitEthernet0/15)" --- DEN_NSWS_14_98_129
+%% ===== Новые связи: 16 =====
+DEN_NSWR_03_98_1 -- "(TwentyFiveGigE1/0/10) <-> (GigabitEthernet0/1)" --- DEN_NSWS_16_99_12
+DEN_NSWS_04_98_125 -- "(GigabitEthernet0/12) <-> (GigabitEthernet0/11)" --- DEN_NSWS_16_98_126
+DEN_NSWS_16_98_126 -- "(GigabitEthernet0/12) <-> (GigabitEthernet0/11)" --- DEN_NSWS_10_98_127
+%% ===== Новые связи: 17 =====
+DEN_NSWS_17_98_130 -- "(GigabitEthernet0/11) <-> (GigabitEthernet0/1)" --- DEN_NSWS_18_98_65
+DEN_NSWS_17_98_130 -- "(GigabitEthernet0/12) <-> (GigabitEthernet0/1)" --- DEN_NSWS_64_99_120
+%% ===== Новые связи: 18 =====
+DEN_NSWS_17_98_130 -- "(GigabitEthernet0/11) <-> (GigabitEthernet0/1)" --- DEN_NSWS_18_98_65
+DEN_NSWS_18_98_65 -- "(GigabitEthernet0/2) <-> (GigabitEthernet1/0/15)" --- DEN_NSWS_19_99_98
+%% ===== Новые связи: 19 =====
+DEN_NSWR_03_98_1 -- "(TwentyFiveGigE1/0/3) <-> (GigabitEthernet1/0/18)" --- DEN_NSWS_19_99_98
+DEN_NSWS_18_98_65 -- "(GigabitEthernet0/2) <-> (GigabitEthernet1/0/15)" --- DEN_NSWS_19_99_98
+DEN_NSWS_20_99_89 -- "(GigabitEthernet1/0/17) <-> (GigabitEthernet1/0/16)" --- DEN_NSWS_19_99_98
+DEN_NSWS_21_98_68 -- "(GigabitEthernet0/2) <-> (GigabitEthernet1/0/17)" --- DEN_NSWS_19_99_98
+DEN_NSWS_21_98_69 -- "(GigabitEthernet0/2) <-> (GigabitEthernet1/0/17)" --- DEN_NSWS_19_99_98
+DEN_NSWS_22_98_67 -- "(GigabitEthernet0/1) <-> (GigabitEthernet1/0/17)" --- DEN_NSWS_19_99_98
+%% ===== Новые связи: 20 =====
+DEN_NSWS_20_99_89 -- "(GigabitEthernet1/0/17) <-> (GigabitEthernet1/0/16)" --- DEN_NSWS_19_99_98
+%% ===== Новые связи: 21 =====
+DEN_NSWS_21_98_68 -- "(GigabitEthernet0/2) <-> (GigabitEthernet1/0/17)" --- DEN_NSWS_19_99_98
+DEN_NSWS_21_98_68 -- "(GigabitEthernet0/2) <-> (GigabitEthernet0/2)" --- DEN_NSWS_21_98_69
+DEN_NSWS_21_98_69 -- "(GigabitEthernet0/2) <-> (GigabitEthernet1/0/17)" --- DEN_NSWS_19_99_98
+DEN_NSWS_22_98_67 -- "(GigabitEthernet0/1) <-> (GigabitEthernet0/2)" --- DEN_NSWS_21_98_68
+DEN_NSWS_22_98_67 -- "(GigabitEthernet0/1) <-> (GigabitEthernet0/2)" --- DEN_NSWS_21_98_69
+%% ===== Новые связи: 22 =====
+DEN_NSWS_22_98_67 -- "(GigabitEthernet0/1) <-> (GigabitEthernet1/0/17)" --- DEN_NSWS_19_99_98
+DEN_NSWS_22_98_67 -- "(GigabitEthernet0/1) <-> (GigabitEthernet0/2)" --- DEN_NSWS_21_98_68
+DEN_NSWS_22_98_67 -- "(GigabitEthernet0/1) <-> (GigabitEthernet0/2)" --- DEN_NSWS_21_98_69
+%% ===== Новые связи: 23 =====
+DEN_NSWS_01_98_110 -- "(GigabitEthernet1/0/9) <-> (GigabitEthernet0/11)" --- DEN_NSWS_23_99_121
+DEN_NSWS_23_99_121 -- "(GigabitEthernet0/7) <-> (GigabitEthernet1/0/16)" --- DEN_NSWS_23_99_17
+%% ===== Новые связи: 24 =====
+10_20_99_113 -- "(gi1      2) <-> (I     cisco)" --- DEN_NSWS_24_99_114
+10_20_99_113 -- "(gi2      2) <-> (I     cisco)" --- DEN_NSWS_24_99_115
+10_20_99_113 -- "(gi3      2) <-> (I     cisco)" --- DEN_NSWS_24_99_116
+10_20_99_113 -- "(gi4      2) <-> (I     cisco)" --- DEN_NSWS_24_99_117
+%% ===== Новые связи: 26 =====
+DEN_NSWS_03_99_11 -- "(FastEthernet0/30) <-> (GigabitEthernet0/1)" --- DEN_NSWS_26_99_19
+%% ===== Новые связи: 27 =====
+DEN_NSWS_27_98_106 -- "(GigabitEthernet0/12) <-> (GigabitEthernet0/11)" --- DEN_NSWS_27_98_108
+DEN_NSWS_27_98_107 -- "(GigabitEthernet0/1) <-> (GigabitEthernet0/12)" --- DEN_NSWS_27_98_108
+DEN_NSWS_28_98_105 -- "(GigabitEthernet0/2) <-> (GigabitEthernet0/11)" --- DEN_NSWS_27_98_106
+%% ===== Новые связи: 28 =====
+DEN_NSWS_28_98_105 -- "(GigabitEthernet0/1) <-> (GigabitEthernet1/0/5)" --- DEN_NSWS_01_98_110
+DEN_NSWS_28_98_105 -- "(GigabitEthernet0/2) <-> (GigabitEthernet0/11)" --- DEN_NSWS_27_98_106
+%% ===== Новые связи: 29 =====
+DEN_NSWR_03_98_1 -- "(TwentyFiveGigE1/0/9) <-> (GigabitEthernet1/0/17)" --- DEN_NSWS_29_99_44
+DEN_NSWS_01_98_110 -- "(GigabitEthernet1/0/8) <-> (GigabitEthernet0/1)" --- DEN_NSWS_29_99_118
+%% ===== Новые связи: 41 =====
+DEN_NSWS_01_98_110 -- "(GigabitEthernet1/0/7) <-> (GigabitEthernet0/1)" --- DEN_NSWS_41_98_114
+%% ===== Новые связи: 47 =====
+DEN_NSWR_03_98_1 -- "(TwentyFiveGigE1/0/5) <-> (GigabitEthernet0/1)" --- DEN_NSWS_47_99_65
+%% ===== Новые связи: 49 =====
+DEN_NSWS_49_98_117 -- "(GigabitEthernet0/1) <-> (GigabitEthernet0/1)" --- DEN_NSWS_51_98_118
+%% ===== Новые связи: 50 =====
+DEN_NSWS_01_98_110 -- "(GigabitEthernet1/0/3) <-> (GigabitEthernet0/2)" --- DEN_NSWS_50_98_119
+DEN_NSWS_51_98_118 -- "(GigabitEthernet0/2) <-> (GigabitEthernet0/1)" --- DEN_NSWS_50_98_119
+%% ===== Новые связи: 51 =====
+DEN_NSWS_49_98_117 -- "(GigabitEthernet0/1) <-> (GigabitEthernet0/1)" --- DEN_NSWS_51_98_118
+DEN_NSWS_51_98_118 -- "(GigabitEthernet0/2) <-> (GigabitEthernet0/1)" --- DEN_NSWS_50_98_119
+%% ===== Новые связи: 58 =====
+DEN_NSWR_03_98_1 -- "(TwentyFiveGigE1/0/12) <-> (GigabitEthernet1/0/18)" --- DEN_NSWS_58_99_86
+DEN_NSWS_01_98_110 -- "(GigabitEthernet1/0/2) <-> (GigabitEthernet0/11)" --- DEN_NSWS_58_98_132
+DEN_NSWS_58_98_132 -- "(GigabitEthernet0/12) <-> (GigabitEthernet0/11)" --- DEN_NSWS_62_98_87
+%% ===== Новые связи: 59 =====
+DEN_NSWR_03_98_1 -- "(TwentyFiveGigE1/0/24) <-> (GigabitEthernet1/0/17)" --- DEN_NSWS_59_99_94
+DEN_NSWS_59_98_134 -- "(GigabitEthernet0/11) <-> (GigabitEthernet0/12)" --- DEN_NSWS_62_98_87
+DEN_NSWS_59_98_134 -- "(GigabitEthernet0/12) <-> (GigabitEthernet0/11)" --- DEN_NSWS_63_99_112
+%% ===== Новые связи: 60 =====
+DEN_NSWS_01_98_110 -- "(GigabitEthernet1/0/10) <-> (GigabitEthernet0/12)" --- DEN_NSWS_60_98_131
+DEN_NSWS_60_98_131 -- "(GigabitEthernet0/11) <-> (GigabitEthernet0/11)" --- DEN_NSWS_61_99_143
+%% ===== Новые связи: 61 =====
+DEN_NSWS_60_98_131 -- "(GigabitEthernet0/11) <-> (GigabitEthernet0/11)" --- DEN_NSWS_61_99_143
+DEN_NSWS_63_99_112 -- "(GigabitEthernet0/12) <-> (GigabitEthernet0/12)" --- DEN_NSWS_61_99_143
+%% ===== Новые связи: 62 =====
+DEN_NSWR_03_98_1 -- "(TwentyFiveGigE1/0/20) <-> (GigabitEthernet1/0/17)" --- DEN_NSWS_62_99_90
+DEN_NSWS_58_98_132 -- "(GigabitEthernet0/12) <-> (GigabitEthernet0/11)" --- DEN_NSWS_62_98_87
+DEN_NSWS_59_98_134 -- "(GigabitEthernet0/11) <-> (GigabitEthernet0/12)" --- DEN_NSWS_62_98_87
+%% ===== Новые связи: 63 =====
+DEN_NSWS_59_98_134 -- "(GigabitEthernet0/12) <-> (GigabitEthernet0/11)" --- DEN_NSWS_63_99_112
+DEN_NSWS_63_99_112 -- "(GigabitEthernet0/12) <-> (GigabitEthernet0/12)" --- DEN_NSWS_61_99_143
+%% ===== Новые связи: 64 =====
+DEN_NSWS_17_98_130 -- "(GigabitEthernet0/12) <-> (GigabitEthernet0/1)" --- DEN_NSWS_64_99_120
+%% ===== Новые связи: 65 =====
+DEN_NSWS_01_98_110 -- "(GigabitEthernet1/0/11) <-> (GigabitEthernet0/11)" --- DEN_NSWS_65_98_115
+%% ===== Новые связи: 80 =====
+DEN_NSWS_98_112 -- "(FastEthernet0/24) <-> (GigabitEthernet1/0/16)" --- DEN_NSWS_80_99_141
+%% ===== Новые связи: 81 =====
+DEN_NSWS_81_98_113 -- "(GigabitEthernet0/10) <-> (GigabitEthernet0/2)" --- DEN_NSWS_81_99_34
+DEN_NSWS_98_112 -- "(GigabitEthernet0/2) <-> (GigabitEthernet0/1)" --- DEN_NSWS_81_99_34
+%% ===== Новые связи: 82 =====
+DEN_NSWS_83_99_46 -- "(GigabitEthernet0/11) <-> (FastEthernet0/1)" --- DEN_NSWS_82_99_77
+DEN_NSWS_91_99_26 -- "(FastEthernet0/21) <-> (GigabitEthernet0/2)" --- DEN_NSWS_82_99_77
+%% ===== Новые связи: 83 =====
+DEN_NSWS_83_99_46 -- "(GigabitEthernet0/11) <-> (FastEthernet0/1)" --- DEN_NSWS_82_99_77
+%% ===== Новые связи: 86 =====
+10_20_99_151 -- "(gi3      2) <-> (I     cisco)" --- DEN_NSWS_86_98_56
+%% ===== Новые связи: 87 =====
+10_20_99_151 -- "(gi4      2) <-> (I     cisco)" --- DEN_NSWS_87_98_58
+%% ===== Новые связи: 88 =====
+DEN_NSWS_89_98_55 -- "(GigabitEthernet0/11) <-> (GigabitEthernet0/12)" --- DEN_NSWS_88_98_57
+10_20_99_151 -- "(gi1      2) <-> (I     cisco)" --- DEN_NSWS_88_98_57
+%% ===== Новые связи: 89 =====
+DEN_NSWS_89_98_55 -- "(GigabitEthernet0/11) <-> (GigabitEthernet0/12)" --- DEN_NSWS_88_98_57
+DEN_NSWS_90_98_54 -- "(GigabitEthernet0/11) <-> (GigabitEthernet0/12)" --- DEN_NSWS_89_98_55
+%% ===== Новые связи: 90 =====
+DEN_NSWS_106_98_53 -- "(GigabitEthernet0/1) <-> (GigabitEthernet0/12)" --- DEN_NSWS_90_98_54
+DEN_NSWS_90_98_54 -- "(GigabitEthernet0/11) <-> (GigabitEthernet0/12)" --- DEN_NSWS_89_98_55
+%% ===== Новые связи: 91 =====
+DEN_NSWS_91_99_26 -- "(FastEthernet0/21) <-> (GigabitEthernet0/2)" --- DEN_NSWS_82_99_77
+DEN_NSWS_92_99_187 -- "(GigabitEthernet0/10) <-> (FastEthernet0/23)" --- DEN_NSWS_91_99_26
+DEN_NSWS_93_99_132 -- "(GigabitEthernet0/9) <-> (GigabitEthernet0/1)" --- DEN_NSWS_91_99_26
+%% ===== Новые связи: 92 =====
+DEN_NSWS_92_99_187 -- "(GigabitEthernet0/10) <-> (FastEthernet0/23)" --- DEN_NSWS_91_99_26
+%% ===== Новые связи: 93 =====
+DEN_NSWS_03_99_11 -- "(GigabitEthernet0/2) <-> (GigabitEthernet0/10)" --- DEN_NSWS_93_99_132
+DEN_NSWS_93_99_132 -- "(GigabitEthernet0/9) <-> (GigabitEthernet0/1)" --- DEN_NSWS_91_99_26
+%% ===== Новые связи: 98 =====
+DEN_NSWR_03_98_1 -- "(TwentyFiveGigE1/0/21) <-> (GigabitEthernet0/1)" --- DEN_NSWS_98_112
+DEN_NSWS_98_112 -- "(FastEthernet0/24) <-> (GigabitEthernet1/0/16)" --- DEN_NSWS_80_99_141
+DEN_NSWS_98_112 -- "(GigabitEthernet0/2) <-> (GigabitEthernet0/1)" --- DEN_NSWS_81_99_34
+%% ===== Новые связи: 106 =====
+DEN_NSWS_106_98_53 -- "(GigabitEthernet0/1) <-> (GigabitEthernet0/12)" --- DEN_NSWS_90_98_54
+10_20_99_151 -- "(gi2      2) <-> (I     cisco)" --- DEN_NSWS_106_98_53
+%% ===== Новые связи: 109 =====
+DEN_NSWR_03_98_1 -- "(TwentyFiveGigE1/0/6) <-> (GigabitEthernet0/2)" --- DEN_NSWS_109_99_122
+%% ===== Новые связи: 111 =====
+10_20_99_151 -- "(gi5      2) <-> (I     cisco)" --- DEN_NSWS_111_97_11
+%% ===== Новые связи: 112 =====
+DEN_NSWS_112_98_103 -- "(GigabitEthernet0/11) <-> (GigabitEthernet1/0/14)" --- DEN_NSWS_01_98_110
 subgraph "INA"
+  direction TB
   subgraph "03"
+    direction TB
     INA_NSWR_03_97_1["INA-NSWR-03-97-1<br/>10.20.97.1"]:::access
     INA_NSWR_03_99_20["INA-NSWR-03-99-20<br/>10.20.99.20"]:::access
     INA_NSWS_03_99_10["INA-NSWS-03-99-10<br/>10.20.99.10"]:::access
   end
   subgraph "05"
+    direction TB
     INA_NSWS_05_99_22["INA-NSWS-05-99-22<br/>10.20.99.22"]:::access
   end
   subgraph "08"
+    direction TB
     INA_NSWS_08_98_73["INA-NSWS-08-98-73<br/>10.20.98.73"]:::access
     INA_NSWS_08_99_107["INA-NSWS-08-99-107<br/>10.20.99.107"]:::access
     INA_NSWS_08_99_76["INA-NSWS-08-99-76<br/>10.20.99.76"]:::access
   end
   subgraph "09"
+    direction TB
     INA_NSWS_09_99_127["INA-NSWS-09-99-127<br/>10.20.99.127"]:::access
   end
   subgraph "10"
+    direction TB
     INA_NSWS_10_99_126["INA-NSWS-10-99-126<br/>10.20.99.126"]:::access
   end
   subgraph "11"
+    direction TB
     INA_NSWS_11_99_150["INA-NSWS-11-99-150<br/>10.20.99.150"]:::access
     INA_NSWS_11_99_153["INA-NSWS-11-99-153<br/>10.20.99.153"]:::access
     INA_NSWS_11_99_196["INA-NSWS-11-99-196<br/>10.20.99.196"]:::access
   end
   subgraph "13"
+    direction TB
     INA_NSWS_13_99_145["INA-NSWS-13-99-145<br/>10.20.99.145"]:::access
     INA_NSWS_13_99_95["INA-NSWS-13-99-95<br/>10.20.99.95"]:::access
   end
   subgraph "14"
+    direction TB
     INA_NSWS_14_99_152["INA-NSWS-14-99-152<br/>10.20.99.152"]:::access
     INA_NSWS_14_99_205["INA-NSWS-14-99-205<br/>10.20.99.205"]:::access
     INA_NSWS_14_99_207["INA-NSWS-14-99-207<br/>10.20.99.207"]:::access
     INA_NSWS_14_99_235["INA-NSWS-14-99-235<br/>10.20.99.235"]:::access
   end
   subgraph "15"
+    direction TB
     INA_NSWS_15_99_206["INA-NSWS-15-99-206<br/>10.20.99.206"]:::access
     INA_NSWS_15_99_234["INA-NSWS-15-99-234<br/>10.20.99.234"]:::access
     INA_NSWS_15_99_236["INA-NSWS-15-99-236<br/>10.20.99.236"]:::access
   end
   subgraph "16"
+    direction TB
     INA_NSWS_16_99_237["INA-NSWS-16-99-237<br/>10.20.99.237"]:::access
   end
   subgraph "20"
+    direction TB
     INA_NSWS_20_99_109["INA-NSWS-20-99-109<br/>10.20.99.109"]:::access
   end
   subgraph "21"
+    direction TB
     INA_NSWS_21_98_153["INA-NSWS-21-98-153<br/>10.20.98.153"]:::access
   end
   subgraph "35"
+    direction TB
     INA_NSWS_35_99_139["INA-NSWS-35-99-139<br/>10.20.99.139"]:::access
     INA_NSWS_35_99_61["INA-NSWS-35-99-61<br/>10.20.99.61"]:::access
   end
   subgraph "36"
+    direction TB
     INA_NSWS_36_99_186["INA-NSWS-36-99-186<br/>10.20.99.186"]:::access
   end
   subgraph "38"
+    direction TB
     INA_NSWS_38_99_60["INA-NSWS-38-99-60<br/>10.20.99.60"]:::access
   end
   subgraph "39"
+    direction TB
     INA_NSWS_39_99_185["INA-NSWS-39-99-185<br/>10.20.99.185"]:::access
     INA_NSWS_39_99_72["INA-NSWS-39-99-72<br/>10.20.99.72"]:::access
     INA_NSWS_39_99_97["INA-NSWS-39-99-97<br/>10.20.99.97"]:::access
   end
   subgraph "41"
+    direction TB
     INA_NSWS_41_99_119["INA-NSWS-41-99-119<br/>10.20.99.119"]:::access
     INA_NSWS_41_99_159["INA-NSWS-41-99-159<br/>10.20.99.159"]:::access
   end
   subgraph "43"
+    direction TB
     INA_NSWS_43_99_170["INA-NSWS-43-99-170<br/>10.20.99.170"]:::access
   end
   subgraph "44"
+    direction TB
     INA_NSWS_44_98_91["INA-NSWS-44-98-91<br/>10.20.98.91"]:::access
     INA_NSWS_44_98_92["INA-NSWS-44-98-92<br/>10.20.98.92"]:::access
   end
   subgraph "46"
+    direction TB
     INA_NSWS_46_98_70["INA-NSWS-46-98-70<br/>10.20.98.70"]:::access
   end
-  subgraph "47"
-    INA_NSWS_47_99_47["INA-NSWS-47-99-47<br/>10.20.99.47"]:::access
-  end
-  subgraph "48"
-    INA_NSWS_48_99_52["INA-NSWS-48-99-52<br/>10.20.99.52"]:::access
-  end
   subgraph "51"
+    direction TB
     INA_NSWS_51_99_160["INA-NSWS-51-99-160<br/>10.20.99.160"]:::access
     INA_NSWS_51_99_193["INA-NSWS-51-99-193<br/>10.20.99.193"]:::access
     INA_NSWS_51_99_32["INA-NSWS-51-99-32<br/>10.20.99.32"]:::access
   end
   subgraph "52"
+    direction TB
     INA_NSWS_52_99_194["INA-NSWS-52-99-194<br/>10.20.99.194"]:::access
   end
   subgraph "53"
+    direction TB
     INA_NSWS_53_99_70["INA-NSWS-53-99-70<br/>10.20.99.70"]:::access
   end
   subgraph "56"
+    direction TB
     INA_NSWS_56_99_13["INA-NSWS-56-99-13<br/>10.20.99.13"]:::access
   end
   subgraph "60"
+    direction TB
     INA_NSWS_60_99_243["INA-NSWS-60-99-243<br/>10.20.99.243"]:::access
   end
-  subgraph "63"
-    INA_NSWS_63_99_197["INA-NSWS-63-99-197<br/>10.20.99.197"]:::access
-  end
   subgraph "64"
+    direction TB
     INA_NSWS_64_99_130["INA-NSWS-64-99-130<br/>10.20.99.130"]:::access
   end
   subgraph "65"
+    direction TB
     INA_NSWS_65_99_131["INA-NSWS-65-99-131<br/>10.20.99.131"]:::access
   end
-  subgraph "66"
-    INA_NSWS_66_99_231["INA-NSWS-66-99-231<br/>10.20.99.231"]:::access
-  end
-  subgraph "67"
-    INA_NSWS_67_99_240["INA-NSWS-67-99-240<br/>10.20.99.240"]:::access
-  end
   subgraph "72"
+    direction TB
     INA_NSWS_72_99_137["INA-NSWS-72-99-137<br/>10.20.99.137"]:::access
   end
   subgraph "73"
+    direction TB
     INA_NSWS_73_99_156["INA-NSWS-73-99-156<br/>10.20.99.156"]:::access
   end
   subgraph "74"
+    direction TB
     INA_NSWS_74_99_155["INA-NSWS-74-99-155<br/>10.20.99.155"]:::access
   end
   subgraph "75"
+    direction TB
     INA_NSWS_75_98_94["INA-NSWS-75-98-94<br/>10.20.98.94"]:::access
     INA_NSWS_75_99_29["INA-NSWS-75-99-29<br/>10.20.99.29"]:::access
   end
   subgraph "76"
+    direction TB
     INA_NSWS_76_99_138["INA-NSWS-76-99-138<br/>10.20.99.138"]:::access
-    INA_NSWS_76_99_59["INA-NSWS-76-99-59<br/>10.20.99.59"]:::access
   end
   subgraph "118"
+    direction TB
     INA_NSWS_118_99_108["INA-NSWS-118-99-108<br/>10.20.99.108"]:::access
     INA_NSWS_118_99_82["INA-NSWS-118-99-82<br/>10.20.99.82"]:::access
   end
   subgraph "123"
+    direction TB
     INA_NSWS_123_97_100["INA-NSWS-123-97-100<br/>10.20.97.100"]:::access
   end
   subgraph "131"
+    direction TB
     INA_NSWS_131_99_68["INA-NSWS-131-99-68<br/>10.20.99.68"]:::access
   end
   subgraph "134"
+    direction TB
     INA_NSWS_134_98_100["INA-NSWS-134-98-100<br/>10.20.98.100"]:::access
   end
 end
+%% ===== Новые связи: 03 =====
+INA_NSWR_03_97_1 -- "(TwentyFiveGigE1/1/2) <-> (GigabitEthernet0/1)" --- INA_NSWR_03_99_20
+INA_NSWR_03_97_1 -- "(TwentyFiveGigE1/1/1) <-> (GigabitEthernet0/2)" --- INA_NSWS_03_99_10
+INA_NSWR_03_97_1 -- "(TwentyFiveGigE1/1/3) <-> (GigabitEthernet1/0/17)" --- INA_NSWS_123_97_100
+INA_NSWR_03_99_20 -- "(FastEthernet0/8) <-> (GigabitEthernet0/1)" --- INA_NSWS_05_99_22
+INA_NSWR_03_99_20 -- "(GigabitEthernet0/2) <-> (GigabitEthernet0/2)" --- INA_NSWS_75_99_29
+INA_NSWS_03_99_10 -- "(GigabitEthernet0/1) <-> (GigabitEthernet0/1)" --- INA_NSWS_08_99_76
+INA_NSWS_08_98_73 -- "(GigabitEthernet0/1) <-> (FastEthernet0/6)" --- INA_NSWR_03_99_20
+INA_NSWS_118_99_108 -- "(GigabitEthernet1/0/17) <-> (FastEthernet0/11)" --- INA_NSWR_03_99_20
+%% ===== Новые связи: 05 =====
+INA_NSWR_03_99_20 -- "(FastEthernet0/8) <-> (GigabitEthernet0/1)" --- INA_NSWS_05_99_22
+%% ===== Новые связи: 08 =====
+INA_NSWS_03_99_10 -- "(GigabitEthernet0/1) <-> (GigabitEthernet0/1)" --- INA_NSWS_08_99_76
+INA_NSWS_08_98_73 -- "(FastEthernet0/8) <-> (FastEthernet0/22)" --- INA_NSWS_10_99_126
+INA_NSWS_08_98_73 -- "(FastEthernet0/5) <-> (GigabitEthernet0/1)" --- INA_NSWS_131_99_68
+INA_NSWS_08_98_73 -- "(GigabitEthernet0/1) <-> (FastEthernet0/6)" --- INA_NSWR_03_99_20
+INA_NSWS_08_99_107 -- "(GigabitEthernet0/2) <-> (GigabitEthernet1/0/9)" --- INA_NSWS_53_99_70
+INA_NSWS_08_99_107 -- "(GigabitEthernet0/1) <-> (FastEthernet0/8)" --- INA_NSWS_56_99_13
+%% ===== Новые связи: 09 =====
+INA_NSWS_10_99_126 -- "(GigabitEthernet0/1) <-> (GigabitEthernet0/1)" --- INA_NSWS_09_99_127
+INA_NSWS_134_98_100 -- "(GigabitEthernet0/11) <-> (GigabitEthernet0/2)" --- INA_NSWS_09_99_127
+%% ===== Новые связи: 10 =====
+INA_NSWS_08_98_73 -- "(FastEthernet0/8) <-> (FastEthernet0/22)" --- INA_NSWS_10_99_126
+INA_NSWS_10_99_126 -- "(GigabitEthernet0/1) <-> (GigabitEthernet0/1)" --- INA_NSWS_09_99_127
+INA_NSWS_46_98_70 -- "(GigabitEthernet0/2) <-> (GigabitEthernet0/2)" --- INA_NSWS_10_99_126
+%% ===== Новые связи: 11 =====
+INA_NSWS_11_99_150 -- "(GigabitEthernet1/1/1) <-> (GigabitEthernet0/1)" --- INA_NSWS_11_99_153
+INA_NSWS_11_99_150 -- "(GigabitEthernet1/0/7) <-> (GigabitEthernet1/0/50)" --- INA_NSWS_11_99_196
+INA_NSWS_11_99_150 -- "(GigabitEthernet1/0/5) <-> (GigabitEthernet0/11)" --- INA_NSWS_14_99_235
+INA_NSWS_11_99_150 -- "(GigabitEthernet1/0/4) <-> (GigabitEthernet0/9)" --- INA_NSWS_41_99_159
+INA_NSWS_11_99_196 -- "(Gig 1/0/47) <-> (I   WS-C2960L)" --- Switch
+INA_NSWS_11_99_196 -- "(GigabitEthernet1/0/48) <-> (GigabitEthernet1/0/44)" --- INA_NSWS_13_99_95
+INA_NSWS_13_99_145 -- "(GigabitEthernet1/0/17) <-> (GigabitEthernet1/0/51)" --- INA_NSWS_11_99_196
+INA_NSWS_20_99_109 -- "(GigabitEthernet1/0/17) <-> (GigabitEthernet1/0/49)" --- INA_NSWS_11_99_196
+%% ===== Новые связи: 13 =====
+INA_NSWS_11_99_196 -- "(GigabitEthernet1/0/48) <-> (GigabitEthernet1/0/44)" --- INA_NSWS_13_99_95
+INA_NSWS_13_99_145 -- "(GigabitEthernet1/0/17) <-> (GigabitEthernet1/0/51)" --- INA_NSWS_11_99_196
+%% ===== Новые связи: 14 =====
+INA_NSWS_11_99_150 -- "(GigabitEthernet1/0/5) <-> (GigabitEthernet0/11)" --- INA_NSWS_14_99_235
+INA_NSWS_14_99_152 -- "(GigabitEthernet0/10) <-> (GigabitEthernet0/10)" --- INA_NSWS_14_99_235
+INA_NSWS_14_99_205 -- "(GigabitEthernet0/2) <-> (GigabitEthernet0/1)" --- INA_NSWS_15_99_206
+INA_NSWS_14_99_235 -- "(GigabitEthernet0/12) <-> (GigabitEthernet0/11)" --- INA_NSWS_15_99_236
+INA_NSWS_15_99_206 -- "(GigabitEthernet0/2) <-> (GigabitEthernet0/1)" --- INA_NSWS_14_99_207
+%% ===== Новые связи: 15 =====
+INA_NSWS_14_99_205 -- "(GigabitEthernet0/2) <-> (GigabitEthernet0/1)" --- INA_NSWS_15_99_206
+INA_NSWS_14_99_235 -- "(GigabitEthernet0/12) <-> (GigabitEthernet0/11)" --- INA_NSWS_15_99_236
+INA_NSWS_15_99_206 -- "(GigabitEthernet0/2) <-> (GigabitEthernet0/1)" --- INA_NSWS_14_99_207
+INA_NSWS_15_99_234 -- "(GigabitEthernet0/11) <-> (GigabitEthernet0/12)" --- INA_NSWS_15_99_236
+INA_NSWS_15_99_234 -- "(GigabitEthernet0/12) <-> (GigabitEthernet0/11)" --- INA_NSWS_16_99_237
+%% ===== Новые связи: 16 =====
+INA_NSWS_15_99_234 -- "(GigabitEthernet0/12) <-> (GigabitEthernet0/11)" --- INA_NSWS_16_99_237
+%% ===== Новые связи: 20 =====
+INA_NSWS_20_99_109 -- "(GigabitEthernet1/0/17) <-> (GigabitEthernet1/0/49)" --- INA_NSWS_11_99_196
+%% ===== Новые связи: 21 =====
+INA_NSWS_21_98_153 -- "(GigabitEthernet0/2) <-> (GigabitEthernet0/11)" --- INA_NSWS_60_99_243
+%% ===== Новые связи: 35 =====
+INA_NSWS_35_99_139 -- "(GigabitEthernet0/10) <-> (GigabitEthernet0/9)" --- INA_NSWS_35_99_61
+INA_NSWS_35_99_139 -- "(GigabitEthernet0/1) <-> (GigabitEthernet0/9)" --- INA_NSWS_36_99_186
+INA_NSWS_35_99_139 -- "(GigabitEthernet0/9) <-> (GigabitEthernet1/0/48)" --- INA_NSWS_38_99_60
+INA_NSWS_43_99_170 -- "(GigabitEthernet1/0/17) <-> (GigabitEthernet0/11)" --- INA_NSWS_35_99_61
+INA_NSWS_72_99_137 -- "(GigabitEthernet1/0/17) <-> (GigabitEthernet0/11)" --- INA_NSWS_35_99_139
+%% ===== Новые связи: 36 =====
+INA_NSWS_35_99_139 -- "(GigabitEthernet0/1) <-> (GigabitEthernet0/9)" --- INA_NSWS_36_99_186
+INA_NSWS_36_99_186 -- "(GigabitEthernet0/2) <-> (GigabitEthernet0/2)" --- ums_gw_1
+%% ===== Новые связи: 38 =====
+INA_NSWS_35_99_139 -- "(GigabitEthernet0/9) <-> (GigabitEthernet1/0/48)" --- INA_NSWS_38_99_60
+INA_NSWS_38_99_60 -- "(GigabitEthernet1/0/46) <-> (GigabitEthernet1/0/16)" --- INA_NSWS_39_99_72
+%% ===== Новые связи: 39 =====
+INA_NSWS_38_99_60 -- "(GigabitEthernet1/0/46) <-> (GigabitEthernet1/0/16)" --- INA_NSWS_39_99_72
+INA_NSWS_39_99_185 -- "(GigabitEthernet1/0/16) <-> (GigabitEthernet1/0/9)" --- INA_NSWS_39_99_72
+INA_NSWS_39_99_72 -- "(GigabitEthernet1/0/1) <-> (GigabitEthernet1/0/16)" --- INA_NSWS_39_99_97
+%% ===== Новые связи: 41 =====
+INA_NSWS_11_99_150 -- "(GigabitEthernet1/0/4) <-> (GigabitEthernet0/9)" --- INA_NSWS_41_99_159
+INA_NSWS_41_99_119 -- "(GigabitEthernet0/1) <-> (GigabitEthernet0/10)" --- INA_NSWS_51_99_160
+INA_NSWS_41_99_159 -- "(GigabitEthernet0/10) <-> (GigabitEthernet0/9)" --- INA_NSWS_51_99_160
+%% ===== Новые связи: 43 =====
+INA_NSWS_43_99_170 -- "(GigabitEthernet1/0/17) <-> (GigabitEthernet0/11)" --- INA_NSWS_35_99_61
+%% ===== Новые связи: 44 =====
+INA_NSWS_44_98_91 -- "(GigabitEthernet0/11) <-> (GigabitEthernet0/12)" --- INA_NSWS_44_98_92
+%% ===== Новые связи: 46 =====
+INA_NSWS_46_98_70 -- "(GigabitEthernet0/2) <-> (GigabitEthernet0/2)" --- INA_NSWS_10_99_126
+%% ===== Новые связи: 51 =====
+INA_NSWS_41_99_119 -- "(GigabitEthernet0/1) <-> (GigabitEthernet0/10)" --- INA_NSWS_51_99_160
+INA_NSWS_41_99_159 -- "(GigabitEthernet0/10) <-> (GigabitEthernet0/9)" --- INA_NSWS_51_99_160
+INA_NSWS_51_99_193 -- "(GigabitEthernet0/2) <-> (GigabitEthernet1/0/46)" --- INA_NSWS_51_99_32
+INA_NSWS_51_99_193 -- "(GigabitEthernet0/1) <-> (GigabitEthernet0/1)" --- INA_NSWS_52_99_194
+%% ===== Новые связи: 52 =====
+INA_NSWS_51_99_193 -- "(GigabitEthernet0/1) <-> (GigabitEthernet0/1)" --- INA_NSWS_52_99_194
+%% ===== Новые связи: 53 =====
+INA_NSWS_08_99_107 -- "(GigabitEthernet0/2) <-> (GigabitEthernet1/0/9)" --- INA_NSWS_53_99_70
+%% ===== Новые связи: 56 =====
+INA_NSWS_08_99_107 -- "(GigabitEthernet0/1) <-> (FastEthernet0/8)" --- INA_NSWS_56_99_13
+%% ===== Новые связи: 60 =====
+INA_NSWS_21_98_153 -- "(GigabitEthernet0/2) <-> (GigabitEthernet0/11)" --- INA_NSWS_60_99_243
+%% ===== Новые связи: 64 =====
+INA_NSWS_64_99_130 -- "(FastEthernet0/24) <-> (GigabitEthernet0/1)" --- INA_NSWS_65_99_131
+INA_NSWS_64_99_130 -- "(FastEthernet0/23) <-> (FastEthernet0/5)" --- INA_NSWS_75_99_29
+%% ===== Новые связи: 65 =====
+INA_NSWS_64_99_130 -- "(FastEthernet0/24) <-> (GigabitEthernet0/1)" --- INA_NSWS_65_99_131
+%% ===== Новые связи: 72 =====
+INA_NSWS_72_99_137 -- "(GigabitEthernet1/0/17) <-> (GigabitEthernet0/11)" --- INA_NSWS_35_99_139
+INA_NSWS_72_99_137 -- "(GigabitEthernet1/0/18) <-> (GigabitEthernet0/12)" --- INA_NSWS_76_99_138
+%% ===== Новые связи: 73 =====
+INA_NSWS_73_99_156 -- "(GigabitEthernet0/1) <-> (GigabitEthernet0/1)" --- INA_NSWS_75_99_29
+INA_NSWS_74_99_155 -- "(GigabitEthernet0/1) <-> (GigabitEthernet0/2)" --- INA_NSWS_73_99_156
+%% ===== Новые связи: 74 =====
+INA_NSWS_74_99_155 -- "(GigabitEthernet0/1) <-> (GigabitEthernet0/2)" --- INA_NSWS_73_99_156
+%% ===== Новые связи: 75 =====
+INA_NSWR_03_99_20 -- "(GigabitEthernet0/2) <-> (GigabitEthernet0/2)" --- INA_NSWS_75_99_29
+INA_NSWS_64_99_130 -- "(FastEthernet0/23) <-> (FastEthernet0/5)" --- INA_NSWS_75_99_29
+INA_NSWS_73_99_156 -- "(GigabitEthernet0/1) <-> (GigabitEthernet0/1)" --- INA_NSWS_75_99_29
+INA_NSWS_75_98_94 -- "(GigabitEthernet0/12) <-> (GigabitEthernet0/11)" --- INA_NSWS_76_99_138
+%% ===== Новые связи: 76 =====
+INA_NSWS_72_99_137 -- "(GigabitEthernet1/0/18) <-> (GigabitEthernet0/12)" --- INA_NSWS_76_99_138
+INA_NSWS_75_98_94 -- "(GigabitEthernet0/12) <-> (GigabitEthernet0/11)" --- INA_NSWS_76_99_138
+%% ===== Новые связи: 118 =====
+INA_NSWS_118_99_108 -- "(GigabitEthernet1/0/17) <-> (FastEthernet0/11)" --- INA_NSWR_03_99_20
+INA_NSWS_118_99_108 -- "(GigabitEthernet1/0/11) <-> (GigabitEthernet1/0/9)" --- INA_NSWS_118_99_82
+%% ===== Новые связи: 123 =====
+INA_NSWR_03_97_1 -- "(TwentyFiveGigE1/1/3) <-> (GigabitEthernet1/0/17)" --- INA_NSWS_123_97_100
+%% ===== Новые связи: 131 =====
+INA_NSWS_08_98_73 -- "(FastEthernet0/5) <-> (GigabitEthernet0/1)" --- INA_NSWS_131_99_68
+%% ===== Новые связи: 134 =====
+INA_NSWS_134_98_100 -- "(GigabitEthernet0/11) <-> (GigabitEthernet0/2)" --- INA_NSWS_09_99_127
 subgraph "MSK"
+  direction TB
   subgraph "01"
+    direction TB
     MSK_NSWR_01_2_11["MSK-NSWR-01-2-11"]:::access
     MSK_NSWR_01_2_12["MSK-NSWR-01-2-12"]:::access
     MSK_NSWS_01_2_41["MSK-NSWS-01-2-41"]:::access
   end
   subgraph "02"
+    direction TB
     MSK_NSWS_02_2_40["MSK-NSWS-02-2-40"]:::access
   end
   subgraph "03"
+    direction TB
     MSK_NSWS_03_2_10["MSK-NSWS-03-2-10"]:::access
   end
 end
+%% ===== Новые связи: 01 =====
+MSK_NSWR_01_2_11 -- "(GigabitEthernet0/47) <-> (GigabitEthernet1/0/48)" --- MSK_NSWR_01_2_12
+MSK_NSWR_01_2_11 -- "(GigabitEthernet0/48) <-> (GigabitEthernet0/48)" --- MSK_NSWS_03_2_10
+MSK_NSWS_01_2_41 -- "(GigabitEthernet1/0/49) <-> (GigabitEthernet1/0/49)" --- MSK_NSWS_02_2_40
+MSK_NSWS_01_2_41 -- "(GigabitEthernet1/0/18) <-> (GigabitEthernet0/47)" --- MSK_NSWS_03_2_10
+%% ===== Новые связи: 02 =====
+MSK_NSWS_01_2_41 -- "(GigabitEthernet1/0/49) <-> (GigabitEthernet1/0/49)" --- MSK_NSWS_02_2_40
+%% ===== Новые связи: 03 =====
+MSK_NSWR_01_2_11 -- "(GigabitEthernet0/48) <-> (GigabitEthernet0/48)" --- MSK_NSWS_03_2_10
+MSK_NSWS_01_2_41 -- "(GigabitEthernet1/0/18) <-> (GigabitEthernet0/47)" --- MSK_NSWS_03_2_10
 subgraph "NER"
+  direction TB
   subgraph "01"
+    direction TB
     NER_NSWR_01_96_1["NER-NSWR-01-96-1<br/>10.20.96.1"]:::access
     NER_NSWR_01_99_1["NER-NSWR-01-99-1<br/>10.20.99.1"]:::access
-    NER_NSWR_01_99_3["NER-NSWR-01-99-3<br/>10.20.99.3"]:::access
-    NER_NSWS_01_99_4["NER-NSWS-01-99-4<br/>10.20.99.4"]:::access
-    NER_NSWS_01_99_58["NER-NSWS-01-99-58<br/>10.20.99.58"]:::access
     NER_NSWS_01_99_6["NER-NSWS-01-99-6<br/>10.20.99.6"]:::access
-    NER_NSWS_01_99_69["NER-NSWS-01-99-69<br/>10.20.99.69"]:::access
-    NER_NSWS_01_99_73["NER-NSWS-01-99-73<br/>10.20.99.73"]:::access
-    NER_NSWS_01_99_74["NER-NSWS-01-99-74<br/>10.20.99.74"]:::access
     NER_NSWS_01_99_87["NER-NSWS-01-99-87<br/>10.20.99.87"]:::access
   end
-  subgraph "03"
-    NER_NSWS_03_99_21["NER-NSWS-03-99-21<br/>10.20.99.21"]:::access
-    NER_NSWS_03_99_5["NER-NSWS-03-99-5<br/>10.20.99.5"]:::access
-  end
   subgraph "04"
-    NER_NSWS_04_99_28["NER-NSWS-04-99-28<br/>10.20.99.28"]:::access
+    direction TB
     NER_NSWS_04_99_40["NER-NSWS-04-99-40<br/>10.20.99.40"]:::access
     NER_NSWS_04_99_51["NER-NSWS-04-99-51<br/>10.20.99.51"]:::access
-    NER_NSWS_04_99_9["NER-NSWS-04-99-9<br/>10.20.99.9"]:::access
   end
   subgraph "06"
+    direction TB
     NER_NSWS_06_99_27["NER-NSWS-06-99-27<br/>10.20.99.27"]:::access
     NER_NSWS_06_99_67["NER-NSWS-06-99-67<br/>10.20.99.67"]:::access
   end
-  subgraph "07"
-    NER_NSWS_07_99_36["NER-NSWS-07-99-36<br/>10.20.99.36"]:::access
-    NER_NSWS_07_99_37["NER-NSWS-07-99-37<br/>10.20.99.37"]:::access
-  end
   subgraph "08"
+    direction TB
     NER_NSWS_08_99_39["NER-NSWS-08-99-39<br/>10.20.99.39"]:::access
     NER_NSWS_08_99_53["NER-NSWS-08-99-53<br/>10.20.99.53"]:::access
   end
   subgraph "09"
+    direction TB
     NER_NSWS_09_99_54["NER-NSWS-09-99-54<br/>10.20.99.54"]:::access
-    NER_NSWS_09_99_75["NER-NSWS-09-99-75<br/>10.20.99.75"]:::access
   end
   subgraph "11"
+    direction TB
     NER_NSWS_11_97_10["NER-NSWS-11-97-10<br/>10.20.97.10"]:::access
   end
   subgraph "12"
+    direction TB
     NER_NSWS_12_97_5["NER-NSWS-12-97-5<br/>10.20.97.5"]:::access
   end
   subgraph "13"
+    direction TB
     NER_NSWS_13_97_4["NER-NSWS-13-97-4<br/>10.20.97.4"]:::access
   end
   subgraph "14"
+    direction TB
     NER_NSWS_14_97_6["NER-NSWS-14-97-6<br/>10.20.97.6"]:::access
   end
   subgraph "15"
+    direction TB
     NER_NSWS_15_97_9["NER-NSWS-15-97-9<br/>10.20.97.9"]:::access
   end
   subgraph "16"
+    direction TB
     NER_NSWS_16_97_7["NER-NSWS-16-97-7<br/>10.20.97.7"]:::access
   end
   subgraph "17"
+    direction TB
     NER_NSWS_17_97_3["NER-NSWS-17-97-3<br/>10.20.97.3"]:::access
   end
 end
+%% ===== Новые связи: 01 =====
+NER_NSWR_01_96_1 -- "(TwentyFiveGigE1/0/23) <-> (TwentyFiveGigE1/0/23)" --- DEN_NSWR_03_98_1
+NER_NSWR_01_96_1 -- "(TwentyFiveGigE1/0/4) <-> (GigabitEthernet1/0/49)" --- NER_NSWS_01_99_6
+NER_NSWR_01_96_1 -- "(TwentyFiveGigE1/0/6) <-> (TenGigabitEthernet1/0/1)" --- NER_NSWS_01_99_87
+NER_NSWR_01_96_1 -- "(TwentyFiveGigE1/0/2) <-> (TenGigabitEthernet1/1/4)" --- NRG_NSWR_01_99_38
+NER_NSWR_01_99_1 -- "(Gig 1/1/1) <-> (S I)" --- NER_NSWR_01_96_1
+%% ===== Новые связи: 04 =====
+NRG_NSWR_01_99_38 -- "(GigabitEthernet1/0/2) <-> (GigabitEthernet1/0/28)" --- NER_NSWS_04_99_40
+NRG_NSWR_01_99_38 -- "(GigabitEthernet1/0/6) <-> (GigabitEthernet0/11)" --- NER_NSWS_04_99_51
+%% ===== Новые связи: 06 =====
+NER_NSWS_06_99_27 -- "(GigabitEthernet0/2) <-> (FastEthernet0/35)" --- NER_NSWS_06_99_67
+%% ===== Новые связи: 08 =====
+NRG_NSWR_01_99_38 -- "(GigabitEthernet1/0/1) <-> (GigabitEthernet1/0/28)" --- NER_NSWS_08_99_39
+NRG_NSWR_01_99_38 -- "(GigabitEthernet1/0/5) <-> (GigabitEthernet1/0/28)" --- NER_NSWS_08_99_53
+%% ===== Новые связи: 09 =====
+NRG_NSWR_01_99_38 -- "(GigabitEthernet1/0/4) <-> (GigabitEthernet1/0/25)" --- NER_NSWS_09_99_54
+%% ===== Новые связи: 11 =====
+NER_NSWS_11_97_10 -- "(GigabitEthernet0/11) <-> (GigabitEthernet0/1)" --- NER_NSWS_12_97_5
+NER_NSWS_11_97_10 -- "(GigabitEthernet0/12) <-> (GigabitEthernet0/2)" --- NER_NSWS_13_97_4
+NER_NSWS_11_97_10 -- "(GigabitEthernet0/7) <-> (GigabitEthernet1/0/22)" --- NRG_NSWS_01_99_41
+%% ===== Новые связи: 12 =====
+NER_NSWS_11_97_10 -- "(GigabitEthernet0/11) <-> (GigabitEthernet0/1)" --- NER_NSWS_12_97_5
+NER_NSWS_12_97_5 -- "(GigabitEthernet0/2) <-> (GigabitEthernet0/1)" --- NER_NSWS_14_97_6
+%% ===== Новые связи: 13 =====
+NER_NSWS_11_97_10 -- "(GigabitEthernet0/12) <-> (GigabitEthernet0/2)" --- NER_NSWS_13_97_4
+%% ===== Новые связи: 14 =====
+NER_NSWS_12_97_5 -- "(GigabitEthernet0/2) <-> (GigabitEthernet0/1)" --- NER_NSWS_14_97_6
+NER_NSWS_14_97_6 -- "(GigabitEthernet0/2) <-> (GigabitEthernet0/11)" --- NER_NSWS_15_97_9
+%% ===== Новые связи: 15 =====
+NER_NSWS_14_97_6 -- "(GigabitEthernet0/2) <-> (GigabitEthernet0/11)" --- NER_NSWS_15_97_9
+NER_NSWS_16_97_7 -- "(GigabitEthernet0/2) <-> (GigabitEthernet0/12)" --- NER_NSWS_15_97_9
+%% ===== Новые связи: 16 =====
+NER_NSWS_16_97_7 -- "(GigabitEthernet0/2) <-> (GigabitEthernet0/12)" --- NER_NSWS_15_97_9
+NER_NSWS_17_97_3 -- "(GigabitEthernet0/11) <-> (GigabitEthernet0/1)" --- NER_NSWS_16_97_7
+%% ===== Новые связи: 17 =====
+NER_NSWS_17_97_3 -- "(GigabitEthernet0/11) <-> (GigabitEthernet0/1)" --- NER_NSWS_16_97_7
 subgraph "NRG"
+  direction TB
   subgraph "01"
+    direction TB
     NRG_NSWR_01_99_38["NRG-NSWR-01-99-38<br/>10.20.99.38"]:::access
     NRG_NSWS_01_99_41["NRG-NSWS-01-99-41<br/>10.20.99.41"]:::access
   end
 end
+%% ===== Новые связи: 01 =====
+NER_NSWR_01_96_1 -- "(TwentyFiveGigE1/0/2) <-> (TenGigabitEthernet1/1/4)" --- NRG_NSWR_01_99_38
+NER_NSWS_11_97_10 -- "(GigabitEthernet0/7) <-> (GigabitEthernet1/0/22)" --- NRG_NSWS_01_99_41
+NRG_NSWR_01_99_38 -- "(GigabitEthernet1/0/2) <-> (GigabitEthernet1/0/28)" --- NER_NSWS_04_99_40
+NRG_NSWR_01_99_38 -- "(GigabitEthernet1/0/6) <-> (GigabitEthernet0/11)" --- NER_NSWS_04_99_51
+NRG_NSWR_01_99_38 -- "(GigabitEthernet1/0/1) <-> (GigabitEthernet1/0/28)" --- NER_NSWS_08_99_39
+NRG_NSWR_01_99_38 -- "(GigabitEthernet1/0/5) <-> (GigabitEthernet1/0/28)" --- NER_NSWS_08_99_53
+NRG_NSWR_01_99_38 -- "(GigabitEthernet1/0/4) <-> (GigabitEthernet1/0/25)" --- NER_NSWS_09_99_54
+NRG_NSWR_01_99_38 -- "(GigabitEthernet1/0/3) <-> (GigabitEthernet1/0/28)" --- NRG_NSWS_01_99_41
 subgraph "NSK"
+  direction TB
   subgraph "01"
+    direction TB
     NSK_NSWR_01_99_1["NSK-NSWR-01-99-1<br/>10.2.99.1"]:::access
     NSK_NSWS_01_99_11["NSK-NSWS-01-99-11<br/>10.2.99.11"]:::access
     NSK_NSWS_01_99_5["NSK-NSWS-01-99-5<br/>10.2.99.5"]:::access
     NSK_NSWS_01_99_7["NSK-NSWS-01-99-7<br/>10.2.99.7"]:::access
   end
 end
+%% ===== Новые связи: 01 =====
+NSK_NSWR_01_99_1 -- "(GigabitEthernet1/0/23) <-> (GigabitEthernet1/0/35)" --- NSK_NSWS_01_99_11
+NSK_NSWR_01_99_1 -- "(GigabitEthernet1/0/24) <-> (GigabitEthernet1/0/48)" --- NSK_NSWS_01_99_5
+NSK_NSWR_01_99_1 -- "(GigabitEthernet1/0/22) <-> (GigabitEthernet1/0/35)" --- NSK_NSWS_01_99_7
+NSK_NSWS_01_99_11 -- "(Gig 1/0/6) <-> (I   WS-C3560C)" --- Switch
 subgraph "SRB"
+  direction TB
   subgraph "01"
+    direction TB
     SRB_NSWS_01_99_57["SRB-NSWS-01-99-57<br/>10.20.99.57"]:::access
   end
   subgraph "02"
+    direction TB
     SRB_NSWS_02_99_56["SRB-NSWS-02-99-56<br/>10.20.99.56"]:::access
   end
 end
+%% ===== Новые связи: 01 =====
+SRB_NSWS_02_99_56 -- "(GigabitEthernet0/11) <-> (GigabitEthernet1/0/27)" --- SRB_NSWS_01_99_57
+%% ===== Новые связи: 02 =====
+SRB_NSWS_02_99_56 -- "(GigabitEthernet0/11) <-> (GigabitEthernet1/0/27)" --- SRB_NSWS_01_99_57
+subgraph "UNKNOWN"
+  direction TB
+  10_20_99_151["10.20.99.151<br/>10.20.99.151"]:::access
+  Switch["Switch<br/>10.20.98.99"]:::access
+  ums_gw_1["ums_gw_1<br/>10.20.99.78"]:::access
+end
 
-10_20_99_113 --- DEN_NSWS_01_98_110
-10_20_99_113 --- DEN_NSWS_24_99_114
-10_20_99_113 --- DEN_NSWS_24_99_115
-10_20_99_113 --- DEN_NSWS_24_99_116
-10_20_99_113 --- DEN_NSWS_24_99_117
-10_20_99_151 --- DEN_NSWS_106_98_53
-10_20_99_151 --- DEN_NSWS_111_97_11
-10_20_99_151 --- DEN_NSWS_86_98_56
-10_20_99_151 --- DEN_NSWS_87_98_58
-10_20_99_151 --- DEN_NSWS_88_98_57
-HRAM_RPBK --- HRAM_RPBK
-Switch --- DEN_NSWS_14_98_129
-Switch --- Switch
-CHU_NSWR_14_98_140 --- CHU_NSWR_14_99_45
-CHU_NSWR_14_98_140 --- CHU_NSWS_01_98_143
-CHU_NSWR_14_98_140 --- CHU_NSWS_02_99_223
-CHU_NSWR_14_98_140 --- CHU_NSWS_03_98_144
-CHU_NSWR_14_98_140 --- CHU_NSWS_03_99_224
-CHU_NSWR_14_98_140 --- CHU_NSWS_04_99_222
-CHU_NSWR_14_98_140 --- CHU_NSWS_05_98_146
-CHU_NSWR_14_98_140 --- CHU_NSWS_07_98_145
-CHU_NSWR_14_98_140 --- CHU_NSWS_12_98_142
-CHU_NSWR_14_98_140 --- CHU_NSWS_13_99_218
-CHU_NSWR_14_98_140 --- CHU_NSWS_14_98_141
-CHU_NSWR_14_98_140 --- CHU_NSWS_15_99_217
-CHU_NSWR_14_98_140 --- CHU_NSWS_16_99_225
-CHU_NSWR_14_98_140 --- CHU_NSWS_22_98_151
-CHU_NSWR_14_98_140 --- CHU_NSWR_14_98_140
-CHU_NSWR_14_99_45 --- CHU_NSWR_14_98_140
-CHU_NSWR_14_99_45 --- CHU_NSWS_12_99_93
-CHU_NSWR_14_99_45 --- CHU_NSWS_14_99_91
-CHU_NSWR_14_99_45 --- CHU_NSWS_14_99_92
-CHU_NSWR_14_99_45 --- CHU_NSWR_14_99_45
-CHU_NSWS_01_98_143 --- CHU_NSWR_14_98_140
-CHU_NSWS_01_98_143 --- CHU_NSWS_01_98_143
-CHU_NSWS_02_99_223 --- CHU_NSWR_14_98_140
-CHU_NSWS_02_99_223 --- CHU_NSWS_02_99_223
-CHU_NSWS_03_98_144 --- CHU_NSWR_14_98_140
-CHU_NSWS_03_98_144 --- CHU_NSWS_03_98_144
-CHU_NSWS_03_99_14 --- CHU_NSWS_03_99_7
-CHU_NSWS_03_99_14 --- CHU_NSWS_03_99_7
-CHU_NSWS_03_99_14 --- CHU_NSWS_04_99_222
-CHU_NSWS_03_99_14 --- CHU_NSWS_03_99_14
-CHU_NSWS_03_99_224 --- CHU_NSWR_14_98_140
-CHU_NSWS_03_99_224 --- CHU_NSWS_03_99_224
-CHU_NSWS_03_99_7 --- CHU_NSWS_03_99_14
-CHU_NSWS_03_99_7 --- CHU_NSWS_03_99_7
-CHU_NSWS_04_99_222 --- CHU_NSWS_03_99_14
-CHU_NSWS_04_99_222 --- CHU_NSWR_14_98_140
-CHU_NSWS_04_99_222 --- CHU_NSWS_10_98_149
-CHU_NSWS_04_99_222 --- CHU_NSWS_04_99_222
-CHU_NSWS_04_99_71 --- CHU_NSWS_14_99_91
-CHU_NSWS_04_99_71 --- CHU_NSWS_04_99_71
-CHU_NSWS_05_98_146 --- CHU_NSWR_14_98_140
-CHU_NSWS_05_98_146 --- CHU_NSWS_06_98_147
-CHU_NSWS_05_98_146 --- CHU_NSWS_05_98_146
-CHU_NSWS_06_98_147 --- CHU_NSWS_05_98_146
-CHU_NSWS_06_98_147 --- CHU_NSWS_06_98_147
-CHU_NSWS_07_98_145 --- CHU_NSWR_14_98_140
-CHU_NSWS_07_98_145 --- CHU_NSWS_07_98_145
-CHU_NSWS_08_98_148 --- CHU_NSWR_14_98_140
-CHU_NSWS_08_98_148 --- CHU_NSWS_08_98_148
-CHU_NSWS_10_98_149 --- CHU_NSWS_04_99_222
-CHU_NSWS_10_98_149 --- CHU_NSWS_11_98_150
-CHU_NSWS_10_98_149 --- CHU_NSWS_10_98_149
-CHU_NSWS_11_98_150 --- CHU_NSWS_10_98_149
-CHU_NSWS_11_98_150 --- CHU_NSWS_11_98_150
-CHU_NSWS_12_98_142 --- CHU_NSWR_14_98_140
-CHU_NSWS_12_98_142 --- CHU_NSWS_12_98_142
-CHU_NSWS_12_99_93 --- CHU_NSWR_14_99_45
-CHU_NSWS_12_99_93 --- CHU_NSWS_12_99_93
-CHU_NSWS_13_99_218 --- CHU_NSWR_14_98_140
-CHU_NSWS_13_99_218 --- CHU_NSWS_13_99_219
-CHU_NSWS_13_99_218 --- CHU_NSWS_13_99_218
-CHU_NSWS_13_99_219 --- CHU_NSWS_13_99_218
-CHU_NSWS_13_99_219 --- CHU_NSWS_13_99_219
-CHU_NSWS_14_98_141 --- CHU_NSWR_14_98_140
-CHU_NSWS_14_98_141 --- CHU_NSWS_14_98_141
-CHU_NSWS_14_99_91 --- CHU_NSWR_14_99_45
-CHU_NSWS_14_99_91 --- CHU_NSWS_04_99_71
-CHU_NSWS_14_99_91 --- CHU_NSWS_14_99_91
-CHU_NSWS_14_99_92 --- CHU_NSWR_14_99_45
-CHU_NSWS_14_99_92 --- CHU_NSWS_14_99_92
-CHU_NSWS_15_99_217 --- CHU_NSWR_14_98_140
-CHU_NSWS_15_99_217 --- CHU_NSWS_15_99_217
-CHU_NSWS_16_99_225 --- CHU_NSWR_14_98_140
-CHU_NSWS_16_99_225 --- CHU_NSWS_17_99_226
-CHU_NSWS_16_99_225 --- CHU_NSWS_16_99_225
-CHU_NSWS_17_99_226 --- CHU_NSWS_16_99_225
-CHU_NSWS_17_99_226 --- CHU_NSWS_17_99_227
-CHU_NSWS_17_99_226 --- CHU_NSWS_17_99_226
-CHU_NSWS_17_99_227 --- CHU_NSWS_17_99_226
-CHU_NSWS_17_99_227 --- CHU_NSWS_17_99_227
-CHU_NSWS_22_98_151 --- CHU_NSWR_14_98_140
-CHU_NSWS_22_98_151 --- CHU_NSWS_22_98_151
-CHU_NSWS_23_98_235 --- CHU_NSWS_25_98_231
-CHU_NSWS_23_98_235 --- CHU_NSWS_26_98_233
-CHU_NSWS_23_98_235 --- CHU_NSWS_23_98_235
-CHU_NSWS_24_98_232 --- CHU_NSWS_24_98_93
-CHU_NSWS_24_98_232 --- CHU_NSWS_25_98_231
-CHU_NSWS_24_98_232 --- CHU_NSWS_24_98_232
-CHU_NSWS_24_98_93 --- CHU_NSWS_24_98_232
-CHU_NSWS_24_98_93 --- CHU_NSWS_24_98_93
-CHU_NSWS_25_98_231 --- CHU_NSWS_23_98_235
-CHU_NSWS_25_98_231 --- CHU_NSWS_24_98_232
-CHU_NSWS_25_98_231 --- CHU_NSWS_25_98_231
-CHU_NSWS_26_98_233 --- CHU_NSWS_23_98_235
-CHU_NSWS_26_98_233 --- CHU_NSWS_26_98_233
-DEN_NSWR_03_98_1 --- NER_NSWR_01_96_1
-DEN_NSWR_03_98_1 --- NER_NSWR_01_96_1
-DEN_NSWR_03_98_1 --- DEN_NSWS_01_98_66
-DEN_NSWR_03_98_1 --- DEN_NSWS_03_99_11
-DEN_NSWR_03_98_1 --- DEN_NSWS_04_99_15
-DEN_NSWR_03_98_1 --- DEN_NSWS_09_99_42
-DEN_NSWR_03_98_1 --- DEN_NSWS_109_99_122
-DEN_NSWR_03_98_1 --- DEN_NSWS_16_99_12
-DEN_NSWR_03_98_1 --- DEN_NSWS_19_99_98
-DEN_NSWR_03_98_1 --- DEN_NSWS_29_99_44
-DEN_NSWR_03_98_1 --- DEN_NSWS_47_99_65
-DEN_NSWR_03_98_1 --- DEN_NSWS_58_99_86
-DEN_NSWR_03_98_1 --- DEN_NSWS_59_99_94
-DEN_NSWR_03_98_1 --- DEN_NSWS_62_99_90
-DEN_NSWR_03_98_1 --- DEN_NSWS_98_112
-DEN_NSWR_03_98_1 --- NER_NSWR_01_96_1
-DEN_NSWR_03_98_1 --- DEN_NSWR_03_98_1
-DEN_NSWS_01_98_110 --- DEN_NSWS_01_98_66
-DEN_NSWS_01_98_110 --- DEN_NSWS_04_98_125
-DEN_NSWS_01_98_110 --- DEN_NSWS_112_98_103
-DEN_NSWS_01_98_110 --- DEN_NSWS_23_99_121
-DEN_NSWS_01_98_110 --- DEN_NSWS_28_98_105
-DEN_NSWS_01_98_110 --- DEN_NSWS_29_99_118
-DEN_NSWS_01_98_110 --- DEN_NSWS_41_98_114
-DEN_NSWS_01_98_110 --- DEN_NSWS_50_98_119
-DEN_NSWS_01_98_110 --- DEN_NSWS_58_98_132
-DEN_NSWS_01_98_110 --- DEN_NSWS_60_98_131
-DEN_NSWS_01_98_110 --- DEN_NSWS_65_98_115
-DEN_NSWS_01_98_110 --- DEN_NSWS_01_98_110
-DEN_NSWS_01_98_66 --- DEN_NSWR_03_98_1
-DEN_NSWS_01_98_66 --- DEN_NSWR_03_98_1
-DEN_NSWS_01_98_66 --- DEN_NSWS_01_98_110
-DEN_NSWS_01_98_66 --- DEN_NSWS_01_98_96
-DEN_NSWS_01_98_66 --- DEN_NSWS_01_99_123
-DEN_NSWS_01_98_66 --- DEN_NSWS_01_98_66
-DEN_NSWS_01_98_96 --- DEN_NSWS_01_98_66
-DEN_NSWS_01_98_96 --- DEN_NSWS_01_98_97
-DEN_NSWS_01_98_96 --- DEN_NSWS_01_98_96
-DEN_NSWS_01_98_97 --- DEN_NSWS_01_98_96
-DEN_NSWS_01_98_97 --- DEN_NSWS_01_98_97
-DEN_NSWS_01_99_123 --- DEN_NSWS_01_98_66
-DEN_NSWS_01_99_123 --- DEN_NSWS_01_99_123
-DEN_NSWS_02_99_87 --- DEN_NSWS_02_99_87
-DEN_NSWS_03_99_11 --- DEN_NSWS_03_99_25
-DEN_NSWS_03_99_11 --- DEN_NSWS_26_99_19
-DEN_NSWS_03_99_11 --- DEN_NSWR_03_98_1
-DEN_NSWS_03_99_11 --- DEN_NSWR_03_98_1
-DEN_NSWS_03_99_11 --- DEN_NSWS_93_99_132
-DEN_NSWS_03_99_11 --- DEN_NSWS_03_99_11
-DEN_NSWS_03_99_25 --- DEN_NSWS_03_99_11
-DEN_NSWS_03_99_25 --- DEN_NSWS_03_99_25
-DEN_NSWS_04_98_125 --- DEN_NSWS_01_98_110
-DEN_NSWS_04_98_125 --- DEN_NSWS_16_98_126
-DEN_NSWS_04_98_125 --- DEN_NSWS_04_98_125
-DEN_NSWS_04_99_135 --- DEN_NSWS_04_99_15
-DEN_NSWS_04_99_135 --- DEN_NSWS_04_99_135
-DEN_NSWS_04_99_147 --- DEN_NSWS_04_99_15
-DEN_NSWS_04_99_147 --- DEN_NSWS_04_99_147
-DEN_NSWS_04_99_15 --- DEN_NSWS_04_99_135
-DEN_NSWS_04_99_15 --- DEN_NSWS_04_99_147
-DEN_NSWS_04_99_15 --- DEN_NSWS_08_99_35
-DEN_NSWS_04_99_15 --- DEN_NSWR_03_98_1
-DEN_NSWS_04_99_15 --- DEN_NSWR_03_98_1
-DEN_NSWS_04_99_15 --- DEN_NSWS_06_99_8
-DEN_NSWS_04_99_15 --- DEN_NSWS_04_99_15
-DEN_NSWS_06_99_43 --- DEN_NSWS_06_99_8
-DEN_NSWS_06_99_43 --- DEN_NSWS_06_99_43
-DEN_NSWS_06_99_8 --- DEN_NSWS_04_99_15
-DEN_NSWS_06_99_8 --- DEN_NSWS_06_99_43
-DEN_NSWS_06_99_8 --- DEN_NSWS_06_99_8
-DEN_NSWS_08_98_128 --- DEN_NSWS_10_98_127
-DEN_NSWS_08_98_128 --- DEN_NSWS_14_98_129
-DEN_NSWS_08_98_128 --- DEN_NSWS_08_98_128
-DEN_NSWS_08_99_35 --- DEN_NSWS_04_99_15
-DEN_NSWS_08_99_35 --- DEN_NSWS_08_99_35
-DEN_NSWS_09_99_42 --- DEN_NSWR_03_98_1
-DEN_NSWS_09_99_42 --- DEN_NSWR_03_98_1
-DEN_NSWS_09_99_42 --- DEN_NSWS_09_99_42
-DEN_NSWS_10_98_127 --- DEN_NSWS_08_98_128
-DEN_NSWS_10_98_127 --- DEN_NSWS_16_98_126
-DEN_NSWS_106_98_53 --- DEN_NSWS_90_98_54
-DEN_NSWS_106_98_53 --- DEN_NSWS_106_98_53
-DEN_NSWS_109_99_122 --- DEN_NSWR_03_98_1
-DEN_NSWS_109_99_122 --- DEN_NSWR_03_98_1
-DEN_NSWS_109_99_122 --- DEN_NSWS_109_99_122
-DEN_NSWS_111_97_11 --- DEN_NSWS_111_97_11
-DEN_NSWS_112_98_103 --- DEN_NSWS_01_98_110
-DEN_NSWS_112_98_103 --- DEN_NSWS_112_98_103
-DEN_NSWS_14_98_129 --- Switch
-DEN_NSWS_14_98_129 --- DEN_NSWS_08_98_128
-DEN_NSWS_14_98_129 --- Switch
-DEN_NSWS_14_98_129 --- DEN_NSWS_14_98_129
-DEN_NSWS_16_98_126 --- DEN_NSWS_04_98_125
-DEN_NSWS_16_98_126 --- DEN_NSWS_10_98_127
-DEN_NSWS_16_98_126 --- DEN_NSWS_16_98_126
-DEN_NSWS_16_99_12 --- DEN_NSWR_03_98_1
-DEN_NSWS_16_99_12 --- DEN_NSWR_03_98_1
-DEN_NSWS_16_99_12 --- DEN_NSWS_16_99_12
-DEN_NSWS_17_98_130 --- DEN_NSWS_18_98_65
-DEN_NSWS_17_98_130 --- DEN_NSWS_64_99_120
-DEN_NSWS_17_98_130 --- DEN_NSWS_17_98_130
-DEN_NSWS_18_98_65 --- DEN_NSWS_17_98_130
-DEN_NSWS_18_98_65 --- DEN_NSWS_19_99_98
-DEN_NSWS_18_98_65 --- DEN_NSWS_18_98_65
-DEN_NSWS_19_99_98 --- DEN_NSWR_03_98_1
-DEN_NSWS_19_99_98 --- DEN_NSWR_03_98_1
-DEN_NSWS_19_99_98 --- DEN_NSWS_18_98_65
-DEN_NSWS_19_99_98 --- DEN_NSWS_20_99_89
-DEN_NSWS_19_99_98 --- DEN_NSWS_21_98_68
-DEN_NSWS_19_99_98 --- DEN_NSWS_21_98_69
-DEN_NSWS_19_99_98 --- DEN_NSWS_22_98_67
-DEN_NSWS_19_99_98 --- DEN_NSWS_19_99_98
-DEN_NSWS_20_99_89 --- DEN_NSWS_19_99_98
-DEN_NSWS_20_99_89 --- DEN_NSWS_20_99_89
-DEN_NSWS_21_98_68 --- DEN_NSWS_19_99_98
-DEN_NSWS_21_98_68 --- DEN_NSWS_21_98_69
-DEN_NSWS_21_98_68 --- DEN_NSWS_22_98_67
-DEN_NSWS_21_98_68 --- DEN_NSWS_21_98_68
-DEN_NSWS_21_98_69 --- DEN_NSWS_19_99_98
-DEN_NSWS_21_98_69 --- DEN_NSWS_22_98_67
-DEN_NSWS_21_98_69 --- DEN_NSWS_21_98_69
-DEN_NSWS_22_98_67 --- DEN_NSWS_19_99_98
-DEN_NSWS_22_98_67 --- DEN_NSWS_21_98_68
-DEN_NSWS_22_98_67 --- DEN_NSWS_21_98_69
-DEN_NSWS_22_98_67 --- DEN_NSWS_22_98_67
-DEN_NSWS_23_99_121 --- DEN_NSWS_01_98_110
-DEN_NSWS_23_99_121 --- DEN_NSWS_23_99_17
-DEN_NSWS_23_99_121 --- DEN_NSWS_23_99_121
-DEN_NSWS_23_99_17 --- DEN_NSWS_23_99_121
-DEN_NSWS_23_99_17 --- DEN_NSWS_23_99_17
-DEN_NSWS_24_99_114 --- DEN_NSWS_24_99_114
-DEN_NSWS_24_99_115 --- DEN_NSWS_24_99_115
-DEN_NSWS_24_99_116 --- DEN_NSWS_24_99_116
-DEN_NSWS_24_99_117 --- DEN_NSWS_24_99_117
-DEN_NSWS_26_99_19 --- DEN_NSWS_03_99_11
-DEN_NSWS_26_99_19 --- DEN_NSWS_26_99_19
-DEN_NSWS_27_98_106 --- DEN_NSWS_27_98_108
-DEN_NSWS_27_98_106 --- DEN_NSWS_28_98_105
-DEN_NSWS_27_98_106 --- DEN_NSWS_27_98_106
-DEN_NSWS_27_98_107 --- DEN_NSWS_27_98_108
-DEN_NSWS_27_98_107 --- DEN_NSWS_27_98_107
-DEN_NSWS_27_98_108 --- DEN_NSWS_27_98_106
-DEN_NSWS_27_98_108 --- DEN_NSWS_27_98_107
-DEN_NSWS_27_98_108 --- DEN_NSWS_27_98_108
-DEN_NSWS_28_98_105 --- DEN_NSWS_01_98_110
-DEN_NSWS_28_98_105 --- DEN_NSWS_27_98_106
-DEN_NSWS_28_98_105 --- DEN_NSWS_28_98_105
-DEN_NSWS_29_99_118 --- DEN_NSWS_01_98_110
-DEN_NSWS_29_99_118 --- DEN_NSWS_29_99_118
-DEN_NSWS_29_99_44 --- DEN_NSWR_03_98_1
-DEN_NSWS_29_99_44 --- DEN_NSWR_03_98_1
-DEN_NSWS_29_99_44 --- DEN_NSWS_29_99_44
-DEN_NSWS_41_98_114 --- DEN_NSWS_01_98_110
-DEN_NSWS_41_98_114 --- DEN_NSWS_41_98_114
-DEN_NSWS_47_99_65 --- DEN_NSWR_03_98_1
-DEN_NSWS_47_99_65 --- DEN_NSWR_03_98_1
-DEN_NSWS_47_99_65 --- DEN_NSWS_47_99_65
-DEN_NSWS_49_98_117 --- DEN_NSWS_51_98_118
-DEN_NSWS_49_98_117 --- DEN_NSWS_49_98_117
-DEN_NSWS_50_98_119 --- DEN_NSWS_01_98_110
-DEN_NSWS_50_98_119 --- DEN_NSWS_51_98_118
-DEN_NSWS_50_98_119 --- DEN_NSWS_50_98_119
-DEN_NSWS_51_98_118 --- DEN_NSWS_50_98_119
-DEN_NSWS_51_98_118 --- DEN_NSWS_51_98_118
-DEN_NSWS_58_98_132 --- DEN_NSWS_01_98_110
-DEN_NSWS_58_98_132 --- DEN_NSWS_62_98_87
-DEN_NSWS_58_98_132 --- DEN_NSWS_58_98_132
-DEN_NSWS_58_99_86 --- DEN_NSWR_03_98_1
-DEN_NSWS_58_99_86 --- DEN_NSWR_03_98_1
-DEN_NSWS_58_99_86 --- DEN_NSWS_58_99_86
-DEN_NSWS_59_98_134 --- DEN_NSWS_62_98_87
-DEN_NSWS_59_98_134 --- DEN_NSWS_63_99_112
-DEN_NSWS_59_98_134 --- DEN_NSWS_59_98_134
-DEN_NSWS_59_99_94 --- DEN_NSWR_03_98_1
-DEN_NSWS_59_99_94 --- DEN_NSWR_03_98_1
-DEN_NSWS_59_99_94 --- DEN_NSWS_59_99_94
-DEN_NSWS_60_98_131 --- DEN_NSWS_01_98_110
-DEN_NSWS_60_98_131 --- DEN_NSWS_61_99_143
-DEN_NSWS_60_98_131 --- DEN_NSWS_60_98_131
-DEN_NSWS_61_99_143 --- DEN_NSWS_61_99_143
-DEN_NSWS_62_98_87 --- DEN_NSWS_58_98_132
-DEN_NSWS_62_98_87 --- DEN_NSWS_59_98_134
-DEN_NSWS_62_98_87 --- DEN_NSWS_62_98_87
-DEN_NSWS_62_99_90 --- DEN_NSWR_03_98_1
-DEN_NSWS_62_99_90 --- DEN_NSWR_03_98_1
-DEN_NSWS_62_99_90 --- DEN_NSWS_62_99_90
-DEN_NSWS_63_99_112 --- DEN_NSWS_59_98_134
-DEN_NSWS_63_99_112 --- DEN_NSWS_61_99_143
-DEN_NSWS_63_99_112 --- DEN_NSWS_63_99_112
-DEN_NSWS_64_99_120 --- DEN_NSWS_17_98_130
-DEN_NSWS_64_99_120 --- DEN_NSWS_64_99_120
-DEN_NSWS_65_98_115 --- DEN_NSWS_01_98_110
-DEN_NSWS_65_98_115 --- DEN_NSWS_65_98_115
-DEN_NSWS_80_99_141 --- DEN_NSWS_98_112
-DEN_NSWS_80_99_141 --- DEN_NSWS_80_99_141
-DEN_NSWS_81_98_113 --- DEN_NSWS_81_99_34
-DEN_NSWS_81_98_113 --- DEN_NSWS_81_98_113
-DEN_NSWS_81_99_34 --- DEN_NSWS_81_98_113
-DEN_NSWS_81_99_34 --- DEN_NSWS_98_112
-DEN_NSWS_81_99_34 --- DEN_NSWS_81_99_34
-DEN_NSWS_82_99_77 --- DEN_NSWS_83_99_46
-DEN_NSWS_82_99_77 --- DEN_NSWS_91_99_26
-DEN_NSWS_82_99_77 --- DEN_NSWS_82_99_77
-DEN_NSWS_83_98_51 --- DEN_NSWS_83_98_51
-DEN_NSWS_83_99_46 --- DEN_NSWS_82_99_77
-DEN_NSWS_83_99_46 --- DEN_NSWS_83_99_46
-DEN_NSWS_86_98_56 --- DEN_NSWS_86_98_56
-DEN_NSWS_87_98_58 --- DEN_NSWS_87_98_58
-DEN_NSWS_88_98_57 --- DEN_NSWS_89_98_55
-DEN_NSWS_88_98_57 --- DEN_NSWS_88_98_57
-DEN_NSWS_89_98_55 --- DEN_NSWS_88_98_57
-DEN_NSWS_89_98_55 --- DEN_NSWS_90_98_54
-DEN_NSWS_89_98_55 --- DEN_NSWS_89_98_55
-DEN_NSWS_90_98_54 --- DEN_NSWS_106_98_53
-DEN_NSWS_90_98_54 --- DEN_NSWS_89_98_55
-DEN_NSWS_90_98_54 --- DEN_NSWS_90_98_54
-DEN_NSWS_91_99_26 --- DEN_NSWS_82_99_77
-DEN_NSWS_91_99_26 --- DEN_NSWS_92_99_187
-DEN_NSWS_91_99_26 --- DEN_NSWS_93_99_132
-DEN_NSWS_91_99_26 --- DEN_NSWS_91_99_26
-DEN_NSWS_92_99_187 --- DEN_NSWS_91_99_26
-DEN_NSWS_92_99_187 --- DEN_NSWS_92_99_187
-DEN_NSWS_93_99_132 --- DEN_NSWS_03_99_11
-DEN_NSWS_93_99_132 --- DEN_NSWS_91_99_26
-DEN_NSWS_93_99_132 --- DEN_NSWS_93_99_132
-DEN_NSWS_98_112 --- DEN_NSWS_80_99_141
-DEN_NSWS_98_112 --- DEN_NSWR_03_98_1
-DEN_NSWS_98_112 --- DEN_NSWR_03_98_1
-DEN_NSWS_98_112 --- DEN_NSWS_81_99_34
-DEN_NSWS_98_112 --- DEN_NSWS_98_112
-INA_NSWR_03_97_1 --- INA_NSWR_03_99_20
-INA_NSWR_03_97_1 --- INA_NSWS_03_99_10
-INA_NSWR_03_97_1 --- INA_NSWS_123_97_100
-INA_NSWR_03_97_1 --- INA_NSWR_03_97_1
-INA_NSWR_03_99_20 --- INA_NSWS_05_99_22
-INA_NSWR_03_99_20 --- INA_NSWS_08_98_73
-INA_NSWR_03_99_20 --- INA_NSWS_118_99_108
-INA_NSWR_03_99_20 --- INA_NSWR_03_97_1
-INA_NSWR_03_99_20 --- INA_NSWS_75_99_29
-INA_NSWR_03_99_20 --- INA_NSWR_03_99_20
-INA_NSWS_03_99_10 --- INA_NSWR_03_97_1
-INA_NSWS_03_99_10 --- INA_NSWS_08_99_76
-INA_NSWS_03_99_10 --- INA_NSWS_03_99_10
-INA_NSWS_05_99_22 --- INA_NSWR_03_99_20
-INA_NSWS_05_99_22 --- INA_NSWS_05_99_22
-INA_NSWS_08_98_73 --- INA_NSWS_10_99_126
-INA_NSWS_08_98_73 --- INA_NSWS_131_99_68
-INA_NSWS_08_98_73 --- INA_NSWR_03_99_20
-INA_NSWS_08_98_73 --- INA_NSWS_08_98_73
-INA_NSWS_08_99_107 --- INA_NSWS_53_99_70
-INA_NSWS_08_99_107 --- INA_NSWS_56_99_13
-INA_NSWS_08_99_107 --- INA_NSWS_08_99_107
-INA_NSWS_08_99_76 --- INA_NSWS_08_99_76
-INA_NSWS_09_99_127 --- INA_NSWS_134_98_100
-INA_NSWS_09_99_127 --- INA_NSWS_09_99_127
-INA_NSWS_10_99_126 --- INA_NSWS_08_98_73
-INA_NSWS_10_99_126 --- INA_NSWS_09_99_127
-INA_NSWS_10_99_126 --- INA_NSWS_10_99_126
-INA_NSWS_11_99_150 --- INA_NSWS_11_99_153
-INA_NSWS_11_99_150 --- INA_NSWS_11_99_196
-INA_NSWS_11_99_150 --- INA_NSWS_14_99_235
-INA_NSWS_11_99_150 --- INA_NSWS_41_99_159
-INA_NSWS_11_99_150 --- INA_NSWS_11_99_150
-INA_NSWS_11_99_153 --- INA_NSWS_11_99_150
-INA_NSWS_11_99_153 --- INA_NSWS_11_99_153
-INA_NSWS_11_99_196 --- Switch
-INA_NSWS_11_99_196 --- INA_NSWS_11_99_150
-INA_NSWS_11_99_196 --- INA_NSWS_13_99_145
-INA_NSWS_11_99_196 --- INA_NSWS_13_99_95
-INA_NSWS_11_99_196 --- INA_NSWS_20_99_109
-INA_NSWS_11_99_196 --- Switch
-INA_NSWS_11_99_196 --- INA_NSWS_11_99_196
-INA_NSWS_118_99_108 --- INA_NSWR_03_99_20
-INA_NSWS_118_99_108 --- INA_NSWS_118_99_82
-INA_NSWS_118_99_108 --- INA_NSWS_118_99_108
-INA_NSWS_118_99_82 --- INA_NSWS_118_99_108
-INA_NSWS_118_99_82 --- INA_NSWS_118_99_82
-INA_NSWS_123_97_100 --- INA_NSWR_03_97_1
-INA_NSWS_123_97_100 --- INA_NSWS_123_97_100
-INA_NSWS_13_99_145 --- INA_NSWS_11_99_196
-INA_NSWS_13_99_145 --- INA_NSWS_13_99_145
-INA_NSWS_13_99_95 --- INA_NSWS_11_99_196
-INA_NSWS_13_99_95 --- INA_NSWS_13_99_95
-INA_NSWS_131_99_68 --- INA_NSWS_08_98_73
-INA_NSWS_131_99_68 --- INA_NSWS_131_99_68
-INA_NSWS_134_98_100 --- INA_NSWS_09_99_127
-INA_NSWS_134_98_100 --- INA_NSWS_134_98_100
-INA_NSWS_14_99_152 --- INA_NSWS_14_99_235
-INA_NSWS_14_99_152 --- INA_NSWS_14_99_152
-INA_NSWS_14_99_205 --- INA_NSWS_15_99_206
-INA_NSWS_14_99_205 --- INA_NSWS_14_99_205
-INA_NSWS_14_99_207 --- INA_NSWS_15_99_206
-INA_NSWS_14_99_207 --- INA_NSWS_14_99_207
-INA_NSWS_14_99_235 --- INA_NSWS_11_99_150
-INA_NSWS_14_99_235 --- INA_NSWS_15_99_236
-INA_NSWS_14_99_235 --- INA_NSWS_14_99_235
-INA_NSWS_15_99_206 --- INA_NSWS_14_99_205
-INA_NSWS_15_99_206 --- INA_NSWS_14_99_207
-INA_NSWS_15_99_206 --- INA_NSWS_15_99_206
-INA_NSWS_15_99_234 --- INA_NSWS_15_99_236
-INA_NSWS_15_99_234 --- INA_NSWS_16_99_237
-INA_NSWS_15_99_234 --- INA_NSWS_15_99_234
-INA_NSWS_15_99_236 --- INA_NSWS_14_99_235
-INA_NSWS_15_99_236 --- INA_NSWS_15_99_234
-INA_NSWS_15_99_236 --- INA_NSWS_15_99_236
-INA_NSWS_16_99_237 --- INA_NSWS_15_99_234
-INA_NSWS_16_99_237 --- INA_NSWS_16_99_237
-INA_NSWS_20_99_109 --- INA_NSWS_11_99_196
-INA_NSWS_20_99_109 --- INA_NSWS_20_99_109
-INA_NSWS_21_98_153 --- INA_NSWS_60_99_243
-INA_NSWS_21_98_153 --- INA_NSWS_21_98_153
-INA_NSWS_35_99_139 --- INA_NSWS_35_99_61
-INA_NSWS_35_99_139 --- INA_NSWS_36_99_186
-INA_NSWS_35_99_139 --- INA_NSWS_38_99_60
-INA_NSWS_35_99_139 --- INA_NSWS_72_99_137
-INA_NSWS_35_99_139 --- INA_NSWS_35_99_139
-INA_NSWS_35_99_61 --- INA_NSWS_35_99_139
-INA_NSWS_35_99_61 --- INA_NSWS_43_99_170
-INA_NSWS_35_99_61 --- INA_NSWS_35_99_61
-INA_NSWS_36_99_186 --- INA_NSWS_35_99_139
-INA_NSWS_36_99_186 --- INA_NSWS_36_99_186
-INA_NSWS_38_99_60 --- INA_NSWS_35_99_139
-INA_NSWS_38_99_60 --- INA_NSWS_39_99_72
-INA_NSWS_38_99_60 --- INA_NSWS_38_99_60
-INA_NSWS_39_99_185 --- INA_NSWS_39_99_72
-INA_NSWS_39_99_185 --- INA_NSWS_39_99_185
-INA_NSWS_39_99_72 --- INA_NSWS_38_99_60
-INA_NSWS_39_99_72 --- INA_NSWS_39_99_185
-INA_NSWS_39_99_72 --- INA_NSWS_39_99_97
-INA_NSWS_39_99_72 --- INA_NSWS_39_99_72
-INA_NSWS_39_99_97 --- INA_NSWS_39_99_72
-INA_NSWS_39_99_97 --- INA_NSWS_39_99_97
-INA_NSWS_41_99_119 --- INA_NSWS_51_99_160
-INA_NSWS_41_99_119 --- INA_NSWS_41_99_119
-INA_NSWS_41_99_159 --- INA_NSWS_11_99_150
-INA_NSWS_41_99_159 --- INA_NSWS_51_99_160
-INA_NSWS_41_99_159 --- INA_NSWS_41_99_159
-INA_NSWS_43_99_170 --- INA_NSWS_35_99_61
-INA_NSWS_43_99_170 --- INA_NSWS_43_99_170
-INA_NSWS_44_98_91 --- INA_NSWS_44_98_92
-INA_NSWS_44_98_91 --- INA_NSWS_44_98_91
-INA_NSWS_44_98_92 --- INA_NSWS_44_98_91
-INA_NSWS_44_98_92 --- INA_NSWS_44_98_92
-INA_NSWS_46_98_70 --- INA_NSWS_10_99_126
-INA_NSWS_46_98_70 --- INA_NSWS_46_98_70
-INA_NSWS_47_99_47 --- INA_NSWS_47_99_47
-INA_NSWS_48_99_52 --- INA_NSWS_48_99_52
-INA_NSWS_51_99_160 --- INA_NSWS_41_99_119
-INA_NSWS_51_99_160 --- INA_NSWS_41_99_159
-INA_NSWS_51_99_160 --- INA_NSWS_51_99_160
-INA_NSWS_51_99_193 --- INA_NSWS_51_99_32
-INA_NSWS_51_99_193 --- INA_NSWS_52_99_194
-INA_NSWS_51_99_193 --- INA_NSWS_51_99_193
-INA_NSWS_51_99_32 --- INA_NSWS_51_99_193
-INA_NSWS_51_99_32 --- INA_NSWS_51_99_32
-INA_NSWS_52_99_194 --- INA_NSWS_52_99_194
-INA_NSWS_53_99_70 --- INA_NSWS_08_99_107
-INA_NSWS_53_99_70 --- INA_NSWS_53_99_70
-INA_NSWS_56_99_13 --- INA_NSWS_08_99_107
-INA_NSWS_56_99_13 --- INA_NSWS_56_99_13
-INA_NSWS_60_99_243 --- INA_NSWS_21_98_153
-INA_NSWS_60_99_243 --- INA_NSWS_60_99_243
-INA_NSWS_63_99_197 --- INA_NSWS_63_99_197
-INA_NSWS_64_99_130 --- INA_NSWS_65_99_131
-INA_NSWS_64_99_130 --- INA_NSWS_75_99_29
-INA_NSWS_64_99_130 --- INA_NSWS_64_99_130
-INA_NSWS_65_99_131 --- INA_NSWS_64_99_130
-INA_NSWS_65_99_131 --- INA_NSWS_65_99_131
-INA_NSWS_66_99_231 --- INA_NSWS_66_99_231
-INA_NSWS_67_99_240 --- INA_NSWS_67_99_240
-INA_NSWS_72_99_137 --- INA_NSWS_35_99_139
-INA_NSWS_72_99_137 --- INA_NSWS_76_99_138
-INA_NSWS_72_99_137 --- INA_NSWS_72_99_137
-INA_NSWS_73_99_156 --- INA_NSWS_74_99_155
-INA_NSWS_73_99_156 --- INA_NSWS_75_99_29
-INA_NSWS_73_99_156 --- INA_NSWS_73_99_156
-INA_NSWS_74_99_155 --- INA_NSWS_73_99_156
-INA_NSWS_74_99_155 --- INA_NSWS_74_99_155
-INA_NSWS_75_98_94 --- INA_NSWS_76_99_138
-INA_NSWS_75_98_94 --- INA_NSWS_75_98_94
-INA_NSWS_75_99_29 --- INA_NSWS_64_99_130
-INA_NSWS_75_99_29 --- INA_NSWS_75_99_29
-INA_NSWS_76_99_138 --- INA_NSWS_72_99_137
-INA_NSWS_76_99_138 --- INA_NSWS_75_98_94
-INA_NSWS_76_99_138 --- INA_NSWS_76_99_138
-INA_NSWS_76_99_59 --- INA_NSWS_76_99_59
-MSK_NSWR_01_2_11 --- MSK_NSWR_01_2_12
-MSK_NSWR_01_2_11 --- MSK_NSWS_03_2_10
-MSK_NSWR_01_2_11 --- MSK_NSWR_01_2_11
-MSK_NSWS_01_2_41 --- MSK_NSWS_02_2_40
-MSK_NSWS_01_2_41 --- MSK_NSWS_03_2_10
-MSK_NSWS_01_2_41 --- MSK_NSWS_01_2_41
-MSK_NSWS_02_2_40 --- MSK_NSWS_02_2_40
-MSK_NSWS_03_2_10 --- MSK_NSWS_01_2_41
-MSK_NSWS_03_2_10 --- MSK_NSWS_03_2_10
-NER_NSWR_01_96_1 --- DEN_NSWR_03_98_1
-NER_NSWR_01_96_1 --- DEN_NSWR_03_98_1
-NER_NSWR_01_96_1 --- NER_NSWS_01_99_6
-NER_NSWR_01_96_1 --- NER_NSWS_01_99_87
-NER_NSWR_01_96_1 --- NRG_NSWR_01_99_38
-NER_NSWR_01_96_1 --- NER_NSWR_01_96_1
-NER_NSWR_01_99_1 --- NER_NSWR_01_96_1
-NER_NSWR_01_99_1 --- NER_NSWR_01_96_1
-NER_NSWR_01_99_1 --- NER_NSWR_01_99_1
-NER_NSWR_01_99_3 --- NER_NSWR_01_99_3
-NER_NSWS_01_99_4 --- NER_NSWS_01_99_4
-NER_NSWS_01_99_58 --- NER_NSWS_01_99_58
-NER_NSWS_01_99_6 --- NER_NSWR_01_96_1
-NER_NSWS_01_99_6 --- NER_NSWR_01_96_1
-NER_NSWS_01_99_6 --- NER_NSWS_01_99_6
-NER_NSWS_01_99_69 --- NER_NSWS_01_99_69
-NER_NSWS_01_99_73 --- NER_NSWS_01_99_73
-NER_NSWS_01_99_74 --- NER_NSWS_01_99_74
-NER_NSWS_01_99_87 --- NER_NSWR_01_96_1
-NER_NSWS_01_99_87 --- NER_NSWR_01_96_1
-NER_NSWS_01_99_87 --- NER_NSWS_01_99_87
-NER_NSWS_03_99_21 --- NER_NSWS_03_99_21
-NER_NSWS_03_99_5 --- NER_NSWS_03_99_5
-NER_NSWS_04_99_28 --- NER_NSWS_04_99_28
-NER_NSWS_04_99_40 --- NRG_NSWR_01_99_38
-NER_NSWS_04_99_40 --- NER_NSWS_04_99_40
-NER_NSWS_04_99_51 --- NRG_NSWR_01_99_38
-NER_NSWS_04_99_51 --- NER_NSWS_04_99_51
-NER_NSWS_04_99_9 --- NER_NSWS_04_99_9
-NER_NSWS_06_99_27 --- NER_NSWS_06_99_67
-NER_NSWS_06_99_27 --- NER_NSWS_06_99_27
-NER_NSWS_06_99_67 --- NER_NSWS_06_99_27
-NER_NSWS_06_99_67 --- NER_NSWS_06_99_67
-NER_NSWS_07_99_36 --- NER_NSWS_07_99_36
-NER_NSWS_07_99_37 --- NER_NSWS_07_99_37
-NER_NSWS_08_99_39 --- NRG_NSWR_01_99_38
-NER_NSWS_08_99_39 --- NER_NSWS_08_99_39
-NER_NSWS_08_99_53 --- NRG_NSWR_01_99_38
-NER_NSWS_08_99_53 --- NER_NSWS_08_99_53
-NER_NSWS_09_99_54 --- NRG_NSWR_01_99_38
-NER_NSWS_09_99_54 --- NER_NSWS_09_99_54
-NER_NSWS_09_99_75 --- NER_NSWS_09_99_75
-NER_NSWS_11_97_10 --- NER_NSWS_12_97_5
-NER_NSWS_11_97_10 --- NER_NSWS_13_97_4
-NER_NSWS_11_97_10 --- NRG_NSWS_01_99_41
-NER_NSWS_11_97_10 --- NER_NSWS_11_97_10
-NER_NSWS_12_97_5 --- NER_NSWS_11_97_10
-NER_NSWS_12_97_5 --- NER_NSWS_14_97_6
-NER_NSWS_12_97_5 --- NER_NSWS_12_97_5
-NER_NSWS_13_97_4 --- NER_NSWS_11_97_10
-NER_NSWS_13_97_4 --- NER_NSWS_13_97_4
-NER_NSWS_14_97_6 --- NER_NSWS_12_97_5
-NER_NSWS_14_97_6 --- NER_NSWS_15_97_9
-NER_NSWS_14_97_6 --- NER_NSWS_14_97_6
-NER_NSWS_15_97_9 --- NER_NSWS_14_97_6
-NER_NSWS_15_97_9 --- NER_NSWS_16_97_7
-NER_NSWS_15_97_9 --- NER_NSWS_15_97_9
-NER_NSWS_16_97_7 --- NER_NSWS_15_97_9
-NER_NSWS_16_97_7 --- NER_NSWS_17_97_3
-NER_NSWS_16_97_7 --- NER_NSWS_16_97_7
-NER_NSWS_17_97_3 --- NER_NSWS_16_97_7
-NER_NSWS_17_97_3 --- NER_NSWS_17_97_3
-NRG_NSWR_01_99_38 --- NER_NSWS_04_99_40
-NRG_NSWR_01_99_38 --- NER_NSWS_04_99_51
-NRG_NSWR_01_99_38 --- NER_NSWS_08_99_39
-NRG_NSWR_01_99_38 --- NER_NSWS_08_99_53
-NRG_NSWR_01_99_38 --- NER_NSWS_09_99_54
-NRG_NSWR_01_99_38 --- NRG_NSWS_01_99_41
-NRG_NSWR_01_99_38 --- NER_NSWR_01_96_1
-NRG_NSWR_01_99_38 --- NER_NSWR_01_96_1
-NRG_NSWR_01_99_38 --- NRG_NSWR_01_99_38
-NRG_NSWS_01_99_41 --- NER_NSWS_11_97_10
-NRG_NSWS_01_99_41 --- NRG_NSWR_01_99_38
-NRG_NSWS_01_99_41 --- NRG_NSWS_01_99_41
-NSK_NSWR_01_99_1 --- NSK_NSWS_01_99_5
-NSK_NSWR_01_99_1 --- NSK_NSWS_01_99_11
-NSK_NSWR_01_99_1 --- NSK_NSWS_01_99_5
-NSK_NSWR_01_99_1 --- NSK_NSWS_01_99_7
-NSK_NSWR_01_99_1 --- NSK_NSWR_01_99_1
-NSK_NSWS_01_99_11 --- Switch
-NSK_NSWS_01_99_11 --- NSK_NSWR_01_99_1
-NSK_NSWS_01_99_11 --- Switch
-NSK_NSWS_01_99_11 --- NSK_NSWS_01_99_11
-NSK_NSWS_01_99_5 --- NSK_NSWR_01_99_1
-NSK_NSWS_01_99_5 --- NSK_NSWS_01_99_5
-NSK_NSWS_01_99_7 --- NSK_NSWR_01_99_1
-NSK_NSWS_01_99_7 --- NSK_NSWS_01_99_7
-SRB_NSWS_01_99_57 --- SRB_NSWS_02_99_56
-SRB_NSWS_01_99_57 --- SRB_NSWS_01_99_57
-SRB_NSWS_02_99_56 --- SRB_NSWS_01_99_57
-SRB_NSWS_02_99_56 --- SRB_NSWS_02_99_56
+INA_NSWS_11_99_196 -- "(Gig 1/0/47) <-> (I   WS-C2960L)" --- Switch
+INA_NSWS_36_99_186 -- "(GigabitEthernet0/2) <-> (GigabitEthernet0/2)" --- ums_gw_1
+NER_NSWR_01_96_1 -- "(TwentyFiveGigE1/0/23) <-> (TwentyFiveGigE1/0/23)" --- DEN_NSWR_03_98_1
+NER_NSWR_01_96_1 -- "(TwentyFiveGigE1/0/2) <-> (TenGigabitEthernet1/1/4)" --- NRG_NSWR_01_99_38
+NER_NSWS_11_97_10 -- "(GigabitEthernet0/7) <-> (GigabitEthernet1/0/22)" --- NRG_NSWS_01_99_41
+NRG_NSWR_01_99_38 -- "(GigabitEthernet1/0/2) <-> (GigabitEthernet1/0/28)" --- NER_NSWS_04_99_40
+NRG_NSWR_01_99_38 -- "(GigabitEthernet1/0/6) <-> (GigabitEthernet0/11)" --- NER_NSWS_04_99_51
+NRG_NSWR_01_99_38 -- "(GigabitEthernet1/0/1) <-> (GigabitEthernet1/0/28)" --- NER_NSWS_08_99_39
+NRG_NSWR_01_99_38 -- "(GigabitEthernet1/0/5) <-> (GigabitEthernet1/0/28)" --- NER_NSWS_08_99_53
+NRG_NSWR_01_99_38 -- "(GigabitEthernet1/0/4) <-> (GigabitEthernet1/0/25)" --- NER_NSWS_09_99_54
+NSK_NSWS_01_99_11 -- "(Gig 1/0/6) <-> (I   WS-C3560C)" --- Switch
+10_20_99_151 -- "(gi2      2) <-> (I     cisco)" --- DEN_NSWS_106_98_53
+10_20_99_151 -- "(gi5      2) <-> (I     cisco)" --- DEN_NSWS_111_97_11
+10_20_99_151 -- "(gi3      2) <-> (I     cisco)" --- DEN_NSWS_86_98_56
+10_20_99_151 -- "(gi4      2) <-> (I     cisco)" --- DEN_NSWS_87_98_58
+10_20_99_151 -- "(gi1      2) <-> (I     cisco)" --- DEN_NSWS_88_98_57
 
-classDef core   stroke-width:2px,stroke:#1f77b4,fill:#e6f1fb,color:#111;
-classDef dist   stroke-width:2px,stroke:#2ca02c,fill:#eaf7ea,color:#111;
-classDef access stroke-width:1.5px,stroke:#7f7f7f,fill:#f6f6f6,color:#111;
-classDef wan    stroke-width:2px,stroke:#9467bd,fill:#f2e9fb,color:#111;
-classDef dmz    stroke-width:2px,stroke:#d62728,fill:#fdeaea,color:#111;
-classDef mgmt   stroke-width:1.5px,stroke:#bcbd22,fill:#fbfbe6,color:#111;
-classDef wifi  stroke-width:1.5px,stroke:#1f77b4,fill:#eef7ff,color:#111;
+classDef core   stroke-width:2px,stroke:#1f77b4,fill:#e6f1fb,color:#111,font-size:40px;
+classDef dist   stroke-width:2px,stroke:#2ca02c,fill:#eaf7ea,color:#111,font-size:40px;
+classDef access stroke-width:1.5px,stroke:#7f7f7f,fill:#f6f6f6,color:#111,font-size:40px;
+classDef wan    stroke-width:2px,stroke:#9467bd,fill:#f2e9fb,color:#111,font-size:40px;
+classDef dmz    stroke-width:2px,stroke:#d62728,fill:#fdeaea,color:#111,font-size:40px;
+classDef mgmt   stroke-width:1.5px,stroke:#bcbd22,fill:#fbfbe6,color:#111,font-size:40px;
+classDef wifi  stroke-width:1.5px,stroke:#1f77b4,fill:#eef7ff,color:#111,font-size:40px;

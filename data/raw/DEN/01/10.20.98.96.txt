@@ -13,7 +13,7 @@ Compiled Wed 12-Jul-17 15:29 by prod_rel_team
 ROM: Bootstrap program is C2960 boot loader
 BOOTLDR: C2960 Boot Loader (C2960-HBOOT-M) Version 15.0(2r)EZ1, RELEASE SOFTWARE (fc2)
 
-DEN-NSWS-01-98-96 uptime is 36 weeks, 2 days, 7 hours, 45 minutes
+DEN-NSWS-01-98-96 uptime is 38 weeks, 4 hours, 14 minutes
 System returned to ROM by power-on
 System restarted at 08:48:51 YAKT Mon Feb 3 2025
 System image file is "flash:/c2960-lanbasek9-mz.152-2.E7/c2960-lanbasek9-mz.152-2.E7.bin"
@@ -82,7 +82,7 @@ Entry address(es):
   IP address: 10.20.98.66
 Platform: cisco WS-C2960S-24TS-L,  Capabilities: Switch IGMP 
 Interface: GigabitEthernet0/1,  Port ID (outgoing port): GigabitEthernet1/0/26
-Holdtime : 159 sec
+Holdtime : 132 sec
 
 Version :
 Cisco IOS Software, C2960S Software (C2960S-UNIVERSALK9-M), Version 15.0(2)SE10, RELEASE SOFTWARE (fc2)
@@ -104,7 +104,7 @@ Entry address(es):
   IP address: 10.20.98.97
 Platform: cisco WS-C2960X-24PS-L,  Capabilities: Switch IGMP 
 Interface: GigabitEthernet0/2,  Port ID (outgoing port): GigabitEthernet1/0/25
-Holdtime : 133 sec
+Holdtime : 134 sec
 
 Version :
 Cisco IOS Software, C2960X Software (C2960X-UNIVERSALK9-M), Version 15.0(2a)EX5, RELEASE SOFTWARE (fc3)
@@ -126,7 +126,7 @@ Entry address(es):
   IP address: 10.13.1.119
 Platform: X1S/X1SP,  Capabilities: Host Phone 
 Interface: FastEthernet0/24,  Port ID (outgoing port): WAN PORT
-Holdtime : 148 sec
+Holdtime : 169 sec
 
 Version :
 2.4.12.2
@@ -144,9 +144,9 @@ Capability Codes: R - Router, T - Trans Bridge, B - Source Route Bridge
 
 Device ID        Local Intrfce     Holdtme    Capability  Platform  Port ID
 DEN-NSWS-01-98-66.kolmar.ru
-                 Gig 0/1           159              S I   WS-C2960S Gig 1/0/26
+                 Gig 0/1           132              S I   WS-C2960S Gig 1/0/26
 DEN-NSWS-01-98-97.kolmar.ru
                  Gig 0/2           133              S I   WS-C2960X Gig 1/0/25
-X1S/X1SP         Fas 0/24          148              H P   X1S/X1SP  WAN PORT
+X1S/X1SP         Fas 0/24          169              H P   X1S/X1SP  WAN PORT
 
 Total cdp entries displayed : 3

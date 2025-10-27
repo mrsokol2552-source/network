@@ -12,7 +12,7 @@ Capabilities: Other
 System Name: 
 System description: 
 Port description: 
-Time To Live: 98
+Time To Live: 119
 
 
 802.3 EEE:
@@ -52,18 +52,18 @@ $ show interfaces status
                                              Flow Link           Uptime       Back   Mdix                            
 Port     Type         Duplex  Speed Neg      ctrl State         (d,h:m:s)   Pressure Mode    Port Mode (VLAN)        
 -------- ------------ ------  ----- -------- ---- ----------- ------------- -------- ------- ------------------------
-gi1/0/1  1G-Copper    Full    100   Enabled  Off  Up          154,07:39:19  Disabled On      Access (730)            
-gi1/0/2  1G-Copper    Full    100   Enabled  Off  Up          154,07:39:22  Disabled On      Access (730)            
-gi1/0/3  1G-Copper    Full    100   Enabled  Off  Up          12,04:45:35   Disabled On      Access (730)            
-gi1/0/4  1G-Copper    Full    100   Enabled  Off  Up          154,07:38:02  Disabled Off     Access (730)            
-gi1/0/5  1G-Copper    Full    100   Enabled  Off  Up          14,08:18:41   Disabled On      Access (730)            
+gi1/0/1  1G-Copper    Full    100   Enabled  Off  Up          166,04:09:02  Disabled On      Access (730)            
+gi1/0/2  1G-Copper    Full    100   Enabled  Off  Up          166,04:09:05  Disabled On      Access (730)            
+gi1/0/3  1G-Copper    Full    100   Enabled  Off  Up          24,01:15:18   Disabled On      Access (730)            
+gi1/0/4  1G-Copper    Full    100   Enabled  Off  Up          166,04:07:45  Disabled Off     Access (730)            
+gi1/0/5  1G-Copper    Full    100   Enabled  Off  Up          26,04:48:24   Disabled On      Access (730)            
 gi1/0/6  1G-Copper      --      --     --     --  Down (nc)         --         --     --     Access (730)            
-gi1/0/7  1G-Copper    Full    100   Enabled  Off  Up          154,07:35:07  Disabled On      Access (730)            
+gi1/0/7  1G-Copper    Full    100   Enabled  Off  Up          166,04:04:50  Disabled On      Access (730)            
 gi1/0/8  1G-Copper      --      --     --     --  Down (nc)         --         --     --     Access (730)            
-gi1/0/9  1G-Copper    Full    100   Enabled  Off  Up          154,07:45:06  Disabled Off     Access (730)            
-gi1/0/10 1G-Copper    Full    100   Enabled  Off  Up          154,07:45:06  Disabled On      Access (730)            
-gi1/0/11 1G-Copper    Full    100   Enabled  Off  Up          154,07:45:05  Disabled Off     Access (730)            
-gi1/0/12 1G-Copper    Full    1000  Enabled  Off  Up          154,07:45:51  Disabled On      Access (730)            
+gi1/0/9  1G-Copper    Full    100   Enabled  Off  Up          166,04:14:49  Disabled Off     Access (730)            
+gi1/0/10 1G-Copper    Full    100   Enabled  Off  Up          166,04:14:49  Disabled On      Access (730)            
+gi1/0/11 1G-Copper    Full    100   Enabled  Off  Up          166,04:14:48  Disabled Off     Access (730)            
+gi1/0/12 1G-Copper    Full    1000  Enabled  Off  Up          166,04:15:34  Disabled On      Access (730)            
 gi1/0/13 1G-Copper      --      --     --     --  Down (nc)         --         --     --     Access (730)            
 gi1/0/14 1G-Copper      --      --     --     --  Down (nc)         --         --     --     Access (730)            
 gi1/0/15 1G-Copper      --      --     --     --  Down (nc)         --         --     --     Access (730)            
@@ -75,7 +75,7 @@ gi1/0/20 1G-Copper      --      --     --     --  Down (nc)         --         -
 gi1/0/21 1G-Copper      --      --     --     --  Down (nc)         --         --     --     Access (730)            
 gi1/0/22 1G-Copper      --      --     --     --  Down (nc)         --         --     --     Access (730)            
 gi1/0/23 1G-Copper      --      --     --     --  Down (nc)         --         --     --     Access (730)            
-gi1/0/24 1G-Copper    Full    1000  Enabled  Off  Up          79,02:50:30   Disabled Off     General                 
+gi1/0/24 1G-Copper    Full    1000  Enabled  Off  Up          90,23:20:14   Disabled Off     General                 
 te1/0/1  10G-Fiber      --      --     --     --  Down (nc)         --         --     --     Access (1)              
 te1/0/2  10G-Fiber      --      --     --     --  Down (nc)         --         --     --     Access (1)              
 te1/0/3  10G-Fiber      --      --     --     --  Down (nc)         --         --     --     Access (1)              
@@ -141,6 +141,9 @@ adm (admin.shutdown): The interface was suspended by administrator.
 
 $ show interfaces
 
+      0 excessive collisions, 0 late collisions
+      0 pause frames transmitted
+      0 symbol errors, 0 carrier, 0 SQE test error
 ------------------ show interfaces Po22 ------------------
 Po22 is down (not connected)
   Interface index is 1021

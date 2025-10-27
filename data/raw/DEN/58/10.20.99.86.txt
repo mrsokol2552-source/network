@@ -13,7 +13,7 @@ Compiled Mon 13-Sep-21 09:18 by mcpre
 ROM: Bootstrap program is c1000 boot loader
 BOOTLDR: C1000 Boot Loader (C1000-HBOOT-M) Version 15.2(7r)E3, RELEASE SOFTWARE (fc4)
 
-DEN-NSWS-58-99-86 uptime is 2 weeks, 6 hours, 36 minutes
+DEN-NSWS-58-99-86 uptime is 3 weeks, 5 days, 3 hours, 4 minutes
 System returned to ROM by power-on
 System image file is "flash:/c1000-universalk9-mz.152-7.E5/c1000-universalk9-mz.152-7.E5.bin"
 Last reload reason: power-on
@@ -79,7 +79,7 @@ System Name: DEN-HOTEL-16
 System Description: 
 UAP-HD-IW, 6.7.17.15512
 
-Time remaining: 97 seconds
+Time remaining: 116 seconds
 System Capabilities: B,W,R,S
 Enabled Capabilities: B,W,R
 Management Addresses:
@@ -114,7 +114,7 @@ System Name: DEN-HOTEL-17
 System Description: 
 UAP-HD-IW, 6.7.17.15512
 
-Time remaining: 105 seconds
+Time remaining: 98 seconds
 System Capabilities: B,W,R,S
 Enabled Capabilities: B,W,R
 Management Addresses:
@@ -173,7 +173,7 @@ System Name: DEN-HOTEL-12
 System Description: 
 UAP-HD-IW, 6.7.17.15512
 
-Time remaining: 97 seconds
+Time remaining: 101 seconds
 System Capabilities: B,W,R,S
 Enabled Capabilities: B,W,R
 Management Addresses:
@@ -208,7 +208,7 @@ System Name: DEN-HOTEL-11
 System Description: 
 UAP-HD-IW, 6.7.17.15512
 
-Time remaining: 116 seconds
+Time remaining: 108 seconds
 System Capabilities: B,W,R,S
 Enabled Capabilities: B,W,R
 Management Addresses:
@@ -243,7 +243,7 @@ System Name: DEN-HOTEL-18
 System Description: 
 UAP-HD-IW, 6.7.17.15512
 
-Time remaining: 101 seconds
+Time remaining: 90 seconds
 System Capabilities: B,W,R,S
 Enabled Capabilities: B,W,R
 Management Addresses:
@@ -278,7 +278,7 @@ System Name: DEN-HOTEL-13
 System Description: 
 UAP-HD-IW, 6.7.17.15512
 
-Time remaining: 95 seconds
+Time remaining: 99 seconds
 System Capabilities: B,W,R,S
 Enabled Capabilities: B,W,R
 Management Addresses:
@@ -313,7 +313,7 @@ System Name: DEN-HOTEL-15
 System Description: 
 UAP-HD-IW, 6.7.17.15512
 
-Time remaining: 114 seconds
+Time remaining: 102 seconds
 System Capabilities: B,W,R,S
 Enabled Capabilities: B,W,R
 Management Addresses:
@@ -350,7 +350,7 @@ Entry address(es):
   IP address: 10.20.98.1
 Platform: cisco C9300X-24Y,  Capabilities: Router Switch IGMP 
 Interface: GigabitEthernet1/0/18,  Port ID (outgoing port): TwentyFiveGigE1/0/12
-Holdtime : 151 sec
+Holdtime : 159 sec
 
 Version :
 Cisco IOS Software [Bengaluru], Catalyst L3 Switch Software (CAT9K_IOSXE), Version 17.6.1, RELEASE SOFTWARE (fc6)
@@ -375,6 +375,6 @@ Capability Codes: R - Router, T - Trans Bridge, B - Source Route Bridge
                   D - Remote, C - CVTA, M - Two-port Mac Relay 
 
 Device ID        Local Intrfce     Holdtme    Capability  Platform  Port ID
-DEN-NSWR-03-98-1 Gig 1/0/18        151             R S I  C9300X-24 Twe 1/0/12
+DEN-NSWR-03-98-1 Gig 1/0/18        159             R S I  C9300X-24 Twe 1/0/12
 
 Total cdp entries displayed : 1

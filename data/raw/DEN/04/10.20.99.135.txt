@@ -6,19 +6,36 @@ $ terminal length 0
 
 $ show version
 Cisco Internetwork Operating System Software 
-IOS (tm) C2950 Software (C2950-I6Q4L2-M), Version 12.1(19)EA1c, RELEASE SOFTWARE (fc2)
-Copyright (c) 1986-2004 by cisco Systems, Inc.
-Compiled Mon 02-Feb-04 23:29 by yenanh
-Image text-base: 0x80010000, data-base: 0x8058A000
+IOS (tm) C2950 Software (C2950-I6K2L2Q4-M), Version 12.1(22)EA13, RELEASE SOFTWARE (fc2)
+Technical Support: http://www.cisco.com/techsupport
+Copyright (c) 1986-2009 by cisco Systems, Inc.
+Compiled Fri 27-Feb-09 22:20 by amvarma
+Image text-base: 0x80010000, data-base: 0x80680000
 
 ROM: Bootstrap program is C2950 boot loader
 
-DEN-NSWS-04-99-135 uptime is 13 weeks, 2 days, 9 minutes
+DEN-NSWS-04-99-135 uptime is 2 days, 23 hours, 12 minutes
 System returned to ROM by power-on
-System restarted at 16:23:13 YAKT Mon Jul 14 2025
-System image file is "flash:/c2950-i6q4l2-mz.121-19.EA1c.bin"
+System restarted at 13:51:20 YAKT Fri Oct 24 2025
+System image file is "flash:c2950-i6k2l2q4-mz.121-22.EA13.bin"
 
-cisco WS-C2950T-24 (RC32300) processor (revision P0) with 20808K bytes of memory.
+
+This product contains cryptographic features and is subject to United
+States and local country laws governing import, export, transfer and
+use. Delivery of Cisco cryptographic products does not imply
+third-party authority to import, export, distribute or use encryption.
+Importers, exporters, distributors and users are responsible for
+compliance with U.S. and local country laws. By using this product you
+agree to comply with applicable laws and regulations. If you are unable
+to comply with U.S. and local laws, return this product immediately.
+
+A summary of U.S. laws governing Cisco cryptographic products may be found at:
+http://www.cisco.com/wwl/export/crypto/tool/stqrg.html
+
+If you require further assistance please contact us by sending email to
+export@cisco.com.
+
+cisco WS-C2950T-24 (RC32300) processor (revision P0) with 19912K bytes of memory.
 Processor board ID FOC0816T22B
 Last reset from system-reset
 Running Enhanced Image
@@ -52,7 +69,7 @@ Entry address(es):
   IP address: 10.20.99.15
 Platform: cisco WS-C2960+24TC-L,  Capabilities: Switch IGMP 
 Interface: GigabitEthernet0/1,  Port ID (outgoing port): FastEthernet0/8
-Holdtime : 167 sec
+Holdtime : 177 sec
 
 Version :
 Cisco IOS Software, C2960 Software (C2960-LANBASEK9-M), Version 15.2(2)E6, RELEASE SOFTWARE (fc1)
@@ -75,4 +92,5 @@ Capability Codes: R - Router, T - Trans Bridge, B - Source Route Bridge
                   S - Switch, H - Host, I - IGMP, r - Repeater, P - Phone
 
 Device ID        Local Intrfce     Holdtme    Capability  Platform  Port ID
-DEN-NSWS-04-99-15Gig 0/1            167          S I      WS-C2960+2Fas 0/8
+DEN-NSWS-04-99-15.kolmar.ru
+                 Gig 0/1            177          S I      WS-C2960+2Fas 0/8

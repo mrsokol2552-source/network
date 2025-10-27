@@ -13,7 +13,7 @@ Compiled Sat 14-Mar-20 15:28 by prod_rel_team
 ROM: Bootstrap program is c1000 boot loader
 BOOTLDR: C1000 Boot Loader (C1000-HBOOT-M), Version 15.2(7r)E RELEASE SOFTWARE (fc1)
 
-INA-NSWS-39-99-97 uptime is 2 weeks, 3 hours, 3 minutes
+INA-NSWS-39-99-97 uptime is 3 weeks, 4 days, 23 hours, 32 minutes
 System returned to ROM by power-on
 System restarted at 13:29:08 YAKT Wed Oct 1 2025
 System image file is "flash:/c1000-universalk9-mz.152-7.E2/c1000-universalk9-mz.152-7.E2.bin"
@@ -83,7 +83,7 @@ Technical Support: http://www.cisco.com/techsupport
 Copyright (c) 1986-2021 by Cisco Systems, Inc.
 Compiled Sat 17-Apr-21 07:21 by prod_rel_team
 
-Time remaining: 102 seconds
+Time remaining: 95 seconds
 System Capabilities: B,R
 Enabled Capabilities: B
 Management Addresses:
@@ -108,7 +108,7 @@ System Name: SIP-T46U
 System Description: 
 108.86.14.4
 
-Time remaining: 147 seconds
+Time remaining: 154 seconds
 System Capabilities: B,T
 Enabled Capabilities: B,T
 Management Addresses - not advertised
@@ -151,7 +151,7 @@ System Name: SIP-T46U
 System Description: 
 108.86.14.4
 
-Time remaining: 120 seconds
+Time remaining: 139 seconds
 System Capabilities: B,T
 Enabled Capabilities: B,T
 Management Addresses - not advertised
@@ -194,7 +194,7 @@ System Name: SIP-T46U
 System Description: 
 108.86.14.4
 
-Time remaining: 127 seconds
+Time remaining: 137 seconds
 System Capabilities: B,T
 Enabled Capabilities: B,T
 Management Addresses - not advertised
@@ -237,7 +237,7 @@ System Name: SIP-T46U
 System Description: 
 108.86.14.4
 
-Time remaining: 136 seconds
+Time remaining: 143 seconds
 System Capabilities: B,T
 Enabled Capabilities: B,T
 Management Addresses - not advertised
@@ -280,7 +280,7 @@ System Name: X1S/X1SP
 System Description: 
 Version:2.4.12.2
 
-Time remaining: 46 seconds
+Time remaining: 28 seconds
 System Capabilities: B,T
 Enabled Capabilities: B,T
 Management Addresses:
@@ -317,7 +317,7 @@ Port Description - not advertised
 System Name - not advertised
 System Description - not advertised
 
-Time remaining: 2820 seconds
+Time remaining: 2884 seconds
 System Capabilities - not advertised
 Enabled Capabilities - not advertised
 Management Addresses - not advertised
@@ -349,7 +349,7 @@ Port Description - not advertised
 System Name - not advertised
 System Description - not advertised
 
-Time remaining: 3330 seconds
+Time remaining: 3347 seconds
 System Capabilities - not advertised
 Enabled Capabilities - not advertised
 Management Addresses - not advertised
@@ -385,7 +385,7 @@ Entry address(es):
   IP address: 10.20.99.72
 Platform: cisco C1000-16T-2G-L,  Capabilities: Switch IGMP 
 Interface: GigabitEthernet1/0/16,  Port ID (outgoing port): GigabitEthernet1/0/1
-Holdtime : 151 sec
+Holdtime : 145 sec
 
 Version :
 Cisco IOS Software, C1000 Software (C1000-UNIVERSALK9-M), Version 15.2(8)E, RELEASE SOFTWARE (fc3)
@@ -406,7 +406,7 @@ Entry address(es):
   IP address: 10.13.1.21
 Platform: X1S/X1SP,  Capabilities: Host Phone 
 Interface: GigabitEthernet1/0/7,  Port ID (outgoing port): WAN PORT
-Holdtime : 177 sec
+Holdtime : 156 sec
 
 Version :
 2.4.12.2
@@ -424,7 +424,7 @@ Capability Codes: R - Router, T - Trans Bridge, B - Source Route Bridge
 
 Device ID        Local Intrfce     Holdtme    Capability  Platform  Port ID
 INA-NSWS-39-99-72.kolmar.ru
-                 Gig 1/0/16        151              S I   C1000-16T Gig 1/0/1
-X1S/X1SP         Gig 1/0/7         177              H P   X1S/X1SP  WAN PORT
+                 Gig 1/0/16        145              S I   C1000-16T Gig 1/0/1
+X1S/X1SP         Gig 1/0/7         156              H P   X1S/X1SP  WAN PORT
 
 Total cdp entries displayed : 2

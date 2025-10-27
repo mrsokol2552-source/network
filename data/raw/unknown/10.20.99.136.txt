@@ -14,7 +14,7 @@ System Name                       : DEN-NSWS-61-99-136
 System Location                   : 
 System Description                : MES2424P rev.C1 AC 28-port 1G/10G Managed Switch with 24 POE+ ports
 Logging Option                    : Flash Logging
-Device Uptime                     : 92 Days, 10 Hrs, 44 Mins, 41 Secs
+Device Uptime                     : 104 Days, 5 Hrs, 32 Mins, 10 Secs
 Login Authentication Mode         : Local
 Config Save Status                : Successful
 Remote Save Status                : Not Initiated
@@ -180,18 +180,18 @@ $ show interfaces status
 
 Port        Type          Status           Duplex   Speed       Negotiation     Capability      Uptime (d,h:m:s)
 ----        ------------  ------           ------   -----       -----------     ----------      ----------------
-gi 0/1      1G-Copper     Up               Full     1 Gbps      No-Negotiation  Auto-MDIX on    47,2:55:48      
-gi 0/2      1G-Copper     Up               Full     1 Gbps      No-Negotiation  Auto-MDIX on    47,2:55:49      
-gi 0/3      1G-Copper     Up               Full     1 Gbps      No-Negotiation  Auto-MDIX on    47,2:55:48      
-gi 0/4      1G-Copper     Up               Full     1 Gbps      No-Negotiation  Auto-MDIX on    47,2:55:48      
-gi 0/5      1G-Copper     Up               Full     1 Gbps      No-Negotiation  Auto-MDIX on    47,2:55:48      
-gi 0/6      1G-Copper     Up               Full     1 Gbps      No-Negotiation  Auto-MDIX on    47,2:55:49      
-gi 0/7      1G-Copper     Up               Full     100 Mbps    Auto            Auto-MDIX on    51,2:16:16      
+gi 0/1      1G-Copper     Up               Full     1 Gbps      No-Negotiation  Auto-MDIX on    58,23:25:36     
+gi 0/2      1G-Copper     Up               Full     1 Gbps      No-Negotiation  Auto-MDIX on    58,23:25:37     
+gi 0/3      1G-Copper     Up               Full     1 Gbps      No-Negotiation  Auto-MDIX on    58,23:25:36     
+gi 0/4      1G-Copper     Up               Full     1 Gbps      No-Negotiation  Auto-MDIX on    58,23:25:36     
+gi 0/5      1G-Copper     Up               Full     1 Gbps      No-Negotiation  Auto-MDIX on    58,23:25:37     
+gi 0/6      1G-Copper     Up               Full     1 Gbps      No-Negotiation  Auto-MDIX on    58,23:25:37     
+gi 0/7      1G-Copper     Up               Full     100 Mbps    Auto            Auto-MDIX on    5,2:40:10       
 gi 0/8      1G-Copper     Down (nc)        -        -           No-Negotiation  Auto-MDIX on    -               
 gi 0/9      1G-Copper     Down (nc)        -        -           No-Negotiation  Auto-MDIX on    -               
-gi 0/10     1G-Copper     Up               Full     100 Mbps    Auto            Auto-MDIX on    46,7:27:20      
-gi 0/11     1G-Copper     Up               Full     100 Mbps    No-Negotiation  Auto-MDIX on    47,3:5:25       
-gi 0/12     1G-Copper     Up               Full     100 Mbps    No-Negotiation  Auto-MDIX on    46,23:58:58     
+gi 0/10     1G-Copper     Up               Full     100 Mbps    Auto            Auto-MDIX on    58,3:57:8       
+gi 0/11     1G-Copper     Up               Full     100 Mbps    No-Negotiation  Auto-MDIX on    58,23:35:14     
+gi 0/12     1G-Copper     Up               Full     100 Mbps    No-Negotiation  Auto-MDIX on    58,20:28:46     
 gi 0/13     1G-Copper     Down (nc)        -        -           No-Negotiation  Auto-MDIX on    -               
 gi 0/14     1G-Copper     Down (nc)        -        -           No-Negotiation  Auto-MDIX on    -               
 gi 0/15     1G-Copper     Down (nc)        -        -           No-Negotiation  Auto-MDIX on    -               
@@ -223,10 +223,10 @@ Media-type: prefer-fiber
 Link Up/Down Trap is disabled 
 
 Reception Counters
-   Octets                    : 690259961
-   Unicast Packets           : 14995176
-   Multicast Packets         : 278450
-   Broadcast Packets         : 5752
+   Octets                    : 956105277
+   Unicast Packets           : 16272779
+   Multicast Packets         : 313233
+   Broadcast Packets         : 5775
    Discarded Packets         : 4
    Error Packets             : 0
 
@@ -257,10 +257,10 @@ $ show running-config
 Link Up/Down Trap is disabled 
 
 Reception Counters
-   Octets                    : 4141824245
-   Unicast Packets           : 16161834
-   Multicast Packets         : 275428
-   Broadcast Packets         : 5672
+   Octets                    : 96345391
+   Unicast Packets           : 17426627
+   Multicast Packets         : 310148
+   Broadcast Packets         : 5684
    Discarded Packets         : 3
    Error Packets             : 0
    Unknown Protocol          : 0
@@ -269,10 +269,10 @@ Reception Counters
    Oversized w/ Bad CRC      : 0
 
 Transmission Counters
-   Octets                    : 2151299064
-   Unicast Packets           : 22650891
-   Multicast Packets         : 46087280
-   Broadcast Packets         : 37726248
+   Octets                    : 3456565832
+   Unicast Packets           : 24634456
+   Multicast Packets         : 52008259
+   Broadcast Packets         : 43137238
    Discarded Packets         : 0
    Error Drops               : 0
    Error Packets             : 0

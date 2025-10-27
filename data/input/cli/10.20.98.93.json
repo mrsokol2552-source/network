@@ -8,7 +8,7 @@
       {
         "Neighbor": "CHU-NSWS-24-98-93",
         "LocalInterface": "uptime is",
-        "NeighborPort": "4 hours,",
+        "NeighborPort": "22 hours,",
         "_source_file": "C:\\Users\\zhiltsov.aa\\Desktop\\net-auto-mermaid\\data\\raw\\CHU\\24\\10.20.98.93.txt",
         "_template": "cisco_ios_show_cdp_neighbors.template"
       },
@@ -30,27 +30,11 @@
         "_template": "cisco_ios_show_cdp_neighbors_detail.template"
       }
     ],
-    "cisco_ios_show_lldp_neighbors_detail": [
-      {
-        "LocalInterface": "Gi0/12",
-        "NeighborName": "",
-        "NeighborPort": "Gi0/11",
-        "_source_file": "C:\\Users\\zhiltsov.aa\\Desktop\\net-auto-mermaid\\data\\raw\\CHU\\24\\10.20.98.93.txt",
-        "_template": "cisco_ios_show_lldp_neighbors_detail.template"
-      },
-      {
-        "LocalInterface": "",
-        "NeighborName": "CHU-NSWS-24-98-232.kolmar.ru",
-        "NeighborPort": "",
-        "_source_file": "C:\\Users\\zhiltsov.aa\\Desktop\\net-auto-mermaid\\data\\raw\\CHU\\24\\10.20.98.93.txt",
-        "_template": "cisco_ios_show_lldp_neighbors_detail.template"
-      }
-    ],
     "cisco_ios_show_version": [
       {
         "Version": "15.2(3)E2",
         "Model": "",
-        "Uptime": "1 week, 4 hours, 43 minutes",
+        "Uptime": "4 days, 22 hours, 8 minutes",
         "_source_file": "C:\\Users\\zhiltsov.aa\\Desktop\\net-auto-mermaid\\data\\raw\\CHU\\24\\10.20.98.93.txt",
         "_template": "cisco_ios_show_version.template"
       },

@@ -2,5 +2,5 @@ Value Model (DES-[0-9A-Za-z\-]+|DGS-[0-9A-Za-z\-]+|[A-Za-z0-9\-]+)
 Value FirmwareBuild (.+)
 
 Start
-  ^#\s*(?<Model>DES-[0-9A-Za-z\-]+|DGS-[0-9A-Za-z\-]+|[A-Za-z0-9\-]+)\s+.*Switch\s*$ -> Continue
+  ^#\s*${Model}\s+.*Switch\s*$ -> Continue
   ^#\s*Firmware:\s*Build\s*${FirmwareBuild}\s*$ -> Record

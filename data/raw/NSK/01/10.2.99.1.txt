@@ -26,8 +26,8 @@ software.
 ROM: IOS-XE ROMMON
 BOOTLDR: System Bootstrap, Version 17.9.1r [FC13], RELEASE SOFTWARE (P) 
 
-NSK-NSWR-01-99-1 uptime is 6 weeks, 3 days, 20 hours, 27 minutes
-Uptime for this control processor is 6 weeks, 3 days, 20 hours, 29 minutes
+NSK-NSWR-01-99-1 uptime is 8 weeks, 1 day, 16 hours, 57 minutes
+Uptime for this control processor is 8 weeks, 1 day, 16 hours, 59 minutes
 System returned to ROM by Power Failure or Unknown
 System image file is "flash:packages.conf"
 Last reload reason: Power Failure or Unknown
@@ -96,7 +96,7 @@ Local Intf: Gi1/0/23
 Chassis id: 0027.90b7.9180
 Port id: Gi1/0/35
 Port Description: GigabitEthernet1/0/35
-System Name: NSK-NSWS-01-99-11.sw-nsk-l2-2
+System Name: NSK-NSWS-01-99-11.kolmar.local
 
 System Description: 
 Cisco IOS Software, C2960X Software (C2960X-UNIVERSALK9-M), Version 15.2(2)E7, RELEASE SOFTWARE (fc3)
@@ -104,7 +104,7 @@ Technical Support: http://www.cisco.com/techsupport
 Copyright (c) 1986-2017 by Cisco Systems, Inc.
 Compiled Wed 12-Jul-17 13:06 by prod_rel_team
 
-Time remaining: 99 seconds
+Time remaining: 116 seconds
 System Capabilities: B,R
 Enabled Capabilities: B
 Management Addresses:
@@ -125,7 +125,7 @@ Local Intf: Gi1/0/24
 Chassis id: f8a5.c5bc.a500
 Port id: Gi1/0/48
 Port Description: GigabitEthernet1/0/48
-System Name: NSK-NSWS-01-99-5
+System Name: NSK-NSWS-01-99-5.kolmar.local
 
 System Description: 
 Cisco IOS Software, C2960X Software (C2960X-UNIVERSALK9-M), Version 15.2(2)E5, RELEASE SOFTWARE (fc2)
@@ -133,7 +133,7 @@ Technical Support: http://www.cisco.com/techsupport
 Copyright (c) 1986-2016 by Cisco Systems, Inc.
 Compiled Thu 02-Jun-16 01:31 by prod_rel_team
 
-Time remaining: 108 seconds
+Time remaining: 115 seconds
 System Capabilities: B,R
 Enabled Capabilities: B
 Management Addresses:
@@ -154,7 +154,7 @@ Local Intf: Gi1/0/22
 Chassis id: 005f.8663.3c00
 Port id: Gi1/0/35
 Port Description: GigabitEthernet1/0/35
-System Name: NSK-NSWS-01-99-7.sw-nsk-l2-1
+System Name: NSK-NSWS-01-99-7.kolmar.local
 
 System Description: 
 Cisco IOS Software, C2960X Software (C2960X-UNIVERSALK9-M), Version 15.2(2)E3, RELEASE SOFTWARE (fc3)
@@ -162,7 +162,7 @@ Technical Support: http://www.cisco.com/techsupport
 Copyright (c) 1986-2015 by Cisco Systems, Inc.
 Compiled Wed 26-Aug-15 07:12 by prod_rel_team
 
-Time remaining: 98 seconds
+Time remaining: 103 seconds
 System Capabilities: B,R
 Enabled Capabilities: B
 Management Addresses:
@@ -185,35 +185,35 @@ Total entries displayed: 3
 
 $ show cdp neighbors detail
 -------------------------
-Device ID: NSK-NSWS-01-99-11.sw-nsk-l2-2
+Device ID: NSK-NSWS-01-99-5.kolmar.local
 Entry address(es): 
-  IP address: 10.2.99.11
+  IP address: 10.2.99.5
 Platform: cisco WS-C2960X-48TS-L,  Capabilities: Switch IGMP 
-Interface: GigabitEthernet1/0/23,  Port ID (outgoing port): GigabitEthernet1/0/35
-Holdtime : 145 sec
+Interface: GigabitEthernet1/0/24,  Port ID (outgoing port): GigabitEthernet1/0/48
+Holdtime : 146 sec
 
 Version :
-Cisco IOS Software, C2960X Software (C2960X-UNIVERSALK9-M), Version 15.2(2)E7, RELEASE SOFTWARE (fc3)
+Cisco IOS Software, C2960X Software (C2960X-UNIVERSALK9-M), Version 15.2(2)E5, RELEASE SOFTWARE (fc2)
 Technical Support: http://www.cisco.com/techsupport
-Copyright (c) 1986-2017 by Cisco Systems, Inc.
-Compiled Wed 12-Jul-17 13:06 by prod_rel_team
+Copyright (c) 1986-2016 by Cisco Systems, Inc.
+Compiled Thu 02-Jun-16 01:31 by prod_rel_team
 
 advertisement version: 2
-Peer Source MAC: 0027.90b7.91a3
-Protocol Hello:  OUI=0x00000C, Protocol ID=0x0112; payload len=27, value=00000000FFFFFFFF010221FF000000000000002790B79180FF0000
+Peer Source MAC: f8a5.c5bc.a530
+Protocol Hello:  OUI=0x00000C, Protocol ID=0x0112; payload len=27, value=00000000FFFFFFFF010221FF000000000000F8A5C5BCA500FF0000
 VTP Management Domain: ''
 Native VLAN: 1
 Duplex: full
 Management address(es): 
-  IP address: 10.2.99.11
+  IP address: 10.2.99.5
 
 -------------------------
-Device ID: NSK-NSWS-01-99-7.sw-nsk-l2-1
+Device ID: NSK-NSWS-01-99-7.kolmar.local
 Entry address(es): 
   IP address: 192.168.0.241
 Platform: cisco WS-C2960X-48TS-L,  Capabilities: Switch IGMP 
 Interface: GigabitEthernet1/0/22,  Port ID (outgoing port): GigabitEthernet1/0/35
-Holdtime : 148 sec
+Holdtime : 141 sec
 
 Version :
 Cisco IOS Software, C2960X Software (C2960X-UNIVERSALK9-M), Version 15.2(2)E3, RELEASE SOFTWARE (fc3)
@@ -231,27 +231,27 @@ Management address(es):
   IP address: 192.168.0.241
 
 -------------------------
-Device ID: NSK-NSWS-01-99-5
+Device ID: NSK-NSWS-01-99-11.kolmar.local
 Entry address(es): 
-  IP address: 10.2.99.5
+  IP address: 10.2.99.11
 Platform: cisco WS-C2960X-48TS-L,  Capabilities: Switch IGMP 
-Interface: GigabitEthernet1/0/24,  Port ID (outgoing port): GigabitEthernet1/0/48
-Holdtime : 126 sec
+Interface: GigabitEthernet1/0/23,  Port ID (outgoing port): GigabitEthernet1/0/35
+Holdtime : 155 sec
 
 Version :
-Cisco IOS Software, C2960X Software (C2960X-UNIVERSALK9-M), Version 15.2(2)E5, RELEASE SOFTWARE (fc2)
+Cisco IOS Software, C2960X Software (C2960X-UNIVERSALK9-M), Version 15.2(2)E7, RELEASE SOFTWARE (fc3)
 Technical Support: http://www.cisco.com/techsupport
-Copyright (c) 1986-2016 by Cisco Systems, Inc.
-Compiled Thu 02-Jun-16 01:31 by prod_rel_team
+Copyright (c) 1986-2017 by Cisco Systems, Inc.
+Compiled Wed 12-Jul-17 13:06 by prod_rel_team
 
 advertisement version: 2
-Peer Source MAC: f8a5.c5bc.a530
-Protocol Hello:  OUI=0x00000C, Protocol ID=0x0112; payload len=27, value=00000000FFFFFFFF010221FF000000000000F8A5C5BCA500FF0000
+Peer Source MAC: 0027.90b7.91a3
+Protocol Hello:  OUI=0x00000C, Protocol ID=0x0112; payload len=27, value=00000000FFFFFFFF010221FF000000000000002790B79180FF0000
 VTP Management Domain: ''
 Native VLAN: 1
 Duplex: full
 Management address(es): 
-  IP address: 10.2.99.5
+  IP address: 10.2.99.11
 
 
 Total cdp entries displayed : 3
@@ -263,10 +263,11 @@ Capability Codes: R - Router, T - Trans Bridge, B - Source Route Bridge
                   D - Remote, C - CVTA, M - Two-port Mac Relay 
 
 Device ID        Local Intrfce     Holdtme    Capability  Platform  Port ID
-NSK-NSWS-01-99-11.sw-nsk-l2-2
-                 Gig 1/0/23        144              S I   WS-C2960X Gig 1/0/35
-NSK-NSWS-01-99-7.sw-nsk-l2-1
-                 Gig 1/0/22        147              S I   WS-C2960X Gig 1/0/35
-NSK-NSWS-01-99-5 Gig 1/0/24        126              S I   WS-C2960X Gig 1/0/48
+NSK-NSWS-01-99-5.kolmar.local
+                 Gig 1/0/24        146              S I   WS-C2960X Gig 1/0/48
+NSK-NSWS-01-99-7.kolmar.local
+                 Gig 1/0/22        140              S I   WS-C2960X Gig 1/0/35
+NSK-NSWS-01-99-11.kolmar.local
+                 Gig 1/0/23        155              S I   WS-C2960X Gig 1/0/35
 
 Total cdp entries displayed : 3

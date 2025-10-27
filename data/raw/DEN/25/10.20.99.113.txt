@@ -39,7 +39,7 @@ Advertisement version: 2
 Platform: cisco WS-C2960C-8TC-L
 Capabilities: Switch IGMP 
 Interface: gi3, Port ID (outgoing port): GigabitEthernet0/1
-Holdtime: 136
+Holdtime: 137
 Version: Cisco IOS Software, C2960C Software (C2960c405-UNIVERSALK9-M), Version 15.0(2)SE8, RELEASE SOFTWARE (fc1)
 Technical Support: http://www.cisco.com/techsupport
 
@@ -58,7 +58,7 @@ Advertisement version: 2
 Platform: cisco WS-C2960C-8TC-L
 Capabilities: Switch IGMP 
 Interface: gi4, Port ID (outgoing port): GigabitEthernet0/1
-Holdtime: 166
+Holdtime: 162
 Version: Cisco IOS Software, C2960C Software (C2960c405-UNIVERSALK9-M), Version 15.2(2)E7, RELEASE SOFTWARE (fc3)
 Technical Support: http://www.cisco.com/techsupport
 C
@@ -85,18 +85,18 @@ Capability Codes: R - Router, T - Trans Bridge, B - Source Route Bridge
     Device ID       Local      Adv  Time To Capability   Platform     Port ID   
                     Interface  Ver. Live                                        
 ------------------ ----------- ---- ------- ---------- ------------ ----------- 
-DEN-NSWS-24-99-114     gi1      2     169      S I     cisco        GigabitEthe 
+DEN-NSWS-24-99-114     gi1      2     179      S I     cisco        GigabitEthe 
 .kolmar.ru                                             WS-C2960C-8T rnet0/1     
                                                        C-L                      
-DEN-NSWS-24-99-115     gi2      2     166      S I     cisco        GigabitEthe 
+DEN-NSWS-24-99-115     gi2      2     148      S I     cisco        GigabitEthe 
 .kolmar.ru                                             WS-C2960C-8T rnet0/1     
                                                        C-L                      
-DEN-NSWS-24-99-116     gi3      2     166      S I     cisco        GigabitEthe 
+DEN-NSWS-24-99-116     gi3      2     167      S I     cisco        GigabitEthe 
 .kolmar.ru                                             WS-C2960C-8T rnet0/1     
                                                        C-L                      
-DEN-NSWS-24-99-117     gi4      2     136      S I     cisco        GigabitEthe 
+DEN-NSWS-24-99-117     gi4      2     133      S I     cisco        GigabitEthe 
 .kolmar.ru                                             WS-C2960C-8T rnet0/1     
                                                        C-L                      
-DEN-NSWS-01-98-110     gi9      2     172      S I     cisco        GigabitEthe 
+DEN-NSWS-01-98-110     gi9      2     145      S I     cisco        GigabitEthe 
 .kolmar.ru                                             WS-C3850-24S rnet1/0/4   
 [0mMore: <space>,  Quit: q or CTRL+Z, One line: <return> 

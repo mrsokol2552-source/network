@@ -15,7 +15,7 @@ System Name                       : INA-NSWS-01-99-161
 System Location                   : Eltex Ltd, Russia
 System Description                : MES2424P rev.C1 AC 28-port 1G/10G Managed Switch with 24 POE+ ports
 Logging Option                    : Flash Logging
-Device Uptime                     : 319 Days, 5 Hrs, 54 Mins, 25 Secs
+Device Uptime                     : 7 Days, 1 Hrs, 24 Mins, 17 Secs
 Login Authentication Mode         : Local
 Config Save Status                : Successful
 Remote Save Status                : Not Initiated
@@ -44,10 +44,6 @@ $ show lldp neighbors detail
 
 --More--
                 
-Symm PAUSE(FD)
-1000base-X, -LX, -SX, -CX(FD)
-1000base-T(FD)
--Link Aggregation
 Capability & Status           : Not Capable, Not In Aggregation
 Aggregated Port Id            : 0
 -Maximum Frame Size           : 0
@@ -68,100 +64,94 @@ Device Class                  : 0
 
 -LLDP-MED Nw Policy TLV       : Not Advertised 
 
-
-
---More--
-                
-
-
---More--
-                
-
-
---More--
-                
-
-
---More--
-                
-
-
---More--
-                
 -LLDP-MED Location Info TLV   : Not Advertised 
 
 -LLDP-MED Ex-PowerViaMDI TLV  : Not Advertised 
 ------------------------------------------------------------
+
+
+--More--
+                
+
+
+--More--
+                
+
+
+--More--
+                
+
+
+--More--
+                
+
+
+--More--
+                
 Chassis Id SubType            : Mac Address 
-Chassis Id                    : 00:1d:77:29:21:a2
-Port Id SubType               : Local 
-Port Id                       : 10
-Port Description              : GigabitEthernet 1/10
-System Name                   : INA-NSWS-128-99-164
-System Desc                   : V2.1 2021-04-25T04:45:04-07:00
-Local Intf                    : gi 0/12
-Time Remaining                : 102 Seconds 
-System Capabilities Supported : B               
-System Capabilities Enabled   : B
-Management Addresses          : 
-IfId SubType Address                         OID                               
----- ------- -------                         ---                               
-0    IPv4    192.168.2.1                                                       
+Chassis Id                    : 00:1a:81:01:ca:21
+Port Id SubType               : Interface Name 
+Port Id                       : Ethernet1/0/8
+Port Description              : Not Advertised
+System Name                   : Not Advertised
+System Desc                   : Not Advertised
+Local Intf                    : gi 0/15
+Time Remaining                : 116 Seconds 
+System Capabilities Tlv       : Not Advertised
+Management Addresses          : Not Advertised
 
 Extended 802.3 TLV Info 
 -MAC PHY Configuration & Status
 10base-T(HD)
 10base-T(FD)
-
-
---More--
-                
-
-
---More--
-                
-
-
---More--
-                
-
-
---More--
-                
-
-
---More--
-                
-
-
---More--
-                
-
-
---More--
-                
-
-
---More--
-                
-
-
---More--
-                
-
-
---More--
-                
 100base-TX(HD)
 100base-T2(HD)
+100base-T2(FD)
 Asym PAUSE(FD)
-Symm PAUSE(FD)
 Asym and Symm PAUSE(FD)
-1000base-X, -LX, -SX, -CX(HD)
 1000base-X, -LX, -SX, -CX(FD)
 1000base-T(HD)
-1000base-T(FD)
 -Link Aggregation
+
+
+--More--
+                
+
+
+--More--
+                
+
+
+--More--
+                
+
+
+--More--
+                
+
+
+--More--
+                
+
+
+--More--
+                
+
+
+--More--
+                
+
+
+--More--
+                
+
+
+--More--
+                
+
+
+--More--
+                
 Capability & Status           : Not Capable, Not In Aggregation
 Aggregated Port Id            : 0
 -Maximum Frame Size           : 0
@@ -176,35 +166,45 @@ Vlan Name Tlv                 : Not Advertised
 -LLDP MED Capability TLV      : Not Advertised 
 Capabilities Supported        : 0 
 Capabilities Enabled          : 0 
-
-
---More--
-                
-
-
---More--
-                
-
-
---More--
-                
-
-
---More--
-                
-
-
---More--
-                
-
-
---More--
-                
-
-
---More--
-                
 Device Class                  : 0 
+
+-LLDP MED Inventory TLV       : Not Advertised
+
+-LLDP-MED Nw Policy TLV       : Not Advertised 
+
+-LLDP-MED Location Info TLV   : Not Advertised 
+
+-LLDP-MED Ex-PowerViaMDI TLV  : Not Advertised 
+------------------------------------------------------------
+
+
+--More--
+                
+
+
+--More--
+                
+
+
+--More--
+                
+
+
+--More--
+                
+
+
+--More--
+                
+
+
+--More--
+                
+
+
+--More--
+                
+Chassis Id SubType            : Mac Address 
 
 
 --More--
@@ -229,17 +229,6 @@ $ show vlan
 
 --More--
                 
-10base-T(HD)
-10base-T(FD)
-100base-TX(HD)
-100base-T2(HD)
-Asym PAUSE(FD)
-Symm PAUSE(FD)
-Asym and Symm PAUSE(FD)
-1000base-X, -LX, -SX, -CX(HD)
-1000base-X, -LX, -SX, -CX(FD)
-1000base-T(HD)
-1000base-T(FD)
 -Link Aggregation
 Capability & Status           : Not Capable, Not In Aggregation
 Aggregated Port Id            : 0
@@ -253,27 +242,38 @@ Protocol Vlan Tlv             : Not Advertised
 Vlan Name Tlv                 : Not Advertised
 
 -LLDP MED Capability TLV      : Not Advertised 
-
-
---More--
-                
-
-
---More--
-                
-
-
---More--
-                
-
-
---More--
-                
-
-
---More--
-                
 Capabilities Supported        : 0 
+Capabilities Enabled          : 0 
+Device Class                  : 0 
+
+-LLDP MED Inventory TLV       : Not Advertised
+
+-LLDP-MED Nw Policy TLV       : Not Advertised 
+
+-LLDP-MED Location Info TLV   : Not Advertised 
+
+-LLDP-MED Ex-PowerViaMDI TLV  : Not Advertised 
+
+
+--More--
+                
+
+
+--More--
+                
+
+
+--More--
+                
+
+
+--More--
+                
+
+
+--More--
+                
+------------------------------------------------------------
 
 
 --More--
@@ -298,7 +298,6 @@ $ show interfaces status
 
 --More--
                 
-
 -LLDP-MED Ex-PowerViaMDI TLV  : Not Advertised 
 ------------------------------------------------------------
 Chassis Id SubType            : Mac Address 
@@ -322,58 +321,56 @@ Extended 802.3 TLV Info
 10base-T(HD)
 10base-T(FD)
 100base-TX(HD)
-
-
---More--
-                
-
-
---More--
-                
-
-
---More--
-                
-
-
---More--
-                
-
-
---More--
-                
-
-
---More--
-                
-
-
---More--
-                
-
-
---More--
-                
-
-
---More--
-                
-
-
---More--
-                
-
-
---More--
-                
 100base-T2(HD)
+
+
+--More--
+                
+
+
+--More--
+                
+
+
+--More--
+                
+
+
+--More--
+                
+
+
+--More--
+                
+
+
+--More--
+                
+
+
+--More--
+                
+
+
+--More--
+                
+
+
+--More--
+                
+
+
+--More--
+                
+
+
+--More--
+                
+100base-T2(FD)
 Asym PAUSE(FD)
-Symm PAUSE(FD)
 Asym and Symm PAUSE(FD)
-1000base-X, -LX, -SX, -CX(HD)
 1000base-X, -LX, -SX, -CX(FD)
 1000base-T(HD)
-1000base-T(FD)
 -Link Aggregation
 Capability & Status           : Not Capable, Not In Aggregation
 Aggregated Port Id            : 0
@@ -391,6 +388,9 @@ Capabilities Supported        : 0
 Capabilities Enabled          : 0 
 Device Class                  : 0 
 
+-LLDP MED Inventory TLV       : Not Advertised
+
+
 
 --More--
                 
@@ -418,7 +418,7 @@ Device Class                  : 0
 
 --More--
                 
-
+-LLDP-MED Nw Policy TLV       : Not Advertised 
 
 
 --More--
@@ -442,12 +442,12 @@ Media-type: prefer-fiber
 Link Up/Down Trap is enabled 
 
 Reception Counters
-   Octets                    : 3850704364
-   Unicast Packets           : 1707742944
-   Multicast Packets         : 4193
-   Broadcast Packets         : 921150
-   Discarded Packets         : 47
-   Error Packets             : 2
+   Octets                    : 1823028833
+   Unicast Packets           : 324548805
+   Multicast Packets         : 195
+   Broadcast Packets         : 20373
+   Discarded Packets         : 30
+   Error Packets             : 0
 
 
 --More--
@@ -476,11 +476,11 @@ $ show running-config
 Link Up/Down Trap is enabled 
 
 Reception Counters
-   Octets                    : 1939561804
-   Unicast Packets           : 1704276330
-   Multicast Packets         : 4186
-   Broadcast Packets         : 921139
-   Discarded Packets         : 26
+   Octets                    : 1718271755
+   Unicast Packets           : 323286096
+   Multicast Packets         : 193
+   Broadcast Packets         : 20368
+   Discarded Packets         : 7
    Error Packets             : 0
    Unknown Protocol          : 0
    CRC Errors                : 0
@@ -488,10 +488,10 @@ Reception Counters
    Oversized w/ Bad CRC      : 0
 
 Transmission Counters
-   Octets                    : 272559864
-   Unicast Packets           : 3841707702
-   Multicast Packets         : 14385323
-   Broadcast Packets         : 96169641
+   Octets                    : 430987506
+   Unicast Packets           : 179906674
+   Multicast Packets         : 331348
+   Broadcast Packets         : 4113677
    Discarded Packets         : 0
    Error Drops               : 0
    Error Packets             : 0

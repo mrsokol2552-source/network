@@ -13,7 +13,7 @@ Compiled Mon 08-Mar-21 09:07 by prod_rel_team
 ROM: Bootstrap program is c1000 boot loader
 BOOTLDR: C1000 Boot Loader (C1000-HBOOT-M) Version 15.2(7r)E3, RELEASE SOFTWARE (fc4)
 
-NER-NSWS-03-99-21 uptime is 3 weeks, 5 days, 6 hours, 27 minutes
+NER-NSWS-03-99-21 uptime is 5 weeks, 3 days, 2 hours, 57 minutes
 System returned to ROM by power-on
 System image file is "flash:/c1000-universalk9-mz.152-7.E4/c1000-universalk9-mz.152-7.E4.bin"
 Last reload reason: power-on
@@ -77,7 +77,7 @@ Port Description - not advertised
 System Name - not advertised
 System Description - not advertised
 
-Time remaining: 3477 seconds
+Time remaining: 3166 seconds
 System Capabilities - not advertised
 Enabled Capabilities - not advertised
 Management Addresses - not advertised
@@ -114,7 +114,7 @@ Technical Support: http://www.cisco.com/techsupport
 Copyright (c) 1986-2021 by Cisco Systems, Inc.
 Compiled Tue 19-Oct-21 03:16 by mcpr
 
-Time remaining: 92 seconds
+Time remaining: 109 seconds
 System Capabilities: B,R
 Enabled Capabilities: B,R
 Management Addresses:
@@ -137,7 +137,7 @@ Port Description - not advertised
 System Name - not advertised
 System Description - not advertised
 
-Time remaining: 3166 seconds
+Time remaining: 3271 seconds
 System Capabilities - not advertised
 Enabled Capabilities - not advertised
 Management Addresses - not advertised
@@ -173,7 +173,7 @@ Entry address(es):
   IP address: 10.20.96.4
 Platform: cisco C9200-24P,  Capabilities: Router Switch IGMP 
 Interface: GigabitEthernet1/0/48,  Port ID (outgoing port): GigabitEthernet1/0/16
-Holdtime : 124 sec
+Holdtime : 147 sec
 
 Version :
 Cisco IOS Software [Amsterdam], Catalyst L3 Switch Software (CAT9K_LITE_IOSXE), Version 17.3.4b, RELEASE SOFTWARE (fc1)
@@ -199,6 +199,6 @@ Capability Codes: R - Router, T - Trans Bridge, B - Source Route Bridge
 
 Device ID        Local Intrfce     Holdtme    Capability  Platform  Port ID
 NER-NSWR-01-96-4.kolmar.ru
-                 Gig 1/0/48        124             R S I  C9200-24P Gig 1/0/16
+                 Gig 1/0/48        147             R S I  C9200-24P Gig 1/0/16
 
 Total cdp entries displayed : 1

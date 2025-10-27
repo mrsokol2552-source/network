@@ -3,7 +3,7 @@
 $ terminal length 0
 
 % Unrecognized command
-SFZiR-MES2308P-RZD-1#
+INA-NSWS-61-99-244#
 
 
 $ show version
@@ -22,22 +22,22 @@ Inactive-image: flash://system/images/image1.bin
   MD5 Digest: 0e8489e2681caaee63cc741f51d18403
   Date: 29-May-2020
   Time: 20:58:42
-SFZiR-MES2308P-RZD-1#
+INA-NSWS-61-99-244#
 
 
 $ show lldp neighbors detail
 
 % Wrong number of parameters or invalid range, size or characters entered
-SFZiR-MES2308P-RZD-1#
+INA-NSWS-61-99-244#
 
 
 $ show cdp neighbors detail
 
 % Unrecognized command
-SFZiR-MES2308P-RZD-1#
+INA-NSWS-61-99-244#
 
 
 $ show cdp neighbors
 
 % Unrecognized command
-SFZiR-MES2308P-RZD-1#
+INA-NSWS-61-99-244#

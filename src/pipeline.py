@@ -1,4 +1,4 @@
-#!/usr/bin/env python3
+﻿#!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 """
 End-to-end pipeline that replaces batch logic from scripts/make_example_v2.bat.
@@ -272,6 +272,13 @@ def step_merge_inventory(base_inv: Path, cli_dir: Path, out_inv: Path, log: logg
             return False
         return True
 
+    _IF_RX = re.compile(r"^[A-Za-z][A-Za-z0-9-]*\d.*")
+    def _is_iface(name: str) -> bool:
+        if not name:
+            return False
+        n = name.replace(" ", "")
+        return bool(_IF_RX.match(n))
+
     project_root = Path(__file__).resolve().parents[1]
     raw_dir = project_root / "data" / "raw"
 
@@ -288,14 +295,25 @@ def step_merge_inventory(base_inv: Path, cli_dir: Path, out_inv: Path, log: logg
         parsed = data.get("parsed", {}) or {}
 
         device: Dict[str, Any] = {"hostname": host or mgmt, "mgmt_ip": mgmt}
+        local_host = device["hostname"]
         if vendor:
             device["vendor"] = vendor
 
-        # Try to read real hostname from raw file if present
+        # Try to read real hostname from raw file if present and infer site from folder
         try:
             raw_files = data.get("raw_files", []) or []
             if raw_files:
-                rf = raw_dir / str(raw_files[0])
+                first_rel = str(raw_files[0])
+                # Infer site from folder path like 'DEN/16/10.20.99.12.txt'
+                try:
+                    parts = first_rel.replace("\\", "/").split("/")
+                    if len(parts) >= 1 and not device.get("site"):
+                        p0 = parts[0].strip()
+                        if p0 and p0.isalpha() and len(p0) >= 3:
+                            device["site"] = p0.upper()
+                except Exception:
+                    pass
+                rf = raw_dir / first_rel
                 if rf.exists():
                     txt = rf.read_text(encoding="utf-8", errors="ignore")
                     mhn = re.search(r'(?m)^\s*hostname\s+([\w\-.]+)', txt)
@@ -390,7 +408,7 @@ def step_merge_inventory(base_inv: Path, cli_dir: Path, out_inv: Path, log: logg
                 if_name = str(row.get("LocalInterface") or "").strip()
                 peer_name = _short(str(row.get("Neighbor") or "").strip())
                 peer_if = str(row.get("NeighborPort") or "").strip()
-                if if_name and _is_sane_hostname(peer_name):
+                if _is_iface(if_name) and _is_sane_hostname(peer_name) and peer_name != local_host:
                     ifs.append({
                         "name": if_name,
                         "peer": {"hostname": peer_name, "interface": peer_if},
@@ -406,7 +424,7 @@ def step_merge_inventory(base_inv: Path, cli_dir: Path, out_inv: Path, log: logg
                 if_name = str(row.get("LocalInterface") or "").strip()
                 peer_name = _short(str(row.get("Neighbor") or "").strip())
                 peer_if = str(row.get("NeighborPort") or "").strip()
-                if if_name and _is_sane_hostname(peer_name):
+                if _is_iface(if_name) and _is_sane_hostname(peer_name) and peer_name != local_host:
                     ifs.append({
                         "name": if_name,
                         "peer": {"hostname": peer_name, "interface": peer_if},
@@ -421,7 +439,7 @@ def step_merge_inventory(base_inv: Path, cli_dir: Path, out_inv: Path, log: logg
                 if_name = str(row.get("LocalInterface") or "").strip()
                 peer_name = _short(str(row.get("NeighborName") or "").strip())
                 peer_if = str(row.get("NeighborPort") or "").strip()
-                if if_name and _is_sane_hostname(peer_name):
+                if _is_iface(if_name) and _is_sane_hostname(peer_name) and peer_name != local_host:
                     ifs.append({
                         "name": if_name,
                         "peer": {"hostname": peer_name, "interface": peer_if},
@@ -438,7 +456,8 @@ def step_merge_inventory(base_inv: Path, cli_dir: Path, out_inv: Path, log: logg
                 if_name = str(row.get("LocalInterface") or "").strip()
                 peer_name = _short(str(row.get("NeighborName") or "").strip())
                 peer_if = str(row.get("NeighborPort") or "").strip()
-                if if_name and _is_sane_hostname(peer_name):
+                # D-Link ports can be numeric (e.g., "1"), allow non-standard names
+                if if_name and _is_sane_hostname(peer_name) and peer_name != local_host:
                     ifs.append({
                         "name": if_name,
                         "peer": {"hostname": peer_name, "interface": peer_if},
@@ -447,13 +466,16 @@ def step_merge_inventory(base_inv: Path, cli_dir: Path, out_inv: Path, log: logg
                     })
             if ifs:
                 device["interfaces"] = ifs
-        if parsed.get("dlink_show_lldp_remote_ports"):
+        # Support table-style output as well if present
+        if parsed.get("dlink_show_lldp_remote_ports_table") or parsed.get("dlink_show_lldp_remote_ports"):
             ifs: List[Dict[str, Any]] = device.get("interfaces", []) or []
-            for row in parsed["dlink_show_lldp_remote_ports"]:
+            rows = parsed.get("dlink_show_lldp_remote_ports_table") or parsed.get("dlink_show_lldp_remote_ports") or []
+            for row in rows:
                 if_name = str(row.get("LocalInterface") or "").strip()
                 peer_name = _short(str(row.get("NeighborName") or "").strip())
                 peer_if = str(row.get("NeighborPort") or "").strip()
-                if if_name and _is_sane_hostname(peer_name):
+                # D-Link ports can be numeric (e.g., "1"), allow non-standard names
+                if if_name and _is_sane_hostname(peer_name) and peer_name != local_host:
                     ifs.append({
                         "name": if_name,
                         "peer": {"hostname": peer_name, "interface": peer_if},
@@ -463,6 +485,44 @@ def step_merge_inventory(base_inv: Path, cli_dir: Path, out_inv: Path, log: logg
             if ifs:
                 device["interfaces"] = ifs
 
+        # Fallback: parse D-Link "show lldp remote_ports" directly from raw text
+        # when TextFSM templates aren't available or yielded no interfaces.
+        if (device.get("vendor") or "").lower() == "dlink" and not (device.get("interfaces") or []):
+            try:
+                raw_files = data.get("raw_files", []) or []
+                if raw_files:
+                    rf = (raw_dir / str(raw_files[0])).resolve()
+                    if rf.exists():
+                        txt = rf.read_text(encoding="utf-8", errors="ignore")
+                        blocks = re.split(r"(?m)^\s*Port\s+ID\s*:\s*", txt)
+                        # First chunk before the first Port ID header is junk
+                        ifs: List[Dict[str, Any]] = []
+                        for blk in blocks[1:]:
+                            # Local interface is the first number at line start in the block
+                            m_if = re.match(r"(\d+)", blk.strip())
+                            if not m_if:
+                                continue
+                            if_name = m_if.group(1)
+                            # Extract neighbor name and neighbor port (if present)
+                            m_name = re.search(r"(?m)^\s*System\s+Name\s*:\s*(.*)\s*$", blk)
+                            m_peer = None
+                            # Prefer the last 'Port ID :' in the block as neighbor port
+                            for m in re.finditer(r"(?m)^\s*Port\s+ID\s*:\s*(.+)\s*$", blk):
+                                m_peer = m
+                            peer_name = _short((m_name.group(1).strip() if m_name else ""))
+                            peer_if = (m_peer.group(1).strip() if m_peer else "")
+                            if if_name and _is_sane_hostname(peer_name) and peer_name != local_host:
+                                ifs.append({
+                                    "name": if_name,
+                                    "peer": {"hostname": peer_name, "interface": peer_if},
+                                    "speed": None,
+                                    "desc": None,
+                                })
+                        if ifs:
+                            device["interfaces"] = ifs
+            except Exception:
+                pass
+
         # OSNOVA LLDP neighbors
         if parsed.get("osnova_show_lldp_neighbor_information"):
             ifs: List[Dict[str, Any]] = device.get("interfaces", []) or []
@@ -470,7 +530,7 @@ def step_merge_inventory(base_inv: Path, cli_dir: Path, out_inv: Path, log: logg
                 if_name = str(row.get("LocalInterface") or "").strip()
                 peer_name = _short(str(row.get("NeighborName") or "").strip())
                 peer_if = str(row.get("NeighborPort") or "").strip()
-                if if_name and _is_sane_hostname(peer_name):
+                if _is_iface(if_name) and _is_sane_hostname(peer_name) and peer_name != local_host:
                     ifs.append({
                         "name": if_name,
                         "peer": {"hostname": peer_name, "interface": peer_if},
@@ -487,7 +547,7 @@ def step_merge_inventory(base_inv: Path, cli_dir: Path, out_inv: Path, log: logg
                 if_name = str(row.get("LocalInterface") or "").strip()
                 peer_name = _short(str(row.get("NeighborName") or "").strip())
                 peer_if = str(row.get("NeighborPort") or "").strip()
-                if if_name and _is_sane_hostname(peer_name):
+                if _is_iface(if_name) and _is_sane_hostname(peer_name) and peer_name != local_host:
                     ifs.append({
                         "name": if_name,
                         "peer": {"hostname": peer_name, "interface": peer_if},
@@ -503,7 +563,7 @@ def step_merge_inventory(base_inv: Path, cli_dir: Path, out_inv: Path, log: logg
                 if_name = str(row.get("LocalInterface") or "").strip()
                 peer_name = _short(str(row.get("NeighborName") or "").strip())
                 peer_if = str(row.get("NeighborPort") or "").strip()
-                if if_name and _is_sane_hostname(peer_name):
+                if _is_iface(if_name) and _is_sane_hostname(peer_name) and peer_name != local_host:
                     ifs.append({
                         "name": if_name,
                         "peer": {"hostname": peer_name, "interface": peer_if},
@@ -518,7 +578,7 @@ def step_merge_inventory(base_inv: Path, cli_dir: Path, out_inv: Path, log: logg
                 if_name = str(row.get("LocalInterface") or "").strip()
                 peer_name = _short(str(row.get("NeighborName") or "").strip())
                 peer_if = str(row.get("NeighborPort") or "").strip()
-                if if_name and _is_sane_hostname(peer_name):
+                if if_name and _is_sane_hostname(peer_name) and peer_name != local_host:
                     ifs.append({
                         "name": if_name,
                         "peer": {"hostname": peer_name, "interface": peer_if},
@@ -534,7 +594,7 @@ def step_merge_inventory(base_inv: Path, cli_dir: Path, out_inv: Path, log: logg
                 ifs: List[Dict[str, Any]] = device.get("interfaces", []) or []
                 for row in parsed[key]:
                     n = str(row.get("Interface") or "").strip()
-                    if n:
+                    if _is_iface(n):
                         ifs.append({"name": n, "peer": {}, "speed": None, "desc": None})
                 if ifs:
                     device["interfaces"] = ifs
@@ -735,3 +795,9 @@ def main(argv: List[str] | None = None) -> int:
 
 if __name__ == "__main__":
     raise SystemExit(main())
+
+
+
+
+
+

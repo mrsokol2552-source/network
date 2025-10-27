@@ -1,0 +1,39 @@
+
+
+$ terminal length 0
+                     ^
+% Invalid input detected at '^' marker.
+
+
+
+$ show version
+  SNR-S2982G-24T-POE Device, Compiled on Sep 29 10:52:50 2018
+  sysLocation Russia, 124681, Moscow, Zelenograd, Zavodskaya st., 1B, bldg 2
+  CPU Mac f8:f0:82:7b:44:5d
+  Vlan MAC f8:f0:82:7b:44:5c
+  SoftWare Version 7.0.3.5(R0241.0279)
+  BootRom Version 7.2.35
+  HardWare Version 1.0.1
+  CPLD Version N/A
+  Serial No.:SW078610J605000154
+  Copyright (C) 2018 NAG LLC
+  All rights reserved
+  Last reboot is cold reset.
+  Uptime is 7 weeks, 0 days, 3 hours, 59 minutes
+
+
+$ show lldp neighbors detail
+                                       ^
+% Invalid input detected at '^' marker.
+
+
+
+$ show cdp neighbors detail
+                         ^
+% Invalid input detected at '^' marker.
+
+
+
+$ show cdp neighbors
+                         ^
+% Invalid input detected at '^' marker.

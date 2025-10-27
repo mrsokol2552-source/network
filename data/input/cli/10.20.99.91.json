@@ -8,7 +8,7 @@
       {
         "Neighbor": "CHU-NSWS-14-99-91",
         "LocalInterface": "uptime is",
-        "NeighborPort": "6 days,",
+        "NeighborPort": "3 days,",
         "_source_file": "C:\\Users\\zhiltsov.aa\\Desktop\\net-auto-mermaid\\data\\raw\\CHU\\14\\10.20.99.91.txt",
         "_template": "cisco_ios_show_cdp_neighbors.template"
       },
@@ -60,104 +60,11 @@
         "_template": "cisco_ios_show_cdp_neighbors_detail.template"
       }
     ],
-    "cisco_ios_show_lldp_neighbors_detail": [
-      {
-        "LocalInterface": "Gi1/0/3",
-        "NeighborName": "",
-        "NeighborPort": "0c38.3e51.542b",
-        "_source_file": "C:\\Users\\zhiltsov.aa\\Desktop\\net-auto-mermaid\\data\\raw\\CHU\\14\\10.20.99.91.txt",
-        "_template": "cisco_ios_show_lldp_neighbors_detail.template"
-      },
-      {
-        "LocalInterface": "Gi1/0/48",
-        "NeighborName": "X5U-V2",
-        "NeighborPort": "Gi1/0/8",
-        "_source_file": "C:\\Users\\zhiltsov.aa\\Desktop\\net-auto-mermaid\\data\\raw\\CHU\\14\\10.20.99.91.txt",
-        "_template": "cisco_ios_show_lldp_neighbors_detail.template"
-      },
-      {
-        "LocalInterface": "Gi1/0/41",
-        "NeighborName": "CHU-NSWR-14-99-45.kolmar.ru",
-        "NeighborPort": "Gi0/2",
-        "_source_file": "C:\\Users\\zhiltsov.aa\\Desktop\\net-auto-mermaid\\data\\raw\\CHU\\14\\10.20.99.91.txt",
-        "_template": "cisco_ios_show_lldp_neighbors_detail.template"
-      },
-      {
-        "LocalInterface": "Gi1/0/14",
-        "NeighborName": "CHU-NSWS-04-99-71.kolmar.ru",
-        "NeighborPort": "04d4.c4ee.c3f3",
-        "_source_file": "C:\\Users\\zhiltsov.aa\\Desktop\\net-auto-mermaid\\data\\raw\\CHU\\14\\10.20.99.91.txt",
-        "_template": "cisco_ios_show_lldp_neighbors_detail.template"
-      },
-      {
-        "LocalInterface": "Gi1/0/44",
-        "NeighborName": "",
-        "NeighborPort": "e0d5.5e36.f6b2",
-        "_source_file": "C:\\Users\\zhiltsov.aa\\Desktop\\net-auto-mermaid\\data\\raw\\CHU\\14\\10.20.99.91.txt",
-        "_template": "cisco_ios_show_lldp_neighbors_detail.template"
-      },
-      {
-        "LocalInterface": "Gi1/0/21",
-        "NeighborName": "",
-        "NeighborPort": "74fe.ce8f.c47f",
-        "_source_file": "C:\\Users\\zhiltsov.aa\\Desktop\\net-auto-mermaid\\data\\raw\\CHU\\14\\10.20.99.91.txt",
-        "_template": "cisco_ios_show_lldp_neighbors_detail.template"
-      },
-      {
-        "LocalInterface": "Gi1/0/37",
-        "NeighborName": "",
-        "NeighborPort": "bc22.28fb.e4ce",
-        "_source_file": "C:\\Users\\zhiltsov.aa\\Desktop\\net-auto-mermaid\\data\\raw\\CHU\\14\\10.20.99.91.txt",
-        "_template": "cisco_ios_show_lldp_neighbors_detail.template"
-      },
-      {
-        "LocalInterface": "Gi1/0/43",
-        "NeighborName": "",
-        "NeighborPort": "04d4.c4ee.cb28",
-        "_source_file": "C:\\Users\\zhiltsov.aa\\Desktop\\net-auto-mermaid\\data\\raw\\CHU\\14\\10.20.99.91.txt",
-        "_template": "cisco_ios_show_lldp_neighbors_detail.template"
-      },
-      {
-        "LocalInterface": "Gi1/0/9",
-        "NeighborName": "",
-        "NeighborPort": "80ee.73f5.6e41",
-        "_source_file": "C:\\Users\\zhiltsov.aa\\Desktop\\net-auto-mermaid\\data\\raw\\CHU\\14\\10.20.99.91.txt",
-        "_template": "cisco_ios_show_lldp_neighbors_detail.template"
-      },
-      {
-        "LocalInterface": "Gi1/0/27",
-        "NeighborName": "",
-        "NeighborPort": "7085.c291.fe53",
-        "_source_file": "C:\\Users\\zhiltsov.aa\\Desktop\\net-auto-mermaid\\data\\raw\\CHU\\14\\10.20.99.91.txt",
-        "_template": "cisco_ios_show_lldp_neighbors_detail.template"
-      },
-      {
-        "LocalInterface": "Gi1/0/23",
-        "NeighborName": "",
-        "NeighborPort": "7085.c2b6.6c71",
-        "_source_file": "C:\\Users\\zhiltsov.aa\\Desktop\\net-auto-mermaid\\data\\raw\\CHU\\14\\10.20.99.91.txt",
-        "_template": "cisco_ios_show_lldp_neighbors_detail.template"
-      },
-      {
-        "LocalInterface": "Gi1/0/17",
-        "NeighborName": "",
-        "NeighborPort": "d85e.d340.d3c8",
-        "_source_file": "C:\\Users\\zhiltsov.aa\\Desktop\\net-auto-mermaid\\data\\raw\\CHU\\14\\10.20.99.91.txt",
-        "_template": "cisco_ios_show_lldp_neighbors_detail.template"
-      },
-      {
-        "LocalInterface": "Gi1/0/6",
-        "NeighborName": "",
-        "NeighborPort": "04d4.c4ee.cac0",
-        "_source_file": "C:\\Users\\zhiltsov.aa\\Desktop\\net-auto-mermaid\\data\\raw\\CHU\\14\\10.20.99.91.txt",
-        "_template": "cisco_ios_show_lldp_neighbors_detail.template"
-      }
-    ],
     "cisco_ios_show_version": [
       {
         "Version": "15.2(4)E6",
         "Model": "",
-        "Uptime": "5 weeks, 6 days, 54 minutes",
+        "Uptime": "7 weeks, 3 days, 21 hours, 23 minutes",
         "_source_file": "C:\\Users\\zhiltsov.aa\\Desktop\\net-auto-mermaid\\data\\raw\\CHU\\14\\10.20.99.91.txt",
         "_template": "cisco_ios_show_version.template"
       },

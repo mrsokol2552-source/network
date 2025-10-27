@@ -13,7 +13,7 @@ Compiled Wed 12-Jul-17 15:29 by prod_rel_team
 ROM: Bootstrap program is C2960 boot loader
 BOOTLDR: C2960 Boot Loader (C2960-HBOOT-M) Version 15.0(2r)EZ1, RELEASE SOFTWARE (fc1)
 
-NER-NSWS-07-99-36 uptime is 3 weeks, 5 days, 6 hours, 27 minutes
+NER-NSWS-07-99-36 uptime is 5 weeks, 3 days, 2 hours, 56 minutes
 System returned to ROM by power-on
 System image file is "flash:/c2960-lanbasek9-mz.152-2.E7/c2960-lanbasek9-mz.152-2.E7.bin"
 Last reload reason: power-on
@@ -84,7 +84,7 @@ Technical Support: http://www.cisco.com/techsupport
 Copyright (c) 1986-2021 by Cisco Systems, Inc.
 Compiled Tue 19-Oct-21 03:16 by mcpr
 
-Time remaining: 96 seconds
+Time remaining: 97 seconds
 System Capabilities: B,R
 Enabled Capabilities: B,R
 Management Addresses:
@@ -109,7 +109,7 @@ System Name: GXP1615_c0:74:ad:2f:66:4c
 System Description: 
 GXP1615 1.0.7.13
 
-Time remaining: 93 seconds
+Time remaining: 107 seconds
 System Capabilities: B,T
 Enabled Capabilities: B,T
 Management Addresses - not advertised
@@ -149,12 +149,47 @@ System Name: OFFICEOTiZ1LVL
 System Description: 
 UAP-AC-LR, 6.6.77.15402
 
-Time remaining: 113 seconds
+Time remaining: 92 seconds
 System Capabilities: B,W,R,S
 Enabled Capabilities: B,W,R
 Management Addresses:
     IP: 10.31.0.94
     IPV6: FE80::1AE8:29FF:FECC:92EB
+Auto Negotiation - not supported
+Physical media capabilities - not advertised
+Media Attachment Unit type - not advertised
+Vlan ID: - not advertised
+
+MED Information:
+
+    MED Codes:
+          (NP) Network Policy, (LI) Location Identification
+          (PS) Power Source Entity, (PD) Power Device
+          (IN) Inventory
+
+    S/W revision: 4.4.153
+    Capabilities: NP, LI, PS, PD, IN
+    Device type: Network connectivity
+    Network Policies - not advertised
+    PD device, Power source: PSE, Power Priority: High, Wattage: 15.4
+    Location - not advertised
+
+------------------------------------------------
+Local Intf: Fa0/47
+Chassis id: 18e8.29cc.97f3
+Port id: 18e8.29cc.97f3
+Port Description: eth0
+System Name: OFFICEOK1LVL
+
+System Description: 
+UAP-AC-LR, 6.6.77.15402
+
+Time remaining: 95 seconds
+System Capabilities: B,W,R,S
+Enabled Capabilities: B,W,R
+Management Addresses:
+    IP: 10.31.0.110
+    IPV6: FE80::1AE8:29FF:FECC:97F3
 Auto Negotiation - not supported
 Physical media capabilities - not advertised
 Media Attachment Unit type - not advertised
@@ -182,7 +217,7 @@ Port Description - not advertised
 System Name - not advertised
 System Description - not advertised
 
-Time remaining: 2727 seconds
+Time remaining: 3229 seconds
 System Capabilities - not advertised
 Enabled Capabilities - not advertised
 Management Addresses - not advertised
@@ -214,7 +249,7 @@ Port Description - not advertised
 System Name - not advertised
 System Description - not advertised
 
-Time remaining: 3346 seconds
+Time remaining: 3597 seconds
 System Capabilities - not advertised
 Enabled Capabilities - not advertised
 Management Addresses - not advertised
@@ -238,41 +273,6 @@ MED Information:
     Power requirements - not advertised
     Location - not advertised
 
-------------------------------------------------
-Local Intf: Fa0/47
-Chassis id: 18e8.29cc.97f3
-Port id: 18e8.29cc.97f3
-Port Description: eth0
-System Name: OFFICEOK1LVL
-
-System Description: 
-UAP-AC-LR, 6.6.77.15402
-
-Time remaining: 96 seconds
-System Capabilities: B,W,R,S
-Enabled Capabilities: B,W,R
-Management Addresses:
-    IP: 10.31.0.110
-    IPV6: FE80::1AE8:29FF:FECC:97F3
-Auto Negotiation - not supported
-Physical media capabilities - not advertised
-Media Attachment Unit type - not advertised
-Vlan ID: - not advertised
-
-MED Information:
-
-    MED Codes:
-          (NP) Network Policy, (LI) Location Identification
-          (PS) Power Source Entity, (PD) Power Device
-          (IN) Inventory
-
-    S/W revision: 4.4.153
-    Capabilities: NP, LI, PS, PD, IN
-    Device type: Network connectivity
-    Network Policies - not advertised
-    PD device, Power source: PSE, Power Priority: High, Wattage: 15.4
-    Location - not advertised
-
 
 Total entries displayed: 6
 
@@ -285,7 +285,7 @@ Entry address(es):
   IP address: 10.13.1.69
 Platform: X3S,  Capabilities: Host Phone 
 Interface: FastEthernet0/2,  Port ID (outgoing port): WAN PORT
-Holdtime : 169 sec
+Holdtime : 137 sec
 
 Version :
 2.14.0.7387
@@ -298,7 +298,7 @@ Entry address(es):
   IP address: 10.20.96.4
 Platform: cisco C9200-24P,  Capabilities: Router Switch IGMP 
 Interface: GigabitEthernet0/1,  Port ID (outgoing port): GigabitEthernet1/0/7
-Holdtime : 125 sec
+Holdtime : 136 sec
 
 Version :
 Cisco IOS Software [Amsterdam], Catalyst L3 Switch Software (CAT9K_LITE_IOSXE), Version 17.3.4b, RELEASE SOFTWARE (fc1)
@@ -319,7 +319,7 @@ Entry address(es):
   IP address: 10.13.0.56
 Platform: GXP1615,  Capabilities: Trans-Bridge Host 
 Interface: FastEthernet0/46,  Port ID (outgoing port): eth0
-Holdtime : 93 sec
+Holdtime : 107 sec
 
 Version :
 GXP1615 1.0.7.13
@@ -336,10 +336,10 @@ Capability Codes: R - Router, T - Trans Bridge, B - Source Route Bridge
                   D - Remote, C - CVTA, M - Two-port Mac Relay 
 
 Device ID        Local Intrfce     Holdtme    Capability  Platform  Port ID
-X3S              Fas 0/2           169              H P   X3S       WAN PORT
+X3S              Fas 0/2           137              H P   X3S       WAN PORT
 NER-NSWR-01-96-4.kolmar.ru
-                 Gig 0/1           125             R S I  C9200-24P Gig 1/0/7
+                 Gig 0/1           136             R S I  C9200-24P Gig 1/0/7
 GXP1615_c0:74:ad:2f:66:4c
-                 Fas 0/46          93               T H   GXP1615   eth0
+                 Fas 0/46          107              T H   GXP1615   eth0
 
 Total cdp entries displayed : 3

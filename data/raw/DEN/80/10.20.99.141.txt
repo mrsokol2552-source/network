@@ -13,7 +13,7 @@ Compiled Sat 17-Apr-21 07:21 by prod_rel_team
 ROM: Bootstrap program is c1000 boot loader
 BOOTLDR: C1000 Boot Loader (C1000-HBOOT-M) Version 15.2(7r)E3, RELEASE SOFTWARE (fc4)
 
-DEN-NSWS-80-99-141 uptime is 2 weeks, 1 day, 9 hours, 45 minutes
+DEN-NSWS-80-99-141 uptime is 3 weeks, 6 days, 6 hours, 14 minutes
 System returned to ROM by power-on
 System restarted at 21:48:04 UTC Mon Sep 29 2025
 System image file is "flash:/c1000-universalk9-mz.152-8.E/c1000-universalk9-mz.152-8.E.bin"
@@ -80,7 +80,7 @@ System Name: X1S/X1SP
 System Description: 
 Version:2.4.12.2
 
-Time remaining: 12 seconds
+Time remaining: 17 seconds
 System Capabilities: B,T
 Enabled Capabilities: B,T
 Management Addresses:
@@ -119,7 +119,7 @@ System Name: DEN-NSWS-80-99-199
 System Description: 
 SW-8182/L(300W) 6.6.9
 
-Time remaining: 99 seconds
+Time remaining: 114 seconds
 System Capabilities: B
 Enabled Capabilities: B
 Management Addresses:
@@ -160,7 +160,7 @@ System Name: X1S/X1SP
 System Description: 
 Version:2.4.12.2
 
-Time remaining: 34 seconds
+Time remaining: 11 seconds
 System Capabilities: B,T
 Enabled Capabilities: B,T
 Management Addresses:
@@ -202,7 +202,7 @@ Technical Support: http://www.cisco.com/techsupport
 Copyright (c) 1986-2017 by Cisco Systems, Inc.
 Compiled Wed 12-Jul-17 15:29 by prod_rel_team
 
-Time remaining: 119 seconds
+Time remaining: 95 seconds
 System Capabilities: B
 Enabled Capabilities: B
 Management Addresses:
@@ -217,14 +217,14 @@ Media Attachment Unit type: 16
 Vlan ID: 1
 
 ------------------------------------------------
-Local Intf: Gi1/0/2
-Chassis id: 0060.e0a7.3517
-Port id: 0060.e0a7.3517
+Local Intf: Gi1/0/8
+Chassis id: 7085.c2b5.153d
+Port id: 7085.c2b5.153d
 Port Description - not advertised
 System Name - not advertised
 System Description - not advertised
 
-Time remaining: 3219 seconds
+Time remaining: 3152 seconds
 System Capabilities - not advertised
 Enabled Capabilities - not advertised
 Management Addresses - not advertised
@@ -249,14 +249,14 @@ MED Information:
     Location - not advertised
 
 ------------------------------------------------
-Local Intf: Gi1/0/8
-Chassis id: 7085.c2b5.153d
-Port id: 7085.c2b5.153d
+Local Intf: Gi1/0/2
+Chassis id: 0060.e0a7.3517
+Port id: 0060.e0a7.3517
 Port Description - not advertised
 System Name - not advertised
 System Description - not advertised
 
-Time remaining: 3560 seconds
+Time remaining: 3230 seconds
 System Capabilities - not advertised
 Enabled Capabilities - not advertised
 Management Addresses - not advertised
@@ -288,7 +288,7 @@ Port Description - not advertised
 System Name - not advertised
 System Description - not advertised
 
-Time remaining: 3522 seconds
+Time remaining: 3417 seconds
 System Capabilities - not advertised
 Enabled Capabilities - not advertised
 Management Addresses - not advertised
@@ -324,7 +324,7 @@ Entry address(es):
   IP address: 10.20.98.112
 Platform: cisco WS-C2960+24PC-L,  Capabilities: Switch IGMP 
 Interface: GigabitEthernet1/0/16,  Port ID (outgoing port): FastEthernet0/24
-Holdtime : 139 sec
+Holdtime : 179 sec
 
 Version :
 Cisco IOS Software, C2960 Software (C2960-LANBASEK9-M), Version 15.2(2)E7, RELEASE SOFTWARE (fc3)
@@ -346,7 +346,7 @@ Entry address(es):
   IP address: 10.13.0.121
 Platform: X1S/X1SP,  Capabilities: Host Phone 
 Interface: GigabitEthernet1/0/5,  Port ID (outgoing port): WAN PORT
-Holdtime : 136 sec
+Holdtime : 162 sec
 
 Version :
 2.4.12.2
@@ -359,7 +359,7 @@ Entry address(es):
   IP address: 10.13.0.87
 Platform: X1S/X1SP,  Capabilities: Host Phone 
 Interface: GigabitEthernet1/0/3,  Port ID (outgoing port): WAN PORT
-Holdtime : 123 sec
+Holdtime : 124 sec
 
 Version :
 2.4.12.2
@@ -377,8 +377,8 @@ Capability Codes: R - Router, T - Trans Bridge, B - Source Route Bridge
 
 Device ID        Local Intrfce     Holdtme    Capability  Platform  Port ID
 DEN-NSWS-98-112.kolmar.ru
-                 Gig 1/0/16        139              S I   WS-C2960+ Fas 0/24
-X1S/X1SP         Gig 1/0/5         136              H P   X1S/X1SP  WAN PORT
+                 Gig 1/0/16        179              S I   WS-C2960+ Fas 0/24
+X1S/X1SP         Gig 1/0/5         161              H P   X1S/X1SP  WAN PORT
 X1S/X1SP         Gig 1/0/3         123              H P   X1S/X1SP  WAN PORT
 
 Total cdp entries displayed : 3

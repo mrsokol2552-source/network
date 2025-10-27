@@ -13,7 +13,7 @@ Compiled Mon 18-Sep-17 07:54 by prod_rel_team
 ROM: Bootstrap program is C2960X boot loader
 BOOTLDR: C2960X Boot Loader (C2960X-HBOOT-M) Version 15.2(3r)E1, RELEASE SOFTWARE (fc1)
 
-NRG-NSWS-01-99-41 uptime is 28 weeks, 23 hours, 15 minutes
+NRG-NSWS-01-99-41 uptime is 29 weeks, 5 days, 19 hours, 44 minutes
 System returned to ROM by power-on
 System restarted at 02:15:49 YAKT Wed Apr 2 2025
 System image file is "flash:c2960x-universalk9-mz.152-4.E5.bin"
@@ -80,10 +80,10 @@ $ show cdp neighbors detail
 -------------------------
 Device ID: Office kolmar
 Entry address(es): 
-  IP address: 10.100.10.137
+  IP address: 10.100.10.136
 Platform: NanoStation M2,  Capabilities: Trans-Bridge 
 Interface: GigabitEthernet1/0/22,  Port ID (outgoing port): br1
-Holdtime : 114 sec
+Holdtime : 79 sec
 
 Version :
 XW.v6.3.6
@@ -96,7 +96,7 @@ Entry address(es):
   IP address: 10.100.10.134
 Platform: PowerBeam M2 400,  Capabilities: Trans-Bridge 
 Interface: GigabitEthernet1/0/22,  Port ID (outgoing port): br1
-Holdtime : 81 sec
+Holdtime : 90 sec
 
 Version :
 XW.v6.3.6
@@ -109,7 +109,7 @@ Entry address(es):
   IP address: 10.20.99.38
 Platform: cisco WS-C3850-12S,  Capabilities: Router Switch IGMP 
 Interface: GigabitEthernet1/0/28,  Port ID (outgoing port): GigabitEthernet1/0/3
-Holdtime : 175 sec
+Holdtime : 144 sec
 
 Version :
 Cisco IOS Software [Gibraltar], Catalyst L3 Switch Software (CAT3K_CAA-UNIVERSALK9-M), Version 16.12.11, RELEASE SOFTWARE (fc2)
@@ -130,7 +130,7 @@ Entry address(es):
   IP address: 10.20.97.10
 Platform: cisco WS-C2960CX-8PC-L,  Capabilities: Switch IGMP 
 Interface: GigabitEthernet1/0/22,  Port ID (outgoing port): GigabitEthernet0/7
-Holdtime : 173 sec
+Holdtime : 148 sec
 
 Version :
 Cisco IOS Software, C2960CX Software (C2960CX-UNIVERSALK9-M), Version 15.2(7)E, RELEASE SOFTWARE (fc3)
@@ -151,7 +151,7 @@ Entry address(es):
   IP address: 10.100.10.135
 Platform: PowerBeam M2 400,  Capabilities: Trans-Bridge 
 Interface: GigabitEthernet1/0/22,  Port ID (outgoing port): br1
-Holdtime : 73 sec
+Holdtime : 21 sec
 
 Version :
 XW.v6.3.6
@@ -168,12 +168,12 @@ Capability Codes: R - Router, T - Trans Bridge, B - Source Route Bridge
                   D - Remote, C - CVTA, M - Two-port Mac Relay 
 
 Device ID        Local Intrfce     Holdtme    Capability  Platform  Port ID
-Office kolmar    Gig 1/0/22        114               T    NanoStati br1
-PowerBeam M2 400 Gig 1/0/22        81                T    PowerBeam br1
+Office kolmar    Gig 1/0/22        79                T    NanoStati br1
+PowerBeam M2 400 Gig 1/0/22        90                T    PowerBeam br1
 NRG-NSWR-01-99-38.kolmar.ru
-                 Gig 1/0/28        175             R S I  WS-C3850- Gig 1/0/3
+                 Gig 1/0/28        144             R S I  WS-C3850- Gig 1/0/3
 NER-NSWS-11-97-10.kolmar.ru
-                 Gig 1/0/22        173              S I   WS-C2960C Gig 0/7
-NanoBeamM2 400   Gig 1/0/22        73                T    PowerBeam br1
+                 Gig 1/0/22        148              S I   WS-C2960C Gig 0/7
+NanoBeamM2 400   Gig 1/0/22        21                T    PowerBeam br1
 
 Total cdp entries displayed : 5

@@ -13,7 +13,7 @@ Compiled Wed 12-Jul-17 15:37 by prod_rel_team
 ROM: Bootstrap program is C2960C boot loader
 BOOTLDR: C2960C Boot Loader (C2960c405-HBOOT-M) Version 12.2(55r)EX9, RELEASE SOFTWARE (fc1)
 
-CHU-NSWS-03-99-224 uptime is 6 weeks, 5 days, 11 hours, 12 minutes
+CHU-NSWS-03-99-224 uptime is 8 weeks, 3 days, 7 hours, 42 minutes
 System returned to ROM by power-on
 System restarted at 05:21:30 YAKT Fri Aug 29 2025
 System image file is "flash:/c2960c405-universalk9-mz.152-2.E7/c2960c405-universalk9-mz.152-2.E7.bin"
@@ -85,7 +85,7 @@ Entry address(es):
   IP address: 10.20.98.140
 Platform: cisco WS-C3850-24S,  Capabilities: Switch IGMP 
 Interface: GigabitEthernet0/1,  Port ID (outgoing port): GigabitEthernet1/0/2
-Holdtime : 165 sec
+Holdtime : 134 sec
 
 Version :
 Cisco IOS Software [Everest], Catalyst L3 Switch Software (CAT3K_CAA-UNIVERSALK9-M), Version 16.6.5, RELEASE SOFTWARE (fc1)
@@ -111,6 +111,6 @@ Capability Codes: R - Router, T - Trans Bridge, B - Source Route Bridge
 
 Device ID        Local Intrfce     Holdtme    Capability  Platform  Port ID
 CHU-NSWR-14-98-140.kolmar.ru
-                 Gig 0/1           165              S I   WS-C3850- Gig 1/0/2
+                 Gig 0/1           134              S I   WS-C3850- Gig 1/0/2
 
 Total cdp entries displayed : 1

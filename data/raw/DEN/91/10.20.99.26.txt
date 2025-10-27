@@ -13,7 +13,7 @@ Compiled Thu 14-May-15 02:39 by prod_rel_team
 ROM: Bootstrap program is C2960 boot loader
 BOOTLDR: C2960 Boot Loader (C2960-HBOOT-M) Version 15.0(2r)EZ1, RELEASE SOFTWARE (fc1)
 
-DEN-NSWS-91-99-26 uptime is 5 weeks, 1 hour, 48 minutes
+DEN-NSWS-91-99-26 uptime is 6 weeks, 4 days, 22 hours, 17 minutes
 System returned to ROM by power-on
 System restarted at 14:45:25 YAKT Wed Sep 10 2025
 System image file is "flash:/c2960-lanbasek9-mz.150-2.SE8/c2960-lanbasek9-mz.150-2.SE8.bin"
@@ -79,7 +79,7 @@ System Name: X1S/X1SP
 System Description: 
 Version:2.4.12.2
 
-Time remaining: 35 seconds
+Time remaining: 3 seconds
 System Capabilities: B,T
 Enabled Capabilities: B,T
 Management Addresses:
@@ -120,7 +120,7 @@ Technical Support: http://www.cisco.com/techsupport
 Copyright (c) 1986-2016 by Cisco Systems, Inc.
 Compiled Sat 17-Dec-16 00:36 by prod_rel_team
 
-Time remaining: 100 seconds
+Time remaining: 98 seconds
 System Capabilities: B
 Enabled Capabilities: B
 Management Addresses:
@@ -144,7 +144,7 @@ System Name: X1S/X1SP
 System Description: 
 Version:2.4.12.2
 
-Time remaining: 16 seconds
+Time remaining: 7 seconds
 System Capabilities: B,T
 Enabled Capabilities: B,T
 Management Addresses:
@@ -182,7 +182,7 @@ System Name: X1S/X1SP
 System Description: 
 Version:2.4.12.2
 
-Time remaining: 54 seconds
+Time remaining: 19 seconds
 System Capabilities: B,T
 Enabled Capabilities: B,T
 Management Addresses:
@@ -223,7 +223,7 @@ Technical Support: http://www.cisco.com/techsupport
 Copyright (c) 1986-2018 by Cisco Systems, Inc.
 Compiled Thu 05-Apr-18 03:25 by prod_rel_team
 
-Time remaining: 119 seconds
+Time remaining: 98 seconds
 System Capabilities: B,R
 Enabled Capabilities: B
 Management Addresses:
@@ -238,8 +238,70 @@ Physical media capabilities:
 Media Attachment Unit type: 16
 Vlan ID: 1
 
+------------------------------------------------
+Chassis id: b42e.992f.ffc3
+Port id: b42e.992f.ffc3
+Port Description - not advertised
+System Name - not advertised
+System Description - not advertised
 
-Total entries displayed: 5
+Time remaining: 3441 seconds
+System Capabilities - not advertised
+Enabled Capabilities - not advertised
+Management Addresses - not advertised
+Auto Negotiation - supported, enabled
+Physical media capabilities:
+    1000baseT(FD)
+Media Attachment Unit type - not advertised
+Vlan ID: - not advertised
+
+MED Information:
+
+    MED Codes:
+          (NP) Network Policy, (LI) Location Identification
+          (PS) Power Source Entity, (PD) Power Device
+          (IN) Inventory
+
+    Inventory information - not advertised
+    Capabilities: 
+    Device type: Endpoint Class I
+    Network Policies - not advertised
+    Power requirements - not advertised
+    Location - not advertised
+
+------------------------------------------------
+Chassis id: b42e.992f.ffbd
+Port id: b42e.992f.ffbd
+Port Description - not advertised
+System Name - not advertised
+System Description - not advertised
+
+Time remaining: 3449 seconds
+System Capabilities - not advertised
+Enabled Capabilities - not advertised
+Management Addresses - not advertised
+Auto Negotiation - supported, enabled
+Physical media capabilities:
+    1000baseT(FD)
+Media Attachment Unit type - not advertised
+Vlan ID: - not advertised
+
+MED Information:
+
+    MED Codes:
+          (NP) Network Policy, (LI) Location Identification
+          (PS) Power Source Entity, (PD) Power Device
+          (IN) Inventory
+
+    Inventory information - not advertised
+    Capabilities: 
+    Device type: Endpoint Class I
+    Network Policies - not advertised
+    Power requirements - not advertised
+    Location - not advertised
+
+
+Total entries displayed: 7
 
 
 
@@ -250,7 +312,7 @@ Entry address(es):
   IP address: 10.20.99.77
 Platform: cisco WS-C2960C-8TC-L,  Capabilities: Switch IGMP 
 Interface: FastEthernet0/21,  Port ID (outgoing port): GigabitEthernet0/2
-Holdtime : 131 sec
+Holdtime : 174 sec
 
 Version :
 Cisco IOS Software, C2960C Software (C2960c405-UNIVERSALK9-M), Version 15.2(2)E6, RELEASE SOFTWARE (fc1)
@@ -275,7 +337,7 @@ Entry address(es):
   IP address: 10.20.99.187
 Platform: cisco WS-C2960CX-8PC-L,  Capabilities: Switch IGMP 
 Interface: FastEthernet0/23,  Port ID (outgoing port): GigabitEthernet0/10
-Holdtime : 162 sec
+Holdtime : 146 sec
 
 Version :
 Cisco IOS Software, C2960CX Software (C2960CX-UNIVERSALK9-M), Version 15.2(7)E1, RELEASE SOFTWARE (fc4)
@@ -299,7 +361,7 @@ Entry address(es):
   IP address: 10.20.99.132
 Platform: cisco WS-C2960CX-8TC-L,  Capabilities: Switch IGMP 
 Interface: GigabitEthernet0/1,  Port ID (outgoing port): GigabitEthernet0/9
-Holdtime : 175 sec
+Holdtime : 172 sec
 
 Version :
 Cisco IOS Software, C2960CX Software (C2960CX-UNIVERSALK9-M), Version 15.2(4)E6, RELEASE SOFTWARE (fc4)
@@ -324,7 +386,7 @@ Entry address(es):
   IP address: 10.13.1.252
 Platform: X1S/X1SP,  Capabilities: Host Phone 
 Interface: FastEthernet0/14,  Port ID (outgoing port): WAN PORT
-Holdtime : 151 sec
+Holdtime : 168 sec
 
 Version :
 2.4.12.2
@@ -341,7 +403,7 @@ Entry address(es):
   IP address: 10.13.0.13
 Platform: X1S/X1SP,  Capabilities: Host Phone 
 Interface: FastEthernet0/22,  Port ID (outgoing port): WAN PORT
-Holdtime : 170 sec
+Holdtime : 125 sec
 
 Version :
 2.4.12.2
@@ -358,7 +420,7 @@ Entry address(es):
   IP address: 10.13.0.215
 Platform: X1S/X1SP,  Capabilities: Host Phone 
 Interface: FastEthernet0/17,  Port ID (outgoing port): WAN PORT
-Holdtime : 168 sec
+Holdtime : 151 sec
 
 Version :
 2.4.12.2
@@ -378,11 +440,11 @@ Capability Codes: R - Router, T - Trans Bridge, B - Source Route Bridge
 
 Device ID        Local Intrfce     Holdtme    Capability  Platform  Port ID
 DEN-NSWS-82-99-77.kolmar.ru
-                 Fas 0/21          131              S I   WS-C2960C Gig 0/2
+                 Fas 0/21          174              S I   WS-C2960C Gig 0/2
 DEN-NSWS-92-99-187.kolmar.ru
-                 Fas 0/23          162              S I   WS-C2960C Gig 0/10
+                 Fas 0/23          146              S I   WS-C2960C Gig 0/10
 DEN-NSWS-93-99-132.kolmar.ru
-                 Gig 0/1           175              S I   WS-C2960C Gig 0/9
-X1S/X1SP         Fas 0/14          151              H P   X1S/X1SP  WAN PORT
-X1S/X1SP         Fas 0/22          170              H P   X1S/X1SP  WAN PORT
-X1S/X1SP         Fas 0/17          168              H P   X1S/X1SP  WAN PORT
+                 Gig 0/1           172              S I   WS-C2960C Gig 0/9
+X1S/X1SP         Fas 0/14          168              H P   X1S/X1SP  WAN PORT
+X1S/X1SP         Fas 0/22          125              H P   X1S/X1SP  WAN PORT
+X1S/X1SP         Fas 0/17          151              H P   X1S/X1SP  WAN PORT

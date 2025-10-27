@@ -14,9 +14,9 @@ System Name                       : DEN-NSWS-02-99-105
 System Location                   : 
 System Description                : MES2448B rev.B AC 52-port 1G/10G Managed Switch
 Logging Option                    : Flash Logging
-Device Uptime                     : 92 Days, 14 Hrs, 8 Mins, 23 Secs
+Device Uptime                     : 6 Days, 23 Hrs, 57 Mins, 41 Secs
 Login Authentication Mode         : Local
-Config Save Status                : Successful
+Config Save Status                : Not Initiated
 Remote Save Status                : Not Initiated
 Config Restore Status             : Not Initiated
 Traffic Separation Control        : none
@@ -125,8 +125,8 @@ $ show vlan
 
 --More--
                 
-                      gi 0/33, gi 0/38, gi 0/40, gi 0/42, gi 0/44, gi 0/47
-                      gi 0/48, te 0/1, te 0/2, te 0/3, te 0/4
+                      gi 0/29, gi 0/33, gi 0/38, gi 0/40, gi 0/42, gi 0/44
+                      gi 0/47, gi 0/48, te 0/1, te 0/2, te 0/3, te 0/4
 Untagged Ports      : None 
 Forbidden Ports     : None 
 Name                : Phone(Nerungry)
@@ -194,10 +194,11 @@ $ show interfaces status
 
 --More--
                 
-                      gi 0/21, gi 0/22, gi 0/23, gi 0/24, gi 0/25, gi 0/26
-                      gi 0/27, gi 0/28, gi 0/29, gi 0/30, gi 0/31, gi 0/32
-                      gi 0/33, gi 0/37, gi 0/38, gi 0/39, gi 0/40, gi 0/41
-                      gi 0/42, gi 0/43, gi 0/44, gi 0/45, gi 0/46, gi 0/47
+                      gi 0/20, gi 0/21, gi 0/22, gi 0/23, gi 0/24, gi 0/25
+                      gi 0/26, gi 0/27, gi 0/28, gi 0/29, gi 0/30, gi 0/31
+                      gi 0/32, gi 0/33, gi 0/37, gi 0/38, gi 0/39, gi 0/40
+                      gi 0/41, gi 0/42, gi 0/43, gi 0/44, gi 0/45, gi 0/46
+                      gi 0/47
 Forbidden Ports     : None 
 Name                : Users(Nerungry)
 Status              : Permanent
@@ -217,51 +218,51 @@ Vlan ID             : 1240
 Member Ports        : gi 0/14, gi 0/34, gi 0/35, gi 0/36, gi 0/48, te 0/1
 Untagged Ports      : gi 0/14, gi 0/34, gi 0/35, gi 0/36
 Forbidden Ports     : None 
+
+
+--More--
+                
+
+
+--More--
+                
+
+
+--More--
+                
+
+
+--More--
+                
+
+
+--More--
+                
+
+
+--More--
+                
+
+
+--More--
+                
+
+
+--More--
+                
+
+
+--More--
+                
+
+
+--More--
+                
+
+
+--More--
+                
 Name                : Admins
-
-
---More--
-                
-
-
---More--
-                
-
-
---More--
-                
-
-
---More--
-                
-
-
---More--
-                
-
-
---More--
-                
-
-
---More--
-                
-
-
---More--
-                
-
-
---More--
-                
-
-
---More--
-                
-
-
---More--
-                
 Status              : Permanent
 Egress Ethertype    : 0x8100
 Service Loopback Status   : Disabled 
@@ -276,8 +277,8 @@ Egress Ethertype    : 0x8100
 Service Loopback Status   : Disabled 
 ----------------------------------------------------
 Vlan ID             : 2001
-Member Ports        : gi 0/7, gi 0/48, te 0/1
-Untagged Ports      : gi 0/7
+Member Ports        : gi 0/48, te 0/1
+Untagged Ports      : None 
 Forbidden Ports     : None 
 Name                : Users(Endi)
 Status              : Permanent
@@ -285,36 +286,35 @@ Egress Ethertype    : 0x8100
 Service Loopback Status   : Disabled 
 ----------------------------------------------------
 Vlan ID             : 3040
+
+
+--More--
+                
+
+
+--More--
+                
+
+
+--More--
+                
+
+
+--More--
+                
+
+
+--More--
+                
+
+
+--More--
+                
+
+
+--More--
+                
 Member Ports        : gi 0/48, te 0/1
-
-
---More--
-                
-
-
---More--
-                
-
-
---More--
-                
-
-
---More--
-                
-
-
---More--
-                
-
-
---More--
-                
-
-
---More--
-                
-Untagged Ports      : None 
 
 
 --More--
@@ -339,6 +339,7 @@ $ show interfaces
 
 --More--
                 
+Member Ports        : None 
 Untagged Ports      : None 
 Forbidden Ports     : None 
 Name                : Wi-Fi_Den_Staff

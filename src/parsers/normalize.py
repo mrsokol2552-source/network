@@ -64,6 +64,15 @@ from typing import Any, Dict, List, Optional, Tuple
 
 ROLE_ORDER = ["core", "dist", "access", "wan", "dmz", "mgmt", "wifi"]
 
+def guess_site(hostname: str) -> str | None:
+    try:
+        pref = (hostname or "").split("-")[0]
+        if pref and pref.isalpha() and len(pref) >= 3:
+            return pref.upper()
+    except Exception:
+        return None
+    return None
+
 def zone_from_hostname(hostname: str) -> str | None:
     try:
         parts = (hostname or "").split("-")
@@ -223,7 +232,7 @@ class Normalizer:
                     cls = "wifi"
             node = {
                 "hostname": hn,
-                "site": d.site,
+                "site": d.site or guess_site(hn),
                 "zone": zone_from_hostname(hn),
                 "role": role,
                 "vendor": d.vendor,
@@ -269,7 +278,7 @@ class Normalizer:
                 }
 
                 # Если нет пира — допустим одностороннюю грань (для хоста/провайдера/подвисающих портов)
-                if not peer_hn:
+                if not peer_hn or peer_hn == hn:
                     out.warnings.append(f"edge_without_peer:{hn}:{name}")
                 else:
                     # Убедимся, что пиер существует в узлах; если нет — тоже варн
@@ -294,17 +303,20 @@ class Normalizer:
         # 4) Стабильная сортировка рёбер
         # Очистка и дедупликация рёбер: только связи между известными устройствами (без Wi‑Fi)
         cleaned: List[Dict[str, Any]] = []
-        seen: set[Tuple[str, str, str, str]] = set()
+        seen: set[Tuple[str, str]] = set()
         for e in out.edges:
             src = e.get("src")
             dst = e.get("dst")
             if not src or not dst:
                 continue
+            if src == dst:
+                continue
             if src not in out.nodes or dst not in out.nodes:
                 continue
             if out.nodes[src].get("class") == "wifi" or out.nodes[dst].get("class") == "wifi":
                 continue
-            key = tuple(sorted([src, dst])) + (str(e.get("src_intf") or ""), str(e.get("dst_intf") or ""))
+            a, b = sorted([src, dst])
+            key = (a, b)
             if key in seen:
                 continue
             seen.add(key)

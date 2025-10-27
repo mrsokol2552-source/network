@@ -13,9 +13,9 @@ Compiled Sat 17-Dec-16 00:36 by prod_rel_team
 ROM: Bootstrap program is C2960C boot loader
 BOOTLDR: C2960C Boot Loader (C2960c405-HBOOT-M) Version 12.2(55r)EX9, RELEASE SOFTWARE (fc1)
 
-DEN-NSWS-41-98-114 uptime is 2 weeks, 2 days, 2 hours, 41 minutes
+DEN-NSWS-41-98-114 uptime is 1 week, 2 hours, 16 minutes
 System returned to ROM by power-on
-System restarted at 13:51:35 YAKT Mon Sep 29 2025
+System restarted at 10:47:04 YAKT Mon Oct 20 2025
 System image file is "flash:/c2960c405-universalk9-mz.152-2.E6/c2960c405-universalk9-mz.152-2.E6.bin"
 Last reload reason: power-on
 
@@ -85,7 +85,7 @@ Entry address(es):
   IP address: 10.20.98.110
 Platform: cisco WS-C3850-24S,  Capabilities: Switch IGMP 
 Interface: GigabitEthernet0/1,  Port ID (outgoing port): GigabitEthernet1/0/7
-Holdtime : 164 sec
+Holdtime : 171 sec
 
 Version :
 Cisco IOS Software, Catalyst L3 Switch Software (CAT3K_CAA-UNIVERSALK9-M), Version 15.2(2)E, RELEASE SOFTWARE (fc3)
@@ -111,6 +111,6 @@ Capability Codes: R - Router, T - Trans Bridge, B - Source Route Bridge
 
 Device ID        Local Intrfce     Holdtme    Capability  Platform  Port ID
 DEN-NSWS-01-98-110.kolmar.ru
-                 Gig 0/1           164              S I   WS-C3850- Gig 1/0/7
+                 Gig 0/1           171              S I   WS-C3850- Gig 1/0/7
 
 Total cdp entries displayed : 1

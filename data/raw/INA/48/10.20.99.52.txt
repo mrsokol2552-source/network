@@ -13,7 +13,7 @@ Compiled Sat 17-Apr-21 07:21 by prod_rel_team
 ROM: Bootstrap program is c1000 boot loader
 BOOTLDR: C1000 Boot Loader (C1000-HBOOT-M) Version 15.2(7r)E3, RELEASE SOFTWARE (fc4)
 
-INA-NSWS-48-99-52 uptime is 1 week, 37 minutes
+INA-NSWS-48-99-52 uptime is 5 days, 2 hours, 44 minutes
 System returned to ROM by power-on
 System image file is "flash:/c1000-universalk9-mz.152-8.E/c1000-universalk9-mz.152-8.E.bin"
 Last reload reason: power-on
@@ -82,7 +82,7 @@ Technical Support: http://www.cisco.com/techsupport
 Copyright (c) 1986-2018 by Cisco Systems, Inc.
 Compiled Mon 22-Jan-18 07:16 by prod_rel_team
 
-Time remaining: 115 seconds
+Time remaining: 97 seconds
 System Capabilities: B
 Enabled Capabilities: B
 Management Addresses:
@@ -97,14 +97,14 @@ Media Attachment Unit type: 16
 Vlan ID: 1
 
 ------------------------------------------------
-Local Intf: Gi1/0/2
-Chassis id: c84d.4432.af7b
-Port id: c84d.4432.af7b
+Local Intf: Gi1/0/7
+Chassis id: e0d5.5e19.9f76
+Port id: e0d5.5e19.9f76
 Port Description - not advertised
 System Name - not advertised
 System Description - not advertised
 
-Time remaining: 2973 seconds
+Time remaining: 3242 seconds
 System Capabilities - not advertised
 Enabled Capabilities - not advertised
 Management Addresses - not advertised
@@ -136,7 +136,7 @@ Port Description - not advertised
 System Name - not advertised
 System Description - not advertised
 
-Time remaining: 3105 seconds
+Time remaining: 3586 seconds
 System Capabilities - not advertised
 Enabled Capabilities - not advertised
 Management Addresses - not advertised
@@ -172,7 +172,7 @@ Entry address(es):
   IP address: 10.20.96.67
 Platform: cisco WS-C2960C-12PC-L,  Capabilities: Switch IGMP 
 Interface: GigabitEthernet1/0/16,  Port ID (outgoing port): FastEthernet0/10
-Holdtime : 140 sec
+Holdtime : 175 sec
 
 Version :
 Cisco IOS Software, C2960C Software (C2960c405-UNIVERSALK9-M), Version 15.2(2)E8, RELEASE SOFTWARE (fc1)
@@ -199,6 +199,6 @@ Capability Codes: R - Router, T - Trans Bridge, B - Source Route Bridge
 
 Device ID        Local Intrfce     Holdtme    Capability  Platform  Port ID
 INA-NSWS-48-96-67.kolmar.ru
-                 Gig 1/0/16        140              S I   WS-C2960C Fas 0/10
+                 Gig 1/0/16        175              S I   WS-C2960C Fas 0/10
 
 Total cdp entries displayed : 1

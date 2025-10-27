@@ -15,7 +15,7 @@ System Name                       : DEN-NSWS-15-99-18
 System Location                   : 
 System Description                : MES2448B rev.B AC 52-port 1G/10G Managed Switch
 Logging Option                    : Flash Logging
-Device Uptime                     : 57 Days, 9 Hrs, 15 Mins, 39 Secs
+Device Uptime                     : 69 Days, 2 Hrs, 16 Mins, 23 Secs
 Login Authentication Mode         : Local
 Config Save Status                : Successful
 Remote Save Status                : Not Initiated
@@ -109,7 +109,7 @@ Technical Support: http://www.cisco.com/techsupport
 Copyright (c) 1986-2014 by Cisco Systems, Inc.
 Compiled Wed 09-Apr-14 03:40 by prod_rel_team
 Local Intf                    : te 0/4
-Time Remaining                : 108 Seconds 
+Time Remaining                : 101 Seconds 
 System Capabilities Supported : B               
 System Capabilities Enabled   : B
 
@@ -258,6 +258,7 @@ $ show interfaces status
 
 --More--
                 
+Status              : Permanent
 Egress Ethertype    : 0x8100
 Service Loopback Status   : Disabled 
 ----------------------------------------------------
@@ -281,51 +282,51 @@ Member Ports        : gi 0/1, gi 0/4, gi 0/5, gi 0/7, gi 0/9, gi 0/10
                       te 0/4
 Untagged Ports      : gi 0/1, gi 0/4, gi 0/5, gi 0/7, gi 0/9, gi 0/10
                       gi 0/11, gi 0/12, gi 0/13, gi 0/14, gi 0/15, gi 0/16
+
+
+--More--
+                
+
+
+--More--
+                
+
+
+--More--
+                
+
+
+--More--
+                
+
+
+--More--
+                
+
+
+--More--
+                
+
+
+--More--
+                
+
+
+--More--
+                
+
+
+--More--
+                
+
+
+--More--
+                
+
+
+--More--
+                
                       gi 0/17, gi 0/18, gi 0/19, gi 0/21, gi 0/22, gi 0/24
-
-
---More--
-                
-
-
---More--
-                
-
-
---More--
-                
-
-
---More--
-                
-
-
---More--
-                
-
-
---More--
-                
-
-
---More--
-                
-
-
---More--
-                
-
-
---More--
-                
-
-
---More--
-                
-
-
---More--
-                
                       gi 0/25, gi 0/26, gi 0/27, gi 0/28, gi 0/29, gi 0/30
                       gi 0/31, gi 0/32, gi 0/35, gi 0/36, gi 0/37, gi 0/38
                       gi 0/39, gi 0/40, gi 0/41, gi 0/42, gi 0/43, gi 0/44
@@ -349,36 +350,35 @@ Vlan ID             : 143
 Member Ports        : gi 0/6, te 0/1
 Untagged Ports      : None 
 Forbidden Ports     : None 
+
+
+--More--
+                
+
+
+--More--
+                
+
+
+--More--
+                
+
+
+--More--
+                
+
+
+--More--
+                
+
+
+--More--
+                
+
+
+--More--
+                
 Name                : TCPD_OF_P-t-P
-
-
---More--
-                
-
-
---More--
-                
-
-
---More--
-                
-
-
---More--
-                
-
-
---More--
-                
-
-
---More--
-                
-
-
---More--
-                
-Status              : Permanent
 
 
 --More--
@@ -403,6 +403,7 @@ $ show interfaces
 
 --More--
                 
+Name                : 
 Status              : Permanent
 Egress Ethertype    : 0x8100
 Service Loopback Status   : Disabled 
@@ -426,52 +427,51 @@ Egress Ethertype    : 0x8100
 Service Loopback Status   : Disabled 
 ----------------------------------------------------
 Vlan ID             : 1930
+
+
+--More--
+                
+
+
+--More--
+                
+
+
+--More--
+                
+
+
+--More--
+                
+
+
+--More--
+                
+
+
+--More--
+                
+
+
+--More--
+                
+
+
+--More--
+                
+
+
+--More--
+                
+
+
+--More--
+                
+
+
+--More--
+                
 Member Ports        : te 0/1
-
-
---More--
-                
-
-
---More--
-                
-
-
---More--
-                
-
-
---More--
-                
-
-
---More--
-                
-
-
---More--
-                
-
-
---More--
-                
-
-
---More--
-                
-
-
---More--
-                
-
-
---More--
-                
-
-
---More--
-                
-Untagged Ports      : None 
 
 
 --More--

@@ -13,7 +13,7 @@ Compiled Wed 12-Jul-17 15:29 by prod_rel_team
 ROM: Bootstrap program is C2960 boot loader
 BOOTLDR: C2960 Boot Loader (C2960-HBOOT-M) Version 15.0(2r)EZ1, RELEASE SOFTWARE (fc1)
 
-NER-NSWS-09-99-75 uptime is 3 weeks, 5 days, 6 hours, 27 minutes
+NER-NSWS-09-99-75 uptime is 5 weeks, 3 days, 2 hours, 56 minutes
 System returned to ROM by power-on
 System image file is "flash:/c2960-lanbasek9-mz.152-2.E7/c2960-lanbasek9-mz.152-2.E7.bin"
 Last reload reason: power-on
@@ -84,7 +84,7 @@ Technical Support: http://www.cisco.com/techsupport
 Copyright (c) 1986-2021 by Cisco Systems, Inc.
 Compiled Tue 19-Oct-21 03:16 by mcpr
 
-Time remaining: 92 seconds
+Time remaining: 111 seconds
 System Capabilities: B,R
 Enabled Capabilities: B,R
 Management Addresses:
@@ -109,7 +109,7 @@ System Name: OFFICEHALLWAY-20LVL
 System Description: 
 UAP-AC-LR, 6.6.77.15402
 
-Time remaining: 110 seconds
+Time remaining: 119 seconds
 System Capabilities: B,W,R,S
 Enabled Capabilities: B,W,R
 Management Addresses:
@@ -144,7 +144,7 @@ System Name: OFFICECONFHALL0LVL
 System Description: 
 UAP-AC-LR, 6.6.77.15402
 
-Time remaining: 103 seconds
+Time remaining: 109 seconds
 System Capabilities: B,W,R,S
 Enabled Capabilities: B,W,R
 Management Addresses:

@@ -138,19 +138,6 @@ GigabitEthernet 1/12    enabled  Auto            disabled      9600       Discar
 
 
 $ show lldp neighbors
-Local Interface     : GigabitEthernet 1/10
-Chassis ID          : 00-1D-77-29-21-61
-Port ID             : 10
-Port Description    : GigabitEthernet 1/10
-System Name         : INA-NSWS-125-99-162
-System Description  : V2.1 2021-04-25T04:45:04-07:00
-System Capabilities : Bridge(+)
-Management Address  : 192.168.5.103 (IPv4)
-PoE Type            : PSE Device
-PoE Source          : Primary Power Source
-PoE Power           : 0.0 [W]
-PoE Priority        : Low Priority
-
 Local Interface     : GigabitEthernet 1/12
 Chassis ID          : CC-9D-A2-A6-E4-00
 Port ID             : te 0/1

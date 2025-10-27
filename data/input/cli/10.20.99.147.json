@@ -8,7 +8,7 @@
       {
         "Neighbor": "DEN-NSWS-04-99-147",
         "LocalInterface": "uptime is",
-        "NeighborPort": "23 weeks,",
+        "NeighborPort": "25 weeks,",
         "_source_file": "C:\\Users\\zhiltsov.aa\\Desktop\\net-auto-mermaid\\data\\raw\\DEN\\04\\10.20.99.147.txt",
         "_template": "cisco_ios_show_cdp_neighbors.template"
       },
@@ -30,48 +30,11 @@
         "_template": "cisco_ios_show_cdp_neighbors_detail.template"
       }
     ],
-    "cisco_ios_show_lldp_neighbors_detail": [
-      {
-        "LocalInterface": "",
-        "NeighborName": "",
-        "NeighborPort": "Fa0/22",
-        "_source_file": "C:\\Users\\zhiltsov.aa\\Desktop\\net-auto-mermaid\\data\\raw\\DEN\\04\\10.20.99.147.txt",
-        "_template": "cisco_ios_show_lldp_neighbors_detail.template"
-      },
-      {
-        "LocalInterface": "",
-        "NeighborName": "DEN-NSWS-04-99-15.kolmar.ru",
-        "NeighborPort": "0c38.3e10.8590",
-        "_source_file": "C:\\Users\\zhiltsov.aa\\Desktop\\net-auto-mermaid\\data\\raw\\DEN\\04\\10.20.99.147.txt",
-        "_template": "cisco_ios_show_lldp_neighbors_detail.template"
-      },
-      {
-        "LocalInterface": "",
-        "NeighborName": "X1S/X1SP",
-        "NeighborPort": "f832.e488.3d7a",
-        "_source_file": "C:\\Users\\zhiltsov.aa\\Desktop\\net-auto-mermaid\\data\\raw\\DEN\\04\\10.20.99.147.txt",
-        "_template": "cisco_ios_show_lldp_neighbors_detail.template"
-      },
-      {
-        "LocalInterface": "",
-        "NeighborName": "",
-        "NeighborPort": "1c1b.0dcf.a5f1",
-        "_source_file": "C:\\Users\\zhiltsov.aa\\Desktop\\net-auto-mermaid\\data\\raw\\DEN\\04\\10.20.99.147.txt",
-        "_template": "cisco_ios_show_lldp_neighbors_detail.template"
-      },
-      {
-        "LocalInterface": "",
-        "NeighborName": "",
-        "NeighborPort": "f832.e488.3c9d",
-        "_source_file": "C:\\Users\\zhiltsov.aa\\Desktop\\net-auto-mermaid\\data\\raw\\DEN\\04\\10.20.99.147.txt",
-        "_template": "cisco_ios_show_lldp_neighbors_detail.template"
-      }
-    ],
     "cisco_ios_show_version": [
       {
         "Version": "12.2(55)SE7",
         "Model": "",
-        "Uptime": "2 years, 23 weeks, 3 days, 4 hours, 2 minutes",
+        "Uptime": "2 years, 25 weeks, 1 day, 31 minutes",
         "_source_file": "C:\\Users\\zhiltsov.aa\\Desktop\\net-auto-mermaid\\data\\raw\\DEN\\04\\10.20.99.147.txt",
         "_template": "cisco_ios_show_version.template"
       },

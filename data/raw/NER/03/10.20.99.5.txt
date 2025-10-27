@@ -13,7 +13,7 @@ Image text-base: 0x00003000, data-base: 0x01000000
 ROM: Bootstrap program is C2960 boot loader
 BOOTLDR: C2960 Boot Loader (C2960-HBOOT-M) Version 12.2(46r)SE, RELEASE SOFTWARE (fc2)
 
-NER-NSWS-03-99-5 uptime is 3 weeks, 5 days, 6 hours, 27 minutes
+NER-NSWS-03-99-5 uptime is 5 weeks, 3 days, 2 hours, 57 minutes
 System returned to ROM by power-on
 System image file is "flash:/c2960-lanlitek9-mz.122-46.SE/c2960-lanlitek9-mz.122-46.SE.bin"
 
@@ -78,7 +78,7 @@ System Name: X1S/X1SP
 System Description: 
 Version:2.4.12.2
 
-Time remaining: 50 seconds
+Time remaining: 25 seconds
 System Capabilities: B,T
 Enabled Capabilities: B,T
 Management Addresses:
@@ -97,7 +97,7 @@ System Name: X1S/X1SP
 System Description: 
 Version:2.4.12.2
 
-Time remaining: 55 seconds
+Time remaining: 50 seconds
 System Capabilities: B,T
 Enabled Capabilities: B,T
 Management Addresses:
@@ -116,7 +116,7 @@ System Name: X1S/X1SP
 System Description: 
 Version:2.4.12.2
 
-Time remaining: 20 seconds
+Time remaining: 8 seconds
 System Capabilities: B,T
 Enabled Capabilities: B,T
 Management Addresses:
@@ -135,7 +135,7 @@ System Name: X6U-V2
 System Description: 
 Version:2.12.20
 
-Time remaining: 146 seconds
+Time remaining: 159 seconds
 System Capabilities: B,T
 Enabled Capabilities: B,T
 Management Addresses:
@@ -154,7 +154,7 @@ System Name: X1S/X1SP
 System Description: 
 Version:2.4.12.2
 
-Time remaining: 54 seconds
+Time remaining: 13 seconds
 System Capabilities: B,T
 Enabled Capabilities: B,T
 Management Addresses:
@@ -171,7 +171,7 @@ Port Description - not advertised
 System Name - not advertised
 System Description - not advertised
 
-Time remaining: 3364 seconds
+Time remaining: 3062 seconds
 System Capabilities - not advertised
 Enabled Capabilities - not advertised
 Management Addresses - not advertised
@@ -190,7 +190,7 @@ System Name: X6U-V2
 System Description: 
 Version:2.12.20
 
-Time remaining: 177 seconds
+Time remaining: 175 seconds
 System Capabilities: B,T
 Enabled Capabilities: B,T
 Management Addresses:
@@ -209,7 +209,7 @@ System Name: X6U-V2
 System Description: 
 Version:2.12.20
 
-Time remaining: 132 seconds
+Time remaining: 124 seconds
 System Capabilities: B,T
 Enabled Capabilities: B,T
 Management Addresses:
@@ -228,7 +228,7 @@ System Name: X6U-V2
 System Description: 
 Version:2.12.20
 
-Time remaining: 121 seconds
+Time remaining: 173 seconds
 System Capabilities: B,T
 Enabled Capabilities: B,T
 Management Addresses:
@@ -247,7 +247,7 @@ System Name: X1S/X1SP
 System Description: 
 Version:2.4.12.2
 
-Time remaining: 55 seconds
+Time remaining: 2 seconds
 System Capabilities: B,T
 Enabled Capabilities: B,T
 Management Addresses:
@@ -266,30 +266,13 @@ System Name: X6U-V2
 System Description: 
 Version:2.12.20
 
-Time remaining: 145 seconds
+Time remaining: 164 seconds
 System Capabilities: B,T
 Enabled Capabilities: B,T
 Management Addresses:
     IP: 10.13.0.206
 Auto Negotiation - not supported
 Physical media capabilities - not advertised
-Media Attachment Unit type - not advertised
----------------------------------------------
-
-
-Chassis id: NER-NB01487
-Port id: 3429.8f75.2385
-Port Description - not advertised
-System Name - not advertised
-System Description - not advertised
-
-Time remaining: 3076 seconds
-System Capabilities - not advertised
-Enabled Capabilities - not advertised
-Management Addresses - not advertised
-Auto Negotiation - supported, enabled
-Physical media capabilities:
-    1000baseT(FD)
 Media Attachment Unit type - not advertised
 ---------------------------------------------
 
@@ -302,7 +285,7 @@ System Name: X1S/X1SP
 System Description: 
 Version:2.4.12.2
 
-Time remaining: 32 seconds
+Time remaining: 17 seconds
 System Capabilities: B,T
 Enabled Capabilities: B,T
 Management Addresses:
@@ -324,7 +307,7 @@ Technical Support: http://www.cisco.com/techsupport
 Copyright (c) 1986-2021 by Cisco Systems, Inc.
 Compiled Tue 19-Oct-21 03:16 by mcpr
 
-Time remaining: 94 seconds
+Time remaining: 112 seconds
 System Capabilities: B,R
 Enabled Capabilities: B,R
 Management Addresses:
@@ -346,7 +329,24 @@ Port Description - not advertised
 System Name - not advertised
 System Description - not advertised
 
-Time remaining: 3291 seconds
+Time remaining: 2761 seconds
+System Capabilities - not advertised
+Enabled Capabilities - not advertised
+Management Addresses - not advertised
+Auto Negotiation - supported, enabled
+Physical media capabilities:
+    1000baseT(FD)
+Media Attachment Unit type - not advertised
+---------------------------------------------
+
+
+Chassis id: 94c6.9179.02c6
+Port id: 94c6.9179.02c6
+Port Description - not advertised
+System Name - not advertised
+System Description - not advertised
+
+Time remaining: 3084 seconds
 System Capabilities - not advertised
 Enabled Capabilities - not advertised
 Management Addresses - not advertised
@@ -363,24 +363,7 @@ Port Description - not advertised
 System Name - not advertised
 System Description - not advertised
 
-Time remaining: 2939 seconds
-System Capabilities - not advertised
-Enabled Capabilities - not advertised
-Management Addresses - not advertised
-Auto Negotiation - supported, enabled
-Physical media capabilities:
-    1000baseT(FD)
-Media Attachment Unit type - not advertised
----------------------------------------------
-
-
-Chassis id: 50e5.49d3.7423
-Port id: 50e5.49d3.7423
-Port Description - not advertised
-System Name - not advertised
-System Description - not advertised
-
-Time remaining: 2790 seconds
+Time remaining: 3530 seconds
 System Capabilities - not advertised
 Enabled Capabilities - not advertised
 Management Addresses - not advertised
@@ -397,7 +380,7 @@ Port Description - not advertised
 System Name - not advertised
 System Description - not advertised
 
-Time remaining: 3231 seconds
+Time remaining: 2749 seconds
 System Capabilities - not advertised
 Enabled Capabilities - not advertised
 Management Addresses - not advertised
@@ -408,13 +391,30 @@ Media Attachment Unit type - not advertised
 ---------------------------------------------
 
 
-Chassis id: 94c6.9181.80e5
-Port id: 94c6.9181.80e5
+Chassis id: 50e5.49d3.7423
+Port id: 50e5.49d3.7423
 Port Description - not advertised
 System Name - not advertised
 System Description - not advertised
 
-Time remaining: 3193 seconds
+Time remaining: 3154 seconds
+System Capabilities - not advertised
+Enabled Capabilities - not advertised
+Management Addresses - not advertised
+Auto Negotiation - supported, enabled
+Physical media capabilities:
+    1000baseT(FD)
+Media Attachment Unit type - not advertised
+---------------------------------------------
+
+
+Chassis id: 448a.5bd5.ddc9
+Port id: 448a.5bd5.ddc9
+Port Description - not advertised
+System Name - not advertised
+System Description - not advertised
+
+Time remaining: 3239 seconds
 System Capabilities - not advertised
 Enabled Capabilities - not advertised
 Management Addresses - not advertised
@@ -436,7 +436,7 @@ Entry address(es):
   IP address: 10.20.96.4
 Platform: cisco C9200-24P,  Capabilities: Router Switch IGMP 
 Interface: GigabitEthernet0/2,  Port ID (outgoing port): GigabitEthernet1/0/11
-Holdtime : 145 sec
+Holdtime : 158 sec
 
 Version :
 Cisco IOS Software [Amsterdam], Catalyst L3 Switch Software (CAT9K_LITE_IOSXE), Version 17.3.4b, RELEASE SOFTWARE (fc1)
@@ -454,10 +454,10 @@ Management address(es):
 -------------------------
 Device ID: X6U-V2
 Entry address(es): 
-  IP address: 10.13.1.211
+  IP address: 10.13.0.206
 Platform: X6U-V2,  Capabilities: Host Phone 
-Interface: FastEthernet0/17,  Port ID (outgoing port): WAN PORT
-Holdtime : 143 sec
+Interface: FastEthernet0/46,  Port ID (outgoing port): WAN PORT
+Holdtime : 179 sec
 
 Version :
 2.12.20
@@ -468,10 +468,10 @@ Management address(es):
 -------------------------
 Device ID: X6U-V2
 Entry address(es): 
-  IP address: 10.13.0.206
+  IP address: 10.13.1.211
 Platform: X6U-V2,  Capabilities: Host Phone 
-Interface: FastEthernet0/46,  Port ID (outgoing port): WAN PORT
-Holdtime : 168 sec
+Interface: FastEthernet0/17,  Port ID (outgoing port): WAN PORT
+Holdtime : 163 sec
 
 Version :
 2.12.20
@@ -485,7 +485,7 @@ Entry address(es):
   IP address: 10.13.1.229
 Platform: X6U-V2,  Capabilities: Host Phone 
 Interface: GigabitEthernet0/1,  Port ID (outgoing port): WAN PORT
-Holdtime : 147 sec
+Holdtime : 174 sec
 
 Version :
 2.12.20
@@ -499,7 +499,7 @@ Entry address(es):
   IP address: 10.13.1.249
 Platform: X6U-V2,  Capabilities: Host Phone 
 Interface: FastEthernet0/22,  Port ID (outgoing port): WAN PORT
-Holdtime : 145 sec
+Holdtime : 173 sec
 
 Version :
 2.12.20
@@ -513,7 +513,7 @@ Entry address(es):
   IP address: 10.13.1.236
 Platform: X6U-V2,  Capabilities: Host Phone 
 Interface: FastEthernet0/10,  Port ID (outgoing port): WAN PORT
-Holdtime : 129 sec
+Holdtime : 150 sec
 
 Version :
 2.12.20
@@ -527,7 +527,7 @@ Entry address(es):
   IP address: 10.13.1.124
 Platform: X6U-V2,  Capabilities: Host Phone 
 Interface: FastEthernet0/26,  Port ID (outgoing port): WAN PORT
-Holdtime : 124 sec
+Holdtime : 143 sec
 
 Version :
 2.12.20
@@ -541,7 +541,7 @@ Entry address(es):
   IP address: 10.13.1.95
 Platform: X1S/X1SP,  Capabilities: Host Phone 
 Interface: FastEthernet0/43,  Port ID (outgoing port): WAN PORT
-Holdtime : 146 sec
+Holdtime : 173 sec
 
 Version :
 2.4.12.2
@@ -555,7 +555,7 @@ Entry address(es):
   IP address: 10.13.1.24
 Platform: X1S/X1SP,  Capabilities: Host Phone 
 Interface: FastEthernet0/30,  Port ID (outgoing port): WAN PORT
-Holdtime : 156 sec
+Holdtime : 144 sec
 
 Version :
 2.4.12.2
@@ -569,7 +569,7 @@ Entry address(es):
   IP address: 10.13.1.182
 Platform: X1S/X1SP,  Capabilities: Host Phone 
 Interface: FastEthernet0/34,  Port ID (outgoing port): WAN PORT
-Holdtime : 151 sec
+Holdtime : 147 sec
 
 Version :
 2.4.12.2
@@ -583,7 +583,7 @@ Entry address(es):
   IP address: 10.13.1.203
 Platform: X1S/X1SP,  Capabilities: Host Phone 
 Interface: FastEthernet0/48,  Port ID (outgoing port): WAN PORT
-Holdtime : 131 sec
+Holdtime : 164 sec
 
 Version :
 2.4.12.2
@@ -597,7 +597,7 @@ Entry address(es):
   IP address: 10.13.1.226
 Platform: X1S/X1SP,  Capabilities: Host Phone 
 Interface: FastEthernet0/15,  Port ID (outgoing port): WAN PORT
-Holdtime : 119 sec
+Holdtime : 157 sec
 
 Version :
 2.4.12.2
@@ -613,15 +613,15 @@ Capability Codes: R - Router, T - Trans Bridge, B - Source Route Bridge
 
 Device ID        Local Intrfce     Holdtme    Capability  Platform  Port ID
 NER-NSWR-01-96-4.kolmar.ru
-                 Gig 0/2           145          R S I     C9200-24P Gig 1/0/11
-X6U-V2           Fas 0/17          143           H P      X6U-V2    WAN PORT
-X6U-V2           Fas 0/46          167           H P      X6U-V2    WAN PORT
-X6U-V2           Gig 0/1           147           H P      X6U-V2    WAN PORT
-X6U-V2           Fas 0/22          145           H P      X6U-V2    WAN PORT
-X6U-V2           Fas 0/10          129           H P      X6U-V2    WAN PORT
-X6U-V2           Fas 0/26          124           H P      X6U-V2    WAN PORT
-X1S/X1SP         Fas 0/43          146           H P      X1S/X1SP  WAN PORT
-X1S/X1SP         Fas 0/30          156           H P      X1S/X1SP  WAN PORT
-X1S/X1SP         Fas 0/34          151           H P      X1S/X1SP  WAN PORT
-X1S/X1SP         Fas 0/48          131           H P      X1S/X1SP  WAN PORT
-X1S/X1SP         Fas 0/15          119           H P      X1S/X1SP  WAN PORT
+                 Gig 0/2           158          R S I     C9200-24P Gig 1/0/11
+X6U-V2           Fas 0/46          178           H P      X6U-V2    WAN PORT
+X6U-V2           Fas 0/17          163           H P      X6U-V2    WAN PORT
+X6U-V2           Gig 0/1           174           H P      X6U-V2    WAN PORT
+X6U-V2           Fas 0/22          173           H P      X6U-V2    WAN PORT
+X6U-V2           Fas 0/10          150           H P      X6U-V2    WAN PORT
+X6U-V2           Fas 0/26          143           H P      X6U-V2    WAN PORT
+X1S/X1SP         Fas 0/43          173           H P      X1S/X1SP  WAN PORT
+X1S/X1SP         Fas 0/30          144           H P      X1S/X1SP  WAN PORT
+X1S/X1SP         Fas 0/34          147           H P      X1S/X1SP  WAN PORT
+X1S/X1SP         Fas 0/48          164           H P      X1S/X1SP  WAN PORT
+X1S/X1SP         Fas 0/15          157           H P      X1S/X1SP  WAN PORT

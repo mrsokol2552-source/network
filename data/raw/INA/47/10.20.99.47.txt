@@ -13,9 +13,9 @@ Compiled Mon 08-Mar-21 09:07 by prod_rel_team
 ROM: Bootstrap program is c1000 boot loader
 BOOTLDR: C1000 Boot Loader (C1000-HBOOT-M) Version 15.2(7r)E3, RELEASE SOFTWARE (fc4)
 
-INA-NSWS-47-99-47 uptime is 1 week, 37 minutes
+INA-NSWS-47-99-47 uptime is 5 days, 2 hours, 44 minutes
 System returned to ROM by power-on
-System restarted at 15:55:49 YAKT Wed Oct 8 2025
+System restarted at 10:18:39 YAKT Wed Oct 22 2025
 System image file is "flash:/c1000-universalk9-mz.152-7.E4/c1000-universalk9-mz.152-7.E4.bin"
 Last reload reason: power-on
 
@@ -83,7 +83,7 @@ Technical Support: http://www.cisco.com/techsupport
 Copyright (c) 1986-2018 by Cisco Systems, Inc.
 Compiled Thu 05-Apr-18 03:25 by prod_rel_team
 
-Time remaining: 106 seconds
+Time remaining: 90 seconds
 System Capabilities: B,R
 Enabled Capabilities: B
 Management Addresses:
@@ -98,40 +98,8 @@ Physical media capabilities:
 Media Attachment Unit type: 30
 Vlan ID: 1
 
-------------------------------------------------
-Local Intf: Gi1/0/6
-Chassis id: d8bb.c119.4d4d
-Port id: d8bb.c119.4d4d
-Port Description - not advertised
-System Name - not advertised
-System Description - not advertised
 
-Time remaining: 2982 seconds
-System Capabilities - not advertised
-Enabled Capabilities - not advertised
-Management Addresses - not advertised
-Auto Negotiation - supported, enabled
-Physical media capabilities:
-    1000baseT(FD)
-Media Attachment Unit type - not advertised
-Vlan ID: - not advertised
-
-MED Information:
-
-    MED Codes:
-          (NP) Network Policy, (LI) Location Identification
-          (PS) Power Source Entity, (PD) Power Device
-          (IN) Inventory
-
-    Inventory information - not advertised
-    Capabilities: 
-    Device type: Endpoint Class I
-    Network Policies - not advertised
-    Power requirements - not advertised
-    Location - not advertised
-
-
-Total entries displayed: 2
+Total entries displayed: 1
 
 
 
@@ -142,7 +110,7 @@ Entry address(es):
   IP address: 10.20.96.63
 Platform: cisco WS-C2960CX-8PC-L,  Capabilities: Switch IGMP 
 Interface: GigabitEthernet1/0/9,  Port ID (outgoing port): GigabitEthernet0/7
-Holdtime : 169 sec
+Holdtime : 159 sec
 
 Version :
 Cisco IOS Software, C2960CX Software (C2960CX-UNIVERSALK9-M), Version 15.2(4)E6, RELEASE SOFTWARE (fc4)
@@ -169,6 +137,6 @@ Capability Codes: R - Router, T - Trans Bridge, B - Source Route Bridge
 
 Device ID        Local Intrfce     Holdtme    Capability  Platform  Port ID
 INA-NSWS-47-96-63.kolmar.ru
-                 Gig 1/0/9         169              S I   WS-C2960C Gig 0/7
+                 Gig 1/0/9         159              S I   WS-C2960C Gig 0/7
 
 Total cdp entries displayed : 1

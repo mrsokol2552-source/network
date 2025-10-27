@@ -13,7 +13,7 @@ Compiled Thu 14-May-15 03:20 by prod_rel_team
 ROM: Bootstrap program is C2960C boot loader
 BOOTLDR: C2960C Boot Loader (C2960c405-HBOOT-M) Version 12.2(55r)EX9, RELEASE SOFTWARE (fc1)
 
-DEN-NSWS-28-98-105 uptime is 13 weeks, 2 days, 6 minutes
+DEN-NSWS-28-98-105 uptime is 14 weeks, 6 days, 20 hours, 36 minutes
 System returned to ROM by power-on
 System restarted at 16:24:25 YAKT Mon Jul 14 2025
 System image file is "flash:/c2960c405-universalk9-mz.150-2.SE8/c2960c405-universalk9-mz.150-2.SE8.bin"
@@ -84,7 +84,7 @@ Entry address(es):
   IP address: 169.254.17.206
 Platform: NanoStation M2,  Capabilities: Trans-Bridge 
 Interface: FastEthernet0/2,  Port ID (outgoing port): br0
-Holdtime : 92 sec
+Holdtime : 81 sec
 
 Version :
 XW.v6.1.9
@@ -102,7 +102,7 @@ Entry address(es):
   IP address: 169.254.237.122
 Platform: NanoStation M2,  Capabilities: Trans-Bridge 
 Interface: FastEthernet0/2,  Port ID (outgoing port): br0
-Holdtime : 91 sec
+Holdtime : 84 sec
 
 Version :
 XW.v6.2.0
@@ -119,7 +119,7 @@ Entry address(es):
   IP address: 10.20.98.106
 Platform: cisco WS-C2960CX-8PC-L,  Capabilities: Switch IGMP 
 Interface: GigabitEthernet0/2,  Port ID (outgoing port): GigabitEthernet0/11
-Holdtime : 143 sec
+Holdtime : 165 sec
 
 Version :
 Cisco IOS Software, C2960CX Software (C2960CX-UNIVERSALK9-M), Version 15.2(4)E6, RELEASE SOFTWARE (fc4)
@@ -144,7 +144,7 @@ Entry address(es):
   IP address: 10.20.98.110
 Platform: cisco WS-C3850-24S,  Capabilities: Switch IGMP 
 Interface: GigabitEthernet0/1,  Port ID (outgoing port): GigabitEthernet1/0/5
-Holdtime : 171 sec
+Holdtime : 166 sec
 
 Version :
 Cisco IOS Software, Catalyst L3 Switch Software (CAT3K_CAA-UNIVERSALK9-M), Version 15.2(2)E, RELEASE SOFTWARE (fc3)
@@ -170,9 +170,9 @@ Capability Codes: R - Router, T - Trans Bridge, B - Source Route Bridge
                   D - Remote, C - CVTA, M - Two-port Mac Relay 
 
 Device ID        Local Intrfce     Holdtme    Capability  Platform  Port ID
-NanoStation M2   Fas 0/2           92                T    NanoStati br0
-SB_VISHKA        Fas 0/2           91                T    NanoStati br0
+NanoStation M2   Fas 0/2           81                T    NanoStati br0
+SB_VISHKA        Fas 0/2           84                T    NanoStati br0
 DEN-NSWS-27-98-106.kolmar.ru
-                 Gig 0/2           143              S I   WS-C2960C Gig 0/11
+                 Gig 0/2           165              S I   WS-C2960C Gig 0/11
 DEN-NSWS-01-98-110.kolmar.ru
-                 Gig 0/1           171              S I   WS-C3850- Gig 1/0/5
+                 Gig 0/1           166              S I   WS-C3850- Gig 1/0/5

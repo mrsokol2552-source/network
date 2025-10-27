@@ -13,7 +13,7 @@ Compiled Mon 22-Jan-18 07:09 by prod_rel_team
 ROM: Bootstrap program is C2960 boot loader
 BOOTLDR: C2960 Boot Loader (C2960-HBOOT-M) Version 15.0(2r)EZ1, RELEASE SOFTWARE (fc1)
 
-INA-NSWS-03-99-10 uptime is 29 weeks, 3 hours, 28 minutes
+INA-NSWS-03-99-10 uptime is 30 weeks, 4 days, 23 hours, 57 minutes
 System returned to ROM by power-on
 System restarted at 13:01:16 YAKT Wed Mar 26 2025
 System image file is "flash:/c2960-lanbasek9-mz.152-2.E8/c2960-lanbasek9-mz.152-2.E8.bin"
@@ -80,7 +80,7 @@ Port Description - not advertised
 System Name - not advertised
 System Description - not advertised
 
-Time remaining: 106 seconds
+Time remaining: 109 seconds
 System Capabilities - not advertised
 Enabled Capabilities - not advertised
 Management Addresses - not advertised
@@ -102,7 +102,7 @@ Technical Support: http://www.cisco.com/techsupport
 Copyright (c) 1986-2023 by Cisco Systems, Inc.
 Compiled Tue 14-Mar-23 18:26 by mcpre
 
-Time remaining: 109 seconds
+Time remaining: 114 seconds
 System Capabilities: B,R
 Enabled Capabilities: B,R
 Management Addresses:
@@ -121,7 +121,7 @@ Port Description - not advertised
 System Name - not advertised
 System Description - not advertised
 
-Time remaining: 3392 seconds
+Time remaining: 3253 seconds
 System Capabilities - not advertised
 Enabled Capabilities - not advertised
 Management Addresses - not advertised
@@ -157,7 +157,7 @@ Entry address(es):
   IP address: 10.20.97.1
 Platform: cisco C9300X-24Y,  Capabilities: Router Switch IGMP 
 Interface: GigabitEthernet0/2,  Port ID (outgoing port): TwentyFiveGigE1/1/1
-Holdtime : 163 sec
+Holdtime : 157 sec
 
 Version :
 Cisco IOS Software [Cupertino], Catalyst L3 Switch Software (CAT9K_IOSXE), Version 17.9.3, RELEASE SOFTWARE (fc6)
@@ -178,7 +178,7 @@ Entry address(es):
   IP address: 10.13.1.44
 Platform: X3S,  Capabilities: Host Phone 
 Interface: GigabitEthernet0/1,  Port ID (outgoing port): WAN PORT
-Holdtime : 137 sec
+Holdtime : 178 sec
 
 Version :
 2.14.0.7387
@@ -191,7 +191,7 @@ Entry address(es):
   IP address: 10.20.99.76
 Platform: cisco WS-C2960+48TC-L,  Capabilities: Switch IGMP 
 Interface: GigabitEthernet0/1,  Port ID (outgoing port): GigabitEthernet0/1
-Holdtime : 128 sec
+Holdtime : 134 sec
 
 Version :
 Cisco IOS Software, C2960 Software (C2960-LANBASEK9-M), Version 15.2(2)E7, RELEASE SOFTWARE (fc3)
@@ -210,10 +210,10 @@ Management address(es):
 -------------------------
 Device ID: X1S/X1SP
 Entry address(es): 
-  IP address: 10.13.1.50
+  IP address: 10.13.1.48
 Platform: X1S/X1SP,  Capabilities: Host Phone 
 Interface: GigabitEthernet0/1,  Port ID (outgoing port): WAN PORT
-Holdtime : 168 sec
+Holdtime : 169 sec
 
 Version :
 2.4.12.2
@@ -231,10 +231,10 @@ Capability Codes: R - Router, T - Trans Bridge, B - Source Route Bridge
 
 Device ID        Local Intrfce     Holdtme    Capability  Platform  Port ID
 INA-NSWR-03-97-1.kolmar.local
-                 Gig 0/2           163             R S I  C9300X-24 TwentyFiveGigE1/1/1
-X3S              Gig 0/1           137              H P   X3S       WAN PORT
+                 Gig 0/2           157             R S I  C9300X-24 TwentyFiveGigE1/1/1
+X3S              Gig 0/1           178              H P   X3S       WAN PORT
 INA-NSWS-08-99-76.kolmar.ru
-                 Gig 0/1           128              S I   WS-C2960+ Gig 0/1
-X1S/X1SP         Gig 0/1           168              H P   X1S/X1SP  WAN PORT
+                 Gig 0/1           134              S I   WS-C2960+ Gig 0/1
+X1S/X1SP         Gig 0/1           169              H P   X1S/X1SP  WAN PORT
 
 Total cdp entries displayed : 4

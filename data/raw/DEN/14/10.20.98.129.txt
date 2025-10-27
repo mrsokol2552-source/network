@@ -13,7 +13,7 @@ Compiled Thu 05-Apr-18 03:17 by prod_rel_team
 ROM: Bootstrap program is C3560CX boot loader
 BOOTLDR: C3560CX Boot Loader (C3560CX-HBOOT-M) Version 15.2(4r)E5, RELEASE SOFTWARE (fc4)
 
-DEN-NSWS-14-98-129 uptime is 5 weeks, 2 days, 8 hours, 13 minutes
+DEN-NSWS-14-98-129 uptime is 7 weeks, 4 hours, 42 minutes
 System returned to ROM by power-on
 System restarted at 17:12:34 YAKT Mon Sep 8 2025
 System image file is "flash:/c3560cx-universalk9-mz.152-4.E6/c3560cx-universalk9-mz.152-4.E6.bin"
@@ -79,12 +79,12 @@ $ show lldp neighbors detail
 
 $ show cdp neighbors detail
 -------------------------
-Device ID: Switch.kolmar.ru
+Device ID: DEN-NSWS-10-98-99.kolmar.ru
 Entry address(es): 
   IP address: 10.20.98.99
 Platform: cisco WS-C2960CX-8PC-L,  Capabilities: Switch IGMP 
 Interface: GigabitEthernet0/16,  Port ID (outgoing port): GigabitEthernet0/11
-Holdtime : 162 sec
+Holdtime : 169 sec
 
 Version :
 Cisco IOS Software, C2960CX Software (C2960CX-UNIVERSALK9-M), Version 15.2(7)E, RELEASE SOFTWARE (fc3)
@@ -105,7 +105,7 @@ Entry address(es):
   IP address: 10.20.98.128
 Platform: cisco WS-C2960CX-8PC-L,  Capabilities: Switch IGMP 
 Interface: GigabitEthernet0/15,  Port ID (outgoing port): GigabitEthernet0/12
-Holdtime : 154 sec
+Holdtime : 161 sec
 
 Version :
 Cisco IOS Software, C2960CX Software (C2960CX-UNIVERSALK9-M), Version 15.2(4)E6, RELEASE SOFTWARE (fc4)
@@ -131,8 +131,9 @@ Capability Codes: R - Router, T - Trans Bridge, B - Source Route Bridge
                   D - Remote, C - CVTA, M - Two-port Mac Relay 
 
 Device ID        Local Intrfce     Holdtme    Capability  Platform  Port ID
-Switch.kolmar.ru Gig 0/16          162              S I   WS-C2960C Gig 0/11
+DEN-NSWS-10-98-99.kolmar.ru
+                 Gig 0/16          169              S I   WS-C2960C Gig 0/11
 DEN-NSWS-08-98-128.kolmar.ru
-                 Gig 0/15          154              S I   WS-C2960C Gig 0/12
+                 Gig 0/15          161              S I   WS-C2960C Gig 0/12
 
 Total cdp entries displayed : 2

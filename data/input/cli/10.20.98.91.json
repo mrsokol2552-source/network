@@ -8,7 +8,7 @@
       {
         "Neighbor": "INA-NSWS-44-98-91",
         "LocalInterface": "uptime is",
-        "NeighborPort": "7 hours,",
+        "NeighborPort": "2 days,",
         "_source_file": "C:\\Users\\zhiltsov.aa\\Desktop\\net-auto-mermaid\\data\\raw\\INA\\44\\10.20.98.91.txt",
         "_template": "cisco_ios_show_cdp_neighbors.template"
       },
@@ -34,7 +34,7 @@
       {
         "Version": "15.2(4)E2",
         "Model": "",
-        "Uptime": "4 days, 7 hours, 55 minutes",
+        "Uptime": "2 weeks, 2 days, 4 hours, 24 minutes",
         "_source_file": "C:\\Users\\zhiltsov.aa\\Desktop\\net-auto-mermaid\\data\\raw\\INA\\44\\10.20.98.91.txt",
         "_template": "cisco_ios_show_version.template"
       },

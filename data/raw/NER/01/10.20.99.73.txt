@@ -13,7 +13,7 @@ Compiled Wed 12-Jul-17 15:29 by prod_rel_team
 ROM: Bootstrap program is C2960 boot loader
 BOOTLDR: C2960 Boot Loader (C2960-HBOOT-M) Version 15.0(2r)EZ1, RELEASE SOFTWARE (fc1)
 
-NER-NSWS-01-99-73 uptime is 13 weeks, 1 day, 22 hours, 54 minutes
+NER-NSWS-01-99-73 uptime is 14 weeks, 6 days, 19 hours, 23 minutes
 System returned to ROM by power-on
 System image file is "flash:/c2960-lanbasek9-mz.152-2.E7/c2960-lanbasek9-mz.152-2.E7.bin"
 Last reload reason: power-on
@@ -79,7 +79,7 @@ Port Description - not advertised
 System Name - not advertised
 System Description - not advertised
 
-Time remaining: 3307 seconds
+Time remaining: 2721 seconds
 System Capabilities - not advertised
 Enabled Capabilities - not advertised
 Management Addresses - not advertised
@@ -113,7 +113,7 @@ System Name: X1S/X1SP
 System Description: 
 Version:2.4.12.2
 
-Time remaining: 16 seconds
+Time remaining: 43 seconds
 System Capabilities: B,T
 Enabled Capabilities: B,T
 Management Addresses:
@@ -152,7 +152,7 @@ System Name: X1S/X1SP
 System Description: 
 Version:2.4.12.2
 
-Time remaining: 18 seconds
+Time remaining: 40 seconds
 System Capabilities: B,T
 Enabled Capabilities: B,T
 Management Addresses:
@@ -194,7 +194,7 @@ Technical Support: http://www.cisco.com/techsupport
 Copyright (c) 1986-2021 by Cisco Systems, Inc.
 Compiled Tue 19-Oct-21 03:16 by mcpr
 
-Time remaining: 99 seconds
+Time remaining: 119 seconds
 System Capabilities: B,R
 Enabled Capabilities: B,R
 Management Addresses:
@@ -219,7 +219,7 @@ System Name: X1S/X1SP
 System Description: 
 Version:2.4.12.2
 
-Time remaining: 4 seconds
+Time remaining: 56 seconds
 System Capabilities: B,T
 Enabled Capabilities: B,T
 Management Addresses:
@@ -256,7 +256,7 @@ Port Description - not advertised
 System Name - not advertised
 System Description - not advertised
 
-Time remaining: 3294 seconds
+Time remaining: 2681 seconds
 System Capabilities - not advertised
 Enabled Capabilities - not advertised
 Management Addresses - not advertised
@@ -288,7 +288,7 @@ Port Description - not advertised
 System Name - not advertised
 System Description - not advertised
 
-Time remaining: 2804 seconds
+Time remaining: 3001 seconds
 System Capabilities - not advertised
 Enabled Capabilities - not advertised
 Management Addresses - not advertised
@@ -324,7 +324,7 @@ Entry address(es):
   IP address: 10.20.96.4
 Platform: cisco C9200-24P,  Capabilities: Router Switch IGMP 
 Interface: GigabitEthernet0/1,  Port ID (outgoing port): GigabitEthernet1/0/2
-Holdtime : 146 sec
+Holdtime : 145 sec
 
 Version :
 Cisco IOS Software [Amsterdam], Catalyst L3 Switch Software (CAT9K_LITE_IOSXE), Version 17.3.4b, RELEASE SOFTWARE (fc1)
@@ -345,7 +345,7 @@ Entry address(es):
   IP address: 10.13.0.222
 Platform: X210,  Capabilities: Host Phone 
 Interface: FastEthernet0/32,  Port ID (outgoing port): WAN PORT
-Holdtime : 149 sec
+Holdtime : 161 sec
 
 Version :
 2.4.12
@@ -358,7 +358,7 @@ Entry address(es):
   IP address: 10.13.1.218
 Platform: X1S/X1SP,  Capabilities: Host Phone 
 Interface: FastEthernet0/28,  Port ID (outgoing port): WAN PORT
-Holdtime : 175 sec
+Holdtime : 126 sec
 
 Version :
 2.4.12.2
@@ -371,7 +371,7 @@ Entry address(es):
   IP address: 10.13.0.137
 Platform: X1S/X1SP,  Capabilities: Host Phone 
 Interface: FastEthernet0/17,  Port ID (outgoing port): WAN PORT
-Holdtime : 163 sec
+Holdtime : 146 sec
 
 Version :
 2.4.12.2
@@ -384,7 +384,7 @@ Entry address(es):
   IP address: 10.13.0.208
 Platform: X1S/X1SP,  Capabilities: Host Phone 
 Interface: FastEthernet0/16,  Port ID (outgoing port): WAN PORT
-Holdtime : 120 sec
+Holdtime : 145 sec
 
 Version :
 2.4.12.2
@@ -402,10 +402,10 @@ Capability Codes: R - Router, T - Trans Bridge, B - Source Route Bridge
 
 Device ID        Local Intrfce     Holdtme    Capability  Platform  Port ID
 NER-NSWR-01-96-4.kolmar.ru
-                 Gig 0/1           146             R S I  C9200-24P Gig 1/0/2
-X210             Fas 0/32          149              H P   X210      WAN PORT
-X1S/X1SP         Fas 0/28          175              H P   X1S/X1SP  WAN PORT
-X1S/X1SP         Fas 0/17          163              H P   X1S/X1SP  WAN PORT
-X1S/X1SP         Fas 0/16          120              H P   X1S/X1SP  WAN PORT
+                 Gig 0/1           145             R S I  C9200-24P Gig 1/0/2
+X210             Fas 0/32          161              H P   X210      WAN PORT
+X1S/X1SP         Fas 0/28          126              H P   X1S/X1SP  WAN PORT
+X1S/X1SP         Fas 0/17          145              H P   X1S/X1SP  WAN PORT
+X1S/X1SP         Fas 0/16          145              H P   X1S/X1SP  WAN PORT
 
 Total cdp entries displayed : 5

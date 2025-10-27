@@ -13,7 +13,7 @@ Compiled Fri 16-Dec-16 21:27 by prod_rel_team
 ROM: Bootstrap program is C2960X boot loader
 BOOTLDR: C2960X Boot Loader (C2960X-HBOOT-M) Version 15.2(3r)E1, RELEASE SOFTWARE (fc1)
 
-INA-NSWS-51-99-32 uptime is 7 weeks, 5 days, 23 hours, 11 minutes
+INA-NSWS-51-99-32 uptime is 9 weeks, 3 days, 19 hours, 40 minutes
 System returned to ROM by power-on
 System restarted at 02:26:19 YAKT Fri Aug 22 2025
 System image file is "flash:/c2960x-universalk9-mz.152-2.E6/c2960x-universalk9-mz.152-2.E6.bin"
@@ -86,7 +86,7 @@ Technical Support: http://www.cisco.com/techsupport
 Copyright (c) 1986-2010 by Cisco Systems, Inc.
 Compiled Tue 28-Sep-10 13:21 by prod_rel_team
 
-Time remaining: 107 seconds
+Time remaining: 106 seconds
 System Capabilities: B,R
 Enabled Capabilities: B,R
 Management Addresses:
@@ -110,7 +110,7 @@ System Name: X1S/X1SP
 System Description: 
 Version:2.4.12.2
 
-Time remaining: 52 seconds
+Time remaining: 22 seconds
 System Capabilities: B,T
 Enabled Capabilities: B,T
 Management Addresses:
@@ -140,38 +140,6 @@ MED Information:
     Location - not advertised
 
 ------------------------------------------------
-Local Intf: Gi1/0/25
-Chassis id: 7456.3c3b.68ac
-Port id: 7456.3c3b.68ac
-Port Description - not advertised
-System Name - not advertised
-System Description - not advertised
-
-Time remaining: 3384 seconds
-System Capabilities - not advertised
-Enabled Capabilities - not advertised
-Management Addresses - not advertised
-Auto Negotiation - supported, enabled
-Physical media capabilities:
-    1000baseT(FD)
-Media Attachment Unit type - not advertised
-Vlan ID: - not advertised
-
-MED Information:
-
-    MED Codes:
-          (NP) Network Policy, (LI) Location Identification
-          (PS) Power Source Entity, (PD) Power Device
-          (IN) Inventory
-
-    Inventory information - not advertised
-    Capabilities: 
-    Device type: Endpoint Class I
-    Network Policies - not advertised
-    Power requirements - not advertised
-    Location - not advertised
-
-------------------------------------------------
 Local Intf: Gi1/0/2
 Chassis id: e0d5.5e3a.8f13
 Port id: e0d5.5e3a.8f13
@@ -179,7 +147,7 @@ Port Description - not advertised
 System Name - not advertised
 System Description - not advertised
 
-Time remaining: 2749 seconds
+Time remaining: 2910 seconds
 System Capabilities - not advertised
 Enabled Capabilities - not advertised
 Management Addresses - not advertised
@@ -211,7 +179,7 @@ Port Description - not advertised
 System Name - not advertised
 System Description - not advertised
 
-Time remaining: 3020 seconds
+Time remaining: 2995 seconds
 System Capabilities - not advertised
 Enabled Capabilities - not advertised
 Management Addresses - not advertised
@@ -236,14 +204,78 @@ MED Information:
     Location - not advertised
 
 ------------------------------------------------
-Local Intf: Gi1/0/21
-Chassis id: 7456.3c53.cc03
-Port id: 7456.3c53.cc03
+Local Intf: Gi1/0/25
+Chassis id: 7456.3c3b.68ac
+Port id: 7456.3c3b.68ac
 Port Description - not advertised
 System Name - not advertised
 System Description - not advertised
 
-Time remaining: 3450 seconds
+Time remaining: 2699 seconds
+System Capabilities - not advertised
+Enabled Capabilities - not advertised
+Management Addresses - not advertised
+Auto Negotiation - supported, enabled
+Physical media capabilities:
+    1000baseT(FD)
+Media Attachment Unit type - not advertised
+Vlan ID: - not advertised
+
+MED Information:
+
+    MED Codes:
+          (NP) Network Policy, (LI) Location Identification
+          (PS) Power Source Entity, (PD) Power Device
+          (IN) Inventory
+
+    Inventory information - not advertised
+    Capabilities: 
+    Device type: Endpoint Class I
+    Network Policies - not advertised
+    Power requirements - not advertised
+    Location - not advertised
+
+------------------------------------------------
+Local Intf: Gi1/0/9
+Chassis id: 7456.3c35.1475
+Port id: 7456.3c35.1475
+Port Description - not advertised
+System Name - not advertised
+System Description - not advertised
+
+Time remaining: 2713 seconds
+System Capabilities - not advertised
+Enabled Capabilities - not advertised
+Management Addresses - not advertised
+Auto Negotiation - supported, enabled
+Physical media capabilities:
+    1000baseT(FD)
+Media Attachment Unit type - not advertised
+Vlan ID: - not advertised
+
+MED Information:
+
+    MED Codes:
+          (NP) Network Policy, (LI) Location Identification
+          (PS) Power Source Entity, (PD) Power Device
+          (IN) Inventory
+
+    Inventory information - not advertised
+    Capabilities: 
+    Device type: Endpoint Class I
+    Network Policies - not advertised
+    Power requirements - not advertised
+    Location - not advertised
+
+------------------------------------------------
+Local Intf: Gi1/0/29
+Chassis id: 18c0.4d7e.d825
+Port id: 18c0.4d7e.d825
+Port Description - not advertised
+System Name - not advertised
+System Description - not advertised
+
+Time remaining: 3399 seconds
 System Capabilities - not advertised
 Enabled Capabilities - not advertised
 Management Addresses - not advertised
@@ -268,7 +300,7 @@ MED Information:
     Location - not advertised
 
 
-Total entries displayed: 6
+Total entries displayed: 7
 
 
 
@@ -279,7 +311,7 @@ Entry address(es):
   IP address: 10.20.99.193
 Platform: cisco WS-C2960C-12PC-L,  Capabilities: Switch IGMP 
 Interface: GigabitEthernet1/0/46,  Port ID (outgoing port): GigabitEthernet0/2
-Holdtime : 153 sec
+Holdtime : 142 sec
 
 Version :
 Cisco IOS Software, C2960C Software (C2960c405-UNIVERSALK9-M), Version 15.2(2)E8, RELEASE SOFTWARE (fc1)
@@ -306,6 +338,6 @@ Capability Codes: R - Router, T - Trans Bridge, B - Source Route Bridge
 
 Device ID        Local Intrfce     Holdtme    Capability  Platform  Port ID
 INA-NSWS-51-99-193.kolmar.ru
-                 Gig 1/0/46        153              S I   WS-C2960C Gig 0/2
+                 Gig 1/0/46        142              S I   WS-C2960C Gig 0/2
 
 Total cdp entries displayed : 1

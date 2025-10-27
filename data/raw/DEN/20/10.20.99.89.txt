@@ -13,7 +13,7 @@ Compiled Sat 17-Apr-21 07:21 by prod_rel_team
 ROM: Bootstrap program is c1000 boot loader
 BOOTLDR: C1000 Boot Loader (C1000-HBOOT-M) Version 15.2(7r)E3, RELEASE SOFTWARE (fc4)
 
-DEN-NSWS-20-99-89 uptime is 13 weeks, 2 days, 6 minutes
+DEN-NSWS-20-99-89 uptime is 14 weeks, 6 days, 20 hours, 35 minutes
 System returned to ROM by power-on
 System restarted at 16:23:10 YAKT Mon Jul 14 2025
 System image file is "flash:/c1000-universalk9-mz.152-8.E/c1000-universalk9-mz.152-8.E.bin"
@@ -80,7 +80,7 @@ System Name: X1S/X1SP
 System Description: 
 Version:2.4.12.2
 
-Time remaining: 6 seconds
+Time remaining: 21 seconds
 System Capabilities: B,T
 Enabled Capabilities: B,T
 Management Addresses:
@@ -119,7 +119,7 @@ System Name: X1S/X1SP
 System Description: 
 Version:2.4.12.2
 
-Time remaining: 54 seconds
+Time remaining: 39 seconds
 System Capabilities: B,T
 Enabled Capabilities: B,T
 Management Addresses:
@@ -158,7 +158,7 @@ System Name: X1S/X1SP
 System Description: 
 Version:2.4.12.2
 
-Time remaining: 55 seconds
+Time remaining: 7 seconds
 System Capabilities: B,T
 Enabled Capabilities: B,T
 Management Addresses:
@@ -200,7 +200,7 @@ Technical Support: http://www.cisco.com/techsupport
 Copyright (c) 1986-2019 by Cisco Systems, Inc.
 Compiled Sat 07-Dec-19 09:15 by prod_rel_team
 
-Time remaining: 96 seconds
+Time remaining: 111 seconds
 System Capabilities: B,R
 Enabled Capabilities: B
 Management Addresses:
@@ -225,7 +225,7 @@ System Name: X1S/X1SP
 System Description: 
 Version:2.4.12.2
 
-Time remaining: 46 seconds
+Time remaining: 9 seconds
 System Capabilities: B,T
 Enabled Capabilities: B,T
 Management Addresses:
@@ -262,7 +262,39 @@ Port Description - not advertised
 System Name - not advertised
 System Description - not advertised
 
-Time remaining: 3289 seconds
+Time remaining: 2861 seconds
+System Capabilities - not advertised
+Enabled Capabilities - not advertised
+Management Addresses - not advertised
+Auto Negotiation - supported, enabled
+Physical media capabilities:
+    1000baseT(FD)
+Media Attachment Unit type - not advertised
+Vlan ID: - not advertised
+
+MED Information:
+
+    MED Codes:
+          (NP) Network Policy, (LI) Location Identification
+          (PS) Power Source Entity, (PD) Power Device
+          (IN) Inventory
+
+    Inventory information - not advertised
+    Capabilities: 
+    Device type: Endpoint Class I
+    Network Policies - not advertised
+    Power requirements - not advertised
+    Location - not advertised
+
+------------------------------------------------
+Local Intf: Gi1/0/12
+Chassis id: 74fe.ce8f.d23f
+Port id: 74fe.ce8f.d23f
+Port Description - not advertised
+System Name - not advertised
+System Description - not advertised
+
+Time remaining: 2983 seconds
 System Capabilities - not advertised
 Enabled Capabilities - not advertised
 Management Addresses - not advertised
@@ -294,7 +326,39 @@ Port Description - not advertised
 System Name - not advertised
 System Description - not advertised
 
-Time remaining: 3308 seconds
+Time remaining: 3204 seconds
+System Capabilities - not advertised
+Enabled Capabilities - not advertised
+Management Addresses - not advertised
+Auto Negotiation - supported, enabled
+Physical media capabilities:
+    1000baseT(FD)
+Media Attachment Unit type - not advertised
+Vlan ID: - not advertised
+
+MED Information:
+
+    MED Codes:
+          (NP) Network Policy, (LI) Location Identification
+          (PS) Power Source Entity, (PD) Power Device
+          (IN) Inventory
+
+    Inventory information - not advertised
+    Capabilities: 
+    Device type: Endpoint Class I
+    Network Policies - not advertised
+    Power requirements - not advertised
+    Location - not advertised
+
+------------------------------------------------
+Local Intf: Gi1/0/13
+Chassis id: f079.5994.f29a
+Port id: f079.5994.f29a
+Port Description - not advertised
+System Name - not advertised
+System Description - not advertised
+
+Time remaining: 3435 seconds
 System Capabilities - not advertised
 Enabled Capabilities - not advertised
 Management Addresses - not advertised
@@ -319,7 +383,7 @@ MED Information:
     Location - not advertised
 
 
-Total entries displayed: 7
+Total entries displayed: 9
 
 
 
@@ -330,7 +394,7 @@ Entry address(es):
   IP address: 10.20.99.98
 Platform: cisco C1000-16T-2G-L,  Capabilities: Switch IGMP 
 Interface: GigabitEthernet1/0/17,  Port ID (outgoing port): GigabitEthernet1/0/16
-Holdtime : 177 sec
+Holdtime : 144 sec
 
 Version :
 Cisco IOS Software, C1000 Software (C1000-UNIVERSALK9-M), Version 15.2(7)E1, RELEASE SOFTWARE (fc4)
@@ -351,7 +415,7 @@ Entry address(es):
   IP address: 10.13.1.248
 Platform: X1S/X1SP,  Capabilities: Host Phone 
 Interface: GigabitEthernet1/0/16,  Port ID (outgoing port): WAN PORT
-Holdtime : 177 sec
+Holdtime : 124 sec
 
 Version :
 2.4.12.2
@@ -364,7 +428,7 @@ Entry address(es):
   IP address: 10.13.1.138
 Platform: X1S/X1SP,  Capabilities: Host Phone 
 Interface: GigabitEthernet1/0/13,  Port ID (outgoing port): WAN PORT
-Holdtime : 146 sec
+Holdtime : 160 sec
 
 Version :
 2.4.12.2
@@ -377,7 +441,7 @@ Entry address(es):
   IP address: 10.13.1.179
 Platform: X1S/X1SP,  Capabilities: Host Phone 
 Interface: GigabitEthernet1/0/7,  Port ID (outgoing port): WAN PORT
-Holdtime : 168 sec
+Holdtime : 169 sec
 
 Version :
 2.4.12.2
@@ -390,7 +454,7 @@ Entry address(es):
   IP address: 10.13.1.72
 Platform: X1S/X1SP,  Capabilities: Host Phone 
 Interface: GigabitEthernet1/0/14,  Port ID (outgoing port): WAN PORT
-Holdtime : 138 sec
+Holdtime : 171 sec
 
 Version :
 2.4.12.2
@@ -408,10 +472,10 @@ Capability Codes: R - Router, T - Trans Bridge, B - Source Route Bridge
 
 Device ID        Local Intrfce     Holdtme    Capability  Platform  Port ID
 DEN-NSWS-19-99-98.kolmar.ru
-                 Gig 1/0/17        177              S I   C1000-16T Gig 1/0/16
-X1S/X1SP         Gig 1/0/16        177              H P   X1S/X1SP  WAN PORT
-X1S/X1SP         Gig 1/0/13        146              H P   X1S/X1SP  WAN PORT
-X1S/X1SP         Gig 1/0/7         168              H P   X1S/X1SP  WAN PORT
-X1S/X1SP         Gig 1/0/14        138              H P   X1S/X1SP  WAN PORT
+                 Gig 1/0/17        144              S I   C1000-16T Gig 1/0/16
+X1S/X1SP         Gig 1/0/16        123              H P   X1S/X1SP  WAN PORT
+X1S/X1SP         Gig 1/0/13        159              H P   X1S/X1SP  WAN PORT
+X1S/X1SP         Gig 1/0/7         169              H P   X1S/X1SP  WAN PORT
+X1S/X1SP         Gig 1/0/14        171              H P   X1S/X1SP  WAN PORT
 
 Total cdp entries displayed : 5

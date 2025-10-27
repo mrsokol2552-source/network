@@ -13,7 +13,7 @@ Compiled Thu 22-Sep-22 08:11 by mcpre
 ROM: Bootstrap program is c1000 boot loader
 BOOTLDR: C1000 Boot Loader (C1000-HBOOT-M) Version 15.2(7r)E3, RELEASE SOFTWARE (fc4)
 
-DEN-NSWS-29-99-44 uptime is 29 weeks, 5 days, 15 hours, 40 minutes
+DEN-NSWS-29-99-44 uptime is 31 weeks, 3 days, 12 hours, 9 minutes
 System returned to ROM by power-on
 System restarted at 00:40:27 YAKT Fri Mar 21 2025
 System image file is "flash:c1000-universalk9-mz.152-7.E7.bin"
@@ -83,7 +83,7 @@ Technical Support: http://www.cisco.com/techsupport
 Copyright (c) 1986-2021 by Cisco Systems, Inc.
 Compiled Fri 30-Jul-21 15:15 by mcpre
 
-Time remaining: 97 seconds
+Time remaining: 95 seconds
 System Capabilities: B,R
 Enabled Capabilities: B,R
 Management Addresses:
@@ -104,7 +104,7 @@ System Name: X1S/X1SP
 System Description: 
 Version:2.4.12.2
 
-Time remaining: 38 seconds
+Time remaining: 24 seconds
 System Capabilities: B,T
 Enabled Capabilities: B,T
 Management Addresses:
@@ -143,7 +143,7 @@ System Name: DP750_c0:74:ad:45:e1:c1
 System Description: 
 DP750 1.0.19.3
 
-Time remaining: 100 seconds
+Time remaining: 117 seconds
 System Capabilities: B,T
 Enabled Capabilities: B,T
 Management Addresses - not advertised
@@ -184,7 +184,7 @@ Port Description - not advertised
 System Name - not advertised
 System Description - not advertised
 
-Time remaining: 3145 seconds
+Time remaining: 3346 seconds
 System Capabilities - not advertised
 Enabled Capabilities - not advertised
 Management Addresses - not advertised
@@ -216,7 +216,39 @@ Port Description - not advertised
 System Name - not advertised
 System Description - not advertised
 
-Time remaining: 2816 seconds
+Time remaining: 2737 seconds
+System Capabilities - not advertised
+Enabled Capabilities - not advertised
+Management Addresses - not advertised
+Auto Negotiation - supported, enabled
+Physical media capabilities:
+    1000baseT(FD)
+Media Attachment Unit type - not advertised
+Vlan ID: - not advertised
+
+MED Information:
+
+    MED Codes:
+          (NP) Network Policy, (LI) Location Identification
+          (PS) Power Source Entity, (PD) Power Device
+          (IN) Inventory
+
+    Inventory information - not advertised
+    Capabilities: 
+    Device type: Endpoint Class I
+    Network Policies - not advertised
+    Power requirements - not advertised
+    Location - not advertised
+
+------------------------------------------------
+Local Intf: Gi1/0/5
+Chassis id: 309c.231b.1712
+Port id: 309c.231b.1712
+Port Description - not advertised
+System Name - not advertised
+System Description - not advertised
+
+Time remaining: 3572 seconds
 System Capabilities - not advertised
 Enabled Capabilities - not advertised
 Management Addresses - not advertised
@@ -248,7 +280,39 @@ Port Description - not advertised
 System Name - not advertised
 System Description - not advertised
 
-Time remaining: 3005 seconds
+Time remaining: 3580 seconds
+System Capabilities - not advertised
+Enabled Capabilities - not advertised
+Management Addresses - not advertised
+Auto Negotiation - supported, enabled
+Physical media capabilities:
+    1000baseT(FD)
+Media Attachment Unit type - not advertised
+Vlan ID: - not advertised
+
+MED Information:
+
+    MED Codes:
+          (NP) Network Policy, (LI) Location Identification
+          (PS) Power Source Entity, (PD) Power Device
+          (IN) Inventory
+
+    Inventory information - not advertised
+    Capabilities: 
+    Device type: Endpoint Class I
+    Network Policies - not advertised
+    Power requirements - not advertised
+    Location - not advertised
+
+------------------------------------------------
+Local Intf: Gi1/0/5
+Chassis id: 18c0.4dd7.2fd8
+Port id: 18c0.4dd7.2fd8
+Port Description - not advertised
+System Name - not advertised
+System Description - not advertised
+
+Time remaining: 3576 seconds
 System Capabilities - not advertised
 Enabled Capabilities - not advertised
 Management Addresses - not advertised
@@ -273,7 +337,7 @@ MED Information:
     Location - not advertised
 
 
-Total entries displayed: 6
+Total entries displayed: 8
 
 
 
@@ -284,7 +348,7 @@ Entry address(es):
   IP address: 10.20.98.1
 Platform: cisco C9300X-24Y,  Capabilities: Router Switch IGMP 
 Interface: GigabitEthernet1/0/17,  Port ID (outgoing port): TwentyFiveGigE1/0/9
-Holdtime : 132 sec
+Holdtime : 139 sec
 
 Version :
 Cisco IOS Software [Bengaluru], Catalyst L3 Switch Software (CAT9K_IOSXE), Version 17.6.1, RELEASE SOFTWARE (fc6)
@@ -309,6 +373,6 @@ Capability Codes: R - Router, T - Trans Bridge, B - Source Route Bridge
                   D - Remote, C - CVTA, M - Two-port Mac Relay 
 
 Device ID        Local Intrfce     Holdtme    Capability  Platform  Port ID
-DEN-NSWR-03-98-1 Gig 1/0/17        132             R S I  C9300X-24 Twe 1/0/9
+DEN-NSWR-03-98-1 Gig 1/0/17        139             R S I  C9300X-24 Twe 1/0/9
 
 Total cdp entries displayed : 1

@@ -8,7 +8,7 @@
       {
         "Neighbor": "INA-NSWS-123-97-100",
         "LocalInterface": "uptime is",
-        "NeighborPort": "10 hours,",
+        "NeighborPort": "18 hours,",
         "_source_file": "C:\\Users\\zhiltsov.aa\\Desktop\\net-auto-mermaid\\data\\raw\\INA\\123\\10.20.97.100.txt",
         "_template": "cisco_ios_show_cdp_neighbors.template"
       },
@@ -83,34 +83,11 @@
         "_template": "cisco_ios_show_cdp_neighbors_detail.template"
       }
     ],
-    "cisco_ios_show_lldp_neighbors_detail": [
-      {
-        "LocalInterface": "Gi1/0/17",
-        "NeighborName": "",
-        "NeighborPort": "Twe1/1/3",
-        "_source_file": "C:\\Users\\zhiltsov.aa\\Desktop\\net-auto-mermaid\\data\\raw\\INA\\123\\10.20.97.100.txt",
-        "_template": "cisco_ios_show_lldp_neighbors_detail.template"
-      },
-      {
-        "LocalInterface": "Gi1/0/18",
-        "NeighborName": "INA-NSWR-03-97-1.kolmar.local",
-        "NeighborPort": "Twe1/0/20",
-        "_source_file": "C:\\Users\\zhiltsov.aa\\Desktop\\net-auto-mermaid\\data\\raw\\INA\\123\\10.20.97.100.txt",
-        "_template": "cisco_ios_show_lldp_neighbors_detail.template"
-      },
-      {
-        "LocalInterface": "Gi1/0/15",
-        "NeighborName": "INA-NSWR-37-96-3.kolmar.local",
-        "NeighborPort": "eth0",
-        "_source_file": "C:\\Users\\zhiltsov.aa\\Desktop\\net-auto-mermaid\\data\\raw\\INA\\123\\10.20.97.100.txt",
-        "_template": "cisco_ios_show_lldp_neighbors_detail.template"
-      }
-    ],
     "cisco_ios_show_version": [
       {
         "Version": "15.2(7)E2",
         "Model": "",
-        "Uptime": "6 days, 10 hours, 34 minutes",
+        "Uptime": "3 days, 18 hours, 0 minutes",
         "_source_file": "C:\\Users\\zhiltsov.aa\\Desktop\\net-auto-mermaid\\data\\raw\\INA\\123\\10.20.97.100.txt",
         "_template": "cisco_ios_show_version.template"
       },
