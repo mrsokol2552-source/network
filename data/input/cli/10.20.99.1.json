@@ -1,36 +1,36 @@
 {
   "vendor": "cisco_ios",
   "raw_files": [
-    "NER\\01\\10.20.99.1.txt"
+    "10.20.99.1.txt"
   ],
   "parsed": {
     "cisco_ios_show_cdp_neighbors": [
       {
         "Neighbor": "NER-NSWR-01-99-1",
         "LocalInterface": "uptime is",
-        "NeighborPort": "6 days,",
-        "_source_file": "C:\\Users\\zhiltsov.aa\\Desktop\\net-auto-mermaid\\data\\raw\\NER\\01\\10.20.99.1.txt",
+        "NeighborPort": "1 day,",
+        "_source_file": "C:\\Users\\zhiltsov.aa\\Desktop\\net-auto-mermaid\\data\\raw\\10.20.99.1.txt",
         "_template": "cisco_ios_show_cdp_neighbors.template"
       },
       {
         "Neighbor": "X3S",
         "LocalInterface": "Gig 1/1/4",
         "NeighborPort": "P   X3S",
-        "_source_file": "C:\\Users\\zhiltsov.aa\\Desktop\\net-auto-mermaid\\data\\raw\\NER\\01\\10.20.99.1.txt",
+        "_source_file": "C:\\Users\\zhiltsov.aa\\Desktop\\net-auto-mermaid\\data\\raw\\10.20.99.1.txt",
         "_template": "cisco_ios_show_cdp_neighbors.template"
       },
       {
         "Neighbor": "Gig",
         "LocalInterface": "1/1/4",
         "NeighborPort": "I   WS-C2960X",
-        "_source_file": "C:\\Users\\zhiltsov.aa\\Desktop\\net-auto-mermaid\\data\\raw\\NER\\01\\10.20.99.1.txt",
+        "_source_file": "C:\\Users\\zhiltsov.aa\\Desktop\\net-auto-mermaid\\data\\raw\\10.20.99.1.txt",
         "_template": "cisco_ios_show_cdp_neighbors.template"
       },
       {
         "Neighbor": "NER-NSWR-01-96-1",
         "LocalInterface": "Gig 1/1/1",
         "NeighborPort": "S I",
-        "_source_file": "C:\\Users\\zhiltsov.aa\\Desktop\\net-auto-mermaid\\data\\raw\\NER\\01\\10.20.99.1.txt",
+        "_source_file": "C:\\Users\\zhiltsov.aa\\Desktop\\net-auto-mermaid\\data\\raw\\10.20.99.1.txt",
         "_template": "cisco_ios_show_cdp_neighbors.template"
       }
     ],
@@ -40,7 +40,7 @@
         "LocalInterface": "GigabitEthernet1/1/4",
         "NeighborPort": "WAN",
         "Platform": "X3S",
-        "_source_file": "C:\\Users\\zhiltsov.aa\\Desktop\\net-auto-mermaid\\data\\raw\\NER\\01\\10.20.99.1.txt",
+        "_source_file": "C:\\Users\\zhiltsov.aa\\Desktop\\net-auto-mermaid\\data\\raw\\10.20.99.1.txt",
         "_template": "cisco_ios_show_cdp_neighbors_detail.template"
       },
       {
@@ -48,7 +48,7 @@
         "LocalInterface": "GigabitEthernet1/1/4",
         "NeighborPort": "GigabitEthernet1/0/25",
         "Platform": "cisco WS-C2960X-24PS-L",
-        "_source_file": "C:\\Users\\zhiltsov.aa\\Desktop\\net-auto-mermaid\\data\\raw\\NER\\01\\10.20.99.1.txt",
+        "_source_file": "C:\\Users\\zhiltsov.aa\\Desktop\\net-auto-mermaid\\data\\raw\\10.20.99.1.txt",
         "_template": "cisco_ios_show_cdp_neighbors_detail.template"
       },
       {
@@ -56,7 +56,7 @@
         "LocalInterface": "GigabitEthernet1/1/1",
         "NeighborPort": "TwentyFiveGigE1/0/5",
         "Platform": "cisco C9500-24Y4C",
-        "_source_file": "C:\\Users\\zhiltsov.aa\\Desktop\\net-auto-mermaid\\data\\raw\\NER\\01\\10.20.99.1.txt",
+        "_source_file": "C:\\Users\\zhiltsov.aa\\Desktop\\net-auto-mermaid\\data\\raw\\10.20.99.1.txt",
         "_template": "cisco_ios_show_cdp_neighbors_detail.template"
       }
     ],
@@ -64,15 +64,15 @@
       {
         "Version": "15.0(2)SE6",
         "Model": "",
-        "Uptime": "14 weeks, 6 days, 19 hours, 28 minutes",
-        "_source_file": "C:\\Users\\zhiltsov.aa\\Desktop\\net-auto-mermaid\\data\\raw\\NER\\01\\10.20.99.1.txt",
+        "Uptime": "13 weeks, 1 day, 22 hours, 20 minutes",
+        "_source_file": "C:\\Users\\zhiltsov.aa\\Desktop\\net-auto-mermaid\\data\\raw\\10.20.99.1.txt",
         "_template": "cisco_ios_show_version.template"
       },
       {
         "Version": "17.4.1",
         "Model": "WS-C3750X-24",
         "Uptime": "",
-        "_source_file": "C:\\Users\\zhiltsov.aa\\Desktop\\net-auto-mermaid\\data\\raw\\NER\\01\\10.20.99.1.txt",
+        "_source_file": "C:\\Users\\zhiltsov.aa\\Desktop\\net-auto-mermaid\\data\\raw\\10.20.99.1.txt",
         "_template": "cisco_ios_show_version.template"
       }
     ]

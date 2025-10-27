@@ -1,36 +1,36 @@
 {
   "vendor": "cisco_ios",
   "raw_files": [
-    "DEN\\21\\10.20.98.69.txt"
+    "10.20.98.69.txt"
   ],
   "parsed": {
     "cisco_ios_show_cdp_neighbors": [
       {
         "Neighbor": "DEN-NSWS-21-98-69",
         "LocalInterface": "uptime is",
-        "NeighborPort": "4 days,",
-        "_source_file": "C:\\Users\\zhiltsov.aa\\Desktop\\net-auto-mermaid\\data\\raw\\DEN\\21\\10.20.98.69.txt",
+        "NeighborPort": "6 days,",
+        "_source_file": "C:\\Users\\zhiltsov.aa\\Desktop\\net-auto-mermaid\\data\\raw\\10.20.98.69.txt",
         "_template": "cisco_ios_show_cdp_neighbors.template"
       },
       {
         "Neighbor": "Gig",
         "LocalInterface": "0/2",
         "NeighborPort": "I   WS-C2960C",
-        "_source_file": "C:\\Users\\zhiltsov.aa\\Desktop\\net-auto-mermaid\\data\\raw\\DEN\\21\\10.20.98.69.txt",
+        "_source_file": "C:\\Users\\zhiltsov.aa\\Desktop\\net-auto-mermaid\\data\\raw\\10.20.98.69.txt",
         "_template": "cisco_ios_show_cdp_neighbors.template"
       },
       {
         "Neighbor": "Gig",
         "LocalInterface": "0/2",
         "NeighborPort": "I   WS-C2960C",
-        "_source_file": "C:\\Users\\zhiltsov.aa\\Desktop\\net-auto-mermaid\\data\\raw\\DEN\\21\\10.20.98.69.txt",
+        "_source_file": "C:\\Users\\zhiltsov.aa\\Desktop\\net-auto-mermaid\\data\\raw\\10.20.98.69.txt",
         "_template": "cisco_ios_show_cdp_neighbors.template"
       },
       {
         "Neighbor": "Gig",
         "LocalInterface": "0/2",
         "NeighborPort": "I   C1000-16T",
-        "_source_file": "C:\\Users\\zhiltsov.aa\\Desktop\\net-auto-mermaid\\data\\raw\\DEN\\21\\10.20.98.69.txt",
+        "_source_file": "C:\\Users\\zhiltsov.aa\\Desktop\\net-auto-mermaid\\data\\raw\\10.20.98.69.txt",
         "_template": "cisco_ios_show_cdp_neighbors.template"
       }
     ],
@@ -40,7 +40,7 @@
         "LocalInterface": "GigabitEthernet0/2",
         "NeighborPort": "GigabitEthernet0/1",
         "Platform": "cisco WS-C2960C-8TC-L",
-        "_source_file": "C:\\Users\\zhiltsov.aa\\Desktop\\net-auto-mermaid\\data\\raw\\DEN\\21\\10.20.98.69.txt",
+        "_source_file": "C:\\Users\\zhiltsov.aa\\Desktop\\net-auto-mermaid\\data\\raw\\10.20.98.69.txt",
         "_template": "cisco_ios_show_cdp_neighbors_detail.template"
       },
       {
@@ -48,7 +48,7 @@
         "LocalInterface": "GigabitEthernet0/2",
         "NeighborPort": "GigabitEthernet0/2",
         "Platform": "cisco WS-C2960C-8TC-L",
-        "_source_file": "C:\\Users\\zhiltsov.aa\\Desktop\\net-auto-mermaid\\data\\raw\\DEN\\21\\10.20.98.69.txt",
+        "_source_file": "C:\\Users\\zhiltsov.aa\\Desktop\\net-auto-mermaid\\data\\raw\\10.20.98.69.txt",
         "_template": "cisco_ios_show_cdp_neighbors_detail.template"
       },
       {
@@ -56,7 +56,7 @@
         "LocalInterface": "GigabitEthernet0/2",
         "NeighborPort": "GigabitEthernet1/0/17",
         "Platform": "cisco C1000-16T-2G-L",
-        "_source_file": "C:\\Users\\zhiltsov.aa\\Desktop\\net-auto-mermaid\\data\\raw\\DEN\\21\\10.20.98.69.txt",
+        "_source_file": "C:\\Users\\zhiltsov.aa\\Desktop\\net-auto-mermaid\\data\\raw\\10.20.98.69.txt",
         "_template": "cisco_ios_show_cdp_neighbors_detail.template"
       }
     ],
@@ -64,15 +64,15 @@
       {
         "Version": "15.0(2)SE5",
         "Model": "",
-        "Uptime": "6 weeks, 4 days, 3 hours, 1 minute",
-        "_source_file": "C:\\Users\\zhiltsov.aa\\Desktop\\net-auto-mermaid\\data\\raw\\DEN\\21\\10.20.98.69.txt",
+        "Uptime": "4 weeks, 6 days, 5 hours, 55 minutes",
+        "_source_file": "C:\\Users\\zhiltsov.aa\\Desktop\\net-auto-mermaid\\data\\raw\\10.20.98.69.txt",
         "_template": "cisco_ios_show_version.template"
       },
       {
         "Version": "15.2(7)E1",
         "Model": "WS-C2960C-8TC-L",
         "Uptime": "",
-        "_source_file": "C:\\Users\\zhiltsov.aa\\Desktop\\net-auto-mermaid\\data\\raw\\DEN\\21\\10.20.98.69.txt",
+        "_source_file": "C:\\Users\\zhiltsov.aa\\Desktop\\net-auto-mermaid\\data\\raw\\10.20.98.69.txt",
         "_template": "cisco_ios_show_version.template"
       }
     ]

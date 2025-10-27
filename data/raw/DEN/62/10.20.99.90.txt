@@ -13,7 +13,7 @@ Compiled Mon 13-Sep-21 09:18 by mcpre
 ROM: Bootstrap program is c1000 boot loader
 BOOTLDR: C1000 Boot Loader (C1000-HBOOT-M) Version 15.2(7r)E3, RELEASE SOFTWARE (fc4)
 
-DEN-NSWS-62-99-90 uptime is 14 weeks, 6 days, 20 hours, 33 minutes
+DEN-NSWS-62-99-90 uptime is 14 weeks, 6 days, 21 hours, 15 minutes
 System returned to ROM by power-on
 System restarted at 16:23:09 YAKT Mon Jul 14 2025
 System image file is "flash:/c1000-universalk9-mz.152-7.E5/c1000-universalk9-mz.152-7.E5.bin"
@@ -69,6 +69,516 @@ Configuration register is 0xF
 
 
 
+$ show running-config
+Building configuration...
+
+Current configuration : 13351 bytes
+!
+! Last configuration change at 10:07:14 YAKT Wed Oct 15 2025 by zhiltsov_a
+! NVRAM config last updated at 10:07:16 YAKT Wed Oct 15 2025 by zhiltsov_a
+!
+version 15.2
+no service pad
+service timestamps debug datetime msec
+service timestamps log datetime msec
+no service password-encryption
+!
+hostname DEN-NSWS-62-99-90
+!
+boot-start-marker
+boot-end-marker
+!
+enable secret 5 $1$KUZI$z1BonfncGQaDweUbzbc2a.
+!
+username emtsov.s privilege 15 secret 5 $1$7f5D$3.qRUr.U5dppuoYuVyUhp.
+username ivashenko_vb privilege 15 secret 5 $1$bi7z$qTHuukwOKu/rACvOW/3hy.
+username sib_uib privilege 15 secret 9 $9$RJ64VWzV1YSKQU$a3dKPmGjU4GExZXjw04SfWQGQHhkCaV8ap0Wcmqfnig
+username volodin_s privilege 15 secret 9 $9$irxcwHeaDvQzUM$Y2o1ilhLjNbgiluHzsQPwg3jGR1mnevM2CKfvqDeWOM
+username zhiltsov_a privilege 15 secret 9 $9$Pk740yl1otvBWK$gzDFl838zXUnelclsaqxoWAxHAGYOCRpc4cVxcW.jdM
+aaa new-model
+!
+!
+aaa authentication login login-RADIUS group radius local
+aaa authorization console
+aaa authorization exec auth-RADIUS-exec group radius local 
+!
+!
+!
+!
+!
+!
+aaa session-id common
+clock timezone YAKT 9 0
+switch 1 provision c1000-16fp-2g-l
+system mtu routing 1500
+!
+!
+ip dhcp snooping vlan 1-4094
+ip dhcp snooping
+ip domain-name kolmar.ru
+ip name-server 10.10.0.210
+vtp mode transparent
+!
+!
+!
+!
+!
+!
+crypto pki trustpoint TP-self-signed-3539303424
+ enrollment selfsigned
+ subject-name cn=IOS-Self-Signed-Certificate-3539303424
+ revocation-check none
+ rsakeypair TP-self-signed-3539303424
+!
+!
+crypto pki certificate chain TP-self-signed-3539303424
+ certificate self-signed 01
+  3082022B 30820194 A0030201 02020101 300D0609 2A864886 F70D0101 05050030 
+  31312F30 2D060355 04031326 494F532D 53656C66 2D536967 6E65642D 43657274 
+  69666963 6174652D 33353339 33303334 3234301E 170D3933 30333031 30303030 
+  35355A17 0D323030 31303130 30303030 305A3031 312F302D 06035504 03132649 
+  4F532D53 656C662D 5369676E 65642D43 65727469 66696361 74652D33 35333933 
+  30333432 3430819F 300D0609 2A864886 F70D0101 01050003 818D0030 81890281 
+  8100C8BB B5D29054 5A118BFA 73ACC049 51DF7C92 E82279DA BA493453 80D974B3 
+  EC35E23A BA3EF796 E50349F1 B190B367 94E9FD15 7C6C5C2A F6784F73 307E1D56 
+  FE27819F 576C461E 8299EFD4 F57D1D98 04C6A36B 9E55D340 B25C27E5 255DCE43 
+  BF53E3E6 B15BD48B E915F9DF A238824F A8DC6792 5437C952 DAFE38E2 781D6ADD 
+  47DB0203 010001A3 53305130 0F060355 1D130101 FF040530 030101FF 301F0603 
+  551D2304 18301680 1406A240 7FAD07BF D68E2214 1FB64295 7854B03A 23301D06 
+  03551D0E 04160414 06A2407F AD07BFD6 8E22141F B6429578 54B03A23 300D0609 
+  2A864886 F70D0101 05050003 81810075 2B4095CC D99D1D30 7E116146 6651ADB6 
+  7E0F5289 972F9233 A421FD3E 8134FAB1 6ACE9B32 D5883CC7 4D82CA47 8BA4EB0D 
+  3CAF6A79 7C08C063 0784BB3F DFF99865 4F50BF6B 399AF99D 3F212E02 C02E9EC6 
+  82605EF9 F00DAA34 B38ACFD2 9FBC188C 776DA387 23E116A0 450DBBC7 B00877E4 
+  D053C0A9 BD1980F7 F391DDAD 2539BF
+  	quit
+!
+spanning-tree mode rapid-pvst
+spanning-tree loopguard default
+spanning-tree extend system-id
+no errdisable detect cause gbic-invalid
+no errdisable detect cause sfp-config-mismatch
+errdisable recovery cause udld
+errdisable recovery cause bpduguard
+errdisable recovery cause security-violation
+errdisable recovery cause channel-misconfig
+errdisable recovery cause pagp-flap
+errdisable recovery cause dtp-flap
+errdisable recovery cause link-flap
+errdisable recovery cause sfp-config-mismatch
+errdisable recovery cause gbic-invalid
+errdisable recovery cause psecure-violation
+errdisable recovery cause port-mode-failure
+errdisable recovery cause dhcp-rate-limit
+errdisable recovery cause pppoe-ia-rate-limit
+errdisable recovery cause mac-limit
+errdisable recovery cause vmps
+errdisable recovery cause storm-control
+errdisable recovery cause inline-power
+errdisable recovery cause arp-inspection
+errdisable recovery cause loopback
+errdisable recovery cause psp
+errdisable recovery interval 180
+!
+vlan internal allocation policy ascending
+!
+vlan 12
+ name Admin
+!
+vlan 17
+ name Transport
+!
+vlan 20 
+!
+vlan 30
+ name Wi-Fi
+!
+vlan 31
+ name Wi-Fi_Guest
+!
+vlan 32
+ name Wi-Fi_Works
+!
+vlan 33
+ name Wi-Fi_Staff
+!
+vlan 34
+ name Wi-Fi_Generals
+!
+vlan 40
+ name Users(Den)
+!
+lldp run
+!
+!
+!
+!
+!
+interface GigabitEthernet1/0/1
+ description UNIFI
+ switchport access vlan 30
+ switchport trunk allowed vlan 30-34
+ switchport mode trunk
+ logging event spanning-tree
+ logging event status
+ speed 100
+ duplex full
+ no cdp enable
+ no snmp trap link-status
+ storm-control broadcast level 0.10 0.05
+ storm-control multicast level 0.10 0.05
+ storm-control action shutdown
+ storm-control action trap
+ spanning-tree portfast edge
+ ip dhcp snooping limit rate 10
+!
+interface GigabitEthernet1/0/2
+ description UNIFI
+ switchport access vlan 30
+ switchport trunk allowed vlan 30-34
+ switchport mode trunk
+ logging event spanning-tree
+ logging event status
+ speed 100
+ duplex full
+ no cdp enable
+ no snmp trap link-status
+ storm-control broadcast level 0.10 0.05
+ storm-control multicast level 0.10 0.05
+ storm-control action shutdown
+ storm-control action trap
+ spanning-tree portfast edge
+ spanning-tree bpduguard enable
+ ip dhcp snooping limit rate 10
+!
+interface GigabitEthernet1/0/3
+ description UNIFI
+ switchport access vlan 30
+ switchport trunk allowed vlan 30-34
+ switchport mode trunk
+ logging event spanning-tree
+ logging event status
+ speed 100
+ duplex full
+ no cdp enable
+ no snmp trap link-status
+ storm-control broadcast level 0.10 0.05
+ storm-control multicast level 0.10 0.05
+ storm-control action shutdown
+ storm-control action trap
+ spanning-tree portfast edge
+ spanning-tree bpduguard enable
+ ip dhcp snooping limit rate 10
+!
+interface GigabitEthernet1/0/4
+ description UNIFI
+ switchport access vlan 30
+ switchport trunk allowed vlan 30-34
+ switchport mode trunk
+ logging event spanning-tree
+ logging event status
+ speed 100
+ duplex full
+ no cdp enable
+ no snmp trap link-status
+ storm-control broadcast level 0.10 0.05
+ storm-control multicast level 0.10 0.05
+ storm-control action shutdown
+ storm-control action trap
+ spanning-tree portfast edge
+ spanning-tree bpduguard enable
+ ip dhcp snooping limit rate 10
+!
+interface GigabitEthernet1/0/5
+ description KARAOKEEEEE
+ switchport access vlan 40
+ switchport trunk allowed vlan 30-34
+ switchport mode access
+ logging event spanning-tree
+ logging event status
+ speed 100
+ duplex full
+ no cdp enable
+ no snmp trap link-status
+ storm-control broadcast level 0.10 0.05
+ storm-control multicast level 0.10 0.05
+ storm-control action shutdown
+ storm-control action trap
+ spanning-tree portfast edge
+ spanning-tree bpduguard enable
+ ip dhcp snooping limit rate 10
+!
+interface GigabitEthernet1/0/6
+ description UNIFI
+ switchport trunk allowed vlan 30-34
+ switchport mode trunk
+ logging event spanning-tree
+ logging event status
+ speed 100
+ duplex full
+ no cdp enable
+ no snmp trap link-status
+ storm-control broadcast level 0.10 0.05
+ storm-control multicast level 0.10 0.05
+ storm-control action shutdown
+ storm-control action trap
+ spanning-tree portfast edge
+ spanning-tree bpduguard enable
+ ip dhcp snooping limit rate 10
+!
+interface GigabitEthernet1/0/7
+ description UNIFI
+ switchport trunk allowed vlan 30-34
+ switchport mode trunk
+ logging event spanning-tree
+ logging event status
+ speed 100
+ duplex full
+ no cdp enable
+ no snmp trap link-status
+ storm-control broadcast level 0.10 0.05
+ storm-control multicast level 0.10 0.05
+ storm-control action shutdown
+ storm-control action trap
+ spanning-tree portfast edge
+ spanning-tree bpduguard enable
+ ip dhcp snooping limit rate 10
+!
+interface GigabitEthernet1/0/8
+ description UNIFI
+ switchport trunk allowed vlan 30-34
+ switchport mode trunk
+ logging event spanning-tree
+ logging event status
+ speed 100
+ duplex full
+ no cdp enable
+ no snmp trap link-status
+ storm-control broadcast level 0.10 0.05
+ storm-control multicast level 0.10 0.05
+ storm-control action shutdown
+ storm-control action trap
+ spanning-tree portfast edge
+ spanning-tree bpduguard enable
+ ip dhcp snooping limit rate 10
+!
+interface GigabitEthernet1/0/9
+ description UNIFI
+ switchport trunk allowed vlan 30-34
+ switchport mode trunk
+ logging event spanning-tree
+ logging event status
+ speed 100
+ duplex full
+ no cdp enable
+ no snmp trap link-status
+ storm-control broadcast level 0.10 0.05
+ storm-control multicast level 0.10 0.05
+ storm-control action shutdown
+ storm-control action trap
+ spanning-tree portfast edge
+ spanning-tree bpduguard enable
+ ip dhcp snooping limit rate 10
+!
+interface GigabitEthernet1/0/10
+ description UNIFI
+ switchport trunk allowed vlan 30-34
+ switchport mode trunk
+ logging event spanning-tree
+ logging event status
+ speed 100
+ duplex full
+ no cdp enable
+ no snmp trap link-status
+ storm-control broadcast level 0.10 0.05
+ storm-control multicast level 0.10 0.05
+ storm-control action shutdown
+ storm-control action trap
+ spanning-tree portfast edge
+ spanning-tree bpduguard enable
+ ip dhcp snooping limit rate 10
+!
+interface GigabitEthernet1/0/11
+ description UNIFI
+ switchport trunk allowed vlan 30-34
+ switchport mode trunk
+ logging event spanning-tree
+ logging event status
+ speed 100
+ duplex full
+ no cdp enable
+ no snmp trap link-status
+ storm-control broadcast level 0.10 0.05
+ storm-control multicast level 0.10 0.05
+ storm-control action shutdown
+ storm-control action trap
+ spanning-tree portfast edge
+ spanning-tree bpduguard enable
+ ip dhcp snooping limit rate 10
+!
+interface GigabitEthernet1/0/12
+ description UNIFI
+ switchport trunk allowed vlan 30-34
+ switchport mode trunk
+ logging event spanning-tree
+ logging event status
+ speed 100
+ duplex full
+ no cdp enable
+ no snmp trap link-status
+ storm-control broadcast level 0.10 0.05
+ storm-control multicast level 0.10 0.05
+ storm-control action shutdown
+ storm-control action trap
+ spanning-tree portfast edge
+ spanning-tree bpduguard enable
+ ip dhcp snooping limit rate 10
+!
+interface GigabitEthernet1/0/13
+ description UNIFI
+ switchport trunk allowed vlan 30-34
+ switchport mode trunk
+ logging event spanning-tree
+ logging event status
+ speed 100
+ duplex full
+ no cdp enable
+ no snmp trap link-status
+ storm-control broadcast level 0.10 0.05
+ storm-control multicast level 0.10 0.05
+ storm-control action shutdown
+ storm-control action trap
+ spanning-tree portfast edge
+ spanning-tree bpduguard enable
+ ip dhcp snooping limit rate 10
+!
+interface GigabitEthernet1/0/14
+ description UNIFI
+ switchport trunk allowed vlan 30-34
+ switchport mode trunk
+ logging event spanning-tree
+ logging event status
+ speed 100
+ duplex full
+ no cdp enable
+ no snmp trap link-status
+ storm-control broadcast level 0.10 0.05
+ storm-control multicast level 0.10 0.05
+ storm-control action shutdown
+ storm-control action trap
+ spanning-tree portfast edge
+ spanning-tree bpduguard enable
+ ip dhcp snooping limit rate 10
+!
+interface GigabitEthernet1/0/15
+ description UNIFI
+ switchport trunk allowed vlan 30-34
+ switchport mode trunk
+ logging event spanning-tree
+ logging event status
+ speed 100
+ duplex full
+ no cdp enable
+ no snmp trap link-status
+ storm-control broadcast level 0.10 0.05
+ storm-control multicast level 0.10 0.05
+ storm-control action shutdown
+ storm-control action trap
+ spanning-tree portfast edge
+ spanning-tree bpduguard enable
+ ip dhcp snooping limit rate 10
+!
+interface GigabitEthernet1/0/16
+ description UNIFI
+ switchport trunk allowed vlan 12,13,17,30-34
+ switchport mode trunk
+ logging event spanning-tree
+ logging event status
+ speed 100
+ duplex full
+ no cdp enable
+ no snmp trap link-status
+ storm-control broadcast level 20.00 10.00
+ storm-control multicast level 20.00 10.00
+ storm-control action shutdown
+ storm-control action trap
+ spanning-tree portfast edge
+ ip dhcp snooping limit rate 10
+ ip dhcp snooping trust
+!
+interface GigabitEthernet1/0/17
+ description 98.1_twe1/0/20
+ switchport trunk allowed vlan 1,13,17,30-34,40
+ switchport mode trunk
+ logging event spanning-tree
+ logging event status
+ storm-control broadcast level 20.00 10.00
+ storm-control multicast level 20.00 10.00
+ storm-control action trap
+ ip dhcp snooping trust
+!
+interface GigabitEthernet1/0/18
+!
+interface Vlan1
+ no ip address
+ shutdown
+!
+interface Vlan17
+ ip address 10.20.99.90 255.255.252.0
+!
+no ip http server
+ip http authentication aaa login-authentication login-RADIUS
+ip http authentication aaa exec-authorization auth-RADIUS-exec
+ip http secure-server
+ip http max-connections 3
+ip ssh version 2
+!
+kron policy-list backup
+ cli copy vlan.dat tftp://dump.kolmar.pro/10.20.99.90_vlan
+!
+logging trap debugging
+logging host 10.10.0.142 transport udp port 5014
+!
+!
+snmp-server community public RO
+!
+radius-server retransmit 1
+radius-server timeout 2
+radius-server key 7 0457000C0A3042461A1503151E1C
+!
+radius server login-RADIUS
+ address ipv4 10.10.0.210 auth-port 1812 acct-port 1813
+ key 7 141B190109152423372435372E04
+!
+!
+line con 0
+ exec-timeout 13 0
+ privilege level 15
+ authorization exec auth-RADIUS-exec
+ logging synchronous
+ login authentication login-RADIUS
+line vty 0 4
+ access-class 12 in
+ exec-timeout 60 0
+ privilege level 15
+ authorization exec auth-RADIUS-exec
+ logging synchronous
+ login authentication login-RADIUS
+ length 0
+ transport input ssh
+line vty 5 15
+ authorization exec auth-RADIUS-exec
+ login authentication login-RADIUS
+ transport input none
+!
+ntp server time.kolmar.pro
+mac address-table notification change interval 15
+mac address-table notification change history-size 500
+mac address-table notification change
+end
+
+
+
 $ show lldp neighbors detail
 ------------------------------------------------
 Local Intf: Gi1/0/17
@@ -104,7 +614,7 @@ System Name: DEN-FOK-UP
 System Description: 
 UAP-HD-IW, 6.7.17.15512
 
-Time remaining: 113 seconds
+Time remaining: 97 seconds
 System Capabilities: B,W,R,S
 Enabled Capabilities: B,W,R
 Management Addresses:
@@ -139,7 +649,7 @@ System Name: DEN-FOK-POOL
 System Description: 
 UAP-HD-IW, 6.7.17.15512
 
-Time remaining: 95 seconds
+Time remaining: 109 seconds
 System Capabilities: B,W,R,S
 Enabled Capabilities: B,W,R
 Management Addresses:
@@ -174,7 +684,7 @@ System Name: DEN-FOK-HOLL
 System Description: 
 UAP-HD-IW, 6.7.17.15512
 
-Time remaining: 112 seconds
+Time remaining: 96 seconds
 System Capabilities: B,W,R,S
 Enabled Capabilities: B,W,R
 Management Addresses:
@@ -209,7 +719,7 @@ System Name: DEN-FOK-ROOM
 System Description: 
 UAP-HD-IW, 6.7.17.15512
 
-Time remaining: 113 seconds
+Time remaining: 97 seconds
 System Capabilities: B,W,R,S
 Enabled Capabilities: B,W,R
 Management Addresses:
@@ -246,7 +756,7 @@ Entry address(es):
   IP address: 10.20.98.1
 Platform: cisco C9300X-24Y,  Capabilities: Router Switch IGMP 
 Interface: GigabitEthernet1/0/17,  Port ID (outgoing port): TwentyFiveGigE1/0/20
-Holdtime : 175 sec
+Holdtime : 168 sec
 
 Version :
 Cisco IOS Software [Bengaluru], Catalyst L3 Switch Software (CAT9K_IOSXE), Version 17.6.1, RELEASE SOFTWARE (fc6)
@@ -271,6 +781,6 @@ Capability Codes: R - Router, T - Trans Bridge, B - Source Route Bridge
                   D - Remote, C - CVTA, M - Two-port Mac Relay 
 
 Device ID        Local Intrfce     Holdtme    Capability  Platform  Port ID
-DEN-NSWR-03-98-1 Gig 1/0/17        175             R S I  C9300X-24 Twe 1/0/20
+DEN-NSWR-03-98-1 Gig 1/0/17        168             R S I  C9300X-24 Twe 1/0/20
 
 Total cdp entries displayed : 1

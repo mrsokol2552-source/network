@@ -12,5 +12,5 @@ $ show interface detail
 
 
 $ show lldp neighbors brief
-          	(512~1023)  bytes: 144092224, (1024~1518) bytes: 383897422 
+            Ethernet1/0/2 is up, line protocol is up
  --More-- 

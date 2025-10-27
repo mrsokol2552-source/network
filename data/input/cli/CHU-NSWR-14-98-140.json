@@ -1,10 +1,289 @@
 {
   "vendor": "cisco_ios",
   "raw_files": [
-    "10.20.98.140.txt"
+    "CHU\\14\\10.20.98.140.txt"
   ],
-  "parsed": {},
-  "errors": [
-    "no_templates_for_vendor:cisco_ios"
-  ]
+  "parsed": {
+    "cisco_ios_show_cdp_neighbors": [
+      {
+        "Neighbor": "CHU-NSWR-14-98-140",
+        "LocalInterface": "uptime is",
+        "NeighborPort": "3 days,",
+        "_source_file": "C:\\Users\\zhiltsov.aa\\Desktop\\net-auto-mermaid\\data\\raw\\CHU\\14\\10.20.98.140.txt",
+        "_template": "cisco_ios_show_cdp_neighbors.template"
+      },
+      {
+        "Neighbor": "logging",
+        "LocalInterface": "rate-limit",
+        "NeighborPort": "warnings",
+        "_source_file": "C:\\Users\\zhiltsov.aa\\Desktop\\net-auto-mermaid\\data\\raw\\CHU\\14\\10.20.98.140.txt",
+        "_template": "cisco_ios_show_cdp_neighbors.template"
+      },
+      {
+        "Neighbor": "username",
+        "LocalInterface": "november privilege",
+        "NeighborPort": "5 $1$r8h6$dKXsd10plZZa/GEQbeZKF/",
+        "_source_file": "C:\\Users\\zhiltsov.aa\\Desktop\\net-auto-mermaid\\data\\raw\\CHU\\14\\10.20.98.140.txt",
+        "_template": "cisco_ios_show_cdp_neighbors.template"
+      },
+      {
+        "Neighbor": "username",
+        "LocalInterface": "ivashenko_vb privilege",
+        "NeighborPort": "5 $1$bi7z$qTHuukwOKu/rACvOW/3hy.",
+        "_source_file": "C:\\Users\\zhiltsov.aa\\Desktop\\net-auto-mermaid\\data\\raw\\CHU\\14\\10.20.98.140.txt",
+        "_template": "cisco_ios_show_cdp_neighbors.template"
+      },
+      {
+        "Neighbor": "username",
+        "LocalInterface": "sib_uib privilege",
+        "NeighborPort": "9 $9$RJ64VWzV1YSKQU$a3dKPmGjU4GExZXjw04SfWQGQHhkCaV8ap0Wcmqfnig",
+        "_source_file": "C:\\Users\\zhiltsov.aa\\Desktop\\net-auto-mermaid\\data\\raw\\CHU\\14\\10.20.98.140.txt",
+        "_template": "cisco_ios_show_cdp_neighbors.template"
+      },
+      {
+        "Neighbor": "Gig",
+        "LocalInterface": "1/1/1",
+        "NeighborPort": "S I",
+        "_source_file": "C:\\Users\\zhiltsov.aa\\Desktop\\net-auto-mermaid\\data\\raw\\CHU\\14\\10.20.98.140.txt",
+        "_template": "cisco_ios_show_cdp_neighbors.template"
+      },
+      {
+        "Neighbor": "Gig",
+        "LocalInterface": "1/0/4",
+        "NeighborPort": "I   WS-C2960C",
+        "_source_file": "C:\\Users\\zhiltsov.aa\\Desktop\\net-auto-mermaid\\data\\raw\\CHU\\14\\10.20.98.140.txt",
+        "_template": "cisco_ios_show_cdp_neighbors.template"
+      },
+      {
+        "Neighbor": "Gig",
+        "LocalInterface": "1/0/1",
+        "NeighborPort": "I   WS-C2960C",
+        "_source_file": "C:\\Users\\zhiltsov.aa\\Desktop\\net-auto-mermaid\\data\\raw\\CHU\\14\\10.20.98.140.txt",
+        "_template": "cisco_ios_show_cdp_neighbors.template"
+      },
+      {
+        "Neighbor": "Gig",
+        "LocalInterface": "1/0/6",
+        "NeighborPort": "I   WS-C2960C",
+        "_source_file": "C:\\Users\\zhiltsov.aa\\Desktop\\net-auto-mermaid\\data\\raw\\CHU\\14\\10.20.98.140.txt",
+        "_template": "cisco_ios_show_cdp_neighbors.template"
+      },
+      {
+        "Neighbor": "Gig",
+        "LocalInterface": "1/0/7",
+        "NeighborPort": "I   WS-C2960C",
+        "_source_file": "C:\\Users\\zhiltsov.aa\\Desktop\\net-auto-mermaid\\data\\raw\\CHU\\14\\10.20.98.140.txt",
+        "_template": "cisco_ios_show_cdp_neighbors.template"
+      },
+      {
+        "Neighbor": "Gig",
+        "LocalInterface": "1/0/2",
+        "NeighborPort": "I   WS-C2960C",
+        "_source_file": "C:\\Users\\zhiltsov.aa\\Desktop\\net-auto-mermaid\\data\\raw\\CHU\\14\\10.20.98.140.txt",
+        "_template": "cisco_ios_show_cdp_neighbors.template"
+      },
+      {
+        "Neighbor": "Gig",
+        "LocalInterface": "1/0/8",
+        "NeighborPort": "I   WS-C2960C",
+        "_source_file": "C:\\Users\\zhiltsov.aa\\Desktop\\net-auto-mermaid\\data\\raw\\CHU\\14\\10.20.98.140.txt",
+        "_template": "cisco_ios_show_cdp_neighbors.template"
+      },
+      {
+        "Neighbor": "Gig",
+        "LocalInterface": "1/0/13",
+        "NeighborPort": "I   WS-C2960C",
+        "_source_file": "C:\\Users\\zhiltsov.aa\\Desktop\\net-auto-mermaid\\data\\raw\\CHU\\14\\10.20.98.140.txt",
+        "_template": "cisco_ios_show_cdp_neighbors.template"
+      },
+      {
+        "Neighbor": "Gig",
+        "LocalInterface": "1/0/10",
+        "NeighborPort": "I   WS-C2960X",
+        "_source_file": "C:\\Users\\zhiltsov.aa\\Desktop\\net-auto-mermaid\\data\\raw\\CHU\\14\\10.20.98.140.txt",
+        "_template": "cisco_ios_show_cdp_neighbors.template"
+      },
+      {
+        "Neighbor": "Gig",
+        "LocalInterface": "1/0/9",
+        "NeighborPort": "I   WS-C2960C",
+        "_source_file": "C:\\Users\\zhiltsov.aa\\Desktop\\net-auto-mermaid\\data\\raw\\CHU\\14\\10.20.98.140.txt",
+        "_template": "cisco_ios_show_cdp_neighbors.template"
+      },
+      {
+        "Neighbor": "Gig",
+        "LocalInterface": "1/0/5",
+        "NeighborPort": "I   WS-C2960C",
+        "_source_file": "C:\\Users\\zhiltsov.aa\\Desktop\\net-auto-mermaid\\data\\raw\\CHU\\14\\10.20.98.140.txt",
+        "_template": "cisco_ios_show_cdp_neighbors.template"
+      },
+      {
+        "Neighbor": "Gig",
+        "LocalInterface": "1/0/24",
+        "NeighborPort": "I   WS-C2960X",
+        "_source_file": "C:\\Users\\zhiltsov.aa\\Desktop\\net-auto-mermaid\\data\\raw\\CHU\\14\\10.20.98.140.txt",
+        "_template": "cisco_ios_show_cdp_neighbors.template"
+      },
+      {
+        "Neighbor": "Gig",
+        "LocalInterface": "1/0/11",
+        "NeighborPort": "I   WS-C2960C",
+        "_source_file": "C:\\Users\\zhiltsov.aa\\Desktop\\net-auto-mermaid\\data\\raw\\CHU\\14\\10.20.98.140.txt",
+        "_template": "cisco_ios_show_cdp_neighbors.template"
+      },
+      {
+        "Neighbor": "Gig",
+        "LocalInterface": "1/0/3",
+        "NeighborPort": "I   WS-C2960C",
+        "_source_file": "C:\\Users\\zhiltsov.aa\\Desktop\\net-auto-mermaid\\data\\raw\\CHU\\14\\10.20.98.140.txt",
+        "_template": "cisco_ios_show_cdp_neighbors.template"
+      },
+      {
+        "Neighbor": "Gig",
+        "LocalInterface": "1/0/12",
+        "NeighborPort": "I   WS-C2960C",
+        "_source_file": "C:\\Users\\zhiltsov.aa\\Desktop\\net-auto-mermaid\\data\\raw\\CHU\\14\\10.20.98.140.txt",
+        "_template": "cisco_ios_show_cdp_neighbors.template"
+      }
+    ],
+    "cisco_ios_show_cdp_neighbors_detail": [
+      {
+        "Neighbor": "CHU-NSWR-14-99-45.kolmar.ru",
+        "LocalInterface": "GigabitEthernet1/1/1",
+        "NeighborPort": "GigabitEthernet1/1/2",
+        "Platform": "cisco WS-C3850R-24T",
+        "_source_file": "C:\\Users\\zhiltsov.aa\\Desktop\\net-auto-mermaid\\data\\raw\\CHU\\14\\10.20.98.140.txt",
+        "_template": "cisco_ios_show_cdp_neighbors_detail.template"
+      },
+      {
+        "Neighbor": "CHU-NSWS-04-99-222.kolmar.ru",
+        "LocalInterface": "GigabitEthernet1/0/4",
+        "NeighborPort": "GigabitEthernet0/1",
+        "Platform": "cisco WS-C2960C-8TC-L",
+        "_source_file": "C:\\Users\\zhiltsov.aa\\Desktop\\net-auto-mermaid\\data\\raw\\CHU\\14\\10.20.98.140.txt",
+        "_template": "cisco_ios_show_cdp_neighbors_detail.template"
+      },
+      {
+        "Neighbor": "CHU-NSWS-01-98-143.kolmar.ru",
+        "LocalInterface": "GigabitEthernet1/0/1",
+        "NeighborPort": "GigabitEthernet0/11",
+        "Platform": "cisco WS-C2960CX-8PC-L",
+        "_source_file": "C:\\Users\\zhiltsov.aa\\Desktop\\net-auto-mermaid\\data\\raw\\CHU\\14\\10.20.98.140.txt",
+        "_template": "cisco_ios_show_cdp_neighbors_detail.template"
+      },
+      {
+        "Neighbor": "CHU-NSWS-07-98-145.kolmar.ru",
+        "LocalInterface": "GigabitEthernet1/0/6",
+        "NeighborPort": "GigabitEthernet0/11",
+        "Platform": "cisco WS-C2960CX-8PC-L",
+        "_source_file": "C:\\Users\\zhiltsov.aa\\Desktop\\net-auto-mermaid\\data\\raw\\CHU\\14\\10.20.98.140.txt",
+        "_template": "cisco_ios_show_cdp_neighbors_detail.template"
+      },
+      {
+        "Neighbor": "CHU-NSWS-05-98-146.kolmar.ru",
+        "LocalInterface": "GigabitEthernet1/0/7",
+        "NeighborPort": "GigabitEthernet0/11",
+        "Platform": "cisco WS-C2960CX-8PC-L",
+        "_source_file": "C:\\Users\\zhiltsov.aa\\Desktop\\net-auto-mermaid\\data\\raw\\CHU\\14\\10.20.98.140.txt",
+        "_template": "cisco_ios_show_cdp_neighbors_detail.template"
+      },
+      {
+        "Neighbor": "CHU-NSWS-03-99-224.kolmar.ru",
+        "LocalInterface": "GigabitEthernet1/0/2",
+        "NeighborPort": "GigabitEthernet0/1",
+        "Platform": "cisco WS-C2960C-8TC-L",
+        "_source_file": "C:\\Users\\zhiltsov.aa\\Desktop\\net-auto-mermaid\\data\\raw\\CHU\\14\\10.20.98.140.txt",
+        "_template": "cisco_ios_show_cdp_neighbors_detail.template"
+      },
+      {
+        "Neighbor": "CHU-NSWS-08-98-148.kolmar.ru",
+        "LocalInterface": "GigabitEthernet1/0/8",
+        "NeighborPort": "GigabitEthernet0/11",
+        "Platform": "cisco WS-C2960CX-8PC-L",
+        "_source_file": "C:\\Users\\zhiltsov.aa\\Desktop\\net-auto-mermaid\\data\\raw\\CHU\\14\\10.20.98.140.txt",
+        "_template": "cisco_ios_show_cdp_neighbors_detail.template"
+      },
+      {
+        "Neighbor": "CHU-NSWS-22-98-151.kolmar.ru",
+        "LocalInterface": "GigabitEthernet1/0/13",
+        "NeighborPort": "GigabitEthernet0/11",
+        "Platform": "cisco WS-C2960CX-8PC-L",
+        "_source_file": "C:\\Users\\zhiltsov.aa\\Desktop\\net-auto-mermaid\\data\\raw\\CHU\\14\\10.20.98.140.txt",
+        "_template": "cisco_ios_show_cdp_neighbors_detail.template"
+      },
+      {
+        "Neighbor": "CHU-NSWS-12-98-142.kolmar.ru",
+        "LocalInterface": "GigabitEthernet1/0/10",
+        "NeighborPort": "GigabitEthernet1/0/25",
+        "Platform": "cisco WS-C2960X-24PS-L",
+        "_source_file": "C:\\Users\\zhiltsov.aa\\Desktop\\net-auto-mermaid\\data\\raw\\CHU\\14\\10.20.98.140.txt",
+        "_template": "cisco_ios_show_cdp_neighbors_detail.template"
+      },
+      {
+        "Neighbor": "CHU-NSWS-16-99-225.kolmar.ru",
+        "LocalInterface": "GigabitEthernet1/0/9",
+        "NeighborPort": "GigabitEthernet0/11",
+        "Platform": "cisco WS-C2960CX-8TC-L",
+        "_source_file": "C:\\Users\\zhiltsov.aa\\Desktop\\net-auto-mermaid\\data\\raw\\CHU\\14\\10.20.98.140.txt",
+        "_template": "cisco_ios_show_cdp_neighbors_detail.template"
+      },
+      {
+        "Neighbor": "CHU-NSWS-03-98-144.kolmar.ru",
+        "LocalInterface": "GigabitEthernet1/0/5",
+        "NeighborPort": "GigabitEthernet0/11",
+        "Platform": "cisco WS-C2960CX-8PC-L",
+        "_source_file": "C:\\Users\\zhiltsov.aa\\Desktop\\net-auto-mermaid\\data\\raw\\CHU\\14\\10.20.98.140.txt",
+        "_template": "cisco_ios_show_cdp_neighbors_detail.template"
+      },
+      {
+        "Neighbor": "CHU-NSWS-14-98-141.kolmar.ru",
+        "LocalInterface": "GigabitEthernet1/0/24",
+        "NeighborPort": "GigabitEthernet1/0/25",
+        "Platform": "cisco WS-C2960X-24PS-L",
+        "_source_file": "C:\\Users\\zhiltsov.aa\\Desktop\\net-auto-mermaid\\data\\raw\\CHU\\14\\10.20.98.140.txt",
+        "_template": "cisco_ios_show_cdp_neighbors_detail.template"
+      },
+      {
+        "Neighbor": "CHU-NSWS-15-99-217.kolmar.ru",
+        "LocalInterface": "GigabitEthernet1/0/11",
+        "NeighborPort": "GigabitEthernet0/11",
+        "Platform": "cisco WS-C2960CX-8PC-L",
+        "_source_file": "C:\\Users\\zhiltsov.aa\\Desktop\\net-auto-mermaid\\data\\raw\\CHU\\14\\10.20.98.140.txt",
+        "_template": "cisco_ios_show_cdp_neighbors_detail.template"
+      },
+      {
+        "Neighbor": "CHU-NSWS-02-99-223.kolmar.ru",
+        "LocalInterface": "GigabitEthernet1/0/3",
+        "NeighborPort": "GigabitEthernet0/1",
+        "Platform": "cisco WS-C2960C-12PC-L",
+        "_source_file": "C:\\Users\\zhiltsov.aa\\Desktop\\net-auto-mermaid\\data\\raw\\CHU\\14\\10.20.98.140.txt",
+        "_template": "cisco_ios_show_cdp_neighbors_detail.template"
+      },
+      {
+        "Neighbor": "CHU-NSWS-13-99-218.kolmar.ru",
+        "LocalInterface": "GigabitEthernet1/0/12",
+        "NeighborPort": "GigabitEthernet0/11",
+        "Platform": "cisco WS-C2960CX-8PC-L",
+        "_source_file": "C:\\Users\\zhiltsov.aa\\Desktop\\net-auto-mermaid\\data\\raw\\CHU\\14\\10.20.98.140.txt",
+        "_template": "cisco_ios_show_cdp_neighbors_detail.template"
+      }
+    ],
+    "cisco_ios_show_version": [
+      {
+        "Version": "16.6.5",
+        "Model": "",
+        "Uptime": "7 weeks, 3 days, 22 hours, 7 minutes",
+        "_source_file": "C:\\Users\\zhiltsov.aa\\Desktop\\net-auto-mermaid\\data\\raw\\CHU\\14\\10.20.98.140.txt",
+        "_template": "cisco_ios_show_version.template"
+      },
+      {
+        "Version": "15.2(4)E6",
+        "Model": "WS-C3850-24S",
+        "Uptime": "",
+        "_source_file": "C:\\Users\\zhiltsov.aa\\Desktop\\net-auto-mermaid\\data\\raw\\CHU\\14\\10.20.98.140.txt",
+        "_template": "cisco_ios_show_version.template"
+      }
+    ]
+  },
+  "errors": []
 }

@@ -14,7 +14,7 @@ System Name                       : NER-NSWS-09-99-129
 System Location                   : 
 System Description                : MES2448B rev.B AC 52-port 1G/10G Managed Switch
 Logging Option                    : Flash Logging
-Device Uptime                     : 37 Days, 15 Hrs, 27 Mins, 22 Secs
+Device Uptime                     : 37 Days, 16 Hrs, 8 Mins, 6 Secs
 Login Authentication Mode         : Local
 Config Save Status                : Successful
 Remote Save Status                : Not Initiated
@@ -185,24 +185,24 @@ Port        Type          Status           Duplex   Speed       Negotiation     
 ----        ------------  ------           ------   -----       -----------     ----------      ----------------
 gi 0/1      1G-Copper     Down (nc)        -        -           No-Negotiation  Auto-MDIX on    -               
 gi 0/2      1G-Copper     Down (nc)        -        -           No-Negotiation  Auto-MDIX on    -               
-gi 0/3      1G-Copper     Up               Full     100 Mbps    No-Negotiation  Auto-MDIX on    38,2:58:31      
-gi 0/4      1G-Copper     Up               Full     100 Mbps    No-Negotiation  Auto-MDIX on    38,2:58:30      
-gi 0/5      1G-Copper     Up               Full     100 Mbps    No-Negotiation  Auto-MDIX on    0,5:1:0         
-gi 0/6      1G-Copper     Up               Full     100 Mbps    No-Negotiation  Auto-MDIX on    38,2:58:29      
-gi 0/7      1G-Copper     Up               Full     100 Mbps    No-Negotiation  Auto-MDIX on    10,14:3:51      
-gi 0/8      1G-Copper     Up               Full     100 Mbps    No-Negotiation  Auto-MDIX on    0,5:9:45        
-gi 0/9      1G-Copper     Up               Full     100 Mbps    No-Negotiation  Auto-MDIX on    38,2:58:28      
-gi 0/10     1G-Copper     Up               Full     100 Mbps    No-Negotiation  Auto-MDIX on    0,4:10:54       
-gi 0/11     1G-Copper     Up               Full     100 Mbps    No-Negotiation  Auto-MDIX on    0,4:4:57        
-gi 0/12     1G-Copper     Up               Full     100 Mbps    No-Negotiation  Auto-MDIX on    2,19:36:42      
-gi 0/13     1G-Copper     Up               Full     100 Mbps    No-Negotiation  Auto-MDIX on    38,2:58:26      
+gi 0/3      1G-Copper     Up               Full     100 Mbps    No-Negotiation  Auto-MDIX on    38,3:39:42      
+gi 0/4      1G-Copper     Up               Full     100 Mbps    No-Negotiation  Auto-MDIX on    38,3:39:41      
+gi 0/5      1G-Copper     Up               Full     100 Mbps    No-Negotiation  Auto-MDIX on    0,5:42:12       
+gi 0/6      1G-Copper     Up               Full     100 Mbps    No-Negotiation  Auto-MDIX on    38,3:39:41      
+gi 0/7      1G-Copper     Up               Full     100 Mbps    No-Negotiation  Auto-MDIX on    10,14:45:3      
+gi 0/8      1G-Copper     Up               Full     100 Mbps    No-Negotiation  Auto-MDIX on    0,5:50:57       
+gi 0/9      1G-Copper     Up               Full     100 Mbps    No-Negotiation  Auto-MDIX on    38,3:39:40      
+gi 0/10     1G-Copper     Up               Full     100 Mbps    No-Negotiation  Auto-MDIX on    0,4:52:6        
+gi 0/11     1G-Copper     Up               Full     100 Mbps    No-Negotiation  Auto-MDIX on    0,4:46:8        
+gi 0/12     1G-Copper     Up               Full     100 Mbps    No-Negotiation  Auto-MDIX on    2,20:17:53      
+gi 0/13     1G-Copper     Up               Full     100 Mbps    No-Negotiation  Auto-MDIX on    38,3:39:38      
 gi 0/14     1G-Copper     Down (nc)        -        -           No-Negotiation  Auto-MDIX on    -               
-gi 0/15     1G-Copper     Up               Full     100 Mbps    No-Negotiation  Auto-MDIX on    0,4:4:8         
-gi 0/16     1G-Copper     Up               Full     100 Mbps    No-Negotiation  Auto-MDIX on    0,4:3:5         
+gi 0/15     1G-Copper     Up               Full     100 Mbps    No-Negotiation  Auto-MDIX on    0,4:45:20       
+gi 0/16     1G-Copper     Up               Full     100 Mbps    No-Negotiation  Auto-MDIX on    0,4:44:17       
 gi 0/17     1G-Copper     Down (nc)        -        -           No-Negotiation  Auto-MDIX on    -               
-gi 0/18     1G-Copper     Up               Full     100 Mbps    No-Negotiation  Auto-MDIX on    0,0:1:57        
-gi 0/19     1G-Copper     Up               Full     100 Mbps    No-Negotiation  Auto-MDIX on    38,2:58:25      
-gi 0/20     1G-Copper     Up               Full     100 Mbps    No-Negotiation  Auto-MDIX on    38,2:58:25      
+gi 0/18     1G-Copper     Up               Full     100 Mbps    No-Negotiation  Auto-MDIX on    0,0:43:8        
+gi 0/19     1G-Copper     Up               Full     100 Mbps    No-Negotiation  Auto-MDIX on    38,3:39:37      
+gi 0/20     1G-Copper     Up               Full     100 Mbps    No-Negotiation  Auto-MDIX on    38,3:39:37      
 
 
 --More--
@@ -229,7 +229,7 @@ $ show interfaces
                 
 gi 0/47     1G-Copper     Down (nc)        -        -           Auto            Auto-MDIX on    -               
 gi 0/48     1G-Copper     Down (nc)        -        -           Auto            Auto-MDIX on    -               
-te 0/1      10G-Fiber     Up               -        1 Gbps      No-Negotiation  Auto-MDIX on    38,2:58:30      
+te 0/1      10G-Fiber     Up               -        1 Gbps      No-Negotiation  Auto-MDIX on    38,3:39:42      
 te 0/2      10G-Fiber     Down (nc)        -        -           No-Negotiation  Auto-MDIX on    -               
 te 0/3      10G-Fiber     Down (nc)        -        -           No-Negotiation  Auto-MDIX on    -               
 te 0/4      10G-Fiber     Down (nc)        -        -           No-Negotiation  Auto-MDIX on    -               

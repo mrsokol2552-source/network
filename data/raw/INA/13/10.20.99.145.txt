@@ -13,7 +13,7 @@ Compiled Sat 17-Apr-21 07:21 by prod_rel_team
 ROM: Bootstrap program is c1000 boot loader
 BOOTLDR: C1000 Boot Loader (C1000-HBOOT-M) Version 15.2(7r)E3, RELEASE SOFTWARE (fc4)
 
-INA-NSWS-13-99-145 uptime is 14 weeks, 6 days, 20 hours, 1 minute
+INA-NSWS-13-99-145 uptime is 14 weeks, 6 days, 20 hours, 43 minutes
 System returned to ROM by power-on
 System image file is "flash:/c1000-universalk9-mz.152-8.E/c1000-universalk9-mz.152-8.E.bin"
 Last reload reason: power-on
@@ -68,6 +68,513 @@ Configuration register is 0xF
 
 
 
+$ show running-config
+Building configuration...
+
+Current configuration : 13387 bytes
+!
+! Last configuration change at 13:14:17 UTC Wed Oct 15 2025 by zhiltsov_a
+!
+version 15.2
+no service pad
+service timestamps debug datetime msec
+service timestamps log datetime msec
+service password-encryption
+!
+hostname INA-NSWS-13-99-145
+!
+boot-start-marker
+boot-end-marker
+!
+!
+username ivashenko_vb privilege 15 secret 5 $1$bi7z$qTHuukwOKu/rACvOW/3hy.
+username volodin_s privilege 15 secret 9 $9$FcIDBQ5eYsVJpk$Ur4E78xCu8s6bjaB8bpVn/biS7LKXL.WEyNi23eWSl6
+username zhiltsov_a privilege 15 secret 9 $9$0c41gr9QTA07wZ$4UI.BouM3C6XMuArLbL.CAjcGJaSR5sG9QgFrX8abLc
+aaa new-model
+!
+!
+aaa group server radius KOLMAR
+ server name cis.kolmar.pro_210
+ server name cis.kolmar.pro_212
+ deadtime 333
+!
+aaa authentication login login-RADIUS group KOLMAR local
+aaa authorization console
+aaa authorization exec auth-RADIUS-exec group KOLMAR local 
+!
+!
+!
+!
+!
+aaa server radius dynamic-author
+ client 10.10.0.210 server-key 7 060A042B495F0711161B14090013
+ client 10.10.0.212 server-key 7 05070D05245D40010A091110071B
+!
+aaa session-id common
+switch 1 provision c1000-16fp-2g-l
+system mtu routing 1500
+!
+!
+ip domain-name kolmar.ru
+vtp mode transparent
+!
+!
+!
+!
+!
+!
+crypto pki trustpoint TP-self-signed-2566153344
+ enrollment selfsigned
+ subject-name cn=IOS-Self-Signed-Certificate-2566153344
+ revocation-check none
+ rsakeypair TP-self-signed-2566153344
+!
+!
+crypto pki certificate chain TP-self-signed-2566153344
+ certificate self-signed 01
+  3082022B 30820194 A0030201 02020101 300D0609 2A864886 F70D0101 05050030 
+  31312F30 2D060355 04031326 494F532D 53656C66 2D536967 6E65642D 43657274 
+  69666963 6174652D 32353636 31353333 3434301E 170D3232 31323132 31353135 
+  35395A17 0D333030 31303130 30303030 305A3031 312F302D 06035504 03132649 
+  4F532D53 656C662D 5369676E 65642D43 65727469 66696361 74652D32 35363631 
+  35333334 3430819F 300D0609 2A864886 F70D0101 01050003 818D0030 81890281 
+  8100A944 55685107 C064BBB4 9A7B3ACA 029167CC 6C030C9A EE2D9C1C 611E65A0 
+  409F25AA D382A6E1 734320BB 077BEBEF E48B24BD C9D91E04 94FB5DA5 A55A1681 
+  2AA6AD6D 64CE5A0D A9045334 BB9AEAAC 1D954628 A71B2D9D 07149B5E 2C77B6A0 
+  AD96144B A099AA45 BCFEF23E 7D3215D4 E903FB82 B1F5B604 5F6E9E4B DA38398D 
+  517B0203 010001A3 53305130 0F060355 1D130101 FF040530 030101FF 301F0603 
+  551D2304 18301680 14FDD655 30C3DCB8 4EFA5732 2DB3CA72 B7F9920B 7D301D06 
+  03551D0E 04160414 FDD65530 C3DCB84E FA57322D B3CA72B7 F9920B7D 300D0609 
+  2A864886 F70D0101 05050003 8181007B 1A5C78F7 90794312 82E96274 A283FE3C 
+  13A7D7A6 500A20FB 4F9D8547 4B281855 8F1BA72B 24A7B1EC 6E9A45FE 8066B4D6 
+  DC5354C0 EAE05B0F 1D6CA0EB A3AC3E3C F5BA03AA 3AD97747 90D0AFC7 B628AD36 
+  990F28B2 95EEC1E0 5C8D4015 ADD0A377 C2F5D5C9 2AFF812C 83220989 8DBA0904 
+  37E87DCD 502D262B 52504E9D 6D1B6F
+  	quit
+file prompt quiet
+!
+spanning-tree mode rapid-pvst
+spanning-tree extend system-id
+errdisable recovery cause udld
+errdisable recovery cause bpduguard
+errdisable recovery cause security-violation
+errdisable recovery cause channel-misconfig
+errdisable recovery cause pagp-flap
+errdisable recovery cause dtp-flap
+errdisable recovery cause link-flap
+errdisable recovery cause sfp-config-mismatch
+errdisable recovery cause gbic-invalid
+errdisable recovery cause psecure-violation
+errdisable recovery cause port-mode-failure
+errdisable recovery cause dhcp-rate-limit
+errdisable recovery cause mac-limit
+errdisable recovery cause vmps
+errdisable recovery cause storm-control
+errdisable recovery cause loopback
+errdisable recovery interval 180
+!
+vlan internal allocation policy ascending
+!
+vlan 13
+ name Phone
+!
+vlan 17
+ name Transport
+!
+vlan 90
+ name Users(Inagly)
+!
+vlan 1091
+ name Cameras(inaglinsky)
+!
+lldp run
+!
+!
+!
+!
+!
+interface GigabitEthernet1/0/1
+ description PC
+ switchport access vlan 90
+ switchport trunk allowed vlan 13
+ switchport mode access
+ switchport nonegotiate
+ logging event trunk-status
+ logging event spanning-tree
+ logging event status
+ logging event subif-link-status
+ no cdp tlv app
+ no snmp trap link-status
+ storm-control broadcast level 5.00 3.00
+ storm-control multicast level 5.00 3.00
+ storm-control action shutdown
+ storm-control action trap
+ no lldp transmit
+ no lldp receive
+ spanning-tree portfast edge
+ spanning-tree bpduguard enable
+!
+interface GigabitEthernet1/0/2
+ description PC
+ switchport access vlan 90
+ switchport mode access
+ switchport nonegotiate
+ logging event trunk-status
+ logging event spanning-tree
+ logging event status
+ logging event subif-link-status
+ no cdp tlv app
+ no snmp trap link-status
+ storm-control broadcast level 5.00 3.00
+ storm-control multicast level 5.00 3.00
+ storm-control action shutdown
+ storm-control action trap
+ no lldp transmit
+ no lldp receive
+ spanning-tree portfast edge
+ spanning-tree bpduguard enable
+!
+interface GigabitEthernet1/0/3
+ switchport access vlan 90
+ switchport mode access
+ switchport nonegotiate
+ logging event trunk-status
+ logging event spanning-tree
+ logging event status
+ logging event subif-link-status
+ no cdp tlv app
+ no snmp trap link-status
+ storm-control broadcast level 5.00 3.00
+ storm-control multicast level 5.00 3.00
+ storm-control action shutdown
+ storm-control action trap
+ no lldp transmit
+ no lldp receive
+ spanning-tree portfast edge
+ spanning-tree bpduguard enable
+!
+interface GigabitEthernet1/0/4
+ description USIV_Ych_Class_TV
+ switchport access vlan 90
+ switchport mode access
+ switchport nonegotiate
+ logging event trunk-status
+ logging event spanning-tree
+ logging event status
+ logging event subif-link-status
+ no cdp tlv app
+ no snmp trap link-status
+ storm-control broadcast level 5.00 3.00
+ storm-control multicast level 5.00 3.00
+ storm-control action shutdown
+ storm-control action trap
+ no lldp transmit
+ no lldp receive
+ spanning-tree portfast edge
+ spanning-tree bpduguard enable
+!
+interface GigabitEthernet1/0/5
+ switchport access vlan 90
+ switchport mode access
+ switchport nonegotiate
+ logging event trunk-status
+ logging event spanning-tree
+ logging event status
+ logging event subif-link-status
+ no cdp tlv app
+ no snmp trap link-status
+ storm-control broadcast level 5.00 3.00
+ storm-control multicast level 5.00 3.00
+ storm-control action shutdown
+ storm-control action trap
+ no lldp transmit
+ no lldp receive
+ spanning-tree portfast edge
+ spanning-tree bpduguard enable
+!
+interface GigabitEthernet1/0/6
+ switchport access vlan 90
+ switchport mode access
+ switchport nonegotiate
+ logging event trunk-status
+ logging event spanning-tree
+ logging event status
+ logging event subif-link-status
+ no cdp tlv app
+ no snmp trap link-status
+ storm-control broadcast level 5.00 3.00
+ storm-control multicast level 5.00 3.00
+ storm-control action shutdown
+ storm-control action trap
+ no lldp transmit
+ no lldp receive
+ spanning-tree portfast edge
+ spanning-tree bpduguard enable
+!
+interface GigabitEthernet1/0/7
+ switchport access vlan 90
+ switchport mode access
+ switchport nonegotiate
+ logging event trunk-status
+ logging event spanning-tree
+ logging event status
+ logging event subif-link-status
+ no cdp tlv app
+ no snmp trap link-status
+ storm-control broadcast level 5.00 3.00
+ storm-control multicast level 5.00 3.00
+ storm-control action shutdown
+ storm-control action trap
+ no lldp transmit
+ no lldp receive
+ spanning-tree portfast edge
+ spanning-tree bpduguard enable
+!
+interface GigabitEthernet1/0/8
+ switchport access vlan 90
+ switchport mode access
+ switchport nonegotiate
+ logging event trunk-status
+ logging event spanning-tree
+ logging event status
+ logging event subif-link-status
+ no cdp tlv app
+ no snmp trap link-status
+ storm-control broadcast level 5.00 3.00
+ storm-control multicast level 5.00 3.00
+ storm-control action shutdown
+ storm-control action trap
+ no lldp transmit
+ no lldp receive
+ spanning-tree portfast edge
+ spanning-tree bpduguard enable
+!
+interface GigabitEthernet1/0/9
+ switchport mode access
+ switchport nonegotiate
+ logging event trunk-status
+ logging event spanning-tree
+ logging event status
+ logging event subif-link-status
+ no cdp tlv app
+ no snmp trap link-status
+ storm-control broadcast level 5.00 3.00
+ storm-control multicast level 5.00 3.00
+ storm-control action shutdown
+ storm-control action trap
+ no lldp transmit
+ no lldp receive
+ spanning-tree portfast edge
+ spanning-tree bpduguard enable
+!
+interface GigabitEthernet1/0/10
+ switchport mode access
+ switchport nonegotiate
+ logging event trunk-status
+ logging event spanning-tree
+ logging event status
+ logging event subif-link-status
+ no cdp tlv app
+ no snmp trap link-status
+ storm-control broadcast level 5.00 3.00
+ storm-control multicast level 5.00 3.00
+ storm-control action shutdown
+ storm-control action trap
+ no lldp transmit
+ no lldp receive
+ spanning-tree portfast edge
+ spanning-tree bpduguard enable
+!
+interface GigabitEthernet1/0/11
+ switchport mode access
+ switchport nonegotiate
+ logging event trunk-status
+ logging event spanning-tree
+ logging event status
+ logging event subif-link-status
+ no cdp tlv app
+ no snmp trap link-status
+ storm-control broadcast level 5.00 3.00
+ storm-control multicast level 5.00 3.00
+ storm-control action shutdown
+ storm-control action trap
+ no lldp transmit
+ no lldp receive
+ spanning-tree portfast edge
+ spanning-tree bpduguard enable
+!
+interface GigabitEthernet1/0/12
+ switchport mode access
+ switchport nonegotiate
+ logging event trunk-status
+ logging event spanning-tree
+ logging event status
+ logging event subif-link-status
+ no cdp tlv app
+ no snmp trap link-status
+ storm-control broadcast level 5.00 3.00
+ storm-control multicast level 5.00 3.00
+ storm-control action shutdown
+ storm-control action trap
+ no lldp transmit
+ no lldp receive
+ spanning-tree portfast edge
+ spanning-tree bpduguard enable
+!
+interface GigabitEthernet1/0/13
+ switchport mode access
+ switchport nonegotiate
+ logging event trunk-status
+ logging event spanning-tree
+ logging event status
+ logging event subif-link-status
+ no cdp tlv app
+ no snmp trap link-status
+ storm-control broadcast level 5.00 3.00
+ storm-control multicast level 5.00 3.00
+ storm-control action shutdown
+ storm-control action trap
+ no lldp transmit
+ no lldp receive
+ spanning-tree portfast edge
+ spanning-tree bpduguard enable
+!
+interface GigabitEthernet1/0/14
+ switchport mode access
+ switchport nonegotiate
+ logging event trunk-status
+ logging event spanning-tree
+ logging event status
+ logging event subif-link-status
+ no cdp tlv app
+ no snmp trap link-status
+ storm-control broadcast level 5.00 3.00
+ storm-control multicast level 5.00 3.00
+ storm-control action shutdown
+ storm-control action trap
+ no lldp transmit
+ no lldp receive
+ spanning-tree portfast edge
+ spanning-tree bpduguard enable
+!
+interface GigabitEthernet1/0/15
+ switchport mode access
+ switchport nonegotiate
+ logging event trunk-status
+ logging event spanning-tree
+ logging event status
+ logging event subif-link-status
+ no cdp tlv app
+ no snmp trap link-status
+ storm-control broadcast level 5.00 3.00
+ storm-control multicast level 5.00 3.00
+ storm-control action shutdown
+ storm-control action trap
+ no lldp transmit
+ no lldp receive
+ spanning-tree portfast edge
+ spanning-tree bpduguard enable
+!
+interface GigabitEthernet1/0/16
+ switchport trunk allowed vlan 1,13,17,90,1091
+ switchport mode trunk
+ logging event trunk-status
+ logging event spanning-tree
+ logging event status
+ logging event subif-link-status
+ storm-control broadcast level 20.00 10.00
+ storm-control multicast level 20.00 10.00
+ storm-control action trap
+ ip dhcp snooping trust
+!
+interface GigabitEthernet1/0/17
+ description 99.196_gi1/0/51
+ switchport trunk allowed vlan 1,17,90
+ switchport mode trunk
+ logging event trunk-status
+ logging event spanning-tree
+ logging event status
+ logging event subif-link-status
+ storm-control broadcast level 20.00 10.00
+ storm-control multicast level 20.00 10.00
+ storm-control action trap
+!
+interface GigabitEthernet1/0/18
+ switchport trunk allowed vlan 1,17
+ switchport mode trunk
+ logging event trunk-status
+ logging event spanning-tree
+ logging event status
+ logging event subif-link-status
+ storm-control broadcast level 20.00 10.00
+ storm-control multicast level 20.00 10.00
+ storm-control action trap
+!
+interface Vlan1
+ no ip address
+ shutdown
+!
+interface Vlan17
+ ip address 10.20.99.145 255.255.252.0
+!
+ip http server
+ip http banner
+ip http authentication aaa login-authentication login-RADIUS
+ip http authentication aaa exec-authorization auth-RADIUS-exec
+ip http secure-server
+ip http max-connections 3
+ip ssh time-out 60
+ip ssh authentication-retries 5
+ip ssh logging events
+ip ssh version 2
+!
+!
+!
+snmp-server community public RO
+snmp mib flash cache
+!
+radius-server retransmit 1
+radius-server timeout 2
+radius-server key 7 0008180C014A050E1C2D4A4C050E
+!
+radius server cis.kolmar.pro_210
+ address ipv4 10.10.0.210 auth-port 1812 acct-port 1813
+ timeout 5
+ retransmit 3
+ key 7 141B190109152423372435372E04
+!
+radius server cis.kolmar.pro_212
+ address ipv4 10.10.0.212 auth-port 1812 acct-port 1813
+ timeout 5
+ retransmit 3
+ key 7 082D47440C080B1F01070A06263C
+!
+!
+line con 0
+ exec-timeout 13 0
+ privilege level 15
+ authorization exec auth-RADIUS-exec
+ logging synchronous
+ login authentication login-RADIUS
+ stopbits 1
+line vty 0 4
+ exec-timeout 15 0
+ privilege level 15
+ authorization exec auth-RADIUS-exec
+ logging synchronous
+ login authentication login-RADIUS
+ length 0
+ transport input ssh
+line vty 5 15
+ exec-timeout 15 0
+ authorization exec auth-RADIUS-exec
+ login authentication login-RADIUS
+ transport input none
+!
+end
+
+
+
 $ show lldp neighbors detail
 ------------------------------------------------
 Local Intf: Gi1/0/17
@@ -82,7 +589,7 @@ Technical Support: http://www.cisco.com/techsupport
 Copyright (c) 1986-2021 by Cisco Systems, Inc.
 Compiled Mon 08-Mar-21 09:07 by prod_rel_team
 
-Time remaining: 109 seconds
+Time remaining: 112 seconds
 System Capabilities: B,R
 Enabled Capabilities: B
 Management Addresses:
@@ -105,7 +612,7 @@ Entry address(es):
   IP address: 10.20.99.196
 Platform: cisco C1000-48P-4G-L,  Capabilities: Switch IGMP 
 Interface: GigabitEthernet1/0/17,  Port ID (outgoing port): GigabitEthernet1/0/51
-Holdtime : 147 sec
+Holdtime : 178 sec
 
 Version :
 Cisco IOS Software, C1000 Software (C1000-UNIVERSALK9-M), Version 15.2(7)E4, RELEASE SOFTWARE (fc2)
@@ -131,6 +638,6 @@ Capability Codes: R - Router, T - Trans Bridge, B - Source Route Bridge
 
 Device ID        Local Intrfce     Holdtme    Capability  Platform  Port ID
 INA-NSWS-11-99-196.kolmar.ru
-                 Gig 1/0/17        147              S I   C1000-48P Gig 1/0/51
+                 Gig 1/0/17        178              S I   C1000-48P Gig 1/0/51
 
 Total cdp entries displayed : 1

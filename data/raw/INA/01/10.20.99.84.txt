@@ -196,7 +196,7 @@ Interface brief:
   Hardware is Gigabit-Combo, active is Fiber, address is 00-1a-81-01-ca-21
   PVID is 590
   MTU 1500 bytes, BW 1000000 Kbit
-  Time since last status change:11w-6d-20h-52m-52s  (7246372 seconds)
+  Time since last status change:11w-6d-21h-34m-25s  (7248865 seconds)
   Encapsulation ARPA, Loopback not set
   Auto-duplex: Negotiation full-duplex, Auto-speed: Negotiation 1G bits
   FlowControl is off, MDI type is auto
@@ -211,11 +211,11 @@ Statistics:
     0 input errors, 0 CRC, 0 frame alignment, 0 overrun, 0 ignored,
     0 abort, 0 length error, 0 undersize 0 jabber, 0 fragments, 0 pause frame
   Output packets statistics:
-    514318 output packets, 37663997 bytes, 0 underruns
-    142355 unicast packets, 36814 multicast packets, 335149 broadcast packets
+    514401 output packets, 37669309 bytes, 0 underruns
+    142355 unicast packets, 36897 multicast packets, 335149 broadcast packets
     0 output errors, 0 collisions, 0 late collisions, 0 pause frame
   Input and output packets by length:
-	(64)        bytes:    442947, (65~127)    bytes:    128884, 
+	(64)        bytes:    443030, (65~127)    bytes:    128884, 
 	(128~255)   bytes:     10838, (256~511)   bytes:      2849, 
 	(512~1023)  bytes:      2884, (1024~1518) bytes:         0 
   Output packets dropped because of no buffer: 0
@@ -225,28 +225,28 @@ Interface brief:
   Hardware is Gigabit-Combo, active is Fiber, address is 00-1a-81-01-ca-21
   PVID is 1
   MTU 1500 bytes, BW 1000000 Kbit
-  Time since last status change:10w-1d-20h-24m-21s  (6207861 seconds)
+  Time since last status change:10w-1d-21h-5m-54s  (6210354 seconds)
   Encapsulation ARPA, Loopback not set
   Auto-duplex: Negotiation full-duplex, Auto-speed: Negotiation 1G bits
   FlowControl is off, MDI type is auto
 Statistics:
-  5 minute input rate 24165791 bits/sec, 2643 packets/sec
-  5 minute output rate 13739749 bits/sec, 1711 packets/sec
-  The last 5 second input rate 25082110 bits/sec, 2715 packets/sec
-  The last 5 second output rate 13967576 bits/sec, 1768 packets/sec
+  5 minute input rate 24172319 bits/sec, 2662 packets/sec
+  5 minute output rate 13500015 bits/sec, 1691 packets/sec
+  The last 5 second input rate 23855246 bits/sec, 2585 packets/sec
+  The last 5 second output rate 12911944 bits/sec, 1595 packets/sec
   Input packets statistics:
-    47948580451 input packets, 59755380176503 bytes, 9 no buffer
-    47935239002 unicast packets, 10078937 multicast packets, 3262512 broadcast packets
+    47955271369 input packets, 59762920239093 bytes, 9 no buffer
+    47941928246 unicast packets, 10080346 multicast packets, 3262777 broadcast packets
     0 input errors, 0 CRC, 0 frame alignment, 0 overrun, 0 ignored,
     0 abort, 0 length error, 0 undersize 0 jabber, 0 fragments, 0 pause frame
   Output packets statistics:
-    23247070470 output packets, 19616246107648 bytes, 0 underruns
-    20670645140 unicast packets, 372331575 multicast packets, 2204093755 broadcast packets
+    23251304885 output packets, 19620469721722 bytes, 0 underruns
+    20674516764 unicast packets, 372383486 multicast packets, 2204404635 broadcast packets
     0 output errors, 0 collisions, 0 late collisions, 0 pause frame
   Input and output packets by length:
-	(64)        bytes:  11031998, (65~127)    bytes:3126952410, 
-	(128~255)   bytes: 964049075, (256~511)   bytes:1016368481, 
-	(512~1023)  bytes:3435375016, (1024~1518) bytes:         0 
+	(64)        bytes:  11033018, (65~127)    bytes:3129779637, 
+	(128~255)   bytes: 964132272, (256~511)   bytes:1016585000, 
+	(512~1023)  bytes:3435824247, (1024~1518) bytes:         0 
   Output packets dropped because of no buffer: 0
 Interface brief:
   Ethernet1/0/3 is up, line protocol is up
@@ -254,28 +254,28 @@ Interface brief:
   Hardware is Gigabit-Combo, active is Copper, address is 00-1a-81-01-ca-21
   PVID is 1090
   MTU 1500 bytes, BW 1000000 Kbit
-  Time since last status change:11w-2d-22h-45m-6s  (6907506 seconds)
+  Time since last status change:11w-2d-23h-26m-39s  (6909999 seconds)
   Encapsulation ARPA, Loopback not set
   Auto-duplex: Negotiation full-duplex, Auto-speed: Negotiation 1G bits
   FlowControl is off, MDI type is auto
 Statistics:
-  5 minute input rate 17144070 bits/sec, 2061 packets/sec
-  5 minute output rate 30334161 bits/sec, 3432 packets/sec
-  The last 5 second input rate 17403448 bits/sec, 2084 packets/sec
-  The last 5 second output rate 31265291 bits/sec, 3496 packets/sec
+  5 minute input rate 16084540 bits/sec, 1954 packets/sec
+  5 minute output rate 30334260 bits/sec, 3393 packets/sec
+  The last 5 second input rate 14711365 bits/sec, 1796 packets/sec
+  The last 5 second output rate 29676870 bits/sec, 3252 packets/sec
   Input packets statistics:
-    22731114400 input packets, 21123227387085 bytes, 1 no buffer
-    22729084712 unicast packets, 1579837 multicast packets, 449851 broadcast packets
+    22735898489 input packets, 21128104979869 bytes, 1 no buffer
+    22733868249 unicast packets, 1580349 multicast packets, 449891 broadcast packets
     0 input errors, 0 CRC, 0 frame alignment, 0 overrun, 0 ignored,
     0 abort, 0 length error, 0 undersize 0 jabber, 0 fragments, 0 pause frame
   Output packets statistics:
-    52651411323 output packets, 64940549218946 bytes, 0 underruns
-    52608188248 unicast packets, 32648319 multicast packets, 10574756 broadcast packets
+    52659877645 output packets, 64950002487008 bytes, 0 underruns
+    52616646963 unicast packets, 32652539 multicast packets, 10578143 broadcast packets
     0 output errors, 0 collisions, 0 late collisions, 0 pause frame
   Input and output packets by length:
-	(64)        bytes:3995686488, (65~127)    bytes:2864171037, 
-	(128~255)   bytes: 830677791, (256~511)   bytes: 922033492, 
-	(512~1023)  bytes:4122218903, (1024~1518) bytes:         0 
+	(64)        bytes:3996424331, (65~127)    bytes:2866659426, 
+	(128~255)   bytes: 830866197, (256~511)   bytes: 922246327, 
+	(512~1023)  bytes:4122942431, (1024~1518) bytes:         0 
   Output packets dropped because of no buffer: 0
 Interface brief:
   Ethernet1/0/4 is down, line protocol is down
@@ -283,7 +283,7 @@ Interface brief:
   Hardware is Gigabit-Combo, active is Fiber, address is 00-1a-81-01-ca-21
   PVID is 590
   MTU 1500 bytes, BW 10000 Kbit
-  Time since last status change:46w-3d-23h-4m-46s  (28163086 seconds)
+  Time since last status change:46w-3d-23h-46m-19s  (28165579 seconds)
   Encapsulation ARPA, Loopback not set
   Auto-duplex, Auto-speed
   FlowControl is off, MDI type is auto
@@ -312,7 +312,7 @@ Interface brief:
   Hardware is Gigabit-Combo, active is Fiber, address is 00-1a-81-01-ca-21
   PVID is 1091
   MTU 1500 bytes, BW 10000 Kbit
-  Time since last status change:46w-3d-23h-4m-46s  (28163086 seconds)
+  Time since last status change:46w-3d-23h-46m-19s  (28165579 seconds)
   Encapsulation ARPA, Loopback not set
   Auto-duplex, Auto-speed
   FlowControl is off, MDI type is auto
@@ -341,7 +341,7 @@ Interface brief:
   Hardware is Gigabit-Combo, active is Fiber, address is 00-1a-81-01-ca-21
   PVID is 590
   MTU 1500 bytes, BW 10000 Kbit
-  Time since last status change:46w-3d-23h-4m-46s  (28163086 seconds)
+  Time since last status change:46w-3d-23h-46m-19s  (28165579 seconds)
   Encapsulation ARPA, Loopback not set
   Auto-duplex, Auto-speed
   FlowControl is off, MDI type is auto
@@ -370,7 +370,7 @@ Interface brief:
   Hardware is Gigabit-Combo, active is Fiber, address is 00-1a-81-01-ca-21
   PVID is 90
   MTU 1500 bytes, BW 10000 Kbit
-  Time since last status change:22w-3d-22h-17m-41s  (13645061 seconds)
+  Time since last status change:22w-3d-22h-59m-14s  (13647554 seconds)
   Encapsulation ARPA, Loopback not set
   Auto-duplex, Auto-speed
   FlowControl is off, MDI type is auto
@@ -399,28 +399,28 @@ Interface brief:
   Hardware is Gigabit-Combo, active is Copper, address is 00-1a-81-01-ca-21
   PVID is 1
   MTU 1500 bytes, BW 1000000 Kbit
-  Time since last status change:1w-0d-1h-44m-12s  (611052 seconds)
+  Time since last status change:1w-0d-2h-25m-45s  (613545 seconds)
   Encapsulation ARPA, Loopback not set
   Auto-duplex: Negotiation full-duplex, Auto-speed: Negotiation 1G bits
   FlowControl is off, MDI type is auto
 Statistics:
-  5 minute input rate 56002 bits/sec, 102 packets/sec
-  5 minute output rate 72045 bits/sec, 127 packets/sec
-  The last 5 second input rate 60022 bits/sec, 109 packets/sec
-  The last 5 second output rate 88803 bits/sec, 154 packets/sec
+  5 minute input rate 1381 bits/sec, 2 packets/sec
+  5 minute output rate 16666 bits/sec, 25 packets/sec
+  The last 5 second input rate 917 bits/sec, 1 packets/sec
+  The last 5 second output rate 11970 bits/sec, 14 packets/sec
   Input packets statistics:
-    278881694 input packets, 20880951331 bytes, 0 no buffer
-    263561632 unicast packets, 7668479 multicast packets, 7651583 broadcast packets
+    278998917 input packets, 20889904561 bytes, 0 no buffer
+    263674474 unicast packets, 7670000 multicast packets, 7654443 broadcast packets
     0 input errors, 0 CRC, 0 frame alignment, 0 overrun, 0 ignored,
     0 abort, 0 length error, 0 undersize 0 jabber, 0 fragments, 0 pause frame
   Output packets statistics:
-    552107162 output packets, 47564045060 bytes, 0 underruns
-    376575520 unicast packets, 26685382 multicast packets, 148846260 broadcast packets
+    552279100 output packets, 47576719678 bytes, 0 underruns
+    376688261 unicast packets, 26690647 multicast packets, 148900192 broadcast packets
     0 output errors, 0 collisions, 0 late collisions, 0 pause frame
   Input and output packets by length:
-	(64)        bytes:   2655291, (65~127)    bytes: 796461911, 
-	(128~255)   bytes:  15102141, (256~511)   bytes:  10714994, 
-	(512~1023)  bytes:   1667702, (1024~1518) bytes:         0 
+	(64)        bytes:   2655733, (65~127)    bytes: 796744279, 
+	(128~255)   bytes:  15105175, (256~511)   bytes:  10717436, 
+	(512~1023)  bytes:   1668567, (1024~1518) bytes:         0 
   Output packets dropped because of no buffer: 0
 Interface brief:
   Ethernet1/0/9 is up, line protocol is up
@@ -428,28 +428,28 @@ Interface brief:
   Hardware is SFP, address is 00-1a-81-01-ca-21
   PVID is 1
   MTU 1500 bytes, BW 1000000 Kbit
-  Time since last status change:0w-6d-22h-37m-16s  (599836 seconds)
+  Time since last status change:0w-6d-23h-18m-49s  (602329 seconds)
   Encapsulation ARPA, Loopback not set
   Auto-duplex: Negotiation full-duplex, Auto-speed: Negotiation 1G bits
   FlowControl is off, MDI type is auto
 Statistics:
-  5 minute input rate 12423946 bits/sec, 1284 packets/sec
-  5 minute output rate 343485 bits/sec, 514 packets/sec
-  The last 5 second input rate 12600774 bits/sec, 1299 packets/sec
-  The last 5 second output rate 341030 bits/sec, 534 packets/sec
+  5 minute input rate 12473554 bits/sec, 1278 packets/sec
+  5 minute output rate 332511 bits/sec, 513 packets/sec
+  The last 5 second input rate 11877533 bits/sec, 1242 packets/sec
+  The last 5 second output rate 317946 bits/sec, 474 packets/sec
   Input packets statistics:
-    9204091010 input packets, 11246967419964 bytes, 0 no buffer
-    9203745842 unicast packets, 222459 multicast packets, 122709 broadcast packets
+    9207282748 input packets, 11250842253730 bytes, 0 no buffer
+    9206937388 unicast packets, 222612 multicast packets, 122748 broadcast packets
     0 input errors, 0 CRC, 0 frame alignment, 0 overrun, 0 ignored,
     0 abort, 0 length error, 0 undersize 0 jabber, 0 fragments, 0 pause frame
   Output packets statistics:
-    3792228079 output packets, 318248264259 bytes, 0 underruns
-    2726946668 unicast packets, 162238709 multicast packets, 903042702 broadcast packets
+    3793520643 output packets, 318356835368 bytes, 0 underruns
+    2727874959 unicast packets, 162291876 multicast packets, 903353808 broadcast packets
     0 output errors, 0 collisions, 0 late collisions, 0 pause frame
   Input and output packets by length:
-	(64)        bytes:   3489402, (65~127)    bytes:4089940759, 
-	(128~255)   bytes: 667152448, (256~511)   bytes: 247503843, 
-	(512~1023)  bytes:1361805958, (1024~1518) bytes:         0 
+	(64)        bytes:   3490422, (65~127)    bytes:4091345072, 
+	(128~255)   bytes: 667394910, (256~511)   bytes: 247597270, 
+	(512~1023)  bytes:1362278693, (1024~1518) bytes:         0 
   Output packets dropped because of no buffer: 0
 Interface brief:
   Ethernet1/0/10 is administratively down, line protocol is down
@@ -458,7 +458,7 @@ Interface brief:
   Hardware is SFP, address is 00-1a-81-01-ca-21
   PVID is 1
   MTU 1500 bytes, BW 10000 Kbit
-  Time since last status change:46w-3d-23h-4m-46s  (28163086 seconds)
+  Time since last status change:46w-3d-23h-46m-19s  (28165579 seconds)
   Encapsulation ARPA, Loopback not set
   Auto-duplex, Auto-speed
   FlowControl is off, MDI type is auto
@@ -488,7 +488,7 @@ Interface brief:
   Hardware is SFP, address is 00-1a-81-01-ca-21
   PVID is 1
   MTU 1500 bytes, BW 10000 Kbit
-  Time since last status change:46w-3d-23h-4m-46s  (28163086 seconds)
+  Time since last status change:46w-3d-23h-46m-19s  (28165579 seconds)
   Encapsulation ARPA, Loopback not set
   Auto-duplex, Auto-speed
   FlowControl is off, MDI type is auto
@@ -518,7 +518,7 @@ Interface brief:
   Hardware is SFP, address is 00-1a-81-01-ca-21
   PVID is 1
   MTU 1500 bytes, BW 10000 Kbit
-  Time since last status change:46w-3d-23h-4m-46s  (28163086 seconds)
+  Time since last status change:46w-3d-23h-46m-19s  (28165579 seconds)
   Encapsulation ARPA, Loopback not set
   Auto-duplex, Auto-speed
   FlowControl is off, MDI type is auto
@@ -548,7 +548,7 @@ Interface brief:
   Hardware is SFP, address is 00-1a-81-01-ca-21
   PVID is 1
   MTU 1500 bytes, BW 10000 Kbit
-  Time since last status change:46w-3d-23h-4m-46s  (28163086 seconds)
+  Time since last status change:46w-3d-23h-46m-19s  (28165579 seconds)
   Encapsulation ARPA, Loopback not set
   Auto-duplex, Auto-speed
   FlowControl is off, MDI type is auto
@@ -578,7 +578,7 @@ Interface brief:
   Hardware is SFP, address is 00-1a-81-01-ca-21
   PVID is 1
   MTU 1500 bytes, BW 10000 Kbit
-  Time since last status change:46w-3d-23h-4m-46s  (28163086 seconds)
+  Time since last status change:46w-3d-23h-46m-19s  (28165579 seconds)
   Encapsulation ARPA, Loopback not set
   Auto-duplex, Auto-speed
   FlowControl is off, MDI type is auto
@@ -608,7 +608,7 @@ Interface brief:
   Hardware is SFP, address is 00-1a-81-01-ca-21
   PVID is 1
   MTU 1500 bytes, BW 10000 Kbit
-  Time since last status change:46w-3d-23h-4m-46s  (28163086 seconds)
+  Time since last status change:46w-3d-23h-46m-19s  (28165579 seconds)
   Encapsulation ARPA, Loopback not set
   Auto-duplex, Auto-speed
   FlowControl is off, MDI type is auto
@@ -638,7 +638,7 @@ Interface brief:
   Hardware is SFP, address is 00-1a-81-01-ca-21
   PVID is 1
   MTU 1500 bytes, BW 10000 Kbit
-  Time since last status change:46w-3d-23h-4m-46s  (28163086 seconds)
+  Time since last status change:46w-3d-23h-46m-19s  (28165579 seconds)
   Encapsulation ARPA, Loopback not set
   Auto-duplex, Auto-speed
   FlowControl is off, MDI type is auto
@@ -668,7 +668,7 @@ Interface brief:
   Hardware is SFP, address is 00-1a-81-01-ca-21
   PVID is 1
   MTU 1500 bytes, BW 10000 Kbit
-  Time since last status change:46w-3d-23h-4m-46s  (28163086 seconds)
+  Time since last status change:46w-3d-23h-46m-19s  (28165579 seconds)
   Encapsulation ARPA, Loopback not set
   Auto-duplex, Auto-speed
   FlowControl is off, MDI type is auto
@@ -698,7 +698,7 @@ Interface brief:
   Hardware is SFP, address is 00-1a-81-01-ca-21
   PVID is 1
   MTU 1500 bytes, BW 10000 Kbit
-  Time since last status change:46w-3d-23h-4m-46s  (28163086 seconds)
+  Time since last status change:46w-3d-23h-46m-19s  (28165579 seconds)
   Encapsulation ARPA, Loopback not set
   Auto-duplex, Auto-speed
   FlowControl is off, MDI type is auto
@@ -728,7 +728,7 @@ Interface brief:
   Hardware is SFP, address is 00-1a-81-01-ca-21
   PVID is 1
   MTU 1500 bytes, BW 10000 Kbit
-  Time since last status change:46w-3d-23h-4m-46s  (28163086 seconds)
+  Time since last status change:46w-3d-23h-46m-19s  (28165579 seconds)
   Encapsulation ARPA, Loopback not set
   Auto-duplex, Auto-speed
   FlowControl is off, MDI type is auto
@@ -758,7 +758,7 @@ Interface brief:
   Hardware is SFP, address is 00-1a-81-01-ca-21
   PVID is 1
   MTU 1500 bytes, BW 10000 Kbit
-  Time since last status change:46w-3d-23h-4m-46s  (28163086 seconds)
+  Time since last status change:46w-3d-23h-46m-19s  (28165579 seconds)
   Encapsulation ARPA, Loopback not set
   Auto-duplex, Auto-speed
   FlowControl is off, MDI type is auto
@@ -788,7 +788,7 @@ Interface brief:
   Hardware is SFP, address is 00-1a-81-01-ca-21
   PVID is 1
   MTU 1500 bytes, BW 10000 Kbit
-  Time since last status change:46w-3d-23h-4m-46s  (28163086 seconds)
+  Time since last status change:46w-3d-23h-46m-19s  (28165579 seconds)
   Encapsulation ARPA, Loopback not set
   Auto-duplex, Auto-speed
   FlowControl is off, MDI type is auto
@@ -818,7 +818,7 @@ Interface brief:
   Hardware is SFP, address is 00-1a-81-01-ca-21
   PVID is 1
   MTU 1500 bytes, BW 10000 Kbit
-  Time since last status change:46w-3d-23h-4m-46s  (28163086 seconds)
+  Time since last status change:46w-3d-23h-46m-19s  (28165579 seconds)
   Encapsulation ARPA, Loopback not set
   Auto-duplex, Auto-speed
   FlowControl is off, MDI type is auto
@@ -847,28 +847,28 @@ Interface brief:
   Hardware is SFP, address is 00-1a-81-01-ca-21
   PVID is 1
   MTU 1500 bytes, BW 1000000 Kbit
-  Time since last status change:4w-2d-19h-43m-32s  (2663012 seconds)
+  Time since last status change:4w-2d-20h-25m-5s  (2665505 seconds)
   Encapsulation ARPA, Loopback not set
   Auto-duplex: Negotiation full-duplex, Auto-speed: Negotiation 1G bits
   FlowControl is off, MDI type is auto
 Statistics:
-  5 minute input rate 5664833 bits/sec, 4062 packets/sec
-  5 minute output rate 119428038 bits/sec, 12607 packets/sec
-  The last 5 second input rate 5533723 bits/sec, 4076 packets/sec
-  The last 5 second output rate 120176126 bits/sec, 12791 packets/sec
+  5 minute input rate 5988741 bits/sec, 4167 packets/sec
+  5 minute output rate 122042572 bits/sec, 12870 packets/sec
+  The last 5 second input rate 5993416 bits/sec, 4224 packets/sec
+  The last 5 second output rate 117936477 bits/sec, 12476 packets/sec
   Input packets statistics:
-    39375841994 input packets, 10213602327271 bytes, 0 no buffer
-    39330862579 unicast packets, 12316636 multicast packets, 32662779 broadcast packets
+    39386137278 input packets, 10215425489517 bytes, 0 no buffer
+    39341156479 unicast packets, 12317105 multicast packets, 32663694 broadcast packets
     0 input errors, 0 CRC, 0 frame alignment, 0 overrun, 0 ignored,
     0 abort, 0 length error, 0 undersize 0 jabber, 0 fragments, 0 pause frame
   Output packets statistics:
-    102530628951 output packets, 105321627486003 bytes, 0 underruns
-    101217088012 unicast packets, 178349562 multicast packets, 1135191377 broadcast packets
+    102562631348 output packets, 105359572154350 bytes, 0 underruns
+    101248745482 unicast packets, 178394675 multicast packets, 1135491191 broadcast packets
     0 output errors, 0 collisions, 0 late collisions, 0 pause frame
   Input and output packets by length:
-	(64)        bytes:   1924022, (65~127)    bytes:3053626908, 
-	(128~255)   bytes:3378108730, (256~511)   bytes:1458866698, 
-	(512~1023)  bytes:1099249210, (1024~1518) bytes:         0 
+	(64)        bytes:   1924794, (65~127)    bytes:3067459022, 
+	(128~255)   bytes:3379593307, (256~511)   bytes:1459963236, 
+	(512~1023)  bytes:1100875660, (1024~1518) bytes:         0 
   Output packets dropped because of no buffer: 0
 Interface brief:
   Ethernet1/0/24 is up, line protocol is up
@@ -876,28 +876,28 @@ Interface brief:
   Hardware is SFP, address is 00-1a-81-01-ca-21
   PVID is 1
   MTU 1500 bytes, BW 1000000 Kbit
-  Time since last status change:36w-6d-4h-7m-25s  (22306045 seconds)
+  Time since last status change:36w-6d-4h-48m-58s  (22308538 seconds)
   Encapsulation ARPA, Loopback not set
   Auto-duplex: Negotiation full-duplex, Auto-speed: Negotiation 1G bits
   FlowControl is off, MDI type is auto
 Statistics:
-  5 minute input rate 163785614 bits/sec, 18095 packets/sec
-  5 minute output rate 59526595 bits/sec, 10156 packets/sec
-  The last 5 second input rate 165685898 bits/sec, 18370 packets/sec
-  The last 5 second output rate 60805288 bits/sec, 10294 packets/sec
+  5 minute input rate 166123595 bits/sec, 18206 packets/sec
+  5 minute output rate 58787693 bits/sec, 10063 packets/sec
+  The last 5 second input rate 160698525 bits/sec, 17574 packets/sec
+  The last 5 second output rate 56431848 bits/sec, 9840 packets/sec
   Input packets statistics:
-    180416916312 input packets, 190194498069596 bytes, 0 no buffer
-    177400424357 unicast packets, 518089533 multicast packets, 2498402422 broadcast packets
+    180462362593 input packets, 190246200327254 bytes, 0 no buffer
+    177445438915 unicast packets, 518161898 multicast packets, 2498761780 broadcast packets
     0 input errors, 0 CRC, 0 frame alignment, 0 overrun, 0 ignored,
     0 abort, 0 length error, 0 undersize 0 jabber, 0 fragments, 0 pause frame
   Output packets statistics:
-    119550257614 output packets, 102458087500529 bytes, 0 underruns
-    119493897179 unicast packets, 24353871 multicast packets, 32006564 broadcast packets
+    119575340775 output packets, 102476232561268 bytes, 0 underruns
+    119518972314 unicast packets, 24357778 multicast packets, 32010683 broadcast packets
     0 output errors, 0 collisions, 0 late collisions, 0 pause frame
   Input and output packets by length:
-	(64)        bytes:  12520697, (65~127)    bytes:2811240238, 
-	(128~255)   bytes:1633543461, (256~511)   bytes:3501159257, 
-	(512~1023)  bytes:1409600069, (1024~1518) bytes:         0 
+	(64)        bytes:  12522446, (65~127)    bytes:2832126479, 
+	(128~255)   bytes:1635569322, (256~511)   bytes:3502732839, 
+	(512~1023)  bytes:1412868509, (1024~1518) bytes:         0 
   Output packets dropped because of no buffer: 0
 Interface brief:
   Ethernet1/0/25 is down, line protocol is down
@@ -905,7 +905,7 @@ Interface brief:
   Hardware is SFP+,  address is 00-1a-81-01-ca-21
   PVID is 1
   MTU 1500 bytes, BW 10000 Kbit
-  Time since last status change:46w-3d-23h-4m-46s  (28163086 seconds)
+  Time since last status change:46w-3d-23h-46m-19s  (28165579 seconds)
   Encapsulation ARPA, Loopback not set
   Auto-duplex, Auto-speed
   FlowControl is off, MDI type is auto
@@ -934,7 +934,7 @@ Interface brief:
   Hardware is SFP+,  address is 00-1a-81-01-ca-21
   PVID is 1
   MTU 1500 bytes, BW 10000 Kbit
-  Time since last status change:46w-3d-23h-4m-46s  (28163086 seconds)
+  Time since last status change:46w-3d-23h-46m-19s  (28165579 seconds)
   Encapsulation ARPA, Loopback not set
   Auto-duplex, Auto-speed
   FlowControl is off, MDI type is auto
@@ -963,7 +963,7 @@ Interface brief:
   Hardware is SFP+,  address is 00-1a-81-01-ca-21
   PVID is 1
   MTU 1500 bytes, BW 10000 Kbit
-  Time since last status change:46w-3d-23h-4m-46s  (28163086 seconds)
+  Time since last status change:46w-3d-23h-46m-19s  (28165579 seconds)
   Encapsulation ARPA, Loopback not set
   Auto-duplex, Auto-speed
   FlowControl is off, MDI type is auto
@@ -992,7 +992,7 @@ Interface brief:
   Hardware is SFP+,  address is 00-1a-81-01-ca-21
   PVID is 1
   MTU 1500 bytes, BW 10000 Kbit
-  Time since last status change:46w-3d-23h-4m-46s  (28163086 seconds)
+  Time since last status change:46w-3d-23h-46m-19s  (28165579 seconds)
   Encapsulation ARPA, Loopback not set
   Auto-duplex, Auto-speed
   FlowControl is off, MDI type is auto
@@ -1017,33 +1017,33 @@ Statistics:
   Output packets dropped because of no buffer: 0
 Vlan91 is up(0), line protocol is up, dev index is 11091
   Device flag 0x1003(UP BROADCAST MULTICAST)
-  Time since last status change:46w-3d-23h-3m-45s  (28163025 seconds)
+  Time since last status change:46w-3d-23h-45m-18s  (28165518 seconds)
   IPv4 address is:
     10.91.0.1        255.255.255.0     (Primary)
   VRF Bind: Not Bind
   Hardware is EtherSVI, address is 00-1a-81-01-ca-20
   MTU is 1500 bytes , BW is 0 Kbit
   Encapsulation ARPA, loopback not set
-  5 minute input rate 200375351 bits/sec, 22023 packets/sec
-  5 minute output rate 73609829 bits/sec, 12381 packets/sec
-  The last 5 second input rate 203368782 bits/sec, 22385 packets/sec
-  The last 5 second output rate 75113894 bits/sec, 12596 packets/sec
+  5 minute input rate 202769469 bits/sec, 22146 packets/sec
+  5 minute output rate 72620218 bits/sec, 12267 packets/sec
+  The last 5 second input rate 196431304 bits/sec, 21401 packets/sec
+  The last 5 second output rate 69661738 bits/sec, 11909 packets/sec
 Vlan17 is up(0), line protocol is up, dev index is 11017
   Device flag 0x1003(UP BROADCAST MULTICAST)
-  Time since last status change:46w-3d-23h-3m-45s  (28163025 seconds)
+  Time since last status change:46w-3d-23h-45m-18s  (28165518 seconds)
   IPv4 address is:
     10.20.99.84      255.255.252.0     (Primary)
   VRF Bind: Not Bind
   Hardware is EtherSVI, address is 00-1a-81-01-ca-20
   MTU is 1500 bytes , BW is 0 Kbit
   Encapsulation ARPA, loopback not set
-  5 minute input rate 206096186 bits/sec, 26188 packets/sec
-  5 minute output rate 193109913 bits/sec, 25115 packets/sec
-  The last 5 second input rate 208962528 bits/sec, 26570 packets/sec
-  The last 5 second output rate 195378824 bits/sec, 25540 packets/sec
+  5 minute input rate 208759591 bits/sec, 26314 packets/sec
+  5 minute output rate 194679456 bits/sec, 25163 packets/sec
+  The last 5 second input rate 202425637 bits/sec, 25626 packets/sec
+  The last 5 second output rate 187610184 bits/sec, 24398 packets/sec
 Ethernet0 is down(0), line protocol is down, dev index is 1154
   Device flag 0x1002(BROADCAST MULTICAST)
-  Time since last status change:46w-3d-23h-4m-46s  (28163086 seconds)
+  Time since last status change:46w-3d-23h-46m-19s  (28165579 seconds)
   IPv4 address is:
     (NULL)
   VRF Bind: Not Bind
@@ -1060,7 +1060,7 @@ Ethernet0 is down(0), line protocol is down, dev index is 1154
 $ show lldp neighbors brief
 
 Local Interface       Chassis ID              CID subtype     Port ID                   PID subtype           Time Mark       System Name       
-Ethernet1/0/2         00-1a-81-02-1b-11       4               Ethernet1/0/28            Interface             96              -                 
-Ethernet1/0/8         cc-9d-a2-a6-e4-00       4               gi 0/15                   Interface             107             INA-NSWS-01-99-161
-Ethernet1/0/9         00-1a-81-02-24-24       4               Ethernet1/0/28            Interface             118             -                 
-Ethernet1/0/24        00-1a-81-01-a6-29       4               26                        Local                 112             -                 
+Ethernet1/0/2         00-1a-81-02-1b-11       4               Ethernet1/0/28            Interface             93              -                 
+Ethernet1/0/8         cc-9d-a2-a6-e4-00       4               gi 0/15                   Interface             110             INA-NSWS-01-99-161
+Ethernet1/0/9         00-1a-81-02-24-24       4               Ethernet1/0/28            Interface             116             -                 
+Ethernet1/0/24        00-1a-81-01-a6-29       4               26                        Local                 108             -                 

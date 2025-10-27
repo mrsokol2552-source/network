@@ -602,6 +602,7 @@ vlan_translation    vlan_trunk          voice_vlan
 
 
 $ show config effective
+config 802.1p map 2 1p_color 1 to green
 config 802.1p map 2 1p_color 2 to green
 config 802.1p map 2 1p_color 3 to green
 config 802.1p map 2 1p_color 4 to green

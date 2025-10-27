@@ -1,10 +1,86 @@
 {
   "vendor": "cisco_ios",
   "raw_files": [
-    "10.2.99.7.txt"
+    "NSK\\01\\10.2.99.7.txt"
   ],
-  "parsed": {},
-  "errors": [
-    "no_templates_for_vendor:cisco_ios"
-  ]
+  "parsed": {
+    "cisco_ios_show_cdp_neighbors": [
+      {
+        "Neighbor": "NSK-NSWS-01-99-7",
+        "LocalInterface": "uptime is",
+        "NeighborPort": "1 day,",
+        "_source_file": "C:\\Users\\zhiltsov.aa\\Desktop\\net-auto-mermaid\\data\\raw\\NSK\\01\\10.2.99.7.txt",
+        "_template": "cisco_ios_show_cdp_neighbors.template"
+      },
+      {
+        "Neighbor": "username",
+        "LocalInterface": "spgadmin privilege",
+        "NeighborPort": "7 143E14030600203F342C27252E0A0D0200135C5E53474D0C1749440A",
+        "_source_file": "C:\\Users\\zhiltsov.aa\\Desktop\\net-auto-mermaid\\data\\raw\\NSK\\01\\10.2.99.7.txt",
+        "_template": "cisco_ios_show_cdp_neighbors.template"
+      },
+      {
+        "Neighbor": "username",
+        "LocalInterface": "vkorenskiy privilege",
+        "NeighborPort": "7 145320030A073338350F3B372607094256",
+        "_source_file": "C:\\Users\\zhiltsov.aa\\Desktop\\net-auto-mermaid\\data\\raw\\NSK\\01\\10.2.99.7.txt",
+        "_template": "cisco_ios_show_cdp_neighbors.template"
+      },
+      {
+        "Neighbor": "username",
+        "LocalInterface": "volodin_s privilege",
+        "NeighborPort": "5 $1$Ey8K$9LCHS49BQViCPpH.uTTN./",
+        "_source_file": "C:\\Users\\zhiltsov.aa\\Desktop\\net-auto-mermaid\\data\\raw\\NSK\\01\\10.2.99.7.txt",
+        "_template": "cisco_ios_show_cdp_neighbors.template"
+      },
+      {
+        "Neighbor": "username",
+        "LocalInterface": "zhiltsov_a privilege",
+        "NeighborPort": "5 $1$KTBG$vuZZwEMw2jrW9EsTpO2Cf1",
+        "_source_file": "C:\\Users\\zhiltsov.aa\\Desktop\\net-auto-mermaid\\data\\raw\\NSK\\01\\10.2.99.7.txt",
+        "_template": "cisco_ios_show_cdp_neighbors.template"
+      },
+      {
+        "Neighbor": "username",
+        "LocalInterface": "sib_uib privilege",
+        "NeighborPort": "9 $9$RJ64VWzV1YSKQU$a3dKPmGjU4GExZXjw04SfWQGQHhkCaV8ap0Wcmqfnig",
+        "_source_file": "C:\\Users\\zhiltsov.aa\\Desktop\\net-auto-mermaid\\data\\raw\\NSK\\01\\10.2.99.7.txt",
+        "_template": "cisco_ios_show_cdp_neighbors.template"
+      },
+      {
+        "Neighbor": "Gig",
+        "LocalInterface": "1/0/35",
+        "NeighborPort": "S I",
+        "_source_file": "C:\\Users\\zhiltsov.aa\\Desktop\\net-auto-mermaid\\data\\raw\\NSK\\01\\10.2.99.7.txt",
+        "_template": "cisco_ios_show_cdp_neighbors.template"
+      }
+    ],
+    "cisco_ios_show_cdp_neighbors_detail": [
+      {
+        "Neighbor": "NSK-NSWR-01-99-1.kolmar.ru",
+        "LocalInterface": "GigabitEthernet1/0/35",
+        "NeighborPort": "GigabitEthernet1/0/22",
+        "Platform": "cisco C9200L-24P-4G",
+        "_source_file": "C:\\Users\\zhiltsov.aa\\Desktop\\net-auto-mermaid\\data\\raw\\NSK\\01\\10.2.99.7.txt",
+        "_template": "cisco_ios_show_cdp_neighbors_detail.template"
+      }
+    ],
+    "cisco_ios_show_version": [
+      {
+        "Version": "15.2(2)E3",
+        "Model": "",
+        "Uptime": "8 weeks, 1 day, 17 hours, 31 minutes",
+        "_source_file": "C:\\Users\\zhiltsov.aa\\Desktop\\net-auto-mermaid\\data\\raw\\NSK\\01\\10.2.99.7.txt",
+        "_template": "cisco_ios_show_version.template"
+      },
+      {
+        "Version": "17.9.4",
+        "Model": "WS-C2960X-48TS-L",
+        "Uptime": "",
+        "_source_file": "C:\\Users\\zhiltsov.aa\\Desktop\\net-auto-mermaid\\data\\raw\\NSK\\01\\10.2.99.7.txt",
+        "_template": "cisco_ios_show_version.template"
+      }
+    ]
+  },
+  "errors": []
 }

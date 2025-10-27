@@ -1,10 +1,143 @@
 {
   "vendor": "cisco_ios",
   "raw_files": [
-    "10.20.99.97.txt"
+    "INA\\39\\10.20.99.97.txt"
   ],
-  "parsed": {},
-  "errors": [
-    "no_templates_for_vendor:cisco_ios"
-  ]
+  "parsed": {
+    "cisco_ios_show_cdp_neighbors": [
+      {
+        "Neighbor": "INA-NSWS-39-99-97",
+        "LocalInterface": "uptime is",
+        "NeighborPort": "5 days,",
+        "_source_file": "C:\\Users\\zhiltsov.aa\\Desktop\\net-auto-mermaid\\data\\raw\\INA\\39\\10.20.99.97.txt",
+        "_template": "cisco_ios_show_cdp_neighbors.template"
+      },
+      {
+        "Neighbor": "username",
+        "LocalInterface": "ivashenko_vb privilege",
+        "NeighborPort": "5 $1$bi7z$qTHuukwOKu/rACvOW/3hy.",
+        "_source_file": "C:\\Users\\zhiltsov.aa\\Desktop\\net-auto-mermaid\\data\\raw\\INA\\39\\10.20.99.97.txt",
+        "_template": "cisco_ios_show_cdp_neighbors.template"
+      },
+      {
+        "Neighbor": "username",
+        "LocalInterface": "Jester privilege",
+        "NeighborPort": "5 $1$gUfJ$z6b4NCCabXHDOU9s68VuN1",
+        "_source_file": "C:\\Users\\zhiltsov.aa\\Desktop\\net-auto-mermaid\\data\\raw\\INA\\39\\10.20.99.97.txt",
+        "_template": "cisco_ios_show_cdp_neighbors.template"
+      },
+      {
+        "Neighbor": "username",
+        "LocalInterface": "sib_uib privilege",
+        "NeighborPort": "9 $9$RJ64VWzV1YSKQU$a3dKPmGjU4GExZXjw04SfWQGQHhkCaV8ap0Wcmqfnig",
+        "_source_file": "C:\\Users\\zhiltsov.aa\\Desktop\\net-auto-mermaid\\data\\raw\\INA\\39\\10.20.99.97.txt",
+        "_template": "cisco_ios_show_cdp_neighbors.template"
+      },
+      {
+        "Neighbor": "username",
+        "LocalInterface": "volodin_s privilege",
+        "NeighborPort": "9 $9$Gybj7B0.WI3TVd$CrrhgYqPpX3EpcbE1JehVWSNepTRvapHKHLbCG4O9oA",
+        "_source_file": "C:\\Users\\zhiltsov.aa\\Desktop\\net-auto-mermaid\\data\\raw\\INA\\39\\10.20.99.97.txt",
+        "_template": "cisco_ios_show_cdp_neighbors.template"
+      },
+      {
+        "Neighbor": "username",
+        "LocalInterface": "zhiltsov_a privilege",
+        "NeighborPort": "9 $9$SXicIRVTwxXvc0$G5nl4ogw7sUIg6w7wgj11RVleHUN.ndtOdjfKK/XOsw",
+        "_source_file": "C:\\Users\\zhiltsov.aa\\Desktop\\net-auto-mermaid\\data\\raw\\INA\\39\\10.20.99.97.txt",
+        "_template": "cisco_ios_show_cdp_neighbors.template"
+      },
+      {
+        "Neighbor": "3082022B",
+        "LocalInterface": "30820194 A0030201",
+        "NeighborPort": "2A864886 F70D0101",
+        "_source_file": "C:\\Users\\zhiltsov.aa\\Desktop\\net-auto-mermaid\\data\\raw\\INA\\39\\10.20.99.97.txt",
+        "_template": "cisco_ios_show_cdp_neighbors.template"
+      },
+      {
+        "Neighbor": "31312F30",
+        "LocalInterface": "2D060355",
+        "NeighborPort": "53656C66 2D536967",
+        "_source_file": "C:\\Users\\zhiltsov.aa\\Desktop\\net-auto-mermaid\\data\\raw\\INA\\39\\10.20.99.97.txt",
+        "_template": "cisco_ios_show_cdp_neighbors.template"
+      },
+      {
+        "Neighbor": "69666963",
+        "LocalInterface": "6174652D 31393435",
+        "NeighborPort": "170D3232 30323033",
+        "_source_file": "C:\\Users\\zhiltsov.aa\\Desktop\\net-auto-mermaid\\data\\raw\\INA\\39\\10.20.99.97.txt",
+        "_template": "cisco_ios_show_cdp_neighbors.template"
+      },
+      {
+        "Neighbor": "33315A17",
+        "LocalInterface": "0D333030 31303130",
+        "NeighborPort": "312F302D 06035504",
+        "_source_file": "C:\\Users\\zhiltsov.aa\\Desktop\\net-auto-mermaid\\data\\raw\\INA\\39\\10.20.99.97.txt",
+        "_template": "cisco_ios_show_cdp_neighbors.template"
+      },
+      {
+        "Neighbor": "D6990203",
+        "LocalInterface": "010001A3",
+        "NeighborPort": "1D130101 FF040530",
+        "_source_file": "C:\\Users\\zhiltsov.aa\\Desktop\\net-auto-mermaid\\data\\raw\\INA\\39\\10.20.99.97.txt",
+        "_template": "cisco_ios_show_cdp_neighbors.template"
+      },
+      {
+        "Neighbor": "2A864886",
+        "LocalInterface": "F70D0101",
+        "NeighborPort": "9205D3E0 1E87A4DB",
+        "_source_file": "C:\\Users\\zhiltsov.aa\\Desktop\\net-auto-mermaid\\data\\raw\\INA\\39\\10.20.99.97.txt",
+        "_template": "cisco_ios_show_cdp_neighbors.template"
+      },
+      {
+        "Neighbor": "Gig",
+        "LocalInterface": "1/0/16",
+        "NeighborPort": "I   C1000-16T",
+        "_source_file": "C:\\Users\\zhiltsov.aa\\Desktop\\net-auto-mermaid\\data\\raw\\INA\\39\\10.20.99.97.txt",
+        "_template": "cisco_ios_show_cdp_neighbors.template"
+      },
+      {
+        "Neighbor": "X1S/X1SP",
+        "LocalInterface": "Gig 1/0/7",
+        "NeighborPort": "P   X1S/X1SP",
+        "_source_file": "C:\\Users\\zhiltsov.aa\\Desktop\\net-auto-mermaid\\data\\raw\\INA\\39\\10.20.99.97.txt",
+        "_template": "cisco_ios_show_cdp_neighbors.template"
+      }
+    ],
+    "cisco_ios_show_cdp_neighbors_detail": [
+      {
+        "Neighbor": "INA-NSWS-39-99-72.kolmar.ru",
+        "LocalInterface": "GigabitEthernet1/0/16",
+        "NeighborPort": "GigabitEthernet1/0/1",
+        "Platform": "cisco C1000-16T-2G-L",
+        "_source_file": "C:\\Users\\zhiltsov.aa\\Desktop\\net-auto-mermaid\\data\\raw\\INA\\39\\10.20.99.97.txt",
+        "_template": "cisco_ios_show_cdp_neighbors_detail.template"
+      },
+      {
+        "Neighbor": "X1S/X1SP",
+        "LocalInterface": "GigabitEthernet1/0/7",
+        "NeighborPort": "WAN",
+        "Platform": "X1S/X1SP",
+        "_source_file": "C:\\Users\\zhiltsov.aa\\Desktop\\net-auto-mermaid\\data\\raw\\INA\\39\\10.20.99.97.txt",
+        "_template": "cisco_ios_show_cdp_neighbors_detail.template"
+      }
+    ],
+    "cisco_ios_show_version": [
+      {
+        "Version": "15.2(7)E2",
+        "Model": "",
+        "Uptime": "3 weeks, 5 days, 14 minutes",
+        "_source_file": "C:\\Users\\zhiltsov.aa\\Desktop\\net-auto-mermaid\\data\\raw\\INA\\39\\10.20.99.97.txt",
+        "_template": "cisco_ios_show_version.template"
+      },
+      {
+        "Version": "15.2(8)E",
+        "Model": "C1000-16T-2G-L",
+        "Uptime": "",
+        "_source_file": "C:\\Users\\zhiltsov.aa\\Desktop\\net-auto-mermaid\\data\\raw\\INA\\39\\10.20.99.97.txt",
+        "_template": "cisco_ios_show_version.template"
+      }
+    ]
+  },
+  "errors": []
 }

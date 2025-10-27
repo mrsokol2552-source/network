@@ -13,7 +13,7 @@ Compiled Wed 09-Apr-14 02:59 by prod_rel_team
 ROM: Bootstrap program is C3750E boot loader
 BOOTLDR: C3750E Boot Loader (C3750X-HBOOT-M) Version 12.2(58r)SE1, RELEASE SOFTWARE (fc1)
 
-NER-NSWR-01-99-1 uptime is 14 weeks, 6 days, 19 hours, 28 minutes
+NER-NSWR-01-99-1 uptime is 14 weeks, 6 days, 20 hours, 9 minutes
 System returned to ROM by power-on
 System restarted at 10:27:32 YAKT Wed Mar 30 2011
 System image file is "flash:/c3750e-universalk9npe-mz.150-2.SE6/c3750e-universalk9npe-mz.150-2.SE6.bin"
@@ -73,6 +73,1203 @@ Configuration register is 0xF
 
 
 
+$ show running-config
+Building configuration...
+
+Current configuration : 33403 bytes
+!
+! Last configuration change at 01:38:08 YAKT Thu Jun 30 2011 by zhiltsov_a
+! NVRAM config last updated at 01:38:12 YAKT Thu Jun 30 2011 by zhiltsov_a
+!
+version 15.0
+no service pad
+service timestamps debug datetime localtime
+service timestamps log datetime localtime
+service password-encryption
+service unsupported-transceiver
+!
+hostname NER-NSWR-01-99-1
+!
+boot-start-marker
+boot-end-marker
+!
+!
+no logging queue-limit
+logging buffered 16386
+logging rate-limit 100 except warnings
+no logging console
+enable secret 5 $1$..R1$2x0phwJn0ZV8/k4mHCxPF.
+!
+username ivashenko_vb privilege 15 secret 5 $1$bi7z$qTHuukwOKu/rACvOW/3hy.
+username sib_uib privilege 15 secret 9 $9$RJ64VWzV1YSKQU$a3dKPmGjU4GExZXjw04SfWQGQHhkCaV8ap0Wcmqfnig
+username volodin_s privilege 15 secret 5 $1$sJlY$R3w4KKfDZy4dY8qrFj.lZ.
+username zhiltsov_a privilege 15 secret 5 $1$5b8U$cNtEnGbsL56pOFgVWQpgg0
+aaa new-model
+!
+!
+aaa authentication login login-RADIUS group radius local
+aaa authorization console
+aaa authorization exec auth-RADIUS-exec group radius local 
+!
+!
+!
+!
+!
+!
+aaa session-id common
+clock timezone YAKT 9 0
+switch 1 provision ws-c3750x-24
+system mtu routing 1500
+ip routing
+no ip cef optimize neighbor resolution
+!
+!
+!
+ip dhcp snooping vlan 1-4094
+no ip dhcp snooping information option
+ip dhcp snooping
+ip domain-name kolmar
+login on-failure log
+login on-success log
+vtp domain OFFICE
+vtp mode off
+!
+!
+key chain kolmar_eigrp
+ key 1
+  key-string 7 060D002D414F1B26161211
+!
+crypto pki trustpoint TP-self-signed-4192947840
+ enrollment selfsigned
+ subject-name cn=IOS-Self-Signed-Certificate-4192947840
+ revocation-check none
+ rsakeypair TP-self-signed-4192947840
+!
+!
+crypto pki certificate chain TP-self-signed-4192947840
+ certificate self-signed 01
+  3082022B 30820194 A0030201 02020101 300D0609 2A864886 F70D0101 05050030 
+  31312F30 2D060355 04031326 494F532D 53656C66 2D536967 6E65642D 43657274 
+  69666963 6174652D 34313932 39343738 3430301E 170D3131 30333330 30313239 
+  32315A17 0D323030 31303130 30303030 305A3031 312F302D 06035504 03132649 
+  4F532D53 656C662D 5369676E 65642D43 65727469 66696361 74652D34 31393239 
+  34373834 3030819F 300D0609 2A864886 F70D0101 01050003 818D0030 81890281 
+  8100BA61 CDE4C467 FCB1FE53 C06C635C 7B49D9BB 26142760 7133E58C 072CC11F 
+  AD6659DB B743CC4D 76DB1FBA 0B6A37A6 0873BF3D CE6DF0F6 76BB13E6 812767C4 
+  B0E00F1D 2B9DF1F5 B7FD32C6 3814E7D4 9098A483 8A6F2827 63A844A6 40794E50 
+  B3B57156 2C9B4BED 859B9838 6CB3CE44 74553CC1 B4892C07 2996059E 717F3204 
+  A6090203 010001A3 53305130 0F060355 1D130101 FF040530 030101FF 301F0603 
+  551D2304 18301680 1496ECB5 543E1123 BF3663DD B3EF51B6 DFFF97E7 B6301D06 
+  03551D0E 04160414 96ECB554 3E1123BF 3663DDB3 EF51B6DF FF97E7B6 300D0609 
+  2A864886 F70D0101 05050003 81810059 DF995AA9 5AEE636B 5375E4FF 27CF3B44 
+  BDC20B82 0EDE789A 1C6301BD 1B0A60E5 30BAE4D3 5A89FE7F 0734B518 41B84401 
+  3E5EA532 8FD30A76 4F3953D2 8D32AB66 5D9FF0BC A6A0AE41 8FABB22B CCE398AA 
+  25978C75 984401FD 30657CDF C3B332E2 BE71400F 32234BB4 312B1498 4B2B3CD5 
+  91BA39D4 60504AA3 3CB93D8A 9B8D6A
+  	quit
+archive
+ log config
+  logging enable
+  notify syslog contenttype plaintext
+  hidekeys
+!
+!
+!
+!
+spanning-tree mode rapid-pvst
+spanning-tree loopguard default
+spanning-tree logging
+spanning-tree extend system-id
+spanning-tree vlan 1-39,41,50-76,78-570,1420,3131 priority 4096
+!
+!
+!
+!
+!
+no errdisable detect cause gbic-invalid
+no errdisable detect cause sfp-config-mismatch
+errdisable recovery cause udld
+errdisable recovery cause bpduguard
+errdisable recovery cause security-violation
+errdisable recovery cause channel-misconfig (STP)
+errdisable recovery cause pagp-flap
+errdisable recovery cause dtp-flap
+errdisable recovery cause link-flap
+errdisable recovery cause sfp-config-mismatch
+errdisable recovery cause gbic-invalid
+errdisable recovery cause l2ptguard
+errdisable recovery cause psecure-violation
+errdisable recovery cause port-mode-failure
+errdisable recovery cause dhcp-rate-limit
+errdisable recovery cause pppoe-ia-rate-limit
+errdisable recovery cause mac-limit
+errdisable recovery cause vmps
+errdisable recovery cause storm-control
+errdisable recovery cause inline-power
+errdisable recovery cause arp-inspection
+errdisable recovery cause loopback
+errdisable recovery cause small-frame
+errdisable recovery cause psp
+errdisable recovery interval 180
+!
+!
+!
+!
+vlan internal allocation policy ascending
+!
+vlan 3
+ name blind_ATC
+!
+vlan 4
+ name KNG_Vostok
+!
+vlan 9
+ name PhoneStation
+!
+vlan 10
+ name Servers
+!
+vlan 12
+ name Admins
+!
+vlan 13
+ name Phones
+!
+vlan 14
+ name VKS
+!
+vlan 15
+ name Monitoring
+!
+vlan 16
+ name DMZ
+!
+vlan 17
+ name Transport
+!
+vlan 19
+ name Video-IT
+!
+vlan 20
+ name Nerungry
+!
+vlan 21
+ name Printers(Nerungry)
+!
+vlan 22
+ name TV
+!
+vlan 30
+ name Wi-Fi
+!
+vlan 31
+ name Wi-Fi_Guest
+!
+vlan 32
+ name Wi-Fi_Works
+!
+vlan 33
+ name Wi-Fi_Staff
+!
+vlan 34
+ name Wi-Fi_Generals
+!
+vlan 35
+ name Wi-Fi_Avic
+!
+vlan 36
+ name Wi-Fi_SIB
+!
+vlan 37 
+!
+vlan 47
+ name REAL_IP_TTK
+!
+vlan 48
+ name TEMP
+!
+vlan 49
+ name ROSTELECOM_MSK
+!
+vlan 52
+ name ASUTP(OF_Inagl-1)
+!
+vlan 60
+ name RPBK
+!
+vlan 69
+ name GPS_ASK
+!
+vlan 77
+ name SKUD
+!
+vlan 80
+ name East_den
+!
+vlan 109
+ name Megafon_Point
+!
+vlan 150
+ name REAL_TTK_62
+!
+vlan 220
+ name UPS
+!
+vlan 501
+ name DRSK
+!
+vlan 521
+ name Cameras(OF_Inagl-1)
+!
+vlan 571
+ name MEGAFON_MSK
+!
+vlan 710
+ name Video-SB-Office
+!
+vlan 1420
+ name VKS(1420)
+!
+vlan 1701
+ name Transport_Endistroy
+!
+vlan 1717
+ name RRL-MNGT
+!
+vlan 1750
+ name DMZ-MAIL
+!
+vlan 1751
+ name DMZ-CLOUD
+!
+vlan 1752
+ name DMZ-AMICUM
+!
+vlan 1753
+ name DMZ-VPN
+!
+vlan 1754
+ name DMZ-RDP
+!
+vlan 1755
+ name DMZ-DEPO
+!
+vlan 1756
+ name DMZ-HR-LINK
+!
+vlan 1757
+ name DMZ-VINTEO
+!
+vlan 1758
+ name DMZ-RDP-CORP
+!
+vlan 1759
+ name DMZ-REVERSE
+!
+vlan 1930
+ name REAL_IP_MEGAFON
+!
+vlan 2001
+ name Users_Endistroy
+!
+vlan 2020
+ name Only
+!
+vlan 3131
+ name NEW_Kitchen_Inagl
+!
+ip ftp username FTP1
+ip ftp password 7 052D323F70
+ip ssh logging events
+ip ssh version 2
+lldp run
+!
+! 
+!
+!
+!
+!
+!
+!
+!
+!
+!
+interface Tunnel12
+ no ip address
+!
+interface FastEthernet0
+ ip address 10.10.10.2 255.255.192.0
+ no ip route-cache
+ shutdown
+!
+interface GigabitEthernet1/0/1
+ description 99.2_gi0/0/1
+ switchport trunk encapsulation dot1q
+ switchport trunk allowed vlan 1,17,31,33,35,1750-1760
+ switchport mode trunk
+ logging event spanning-tree
+ logging event status
+ storm-control broadcast level 0.50 0.30
+ storm-control multicast level 0.50 0.30
+ storm-control action trap
+ ip dhcp snooping limit rate 100
+!
+interface GigabitEthernet1/0/2
+ description UP OFFICE UBNT 1
+ switchport access vlan 30
+ switchport trunk encapsulation dot1q
+ switchport trunk allowed vlan 13,30-34
+ switchport mode trunk
+ logging event spanning-tree
+ logging event status
+ storm-control broadcast level 0.50 0.30
+ storm-control multicast level 0.50 0.30
+ storm-control unicast level 3.00 1.00
+ storm-control action trap
+ ip dhcp snooping limit rate 100
+!
+interface GigabitEthernet1/0/3
+ switchport trunk encapsulation dot1q
+ switchport trunk allowed vlan 14
+ switchport mode trunk
+ logging event spanning-tree
+ logging event status
+ storm-control broadcast level 0.50 0.30
+ storm-control multicast level 0.50 0.30
+ storm-control action trap
+!
+interface GigabitEthernet1/0/4
+ description UP OFFICE UBNT 2
+ switchport access vlan 30
+ switchport trunk encapsulation dot1q
+ switchport trunk allowed vlan 13,30-35
+ switchport mode trunk
+ logging event spanning-tree
+ logging event status
+ storm-control broadcast level 0.50 0.30
+ storm-control multicast level 0.50 0.30
+ storm-control unicast level 3.00 1.00
+ storm-control action trap
+ ip dhcp snooping limit rate 100
+!
+interface GigabitEthernet1/0/5
+ description 99.67_gi0/1
+ switchport trunk encapsulation dot1q
+ switchport trunk allowed vlan 1,10,13,17,20,21,77,220,710,2001
+ switchport mode trunk
+ logging event spanning-tree
+ logging event status
+ shutdown
+ storm-control broadcast level 0.50 0.30
+ storm-control multicast level 0.50 0.30
+ storm-control action trap
+ ip dhcp snooping limit rate 100
+ ip dhcp snooping trust
+!
+interface GigabitEthernet1/0/6
+ description 99.75_gi0/2
+ switchport trunk encapsulation dot1q
+ switchport trunk allowed vlan 1,13,14,17,20-22,30-34,47,77,109,220,710,1420
+ switchport trunk allowed vlan add 1930
+ switchport mode trunk
+ logging event spanning-tree
+ logging event status
+ shutdown
+ storm-control broadcast level 0.50 0.30
+ storm-control multicast level 0.50 0.30
+ storm-control action trap
+ ip dhcp snooping limit rate 100
+ ip dhcp snooping trust
+!
+interface GigabitEthernet1/0/7
+ description UP 99.36_gi0/1
+ switchport trunk encapsulation dot1q
+ switchport trunk allowed vlan 1,12,13,17,20-22,30-34,47,77,220,710
+ switchport mode trunk
+ logging event spanning-tree
+ logging event status
+ shutdown
+ storm-control broadcast level 0.50 0.30
+ storm-control multicast level 0.50 0.30
+ storm-control action trap
+ ip dhcp snooping limit rate 100
+ ip dhcp snooping trust
+!
+interface GigabitEthernet1/0/8
+ description UP 99.37_gi0/1
+ switchport trunk encapsulation dot1q
+ switchport trunk allowed vlan 1,13,17,20,21,47,77,109,220,710
+ switchport mode trunk
+ logging event spanning-tree
+ logging event status
+ shutdown
+ storm-control broadcast level 0.50 0.30
+ storm-control multicast level 0.50 0.30
+ storm-control action trap
+ ip dhcp snooping limit rate 100
+ ip dhcp snooping trust
+!
+interface GigabitEthernet1/0/9
+ description UP 99.9_Gi0/1
+ switchport trunk encapsulation dot1q
+ switchport trunk allowed vlan 1,9,10,12-15,17,20,21,77,109,220,710,1420,1930
+ switchport trunk allowed vlan add 2001
+ switchport mode trunk
+ logging event spanning-tree
+ logging event status
+ shutdown
+ storm-control broadcast level 0.50 0.30
+ storm-control multicast level 0.50 0.30
+ storm-control action trap
+ ip dhcp snooping limit rate 100
+ ip dhcp snooping trust
+!
+interface GigabitEthernet1/0/10
+ description TRUNK 99.128_te 0/1
+ switchport trunk encapsulation dot1q
+ switchport trunk allowed vlan 13,17,20-22,47,48,1420,1930
+ switchport mode trunk
+ logging event spanning-tree
+ logging event status
+ shutdown
+ storm-control broadcast level 0.50 0.30
+ storm-control multicast level 0.50 0.30
+ storm-control action trap
+ ip dhcp snooping limit rate 100
+ ip dhcp snooping trust
+!
+interface GigabitEthernet1/0/11
+ description 99.74_gi0/1
+ switchport trunk encapsulation dot1q
+ switchport trunk allowed vlan 1,13,17,20,21,2001
+ switchport mode trunk
+ logging event spanning-tree
+ logging event status
+ shutdown
+ storm-control broadcast level 0.50 0.30
+ storm-control multicast level 0.50 0.30
+ storm-control action trap
+ ip dhcp snooping limit rate 100
+ ip dhcp snooping trust
+!
+interface GigabitEthernet1/0/12
+ description 99.73_gi0/1
+ switchport trunk encapsulation dot1q
+ switchport trunk allowed vlan 1,12,13,17,20,21
+ switchport mode trunk
+ logging event spanning-tree
+ logging event status
+ shutdown
+ storm-control broadcast level 0.50 0.30
+ storm-control multicast level 0.50 0.30
+ storm-control action trap
+ ip dhcp snooping limit rate 100
+ ip dhcp snooping trust
+!
+interface GigabitEthernet1/0/13
+ description ATS-13
+ switchport access vlan 10
+ switchport mode access
+ switchport nonegotiate
+ logging event spanning-tree
+ logging event status
+ storm-control broadcast level 20.00 10.00
+ storm-control multicast level 20.00 10.00
+ storm-control action trap
+ no cdp enable
+ spanning-tree bpdufilter enable
+ spanning-tree bpduguard enable
+!
+interface GigabitEthernet1/0/14
+ description 99.2_WAN2
+ switchport trunk encapsulation dot1q
+ switchport trunk allowed vlan 31,33,35,1701,3131
+ switchport mode trunk
+ logging event spanning-tree
+ logging event status
+ storm-control broadcast level 0.50 0.30
+ storm-control multicast level 0.50 0.30
+ storm-control action trap
+ ip dhcp snooping limit rate 100
+ ip dhcp snooping trust
+!
+interface GigabitEthernet1/0/15
+ description ROSTEL-to-MOSCOW
+ no switchport
+ no ip address
+ ip ospf authentication
+ ip ospf authentication-key 7 002F1C0A095A19475D
+ logging event spanning-tree
+ logging event status
+ storm-control broadcast level 0.50 0.30
+ storm-control multicast level 0.50 0.30
+ storm-control action trap
+ no cdp enable
+ no lldp transmit
+ no lldp receive
+!
+interface GigabitEthernet1/0/16
+ description ROSTEL-to-NOVOSIBIRSK
+ no switchport
+ no ip address
+ ip ospf authentication
+ ip ospf authentication-key 7 002F1C0A095A19475D
+ logging event spanning-tree
+ logging event status
+ storm-control broadcast level 0.50 0.30
+ storm-control multicast level 0.50 0.30
+ storm-control action trap
+ no cdp enable
+ no lldp transmit
+ no lldp receive
+!
+interface GigabitEthernet1/0/17
+ description TRUNK 99.5_Gi0/2
+ switchport trunk encapsulation dot1q
+ switchport trunk allowed vlan 1,5,12,13,17,20,21,30-34
+ switchport mode trunk
+ logging event spanning-tree
+ logging event status
+ shutdown
+ storm-control broadcast level 0.50 0.30
+ storm-control multicast level 0.50 0.30
+ storm-control action trap
+ ip dhcp snooping limit rate 100
+ ip dhcp snooping trust
+!
+interface GigabitEthernet1/0/18
+ description UP 99.3_Gi0/24
+ switchport trunk encapsulation dot1q
+ switchport trunk allowed vlan 3,9,17,47,1717,1930
+ switchport mode trunk
+ logging event spanning-tree
+ logging event status
+ storm-control broadcast level 0.50 0.30
+ storm-control multicast level 0.50 0.30
+ storm-control action trap
+ ip dhcp snooping trust
+!
+interface GigabitEthernet1/0/19
+ description DRSK_ok
+ switchport access vlan 501
+ switchport mode access
+ logging event spanning-tree
+ logging event status
+ storm-control broadcast level 0.50 0.30
+ storm-control multicast level 0.50 0.30
+ storm-control unicast level 87.00 65.00
+ storm-control action trap
+ no cdp enable
+ no lldp transmit
+ no lldp receive
+ spanning-tree bpdufilter enable
+ ip dhcp snooping limit rate 100
+ ip dhcp snooping trust
+!
+interface GigabitEthernet1/0/20
+ description 99.4_gi0/1
+ switchport trunk encapsulation dot1q
+ switchport trunk allowed vlan 1,10,12,13,17,20,21,2001
+ switchport mode trunk
+ logging event spanning-tree
+ logging event status
+ storm-control broadcast level 0.50 0.30
+ storm-control multicast level 0.50 0.30
+ storm-control action trap
+ ip dhcp snooping limit rate 100
+ ip dhcp snooping trust
+!
+interface GigabitEthernet1/0/21
+ logging event spanning-tree
+ logging event status
+ no snmp trap link-status
+ storm-control broadcast level 0.50 0.30
+ storm-control multicast level 0.50 0.30
+ storm-control action shutdown
+ storm-control action trap
+ no cdp enable
+ spanning-tree portfast
+ spanning-tree bpduguard enable
+ ip dhcp snooping limit rate 100
+!
+interface GigabitEthernet1/0/22
+ description UP 99.254_Gi0/1
+ switchport trunk encapsulation dot1q
+ switchport trunk allowed vlan 1,17,47,48,1930
+ switchport mode trunk
+ logging event spanning-tree
+ logging event status
+ storm-control broadcast level 0.50 0.30
+ storm-control multicast level 0.50 0.30
+ storm-control action trap
+ ip dhcp snooping limit rate 100
+ ip dhcp snooping trust
+!
+interface GigabitEthernet1/0/23
+ description TRUNK Q-IN-Q RPBK
+ switchport trunk encapsulation dot1q
+ switchport trunk allowed vlan 1,13,17,30,47,77,220,710,715,720,725,730,1930
+ switchport mode trunk
+ logging event spanning-tree
+ logging event status
+ storm-control broadcast level 0.50 0.30
+ storm-control multicast level 0.50 0.30
+ storm-control action trap
+ no cdp enable
+ ip dhcp snooping limit rate 100
+ ip dhcp snooping trust
+!
+interface GigabitEthernet1/0/24
+ description 99.69_gi0/2
+ switchport trunk encapsulation dot1q
+ switchport trunk allowed vlan 1,10,12,13,17,20,21,30-34,47,109,1420,1930,3131
+ switchport mode trunk
+ logging event spanning-tree
+ logging event status
+ shutdown
+ storm-control broadcast level 0.50 0.30
+ storm-control multicast level 0.50 0.30
+ storm-control action trap
+ ip dhcp snooping limit rate 100
+ ip dhcp snooping trust
+!
+interface GigabitEthernet1/1/1
+ description UP 96.1_Twe1/0/5
+ switchport trunk encapsulation dot1q
+ switchport trunk allowed vlan 1,3,9,10,12-15,17,19-22,30-35,37,47,77,220,501
+ switchport trunk allowed vlan add 521,571,666,710,1420,1701,1717,1750-1760
+ switchport trunk allowed vlan add 1930,2001,3131
+ switchport mode trunk
+ logging event spanning-tree
+ logging event status
+ udld port
+ storm-control broadcast level 1.50 1.30
+ storm-control multicast level 1.50 1.30
+ storm-control action trap
+ ip dhcp snooping trust
+!
+interface GigabitEthernet1/1/2
+ switchport trunk encapsulation dot1q
+ switchport trunk allowed vlan 1,1930
+ switchport mode trunk
+ switchport nonegotiate
+ logging event spanning-tree
+ logging event status
+ udld port
+ storm-control broadcast level 1.50 1.30
+ storm-control multicast level 1.50 1.30
+ storm-control action trap
+ ip dhcp snooping trust
+!
+interface GigabitEthernet1/1/3
+ switchport trunk encapsulation dot1q
+ switchport trunk allowed vlan 1,9,10,12-15,17,20,30-34,36,40,47-54,56,60,77,80
+ switchport trunk allowed vlan add 90,220,501,521,571,710,715,720,725,730,1930
+ switchport mode trunk
+ switchport nonegotiate
+ logging event spanning-tree
+ logging event status
+ shutdown
+ udld port
+ storm-control broadcast level 1.50 1.30
+ storm-control multicast level 1.50 1.30
+ storm-control action trap
+ ip dhcp snooping trust
+!
+interface GigabitEthernet1/1/4
+ switchport trunk encapsulation dot1q
+ switchport trunk allowed vlan 13,20,21,30-34,37,77,710,1701,2001
+ switchport mode trunk
+ logging event spanning-tree
+ logging event status
+ storm-control broadcast level 10.00 5.00
+ storm-control multicast level 10.00 5.00
+ storm-control action trap
+ no lldp transmit
+ ip dhcp snooping trust
+!
+interface TenGigabitEthernet1/1/1
+ switchport access vlan 5
+ switchport mode access
+ shutdown
+!
+interface TenGigabitEthernet1/1/2
+!
+interface Vlan1
+ description DEFAULT
+ ip address 192.168.99.1 255.255.192.0
+ ip helper-address 10.10.0.27
+!
+interface Vlan12
+ description Admins
+ ip address 10.12.0.1 255.255.255.0
+ ip helper-address 10.10.0.27
+!
+interface Vlan15
+ ip address 10.15.0.1 255.255.255.0
+ ip access-group deny_all_vlan15_allow_vlan_12 out
+ ip helper-address 10.10.0.27
+!
+interface Vlan17
+ description Transport
+ ip address 10.20.99.1 255.255.252.0
+ ip ospf authentication
+ ip ospf authentication-key 7 002F1C0A095A19475D
+!
+interface Vlan19
+ ip address 10.19.0.1 255.255.255.0
+!
+interface Vlan20
+ no ip address
+!
+interface Vlan30
+ description Wi-Fi
+ ip address 10.30.0.1 255.255.255.0
+ ip helper-address 10.10.0.27
+!
+interface Vlan31
+ description Wi-Fi_Guest
+ no ip address
+!
+interface Vlan32
+ description Wi-Fi_Works
+ no ip address
+!
+interface Vlan33
+ description Wi-Fi_Staff
+ no ip address
+!
+interface Vlan34
+ description Wi-Fi_Generals
+ no ip address
+!
+interface Vlan36
+ description Wi-Fi_SIB
+ ip address 10.36.0.1 255.255.255.0
+ ip helper-address 10.10.0.27
+!
+interface Vlan69
+ ip address 10.69.69.1 255.255.255.0
+!
+interface Vlan109
+ ip address 10.11.109.1 255.255.255.0
+ ip access-group deny_vlan109_only_inet out
+ ip helper-address 10.10.0.27
+!
+interface Vlan220
+ description IBP
+ ip address 10.20.220.1 255.255.254.0
+!
+interface Vlan1420
+ description VKS(1420)
+ ip address 10.20.14.1 255.255.255.0
+!
+interface Vlan1931
+ description RMU
+ ip address 10.60.16.1 255.255.240.0
+!
+interface Vlan3131
+ description NEW_Kitchen_Inagl
+ no ip address
+!
+router ospf 10
+ router-id 10.20.99.1
+ passive-interface default
+ no passive-interface Vlan17
+ no passive-interface GigabitEthernet1/0/1
+ no passive-interface GigabitEthernet1/0/15
+ no passive-interface GigabitEthernet1/0/16
+ network 10.12.0.0 0.0.0.255 area 10.20.96.0
+ network 10.15.0.0 0.0.0.255 area 10.20.96.0
+ network 10.20.14.0 0.0.0.255 area 10.20.96.0
+ network 10.20.96.0 0.0.3.255 area 10.20.96.0
+ network 192.168.64.0 0.0.63.255 area 10.20.96.0
+!
+!
+ip http server
+ip http authentication aaa login-authentication login-RADIUS
+ip http authentication aaa exec-authorization auth-RADIUS-exec
+ip http secure-server
+!
+ip route 0.0.0.0 0.0.0.0 10.20.96.1
+ip route 10.20.96.0 255.255.252.0 Vlan17
+ip route 10.21.0.0 255.255.255.0 10.20.96.4
+ip route 10.40.0.0 255.255.252.0 10.20.98.1
+ip route 10.40.10.0 255.255.255.0 10.20.98.1
+ip route 10.40.12.0 255.255.255.0 10.20.98.1
+ip route 10.40.14.0 255.255.255.0 10.20.98.1
+ip route 10.40.15.0 255.255.255.0 10.20.98.1
+ip route 10.41.0.0 255.255.0.0 10.20.98.1
+ip route 10.42.0.0 255.255.0.0 10.20.98.1
+ip route 10.43.0.0 255.255.0.0 10.20.98.1
+ip route 10.60.0.0 255.255.252.0 10.20.99.45
+ip route 10.60.14.0 255.255.255.0 10.20.99.45
+ip route 10.60.15.0 255.255.255.0 10.20.99.45
+ip route 10.61.0.0 255.255.255.0 10.20.99.45
+ip route 10.91.0.0 255.255.0.0 10.20.97.1
+ip route 10.92.0.0 255.255.0.0 10.20.97.1
+ip route 10.93.0.0 255.255.0.0 10.20.97.1
+ip route 10.93.0.0 255.255.255.252 10.20.97.1
+ip route 10.100.20.0 255.255.255.0 10.20.98.1
+ip route 10.100.25.0 255.255.255.0 10.20.99.45
+ip route 10.101.0.0 255.255.255.0 192.168.99.50
+ip route 10.200.10.0 255.255.255.0 10.20.97.1
+ip route 10.200.30.0 255.255.255.0 10.20.97.1
+ip route 10.200.31.0 255.255.255.0 10.20.97.1
+ip route 10.200.51.0 255.255.255.0 10.20.97.1
+ip route 10.200.55.0 255.255.255.0 10.20.97.1
+ip route 172.16.0.0 255.255.255.0 192.168.99.50
+ip route 172.16.2.0 255.255.255.240 10.20.99.2
+ip route 172.16.10.0 255.255.255.0 10.10.0.94
+ip route 172.16.50.0 255.255.255.0 10.20.99.2
+ip route 172.16.54.0 255.255.254.0 172.16.50.14
+ip route 192.168.19.0 255.255.255.0 192.168.99.2
+ip route 192.168.19.0 255.255.255.0 10.0.2.191
+ip route 192.168.30.10 255.255.255.255 10.20.99.110
+!
+ip access-list extended ACCESS_DMZ
+ deny   ip any any
+ip access-list extended DNS
+ip access-list extended VLAN666-OUT
+ permit ip 10.66.66.0 0.0.0.255 10.12.0.0 0.0.0.255
+ deny   ip 10.66.66.0 0.0.0.255 any
+ permit ip any any
+ip access-list extended deny_all_vlan15_allow_vlan_12
+ remark ACCESS VLAN ADMINS
+ permit ip 10.12.0.0 0.0.0.255 10.15.0.0 0.0.0.255
+ permit ip 10.15.0.0 0.0.0.255 10.12.0.0 0.0.0.255
+ remark ACCESS DHCP SERVER
+ permit ip host 10.10.0.5 10.15.0.0 0.0.0.255
+ permit ip 10.15.0.0 0.0.0.255 host 10.10.0.5
+ remark ACCESS OBSERVIUM
+ permit ip host 10.10.0.6 10.15.0.0 0.0.0.255
+ permit ip 10.15.0.0 0.0.0.255 host 10.10.0.6
+ remark ACCESS ACTIVE DIRECTORY
+ permit ip host 10.10.0.27 10.15.0.0 0.0.0.255
+ permit ip 10.15.0.0 0.0.0.255 host 10.10.0.27
+ permit ip host 10.10.0.42 10.15.0.0 0.0.0.255
+ permit ip 10.15.0.0 0.0.0.255 host 10.10.0.42
+ remark ACEESS UNKNOW
+ permit ip host 10.10.0.25 10.15.0.0 0.0.0.255
+ permit ip 10.15.0.0 0.0.0.255 host 10.10.0.25
+ remark ACCESS ZABBIX-PROXY
+ permit ip host 10.10.0.99 10.15.0.0 0.0.0.255
+ permit ip 10.15.0.0 0.0.0.255 host 10.10.0.99
+ permit ip host 10.10.0.210 10.15.0.0 0.0.0.255
+ permit ip 10.15.0.0 0.0.0.255 host 10.10.0.210
+ remark 150 ACCESS NER-SDKR02
+ permit ip host 10.10.0.164 10.15.0.0 0.0.0.255
+ permit ip 10.15.0.0 0.0.0.255 host 10.10.0.164
+ deny   ip any any
+ip access-list extended deny_all_vlan36
+ remark ACCESS VLAN710
+ permit ip 10.36.0.0 0.0.0.255 10.100.10.0 0.0.0.255
+ permit ip 10.100.10.0 0.0.0.255 10.36.0.0 0.0.0.255
+ remark ACCESS VLAN715
+ permit ip 10.36.0.0 0.0.0.255 10.100.15.0 0.0.0.255
+ permit ip 10.100.15.0 0.0.0.255 10.36.0.0 0.0.0.255
+ remark ACCESS VLAN720
+ permit ip 10.36.0.0 0.0.0.255 10.100.20.0 0.0.0.255
+ permit ip 10.100.20.0 0.0.0.255 10.36.0.0 0.0.0.255
+ remark ACCESS VLAN725
+ permit ip 10.36.0.0 0.0.0.255 10.100.25.0 0.0.0.255
+ permit ip 10.100.25.0 0.0.0.255 10.36.0.0 0.0.0.255
+ remark ACCESS VLAN730
+ permit ip 10.36.0.0 0.0.0.255 10.100.30.0 0.0.0.255
+ permit ip 10.100.30.0 0.0.0.255 10.36.0.0 0.0.0.255
+ deny   ip any any
+ip access-list extended deny_all_vlan9_allow_vlan_12
+ remark ACCESS VLAN ADMINS
+ permit ip 10.12.0.0 0.0.0.255 10.11.11.0 0.0.0.255
+ permit ip 10.11.11.0 0.0.0.255 10.12.0.0 0.0.0.255
+ip access-list extended deny_for_vlan4
+ip access-list extended deny_vlan109_only_inet
+ deny   ip any 192.168.0.0 0.0.255.255
+ deny   ip 192.168.0.0 0.0.255.255 any
+ deny   ip any 172.16.0.0 0.0.255.255
+ deny   ip 172.16.0.0 0.0.255.255 any
+ deny   ip 10.0.2.0 0.0.0.255 any
+ deny   ip any 10.0.2.0 0.0.0.255
+ deny   ip 10.10.0.0 0.0.0.255 any
+ deny   ip any 10.10.0.0 0.0.0.255
+ deny   ip 10.30.0.0 0.0.0.255 any
+ deny   ip any 10.30.0.0 0.0.0.255
+ deny   ip 10.20.0.0 0.0.3.255 any
+ deny   ip any 10.20.0.0 0.0.3.255
+ deny   ip 10.21.0.0 0.0.1.255 any
+ deny   ip any 10.21.0.0 0.0.1.255
+ deny   ip 10.40.0.0 0.0.3.255 any
+ deny   ip any 10.40.0.0 0.0.3.255
+ deny   ip 10.41.0.0 0.0.1.255 any
+ deny   ip any 10.41.0.0 0.0.1.255
+ deny   ip 10.60.0.0 0.0.3.255 any
+ deny   ip any 10.60.0.0 0.0.3.255
+ deny   ip 10.61.0.0 0.0.1.255 any
+ deny   ip any 10.61.0.0 0.0.1.255
+ deny   ip 10.80.0.0 0.0.3.255 any
+ deny   ip any 10.80.0.0 0.0.3.255
+ deny   ip 10.81.0.0 0.0.1.255 any
+ deny   ip any 10.81.0.0 0.0.1.255
+ deny   ip 10.90.0.0 0.0.3.255 any
+ deny   ip any 10.90.0.0 0.0.3.255
+ deny   ip 10.91.0.0 0.0.1.255 any
+ deny   ip any 10.91.0.0 0.0.1.255
+ deny   ip 10.100.0.0 0.0.255.255 any
+ deny   ip any 10.100.0.0 0.0.255.255
+ deny   ip 10.200.0.0 0.0.255.255 any
+ deny   ip any 10.200.0.0 0.0.255.255
+ permit ip any any
+ip access-list extended deny_vlan17_to_vlan1
+ permit ip 192.168.64.174 0.0.0.1 10.20.96.0 0.0.3.255
+ permit ip 192.168.99.0 0.0.0.255 10.20.99.0 0.0.0.255
+ permit ip 10.20.96.0 0.0.3.255 192.168.64.174 0.0.0.1
+ permit ip 192.168.74.0 0.0.0.255 10.20.96.0 0.0.3.255
+ permit ip 10.20.96.0 0.0.3.255 192.168.74.0 0.0.0.255
+ remark ACCESS VLAN ADMINS
+ permit ip 10.12.0.0 0.0.0.255 10.20.96.0 0.0.3.255
+ permit ip 10.20.96.0 0.0.3.255 10.12.0.0 0.0.0.255
+ remark ACCESS VLAN SERVERS
+ permit ip 10.10.0.0 0.0.0.255 10.20.96.0 0.0.3.255
+ permit ip 10.20.96.0 0.0.3.255 10.10.0.0 0.0.0.255
+ deny   ip any any
+ remark END
+ip access-list extended deny_vlan220_to_vlan1
+ permit ip 192.168.64.174 0.0.0.1 10.20.220.0 0.0.1.255
+ permit ip 10.20.220.0 0.0.1.255 192.168.64.174 0.0.0.1
+ permit ip 192.168.74.0 0.0.0.255 10.20.220.0 0.0.1.255
+ permit ip 10.20.220.0 0.0.1.255 192.168.74.0 0.0.0.255
+ permit ip 192.168.99.0 0.0.0.255 10.20.220.0 0.0.1.255
+ permit ip 10.20.220.0 0.0.1.255 192.168.99.0 0.0.0.255
+ permit ip 10.12.0.0 0.0.0.255 10.20.220.0 0.0.1.255
+ permit ip 10.20.220.0 0.0.1.255 10.12.0.0 0.0.0.255
+ permit ip 10.10.0.0 0.0.0.255 10.20.220.0 0.0.1.255
+ permit ip 10.20.220.0 0.0.1.255 10.10.0.0 0.0.0.255
+ deny   ip any any
+ip access-list extended deny_vlan22_to_all
+ remark ALLOW VLAN17
+ permit ip 10.20.99.0 0.0.0.255 any
+ permit ip any 10.20.99.0 0.0.0.255
+ remark ALLOW VLAN10
+ permit ip 10.10.0.0 0.0.0.255 any
+ permit ip any 10.10.0.0 0.0.0.255
+ remark DENY NETWORK
+ deny   ip any 192.168.0.0 0.0.255.255
+ deny   ip 192.168.0.0 0.0.255.255 any
+ deny   ip any 10.0.0.0 0.255.255.255
+ deny   ip 10.0.0.0 0.255.255.255 any
+ deny   ip any 172.16.0.0 0.0.255.255
+ deny   ip 172.16.0.0 0.0.255.255 any
+ remark ALLOW ALL
+ permit ip any any
+ remark END
+ip access-list extended deny_vlan33_only_inet
+ permit ip 10.10.0.26 0.0.0.1 any
+ permit ip 10.10.0.42 0.0.0.1 any
+ permit ip any 10.10.0.26 0.0.0.1
+ permit ip any 10.10.0.42 0.0.0.1
+ permit ip 10.10.0.12 0.0.0.1 any
+ permit ip any 10.10.0.12 0.0.0.1
+ permit ip any 172.16.52.10 0.0.0.1
+ permit ip 172.16.52.10 0.0.0.1 any
+ permit ip any 10.10.0.100 0.0.0.1
+ permit ip 10.10.0.100 0.0.0.1 any
+ permit ip any 10.30.0.210 0.0.0.1
+ permit ip 10.30.0.210 0.0.0.1 any
+ permit ip any 10.10.0.36 0.0.0.1
+ permit ip 10.10.0.36 0.0.0.1 any
+ permit ip any 10.10.0.40 0.0.0.1
+ permit ip 10.10.0.40 0.0.0.1 any
+ permit ip any 10.10.0.232 0.0.0.1
+ permit ip 10.10.0.232 0.0.0.1 any
+ deny   ip any 192.168.0.0 0.0.255.255
+ deny   ip 192.168.0.0 0.0.255.255 any
+ deny   ip any 172.16.0.0 0.0.255.255
+ deny   ip 172.16.0.0 0.0.255.255 any
+ deny   ip 10.0.2.0 0.0.0.255 any
+ deny   ip any 10.0.2.0 0.0.0.255
+ deny   ip 10.10.0.0 0.0.0.255 any
+ deny   ip any 10.10.0.0 0.0.0.255
+ deny   ip 10.30.0.0 0.0.0.255 any
+ deny   ip any 10.30.0.0 0.0.0.255
+ deny   ip 10.32.0.0 0.0.0.255 any
+ deny   ip any 10.32.0.0 0.0.0.255
+ deny   ip 10.33.0.0 0.0.0.255 any
+ deny   ip any 10.33.0.0 0.0.0.255
+ deny   ip 10.34.0.0 0.0.0.255 any
+ deny   ip any 10.34.0.0 0.0.0.255
+ deny   ip 10.20.0.0 0.0.3.255 any
+ deny   ip any 10.20.0.0 0.0.3.255
+ deny   ip 10.21.0.0 0.0.1.255 any
+ deny   ip any 10.21.0.0 0.0.1.255
+ deny   ip 10.40.0.0 0.0.3.255 any
+ deny   ip any 10.40.0.0 0.0.3.255
+ deny   ip 10.41.0.0 0.0.1.255 any
+ deny   ip any 10.41.0.0 0.0.1.255
+ deny   ip 10.60.0.0 0.0.3.255 any
+ deny   ip any 10.60.0.0 0.0.3.255
+ deny   ip 10.61.0.0 0.0.1.255 any
+ deny   ip any 10.61.0.0 0.0.1.255
+ deny   ip 10.80.0.0 0.0.3.255 any
+ deny   ip any 10.80.0.0 0.0.3.255
+ deny   ip 10.81.0.0 0.0.1.255 any
+ deny   ip any 10.81.0.0 0.0.1.255
+ deny   ip 10.90.0.0 0.0.3.255 any
+ deny   ip any 10.90.0.0 0.0.3.255
+ deny   ip 10.91.0.0 0.0.1.255 any
+ deny   ip any 10.91.0.0 0.0.1.255
+ deny   ip 10.100.0.0 0.0.255.255 any
+ deny   ip any 10.100.0.0 0.0.255.255
+ deny   ip 10.200.0.0 0.0.255.255 any
+ deny   ip any 10.200.0.0 0.0.255.255
+ permit ip any any
+ip access-list extended deny_vlan9_to_vlan1
+ permit ip 192.168.64.174 0.0.0.1 10.11.10.0 0.0.1.255
+ permit ip 10.11.10.0 0.0.1.255 192.168.64.174 0.0.0.1
+ permit ip 192.168.74.0 0.0.0.255 10.11.0.0 0.0.63.255
+ permit ip 10.11.0.0 0.0.63.255 192.168.74.0 0.0.0.255
+ permit ip 192.168.99.0 0.0.0.255 10.11.0.0 0.0.63.255
+ permit ip 10.11.0.0 0.0.63.255 192.168.99.0 0.0.0.255
+ deny   ip any any
+ip access-list extended for_vlan_21
+ permit ip 10.10.0.0 0.0.0.255 10.21.0.0 0.0.0.255
+ permit ip 10.21.0.0 0.0.0.255 10.10.0.0 0.0.0.255
+ permit ip 10.20.0.0 0.0.0.255 10.21.0.0 0.0.0.255
+ permit ip 10.21.0.0 0.0.0.255 10.20.0.0 0.0.0.255
+ deny   ip any any
+ip access-list extended vlan_only_inet
+ permit tcp any 10.10.0.26 0.0.0.1 eq domain
+ permit udp any 10.10.0.26 0.0.0.1 eq domain
+ permit tcp 10.10.0.26 0.0.0.1 any eq domain
+ permit udp 10.10.0.26 0.0.0.1 any eq domain
+ permit tcp any 10.10.0.42 0.0.0.1 eq domain
+ permit udp any 10.10.0.42 0.0.0.1 eq domain
+ permit tcp 10.10.0.42 0.0.0.1 any eq domain
+ permit udp 10.10.0.42 0.0.0.1 any eq domain
+ permit tcp any 10.10.0.12 0.0.0.1 eq www
+ permit tcp 10.10.0.12 0.0.0.1 any eq www
+ permit ip any 172.16.52.10 0.0.0.1
+ permit ip 172.16.52.10 0.0.0.1 any
+ permit ip 10.0.2.228 0.0.0.1 any
+ permit ip any 10.0.2.228 0.0.0.1
+ permit ip any 10.30.0.210 0.0.0.1
+ permit ip 10.30.0.210 0.0.0.1 any
+ permit ip any 10.10.0.100 0.0.0.1
+ permit ip 10.10.0.100 0.0.0.1 any
+ deny   ip any 192.168.0.0 0.0.255.255
+ deny   ip 192.168.0.0 0.0.255.255 any
+ deny   ip any 172.16.0.0 0.0.255.255
+ deny   ip 172.16.0.0 0.0.255.255 any
+ deny   ip 10.0.2.0 0.0.0.255 any
+ deny   ip any 10.0.2.0 0.0.0.255
+ deny   ip 10.10.0.0 0.0.0.255 any
+ deny   ip any 10.10.0.0 0.0.0.255
+ deny   ip 10.30.0.0 0.0.0.255 any
+ deny   ip any 10.30.0.0 0.0.0.255
+ deny   ip 10.32.0.0 0.0.0.255 any
+ deny   ip any 10.32.0.0 0.0.0.255
+ deny   ip 10.33.0.0 0.0.0.255 any
+ deny   ip any 10.33.0.0 0.0.0.255
+ deny   ip 10.34.0.0 0.0.0.255 any
+ deny   ip any 10.34.0.0 0.0.0.255
+ deny   ip 10.20.0.0 0.0.3.255 any
+ deny   ip any 10.20.0.0 0.0.3.255
+ deny   ip 10.21.0.0 0.0.1.255 any
+ deny   ip any 10.21.0.0 0.0.1.255
+ deny   ip 10.40.0.0 0.0.3.255 any
+ deny   ip any 10.40.0.0 0.0.3.255
+ deny   ip 10.41.0.0 0.0.1.255 any
+ deny   ip any 10.41.0.0 0.0.1.255
+ deny   ip 10.60.0.0 0.0.3.255 any
+ deny   ip any 10.60.0.0 0.0.3.255
+ deny   ip 10.61.0.0 0.0.1.255 any
+ deny   ip any 10.61.0.0 0.0.1.255
+ deny   ip 10.80.0.0 0.0.3.255 any
+ deny   ip any 10.80.0.0 0.0.3.255
+ deny   ip 10.81.0.0 0.0.1.255 any
+ deny   ip any 10.81.0.0 0.0.1.255
+ deny   ip 10.90.0.0 0.0.3.255 any
+ deny   ip any 10.90.0.0 0.0.3.255
+ deny   ip 10.91.0.0 0.0.1.255 any
+ deny   ip any 10.91.0.0 0.0.1.255
+ deny   ip 10.100.0.0 0.0.255.255 any
+ deny   ip any 10.100.0.0 0.0.255.255
+ deny   ip 10.200.0.0 0.0.255.255 any
+ deny   ip any 10.200.0.0 0.0.255.255
+ permit ip any any
+!
+ip sla 1
+ icmp-echo 10.20.99.20 source-interface Vlan17
+ frequency 10
+ip sla schedule 1 life forever start-time now
+ip sla 2
+ icmp-echo 10.20.99.249 source-interface Vlan17
+ frequency 10
+ip sla schedule 2 life forever start-time now
+ip sla 3
+ icmp-echo 8.8.8.8 source-interface Vlan20
+ frequency 10
+kron occurrence backup at 17:00 recurring
+ policy-list backup
+!
+kron policy-list backup
+ cli copy startup-config ftp://192.168.74.5
+ cli copy startup-config tftp://dump.kolmar.pro/10.20.99.1
+ cli copy vlan.dat tftp://dump.kolmar.pro/10.20.99.1_vlan
+!
+logging origin-id hostname
+logging facility local5
+logging host 10.10.0.142 transport udp port 5014
+logging host 10.10.0.74
+access-list 5 permit 10.10.0.6
+access-list 5 permit 10.10.0.74
+access-list 5 permit 10.10.0.99
+access-list 5 permit 10.10.0.160
+access-list 5 permit 10.10.0.213
+access-list 5 permit 192.168.74.213
+!
+!
+snmp-server community public RO 5
+!
+radius-server host 10.10.0.210 auth-port 1812 acct-port 1813
+radius-server host 10.10.0.212 auth-port 1812 acct-port 1813
+radius-server retransmit 1
+radius-server timeout 2
+radius-server key 7 151E0006013B252C3B3F33201F10
+!
+radius server Kolmar
+!
+!
+no vstack
+privilege interface level 15 ip
+privilege exec level 15 clear line
+privilege exec level 1 clear
+!
+line con 0
+ exec-timeout 13 0
+ privilege level 15
+ authorization exec auth-RADIUS-exec
+ logging synchronous
+ login authentication login-RADIUS
+line vty 0 4
+ exec-timeout 60 0
+ authorization exec auth-RADIUS-exec
+ logging synchronous
+ login authentication login-RADIUS
+ transport input ssh
+line vty 5 15
+ authorization exec auth-RADIUS-exec
+ login authentication login-RADIUS
+ transport input none
+!
+ntp server time.kolmar.pro
+mac address-table notification change interval 13
+mac address-table notification change history-size 500
+mac address-table notification change
+mac address-table aging-time 14400
+end
+
+
+
 $ show lldp neighbors detail
 ------------------------------------------------
 Chassis id: 3473.2dad.a5a0
@@ -86,7 +1283,7 @@ Technical Support: http://www.cisco.com/techsupport
 Copyright (c) 1986-2020 by Cisco Systems, Inc.
 Compiled Thu 26-Nov-20 23:35 by mcpre
 
-Time remaining: 109 seconds
+Time remaining: 102 seconds
 System Capabilities: B,R
 Enabled Capabilities: B,R
 Management Addresses:
@@ -109,7 +1306,7 @@ Technical Support: http://www.cisco.com/techsupport
 Copyright (c) 1986-2011 by Cisco Systems, Inc.
 Compiled Thu 21-Jul-11 01:34 by prod_rel_team
 
-Time remaining: 99 seconds
+Time remaining: 94 seconds
 System Capabilities: B,R
 Enabled Capabilities: B
 Management Addresses:
@@ -133,10 +1330,10 @@ $ show cdp neighbors detail
 -------------------------
 Device ID: X3S
 Entry address(es): 
-  IP address: 10.13.1.32
+  IP address: 10.13.1.0
 Platform: X3S,  Capabilities: Host Phone 
 Interface: GigabitEthernet1/1/4,  Port ID (outgoing port): WAN PORT
-Holdtime : 169 sec
+Holdtime : 172 sec
 
 Version :
 2.14.0.7387
@@ -153,7 +1350,7 @@ Entry address(es):
   IP address: 10.1.99.11
 Platform: cisco WS-C2960X-24PS-L,  Capabilities: Switch IGMP 
 Interface: GigabitEthernet1/1/4,  Port ID (outgoing port): GigabitEthernet1/0/25
-Holdtime : 159 sec
+Holdtime : 142 sec
 
 Version :
 Cisco IOS Software, C2960X Software (C2960X-UNIVERSALK9-M), Version 15.2(2)E6, RELEASE SOFTWARE (fc1)
@@ -178,7 +1375,7 @@ Entry address(es):
   IP address: 10.11.11.1
 Platform: cisco C9500-24Y4C,  Capabilities: Router Switch IGMP 
 Interface: GigabitEthernet1/1/1,  Port ID (outgoing port): TwentyFiveGigE1/0/5
-Holdtime : 135 sec
+Holdtime : 141 sec
 
 Version :
 Cisco IOS Software [Bengaluru], Catalyst L3 Switch Software (CAT9K_IOSXE), Version 17.4.1, RELEASE SOFTWARE (fc5)
@@ -204,7 +1401,7 @@ Capability Codes: R - Router, T - Trans Bridge, B - Source Route Bridge
                   D - Remote, C - CVTA, M - Two-port Mac Relay 
 
 Device ID        Local Intrfce     Holdtme    Capability  Platform  Port ID
-X3S              Gig 1/1/4         169              H P   X3S       WAN PORT
+X3S              Gig 1/1/4         172              H P   X3S       WAN PORT
 ENS-NSWS-01-99-11.kolmar.ru
-                 Gig 1/1/4         159              S I   WS-C2960X Gig 1/0/25
-NER-NSWR-01-96-1 Gig 1/1/1         135             R S I  C9500-24Y TwentyFiveGigE1/0/5
+                 Gig 1/1/4         142              S I   WS-C2960X Gig 1/0/25
+NER-NSWR-01-96-1 Gig 1/1/1         141             R S I  C9500-24Y TwentyFiveGigE1/0/5

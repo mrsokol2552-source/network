@@ -13,7 +13,7 @@ Compiled Mon 22-Jan-18 07:16 by prod_rel_team
 ROM: Bootstrap program is C2960C boot loader
 BOOTLDR: C2960C Boot Loader (C2960c405-HBOOT-M) Version 12.2(55r)EX9, RELEASE SOFTWARE (fc1)
 
-INA-NSWS-08-98-73 uptime is 8 weeks, 2 days, 8 minutes
+INA-NSWS-08-98-73 uptime is 8 weeks, 2 days, 49 minutes
 System returned to ROM by power-on
 System restarted at 12:53:54 YAKT Sat Aug 30 2025
 System image file is "flash:/c2960c405-universalk9-mz.152-2.E8/c2960c405-universalk9-mz.152-2.E8.bin"
@@ -74,6 +74,444 @@ Configuration register is 0xF
 
 
 
+$ show running-config
+Building configuration...
+
+Current configuration : 10840 bytes
+!
+! Last configuration change at 13:04:23 YAKT Wed Oct 15 2025 by zhiltsov_a
+! NVRAM config last updated at 13:04:25 YAKT Wed Oct 15 2025 by zhiltsov_a
+!
+version 15.2
+no service pad
+service timestamps debug datetime localtime
+service timestamps log datetime localtime
+service password-encryption
+service unsupported-transceiver
+!
+hostname INA-NSWS-08-98-73
+!
+boot-start-marker
+boot-end-marker
+!
+!
+no logging queue-limit
+logging buffered 16386
+logging rate-limit 100 except warnings
+no logging console
+enable secret 5 $1$..R1$2x0phwJn0ZV8/k4mHCxPF.
+!
+username november privilege 15 secret 5 $1$pt3m$volXJ3LYyOhgATh7u8zIi/
+username ivashenko_vb privilege 15 secret 5 $1$bi7z$qTHuukwOKu/rACvOW/3hy.
+username emtsov.s privilege 15 secret 5 $1$7f5D$3.qRUr.U5dppuoYuVyUhp.
+username sib_uib privilege 15 secret 9 $9$RJ64VWzV1YSKQU$a3dKPmGjU4GExZXjw04SfWQGQHhkCaV8ap0Wcmqfnig
+aaa new-model
+!
+!
+aaa group server radius KOLMAR
+ server name cis.kolmar.pro_210
+ server name cis.kolmar.pro_212
+ deadtime 333
+!
+aaa authentication login login-RADIUS group radius local
+aaa authorization console
+aaa authorization exec auth-RADIUS-exec group radius local 
+!
+!
+!
+!
+!
+aaa server radius dynamic-author
+ client 10.10.0.210 server-key 7 060A042B495F0711161B14090013
+ client 10.10.0.212 server-key 7 05070D05245D40010A091110071B
+!
+aaa session-id common
+clock timezone YAKT 9 0
+system mtu routing 1500
+!
+!
+ip dhcp snooping vlan 1-4094
+ip dhcp snooping
+!
+ip domain-name kolmar.ru
+ip name-server 10.10.0.210
+ip name-server 10.10.0.212
+vtp mode off
+!
+!
+!
+!
+!
+!
+!
+crypto pki trustpoint TP-self-signed-1990541568
+ enrollment selfsigned
+ subject-name cn=IOS-Self-Signed-Certificate-1990541568
+ revocation-check none
+ rsakeypair TP-self-signed-1990541568
+!
+crypto pki trustpoint TP-self-signed-1328097920
+ enrollment selfsigned
+ subject-name cn=IOS-Self-Signed-Certificate-1328097920
+ revocation-check none
+ rsakeypair TP-self-signed-1328097920
+!
+!
+crypto pki certificate chain TP-self-signed-1990541568
+ certificate self-signed 01
+  3082022B 30820194 A0030201 02020101 300D0609 2A864886 F70D0101 05050030 
+  31312F30 2D060355 04031326 494F532D 53656C66 2D536967 6E65642D 43657274 
+  69666963 6174652D 31393930 35343135 3638301E 170D3036 30313032 30313031 
+  33345A17 0D323030 31303130 30303030 305A3031 312F302D 06035504 03132649 
+  4F532D53 656C662D 5369676E 65642D43 65727469 66696361 74652D31 39393035 
+  34313536 3830819F 300D0609 2A864886 F70D0101 01050003 818D0030 81890281 
+  8100B6AD 3608A683 9521AF2D DE890D3F FE7EB0B0 4EABF7CB E5C6FF78 EB495E4D 
+  0453FA1D F5BD4681 F6F02756 4A9B02E5 B1F02AC0 3D4A75B3 F5B3C083 FF95AEFB 
+  7E563DB2 37AA3906 107BFB6B EC3B85F4 8F223322 BC27EA51 737648DA 1B03E26B 
+  7C0A35DC 26B2DF68 FAC831B2 EDA21C0A D1D48658 22A31F97 7FE380E1 7BA42375 
+  89870203 010001A3 53305130 0F060355 1D130101 FF040530 030101FF 301F0603 
+  551D2304 18301680 14981339 2FDBCE46 F183BCFC 432F0DC7 B69B877C 87301D06 
+  03551D0E 04160414 9813392F DBCE46F1 83BCFC43 2F0DC7B6 9B877C87 300D0609 
+  2A864886 F70D0101 05050003 818100AF AEF21989 5FE97657 59DCCBF8 07F14FA2 
+  7874B5AD A34596E4 86554A8F 428D6B24 4F150451 117FF1E7 6614D292 59F16BD6 
+  A80BC010 4D679246 3EC1DAC5 0FB25203 D4016A7A F14C09F0 20D07BA7 31291692 
+  65BA6289 0EEAA53D 98AD708D 54E1F393 762BE03F 34902440 79E1A346 8D114252 
+  50B6A744 FC4B89CE 56458D88 725BD8
+  	quit
+crypto pki certificate chain TP-self-signed-1328097920
+archive
+ log config
+  logging enable
+  notify syslog contenttype plaintext
+  hidekeys
+!
+spanning-tree mode rapid-pvst
+spanning-tree logging
+spanning-tree extend system-id
+no errdisable detect cause gbic-invalid
+no errdisable detect cause sfp-config-mismatch
+errdisable recovery cause udld
+errdisable recovery cause bpduguard
+errdisable recovery cause security-violation
+errdisable recovery cause channel-misconfig
+errdisable recovery cause pagp-flap
+errdisable recovery cause dtp-flap
+errdisable recovery cause link-flap
+errdisable recovery cause sfp-config-mismatch
+errdisable recovery cause gbic-invalid
+errdisable recovery cause psecure-violation
+errdisable recovery cause port-mode-failure
+errdisable recovery cause dhcp-rate-limit
+errdisable recovery cause pppoe-ia-rate-limit
+errdisable recovery cause mac-limit
+errdisable recovery cause vmps
+errdisable recovery cause storm-control
+errdisable recovery cause inline-power
+errdisable recovery cause arp-inspection
+errdisable recovery cause loopback
+errdisable recovery cause small-frame
+errdisable recovery cause psp
+errdisable recovery interval 180
+!
+!
+!
+!
+vlan internal allocation policy ascending
+!
+vlan 13
+ name Phones
+!
+vlan 17
+ name Transport
+!
+vlan 30
+ name Wi-Fi
+!
+vlan 31
+ name Wi-Fi_Guest
+!
+vlan 32
+ name Wi-Fi_Works
+!
+vlan 33
+ name Wi-Fi_Directors
+!
+vlan 34
+ name Wi-Fi_Generals
+!
+vlan 47
+ name REAL_IP_TTK
+!
+vlan 48
+ name REAL_IP_MEGAFON
+!
+vlan 66
+ name Video-66
+!
+vlan 67
+ name Video-67
+!
+vlan 68
+ name Video-68
+!
+vlan 77
+ name SKUD
+!
+vlan 90
+ name Inagliksky
+!
+vlan 220
+ name IBP
+!
+vlan 730
+ name Video-SB-Inagl
+!
+vlan 1930
+ name MEGAFON_1930
+!
+lldp run
+!
+! 
+!
+!
+!
+!
+!
+!
+!
+!
+interface FastEthernet0/1
+ description TEST
+ logging event spanning-tree
+ shutdown
+ no snmp trap link-status
+ storm-control broadcast level 0.10 0.05
+ storm-control multicast level 0.10 0.05
+ storm-control action shutdown
+ storm-control action trap
+ no cdp enable
+ spanning-tree portfast
+ spanning-tree bpduguard enable
+ ip dhcp snooping limit rate 10
+!
+interface FastEthernet0/2
+ description AVer EVC130
+ switchport trunk allowed vlan 1930
+ switchport mode trunk
+ switchport nonegotiate
+ logging event spanning-tree
+ logging event status
+ shutdown
+ no snmp trap link-status
+ down-when-looped
+ storm-control broadcast level 0.10 0.05
+ storm-control multicast level 0.10 0.05
+ storm-control action shutdown
+ storm-control action trap
+ no cdp enable
+ no vtp
+ spanning-tree portfast
+ spanning-tree bpdufilter enable
+ spanning-tree bpduguard enable
+ ip dhcp snooping limit rate 10
+!
+interface FastEthernet0/3
+ logging event spanning-tree
+ shutdown
+ no snmp trap link-status
+ down-when-looped
+ storm-control broadcast level 0.10 0.05
+ storm-control multicast level 0.10 0.05
+ storm-control action shutdown
+ storm-control action trap
+ no cdp enable
+ spanning-tree portfast
+ spanning-tree bpduguard enable
+ ip dhcp snooping limit rate 10
+!
+interface FastEthernet0/4
+ description TRUNK 70.101_50
+ switchport trunk allowed vlan 1,13,17,30-34,47,90,220
+ switchport mode trunk
+ logging event spanning-tree
+ logging event status
+ storm-control broadcast level 3.00 1.00
+ storm-control multicast level 3.00 1.00
+ storm-control action shutdown
+ storm-control action trap
+ no vtp
+ spanning-tree guard loop
+ ip dhcp snooping trust
+!
+interface FastEthernet0/5
+ description TRUNK 99.68_gi0/1
+ switchport trunk allowed vlan 13,17,77,90,220
+ switchport mode trunk
+ logging event spanning-tree
+ logging event status
+ storm-control broadcast level 3.00 1.00
+ storm-control multicast level 3.00 1.00
+ storm-control action shutdown
+ storm-control action trap
+ no vtp
+ spanning-tree guard loop
+ ip dhcp snooping trust
+!
+interface FastEthernet0/6
+ description DIAL
+ switchport trunk allowed vlan 1,17,47
+ switchport mode trunk
+ logging event spanning-tree
+ shutdown
+ speed 10
+ no snmp trap link-status
+ down-when-looped
+ storm-control broadcast level 0.10 0.05
+ storm-control multicast level 0.10 0.05
+ storm-control action shutdown
+ storm-control action trap
+ no cdp enable
+!
+interface FastEthernet0/7
+ description Trassir SB
+ logging event spanning-tree
+ shutdown
+ no snmp trap link-status
+ down-when-looped
+ storm-control broadcast level 0.10 0.05
+ storm-control multicast level 0.10 0.05
+ storm-control action shutdown
+ storm-control action trap
+ no cdp enable
+ spanning-tree portfast
+ spanning-tree bpduguard enable
+ ip dhcp snooping limit rate 10
+!
+interface FastEthernet0/8
+ description TRUNK 99.126_Gi0/23
+ switchport trunk allowed vlan 17,730
+ switchport mode trunk
+ logging event spanning-tree
+ logging event status
+ no snmp trap link-status
+ storm-control broadcast level 0.50 0.30
+ storm-control multicast level 0.50 0.30
+ storm-control action trap
+ no vtp
+ spanning-tree guard loop
+ ip dhcp snooping trust
+!
+interface GigabitEthernet0/1
+ description UP 99.20_fa0/6
+ switchport trunk allowed vlan 13,17,30-34,47,48,66-68,77,90,220,730,1930
+ switchport mode trunk
+ logging event spanning-tree
+ logging event status
+ no snmp trap link-status
+ storm-control broadcast level 0.50 0.30
+ storm-control multicast level 0.50 0.30
+ storm-control action trap
+ no vtp
+ spanning-tree guard loop
+ ip dhcp snooping trust
+!
+interface GigabitEthernet0/2
+ description TRUNK 68.70_Gi0/2
+ switchport trunk allowed vlan 17,66-68,77
+ switchport mode trunk
+ logging event spanning-tree
+ logging event status
+ no snmp trap link-status
+ storm-control broadcast level 0.50 0.30
+ storm-control multicast level 0.50 0.30
+ storm-control action trap
+ no vtp
+ spanning-tree guard loop
+ ip dhcp snooping trust
+!
+interface Vlan1
+ no ip address
+ shutdown
+!
+interface Vlan17
+ description Transport
+ ip address 10.20.98.73 255.255.252.0
+ spanning-tree guard loop
+!
+ip http server
+ip http authentication aaa login-authentication login-RADIUS
+ip http authentication aaa exec-authorization auth-RADIUS-exec
+ip http secure-server
+ip http max-connections 3
+!
+ip ftp username FTP1
+ip ftp password 7 052D323F70
+ip ssh time-out 60
+ip ssh authentication-retries 2
+ip ssh logging events
+ip ssh version 2
+!
+kron occurrence backup at 17:00 recurring
+ policy-list backup
+!
+kron policy-list backup
+ cli copy startup-config ftp://192.168.74.5
+ cli copy startup-config tftp://dump.kolmar.pro/10.20.98.73
+ cli copy vlan.dat tftp://dump.kolmar.pro/10.20.98.73_vlan
+!
+logging origin-id hostname
+logging facility local5
+logging host 10.10.0.19 transport udp port 1515
+logging host 10.10.0.74
+snmp-server community public RO
+!
+radius-server host 10.10.0.210 auth-port 1812 acct-port 1813
+radius-server host 10.10.0.212 auth-port 1812 acct-port 1813
+radius-server retransmit 1
+radius-server timeout 2
+radius-server key 7 141B190109152423372435372E04
+!
+radius server cis.kolmar.pro_210
+ timeout 5
+ retransmit 3
+ key 7 141B190109152423372435372E04
+!
+radius server cis.kolmar.pro_212
+ timeout 5
+ retransmit 3
+ key 7 082D47440C080B1F01070A06263C
+!
+no vstack
+!
+line con 0
+ exec-timeout 13 0
+ privilege level 15
+ authorization exec auth-RADIUS-exec
+ logging synchronous
+ login authentication login-RADIUS
+ stopbits 1
+line vty 0 4
+ exec-timeout 60 0
+ privilege level 15
+ authorization exec auth-RADIUS-exec
+ logging synchronous
+ login authentication login-RADIUS
+ length 0
+ transport input ssh
+line vty 5 15
+ exec-timeout 15 0
+ authorization exec auth-RADIUS-exec
+ login authentication login-RADIUS
+ transport input none
+!
+ntp server time.kolmar.pro
+mac address-table notification change interval 15
+mac address-table notification change history-size 500
+mac address-table notification change
+end
+
+
+
 $ show lldp neighbors detail
 ------------------------------------------------
 Local Intf: Fa0/4
@@ -83,7 +521,7 @@ Port Description - not advertised
 System Name - not advertised
 System Description - not advertised
 
-Time remaining: 91 seconds
+Time remaining: 105 seconds
 System Capabilities - not advertised
 Enabled Capabilities - not advertised
 Management Addresses - not advertised
@@ -105,7 +543,7 @@ Technical Support: http://www.cisco.com/techsupport
 Copyright (c) 1986-2010 by Cisco Systems, Inc.
 Compiled Tue 28-Sep-10 13:21 by prod_rel_team
 
-Time remaining: 102 seconds
+Time remaining: 104 seconds
 System Capabilities: B,R
 Enabled Capabilities: B,R
 Management Addresses:
@@ -131,7 +569,7 @@ Entry address(es):
   IP address: 10.20.99.20
 Platform: cisco WS-C3560V2-24TS,  Capabilities: Router Switch IGMP 
 Interface: GigabitEthernet0/1,  Port ID (outgoing port): FastEthernet0/6
-Holdtime : 121 sec
+Holdtime : 165 sec
 
 Version :
 Cisco IOS Software, C3560 Software (C3560-IPBASEK9-M), Version 12.2(50)SE5, RELEASE SOFTWARE (fc1)
@@ -153,7 +591,7 @@ Entry address(es):
   IP address: 10.20.99.68
 Platform: cisco WS-C2960+48TC-L,  Capabilities: Switch IGMP 
 Interface: FastEthernet0/5,  Port ID (outgoing port): GigabitEthernet0/1
-Holdtime : 157 sec
+Holdtime : 147 sec
 
 Version :
 Cisco IOS Software, C2960 Software (C2960-LANBASEK9-M), Version 15.2(2)E7, RELEASE SOFTWARE (fc3)
@@ -175,7 +613,7 @@ Entry address(es):
   IP address: 10.20.99.126
 Platform: cisco WS-C2960-24PC-L,  Capabilities: Switch IGMP 
 Interface: FastEthernet0/8,  Port ID (outgoing port): FastEthernet0/22
-Holdtime : 174 sec
+Holdtime : 159 sec
 
 Version :
 Cisco IOS Software, C2960 Software (C2960-LANBASEK9-M), Version 12.2(55)SE6, RELEASE SOFTWARE (fc1)
@@ -197,7 +635,7 @@ Entry address(es):
   IP address: 10.13.0.23
 Platform: X1S/X1SP,  Capabilities: Host Phone 
 Interface: FastEthernet0/4,  Port ID (outgoing port): WAN PORT
-Holdtime : 143 sec
+Holdtime : 169 sec
 
 Version :
 2.4.12.2
@@ -215,11 +653,11 @@ Capability Codes: R - Router, T - Trans Bridge, B - Source Route Bridge
 
 Device ID        Local Intrfce     Holdtme    Capability  Platform  Port ID
 INA-NSWR-03-99-20.kolmar.ru
-                 Gig 0/1           121             R S I  WS-C3560V Fas 0/6
+                 Gig 0/1           165             R S I  WS-C3560V Fas 0/6
 INA-NSWS-131-99-68.kolmar.ru
-                 Fas 0/5           157              S I   WS-C2960+ Gig 0/1
+                 Fas 0/5           147              S I   WS-C2960+ Gig 0/1
 INA-NSWS-10-99-126.kolmar.ru
-                 Fas 0/8           174              S I   WS-C2960- Fas 0/22
-X1S/X1SP         Fas 0/4           143              H P   X1S/X1SP  WAN PORT
+                 Fas 0/8           158              S I   WS-C2960- Fas 0/22
+X1S/X1SP         Fas 0/4           169              H P   X1S/X1SP  WAN PORT
 
 Total cdp entries displayed : 4

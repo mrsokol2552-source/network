@@ -14,7 +14,7 @@ System Name                       : DEN-NSWS-02-99-105
 System Location                   : 
 System Description                : MES2448B rev.B AC 52-port 1G/10G Managed Switch
 Logging Option                    : Flash Logging
-Device Uptime                     : 6 Days, 23 Hrs, 57 Mins, 41 Secs
+Device Uptime                     : 7 Days, 0 Hrs, 38 Mins, 29 Secs
 Login Authentication Mode         : Local
 Config Save Status                : Not Initiated
 Remote Save Status                : Not Initiated

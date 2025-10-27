@@ -19,7 +19,13 @@ $ show version
   Copyright (C) 2018 NAG LLC
   All rights reserved
   Last reboot is cold reset.
-  Uptime is 7 weeks, 0 days, 3 hours, 59 minutes
+  Uptime is 7 weeks, 0 days, 4 hours, 40 minutes
+
+
+$ show running-config
+                         ^
+% Invalid input detected at '^' marker.
+
 
 
 $ show lldp neighbors detail

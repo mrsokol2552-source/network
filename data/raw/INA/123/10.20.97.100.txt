@@ -13,7 +13,7 @@ Compiled Sat 14-Mar-20 15:28 by prod_rel_team
 ROM: Bootstrap program is c1000 boot loader
 BOOTLDR: C1000 Boot Loader (C1000-HBOOT-M), Version 15.2(7r)E RELEASE SOFTWARE (fc1)
 
-INA-NSWS-123-97-100 uptime is 3 days, 18 hours, 0 minutes
+INA-NSWS-123-97-100 uptime is 3 days, 18 hours, 42 minutes
 System returned to ROM by power-on
 System image file is "flash:/c1000-universalk9-mz.152-7.E2/c1000-universalk9-mz.152-7.E2.bin"
 Last reload reason: power-on
@@ -68,6 +68,280 @@ Configuration register is 0xF
 
 
 
+$ show running-config
+Building configuration...
+
+Current configuration : 4990 bytes
+!
+! Last configuration change at 08:41:26 UTC Sat Jul 4 1970
+!
+version 15.2
+no service pad
+service timestamps debug datetime msec
+service timestamps log datetime msec
+service password-encryption
+!
+hostname INA-NSWS-123-97-100
+!
+boot-start-marker
+boot-end-marker
+!
+!
+username ivashenko_vb privilege 15 secret 5 $1$bi7z$qTHuukwOKu/rACvOW/3hy.
+username volodin_s privilege 15 secret 9 $9$UvCsdImkVr2pAX$ZF/dvZ8RDVkH89ocitn142WRofzHROAyNC5Ks8RFHUw
+username zhiltsov_a privilege 15 secret 9 $9$1mdwZ2VzW4gELy$H27H8S2RDF6LVaU2sIXoUShnVBTpMCtE16FrBw345JE
+aaa new-model
+!
+!
+aaa group server radius KOLMAR
+ server name cis.kolmar.pro_210
+ server name cis.kolmar.pro_212
+!
+aaa authentication login login-RADIUS group KOLMAR local
+aaa authorization exec auth-RADIUS-exec group KOLMAR local 
+!
+!
+!
+!
+!
+!
+aaa session-id common
+switch 1 provision c1000-16t-2g-l
+system mtu routing 1500
+!
+!
+ip domain-name kolmar.local
+vtp mode transparent
+!
+!
+!
+!
+!
+!
+!
+!
+spanning-tree mode rapid-pvst
+spanning-tree extend system-id
+no errdisable detect cause gbic-invalid
+no errdisable detect cause sfp-config-mismatch
+errdisable recovery cause udld
+errdisable recovery cause bpduguard
+errdisable recovery cause security-violation
+errdisable recovery cause channel-misconfig
+errdisable recovery cause pagp-flap
+errdisable recovery cause dtp-flap
+errdisable recovery cause link-flap
+errdisable recovery cause sfp-config-mismatch
+errdisable recovery cause gbic-invalid
+errdisable recovery cause psecure-violation
+errdisable recovery cause port-mode-failure
+errdisable recovery cause dhcp-rate-limit
+errdisable recovery cause pppoe-ia-rate-limit
+errdisable recovery cause mac-limit
+errdisable recovery cause vmps
+errdisable recovery cause storm-control
+errdisable recovery cause inline-power
+errdisable recovery cause loopback
+errdisable recovery interval 180
+!
+vlan internal allocation policy ascending
+!
+vlan 9
+ name PhoneStation
+!
+vlan 10
+ name Servers
+!
+vlan 13 
+!
+vlan 17
+ name Transport
+!
+vlan 30
+ name Wi-Fi
+!
+vlan 31
+ name Wi-Fi_Guest
+!
+vlan 32
+ name Wi-Fi_Works
+!
+vlan 33
+ name Wi-Fi_Staff
+!
+vlan 34
+ name Wi-Fi_Generals
+!
+vlan 35
+ name Wi-Fi_Avic
+!
+vlan 37 
+!
+vlan 47
+ name REAL_IP_TTK
+!
+vlan 77
+ name SKUD
+!
+vlan 90
+ name Inagliksky
+!
+vlan 501
+ name DRSK
+!
+vlan 730
+ name Video-SB-Inagl
+!
+vlan 1090
+ name Server(Inag)
+!
+vlan 1091
+ name Camara(Inag)
+!
+vlan 1290
+ name Admins(Inagl)
+!
+vlan 1490
+ name VKS(1490)
+!
+vlan 1590
+ name Monitoring(Inag)
+!
+vlan 1701
+ name Transport_Endistroy
+!
+vlan 1790 
+!
+vlan 1890
+ name FIRE(INAG)
+!
+vlan 2001
+ name Users_Endistroy
+!
+vlan 3131
+ name NEW_Kitchen_Inagl
+!
+lldp run
+!
+!
+!
+!
+!
+interface GigabitEthernet1/0/1
+!
+interface GigabitEthernet1/0/2
+!
+interface GigabitEthernet1/0/3
+!
+interface GigabitEthernet1/0/4
+!
+interface GigabitEthernet1/0/5
+!
+interface GigabitEthernet1/0/6
+!
+interface GigabitEthernet1/0/7
+!
+interface GigabitEthernet1/0/8
+!
+interface GigabitEthernet1/0/9
+!
+interface GigabitEthernet1/0/10
+!
+interface GigabitEthernet1/0/11
+!
+interface GigabitEthernet1/0/12
+!
+interface GigabitEthernet1/0/13
+!
+interface GigabitEthernet1/0/14
+!
+interface GigabitEthernet1/0/15
+ description VIDEO-CHULBAS
+ switchport trunk allowed vlan 1,17,730
+ switchport mode trunk
+ logging event spanning-tree
+ logging event status
+ storm-control broadcast level 20.00 10.00
+ storm-control multicast level 20.00 10.00
+ storm-control action shutdown
+ storm-control action trap
+ ip dhcp snooping trust
+!
+interface GigabitEthernet1/0/16
+ description 96.1_twe1/0/24
+ switchport mode trunk
+ logging event spanning-tree
+ logging event status
+ no cdp enable
+ storm-control broadcast level 20.00 10.00
+ storm-control multicast level 20.00 10.00
+ storm-control action shutdown
+ storm-control action trap
+ no vtp
+ no lldp transmit
+ no lldp receive
+ ip dhcp snooping trust
+!
+interface GigabitEthernet1/0/17
+ description 97.1_twe1/1/8
+ switchport mode trunk
+ logging event spanning-tree
+ logging event status
+ storm-control broadcast level 20.00 10.00
+ storm-control multicast level 20.00 10.00
+ storm-control action shutdown
+ storm-control action trap
+ ip dhcp snooping trust
+!
+interface GigabitEthernet1/0/18
+ description 96.3_twe1/0/20
+ switchport mode trunk
+ logging event spanning-tree
+ logging event status
+ storm-control broadcast level 20.00 10.00
+ storm-control multicast level 20.00 10.00
+ storm-control action shutdown
+ storm-control action trap
+ ip dhcp snooping trust
+!
+interface Vlan1
+ no ip address
+!
+interface Vlan17
+ ip address 10.20.97.100 255.255.252.0
+!
+no ip http server
+no ip http secure-server
+!
+!
+!
+snmp-server community public RO
+snmp mib flash cache
+!
+!
+radius server cis.kolmar.pro_210
+ address ipv4 10.10.0.212 auth-port 1812 acct-port 1813
+ key 7 141B190109152423372435372E04
+!
+radius server cis.kolmar.pro_212
+ key 7 082D47440C080B1F01070A06263C
+!
+!
+line con 0
+line vty 0 4
+ exec-timeout 60 0
+ privilege level 15
+ logging synchronous
+ login authentication login-RADIUS
+ transport input ssh
+line vty 5 15
+!
+ntp server ip pool.ntp.org
+ntp server ip time-pnp.cisco.com
+end
+
+
+
 $ show lldp neighbors detail
 ------------------------------------------------
 Local Intf: Gi1/0/17
@@ -82,7 +356,7 @@ Technical Support: http://www.cisco.com/techsupport
 Copyright (c) 1986-2023 by Cisco Systems, Inc.
 Compiled Tue 14-Mar-23 18:26 by mcpre
 
-Time remaining: 107 seconds
+Time remaining: 94 seconds
 System Capabilities: B,R
 Enabled Capabilities: B,R
 Management Addresses:
@@ -106,7 +380,7 @@ Technical Support: http://www.cisco.com/techsupport
 Copyright (c) 1986-2023 by Cisco Systems, Inc.
 Compiled Fri 20-Oct-23 10:44 by mcpre
 
-Time remaining: 94 seconds
+Time remaining: 111 seconds
 System Capabilities: B,R
 Enabled Capabilities: B
 Management Addresses:
@@ -125,7 +399,7 @@ Port Description - not advertised
 System Name - not advertised
 System Description - not advertised
 
-Time remaining: 232 seconds
+Time remaining: 201 seconds
 System Capabilities - not advertised
 Enabled Capabilities - not advertised
 Management Addresses - not advertised
@@ -146,7 +420,7 @@ Entry address(es):
   IP address: 10.20.97.1
 Platform: cisco C9300X-24Y,  Capabilities: Router Switch IGMP 
 Interface: GigabitEthernet1/0/17,  Port ID (outgoing port): TwentyFiveGigE1/1/3
-Holdtime : 138 sec
+Holdtime : 146 sec
 
 Version :
 Cisco IOS Software [Cupertino], Catalyst L3 Switch Software (CAT9K_IOSXE), Version 17.9.3, RELEASE SOFTWARE (fc6)
@@ -167,7 +441,7 @@ Entry address(es):
   IP address: 10.20.96.3
 Platform: cisco C9300X-24Y,  Capabilities: Switch IGMP 
 Interface: GigabitEthernet1/0/18,  Port ID (outgoing port): TwentyFiveGigE1/0/20
-Holdtime : 158 sec
+Holdtime : 149 sec
 
 Version :
 Cisco IOS Software [Cupertino], Catalyst L3 Switch Software (CAT9K_IOSXE), Version 17.9.4a, RELEASE SOFTWARE (fc3)
@@ -188,7 +462,7 @@ Entry address(es):
   IP address: 10.90.17.10
 Platform: Rocket M3,  Capabilities: Trans-Bridge 
 Interface: GigabitEthernet1/0/15,  Port ID (outgoing port): br0
-Holdtime : 104 sec
+Holdtime : 73 sec
 
 Version :
 XM.v6.3.6
@@ -201,7 +475,7 @@ Entry address(es):
   IP address: 10.20.96.231
 Platform: cisco WS-C2960CX-8PC-L,  Capabilities: Switch IGMP 
 Interface: GigabitEthernet1/0/15,  Port ID (outgoing port): GigabitEthernet0/10
-Holdtime : 177 sec
+Holdtime : 142 sec
 
 Version :
 Cisco IOS Software, C2960CX Software (C2960CX-UNIVERSALK9-M), Version 15.2(4)E6, RELEASE SOFTWARE (fc4)
@@ -223,7 +497,7 @@ Entry address(es):
   IP address: 10.90.17.11
 Platform: Rocket M3,  Capabilities: Trans-Bridge 
 Interface: GigabitEthernet1/0/15,  Port ID (outgoing port): br0
-Holdtime : 89 sec
+Holdtime : 118 sec
 
 Version :
 XM.v6.3.6
@@ -241,12 +515,12 @@ Capability Codes: R - Router, T - Trans Bridge, B - Source Route Bridge
 
 Device ID        Local Intrfce     Holdtme    Capability  Platform  Port ID
 INA-NSWR-03-97-1.kolmar.local
-                 Gig 1/0/17        138             R S I  C9300X-24 Twe 1/1/3
+                 Gig 1/0/17        146             R S I  C9300X-24 Twe 1/1/3
 INA-NSWR-37-96-3.kolmar.local
-                 Gig 1/0/18        158              S I   C9300X-24 Twe 1/0/20
-RocketM3         Gig 1/0/15        104               T    Rocket M3 br0
+                 Gig 1/0/18        149              S I   C9300X-24 Twe 1/0/20
+RocketM3         Gig 1/0/15        73                T    Rocket M3 br0
 INA-NSWS-70-96-231.kolmar.ru
-                 Gig 1/0/15        177              S I   WS-C2960C Gig 0/10
-Rocket M3        Gig 1/0/15        89                T    Rocket M3 br0
+                 Gig 1/0/15        142              S I   WS-C2960C Gig 0/10
+Rocket M3        Gig 1/0/15        118               T    Rocket M3 br0
 
 Total cdp entries displayed : 5

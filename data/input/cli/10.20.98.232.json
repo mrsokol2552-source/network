@@ -1,29 +1,29 @@
 {
   "vendor": "cisco_ios",
   "raw_files": [
-    "CHU\\24\\10.20.98.232.txt"
+    "10.20.98.232.txt"
   ],
   "parsed": {
     "cisco_ios_show_cdp_neighbors": [
       {
         "Neighbor": "CHU-NSWS-24-98-232",
         "LocalInterface": "uptime is",
-        "NeighborPort": "22 hours,",
-        "_source_file": "C:\\Users\\zhiltsov.aa\\Desktop\\net-auto-mermaid\\data\\raw\\CHU\\24\\10.20.98.232.txt",
+        "NeighborPort": "4 hours,",
+        "_source_file": "C:\\Users\\zhiltsov.aa\\Desktop\\net-auto-mermaid\\data\\raw\\10.20.98.232.txt",
         "_template": "cisco_ios_show_cdp_neighbors.template"
       },
       {
         "Neighbor": "Gig",
         "LocalInterface": "0/11",
         "NeighborPort": "I   WS-C2960C",
-        "_source_file": "C:\\Users\\zhiltsov.aa\\Desktop\\net-auto-mermaid\\data\\raw\\CHU\\24\\10.20.98.232.txt",
+        "_source_file": "C:\\Users\\zhiltsov.aa\\Desktop\\net-auto-mermaid\\data\\raw\\10.20.98.232.txt",
         "_template": "cisco_ios_show_cdp_neighbors.template"
       },
       {
         "Neighbor": "Gig",
         "LocalInterface": "0/12",
         "NeighborPort": "I   WS-C3560C",
-        "_source_file": "C:\\Users\\zhiltsov.aa\\Desktop\\net-auto-mermaid\\data\\raw\\CHU\\24\\10.20.98.232.txt",
+        "_source_file": "C:\\Users\\zhiltsov.aa\\Desktop\\net-auto-mermaid\\data\\raw\\10.20.98.232.txt",
         "_template": "cisco_ios_show_cdp_neighbors.template"
       }
     ],
@@ -33,7 +33,7 @@
         "LocalInterface": "GigabitEthernet0/10",
         "NeighborPort": "br0",
         "Platform": "NanoStation M2",
-        "_source_file": "C:\\Users\\zhiltsov.aa\\Desktop\\net-auto-mermaid\\data\\raw\\CHU\\24\\10.20.98.232.txt",
+        "_source_file": "C:\\Users\\zhiltsov.aa\\Desktop\\net-auto-mermaid\\data\\raw\\10.20.98.232.txt",
         "_template": "cisco_ios_show_cdp_neighbors_detail.template"
       },
       {
@@ -41,7 +41,7 @@
         "LocalInterface": "GigabitEthernet0/11",
         "NeighborPort": "GigabitEthernet0/12",
         "Platform": "cisco WS-C2960CX-8PC-L",
-        "_source_file": "C:\\Users\\zhiltsov.aa\\Desktop\\net-auto-mermaid\\data\\raw\\CHU\\24\\10.20.98.232.txt",
+        "_source_file": "C:\\Users\\zhiltsov.aa\\Desktop\\net-auto-mermaid\\data\\raw\\10.20.98.232.txt",
         "_template": "cisco_ios_show_cdp_neighbors_detail.template"
       },
       {
@@ -49,7 +49,7 @@
         "LocalInterface": "GigabitEthernet0/12",
         "NeighborPort": "GigabitEthernet0/15",
         "Platform": "cisco WS-C3560CX-12PC-S",
-        "_source_file": "C:\\Users\\zhiltsov.aa\\Desktop\\net-auto-mermaid\\data\\raw\\CHU\\24\\10.20.98.232.txt",
+        "_source_file": "C:\\Users\\zhiltsov.aa\\Desktop\\net-auto-mermaid\\data\\raw\\10.20.98.232.txt",
         "_template": "cisco_ios_show_cdp_neighbors_detail.template"
       }
     ],
@@ -57,15 +57,15 @@
       {
         "Version": "15.2(7)E",
         "Model": "",
-        "Uptime": "4 days, 22 hours, 8 minutes",
-        "_source_file": "C:\\Users\\zhiltsov.aa\\Desktop\\net-auto-mermaid\\data\\raw\\CHU\\24\\10.20.98.232.txt",
+        "Uptime": "1 week, 4 hours, 4 minutes",
+        "_source_file": "C:\\Users\\zhiltsov.aa\\Desktop\\net-auto-mermaid\\data\\raw\\10.20.98.232.txt",
         "_template": "cisco_ios_show_version.template"
       },
       {
         "Version": "15.2(4)E4",
         "Model": "WS-C2960CX-8PC-L",
         "Uptime": "",
-        "_source_file": "C:\\Users\\zhiltsov.aa\\Desktop\\net-auto-mermaid\\data\\raw\\CHU\\24\\10.20.98.232.txt",
+        "_source_file": "C:\\Users\\zhiltsov.aa\\Desktop\\net-auto-mermaid\\data\\raw\\10.20.98.232.txt",
         "_template": "cisco_ios_show_version.template"
       }
     ]

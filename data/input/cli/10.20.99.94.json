@@ -1,22 +1,22 @@
 {
   "vendor": "cisco_ios",
   "raw_files": [
-    "DEN\\59\\10.20.99.94.txt"
+    "10.20.99.94.txt"
   ],
   "parsed": {
     "cisco_ios_show_cdp_neighbors": [
       {
         "Neighbor": "DEN-NSWS-59-99-94",
         "LocalInterface": "uptime is",
-        "NeighborPort": "6 days,",
-        "_source_file": "C:\\Users\\zhiltsov.aa\\Desktop\\net-auto-mermaid\\data\\raw\\DEN\\59\\10.20.99.94.txt",
+        "NeighborPort": "1 day,",
+        "_source_file": "C:\\Users\\zhiltsov.aa\\Desktop\\net-auto-mermaid\\data\\raw\\10.20.99.94.txt",
         "_template": "cisco_ios_show_cdp_neighbors.template"
       },
       {
         "Neighbor": "DEN-NSWR-03-98-1",
         "LocalInterface": "Gig 1/0/17",
         "NeighborPort": "S I",
-        "_source_file": "C:\\Users\\zhiltsov.aa\\Desktop\\net-auto-mermaid\\data\\raw\\DEN\\59\\10.20.99.94.txt",
+        "_source_file": "C:\\Users\\zhiltsov.aa\\Desktop\\net-auto-mermaid\\data\\raw\\10.20.99.94.txt",
         "_template": "cisco_ios_show_cdp_neighbors.template"
       }
     ],
@@ -26,7 +26,7 @@
         "LocalInterface": "GigabitEthernet1/0/17",
         "NeighborPort": "TwentyFiveGigE1/0/24",
         "Platform": "cisco C9300X-24Y",
-        "_source_file": "C:\\Users\\zhiltsov.aa\\Desktop\\net-auto-mermaid\\data\\raw\\DEN\\59\\10.20.99.94.txt",
+        "_source_file": "C:\\Users\\zhiltsov.aa\\Desktop\\net-auto-mermaid\\data\\raw\\10.20.99.94.txt",
         "_template": "cisco_ios_show_cdp_neighbors_detail.template"
       }
     ],
@@ -34,15 +34,15 @@
       {
         "Version": "15.2(7)E6",
         "Model": "",
-        "Uptime": "14 weeks, 6 days, 20 hours, 33 minutes",
-        "_source_file": "C:\\Users\\zhiltsov.aa\\Desktop\\net-auto-mermaid\\data\\raw\\DEN\\59\\10.20.99.94.txt",
+        "Uptime": "13 weeks, 1 day, 23 hours, 27 minutes",
+        "_source_file": "C:\\Users\\zhiltsov.aa\\Desktop\\net-auto-mermaid\\data\\raw\\10.20.99.94.txt",
         "_template": "cisco_ios_show_version.template"
       },
       {
         "Version": "17.6.1",
         "Model": "C1000-16FP-2G-L",
         "Uptime": "",
-        "_source_file": "C:\\Users\\zhiltsov.aa\\Desktop\\net-auto-mermaid\\data\\raw\\DEN\\59\\10.20.99.94.txt",
+        "_source_file": "C:\\Users\\zhiltsov.aa\\Desktop\\net-auto-mermaid\\data\\raw\\10.20.99.94.txt",
         "_template": "cisco_ios_show_version.template"
       }
     ]

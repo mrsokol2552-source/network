@@ -2,7 +2,6 @@
 
 $ show system information
 
-
 Hardware Version                  : 3v1
 Software Version                  : 10.2.9.3
 Firmware Version                  : 10.2.9.3
@@ -15,7 +14,7 @@ System Name                       : INA-NSWS-01-99-161
 System Location                   : Eltex Ltd, Russia
 System Description                : MES2424P rev.C1 AC 28-port 1G/10G Managed Switch with 24 POE+ ports
 Logging Option                    : Flash Logging
-Device Uptime                     : 7 Days, 1 Hrs, 24 Mins, 17 Secs
+Device Uptime                     : 7 Days, 2 Hrs, 5 Mins, 15 Secs
 Login Authentication Mode         : Local
 Config Save Status                : Successful
 Remote Save Status                : Not Initiated
@@ -96,7 +95,7 @@ Port Description              : Not Advertised
 System Name                   : Not Advertised
 System Desc                   : Not Advertised
 Local Intf                    : gi 0/15
-Time Remaining                : 116 Seconds 
+Time Remaining                : 113 Seconds 
 System Capabilities Tlv       : Not Advertised
 Management Addresses          : Not Advertised
 
@@ -308,7 +307,7 @@ Port Description              : GigabitEthernet 1/12
 System Name                   : INA-NSWS-124-99-165
 System Desc                   : V2.1 2021-04-25T04:45:04-07:00
 Local Intf                    : te 0/1
-Time Remaining                : 106 Seconds 
+Time Remaining                : 104 Seconds 
 System Capabilities Supported : B               
 System Capabilities Enabled   : B
 Management Addresses          : 
@@ -442,10 +441,10 @@ Media-type: prefer-fiber
 Link Up/Down Trap is enabled 
 
 Reception Counters
-   Octets                    : 1823028833
-   Unicast Packets           : 324548805
-   Multicast Packets         : 195
-   Broadcast Packets         : 20373
+   Octets                    : 3350549014
+   Unicast Packets           : 325820340
+   Multicast Packets         : 196
+   Broadcast Packets         : 20455
    Discarded Packets         : 30
    Error Packets             : 0
 
@@ -476,10 +475,10 @@ $ show running-config
 Link Up/Down Trap is enabled 
 
 Reception Counters
-   Octets                    : 1718271755
-   Unicast Packets           : 323286096
-   Multicast Packets         : 193
-   Broadcast Packets         : 20368
+   Octets                    : 3246744422
+   Unicast Packets           : 324564818
+   Multicast Packets         : 194
+   Broadcast Packets         : 20450
    Discarded Packets         : 7
    Error Packets             : 0
    Unknown Protocol          : 0
@@ -488,10 +487,10 @@ Reception Counters
    Oversized w/ Bad CRC      : 0
 
 Transmission Counters
-   Octets                    : 430987506
-   Unicast Packets           : 179906674
-   Multicast Packets         : 331348
-   Broadcast Packets         : 4113677
+   Octets                    : 484734505
+   Unicast Packets           : 180633118
+   Multicast Packets         : 332693
+   Broadcast Packets         : 4130244
    Discarded Packets         : 0
    Error Drops               : 0
    Error Packets             : 0

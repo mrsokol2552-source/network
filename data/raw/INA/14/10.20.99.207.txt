@@ -13,7 +13,7 @@ Compiled Mon 22-Jan-18 07:16 by prod_rel_team
 ROM: Bootstrap program is C2960C boot loader
 BOOTLDR: C2960C Boot Loader (C2960c405-HBOOT-M) Version 12.2(55r)EX9, RELEASE SOFTWARE (fc1)
 
-INA-NSWS-14-99-207 uptime is 9 weeks, 3 days, 4 hours, 34 minutes
+INA-NSWS-14-99-207 uptime is 9 weeks, 3 days, 5 hours, 15 minutes
 System returned to ROM by power-on
 System restarted at 08:29:33 YAKT Fri Aug 22 2025
 System image file is "flash:/c2960c405-universalk9-mz.152-2.E8/c2960c405-universalk9-mz.152-2.E8.bin"
@@ -74,6 +74,427 @@ Configuration register is 0xF
 
 
 
+$ show running-config
+Building configuration...
+
+Current configuration : 11240 bytes
+!
+! Last configuration change at 09:01:40 YAKT Mon Jan 2 2006
+!
+version 15.2
+no service pad
+service timestamps debug datetime localtime
+service timestamps log datetime localtime
+service password-encryption
+service unsupported-transceiver
+!
+hostname INA-NSWS-14-99-207
+!
+boot-start-marker
+boot-end-marker
+!
+!
+no logging queue-limit
+logging buffered 16386
+logging rate-limit 100 except warnings
+no logging console
+enable secret 5 $1$..R1$2x0phwJn0ZV8/k4mHCxPF.
+!
+username november privilege 15 secret 5 $1$r8h6$dKXsd10plZZa/GEQbeZKF/
+username ivashenko_vb privilege 15 secret 5 $1$bi7z$qTHuukwOKu/rACvOW/3hy.
+username sib_uib privilege 15 secret 9 $9$RJ64VWzV1YSKQU$a3dKPmGjU4GExZXjw04SfWQGQHhkCaV8ap0Wcmqfnig
+aaa new-model
+!
+!
+aaa group server radius KOLMAR
+ server name cis.kolmar.pro_210
+ server name cis.kolmar.pro_212
+ deadtime 333
+!
+aaa authentication login login-RADIUS group radius local
+aaa authorization console
+aaa authorization exec auth-RADIUS-exec group radius local 
+!
+!
+!
+!
+!
+aaa server radius dynamic-author
+ client 10.10.0.210 server-key 7 060A042B495F0711161B14090013
+ client 10.10.0.212 server-key 7 05070D05245D40010A091110071B
+!
+aaa session-id common
+clock timezone YAKT 9 0
+system mtu routing 1500
+!
+!
+ip dhcp snooping vlan 1-4094
+ip dhcp snooping
+!
+ip domain-name kolmar.ru
+ip name-server 10.10.0.210
+ip name-server 10.10.0.212
+vtp domain tradc
+vtp mode off
+!
+!
+!
+!
+!
+!
+!
+crypto pki trustpoint TP-self-signed-3186077184
+ enrollment selfsigned
+ subject-name cn=IOS-Self-Signed-Certificate-3186077184
+ revocation-check none
+ rsakeypair TP-self-signed-3186077184
+!
+!
+crypto pki certificate chain TP-self-signed-3186077184
+ certificate self-signed 01
+  3082022B 30820194 A0030201 02020101 300D0609 2A864886 F70D0101 05050030 
+  31312F30 2D060355 04031326 494F532D 53656C66 2D536967 6E65642D 43657274 
+  69666963 6174652D 33313836 30373731 3834301E 170D3036 30313032 30303035 
+  32395A17 0D323030 31303130 30303030 305A3031 312F302D 06035504 03132649 
+  4F532D53 656C662D 5369676E 65642D43 65727469 66696361 74652D33 31383630 
+  37373138 3430819F 300D0609 2A864886 F70D0101 01050003 818D0030 81890281 
+  8100DAE2 130320FB 1125A0C5 D81542AE 799C5BFB 409CF25F DC3DE7DA E78FB66F 
+  3B6D9A51 4A981245 6F394EA5 95070EF4 73CFC1B4 B98F7378 2B9ECD97 9CBFE6AD 
+  13BF1300 1CA3118E A5AE3BD2 4F84E429 6AA3A125 8F7911B9 A74CB9B2 52DFD676 
+  F17D28C2 277600C2 D6C5CC1E 4C92DD44 83272697 FBC40669 F911C699 A3681241 
+  94DB0203 010001A3 53305130 0F060355 1D130101 FF040530 030101FF 301F0603 
+  551D2304 18301680 145E6871 2547072C F5624A67 E5669340 1110E90C D4301D06 
+  03551D0E 04160414 5E687125 47072CF5 624A67E5 66934011 10E90CD4 300D0609 
+  2A864886 F70D0101 05050003 8181002A BDB5FA3C 52A18356 EDB7BAB3 023A0CB9 
+  BD964E9C B97ECE8C D70B2EE1 19ECAABE C5FEC382 E8F37810 1C0D492C EC665957 
+  2BD77A70 CDF1685F E95A045E BA9A42BF 2AF5F2FA 74448CF5 63D26528 0ED7E72C 
+  59EFADAA C4DA6832 B3F51946 556B5D65 16CF5DD8 9843740B F31FDAF3 8FC38772 
+  60D842BF 915DF334 AA6D6BA9 CE4773
+  	quit
+archive
+ log config
+  logging enable
+  notify syslog contenttype plaintext
+  hidekeys
+!
+spanning-tree mode rapid-pvst
+spanning-tree logging
+spanning-tree extend system-id
+no errdisable detect cause gbic-invalid
+no errdisable detect cause sfp-config-mismatch
+errdisable recovery cause udld
+errdisable recovery cause bpduguard
+errdisable recovery cause security-violation
+errdisable recovery cause channel-misconfig
+errdisable recovery cause pagp-flap
+errdisable recovery cause dtp-flap
+errdisable recovery cause link-flap
+errdisable recovery cause sfp-config-mismatch
+errdisable recovery cause gbic-invalid
+errdisable recovery cause psecure-violation
+errdisable recovery cause port-mode-failure
+errdisable recovery cause dhcp-rate-limit
+errdisable recovery cause pppoe-ia-rate-limit
+errdisable recovery cause mac-limit
+errdisable recovery cause vmps
+errdisable recovery cause storm-control
+errdisable recovery cause inline-power
+errdisable recovery cause arp-inspection
+errdisable recovery cause loopback
+errdisable recovery cause small-frame
+errdisable recovery cause psp
+errdisable recovery interval 180
+!
+!
+!
+!
+vlan internal allocation policy ascending
+!
+vlan 17
+ name Transport
+!
+vlan 730
+ name Video-SB-Inagl
+!
+!
+! 
+!
+!
+!
+!
+!
+!
+!
+!
+interface FastEthernet0/1
+ description CAM_30.20
+ switchport access vlan 730
+ switchport mode access
+ switchport nonegotiate
+ switchport port-security violation  restrict
+ switchport port-security mac-address sticky
+ switchport port-security mac-address sticky 1868.8290.cf75
+ switchport port-security
+ logging event spanning-tree
+ speed 100
+ duplex full
+ no snmp trap link-status
+ storm-control broadcast level 0.50 0.25
+ storm-control multicast level 0.50 0.25
+ storm-control action shutdown
+ storm-control action trap
+ no cdp enable
+ spanning-tree portfast
+ spanning-tree bpduguard enable
+ ip dhcp snooping limit rate 25
+!
+interface FastEthernet0/2
+ description CAM_30.30
+ switchport access vlan 730
+ switchport mode access
+ switchport nonegotiate
+ switchport port-security violation  restrict
+ switchport port-security mac-address sticky
+ switchport port-security mac-address sticky 1868.8290.cf62
+ switchport port-security
+ logging event spanning-tree
+ speed 100
+ duplex full
+ no snmp trap link-status
+ storm-control broadcast level 0.50 0.25
+ storm-control multicast level 0.50 0.25
+ storm-control action shutdown
+ storm-control action trap
+ no cdp enable
+ spanning-tree portfast
+ spanning-tree bpduguard enable
+ ip dhcp snooping limit rate 25
+!
+interface FastEthernet0/3
+ description CAM_30.8
+ switchport access vlan 730
+ switchport mode access
+ switchport nonegotiate
+ switchport port-security violation  restrict
+ switchport port-security mac-address sticky
+ switchport port-security mac-address sticky 1868.8292.1c68
+ switchport port-security
+ logging event spanning-tree
+ speed 100
+ duplex full
+ no snmp trap link-status
+ storm-control broadcast level 0.50 0.25
+ storm-control multicast level 0.50 0.25
+ storm-control action shutdown
+ storm-control action trap
+ no cdp enable
+ spanning-tree portfast
+ spanning-tree bpduguard enable
+ ip dhcp snooping limit rate 25
+!
+interface FastEthernet0/4
+ switchport access vlan 730
+ switchport mode access
+ switchport nonegotiate
+ switchport port-security violation  restrict
+ switchport port-security mac-address sticky
+ switchport port-security
+ logging event spanning-tree
+ speed 100
+ duplex full
+ no snmp trap link-status
+ storm-control broadcast level 0.50 0.25
+ storm-control multicast level 0.50 0.25
+ storm-control action shutdown
+ storm-control action trap
+ no cdp enable
+ spanning-tree portfast
+ spanning-tree bpduguard enable
+ ip dhcp snooping limit rate 25
+!
+interface FastEthernet0/5
+ switchport access vlan 730
+ switchport mode access
+ switchport nonegotiate
+ switchport port-security violation  restrict
+ switchport port-security mac-address sticky
+ switchport port-security
+ logging event spanning-tree
+ speed 100
+ duplex full
+ no snmp trap link-status
+ storm-control broadcast level 0.50 0.25
+ storm-control multicast level 0.50 0.25
+ storm-control action shutdown
+ storm-control action trap
+ no cdp enable
+ spanning-tree portfast
+ spanning-tree bpduguard enable
+ ip dhcp snooping limit rate 25
+!
+interface FastEthernet0/6
+ switchport access vlan 730
+ switchport mode access
+ switchport nonegotiate
+ switchport port-security violation  restrict
+ switchport port-security mac-address sticky
+ switchport port-security
+ logging event spanning-tree
+ speed 100
+ duplex full
+ no snmp trap link-status
+ storm-control broadcast level 0.50 0.25
+ storm-control multicast level 0.50 0.25
+ storm-control action shutdown
+ storm-control action trap
+ no cdp enable
+ spanning-tree portfast
+ spanning-tree bpduguard enable
+ ip dhcp snooping limit rate 25
+!
+interface FastEthernet0/7
+ switchport access vlan 730
+ switchport mode access
+ switchport nonegotiate
+ switchport port-security violation  restrict
+ switchport port-security mac-address sticky
+ switchport port-security
+ logging event spanning-tree
+ speed 100
+ duplex full
+ no snmp trap link-status
+ storm-control broadcast level 0.50 0.25
+ storm-control multicast level 0.50 0.25
+ storm-control action shutdown
+ storm-control action trap
+ no cdp enable
+ spanning-tree portfast
+ spanning-tree bpduguard enable
+ ip dhcp snooping limit rate 25
+!
+interface FastEthernet0/8
+ description CAM_31.86
+ switchport access vlan 730
+ switchport mode access
+ switchport nonegotiate
+ switchport port-security violation  restrict
+ switchport port-security mac-address sticky
+ switchport port-security mac-address sticky 00a2.5d51.5117
+ switchport port-security
+ logging event spanning-tree
+ speed 100
+ duplex full
+ no snmp trap link-status
+ storm-control broadcast level 0.50 0.25
+ storm-control multicast level 0.50 0.25
+ storm-control action shutdown
+ storm-control action trap
+ no cdp enable
+ spanning-tree portfast
+ spanning-tree bpduguard enable
+ ip dhcp snooping limit rate 25
+!
+interface GigabitEthernet0/1
+ description UP_99.206_Gi0/2
+ switchport trunk allowed vlan 17,730
+ switchport mode trunk
+ logging event spanning-tree
+ logging event status
+ storm-control broadcast level 1.50 1.30
+ storm-control multicast level 1.50 1.30
+ storm-control action trap
+ no vtp
+ ip dhcp snooping trust
+!
+interface GigabitEthernet0/2
+ switchport trunk allowed vlan 17,730
+ switchport mode trunk
+ logging event spanning-tree
+ logging event status
+ storm-control broadcast level 1.50 1.30
+ storm-control multicast level 1.50 1.30
+ storm-control action trap
+ no vtp
+ ip dhcp snooping trust
+!
+interface Vlan1
+ no ip address
+ shutdown
+!
+interface Vlan17
+ ip address 10.20.99.207 255.255.252.0
+!
+no ip http server
+ip http authentication aaa login-authentication login-RADIUS
+ip http authentication aaa exec-authorization auth-RADIUS-exec
+ip http secure-server
+ip http max-connections 3
+!
+ip ftp username FTP1
+ip ftp password 7 013532340A
+ip ssh time-out 60
+ip ssh authentication-retries 2
+ip ssh logging events
+ip ssh version 2
+!
+kron occurrence backup at 17:00 recurring
+ policy-list backup
+!
+kron policy-list backup
+ cli copy startup-config tftp://dump.kolmar.pro/10.20.99.207
+ cli copy vlan.dat tftp://dump.kolmar.pro/10.20.99.207_vlan
+!
+logging origin-id hostname
+logging facility local5
+logging host 10.10.0.19 transport udp port 1515
+logging host 10.10.0.74
+snmp-server community public RO
+snmp mib flash cache
+!
+radius-server host 10.10.0.210 auth-port 1812 acct-port 1813
+radius-server host 10.10.0.212 auth-port 1812 acct-port 1813
+radius-server retransmit 1
+radius-server timeout 2
+radius-server key 7 1042021300061C031F082C29283F
+!
+radius server cis.kolmar.pro_210
+ timeout 5
+ retransmit 3
+ key 7 141B190109152423372435372E04
+!
+radius server cis.kolmar.pro_212
+ timeout 5
+ retransmit 3
+ key 7 082D47440C080B1F01070A06263C
+!
+no vstack
+!
+line con 0
+ exec-timeout 13 0
+ privilege level 15
+ authorization exec auth-RADIUS-exec
+ logging synchronous
+ login authentication login-RADIUS
+ stopbits 1
+line vty 0 4
+ exec-timeout 15 0
+ authorization exec auth-RADIUS-exec
+ logging synchronous
+ login authentication login-RADIUS
+ length 0
+ transport input ssh
+ escape-character 3
+line vty 5 15
+ exec-timeout 15 0
+ authorization exec auth-RADIUS-exec
+ login authentication login-RADIUS
+ transport input none
+!
+ntp server time.kolmar.pro
+end
+
+
+
 $ show lldp neighbors detail
 % LLDP is not enabled
 
@@ -85,7 +506,7 @@ Entry address(es):
   IP address: 10.20.99.206
 Platform: cisco WS-C2960C-8PC-L,  Capabilities: Switch IGMP 
 Interface: GigabitEthernet0/1,  Port ID (outgoing port): GigabitEthernet0/2
-Holdtime : 156 sec
+Holdtime : 155 sec
 
 Version :
 Cisco IOS Software, C2960C Software (C2960c405-UNIVERSALK9-M), Version 15.2(2)E8, RELEASE SOFTWARE (fc1)
@@ -112,6 +533,6 @@ Capability Codes: R - Router, T - Trans Bridge, B - Source Route Bridge
 
 Device ID        Local Intrfce     Holdtme    Capability  Platform  Port ID
 INA-NSWS-15-99-206.kolmar.ru
-                 Gig 0/1           156              S I   WS-C2960C Gig 0/2
+                 Gig 0/1           155              S I   WS-C2960C Gig 0/2
 
 Total cdp entries displayed : 1

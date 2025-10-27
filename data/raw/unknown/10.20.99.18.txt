@@ -2,7 +2,6 @@
 
 $ show system information
 
-
 Hardware Version                  : 2v3
 Software Version                  : 10.3.4
 Firmware Version                  : 10.3.4
@@ -15,7 +14,7 @@ System Name                       : DEN-NSWS-15-99-18
 System Location                   : 
 System Description                : MES2448B rev.B AC 52-port 1G/10G Managed Switch
 Logging Option                    : Flash Logging
-Device Uptime                     : 69 Days, 2 Hrs, 16 Mins, 23 Secs
+Device Uptime                     : 69 Days, 2 Hrs, 57 Mins, 17 Secs
 Login Authentication Mode         : Local
 Config Save Status                : Successful
 Remote Save Status                : Not Initiated
@@ -109,7 +108,7 @@ Technical Support: http://www.cisco.com/techsupport
 Copyright (c) 1986-2014 by Cisco Systems, Inc.
 Compiled Wed 09-Apr-14 03:40 by prod_rel_team
 Local Intf                    : te 0/4
-Time Remaining                : 101 Seconds 
+Time Remaining                : 92 Seconds 
 System Capabilities Supported : B               
 System Capabilities Enabled   : B
 

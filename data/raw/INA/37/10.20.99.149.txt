@@ -13,13 +13,13 @@ $ show version
   Copyright (C) 2022 NAG LLC
   All rights reserved
   Last reboot is cold reset.
-  Uptime is 68 weeks, 5 days, 18 hours, 4 minutes
+  Uptime is 68 weeks, 5 days, 18 hours, 45 minutes
 
 
 $ show lldp neighbors brief
 
 Local Interface       Chassis ID              CID subtype     Port ID                   PID subtype           Time Mark       System Name       
-Ethernet1/0/11        cc-9d-a2-7e-50-80       4               gi 0/4                    Interface             104             INA-NSWS-37-99-49 
+Ethernet1/0/11        cc-9d-a2-7e-50-80       4               gi 0/4                    Interface             106             INA-NSWS-37-99-49 
 
 
 

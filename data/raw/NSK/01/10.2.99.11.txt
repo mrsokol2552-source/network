@@ -13,7 +13,7 @@ Compiled Wed 12-Jul-17 13:06 by prod_rel_team
 ROM: Bootstrap program is C2960X boot loader
 BOOTLDR: C2960X Boot Loader (C2960X-HBOOT-M) Version 15.2(3r)E1, RELEASE SOFTWARE (fc1)
 
-NSK-NSWS-01-99-11 uptime is 8 weeks, 1 day, 16 hours, 53 minutes
+NSK-NSWS-01-99-11 uptime is 8 weeks, 1 day, 17 hours, 35 minutes
 System returned to ROM by power-on
 System restarted at 11:14:27 UTC Sat Aug 30 2025
 System image file is "flash:/c2960x-universalk9-mz.152-2.E7/c2960x-universalk9-mz.152-2.E7.bin"
@@ -72,6 +72,260 @@ Configuration register is 0xF
 
 
 
+$ show running-config
+Building configuration...
+
+Current configuration : 4747 bytes
+!
+! Last configuration change at 04:35:38 UTC Wed Oct 22 2025 by zhiltsov_a
+! NVRAM config last updated at 04:35:43 UTC Wed Oct 22 2025 by zhiltsov_a
+!
+version 15.2
+no service pad
+service timestamps debug datetime msec
+service timestamps log datetime msec
+no service password-encryption
+!
+hostname NSK-NSWS-01-99-11
+!
+boot-start-marker
+boot-end-marker
+!
+enable password $RhfcysqGhbdtn45
+!
+username vkorenskiy privilege 15 secret 5 $1$NBo.$sUCxWns0NZWxY/HvdvLHE0
+username volodin_s privilege 15 secret 5 $1$CCKf$GeBezDgqhK0uZ61HreSSv.
+username zhiltsov_a privilege 15 secret 5 $1$OTW2$pUN.9bM0WyGHMb7U3mUFV.
+username sib_uib privilege 15 secret 9 $9$RJ64VWzV1YSKQU$a3dKPmGjU4GExZXjw04SfWQGQHhkCaV8ap0Wcmqfnig
+aaa new-model
+!
+!
+aaa authentication login default group radius local
+aaa authentication login login-RADIUS group KOLMAR local
+aaa authorization console
+aaa authorization exec default group radius local 
+aaa authorization exec auth-RADIUS-exec group KOLMAR local 
+!
+!
+!
+!
+!
+aaa server radius dynamic-author
+ client 10.10.0.210 server-key 7 060A042B495F0711161B14090013
+ client 10.10.0.212 server-key 7 05070D05245D40010A091110071B
+!
+aaa session-id common
+switch 1 provision ws-c2960x-48ts-l
+!
+!
+ip domain-name kolmar.local
+!
+!
+!
+!
+!
+!
+!
+!
+spanning-tree mode pvst
+spanning-tree extend system-id
+!
+!
+!
+!
+vlan internal allocation policy ascending
+!
+lldp run
+!
+! 
+!
+!
+!
+!
+!
+!
+!
+!
+interface FastEthernet0
+ no ip address
+!
+interface GigabitEthernet1/0/1
+ switchport mode trunk
+!
+interface GigabitEthernet1/0/2
+ switchport access vlan 20
+ switchport mode trunk
+!
+interface GigabitEthernet1/0/3
+ switchport access vlan 20
+ switchport mode access
+!
+interface GigabitEthernet1/0/4
+!
+interface GigabitEthernet1/0/5
+ switchport access vlan 20
+!
+interface GigabitEthernet1/0/6
+ switchport access vlan 77
+!
+interface GigabitEthernet1/0/7
+!
+interface GigabitEthernet1/0/8
+!
+interface GigabitEthernet1/0/9
+!
+interface GigabitEthernet1/0/10
+!
+interface GigabitEthernet1/0/11
+!
+interface GigabitEthernet1/0/12
+ switchport access vlan 20
+!
+interface GigabitEthernet1/0/13
+ switchport access vlan 20
+!
+interface GigabitEthernet1/0/14
+ switchport access vlan 20
+!
+interface GigabitEthernet1/0/15
+ switchport access vlan 20
+!
+interface GigabitEthernet1/0/16
+ switchport access vlan 21
+!
+interface GigabitEthernet1/0/17
+!
+interface GigabitEthernet1/0/18
+ switchport access vlan 20
+!
+interface GigabitEthernet1/0/19
+ switchport access vlan 21
+!
+interface GigabitEthernet1/0/20
+ switchport access vlan 20
+!
+interface GigabitEthernet1/0/21
+!
+interface GigabitEthernet1/0/22
+ switchport access vlan 20
+!
+interface GigabitEthernet1/0/23
+!
+interface GigabitEthernet1/0/24
+!
+interface GigabitEthernet1/0/25
+ switchport access vlan 12
+!
+interface GigabitEthernet1/0/26
+ switchport access vlan 21
+!
+interface GigabitEthernet1/0/27
+ switchport access vlan 21
+!
+interface GigabitEthernet1/0/28
+ switchport access vlan 20
+!
+interface GigabitEthernet1/0/29
+ switchport access vlan 21
+!
+interface GigabitEthernet1/0/30
+!
+interface GigabitEthernet1/0/31
+ switchport access vlan 21
+!
+interface GigabitEthernet1/0/32
+ switchport access vlan 21
+!
+interface GigabitEthernet1/0/33
+ switchport access vlan 20
+!
+interface GigabitEthernet1/0/34
+!
+interface GigabitEthernet1/0/35
+ switchport access vlan 20
+!
+interface GigabitEthernet1/0/36
+ switchport access vlan 20
+!
+interface GigabitEthernet1/0/37
+ switchport access vlan 21
+!
+interface GigabitEthernet1/0/38
+ switchport access vlan 77
+!
+interface GigabitEthernet1/0/39
+!
+interface GigabitEthernet1/0/40
+ switchport access vlan 77
+!
+interface GigabitEthernet1/0/41
+ switchport access vlan 21
+!
+interface GigabitEthernet1/0/42
+ switchport access vlan 77
+!
+interface GigabitEthernet1/0/43
+ switchport access vlan 21
+!
+interface GigabitEthernet1/0/44
+ switchport access vlan 77
+!
+interface GigabitEthernet1/0/45
+!
+interface GigabitEthernet1/0/46
+ switchport access vlan 20
+!
+interface GigabitEthernet1/0/47
+!
+interface GigabitEthernet1/0/48
+!
+interface GigabitEthernet1/0/49
+!
+interface GigabitEthernet1/0/50
+!
+interface GigabitEthernet1/0/51
+!
+interface GigabitEthernet1/0/52
+!
+interface Vlan1
+ ip address dhcp
+!
+interface Vlan17
+ ip address 10.2.99.11 255.255.255.0
+!
+ip default-gateway 10.2.99.1
+ip http server
+ip http secure-server
+!
+ip ssh logging events
+ip ssh version 2
+!
+!
+snmp-server community public RO
+!
+radius-server host 10.10.0.210 auth-port 1812 acct-port 1813
+radius-server host 10.10.0.212 auth-port 1812 acct-port 1813
+radius-server retransmit 2
+radius-server deadtime 10
+radius-server key 7 0008180C014A050E1C2D4A4C050E
+!
+no vstack
+!
+line con 0
+line vty 0 4
+ exec-timeout 60 0
+ privilege level 15
+ logging synchronous
+ transport input ssh
+line vty 5
+ transport input ssh
+line vty 6 15
+!
+ntp server pool.ntp.org
+end
+
+
+
 $ show lldp neighbors detail
 ------------------------------------------------
 Local Intf: Gi1/0/35
@@ -86,7 +340,7 @@ Technical Support: http://www.cisco.com/techsupport
 Copyright (c) 1986-2023 by Cisco Systems, Inc.
 Compiled Wed 26-Jul-23 10:43 by mcpre
 
-Time remaining: 103 seconds
+Time remaining: 114 seconds
 System Capabilities: B,R
 Enabled Capabilities: B,R
 Management Addresses:
@@ -111,7 +365,7 @@ System Name: NSK-NSWS-01-99-13
 System Description: 
 Aruba Instant On 1930 24G 4SFP/SFP+ Switch JL682A, InstantOn_1930_1.0.2.0 (125), Linux 4.4.120, U-Boot 2013.01 (V1.0.1.28)
 
-Time remaining: 93 seconds
+Time remaining: 118 seconds
 System Capabilities: B,R
 Enabled Capabilities: B,R
 Management Addresses:
@@ -130,7 +384,7 @@ Port Description - not advertised
 System Name - not advertised
 System Description - not advertised
 
-Time remaining: 2663 seconds
+Time remaining: 3002 seconds
 System Capabilities - not advertised
 Enabled Capabilities - not advertised
 Management Addresses - not advertised
@@ -162,7 +416,7 @@ Port Description - not advertised
 System Name - not advertised
 System Description - not advertised
 
-Time remaining: 2711 seconds
+Time remaining: 3050 seconds
 System Capabilities - not advertised
 Enabled Capabilities - not advertised
 Management Addresses - not advertised
@@ -194,7 +448,7 @@ Port Description - not advertised
 System Name - not advertised
 System Description - not advertised
 
-Time remaining: 2888 seconds
+Time remaining: 3227 seconds
 System Capabilities - not advertised
 Enabled Capabilities - not advertised
 Management Addresses - not advertised
@@ -226,7 +480,7 @@ Port Description - not advertised
 System Name - not advertised
 System Description - not advertised
 
-Time remaining: 3112 seconds
+Time remaining: 3451 seconds
 System Capabilities - not advertised
 Enabled Capabilities - not advertised
 Management Addresses - not advertised
@@ -261,7 +515,7 @@ Device ID: Switch
 Entry address(es): 
 Platform: cisco WS-C3560CX-12PC-S,  Capabilities: Switch IGMP 
 Interface: GigabitEthernet1/0/6,  Port ID (outgoing port): GigabitEthernet0/13
-Holdtime : 126 sec
+Holdtime : 167 sec
 
 Version :
 Cisco IOS Software, C3560CX Software (C3560CX-UNIVERSALK9-M), Version 15.2(4)E6, RELEASE SOFTWARE (fc4)
@@ -281,7 +535,7 @@ Entry address(es):
   IP address: 10.2.11.1
 Platform: cisco C9200L-24P-4G,  Capabilities: Router Switch IGMP 
 Interface: GigabitEthernet1/0/35,  Port ID (outgoing port): GigabitEthernet1/0/23
-Holdtime : 139 sec
+Holdtime : 168 sec
 
 Version :
 Cisco IOS Software [Cupertino], Catalyst L3 Switch Software (CAT9K_LITE_IOSXE), Version 17.9.4, RELEASE SOFTWARE (fc5)
@@ -306,8 +560,8 @@ Capability Codes: R - Router, T - Trans Bridge, B - Source Route Bridge
                   D - Remote, C - CVTA, M - Two-port Mac Relay 
 
 Device ID        Local Intrfce     Holdtme    Capability  Platform  Port ID
-Switch           Gig 1/0/6         126              S I   WS-C3560C Gig 0/13
+Switch           Gig 1/0/6         167              S I   WS-C3560C Gig 0/13
 NSK-NSWR-01-99-1.kolmar.ru
-                 Gig 1/0/35        138             R S I  C9200L-24 Gig 1/0/23
+                 Gig 1/0/35        167             R S I  C9200L-24 Gig 1/0/23
 
 Total cdp entries displayed : 2

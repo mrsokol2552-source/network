@@ -1,0 +1,620 @@
+
+
+$ terminal length 0
+
+% Invalid Command
+
+
+
+$ show version
+
+
+show version
+
+     ^
+% Invalid input detected at '^' marker
+
+
+
+$ show running-config
+
+                
+[K
+[K
+--More--[K
+                
+[K
+[K
+--More--[K
+                
+[K
+[K
+--More--[K
+                
+[K
+[K
+--More--[K
+                
+[Kip dhcp snooping        
+!
+set lldp enable
+!
+radius-server host 10.10.0.210 timeout 5 key encrypted qOzM/0zDoUP2k3P672Uz7Q== primary
+radius-server host 10.10.0.212 timeout 5 key encrypted qOzM/0zDoUP2k3P672Uz7Q==
+!
+username sib_uib password encrypted OTl653mxxwDsJJPczavzcQ== privilege 15
+username volodin_s password encrypted EnRFlIo7gtBTjF6wrwtAzQ== privilege 15
+username zhiltsov_a password encrypted KFif9+pKXWb2ZGDs19fowLwWpY80c995 privilege 15
+username ivashenko_vb password encrypted ugP9QrpkPzxRxqq861YAOccx21jObESe privilege 15  
+!
+snmp user ReadUser
+snmp user WriteUser
+snmp community index 1 name encrypted EQn5sbCUAOw= security WriteUser
+snmp community index 2 name encrypted O3oDUaq4qkM= security ReadUser
+snmp group ReadGroup user ReadUser security-model v2c
+snmp group WriteGroup user WriteUser security-model v2c
+snmp access ReadGroup v2c read iso
+snmp access WriteGroup v2c read iso write iso
+snmp view iso 1 included
+!  
+errdisable recovery interval 180
+errdisable recovery cause storm-control
+
+[K
+--More--[K
+                
+[K
+[K
+--More--[K
+                
+[K
+[K
+--More--[K
+                
+[K
+[K
+--More--[K
+                
+[K
+[K
+--More--[K
+                
+[K
+[K
+--More--[K
+                
+[K
+[K
+--More--[K
+                
+[K
+[K
+--More--[K
+                
+[K
+[K
+--More--[K
+                
+[K
+[K
+--More--[K
+                
+[K
+[K
+--More--[K
+                
+[K
+[K
+--More--[K
+                
+[K
+[K
+--More--[K
+                
+[K
+[K
+--More--[K
+                
+[K
+[K
+--More--[K
+                
+[Kerrdisable recovery cause loopback-detection
+
+[K
+--More--[K
+
+
+$ show lldp neighbors detail
+
+                
+[K
+[K
+--More--[K
+                
+[K
+[K
+--More--[K
+                
+[K
+[K
+--More--[K
+                
+[K
+[K
+--More--[K
+                
+[K  switchport access vlan 40  
+  no lldp transmit
+  no lldp receive   
+! 
+interface gigabitethernet 0/7
+  no snmp trap link-status
+  no negotiation
+  speed 100
+  spanning-tree portfast
+  spanning-tree bpduguard enable
+  switchport mode access
+  switchport access vlan 40  
+  no lldp transmit
+  no lldp receive   
+! 
+interface gigabitethernet 0/8
+  no snmp trap link-status
+  no negotiation
+  speed 100
+  spanning-tree portfast
+  spanning-tree bpduguard enable
+  switchport mode access
+  switchport access vlan 40  
+  no lldp transmit
+
+[K
+--More--[K
+                
+[K
+[K
+--More--[K
+                
+[K
+[K
+--More--[K
+                
+[K
+[K
+--More--[K
+                
+[K
+[K
+--More--[K
+                
+[K  no lldp receive   
+! 
+interface gigabitethernet 0/9
+  no snmp trap link-status
+  no negotiation
+  speed 100
+  spanning-tree portfast
+  spanning-tree bpduguard enable
+  switchport mode access
+  switchport access vlan 40  
+  no lldp transmit
+  no lldp receive   
+! 
+interface gigabitethernet 0/10
+  no snmp trap link-status
+  no negotiation
+  speed 100
+  spanning-tree portfast
+  spanning-tree bpduguard enable
+  switchport mode access
+  switchport access vlan 40  
+  no lldp transmit
+  no lldp receive   
+! 
+
+[K
+--More--[K
+                
+[K
+[K
+--More--[K
+                
+[K
+[K
+--More--[K
+                
+[K
+[K
+--More--[K
+                
+[K
+[K
+--More--[K
+                
+[K
+[K
+--More--[K
+                
+[K
+[K
+--More--[K
+                
+[K
+[K
+--More--[K
+                
+[K
+[K
+--More--[K
+                
+[K
+[K
+--More--[K
+                
+[Kinterface gigabitethernet 0/11
+  no snmp trap link-status
+  no negotiation
+  speed 100
+  spanning-tree portfast
+  spanning-tree bpduguard enable
+  switchport mode access
+  switchport access vlan 40  
+  no lldp transmit
+  no lldp receive   
+! 
+interface gigabitethernet 0/12
+  no snmp trap link-status
+  no negotiation
+  speed 100
+  spanning-tree portfast
+  spanning-tree bpduguard enable
+  switchport mode access
+  switchport access vlan 40  
+  no lldp transmit
+  no lldp receive   
+! 
+interface gigabitethernet 0/13
+  no snmp trap link-status
+
+[K
+--More--[K
+                
+[K
+[K
+--More--[K
+                
+[K
+[K
+--More--[K
+                
+[K
+[K
+--More--[K
+                
+[K
+[K
+--More--[K
+                
+[K
+[K
+--More--[K
+                
+[K
+[K
+--More--[K
+                
+[K  no negotiation
+
+[K
+--More--[K
+
+
+$ show cdp neighbors detail
+
+                
+[K
+[K
+--More--[K
+                
+[K
+[K
+--More--[K
+                
+[K
+[K
+--More--[K
+                
+[K
+[K
+--More--[K
+                
+[Kinterface gigabitethernet 0/20
+  no snmp trap link-status
+  no negotiation
+  speed 100
+  spanning-tree portfast
+  spanning-tree bpduguard enable
+  switchport mode access
+  switchport access vlan 40  
+  no lldp transmit
+  no lldp receive   
+! 
+interface gigabitethernet 0/21
+  no snmp trap link-status
+  no negotiation
+  speed 100
+  spanning-tree portfast
+  spanning-tree bpduguard enable
+  switchport mode access
+  switchport access vlan 40  
+  no lldp transmit
+  no lldp receive   
+! 
+interface gigabitethernet 0/22
+  no snmp trap link-status
+
+[K
+--More--[K
+                
+[K
+[K
+--More--[K
+                
+[K
+[K
+--More--[K
+                
+[K
+[K
+--More--[K
+                
+[K  no negotiation
+  speed 100
+  spanning-tree portfast
+  spanning-tree bpduguard enable
+  switchport mode access
+  switchport access vlan 40  
+  no lldp transmit
+  no lldp receive   
+! 
+interface gigabitethernet 0/23
+  no snmp trap link-status
+  no negotiation
+  speed 100
+  spanning-tree portfast
+  spanning-tree bpduguard enable
+  switchport mode access
+  switchport access vlan 40  
+  no lldp transmit
+  no lldp receive   
+! 
+interface gigabitethernet 0/24
+  no snmp trap link-status
+  no negotiation
+  speed 100
+
+[K
+--More--[K
+                
+[K
+[K
+--More--[K
+                
+[K
+[K
+--More--[K
+                
+[K
+[K
+--More--[K
+                
+[K
+[K
+--More--[K
+                
+[K
+[K
+--More--[K
+                
+[K
+[K
+--More--[K
+                
+[K
+[K
+--More--[K
+                
+[K
+[K
+--More--[K
+                
+[K
+[K
+--More--[K
+                
+[K  spanning-tree portfast
+  spanning-tree bpduguard enable
+  switchport mode access
+  switchport access vlan 40  
+  no lldp transmit
+  no lldp receive   
+! 
+interface gigabitethernet 0/25
+  no snmp trap link-status
+  no negotiation
+  speed 100
+  spanning-tree portfast
+  spanning-tree bpduguard enable
+  switchport mode access
+  switchport access vlan 40  
+  no lldp transmit
+  no lldp receive   
+! 
+interface gigabitethernet 0/26
+  no snmp trap link-status
+  no negotiation
+  speed 100
+  spanning-tree portfast
+  spanning-tree bpduguard enable
+
+[K
+--More--[K
+                
+[K
+[K
+--More--[K
+                
+[K
+[K
+--More--[K
+                
+[K
+[K
+--More--[K
+                
+[K
+[K
+--More--[K
+                
+[K
+[K
+--More--[K
+                
+[K
+[K
+--More--[K
+                
+[K  switchport mode access
+
+[K
+--More--[K
+
+
+$ show cdp neighbors
+
+                
+[K
+[K
+--More--[K
+                
+[K
+[K
+--More--[K
+                
+[K
+[K
+--More--[K
+                
+[K
+[K
+--More--[K
+                
+[K  no negotiation
+  speed 100
+  spanning-tree portfast
+  spanning-tree bpduguard enable
+  switchport mode access
+  switchport access vlan 40  
+  no lldp transmit
+  no lldp receive   
+! 
+interface gigabitethernet 0/32
+  no snmp trap link-status
+  no negotiation
+  speed 100
+  spanning-tree portfast
+  spanning-tree bpduguard enable
+  switchport mode access
+  switchport access vlan 40  
+  no lldp transmit
+  no lldp receive   
+! 
+interface gigabitethernet 0/33
+  no snmp trap link-status
+  no negotiation
+  speed 100
+
+[K
+--More--[K
+                
+[K
+[K
+--More--[K
+                
+[K
+[K
+--More--[K
+                
+[K
+[K
+--More--[K
+                
+[K  spanning-tree portfast
+  spanning-tree bpduguard enable
+  switchport mode access
+  switchport access vlan 40  
+  no lldp transmit
+  no lldp receive   
+! 
+interface gigabitethernet 0/34
+  description "7066"
+  no snmp trap link-status
+  no negotiation
+  speed 100
+  spanning-tree portfast
+  spanning-tree bpduguard enable
+  switchport general allowed vlan add 13
+  switchport general allowed vlan add 40 untagged
+  switchport general pvid 40  
+  no lldp transmit
+  no lldp receive   
+! 
+interface gigabitethernet 0/35
+  no snmp trap link-status
+  no negotiation
+  speed 100
+
+[K
+--More--[K
+                
+[K
+[K
+--More--[K
+                
+[K
+[K
+--More--[K
+                
+[K
+[K
+--More--[K
+                
+[K
+[K
+--More--[K
+                
+[K
+[K
+--More--[K
+                
+[K
+[K
+--More--[K
+                
+[K
+[K
+--More--[K
+                
+[K
+[K
+--More--[K
+                
+[K
+[K
+--More--[K
+                
+[K  spanning-tree portfast
+
+[K
+--More--[K

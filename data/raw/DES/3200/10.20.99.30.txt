@@ -102,26 +102,8 @@ Remote Entities Count : 0
 
 Port ID : 4 
 -------------------------------------------------------------------------------
-Remote Entities Count : 1 
-Entity 1 
-    Chassis ID Subtype                         : MAC Address  
-    Chassis ID                                 : 08-BF-B8-A8-03-40
-    Port ID Subtype                            : MAC Address  
-    Port ID                                    : 08-BF-B8-A8-03-40
-    Port Description                           : 
-    System Name                                : 
-    System Description                         : 
-    System Capabilities                        : 
-    Management Address Count                   : 0
-    Port PVID                                  : 0
-    PPVID Entries Count                        : 0
-    VLAN Name Entries Count                    : 0
-    Protocol ID Entries Count                  : 0
-    MAC/PHY Configuration/Status               : (See Detail)
-    Power Via MDI                              : (None)
-    Link Aggregation                           : (None)
-    Maximum Frame Size                         : 0
-    Unknown TLVs Count                         : 0
+Remote Entities Count : 0 
+    (None)
 
 Port ID : 5 
 -------------------------------------------------------------------------------

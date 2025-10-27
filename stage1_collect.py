@@ -47,6 +47,7 @@ COMMANDS_BY_TYPE: Dict[str, Dict] = {
         "commands": [
             "terminal length 0",
             "show version",
+            "show running-config",
             "show lldp neighbors detail",
         ],
     },
@@ -56,6 +57,7 @@ COMMANDS_BY_TYPE: Dict[str, Dict] = {
         "commands": [
             "show version",
             "show lldp info remote-device detail",
+            "show running-config",
         ],
     },
     "hp_procurve_telnet": {"extends": "hp_procurve"},
@@ -64,6 +66,7 @@ COMMANDS_BY_TYPE: Dict[str, Dict] = {
         "commands": [
             "show version",
             "show lldp neighbors detail",
+            "show configuration",
         ],
     },
     "juniper_junos_telnet": {"extends": "juniper_junos"},

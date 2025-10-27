@@ -1,22 +1,22 @@
 {
   "vendor": "cisco_ios",
   "raw_files": [
-    "CHU\\26\\10.20.98.233.txt"
+    "10.20.98.233.txt"
   ],
   "parsed": {
     "cisco_ios_show_cdp_neighbors": [
       {
         "Neighbor": "CHU-NSWS-26-98-233",
         "LocalInterface": "uptime is",
-        "NeighborPort": "6 days,",
-        "_source_file": "C:\\Users\\zhiltsov.aa\\Desktop\\net-auto-mermaid\\data\\raw\\CHU\\26\\10.20.98.233.txt",
+        "NeighborPort": "1 day,",
+        "_source_file": "C:\\Users\\zhiltsov.aa\\Desktop\\net-auto-mermaid\\data\\raw\\10.20.98.233.txt",
         "_template": "cisco_ios_show_cdp_neighbors.template"
       },
       {
         "Neighbor": "Gig",
         "LocalInterface": "0/1",
         "NeighborPort": "I   WS-C2960X",
-        "_source_file": "C:\\Users\\zhiltsov.aa\\Desktop\\net-auto-mermaid\\data\\raw\\CHU\\26\\10.20.98.233.txt",
+        "_source_file": "C:\\Users\\zhiltsov.aa\\Desktop\\net-auto-mermaid\\data\\raw\\10.20.98.233.txt",
         "_template": "cisco_ios_show_cdp_neighbors.template"
       }
     ],
@@ -26,7 +26,7 @@
         "LocalInterface": "GigabitEthernet0/1",
         "NeighborPort": "GigabitEthernet1/0/26",
         "Platform": "cisco WS-C2960X-24PS-L",
-        "_source_file": "C:\\Users\\zhiltsov.aa\\Desktop\\net-auto-mermaid\\data\\raw\\CHU\\26\\10.20.98.233.txt",
+        "_source_file": "C:\\Users\\zhiltsov.aa\\Desktop\\net-auto-mermaid\\data\\raw\\10.20.98.233.txt",
         "_template": "cisco_ios_show_cdp_neighbors_detail.template"
       }
     ],
@@ -34,15 +34,15 @@
       {
         "Version": "15.2(2)E8",
         "Model": "",
-        "Uptime": "10 weeks, 6 days, 19 hours, 15 minutes",
-        "_source_file": "C:\\Users\\zhiltsov.aa\\Desktop\\net-auto-mermaid\\data\\raw\\CHU\\26\\10.20.98.233.txt",
+        "Uptime": "9 weeks, 1 day, 22 hours, 8 minutes",
+        "_source_file": "C:\\Users\\zhiltsov.aa\\Desktop\\net-auto-mermaid\\data\\raw\\10.20.98.233.txt",
         "_template": "cisco_ios_show_version.template"
       },
       {
         "Version": "15.2(2)E7",
         "Model": "WS-C2960C-12PC-L",
         "Uptime": "",
-        "_source_file": "C:\\Users\\zhiltsov.aa\\Desktop\\net-auto-mermaid\\data\\raw\\CHU\\26\\10.20.98.233.txt",
+        "_source_file": "C:\\Users\\zhiltsov.aa\\Desktop\\net-auto-mermaid\\data\\raw\\10.20.98.233.txt",
         "_template": "cisco_ios_show_version.template"
       }
     ]

@@ -25,6 +25,37 @@ Inactive-image: flash://system/images/image1.bin
 INA-NSWS-61-99-244#
 
 
+$ show running-config
+
+                                                      
+!
+ip ssh server
+!
+snmp-server server
+snmp-server user public public v2c
+snmp-server group public v1
+!
+ip http authentication aaa login-authentication tacacs radius
+aaa authentication login default radius local enable
+!
+clock timezone " " +9
+clock source sntp
+!
+sntp unicast client enable
+sntp unicast client poll
+sntp server 10.10.0.110 poll
+sntp server 10.10.0.210
+!
+ip domain name 10.10.0.210
+ip name-server  10.10.0.210
+!
+backup server tftp://dump.kolmar.pro
+[0mMore: <space>,  Quit: q or CTRL+Z, One line: <return> 
+                                                      
+backup path 10.20.99.244
+[0mMore: <space>,  Quit: q or CTRL+Z, One line: <return> 
+
+
 $ show lldp neighbors detail
 
 % Wrong number of parameters or invalid range, size or characters entered

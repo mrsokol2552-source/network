@@ -23,6 +23,37 @@ Inactive-image: flash://system/images/_image1.bin
 INA-NSWS-135-98-101#
 
 
+$ show running-config
+
+                                                      
+!
+enable password level 15 encrypted a4238cf86dd835abc3e43a77e62fd19bb690f6bb
+!
+username ivashenko_vb password encrypted 07ebf21c81d92d2aa7319552c6f99c4cabe07736 privilege 15
+!
+ip ssh server
+!
+snmp-server server
+snmp-server user public public v2c
+snmp-server group public v1
+!
+ip http authentication aaa login-authentication tacacs radius
+!
+clock timezone " " +9
+clock source sntp
+!
+sntp unicast client enable
+sntp unicast client poll
+sntp server 10.10.0.210 poll
+!
+ip domain name 10.10.0.210
+ip name-server  10.10.0.210
+[0mMore: <space>,  Quit: q or CTRL+Z, One line: <return> 
+                                                      
+!
+[0mMore: <space>,  Quit: q or CTRL+Z, One line: <return> 
+
+
 $ show lldp neighbors detail
 Port: gi1/0/11
 Device ID: e0:d9:e3:d9:94:c0
@@ -31,7 +62,7 @@ Capabilities: Other
 System Name: 
 System description: 
 Port description: 
-Time To Live: 98
+Time To Live: 96
 
 
 802.1 PVID: None
@@ -51,7 +82,7 @@ Capabilities: Other
 System Name: 
 System description: 
 Port description: 
-Time To Live: 118
+Time To Live: 117
 
 
 802.1 PVID: None

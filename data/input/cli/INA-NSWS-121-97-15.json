@@ -1,0 +1,46 @@
+{
+  "vendor": "nis",
+  "raw_files": [
+    "INA\\121\\10.20.97.15.txt"
+  ],
+  "parsed": {
+    "nis_running_config_hostname": [
+      {
+        "Hostname": "INA-NSWS-121-97-15",
+        "_source_file": "C:\\Users\\zhiltsov.aa\\Desktop\\net-auto-mermaid\\data\\raw\\INA\\121\\10.20.97.15.txt",
+        "_template": "nis_running_config_hostname.template"
+      }
+    ],
+    "nis_running_config_interfaces": [
+      {
+        "Interface": "GigabitEthernet 1/7",
+        "Mode": "",
+        "Vlan": "1890",
+        "_source_file": "C:\\Users\\zhiltsov.aa\\Desktop\\net-auto-mermaid\\data\\raw\\INA\\121\\10.20.97.15.txt",
+        "_template": "nis_running_config_interfaces.template"
+      },
+      {
+        "Interface": "GigabitEthernet 1/9",
+        "Mode": "",
+        "Vlan": "",
+        "_source_file": "C:\\Users\\zhiltsov.aa\\Desktop\\net-auto-mermaid\\data\\raw\\INA\\121\\10.20.97.15.txt",
+        "_template": "nis_running_config_interfaces.template"
+      },
+      {
+        "Interface": "GigabitEthernet 1/11",
+        "Mode": "",
+        "Vlan": "",
+        "_source_file": "C:\\Users\\zhiltsov.aa\\Desktop\\net-auto-mermaid\\data\\raw\\INA\\121\\10.20.97.15.txt",
+        "_template": "nis_running_config_interfaces.template"
+      },
+      {
+        "Interface": "GigabitEthernet 1/12",
+        "Mode": "",
+        "Vlan": "",
+        "_source_file": "C:\\Users\\zhiltsov.aa\\Desktop\\net-auto-mermaid\\data\\raw\\INA\\121\\10.20.97.15.txt",
+        "_template": "nis_running_config_interfaces.template"
+      }
+    ]
+  },
+  "errors": []
+}

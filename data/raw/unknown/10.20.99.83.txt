@@ -12,5 +12,5 @@ $ show interface detail
 
 
 $ show lldp neighbors brief
-          	(512~1023)  bytes:  20556771, (1024~1518) bytes: 262718512 
+          	(512~1023)  bytes:  20559106, (1024~1518) bytes: 262746766 
  --More-- 

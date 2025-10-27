@@ -1,10 +1,101 @@
 {
   "vendor": "cisco_ios",
   "raw_files": [
-    "10.2.99.11.txt"
+    "NSK\\01\\10.2.99.11.txt"
   ],
-  "parsed": {},
-  "errors": [
-    "no_templates_for_vendor:cisco_ios"
-  ]
+  "parsed": {
+    "cisco_ios_show_cdp_neighbors": [
+      {
+        "Neighbor": "NSK-NSWS-01-99-11",
+        "LocalInterface": "uptime is",
+        "NeighborPort": "1 day,",
+        "_source_file": "C:\\Users\\zhiltsov.aa\\Desktop\\net-auto-mermaid\\data\\raw\\NSK\\01\\10.2.99.11.txt",
+        "_template": "cisco_ios_show_cdp_neighbors.template"
+      },
+      {
+        "Neighbor": "username",
+        "LocalInterface": "vkorenskiy privilege",
+        "NeighborPort": "5 $1$NBo.$sUCxWns0NZWxY/HvdvLHE0",
+        "_source_file": "C:\\Users\\zhiltsov.aa\\Desktop\\net-auto-mermaid\\data\\raw\\NSK\\01\\10.2.99.11.txt",
+        "_template": "cisco_ios_show_cdp_neighbors.template"
+      },
+      {
+        "Neighbor": "username",
+        "LocalInterface": "volodin_s privilege",
+        "NeighborPort": "5 $1$CCKf$GeBezDgqhK0uZ61HreSSv.",
+        "_source_file": "C:\\Users\\zhiltsov.aa\\Desktop\\net-auto-mermaid\\data\\raw\\NSK\\01\\10.2.99.11.txt",
+        "_template": "cisco_ios_show_cdp_neighbors.template"
+      },
+      {
+        "Neighbor": "username",
+        "LocalInterface": "zhiltsov_a privilege",
+        "NeighborPort": "5 $1$OTW2$pUN.9bM0WyGHMb7U3mUFV.",
+        "_source_file": "C:\\Users\\zhiltsov.aa\\Desktop\\net-auto-mermaid\\data\\raw\\NSK\\01\\10.2.99.11.txt",
+        "_template": "cisco_ios_show_cdp_neighbors.template"
+      },
+      {
+        "Neighbor": "username",
+        "LocalInterface": "sib_uib privilege",
+        "NeighborPort": "9 $9$RJ64VWzV1YSKQU$a3dKPmGjU4GExZXjw04SfWQGQHhkCaV8ap0Wcmqfnig",
+        "_source_file": "C:\\Users\\zhiltsov.aa\\Desktop\\net-auto-mermaid\\data\\raw\\NSK\\01\\10.2.99.11.txt",
+        "_template": "cisco_ios_show_cdp_neighbors.template"
+      },
+      {
+        "Neighbor": "Aruba",
+        "LocalInterface": "Instant On",
+        "NeighborPort": "4SFP/SFP+ Switch",
+        "_source_file": "C:\\Users\\zhiltsov.aa\\Desktop\\net-auto-mermaid\\data\\raw\\NSK\\01\\10.2.99.11.txt",
+        "_template": "cisco_ios_show_cdp_neighbors.template"
+      },
+      {
+        "Neighbor": "Switch",
+        "LocalInterface": "Gig 1/0/6",
+        "NeighborPort": "I   WS-C3560C",
+        "_source_file": "C:\\Users\\zhiltsov.aa\\Desktop\\net-auto-mermaid\\data\\raw\\NSK\\01\\10.2.99.11.txt",
+        "_template": "cisco_ios_show_cdp_neighbors.template"
+      },
+      {
+        "Neighbor": "Gig",
+        "LocalInterface": "1/0/35",
+        "NeighborPort": "S I",
+        "_source_file": "C:\\Users\\zhiltsov.aa\\Desktop\\net-auto-mermaid\\data\\raw\\NSK\\01\\10.2.99.11.txt",
+        "_template": "cisco_ios_show_cdp_neighbors.template"
+      }
+    ],
+    "cisco_ios_show_cdp_neighbors_detail": [
+      {
+        "Neighbor": "Switch",
+        "LocalInterface": "GigabitEthernet1/0/6",
+        "NeighborPort": "GigabitEthernet0/13",
+        "Platform": "cisco WS-C3560CX-12PC-S",
+        "_source_file": "C:\\Users\\zhiltsov.aa\\Desktop\\net-auto-mermaid\\data\\raw\\NSK\\01\\10.2.99.11.txt",
+        "_template": "cisco_ios_show_cdp_neighbors_detail.template"
+      },
+      {
+        "Neighbor": "NSK-NSWR-01-99-1.kolmar.ru",
+        "LocalInterface": "GigabitEthernet1/0/35",
+        "NeighborPort": "GigabitEthernet1/0/23",
+        "Platform": "cisco C9200L-24P-4G",
+        "_source_file": "C:\\Users\\zhiltsov.aa\\Desktop\\net-auto-mermaid\\data\\raw\\NSK\\01\\10.2.99.11.txt",
+        "_template": "cisco_ios_show_cdp_neighbors_detail.template"
+      }
+    ],
+    "cisco_ios_show_version": [
+      {
+        "Version": "15.2(2)E7",
+        "Model": "",
+        "Uptime": "8 weeks, 1 day, 17 hours, 35 minutes",
+        "_source_file": "C:\\Users\\zhiltsov.aa\\Desktop\\net-auto-mermaid\\data\\raw\\NSK\\01\\10.2.99.11.txt",
+        "_template": "cisco_ios_show_version.template"
+      },
+      {
+        "Version": "17.9.4",
+        "Model": "WS-C2960X-48TS-L",
+        "Uptime": "",
+        "_source_file": "C:\\Users\\zhiltsov.aa\\Desktop\\net-auto-mermaid\\data\\raw\\NSK\\01\\10.2.99.11.txt",
+        "_template": "cisco_ios_show_version.template"
+      }
+    ]
+  },
+  "errors": []
 }

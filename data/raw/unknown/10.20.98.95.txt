@@ -23,6 +23,37 @@ Inactive-image: flash://system/images/_image1.bin
 INA-NSWS-11-98-95#
 
 
+$ show running-config
+
+                                                      
+!
+ip ssh server
+!
+snmp-server server
+snmp-server user public public v2c
+snmp-server group public v1
+!
+ip http authentication aaa login-authentication tacacs radius
+!
+clock timezone " " +9
+clock source sntp
+!
+sntp unicast client enable
+sntp unicast client poll
+sntp server 10.10.0.110 poll
+!
+ip domain name 10.10.0.210
+ip name-server  10.10.0.210
+!
+backup server tftp://dump.kolmar.pro
+backup path 10.20.98.95
+backup write-memory
+[0mMore: <space>,  Quit: q or CTRL+Z, One line: <return> 
+                                                      
+!
+[0mMore: <space>,  Quit: q or CTRL+Z, One line: <return> 
+
+
 $ show lldp neighbors detail
 Port: gi1/0/11
 Device ID: e4:5a:d4:39:f1:90
@@ -31,7 +62,7 @@ Capabilities: Other
 System Name: 
 System description: 
 Port description: 
-Time To Live: 116
+Time To Live: 119
 
 
 802.1 PVID: None

@@ -14,7 +14,7 @@ System description:
 Port description: 
 Management Address: 10.20.99.48
 Management Address: fe80::ea28:c1ff:fe19:2580
-Time To Live: 101
+Time To Live: 107
 
 
 802.1 PVID: 1
@@ -49,16 +49,16 @@ $ show interfaces status
                                              Flow Link           Uptime       Back   Mdix                            
 Port     Type         Duplex  Speed Neg      ctrl State         (d,h:m:s)   Pressure Mode    Port Mode (VLAN)        
 -------- ------------ ------  ----- -------- ---- ----------- ------------- -------- ------- ------------------------
-gi1/0/1  1G-Copper    Full    100   Enabled  Off  Up          00,00:36:08   Disabled Off     Access (555)            
-gi1/0/2  1G-Copper    Full    100   Enabled  Off  Up          00,01:04:21   Disabled Off     Access (555)            
+gi1/0/1  1G-Copper    Full    100   Enabled  Off  Up          00,01:17:32   Disabled Off     Access (555)            
+gi1/0/2  1G-Copper    Full    100   Enabled  Off  Up          00,01:45:45   Disabled Off     Access (555)            
 gi1/0/3  1G-Copper      --      --     --     --  Down (nc)         --         --     --     Access (555)            
 gi1/0/4  1G-Copper      --      --     --     --  Down (nc)         --         --     --     Access (555)            
 gi1/0/5  1G-Copper      --      --     --     --  Down (nc)         --         --     --     Access (555)            
 gi1/0/6  1G-Copper      --      --     --     --  Down (nc)         --         --     --     Access (555)            
 gi1/0/7  1G-Copper      --      --     --     --  Down (nc)         --         --     --     Access (90)             
-gi1/0/8  1G-Copper    Full    1000  Enabled  Off  Up          07,03:40:54   Disabled Off     Access (90)             
+gi1/0/8  1G-Copper    Full    1000  Enabled  Off  Up          07,04:22:18   Disabled Off     Access (90)             
 gi1/0/9  1G-Copper      --      --     --     --  Down (nc)         --         --     --     Access (90)             
-gi1/0/10 1G-Copper    Full    100   Disabled Off  Up          86,19:27:58   Disabled Off     General                 
+gi1/0/10 1G-Copper    Full    100   Disabled Off  Up          86,20:09:22   Disabled Off     General                 
 gi1/0/11 1G-Copper      --      --     --     --  Down (nc)         --         --     --     Access (1)              
 gi1/0/12 1G-Copper      --      --     --     --  Down (nc)         --         --     --     Access (1)              
 gi1/0/13 1G-Copper      --      --     --     --  Down (nc)         --         --     --     Access (1)              
@@ -97,7 +97,7 @@ gi1/0/45 1G-Copper      --      --     --     --  Down (nc)         --         -
 gi1/0/46 1G-Copper      --      --     --     --  Down (nc)         --         --     --     Access (1)              
 gi1/0/47 1G-Copper      --      --     --     --  Down (nc)         --         --     --     Access (1)              
 gi1/0/48 1G-Copper      --      --     --     --  Down (nc)         --         --     --     Access (1)              
-te1/0/1  10G-Fiber    Full    10000 Disabled Off  Up          208,23:39:13  Disabled Off     Trunk                   
+te1/0/1  10G-Fiber    Full    10000 Disabled Off  Up          209,00:20:37  Disabled Off     Trunk                   
 te1/0/2  10G-Fiber      --      --     --     --  Down (nc)         --         --     --     Access (1)              
 te1/0/3  10G-Fiber      --      --     --     --  Down (nc)         --         --     --     Access (1)              
 te1/0/4  10G-Fiber      --      --     --     --  Down (nc)         --         --     --     Access (1)              
@@ -162,14 +162,20 @@ adm (admin.shutdown): The interface was suspended by administrator.
 
 $ show interfaces
 
-  15 second output rate is 167 Kbit/s
-      1337915636 packets input, 202255252093 bytes received
-      887042703 broadcasts, 155766969 multicasts
+  Interface MTU is 1500
+  Full-duplex, 10000Mbps, link type is 10000Mbps full-duplex, media type is 10G-Fiber
+  Link is up for 209 days, 0 hours, 21 minutes and 8 seconds
+  Flow control is off, MDIX mode is normal
+  FEC is disabled
+  15 second input rate is 139 Kbit/s
+  15 second output rate is 64 Kbit/s
+      1338158797 packets input, 202291800534 bytes received
+      887222927 broadcasts, 155790094 multicasts
       0 input errors, 0 FCS, 0 alignment
       0 oversize, 0 internal MAC
       0 pause frames received
-      157044125 packets output, 84072001401 bytes sent
-      2426695 broadcasts, 1568248 multicasts
+      157081329 packets output, 84093576355 bytes sent
+      2427038 broadcasts, 1568479 multicasts
       0 output errors, 0 collisions
       0 excessive collisions, 0 late collisions
       0 pause frames transmitted
@@ -188,7 +194,7 @@ tengigabitethernet1/0/2 is down (not connected)
   Interface index is 106
   Hardware is tengigabitethernet, MAC address is cc:9d:a2:8d:3e:32
   Interface MTU is 1500
-  Link is down for 209 days, 0 hours, 48 minutes and 36 seconds
+  Link is down for 209 days, 1 hours, 30 minutes and 0 seconds
   Flow control is off, MDIX mode is normal
   FEC is disabled
   15 second input rate is 0 Kbit/s
@@ -218,7 +224,7 @@ tengigabitethernet1/0/3 is down (not connected)
   Interface index is 107
   Hardware is tengigabitethernet, MAC address is cc:9d:a2:8d:3e:33
   Interface MTU is 1500
-  Link is down for 209 days, 0 hours, 48 minutes and 37 seconds
+  Link is down for 209 days, 1 hours, 30 minutes and 1 seconds
   Flow control is off, MDIX mode is normal
   FEC is disabled
   15 second input rate is 0 Kbit/s
@@ -248,7 +254,7 @@ tengigabitethernet1/0/4 is down (not connected)
   Interface index is 108
   Hardware is tengigabitethernet, MAC address is cc:9d:a2:8d:3e:34
   Interface MTU is 1500
-  Link is down for 209 days, 0 hours, 48 minutes and 36 seconds
+  Link is down for 209 days, 1 hours, 30 minutes and 0 seconds
   Flow control is off, MDIX mode is normal
   FEC is disabled
   15 second input rate is 0 Kbit/s

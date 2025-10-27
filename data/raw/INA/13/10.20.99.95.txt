@@ -13,7 +13,7 @@ Compiled Mon 08-Mar-21 09:07 by prod_rel_team
 ROM: Bootstrap program is c1000 boot loader
 BOOTLDR: C1000 Boot Loader (C1000-HBOOT-M) Version 15.2(7r)E3, RELEASE SOFTWARE (fc4)
 
-INA-NSWS-13-99-95 uptime is 14 weeks, 6 days, 20 hours, 2 minutes
+INA-NSWS-13-99-95 uptime is 14 weeks, 6 days, 20 hours, 44 minutes
 System returned to ROM by power-on
 System restarted at 16:55:57 YAKT Mon Jul 14 2025
 System image file is "flash:/c1000-universalk9-mz.152-7.E4/c1000-universalk9-mz.152-7.E4.bin"
@@ -69,6 +69,1033 @@ Configuration register is 0xF
 
 
 
+$ show running-config
+Building configuration...
+
+Current configuration : 27882 bytes
+!
+! Last configuration change at 13:35:47 YAKT Wed Oct 15 2025 by zhiltsov_a
+! NVRAM config last updated at 13:35:49 YAKT Wed Oct 15 2025 by zhiltsov_a
+!
+version 15.2
+no service pad
+service timestamps debug datetime localtime
+service timestamps log datetime localtime
+service password-encryption
+!
+hostname INA-NSWS-13-99-95
+!
+boot-start-marker
+boot-end-marker
+!
+logging buffered 16386
+no logging console
+enable secret 5 $1$..R1$2x0phwJn0ZV8/k4mHCxPF.
+!
+username ivashenko_vb privilege 15 secret 5 $1$bi7z$qTHuukwOKu/rACvOW/3hy.
+username sib_uib privilege 15 secret 9 $9$RJ64VWzV1YSKQU$a3dKPmGjU4GExZXjw04SfWQGQHhkCaV8ap0Wcmqfnig
+username volodin_s privilege 15 secret 9 $9$gtb2rgJWUYhK1g$qcSABzB6UKsRNjBIdIsb/xOgO7/8wJtbW6J5jXLHOIw
+username zhiltsov_a privilege 15 secret 9 $9$qg/Z8fsxcCuxVW$f0HlArSPfOtAHUsL0/rDi5akp7plc8d21VLPs7zYjSw
+aaa new-model
+!
+!
+aaa group server radius KOLMAR
+ server name cis.kolmar.pro_210
+ server name cis.kolmar.pro_212
+ deadtime 333
+!
+aaa authentication login login-RADIUS group KOLMAR local
+aaa authorization console
+aaa authorization exec auth-RADIUS-exec group KOLMAR local 
+!
+!
+!
+!
+!
+aaa server radius dynamic-author
+ client 10.10.0.210 server-key 7 060A042B495F0711161B14090013
+ client 10.10.0.212 server-key 7 05070D05245D40010A091110071B
+!
+aaa session-id common
+clock timezone YAKT 9 0
+switch 1 provision c1000-48t-4g-l
+system mtu routing 1500
+!
+!
+ip dhcp snooping vlan 1-4094
+ip dhcp snooping
+ip domain-name kolmar.ru
+ip name-server 10.10.0.210
+vtp mode transparent
+!
+!
+!
+!
+!
+!
+crypto pki trustpoint TP-self-signed-3448441088
+ enrollment selfsigned
+ subject-name cn=IOS-Self-Signed-Certificate-3448441088
+ revocation-check none
+ rsakeypair TP-self-signed-3448441088
+!
+!
+crypto pki certificate chain TP-self-signed-3448441088
+ certificate self-signed 01
+  3082022B 30820194 A0030201 02020101 300D0609 2A864886 F70D0101 05050030 
+  31312F30 2D060355 04031326 494F532D 53656C66 2D536967 6E65642D 43657274 
+  69666963 6174652D 33343438 34343130 3838301E 170D3232 30313331 30363236 
+  32335A17 0D333030 31303130 30303030 305A3031 312F302D 06035504 03132649 
+  4F532D53 656C662D 5369676E 65642D43 65727469 66696361 74652D33 34343834 
+  34313038 3830819F 300D0609 2A864886 F70D0101 01050003 818D0030 81890281 
+  8100A810 E130169C 6FF636E0 66A720B5 A09D50CD 3906629F 3B3941DB D9586206 
+  129C90B0 7085BE7F 50AFBF18 B3059F21 E7F85C0A 275AA0B9 AE4B1318 441B273C 
+  1B2290D2 F786FEA5 39986C15 BD68E035 BFD0700F B5637B5D 3133AE7C 7560BE09 
+  1C07A332 428FAD06 22040B13 6756D7F4 2FFCA087 716507F8 E2E2B4F1 3A87511A 
+  8A190203 010001A3 53305130 0F060355 1D130101 FF040530 030101FF 301F0603 
+  551D2304 18301680 14BF19D3 40B9EB84 59B75CFC DB0B0C2F AFED2A75 5D301D06 
+  03551D0E 04160414 BF19D340 B9EB8459 B75CFCDB 0B0C2FAF ED2A755D 300D0609 
+  2A864886 F70D0101 05050003 81810034 65FAC40F F62C30A9 852F4C63 93D46898 
+  C61D8AF8 A00F492A 59C07B6E 2C83993F DD7A4357 60BDD91F 8C758D9F 0600E529 
+  78634937 325A3FE6 43ED3076 463EC45E C4E487B6 7D60C618 7ADF63C1 4DED7852 
+  41EED1DB 7B01D9E7 34F0A9EF 2F9E7601 E621884C 7D58E021 783D435D EF20B8FF 
+  4634C8AC AD4B41F5 2E884264 F09229
+  	quit
+!
+spanning-tree mode rapid-pvst
+spanning-tree extend system-id
+no errdisable detect cause gbic-invalid
+no errdisable detect cause sfp-config-mismatch
+errdisable recovery cause udld
+errdisable recovery cause bpduguard
+errdisable recovery cause security-violation
+errdisable recovery cause channel-misconfig
+errdisable recovery cause pagp-flap
+errdisable recovery cause dtp-flap
+errdisable recovery cause link-flap
+errdisable recovery cause sfp-config-mismatch
+errdisable recovery cause gbic-invalid
+errdisable recovery cause psecure-violation
+errdisable recovery cause port-mode-failure
+errdisable recovery cause dhcp-rate-limit
+errdisable recovery cause pppoe-ia-rate-limit
+errdisable recovery cause mac-limit
+errdisable recovery cause vmps
+errdisable recovery cause storm-control
+errdisable recovery cause inline-power
+errdisable recovery cause arp-inspection
+errdisable recovery cause link-monitor-failure
+errdisable recovery cause oam-remote-failure
+errdisable recovery cause loopback
+errdisable recovery cause psp
+errdisable recovery cause loopdetect
+errdisable recovery cause mrp-miscabling
+errdisable recovery interval 180
+!
+vlan internal allocation policy ascending
+!
+vlan 13
+ name Phones
+!
+vlan 17
+ name Transport
+!
+vlan 30
+ name Wi-Fi
+!
+vlan 31
+ name Wi-Fi_Guest
+!
+vlan 32
+ name Wi-Fi_Works
+!
+vlan 33
+ name Wi-Fi_Directors
+!
+vlan 34
+ name Wi-Fi_Generals
+!
+vlan 50
+ name MSB(inaglinsky)
+!
+vlan 77
+ name SKUD
+!
+vlan 90
+ name Inagliksky
+!
+vlan 130
+ name Phones(MSB-I)
+!
+vlan 551
+ name Cameras(Inagli-2)
+!
+vlan 555
+ name MedicalSrv
+!
+vlan 730
+ name Video-SB-Inagl
+!
+vlan 1091
+ name Cameras(Inaglinsky)
+!
+vlan 1490
+ name VKS(1490)
+!
+vlan 1930
+ name REAL_MEGAFON_IP
+!
+vlan 3131
+ name NEW_Kitchen_Inagl
+!
+lldp run
+!
+!
+!
+!
+!
+interface GigabitEthernet1/0/1
+ switchport access vlan 1490
+ logging event spanning-tree
+ logging event status
+ speed 100
+ no cdp tlv app
+ no snmp trap link-status
+ storm-control broadcast level 0.50 0.30
+ storm-control multicast level 0.50 0.30
+ storm-control action shutdown
+ storm-control action trap
+ spanning-tree bpduguard enable
+!
+interface GigabitEthernet1/0/2
+ switchport access vlan 130
+ switchport mode access
+ switchport voice vlan 130
+ logging event spanning-tree
+ logging event status
+ speed 100
+ no cdp tlv app
+ no snmp trap link-status
+ storm-control broadcast level 0.50 0.30
+ storm-control multicast level 0.50 0.30
+ storm-control action shutdown
+ storm-control action trap
+ spanning-tree portfast edge
+ spanning-tree bpduguard enable
+ ip dhcp snooping limit rate 10
+!
+interface GigabitEthernet1/0/3
+ switchport access vlan 90
+ logging event spanning-tree
+ logging event status
+ speed 100
+ no cdp tlv app
+ no snmp trap link-status
+ storm-control broadcast level 0.50 0.30
+ storm-control multicast level 0.50 0.30
+ storm-control action shutdown
+ storm-control action trap
+ spanning-tree bpduguard enable
+!
+interface GigabitEthernet1/0/4
+ switchport trunk allowed vlan 30-34
+ switchport mode trunk
+ switchport nonegotiate
+ logging event spanning-tree
+ logging event status
+ speed 100
+ duplex full
+ no cdp tlv app
+ no snmp trap link-status
+ storm-control broadcast level 0.50 0.30
+ storm-control multicast level 0.50 0.30
+ storm-control action shutdown
+ storm-control action trap
+ ip dhcp snooping trust
+!
+interface GigabitEthernet1/0/5
+ switchport access vlan 90
+ logging event spanning-tree
+ logging event status
+ speed 100
+ no cdp tlv app
+ no snmp trap link-status
+ storm-control broadcast level 0.50 0.30
+ storm-control multicast level 0.50 0.30
+ storm-control action shutdown
+ storm-control action trap
+ spanning-tree bpduguard enable
+!
+interface GigabitEthernet1/0/6
+ description 7593
+ switchport access vlan 90
+ switchport trunk allowed vlan 13,90
+ switchport trunk native vlan 90
+ switchport mode trunk
+ switchport nonegotiate
+ switchport voice vlan 13
+ logging event spanning-tree
+ logging event status
+ speed 100
+ no cdp tlv app
+ no snmp trap link-status
+ storm-control broadcast level 5.00 3.00
+ storm-control multicast level 5.00 3.00
+ storm-control action shutdown
+ storm-control action trap
+ spanning-tree portfast edge trunk
+ spanning-tree bpduguard enable
+ ip dhcp snooping limit rate 15
+!
+interface GigabitEthernet1/0/7
+ description Domishev VoIP
+ switchport access vlan 90
+ switchport voice vlan 13
+ logging event spanning-tree
+ logging event status
+ speed 100
+ no snmp trap link-status
+ storm-control broadcast level 0.50 0.30
+ storm-control multicast level 0.50 0.30
+ storm-control action shutdown
+ storm-control action trap
+ spanning-tree portfast edge
+ spanning-tree bpduguard enable
+!
+interface GigabitEthernet1/0/8
+ switchport access vlan 90
+ logging event spanning-tree
+ logging event status
+ speed 100
+ no cdp tlv app
+ no snmp trap link-status
+ storm-control broadcast level 0.50 0.30
+ storm-control multicast level 0.50 0.30
+ storm-control action shutdown
+ storm-control action trap
+ spanning-tree bpduguard enable
+!
+interface GigabitEthernet1/0/9
+ switchport access vlan 90
+ switchport trunk allowed vlan 17
+ switchport mode trunk
+ logging event spanning-tree
+ logging event status
+ speed 100
+ no cdp tlv app
+ no snmp trap link-status
+ storm-control broadcast level 0.50 0.30
+ storm-control multicast level 0.50 0.30
+ storm-control action shutdown
+ storm-control action trap
+ spanning-tree bpduguard enable
+!
+interface GigabitEthernet1/0/10
+ switchport access vlan 90
+ logging event spanning-tree
+ logging event status
+ speed 100
+ no cdp tlv app
+ no snmp trap link-status
+ storm-control broadcast level 0.50 0.30
+ storm-control multicast level 0.50 0.30
+ storm-control action shutdown
+ storm-control action trap
+ spanning-tree bpduguard enable
+!
+interface GigabitEthernet1/0/11
+ switchport access vlan 90
+ logging event spanning-tree
+ logging event status
+ speed 100
+ no cdp tlv app
+ no snmp trap link-status
+ storm-control broadcast level 0.50 0.30
+ storm-control multicast level 0.50 0.30
+ storm-control action shutdown
+ storm-control action trap
+ spanning-tree bpduguard enable
+!
+interface GigabitEthernet1/0/12
+ switchport access vlan 90
+ logging event spanning-tree
+ logging event status
+ speed 100
+ no cdp tlv app
+ no snmp trap link-status
+ storm-control broadcast level 0.50 0.30
+ storm-control multicast level 0.50 0.30
+ storm-control action shutdown
+ storm-control action trap
+ spanning-tree bpduguard enable
+!
+interface GigabitEthernet1/0/13
+ switchport access vlan 90
+ switchport mode access
+ logging event spanning-tree
+ logging event status
+ speed 100
+ no cdp tlv app
+ no snmp trap link-status
+ storm-control broadcast level 0.50 0.30
+ storm-control multicast level 0.50 0.30
+ storm-control action shutdown
+ storm-control action trap
+ spanning-tree bpduguard enable
+!
+interface GigabitEthernet1/0/14
+ switchport access vlan 90
+ logging event spanning-tree
+ logging event status
+ speed 100
+ no cdp tlv app
+ no snmp trap link-status
+ storm-control broadcast level 0.50 0.30
+ storm-control multicast level 0.50 0.30
+ storm-control action shutdown
+ storm-control action trap
+ spanning-tree bpduguard enable
+!
+interface GigabitEthernet1/0/15
+ logging event spanning-tree
+ logging event status
+ speed 100
+ no cdp tlv app
+ no snmp trap link-status
+ storm-control broadcast level 0.50 0.30
+ storm-control multicast level 0.50 0.30
+ storm-control action shutdown
+ storm-control action trap
+ spanning-tree bpduguard enable
+!
+interface GigabitEthernet1/0/16
+ switchport access vlan 90
+ logging event spanning-tree
+ logging event status
+ speed 100
+ no cdp tlv app
+ no snmp trap link-status
+ storm-control broadcast level 0.50 0.30
+ storm-control multicast level 0.50 0.30
+ storm-control action shutdown
+ storm-control action trap
+ spanning-tree bpduguard enable
+!
+interface GigabitEthernet1/0/17
+ switchport access vlan 90
+ logging event spanning-tree
+ logging event status
+ speed 100
+ no cdp tlv app
+ no snmp trap link-status
+ storm-control broadcast level 0.50 0.30
+ storm-control multicast level 0.50 0.30
+ storm-control action shutdown
+ storm-control action trap
+ spanning-tree bpduguard enable
+!
+interface GigabitEthernet1/0/18
+ switchport access vlan 90
+ logging event spanning-tree
+ logging event status
+ speed 100
+ no cdp tlv app
+ no snmp trap link-status
+ storm-control broadcast level 0.50 0.30
+ storm-control multicast level 0.50 0.30
+ storm-control action shutdown
+ storm-control action trap
+ spanning-tree bpduguard enable
+!
+interface GigabitEthernet1/0/19
+ switchport access vlan 90
+ logging event spanning-tree
+ logging event status
+ speed 100
+ no cdp tlv app
+ no snmp trap link-status
+ storm-control broadcast level 0.50 0.30
+ storm-control multicast level 0.50 0.30
+ storm-control action shutdown
+ storm-control action trap
+ spanning-tree bpduguard enable
+!
+interface GigabitEthernet1/0/20
+ description dykin.r
+ switchport access vlan 90
+ switchport trunk allowed vlan 13,90
+ switchport trunk native vlan 90
+ switchport mode trunk
+ logging event spanning-tree
+ logging event status
+ speed 100
+ no cdp tlv app
+ no snmp trap link-status
+ storm-control broadcast level 0.50 0.30
+ storm-control multicast level 0.50 0.30
+ storm-control action shutdown
+ storm-control action trap
+!
+interface GigabitEthernet1/0/21
+ switchport access vlan 90
+ logging event spanning-tree
+ logging event status
+ speed 100
+ no cdp tlv app
+ no snmp trap link-status
+ storm-control broadcast level 0.50 0.30
+ storm-control multicast level 0.50 0.30
+ storm-control action shutdown
+ storm-control action trap
+ spanning-tree bpduguard enable
+!
+interface GigabitEthernet1/0/22
+ switchport access vlan 90
+ logging event spanning-tree
+ logging event status
+ speed 100
+ no cdp tlv app
+ no snmp trap link-status
+ storm-control broadcast level 0.50 0.30
+ storm-control multicast level 0.50 0.30
+ storm-control action shutdown
+ storm-control action trap
+ spanning-tree bpduguard enable
+!
+interface GigabitEthernet1/0/23
+ switchport access vlan 90
+ logging event spanning-tree
+ logging event status
+ speed 100
+ no cdp tlv app
+ no snmp trap link-status
+ storm-control broadcast level 5.00 3.00
+ storm-control multicast level 5.00 3.00
+ storm-control action shutdown
+ storm-control action trap
+ spanning-tree portfast edge
+ spanning-tree bpduguard enable
+!
+interface GigabitEthernet1/0/24
+ switchport access vlan 90
+ logging event spanning-tree
+ logging event status
+ speed 100
+ no cdp tlv app
+ no snmp trap link-status
+ storm-control broadcast level 0.50 0.30
+ storm-control multicast level 0.50 0.30
+ storm-control action shutdown
+ storm-control action trap
+ spanning-tree bpduguard enable
+!
+interface GigabitEthernet1/0/25
+ description Kab_318
+ switchport access vlan 90
+ logging event spanning-tree
+ logging event status
+ speed 100
+ no cdp tlv app
+ no snmp trap link-status
+ storm-control broadcast level 0.50 0.30
+ storm-control multicast level 0.50 0.30
+ storm-control action shutdown
+ storm-control action trap
+ spanning-tree bpduguard enable
+!
+interface GigabitEthernet1/0/26
+ switchport access vlan 90
+ switchport trunk allowed vlan 17,555
+ switchport mode access
+ logging event spanning-tree
+ logging event status
+ speed 100
+ no cdp tlv app
+ no snmp trap link-status
+ storm-control broadcast level 5.00 3.00
+ storm-control multicast level 5.00 3.00
+ storm-control action shutdown
+ storm-control action trap
+ spanning-tree bpduguard enable
+!
+interface GigabitEthernet1/0/27
+ switchport access vlan 90
+ logging event spanning-tree
+ logging event status
+ speed 100
+ no cdp tlv app
+ no snmp trap link-status
+ storm-control broadcast level 0.50 0.30
+ storm-control multicast level 0.50 0.30
+ storm-control action shutdown
+ storm-control action trap
+ spanning-tree bpduguard enable
+!
+interface GigabitEthernet1/0/28
+ logging event spanning-tree
+ logging event status
+ speed 100
+ no cdp tlv app
+ no snmp trap link-status
+ storm-control broadcast level 0.50 0.30
+ storm-control multicast level 0.50 0.30
+ storm-control action shutdown
+ storm-control action trap
+ spanning-tree bpduguard enable
+!
+interface GigabitEthernet1/0/29
+ switchport access vlan 90
+ logging event spanning-tree
+ logging event status
+ speed 100
+ no cdp tlv app
+ no snmp trap link-status
+ storm-control broadcast level 5.00 3.00
+ storm-control multicast level 5.00 3.00
+ storm-control action shutdown
+ storm-control action trap
+ spanning-tree bpduguard enable
+!
+interface GigabitEthernet1/0/30
+ switchport access vlan 90
+ logging event spanning-tree
+ logging event status
+ speed 100
+ no cdp tlv app
+ no snmp trap link-status
+ storm-control broadcast level 5.00 3.00
+ storm-control multicast level 5.00 3.00
+ storm-control action shutdown
+ storm-control action trap
+ spanning-tree bpduguard enable
+!
+interface GigabitEthernet1/0/31
+ switchport access vlan 90
+ logging event spanning-tree
+ logging event status
+ speed 100
+ no cdp tlv app
+ no snmp trap link-status
+ storm-control broadcast level 0.50 0.30
+ storm-control multicast level 0.50 0.30
+ storm-control action shutdown
+ storm-control action trap
+ spanning-tree bpduguard enable
+!
+interface GigabitEthernet1/0/32
+ description 7514
+ switchport access vlan 90
+ switchport trunk allowed vlan 13,90
+ switchport trunk native vlan 90
+ switchport mode trunk
+ switchport nonegotiate
+ switchport voice vlan 13
+ switchport port-security maximum 2
+ switchport port-security violation protect
+ switchport port-security mac-address sticky
+ switchport port-security mac-address sticky 0c38.3e4e.914a vlan 13
+ switchport port-security mac-address sticky 04d4.c4f0.8867
+ switchport port-security
+ logging event spanning-tree
+ logging event status
+ speed 100
+ no cdp tlv app
+ no snmp trap link-status
+ storm-control broadcast level 5.00 3.00
+ storm-control multicast level 5.00 3.00
+ storm-control action shutdown
+ storm-control action trap
+ spanning-tree portfast edge trunk
+ spanning-tree bpduguard enable
+ ip dhcp snooping limit rate 25
+!
+interface GigabitEthernet1/0/33
+ switchport access vlan 90
+ logging event spanning-tree
+ logging event status
+ speed 100
+ no cdp tlv app
+ no snmp trap link-status
+ storm-control broadcast level 0.50 0.30
+ storm-control multicast level 0.50 0.30
+ storm-control action shutdown
+ storm-control action trap
+ spanning-tree bpduguard enable
+!
+interface GigabitEthernet1/0/34
+ switchport access vlan 90
+ logging event spanning-tree
+ logging event status
+ speed 100
+ no cdp tlv app
+ no snmp trap link-status
+ storm-control broadcast level 0.50 0.30
+ storm-control multicast level 0.50 0.30
+ storm-control action shutdown
+ storm-control action trap
+ spanning-tree bpduguard enable
+!
+interface GigabitEthernet1/0/35
+ switchport access vlan 90
+ logging event spanning-tree
+ logging event status
+ speed 100
+ no cdp tlv app
+ no snmp trap link-status
+ storm-control broadcast level 5.00 3.00
+ storm-control multicast level 5.00 3.00
+ storm-control action shutdown
+ storm-control action trap
+ spanning-tree bpduguard enable
+!
+interface GigabitEthernet1/0/36
+ switchport access vlan 90
+ logging event spanning-tree
+ logging event status
+ speed 100
+ no cdp tlv app
+ no snmp trap link-status
+ storm-control broadcast level 0.50 0.30
+ storm-control multicast level 0.50 0.30
+ storm-control action shutdown
+ storm-control action trap
+ spanning-tree bpduguard enable
+!
+interface GigabitEthernet1/0/37
+ switchport access vlan 90
+ logging event spanning-tree
+ logging event status
+ speed 10
+ duplex full
+ no cdp tlv app
+ no snmp trap link-status
+ storm-control broadcast level 5.00 3.00
+ storm-control multicast level 5.00 3.00
+ storm-control action shutdown
+ storm-control action trap
+ spanning-tree bpduguard enable
+!
+interface GigabitEthernet1/0/38
+ switchport access vlan 90
+ logging event spanning-tree
+ logging event status
+ speed 100
+ no cdp tlv app
+ no snmp trap link-status
+ storm-control broadcast level 0.50 0.30
+ storm-control multicast level 0.50 0.30
+ storm-control action shutdown
+ storm-control action trap
+ spanning-tree bpduguard enable
+!
+interface GigabitEthernet1/0/39
+ switchport access vlan 90
+ logging event spanning-tree
+ logging event status
+ speed 100
+ no cdp tlv app
+ no snmp trap link-status
+ storm-control broadcast level 0.50 0.30
+ storm-control multicast level 0.50 0.30
+ storm-control action shutdown
+ storm-control action trap
+ spanning-tree bpduguard enable
+!
+interface GigabitEthernet1/0/40
+ switchport access vlan 90
+ logging event spanning-tree
+ logging event status
+ speed 100
+ no cdp tlv app
+ no snmp trap link-status
+ storm-control broadcast level 0.50 0.30
+ storm-control multicast level 0.50 0.30
+ storm-control action shutdown
+ storm-control action trap
+ spanning-tree bpduguard enable
+!
+interface GigabitEthernet1/0/41
+ description Kab_320
+ switchport access vlan 90
+ logging event spanning-tree
+ logging event status
+ speed 100
+ no cdp tlv app
+ no snmp trap link-status
+ storm-control broadcast level 0.50 0.30
+ storm-control multicast level 0.50 0.30
+ storm-control action shutdown
+ storm-control action trap
+ spanning-tree bpduguard enable
+!
+interface GigabitEthernet1/0/42
+ switchport access vlan 90
+ logging event spanning-tree
+ logging event status
+ speed 100
+ no cdp tlv app
+ no snmp trap link-status
+ storm-control broadcast level 0.50 0.30
+ storm-control multicast level 0.50 0.30
+ storm-control action shutdown
+ storm-control action trap
+ spanning-tree bpduguard enable
+!
+interface GigabitEthernet1/0/43
+ switchport access vlan 90
+ logging event spanning-tree
+ logging event status
+ speed 100
+ no cdp tlv app
+ no snmp trap link-status
+ storm-control broadcast level 0.50 0.30
+ storm-control multicast level 0.50 0.30
+ storm-control action shutdown
+ storm-control action trap
+ spanning-tree bpduguard enable
+!
+interface GigabitEthernet1/0/44
+ description up-99-96-gi1/0/48
+ switchport trunk allowed vlan 1,13,17,30-34,50,77,90,130,551,555,730,1091,1490
+ switchport trunk allowed vlan add 1930,3131
+ switchport mode trunk
+ logging event spanning-tree
+ logging event status
+ no cdp tlv app
+ no snmp trap link-status
+ storm-control broadcast level 20.00 10.00
+ storm-control multicast level 20.00 10.00
+ storm-control action shutdown
+ storm-control action trap
+ ip dhcp snooping trust
+!
+interface GigabitEthernet1/0/45
+ description 7503
+ switchport access vlan 90
+ switchport trunk allowed vlan 13,90
+ switchport trunk native vlan 90
+ switchport mode trunk
+ switchport nonegotiate
+ switchport voice vlan 13
+ logging event spanning-tree
+ logging event status
+ speed 100
+ no cdp tlv app
+ no snmp trap link-status
+ storm-control broadcast level 5.00 3.00
+ storm-control multicast level 5.00 3.00
+ storm-control action shutdown
+ storm-control action trap
+ spanning-tree portfast edge trunk
+ spanning-tree bpduguard enable
+ ip dhcp snooping limit rate 15
+!
+interface GigabitEthernet1/0/46
+ switchport access vlan 30
+ switchport trunk allowed vlan 30-34
+ switchport mode trunk
+ logging event spanning-tree
+ logging event status
+ speed 100
+ no cdp tlv app
+ no snmp trap link-status
+ storm-control broadcast level 0.50 0.30
+ storm-control multicast level 0.50 0.30
+ storm-control action shutdown
+ storm-control action trap
+ ip dhcp snooping trust
+!
+interface GigabitEthernet1/0/47
+ switchport access vlan 30
+ switchport trunk allowed vlan 30-34
+ switchport mode trunk
+ switchport nonegotiate
+ logging event spanning-tree
+ logging event status
+ speed 100
+ duplex full
+ no cdp tlv app
+ no snmp trap link-status
+ storm-control broadcast level 0.50 0.30
+ storm-control multicast level 0.50 0.30
+ storm-control action shutdown
+ storm-control action trap
+ ip dhcp snooping trust
+!
+interface GigabitEthernet1/0/48
+ description 99.20_gi0/17
+ switchport trunk allowed vlan 1,13,17,30-34,50,77,90,130,551,555,730,1091,1490
+ switchport trunk allowed vlan add 1930,3131
+ switchport mode trunk
+ logging event spanning-tree
+ logging event status
+ no cdp tlv app
+ no snmp trap link-status
+ storm-control broadcast level 20.00 10.00
+ storm-control multicast level 20.00 10.00
+ storm-control action shutdown
+ storm-control action trap
+ ip dhcp snooping trust
+!
+interface GigabitEthernet1/0/49
+ description 99.20_gi0/17
+ switchport trunk allowed vlan 1,13,17,30-34,90,130,555,1091,1930
+ switchport mode trunk
+ logging event spanning-tree
+ logging event status
+ storm-control broadcast level 20.00 10.00
+ storm-control multicast level 20.00 10.00
+ storm-control action trap
+ ip dhcp snooping trust
+!
+interface GigabitEthernet1/0/50
+ description 99.20_gi0/17
+ switchport trunk allowed vlan 1,13,17,30-34,90,130,555,1930
+ switchport mode trunk
+ logging event spanning-tree
+ logging event status
+ storm-control broadcast level 20.00 10.00
+ storm-control multicast level 20.00 10.00
+ storm-control action trap
+ ip dhcp snooping trust
+!
+interface GigabitEthernet1/0/51
+ description 99.20_gi0/17
+ switchport trunk allowed vlan 1,13,17,30-34,90,130,555,1930
+ switchport mode trunk
+ logging event spanning-tree
+ logging event status
+ storm-control broadcast level 20.00 10.00
+ storm-control multicast level 20.00 10.00
+ storm-control action trap
+ ip dhcp snooping trust
+!
+interface GigabitEthernet1/0/52
+ description 99.20_gi0/17
+ switchport trunk allowed vlan 1,13,17,30-34,90,130,555,1930
+ switchport mode trunk
+ logging event spanning-tree
+ logging event status
+ storm-control broadcast level 20.00 10.00
+ storm-control multicast level 20.00 10.00
+ storm-control action trap
+ ip dhcp snooping trust
+!
+interface Vlan1
+ no ip address
+ shutdown
+!
+interface Vlan17
+ ip address 10.20.99.95 255.255.252.0
+!
+ip ftp username FTP1
+ip ftp password 7 013532340A
+no ip http server
+ip http access-class 12
+ip http authentication aaa login-authentication login-RADIUS
+ip http authentication aaa exec-authorization auth-RADIUS-exec
+ip http secure-server
+ip http max-connections 3
+ip ssh time-out 60
+ip ssh authentication-retries 5
+ip ssh logging events
+ip ssh version 2
+!
+ip access-list extended VKS-SECURITY
+ permit ip 31.173.228.0 0.0.0.255 31.173.228.0 0.0.0.255
+ permit ip 31.173.228.0 0.0.0.255 85.113.37.0 0.0.0.255
+ permit ip 31.173.228.0 0.0.0.255 194.186.62.8 0.0.0.1
+ permit ip 31.173.228.0 0.0.0.255 188.43.4.144 0.0.0.7
+ permit ip 31.173.228.0 0.0.0.255 62.33.87.224 0.0.0.31
+ permit ip 31.173.228.0 0.0.0.255 188.170.14.160 0.0.0.1
+ permit ip 31.173.228.0 0.0.0.255 95.170.149.2 0.0.0.1
+ permit ip 31.173.228.0 0.0.0.255 212.44.138.234 0.0.0.1
+ permit ip 31.173.228.0 0.0.0.255 212.44.138.236 0.0.0.1
+ permit ip 31.173.228.0 0.0.0.255 212.44.138.228 0.0.0.1
+ permit ip 31.173.228.0 0.0.0.255 78.41.92.118 0.0.0.1
+ permit ip 31.173.228.0 0.0.0.255 81.62.163.14 0.0.0.1
+ permit ip 31.173.228.0 0.0.0.255 59.108.42.26 0.0.0.1
+ permit ip 31.173.228.0 0.0.0.255 145.255.138.34 0.0.0.1
+ permit ip 31.173.228.0 0.0.0.255 188.244.144.148 0.0.0.1
+ permit ip 31.173.228.0 0.0.0.255 194.190.106.126 0.0.0.1
+ permit ip 31.173.228.0 0.0.0.255 49.5.6.106 0.0.0.1
+ permit ip 31.173.228.0 0.0.0.255 31.173.55.240 0.0.0.1
+ permit ip 31.173.228.0 0.0.0.255 82.162.117.0 0.0.0.255
+ permit ip 31.173.228.0 0.0.0.255 173.243.2.68 0.0.0.1
+ permit ip 31.173.228.0 0.0.0.255 212.44.138.224 0.0.0.7
+ permit ip 31.173.228.0 0.0.0.255 109.252.111.158 0.0.0.1
+ permit ip 31.173.228.0 0.0.0.255 82.142.131.200 0.0.0.7
+ permit ip 31.173.228.0 0.0.0.255 78.41.94.90 0.0.0.1
+ permit ip 31.173.228.0 0.0.0.255 91.190.232.8 0.0.0.1
+ permit ip 31.173.228.0 0.0.0.255 188.43.239.192 0.0.0.1
+ permit ip 31.173.228.0 0.0.0.255 78.41.92.116 0.0.0.1
+ permit ip 31.173.228.0 0.0.0.255 87.229.240.194 0.0.0.1
+ permit ip 31.173.228.0 0.0.0.255 109.252.111.212 0.0.0.1
+ permit ip 31.173.228.0 0.0.0.255 91.220.112.68 0.0.0.1
+ permit ip 31.173.228.0 0.0.0.255 31.173.225.50 0.0.0.1
+ permit ip 31.173.228.0 0.0.0.255 84.47.183.106 0.0.0.1
+ deny   ip any any
+kron occurrence backup at 17:00 recurring
+ policy-list backup
+!
+kron policy-list backup
+ cli copy startup-config ftp://192.168.74.5
+ cli copy startup-config tftp://dump.kolmar.pro/10.20.99.95
+ cli copy vlan.dat tftp://dump.kolmar.pro/10.20.99.95_vlan
+!
+logging trap debugging
+logging host 10.10.0.142 transport udp port 5014
+access-list 12 permit 10.12.0.0 0.0.0.255
+!
+!
+snmp-server community public RO
+snmp mib flash cache
+!
+radius-server retransmit 1
+radius-server timeout 2
+radius-server key 7 0008180C014A050E1C2D4A4C050E
+!
+radius server cis.kolmar.pro_210
+ address ipv4 10.10.0.210 auth-port 1812 acct-port 1813
+ timeout 5
+ retransmit 3
+ key 7 141B190109152423372435372E04
+!
+radius server cis.kolmar.pro_212
+ address ipv4 10.10.0.212 auth-port 1812 acct-port 1813
+ timeout 5
+ retransmit 3
+ key 7 082D47440C080B1F01070A06263C
+!
+!
+line con 0
+ exec-timeout 13 0
+ privilege level 15
+ authorization exec auth-RADIUS-exec
+ logging synchronous
+ login authentication login-RADIUS
+ stopbits 1
+line vty 0 4
+ access-class 23 in
+ exec-timeout 15 0
+ privilege level 15
+ authorization exec auth-RADIUS-exec
+ logging synchronous
+ login authentication login-RADIUS
+ length 0
+ transport input ssh
+ escape-character 3
+line vty 5 15
+ exec-timeout 15 0
+ authorization exec auth-RADIUS-exec
+ login authentication login-RADIUS
+ transport input none
+!
+ntp server time.kolmar.pro
+end
+
+
+
 $ show lldp neighbors detail
 ------------------------------------------------
 Local Intf: Gi1/0/39
@@ -78,7 +1105,7 @@ Port Description - not advertised
 System Name - not advertised
 System Description - not advertised
 
-Time remaining: 2894 seconds
+Time remaining: 3241 seconds
 System Capabilities - not advertised
 Enabled Capabilities - not advertised
 Management Addresses - not advertised
@@ -112,7 +1139,7 @@ System Name: X1S/X1SP
 System Description: 
 Version:2.4.12.2
 
-Time remaining: 7 seconds
+Time remaining: 21 seconds
 System Capabilities: B,T
 Enabled Capabilities: B,T
 Management Addresses:
@@ -151,7 +1178,7 @@ System Name: X3S(P) Lite
 System Description: 
 Version:2.4.10.1
 
-Time remaining: 154 seconds
+Time remaining: 126 seconds
 System Capabilities: B,T
 Enabled Capabilities: B,T
 Management Addresses:
@@ -190,7 +1217,7 @@ System Name: X5U-V2
 System Description: 
 Version:2.12.17.7
 
-Time remaining: 130 seconds
+Time remaining: 162 seconds
 System Capabilities: B,T
 Enabled Capabilities: B,T
 Management Addresses:
@@ -229,7 +1256,7 @@ System Name: X1S/X1SP
 System Description: 
 Version:2.4.12.2
 
-Time remaining: 7 seconds
+Time remaining: 22 seconds
 System Capabilities: B,T
 Enabled Capabilities: B,T
 Management Addresses:
@@ -271,7 +1298,7 @@ Technical Support: http://www.cisco.com/techsupport
 Copyright (c) 1986-2021 by Cisco Systems, Inc.
 Compiled Mon 08-Mar-21 09:07 by prod_rel_team
 
-Time remaining: 96 seconds
+Time remaining: 115 seconds
 System Capabilities: B,R
 Enabled Capabilities: B
 Management Addresses:
@@ -296,7 +1323,7 @@ System Name: INAABKOF-23LVL
 System Description: 
 UAP-AC-LR, 6.6.77.15402
 
-Time remaining: 114 seconds
+Time remaining: 116 seconds
 System Capabilities: B,W,R,S
 Enabled Capabilities: B,W,R
 Management Addresses:
@@ -331,7 +1358,7 @@ System Name: INAABKOF-21LVL
 System Description: 
 UAP-AC-Mesh-Pro, 6.6.77.15402
 
-Time remaining: 113 seconds
+Time remaining: 116 seconds
 System Capabilities: B,W,R,S
 Enabled Capabilities: B,W,R
 Management Addresses:
@@ -364,7 +1391,7 @@ Port Description - not advertised
 System Name - not advertised
 System Description - not advertised
 
-Time remaining: 3062 seconds
+Time remaining: 3408 seconds
 System Capabilities - not advertised
 Enabled Capabilities - not advertised
 Management Addresses - not advertised
@@ -396,7 +1423,7 @@ Port Description - not advertised
 System Name - not advertised
 System Description - not advertised
 
-Time remaining: 3203 seconds
+Time remaining: 3549 seconds
 System Capabilities - not advertised
 Enabled Capabilities - not advertised
 Management Addresses - not advertised
@@ -428,7 +1455,7 @@ Port Description - not advertised
 System Name - not advertised
 System Description - not advertised
 
-Time remaining: 3297 seconds
+Time remaining: 2698 seconds
 System Capabilities - not advertised
 Enabled Capabilities - not advertised
 Management Addresses - not advertised
@@ -460,7 +1487,7 @@ Port Description - not advertised
 System Name - not advertised
 System Description - not advertised
 
-Time remaining: 3535 seconds
+Time remaining: 2936 seconds
 System Capabilities - not advertised
 Enabled Capabilities - not advertised
 Management Addresses - not advertised
@@ -492,7 +1519,7 @@ Port Description - not advertised
 System Name - not advertised
 System Description - not advertised
 
-Time remaining: 3176 seconds
+Time remaining: 3522 seconds
 System Capabilities - not advertised
 Enabled Capabilities - not advertised
 Management Addresses - not advertised
@@ -524,7 +1551,7 @@ Port Description - not advertised
 System Name - not advertised
 System Description - not advertised
 
-Time remaining: 3402 seconds
+Time remaining: 2803 seconds
 System Capabilities - not advertised
 Enabled Capabilities - not advertised
 Management Addresses - not advertised
@@ -556,7 +1583,7 @@ Port Description - not advertised
 System Name - not advertised
 System Description - not advertised
 
-Time remaining: 3254 seconds
+Time remaining: 3600 seconds
 System Capabilities - not advertised
 Enabled Capabilities - not advertised
 Management Addresses - not advertised
@@ -588,7 +1615,7 @@ Port Description - not advertised
 System Name - not advertised
 System Description - not advertised
 
-Time remaining: 3240 seconds
+Time remaining: 3586 seconds
 System Capabilities - not advertised
 Enabled Capabilities - not advertised
 Management Addresses - not advertised
@@ -620,7 +1647,7 @@ Port Description - not advertised
 System Name - not advertised
 System Description - not advertised
 
-Time remaining: 2878 seconds
+Time remaining: 3225 seconds
 System Capabilities - not advertised
 Enabled Capabilities - not advertised
 Management Addresses - not advertised
@@ -652,7 +1679,7 @@ Port Description - not advertised
 System Name - not advertised
 System Description - not advertised
 
-Time remaining: 2802 seconds
+Time remaining: 3148 seconds
 System Capabilities - not advertised
 Enabled Capabilities - not advertised
 Management Addresses - not advertised
@@ -684,7 +1711,7 @@ Port Description - not advertised
 System Name - not advertised
 System Description - not advertised
 
-Time remaining: 3410 seconds
+Time remaining: 2811 seconds
 System Capabilities - not advertised
 Enabled Capabilities - not advertised
 Management Addresses - not advertised
@@ -716,7 +1743,7 @@ Port Description - not advertised
 System Name - not advertised
 System Description - not advertised
 
-Time remaining: 2824 seconds
+Time remaining: 3170 seconds
 System Capabilities - not advertised
 Enabled Capabilities - not advertised
 Management Addresses - not advertised
@@ -748,7 +1775,7 @@ Port Description - not advertised
 System Name - not advertised
 System Description - not advertised
 
-Time remaining: 3385 seconds
+Time remaining: 2786 seconds
 System Capabilities - not advertised
 Enabled Capabilities - not advertised
 Management Addresses - not advertised
@@ -780,7 +1807,7 @@ Port Description - not advertised
 System Name - not advertised
 System Description - not advertised
 
-Time remaining: 2718 seconds
+Time remaining: 3064 seconds
 System Capabilities - not advertised
 Enabled Capabilities - not advertised
 Management Addresses - not advertised
@@ -812,7 +1839,7 @@ Port Description - not advertised
 System Name - not advertised
 System Description - not advertised
 
-Time remaining: 2999 seconds
+Time remaining: 3345 seconds
 System Capabilities - not advertised
 Enabled Capabilities - not advertised
 Management Addresses - not advertised
@@ -844,7 +1871,7 @@ Port Description - not advertised
 System Name - not advertised
 System Description - not advertised
 
-Time remaining: 2904 seconds
+Time remaining: 3250 seconds
 System Capabilities - not advertised
 Enabled Capabilities - not advertised
 Management Addresses - not advertised
@@ -876,7 +1903,7 @@ Port Description - not advertised
 System Name - not advertised
 System Description - not advertised
 
-Time remaining: 3052 seconds
+Time remaining: 3398 seconds
 System Capabilities - not advertised
 Enabled Capabilities - not advertised
 Management Addresses - not advertised
@@ -908,7 +1935,7 @@ Port Description - not advertised
 System Name - not advertised
 System Description - not advertised
 
-Time remaining: 3181 seconds
+Time remaining: 3527 seconds
 System Capabilities - not advertised
 Enabled Capabilities - not advertised
 Management Addresses - not advertised
@@ -940,7 +1967,7 @@ Port Description - not advertised
 System Name - not advertised
 System Description - not advertised
 
-Time remaining: 2885 seconds
+Time remaining: 3232 seconds
 System Capabilities - not advertised
 Enabled Capabilities - not advertised
 Management Addresses - not advertised
@@ -972,7 +1999,7 @@ Port Description - not advertised
 System Name - not advertised
 System Description - not advertised
 
-Time remaining: 3263 seconds
+Time remaining: 2664 seconds
 System Capabilities - not advertised
 Enabled Capabilities - not advertised
 Management Addresses - not advertised
@@ -1004,7 +2031,7 @@ Port Description - not advertised
 System Name - not advertised
 System Description - not advertised
 
-Time remaining: 3300 seconds
+Time remaining: 2701 seconds
 System Capabilities - not advertised
 Enabled Capabilities - not advertised
 Management Addresses - not advertised
@@ -1036,7 +2063,7 @@ Port Description - not advertised
 System Name - not advertised
 System Description - not advertised
 
-Time remaining: 3180 seconds
+Time remaining: 3526 seconds
 System Capabilities - not advertised
 Enabled Capabilities - not advertised
 Management Addresses - not advertised
@@ -1068,7 +2095,7 @@ Port Description - not advertised
 System Name - not advertised
 System Description - not advertised
 
-Time remaining: 3150 seconds
+Time remaining: 3497 seconds
 System Capabilities - not advertised
 Enabled Capabilities - not advertised
 Management Addresses - not advertised
@@ -1100,7 +2127,7 @@ Port Description - not advertised
 System Name - not advertised
 System Description - not advertised
 
-Time remaining: 3592 seconds
+Time remaining: 2993 seconds
 System Capabilities - not advertised
 Enabled Capabilities - not advertised
 Management Addresses - not advertised
@@ -1132,7 +2159,7 @@ Port Description - not advertised
 System Name - not advertised
 System Description - not advertised
 
-Time remaining: 2728 seconds
+Time remaining: 3074 seconds
 System Capabilities - not advertised
 Enabled Capabilities - not advertised
 Management Addresses - not advertised
@@ -1164,39 +2191,7 @@ Port Description - not advertised
 System Name - not advertised
 System Description - not advertised
 
-Time remaining: 2921 seconds
-System Capabilities - not advertised
-Enabled Capabilities - not advertised
-Management Addresses - not advertised
-Auto Negotiation - supported, enabled
-Physical media capabilities:
-    1000baseT(FD)
-Media Attachment Unit type - not advertised
-Vlan ID: - not advertised
-
-MED Information:
-
-    MED Codes:
-          (NP) Network Policy, (LI) Location Identification
-          (PS) Power Source Entity, (PD) Power Device
-          (IN) Inventory
-
-    Inventory information - not advertised
-    Capabilities: 
-    Device type: Endpoint Class I
-    Network Policies - not advertised
-    Power requirements - not advertised
-    Location - not advertised
-
-------------------------------------------------
-Local Intf: Gi1/0/39
-Chassis id: 04d4.c4f0.885f
-Port id: 04d4.c4f0.885f
-Port Description - not advertised
-System Name - not advertised
-System Description - not advertised
-
-Time remaining: 3340 seconds
+Time remaining: 3267 seconds
 System Capabilities - not advertised
 Enabled Capabilities - not advertised
 Management Addresses - not advertised
@@ -1228,7 +2223,39 @@ Port Description - not advertised
 System Name - not advertised
 System Description - not advertised
 
-Time remaining: 3535 seconds
+Time remaining: 2937 seconds
+System Capabilities - not advertised
+Enabled Capabilities - not advertised
+Management Addresses - not advertised
+Auto Negotiation - supported, enabled
+Physical media capabilities:
+    1000baseT(FD)
+Media Attachment Unit type - not advertised
+Vlan ID: - not advertised
+
+MED Information:
+
+    MED Codes:
+          (NP) Network Policy, (LI) Location Identification
+          (PS) Power Source Entity, (PD) Power Device
+          (IN) Inventory
+
+    Inventory information - not advertised
+    Capabilities: 
+    Device type: Endpoint Class I
+    Network Policies - not advertised
+    Power requirements - not advertised
+    Location - not advertised
+
+------------------------------------------------
+Local Intf: Gi1/0/39
+Chassis id: 04d4.c4f0.885f
+Port id: 04d4.c4f0.885f
+Port Description - not advertised
+System Name - not advertised
+System Description - not advertised
+
+Time remaining: 3433 seconds
 System Capabilities - not advertised
 Enabled Capabilities - not advertised
 Management Addresses - not advertised
@@ -1264,7 +2291,7 @@ Entry address(es):
   IP address: 10.20.99.196
 Platform: cisco C1000-48P-4G-L,  Capabilities: Switch IGMP 
 Interface: GigabitEthernet1/0/44,  Port ID (outgoing port): GigabitEthernet1/0/48
-Holdtime : 165 sec
+Holdtime : 139 sec
 
 Version :
 Cisco IOS Software, C1000 Software (C1000-UNIVERSALK9-M), Version 15.2(7)E4, RELEASE SOFTWARE (fc2)
@@ -1285,7 +2312,7 @@ Entry address(es):
   IP address: 10.13.1.151
 Platform: X5U-V2,  Capabilities: Host Phone 
 Interface: GigabitEthernet1/0/20,  Port ID (outgoing port): WAN PORT
-Holdtime : 152 sec
+Holdtime : 123 sec
 
 Version :
 2.12.17.7
@@ -1298,7 +2325,7 @@ Entry address(es):
   IP address: 10.13.1.42
 Platform: X3S(P) Lite,  Capabilities: Host Phone 
 Interface: GigabitEthernet1/0/45,  Port ID (outgoing port): WAN PORT
-Holdtime : 147 sec
+Holdtime : 179 sec
 
 Version :
 2.4.10.1
@@ -1311,7 +2338,7 @@ Entry address(es):
   IP address: 10.13.1.57
 Platform: X1S/X1SP,  Capabilities: Host Phone 
 Interface: GigabitEthernet1/0/6,  Port ID (outgoing port): WAN PORT
-Holdtime : 153 sec
+Holdtime : 168 sec
 
 Version :
 2.4.12.2
@@ -1324,7 +2351,7 @@ Entry address(es):
   IP address: 10.13.1.58
 Platform: X1S/X1SP,  Capabilities: Host Phone 
 Interface: GigabitEthernet1/0/32,  Port ID (outgoing port): WAN PORT
-Holdtime : 126 sec
+Holdtime : 140 sec
 
 Version :
 2.4.12.2
@@ -1342,10 +2369,10 @@ Capability Codes: R - Router, T - Trans Bridge, B - Source Route Bridge
 
 Device ID        Local Intrfce     Holdtme    Capability  Platform  Port ID
 INA-NSWS-11-99-196.kolmar.ru
-                 Gig 1/0/44        165              S I   C1000-48P Gig 1/0/48
-X5U-V2           Gig 1/0/20        152              H P   X5U-V2    WAN PORT
-X3S(P) Lite      Gig 1/0/45        147              H P   X3S(P) Li WAN PORT
-X1S/X1SP         Gig 1/0/6         153              H P   X1S/X1SP  WAN PORT
-X1S/X1SP         Gig 1/0/32        126              H P   X1S/X1SP  WAN PORT
+                 Gig 1/0/44        139              S I   C1000-48P Gig 1/0/48
+X5U-V2           Gig 1/0/20        123              H P   X5U-V2    WAN PORT
+X3S(P) Lite      Gig 1/0/45        178              H P   X3S(P) Li WAN PORT
+X1S/X1SP         Gig 1/0/6         168              H P   X1S/X1SP  WAN PORT
+X1S/X1SP         Gig 1/0/32        140              H P   X1S/X1SP  WAN PORT
 
 Total cdp entries displayed : 5

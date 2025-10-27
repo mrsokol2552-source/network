@@ -15,7 +15,7 @@ $ show lldp neighbor-information
 
 Local Port ge1/1:
 Neighbor ID: 00 60 e0 a7 35 16 00 60 e0 a7 35 16 
-rxInfoTTL: 3224
+rxInfoTTL: 3529
 --Chassis ID TLV--:
   chassis ID subtype: MAC address(4); chassis ID: 00:60:e0:a7:35:16
 --Port ID TLV--:
@@ -29,7 +29,7 @@ rxInfoTTL: 3224
 
 Local Port ge1/18:
 Neighbor ID: d0 e0 42 36 db 80 47 69 31 2f 30 2f 31 35 
-rxInfoTTL: 115
+rxInfoTTL: 101
 --Chassis ID TLV--:
   chassis ID subtype: MAC address(4); chassis ID: d0:e0:42:36:db:80
 --Port ID TLV--:

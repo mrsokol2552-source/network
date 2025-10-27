@@ -1,32 +1,32 @@
 {
   "vendor": "cisco_ios",
   "raw_files": [
-    "NSK\\01\\10.2.99.7.txt"
+    "10.2.99.7.txt"
   ],
   "parsed": {
     "cisco_ios_show_cdp_neighbors": [
       {
         "Neighbor": "NSK-NSWS-01-99-7",
         "LocalInterface": "uptime is",
-        "NeighborPort": "1 day,",
-        "_source_file": "C:\\Users\\zhiltsov.aa\\Desktop\\net-auto-mermaid\\data\\raw\\NSK\\01\\10.2.99.7.txt",
+        "NeighborPort": "3 days,",
+        "_source_file": "C:\\Users\\zhiltsov.aa\\Desktop\\net-auto-mermaid\\data\\raw\\10.2.99.7.txt",
         "_template": "cisco_ios_show_cdp_neighbors.template"
       },
       {
         "Neighbor": "Gig",
         "LocalInterface": "1/0/35",
         "NeighborPort": "S I",
-        "_source_file": "C:\\Users\\zhiltsov.aa\\Desktop\\net-auto-mermaid\\data\\raw\\NSK\\01\\10.2.99.7.txt",
+        "_source_file": "C:\\Users\\zhiltsov.aa\\Desktop\\net-auto-mermaid\\data\\raw\\10.2.99.7.txt",
         "_template": "cisco_ios_show_cdp_neighbors.template"
       }
     ],
     "cisco_ios_show_cdp_neighbors_detail": [
       {
-        "Neighbor": "NSK-NSWR-01-99-1.kolmar.ru",
+        "Neighbor": "NSK-NSWR-01-99-1.kolmar.local",
         "LocalInterface": "GigabitEthernet1/0/35",
         "NeighborPort": "GigabitEthernet1/0/22",
         "Platform": "cisco C9200L-24P-4G",
-        "_source_file": "C:\\Users\\zhiltsov.aa\\Desktop\\net-auto-mermaid\\data\\raw\\NSK\\01\\10.2.99.7.txt",
+        "_source_file": "C:\\Users\\zhiltsov.aa\\Desktop\\net-auto-mermaid\\data\\raw\\10.2.99.7.txt",
         "_template": "cisco_ios_show_cdp_neighbors_detail.template"
       }
     ],
@@ -34,15 +34,15 @@
       {
         "Version": "15.2(2)E3",
         "Model": "",
-        "Uptime": "8 weeks, 1 day, 16 hours, 50 minutes",
-        "_source_file": "C:\\Users\\zhiltsov.aa\\Desktop\\net-auto-mermaid\\data\\raw\\NSK\\01\\10.2.99.7.txt",
+        "Uptime": "6 weeks, 3 days, 19 hours, 43 minutes",
+        "_source_file": "C:\\Users\\zhiltsov.aa\\Desktop\\net-auto-mermaid\\data\\raw\\10.2.99.7.txt",
         "_template": "cisco_ios_show_version.template"
       },
       {
         "Version": "17.9.4",
         "Model": "WS-C2960X-48TS-L",
         "Uptime": "",
-        "_source_file": "C:\\Users\\zhiltsov.aa\\Desktop\\net-auto-mermaid\\data\\raw\\NSK\\01\\10.2.99.7.txt",
+        "_source_file": "C:\\Users\\zhiltsov.aa\\Desktop\\net-auto-mermaid\\data\\raw\\10.2.99.7.txt",
         "_template": "cisco_ios_show_version.template"
       }
     ]

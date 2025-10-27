@@ -1,16 +1,130 @@
 {
   "vendor": "cisco_ios",
   "raw_files": [
-    "10.20.98.127.txt"
+    "DEN\\10\\10.20.98.127.txt"
   ],
   "parsed": {
+    "cisco_ios_show_cdp_neighbors": [
+      {
+        "Neighbor": "DEN-NSWS-10-98-127",
+        "LocalInterface": "uptime is",
+        "NeighborPort": "3 days,",
+        "_source_file": "C:\\Users\\zhiltsov.aa\\Desktop\\net-auto-mermaid\\data\\raw\\DEN\\10\\10.20.98.127.txt",
+        "_template": "cisco_ios_show_cdp_neighbors.template"
+      },
+      {
+        "Neighbor": "logging",
+        "LocalInterface": "rate-limit",
+        "NeighborPort": "warnings",
+        "_source_file": "C:\\Users\\zhiltsov.aa\\Desktop\\net-auto-mermaid\\data\\raw\\DEN\\10\\10.20.98.127.txt",
+        "_template": "cisco_ios_show_cdp_neighbors.template"
+      },
+      {
+        "Neighbor": "username",
+        "LocalInterface": "november privilege",
+        "NeighborPort": "5 $1$PEh1$0j/4vxLc8OVXh9Z58a8sc.",
+        "_source_file": "C:\\Users\\zhiltsov.aa\\Desktop\\net-auto-mermaid\\data\\raw\\DEN\\10\\10.20.98.127.txt",
+        "_template": "cisco_ios_show_cdp_neighbors.template"
+      },
+      {
+        "Neighbor": "username",
+        "LocalInterface": "emtsov.s privilege",
+        "NeighborPort": "5 $1$7f5D$3.qRUr.U5dppuoYuVyUhp.",
+        "_source_file": "C:\\Users\\zhiltsov.aa\\Desktop\\net-auto-mermaid\\data\\raw\\DEN\\10\\10.20.98.127.txt",
+        "_template": "cisco_ios_show_cdp_neighbors.template"
+      },
+      {
+        "Neighbor": "username",
+        "LocalInterface": "ivashenko_vb privilege",
+        "NeighborPort": "5 $1$bi7z$qTHuukwOKu/rACvOW/3hy.",
+        "_source_file": "C:\\Users\\zhiltsov.aa\\Desktop\\net-auto-mermaid\\data\\raw\\DEN\\10\\10.20.98.127.txt",
+        "_template": "cisco_ios_show_cdp_neighbors.template"
+      },
+      {
+        "Neighbor": "username",
+        "LocalInterface": "sib_uib privilege",
+        "NeighborPort": "9 $9$RJ64VWzV1YSKQU$a3dKPmGjU4GExZXjw04SfWQGQHhkCaV8ap0Wcmqfnig",
+        "_source_file": "C:\\Users\\zhiltsov.aa\\Desktop\\net-auto-mermaid\\data\\raw\\DEN\\10\\10.20.98.127.txt",
+        "_template": "cisco_ios_show_cdp_neighbors.template"
+      },
+      {
+        "Neighbor": "30820330",
+        "LocalInterface": "30820218 A0030201",
+        "NeighborPort": "2A864886 F70D0101",
+        "_source_file": "C:\\Users\\zhiltsov.aa\\Desktop\\net-auto-mermaid\\data\\raw\\DEN\\10\\10.20.98.127.txt",
+        "_template": "cisco_ios_show_cdp_neighbors.template"
+      },
+      {
+        "Neighbor": "31312F30",
+        "LocalInterface": "2D060355",
+        "NeighborPort": "53656C66 2D536967",
+        "_source_file": "C:\\Users\\zhiltsov.aa\\Desktop\\net-auto-mermaid\\data\\raw\\DEN\\10\\10.20.98.127.txt",
+        "_template": "cisco_ios_show_cdp_neighbors.template"
+      },
+      {
+        "Neighbor": "69666963",
+        "LocalInterface": "6174652D 32323233",
+        "NeighborPort": "170D3138 30393230",
+        "_source_file": "C:\\Users\\zhiltsov.aa\\Desktop\\net-auto-mermaid\\data\\raw\\DEN\\10\\10.20.98.127.txt",
+        "_template": "cisco_ios_show_cdp_neighbors.template"
+      },
+      {
+        "Neighbor": "30375A17",
+        "LocalInterface": "0D323030 31303130",
+        "NeighborPort": "312F302D 06035504",
+        "_source_file": "C:\\Users\\zhiltsov.aa\\Desktop\\net-auto-mermaid\\data\\raw\\DEN\\10\\10.20.98.127.txt",
+        "_template": "cisco_ios_show_cdp_neighbors.template"
+      },
+      {
+        "Neighbor": "D4C1DC99",
+        "LocalInterface": "957D0203 010001A3",
+        "NeighborPort": "1D130101 FF040530",
+        "_source_file": "C:\\Users\\zhiltsov.aa\\Desktop\\net-auto-mermaid\\data\\raw\\DEN\\10\\10.20.98.127.txt",
+        "_template": "cisco_ios_show_cdp_neighbors.template"
+      },
+      {
+        "Neighbor": "301F0603",
+        "LocalInterface": "551D2304",
+        "NeighborPort": "3DE90A8E B8D546CF",
+        "_source_file": "C:\\Users\\zhiltsov.aa\\Desktop\\net-auto-mermaid\\data\\raw\\DEN\\10\\10.20.98.127.txt",
+        "_template": "cisco_ios_show_cdp_neighbors.template"
+      },
+      {
+        "Neighbor": "6B301D06",
+        "LocalInterface": "03551D0E",
+        "NeighborPort": "E90A8EB8 D546CFC7",
+        "_source_file": "C:\\Users\\zhiltsov.aa\\Desktop\\net-auto-mermaid\\data\\raw\\DEN\\10\\10.20.98.127.txt",
+        "_template": "cisco_ios_show_cdp_neighbors.template"
+      },
+      {
+        "Neighbor": "300D0609",
+        "LocalInterface": "2A864886 F70D0101",
+        "NeighborPort": "80147F54 6C29FC58",
+        "_source_file": "C:\\Users\\zhiltsov.aa\\Desktop\\net-auto-mermaid\\data\\raw\\DEN\\10\\10.20.98.127.txt",
+        "_template": "cisco_ios_show_cdp_neighbors.template"
+      },
+      {
+        "Neighbor": "Gig",
+        "LocalInterface": "0/11",
+        "NeighborPort": "I   WS-C2960C",
+        "_source_file": "C:\\Users\\zhiltsov.aa\\Desktop\\net-auto-mermaid\\data\\raw\\DEN\\10\\10.20.98.127.txt",
+        "_template": "cisco_ios_show_cdp_neighbors.template"
+      },
+      {
+        "Neighbor": "Gig",
+        "LocalInterface": "0/12",
+        "NeighborPort": "I   WS-C2960C",
+        "_source_file": "C:\\Users\\zhiltsov.aa\\Desktop\\net-auto-mermaid\\data\\raw\\DEN\\10\\10.20.98.127.txt",
+        "_template": "cisco_ios_show_cdp_neighbors.template"
+      }
+    ],
     "cisco_ios_show_cdp_neighbors_detail": [
       {
         "Neighbor": "DEN-NSWS-16-98-126.kolmar.ru",
         "LocalInterface": "GigabitEthernet0/11",
         "NeighborPort": "GigabitEthernet0/12",
         "Platform": "cisco WS-C2960CX-8PC-L",
-        "_source_file": "C:\\Users\\zhiltsov.aa\\Desktop\\net-auto-mermaid\\data\\raw\\10.20.98.127.txt",
+        "_source_file": "C:\\Users\\zhiltsov.aa\\Desktop\\net-auto-mermaid\\data\\raw\\DEN\\10\\10.20.98.127.txt",
         "_template": "cisco_ios_show_cdp_neighbors_detail.template"
       },
       {
@@ -18,596 +132,24 @@
         "LocalInterface": "GigabitEthernet0/12",
         "NeighborPort": "GigabitEthernet0/11",
         "Platform": "cisco WS-C2960CX-8PC-L",
-        "_source_file": "C:\\Users\\zhiltsov.aa\\Desktop\\net-auto-mermaid\\data\\raw\\10.20.98.127.txt",
+        "_source_file": "C:\\Users\\zhiltsov.aa\\Desktop\\net-auto-mermaid\\data\\raw\\DEN\\10\\10.20.98.127.txt",
         "_template": "cisco_ios_show_cdp_neighbors_detail.template"
-      }
-    ],
-    "cisco_ios_show_interfaces_status": [
-      {
-        "Port": "!",
-        "Name": "Last",
-        "Status": "configuration",
-        "Vlan": "change",
-        "Duplex": "at",
-        "Speed": "18:55:47",
-        "Type": "YAKT Tue Apr 29 2025 by novikov_fv",
-        "_source_file": "C:\\Users\\zhiltsov.aa\\Desktop\\net-auto-mermaid\\data\\raw\\10.20.98.127.txt",
-        "_template": "cisco_ios_show_interfaces_status.template"
-      },
-      {
-        "Port": "!",
-        "Name": "NVRAM",
-        "Status": "config",
-        "Vlan": "last",
-        "Duplex": "updated",
-        "Speed": "at",
-        "Type": "18:55:47 YAKT Tue Apr 29 2025 by novikov_fv",
-        "_source_file": "C:\\Users\\zhiltsov.aa\\Desktop\\net-auto-mermaid\\data\\raw\\10.20.98.127.txt",
-        "_template": "cisco_ios_show_interfaces_status.template"
-      },
-      {
-        "Port": "username",
-        "Name": "november",
-        "Status": "privilege",
-        "Vlan": "15",
-        "Duplex": "secret",
-        "Speed": "5",
-        "Type": "$1$PEh1$0j/4vxLc8OVXh9Z58a8sc.",
-        "_source_file": "C:\\Users\\zhiltsov.aa\\Desktop\\net-auto-mermaid\\data\\raw\\10.20.98.127.txt",
-        "_template": "cisco_ios_show_interfaces_status.template"
-      },
-      {
-        "Port": "username",
-        "Name": "emtsov.s",
-        "Status": "privilege",
-        "Vlan": "15",
-        "Duplex": "secret",
-        "Speed": "5",
-        "Type": "$1$7f5D$3.qRUr.U5dppuoYuVyUhp.",
-        "_source_file": "C:\\Users\\zhiltsov.aa\\Desktop\\net-auto-mermaid\\data\\raw\\10.20.98.127.txt",
-        "_template": "cisco_ios_show_interfaces_status.template"
-      },
-      {
-        "Port": "username",
-        "Name": "ivashenko_vb",
-        "Status": "privilege",
-        "Vlan": "15",
-        "Duplex": "secret",
-        "Speed": "5",
-        "Type": "$1$bi7z$qTHuukwOKu/rACvOW/3hy.",
-        "_source_file": "C:\\Users\\zhiltsov.aa\\Desktop\\net-auto-mermaid\\data\\raw\\10.20.98.127.txt",
-        "_template": "cisco_ios_show_interfaces_status.template"
-      },
-      {
-        "Port": "username",
-        "Name": "sib_uib",
-        "Status": "privilege",
-        "Vlan": "15",
-        "Duplex": "secret",
-        "Speed": "9",
-        "Type": "$9$RJ64VWzV1YSKQU$a3dKPmGjU4GExZXjw04SfWQGQHhkCaV8ap0Wcmqfnig",
-        "_source_file": "C:\\Users\\zhiltsov.aa\\Desktop\\net-auto-mermaid\\data\\raw\\10.20.98.127.txt",
-        "_template": "cisco_ios_show_interfaces_status.template"
-      },
-      {
-        "Port": "aaa",
-        "Name": "authentication",
-        "Status": "login",
-        "Vlan": "login-RADIUS",
-        "Duplex": "group",
-        "Speed": "KOLMAR",
-        "Type": "local",
-        "_source_file": "C:\\Users\\zhiltsov.aa\\Desktop\\net-auto-mermaid\\data\\raw\\10.20.98.127.txt",
-        "_template": "cisco_ios_show_interfaces_status.template"
-      },
-      {
-        "Port": "aaa",
-        "Name": "authorization",
-        "Status": "exec",
-        "Vlan": "auth-RADIUS-exec",
-        "Duplex": "group",
-        "Speed": "KOLMAR",
-        "Type": "local ",
-        "_source_file": "C:\\Users\\zhiltsov.aa\\Desktop\\net-auto-mermaid\\data\\raw\\10.20.98.127.txt",
-        "_template": "cisco_ios_show_interfaces_status.template"
-      },
-      {
-        "Port": "logging",
-        "Name": "host",
-        "Status": "10.10.0.19",
-        "Vlan": "transport",
-        "Duplex": "udp",
-        "Speed": "port",
-        "Type": "1515",
-        "_source_file": "C:\\Users\\zhiltsov.aa\\Desktop\\net-auto-mermaid\\data\\raw\\10.20.98.127.txt",
-        "_template": "cisco_ios_show_interfaces_status.template"
-      },
-      {
-        "Port": "Cisco",
-        "Name": "IOS",
-        "Status": "Software,",
-        "Vlan": "C2960CX",
-        "Duplex": "Software",
-        "Speed": "(C2960CX-UNIVERSALK9-M),",
-        "Type": "Version 15.2(4)E6, RELEASE SOFTWARE (fc4)",
-        "_source_file": "C:\\Users\\zhiltsov.aa\\Desktop\\net-auto-mermaid\\data\\raw\\10.20.98.127.txt",
-        "_template": "cisco_ios_show_interfaces_status.template"
-      },
-      {
-        "Port": "Copyright",
-        "Name": "(c)",
-        "Status": "1986-2018",
-        "Vlan": "by",
-        "Duplex": "Cisco",
-        "Speed": "Systems,",
-        "Type": "Inc.",
-        "_source_file": "C:\\Users\\zhiltsov.aa\\Desktop\\net-auto-mermaid\\data\\raw\\10.20.98.127.txt",
-        "_template": "cisco_ios_show_interfaces_status.template"
-      },
-      {
-        "Port": "ROM:",
-        "Name": "Bootstrap",
-        "Status": "program",
-        "Vlan": "is",
-        "Duplex": "C2960CX",
-        "Speed": "boot",
-        "Type": "loader",
-        "_source_file": "C:\\Users\\zhiltsov.aa\\Desktop\\net-auto-mermaid\\data\\raw\\10.20.98.127.txt",
-        "_template": "cisco_ios_show_interfaces_status.template"
-      },
-      {
-        "Port": "BOOTLDR:",
-        "Name": "C2960CX",
-        "Status": "Boot",
-        "Vlan": "Loader",
-        "Duplex": "(C2960CX-HBOOT-M)",
-        "Speed": "Version",
-        "Type": "15.2(4r)E5, RELEASE SOFTWARE (fc4)",
-        "_source_file": "C:\\Users\\zhiltsov.aa\\Desktop\\net-auto-mermaid\\data\\raw\\10.20.98.127.txt",
-        "_template": "cisco_ios_show_interfaces_status.template"
-      },
-      {
-        "Port": "DEN-NSWS-10-98-127",
-        "Name": "uptime",
-        "Status": "is",
-        "Vlan": "41",
-        "Duplex": "weeks,",
-        "Speed": "1",
-        "Type": "day, 1 hour, 30 minutes",
-        "_source_file": "C:\\Users\\zhiltsov.aa\\Desktop\\net-auto-mermaid\\data\\raw\\10.20.98.127.txt",
-        "_template": "cisco_ios_show_interfaces_status.template"
-      },
-      {
-        "Port": "System",
-        "Name": "restarted",
-        "Status": "at",
-        "Vlan": "22:26:31",
-        "Duplex": "YAKT",
-        "Speed": "Thu",
-        "Type": "Dec 26 2024",
-        "_source_file": "C:\\Users\\zhiltsov.aa\\Desktop\\net-auto-mermaid\\data\\raw\\10.20.98.127.txt",
-        "_template": "cisco_ios_show_interfaces_status.template"
-      },
-      {
-        "Port": "This",
-        "Name": "product",
-        "Status": "contains",
-        "Vlan": "cryptographic",
-        "Duplex": "features",
-        "Speed": "and",
-        "Type": "is subject to United",
-        "_source_file": "C:\\Users\\zhiltsov.aa\\Desktop\\net-auto-mermaid\\data\\raw\\10.20.98.127.txt",
-        "_template": "cisco_ios_show_interfaces_status.template"
-      },
-      {
-        "Port": "States",
-        "Name": "and",
-        "Status": "local",
-        "Vlan": "country",
-        "Duplex": "laws",
-        "Speed": "governing",
-        "Type": "import, export, transfer and",
-        "_source_file": "C:\\Users\\zhiltsov.aa\\Desktop\\net-auto-mermaid\\data\\raw\\10.20.98.127.txt",
-        "_template": "cisco_ios_show_interfaces_status.template"
-      },
-      {
-        "Port": "use.",
-        "Name": "Delivery",
-        "Status": "of",
-        "Vlan": "Cisco",
-        "Duplex": "cryptographic",
-        "Speed": "products",
-        "Type": "does not imply",
-        "_source_file": "C:\\Users\\zhiltsov.aa\\Desktop\\net-auto-mermaid\\data\\raw\\10.20.98.127.txt",
-        "_template": "cisco_ios_show_interfaces_status.template"
-      },
-      {
-        "Port": "third-party",
-        "Name": "authority",
-        "Status": "to",
-        "Vlan": "import,",
-        "Duplex": "export,",
-        "Speed": "distribute",
-        "Type": "or use encryption.",
-        "_source_file": "C:\\Users\\zhiltsov.aa\\Desktop\\net-auto-mermaid\\data\\raw\\10.20.98.127.txt",
-        "_template": "cisco_ios_show_interfaces_status.template"
-      },
-      {
-        "Port": "Importers,",
-        "Name": "exporters,",
-        "Status": "distributors",
-        "Vlan": "and",
-        "Duplex": "users",
-        "Speed": "are",
-        "Type": "responsible for",
-        "_source_file": "C:\\Users\\zhiltsov.aa\\Desktop\\net-auto-mermaid\\data\\raw\\10.20.98.127.txt",
-        "_template": "cisco_ios_show_interfaces_status.template"
-      },
-      {
-        "Port": "compliance",
-        "Name": "with",
-        "Status": "U.S.",
-        "Vlan": "and",
-        "Duplex": "local",
-        "Speed": "country",
-        "Type": "laws. By using this product you",
-        "_source_file": "C:\\Users\\zhiltsov.aa\\Desktop\\net-auto-mermaid\\data\\raw\\10.20.98.127.txt",
-        "_template": "cisco_ios_show_interfaces_status.template"
-      },
-      {
-        "Port": "agree",
-        "Name": "to",
-        "Status": "comply",
-        "Vlan": "with",
-        "Duplex": "applicable",
-        "Speed": "laws",
-        "Type": "and regulations. If you are unable",
-        "_source_file": "C:\\Users\\zhiltsov.aa\\Desktop\\net-auto-mermaid\\data\\raw\\10.20.98.127.txt",
-        "_template": "cisco_ios_show_interfaces_status.template"
-      },
-      {
-        "Port": "to",
-        "Name": "comply",
-        "Status": "with",
-        "Vlan": "U.S.",
-        "Duplex": "and",
-        "Speed": "local",
-        "Type": "laws, return this product immediately.",
-        "_source_file": "C:\\Users\\zhiltsov.aa\\Desktop\\net-auto-mermaid\\data\\raw\\10.20.98.127.txt",
-        "_template": "cisco_ios_show_interfaces_status.template"
-      },
-      {
-        "Port": "A",
-        "Name": "summary",
-        "Status": "of",
-        "Vlan": "U.S.",
-        "Duplex": "laws",
-        "Speed": "governing",
-        "Type": "Cisco cryptographic products may be found at:",
-        "_source_file": "C:\\Users\\zhiltsov.aa\\Desktop\\net-auto-mermaid\\data\\raw\\10.20.98.127.txt",
-        "_template": "cisco_ios_show_interfaces_status.template"
-      },
-      {
-        "Port": "If",
-        "Name": "you",
-        "Status": "require",
-        "Vlan": "further",
-        "Duplex": "assistance",
-        "Speed": "please",
-        "Type": "contact us by sending email to",
-        "_source_file": "C:\\Users\\zhiltsov.aa\\Desktop\\net-auto-mermaid\\data\\raw\\10.20.98.127.txt",
-        "_template": "cisco_ios_show_interfaces_status.template"
-      },
-      {
-        "Port": "cisco",
-        "Name": "WS-C2960CX-8PC-L",
-        "Status": "(APM86XXX)",
-        "Vlan": "processor",
-        "Duplex": "(revision",
-        "Speed": "L0)",
-        "Type": "with 524288K bytes of memory.",
-        "_source_file": "C:\\Users\\zhiltsov.aa\\Desktop\\net-auto-mermaid\\data\\raw\\10.20.98.127.txt",
-        "_template": "cisco_ios_show_interfaces_status.template"
-      },
-      {
-        "Port": "512K",
-        "Name": "bytes",
-        "Status": "of",
-        "Vlan": "flash-simulated",
-        "Duplex": "non-volatile",
-        "Speed": "configuration",
-        "Type": "memory.",
-        "_source_file": "C:\\Users\\zhiltsov.aa\\Desktop\\net-auto-mermaid\\data\\raw\\10.20.98.127.txt",
-        "_template": "cisco_ios_show_interfaces_status.template"
-      },
-      {
-        "Port": "Switch",
-        "Name": "Ports",
-        "Status": "Model",
-        "Vlan": "SW",
-        "Duplex": "Version",
-        "Speed": "SW",
-        "Type": "Image                 ",
-        "_source_file": "C:\\Users\\zhiltsov.aa\\Desktop\\net-auto-mermaid\\data\\raw\\10.20.98.127.txt",
-        "_template": "cisco_ios_show_interfaces_status.template"
-      },
-      {
-        "Port": "*",
-        "Name": "1",
-        "Status": "12",
-        "Vlan": "WS-C2960CX-8PC-L",
-        "Duplex": "15.2(4)E6",
-        "Speed": "C2960CX-UNIVERSALK9-M",
-        "Type": " ",
-        "_source_file": "C:\\Users\\zhiltsov.aa\\Desktop\\net-auto-mermaid\\data\\raw\\10.20.98.127.txt",
-        "_template": "cisco_ios_show_interfaces_status.template"
-      },
-      {
-        "Port": "Interface:",
-        "Name": "GigabitEthernet0/11,",
-        "Status": "Port",
-        "Vlan": "ID",
-        "Duplex": "(outgoing",
-        "Speed": "port):",
-        "Type": "GigabitEthernet0/12",
-        "_source_file": "C:\\Users\\zhiltsov.aa\\Desktop\\net-auto-mermaid\\data\\raw\\10.20.98.127.txt",
-        "_template": "cisco_ios_show_interfaces_status.template"
-      },
-      {
-        "Port": "Cisco",
-        "Name": "IOS",
-        "Status": "Software,",
-        "Vlan": "C2960CX",
-        "Duplex": "Software",
-        "Speed": "(C2960CX-UNIVERSALK9-M),",
-        "Type": "Version 15.2(4)E6, RELEASE SOFTWARE (fc4)",
-        "_source_file": "C:\\Users\\zhiltsov.aa\\Desktop\\net-auto-mermaid\\data\\raw\\10.20.98.127.txt",
-        "_template": "cisco_ios_show_interfaces_status.template"
-      },
-      {
-        "Port": "Copyright",
-        "Name": "(c)",
-        "Status": "1986-2018",
-        "Vlan": "by",
-        "Duplex": "Cisco",
-        "Speed": "Systems,",
-        "Type": "Inc.",
-        "_source_file": "C:\\Users\\zhiltsov.aa\\Desktop\\net-auto-mermaid\\data\\raw\\10.20.98.127.txt",
-        "_template": "cisco_ios_show_interfaces_status.template"
-      },
-      {
-        "Port": "Protocol",
-        "Name": "Hello:",
-        "Status": "OUI=0x00000C,",
-        "Vlan": "Protocol",
-        "Duplex": "ID=0x0112;",
-        "Speed": "payload",
-        "Type": "len=27, value=00000000FFFFFFFF010221FF00000000000000D6FE971B00FF0000",
-        "_source_file": "C:\\Users\\zhiltsov.aa\\Desktop\\net-auto-mermaid\\data\\raw\\10.20.98.127.txt",
-        "_template": "cisco_ios_show_interfaces_status.template"
-      },
-      {
-        "Port": "Interface:",
-        "Name": "GigabitEthernet0/12,",
-        "Status": "Port",
-        "Vlan": "ID",
-        "Duplex": "(outgoing",
-        "Speed": "port):",
-        "Type": "GigabitEthernet0/11",
-        "_source_file": "C:\\Users\\zhiltsov.aa\\Desktop\\net-auto-mermaid\\data\\raw\\10.20.98.127.txt",
-        "_template": "cisco_ios_show_interfaces_status.template"
-      },
-      {
-        "Port": "Cisco",
-        "Name": "IOS",
-        "Status": "Software,",
-        "Vlan": "C2960CX",
-        "Duplex": "Software",
-        "Speed": "(C2960CX-UNIVERSALK9-M),",
-        "Type": "Version 15.2(4)E6, RELEASE SOFTWARE (fc4)",
-        "_source_file": "C:\\Users\\zhiltsov.aa\\Desktop\\net-auto-mermaid\\data\\raw\\10.20.98.127.txt",
-        "_template": "cisco_ios_show_interfaces_status.template"
-      },
-      {
-        "Port": "Copyright",
-        "Name": "(c)",
-        "Status": "1986-2018",
-        "Vlan": "by",
-        "Duplex": "Cisco",
-        "Speed": "Systems,",
-        "Type": "Inc.",
-        "_source_file": "C:\\Users\\zhiltsov.aa\\Desktop\\net-auto-mermaid\\data\\raw\\10.20.98.127.txt",
-        "_template": "cisco_ios_show_interfaces_status.template"
-      },
-      {
-        "Port": "Protocol",
-        "Name": "Hello:",
-        "Status": "OUI=0x00000C,",
-        "Vlan": "Protocol",
-        "Duplex": "ID=0x0112;",
-        "Speed": "payload",
-        "Type": "len=27, value=00000000FFFFFFFF010221FF00000000000000D6FEA09B00FF0000",
-        "_source_file": "C:\\Users\\zhiltsov.aa\\Desktop\\net-auto-mermaid\\data\\raw\\10.20.98.127.txt",
-        "_template": "cisco_ios_show_interfaces_status.template"
-      },
-      {
-        "Port": "Port",
-        "Name": "Name",
-        "Status": "Status",
-        "Vlan": "Vlan",
-        "Duplex": "Duplex",
-        "Speed": "Speed",
-        "Type": "Type ",
-        "_source_file": "C:\\Users\\zhiltsov.aa\\Desktop\\net-auto-mermaid\\data\\raw\\10.20.98.127.txt",
-        "_template": "cisco_ios_show_interfaces_status.template"
-      },
-      {
-        "Port": "Gi0/1",
-        "Name": "CAM_15.213",
-        "Status": "connected",
-        "Vlan": "715",
-        "Duplex": "a-full",
-        "Speed": "a-100",
-        "Type": "10/100/1000BaseTX",
-        "_source_file": "C:\\Users\\zhiltsov.aa\\Desktop\\net-auto-mermaid\\data\\raw\\10.20.98.127.txt",
-        "_template": "cisco_ios_show_interfaces_status.template"
-      },
-      {
-        "Port": "Gi0/2",
-        "Name": "CAM_15.214",
-        "Status": "connected",
-        "Vlan": "715",
-        "Duplex": "a-full",
-        "Speed": "a-100",
-        "Type": "10/100/1000BaseTX",
-        "_source_file": "C:\\Users\\zhiltsov.aa\\Desktop\\net-auto-mermaid\\data\\raw\\10.20.98.127.txt",
-        "_template": "cisco_ios_show_interfaces_status.template"
-      },
-      {
-        "Port": "Gi0/3",
-        "Name": "CAM_15.215",
-        "Status": "connected",
-        "Vlan": "715",
-        "Duplex": "a-full",
-        "Speed": "a-100",
-        "Type": "10/100/1000BaseTX",
-        "_source_file": "C:\\Users\\zhiltsov.aa\\Desktop\\net-auto-mermaid\\data\\raw\\10.20.98.127.txt",
-        "_template": "cisco_ios_show_interfaces_status.template"
-      },
-      {
-        "Port": "Gi0/4",
-        "Name": "CAM_15.216",
-        "Status": "connected",
-        "Vlan": "715",
-        "Duplex": "a-full",
-        "Speed": "a-100",
-        "Type": "10/100/1000BaseTX",
-        "_source_file": "C:\\Users\\zhiltsov.aa\\Desktop\\net-auto-mermaid\\data\\raw\\10.20.98.127.txt",
-        "_template": "cisco_ios_show_interfaces_status.template"
-      },
-      {
-        "Port": "Gi0/5",
-        "Name": "CAM_15.217",
-        "Status": "connected",
-        "Vlan": "715",
-        "Duplex": "a-full",
-        "Speed": "a-100",
-        "Type": "10/100/1000BaseTX",
-        "_source_file": "C:\\Users\\zhiltsov.aa\\Desktop\\net-auto-mermaid\\data\\raw\\10.20.98.127.txt",
-        "_template": "cisco_ios_show_interfaces_status.template"
-      },
-      {
-        "Port": "Gi0/6",
-        "Name": "CAM_15.52",
-        "Status": "connected",
-        "Vlan": "715",
-        "Duplex": "a-full",
-        "Speed": "a-100",
-        "Type": "10/100/1000BaseTX",
-        "_source_file": "C:\\Users\\zhiltsov.aa\\Desktop\\net-auto-mermaid\\data\\raw\\10.20.98.127.txt",
-        "_template": "cisco_ios_show_interfaces_status.template"
-      },
-      {
-        "Port": "Gi0/7",
-        "Name": "CAM_15.53",
-        "Status": "connected",
-        "Vlan": "715",
-        "Duplex": "a-full",
-        "Speed": "a-100",
-        "Type": "10/100/1000BaseTX",
-        "_source_file": "C:\\Users\\zhiltsov.aa\\Desktop\\net-auto-mermaid\\data\\raw\\10.20.98.127.txt",
-        "_template": "cisco_ios_show_interfaces_status.template"
-      },
-      {
-        "Port": "Gi0/8",
-        "Name": "NetPing_15.239",
-        "Status": "connected",
-        "Vlan": "715",
-        "Duplex": "a-full",
-        "Speed": "a-100",
-        "Type": "10/100/1000BaseTX",
-        "_source_file": "C:\\Users\\zhiltsov.aa\\Desktop\\net-auto-mermaid\\data\\raw\\10.20.98.127.txt",
-        "_template": "cisco_ios_show_interfaces_status.template"
-      },
-      {
-        "Port": "Gi0/11",
-        "Name": "UP_98.126_Gi0/12",
-        "Status": "connected",
-        "Vlan": "trunk",
-        "Duplex": "a-full",
-        "Speed": "a-1000",
-        "Type": "1000BaseLX SFP",
-        "_source_file": "C:\\Users\\zhiltsov.aa\\Desktop\\net-auto-mermaid\\data\\raw\\10.20.98.127.txt",
-        "_template": "cisco_ios_show_interfaces_status.template"
-      },
-      {
-        "Port": "Gi0/12",
-        "Name": "TRUNK_98.128_Gi0/1",
-        "Status": "connected",
-        "Vlan": "trunk",
-        "Duplex": "a-full",
-        "Speed": "a-1000",
-        "Type": "1000BaseLX SFP",
-        "_source_file": "C:\\Users\\zhiltsov.aa\\Desktop\\net-auto-mermaid\\data\\raw\\10.20.98.127.txt",
-        "_template": "cisco_ios_show_interfaces_status.template"
       }
     ],
     "cisco_ios_show_version": [
       {
         "Version": "15.2(4)E6",
         "Model": "",
-        "Uptime": "41 weeks, 1 day, 1 hour, 30 minutes",
-        "_source_file": "C:\\Users\\zhiltsov.aa\\Desktop\\net-auto-mermaid\\data\\raw\\10.20.98.127.txt",
+        "Uptime": "43 weeks, 3 days, 22 hours, 53 minutes",
+        "_source_file": "C:\\Users\\zhiltsov.aa\\Desktop\\net-auto-mermaid\\data\\raw\\DEN\\10\\10.20.98.127.txt",
         "_template": "cisco_ios_show_version.template"
       },
       {
         "Version": "15.2(4)E6",
         "Model": "WS-C2960CX-8PC-L",
         "Uptime": "",
-        "_source_file": "C:\\Users\\zhiltsov.aa\\Desktop\\net-auto-mermaid\\data\\raw\\10.20.98.127.txt",
+        "_source_file": "C:\\Users\\zhiltsov.aa\\Desktop\\net-auto-mermaid\\data\\raw\\DEN\\10\\10.20.98.127.txt",
         "_template": "cisco_ios_show_version.template"
-      }
-    ],
-    "cisco_ios_show_vlan_brief": [
-      {
-        "VlanId": "30820330",
-        "VlanName": "30820218",
-        "Status": "A0030201",
-        "Ports": "02020101 300D0609 2A864886 F70D0101 05050030 ",
-        "_source_file": "C:\\Users\\zhiltsov.aa\\Desktop\\net-auto-mermaid\\data\\raw\\10.20.98.127.txt",
-        "_template": "cisco_ios_show_vlan_brief.template"
-      },
-      {
-        "VlanId": "69666963",
-        "VlanName": "6174652D",
-        "Status": "32323233",
-        "Ports": "34323035 3930301E 170D3138 30393230 30313537 ",
-        "_source_file": "C:\\Users\\zhiltsov.aa\\Desktop\\net-auto-mermaid\\data\\raw\\10.20.98.127.txt",
-        "_template": "cisco_ios_show_vlan_brief.template"
-      },
-      {
-        "VlanId": "32303539",
-        "VlanName": "30308201",
-        "Status": "22300D06",
-        "Ports": "092A8648 86F70D01 01010500 0382010F 00308201 ",
-        "_source_file": "C:\\Users\\zhiltsov.aa\\Desktop\\net-auto-mermaid\\data\\raw\\10.20.98.127.txt",
-        "_template": "cisco_ios_show_vlan_brief.template"
-      },
-      {
-        "VlanId": "2",
-        "VlanName": "Virtual",
-        "Status": "Ethernet",
-        "Ports": "interfaces",
-        "_source_file": "C:\\Users\\zhiltsov.aa\\Desktop\\net-auto-mermaid\\data\\raw\\10.20.98.127.txt",
-        "_template": "cisco_ios_show_vlan_brief.template"
-      },
-      {
-        "VlanId": "12",
-        "VlanName": "Gigabit",
-        "Status": "Ethernet",
-        "Ports": "interfaces",
-        "_source_file": "C:\\Users\\zhiltsov.aa\\Desktop\\net-auto-mermaid\\data\\raw\\10.20.98.127.txt",
-        "_template": "cisco_ios_show_vlan_brief.template"
       }
     ]
   },

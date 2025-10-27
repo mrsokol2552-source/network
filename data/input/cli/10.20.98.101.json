@@ -4,6 +4,15 @@
     "unknown\\10.20.98.101.txt"
   ],
   "parsed": {
+    "cisco_ios_show_cdp_neighbors": [
+      {
+        "Neighbor": "enable",
+        "LocalInterface": "password level",
+        "NeighborPort": "a4238cf86dd835abc3e43a77e62fd19bb690f6bb",
+        "_source_file": "C:\\Users\\zhiltsov.aa\\Desktop\\net-auto-mermaid\\data\\raw\\unknown\\10.20.98.101.txt",
+        "_template": "cisco_ios_show_cdp_neighbors.template"
+      }
+    ],
     "cisco_ios_show_cdp_neighbors_detail": [
       {
         "Neighbor": "e4:5a:d4:25:d1:50",

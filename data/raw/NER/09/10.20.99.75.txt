@@ -13,7 +13,7 @@ Compiled Wed 12-Jul-17 15:29 by prod_rel_team
 ROM: Bootstrap program is C2960 boot loader
 BOOTLDR: C2960 Boot Loader (C2960-HBOOT-M) Version 15.0(2r)EZ1, RELEASE SOFTWARE (fc1)
 
-NER-NSWS-09-99-75 uptime is 5 weeks, 3 days, 2 hours, 56 minutes
+NER-NSWS-09-99-75 uptime is 5 weeks, 3 days, 3 hours, 38 minutes
 System returned to ROM by power-on
 System image file is "flash:/c2960-lanbasek9-mz.152-2.E7/c2960-lanbasek9-mz.152-2.E7.bin"
 Last reload reason: power-on
@@ -70,6 +70,1083 @@ Configuration register is 0xF
 
 
 
+$ show running-config
+Building configuration...
+
+Current configuration : 28295 bytes
+!
+! Last configuration change at 07:36:15 YAKT Fri Mar 26 1993 by zhiltsov_a
+!
+version 15.2
+no service pad
+service timestamps debug datetime msec localtime show-timezone year
+service timestamps log datetime msec
+service password-encryption
+service unsupported-transceiver
+!
+hostname NER-NSWS-09-99-75
+!
+boot-start-marker
+boot-end-marker
+!
+logging buffered 16386
+logging rate-limit 100 except warnings
+!
+username ivashenko_vb privilege 15 secret 5 $1$bi7z$qTHuukwOKu/rACvOW/3hy.
+username sib_uib privilege 15 secret 9 $9$RJ64VWzV1YSKQU$a3dKPmGjU4GExZXjw04SfWQGQHhkCaV8ap0Wcmqfnig
+username volodin_s privilege 15 secret 5 $1$JmaI$6.IS6lXS9k/jufzr8dbtW/
+username zhiltsov_a privilege 15 secret 5 $1$GlGs$og8xNSJCIOf6dyIo1q8z21
+aaa new-model
+!
+!
+aaa authentication login login-RADIUS group radius local
+aaa authorization console
+aaa authorization exec auth-RADIUS-exec group radius local 
+!
+!
+!
+!
+!
+!
+aaa session-id common
+clock timezone YAKT 9 0
+system mtu routing 1500
+vtp mode transparent
+!
+!
+!
+!
+!
+!
+!
+ip dhcp snooping vlan 1-4094
+ip dhcp snooping
+ip domain-name kolmar.ru
+ip name-server 192.168.74.6
+ip name-server 192.168.74.210
+!
+!
+crypto pki trustpoint TP-self-signed-1906053248
+ enrollment selfsigned
+ subject-name cn=IOS-Self-Signed-Certificate-1906053248
+ revocation-check none
+ rsakeypair TP-self-signed-1906053248
+!
+!
+crypto pki certificate chain TP-self-signed-1906053248
+ certificate self-signed 01
+  3082022B 30820194 A0030201 02020101 300D0609 2A864886 F70D0101 05050030 
+  31312F30 2D060355 04031326 494F532D 53656C66 2D536967 6E65642D 43657274 
+  69666963 6174652D 31393036 30353332 3438301E 170D3933 30333031 30303031 
+  30365A17 0D323030 31303130 30303030 305A3031 312F302D 06035504 03132649 
+  4F532D53 656C662D 5369676E 65642D43 65727469 66696361 74652D31 39303630 
+  35333234 3830819F 300D0609 2A864886 F70D0101 01050003 818D0030 81890281 
+  8100BCF2 D26358BF 85062544 46432953 B6FF6E72 F42F46F8 B6FA553B 64671301 
+  89E1CAAC 6F0667E7 3FF4C501 887D8236 0DE69805 EE65E3F6 D3F9DCB6 D68007B1 
+  4EF50630 00D7C837 EE98CF14 9A91E5C3 C2939349 C126AEA6 DCC18A16 77B2CCC3 
+  648493D1 48A861A7 F725EC90 835C8926 E92CD44E BC5F2FF7 7E5FC0C3 16B3B1AB 
+  A7E50203 010001A3 53305130 0F060355 1D130101 FF040530 030101FF 301F0603 
+  551D2304 18301680 14BA9AA7 912F2A25 82B4A916 F87E27EF 0A8CA3A8 17301D06 
+  03551D0E 04160414 BA9AA791 2F2A2582 B4A916F8 7E27EF0A 8CA3A817 300D0609 
+  2A864886 F70D0101 05050003 818100A9 28BD0B32 CEC88B5A F629EF4A 4EF6CD7C 
+  FE6B55E5 130B2060 E1C183B7 D03732CC 29F0BB89 16711F0D 8BC6C457 CF332161 
+  81E9C37F 26B20171 E5FF83DF 4EFDB90C A8DE2B51 98E9FD68 E368ACA1 9D789B32 
+  79F5526D 55FA7295 38459E2F 02E8E142 28CAF90F 572B6F84 7C5561AB A8BE9059 
+  6970E342 B03E9A98 B259FE63 A6DE90
+  	quit
+no errdisable detect cause gbic-invalid
+no errdisable detect cause sfp-config-mismatch
+errdisable recovery cause udld
+errdisable recovery cause bpduguard
+errdisable recovery cause security-violation
+errdisable recovery cause channel-misconfig
+errdisable recovery cause pagp-flap
+errdisable recovery cause dtp-flap
+errdisable recovery cause link-flap
+errdisable recovery cause sfp-config-mismatch
+errdisable recovery cause gbic-invalid
+errdisable recovery cause psecure-violation
+errdisable recovery cause port-mode-failure
+errdisable recovery cause dhcp-rate-limit
+errdisable recovery cause pppoe-ia-rate-limit
+errdisable recovery cause mac-limit
+errdisable recovery cause vmps
+errdisable recovery cause storm-control
+errdisable recovery cause inline-power
+errdisable recovery cause arp-inspection
+errdisable recovery cause loopback
+errdisable recovery cause small-frame
+errdisable recovery cause psp
+errdisable recovery interval 180
+!
+spanning-tree mode rapid-pvst
+spanning-tree extend system-id
+!
+vlan internal allocation policy ascending
+!
+vlan 13
+ name Phones
+!
+vlan 14 
+!
+vlan 17
+ name Transport
+!
+vlan 20
+ name Nerungry
+!
+vlan 21
+ name Printers(Nerungry)
+!
+vlan 22
+ name TV
+!
+vlan 30
+ name Wi-Fi
+!
+vlan 31
+ name Wi-Fi_Guest
+!
+vlan 32
+ name Wi-Fi_Works
+!
+vlan 33
+ name Wi-Fi_Directors
+!
+vlan 34
+ name Wi-Fi_Generals
+!
+vlan 47
+ name REAL_IP_TTK 
+!
+vlan 109
+ name Megafon_point
+!
+vlan 710
+ name Video-SB-Office 
+!
+vlan 1420
+ name VKS(1420)
+!
+vlan 1930
+ name REAL_IP_MEGAFON 
+lldp run
+!
+!
+!
+!
+!
+!
+interface FastEthernet0/1
+ description PC
+ switchport access vlan 20
+ logging event spanning-tree
+ logging event status
+ no snmp trap link-status
+ storm-control broadcast level 5.00 3.00
+ storm-control multicast level 5.00 3.00
+ storm-control action shutdown
+ storm-control action trap
+ no lldp transmit
+ no lldp receive
+ no cdp enable
+ spanning-tree portfast
+ spanning-tree bpduguard enable
+ ip dhcp snooping limit rate 10
+!
+interface FastEthernet0/2
+ description Nettop
+ switchport access vlan 20
+ logging event spanning-tree
+ logging event status
+ no snmp trap link-status
+ storm-control broadcast level 5.00 3.00
+ storm-control multicast level 5.00 3.00
+ storm-control action shutdown
+ storm-control action trap
+ no lldp transmit
+ no lldp receive
+ no cdp enable
+ spanning-tree portfast
+ spanning-tree bpduguard enable
+ ip dhcp snooping limit rate 10
+!
+interface FastEthernet0/3
+ description PC
+ switchport access vlan 20
+ logging event spanning-tree
+ logging event status
+ no snmp trap link-status
+ storm-control broadcast level 5.00 3.00
+ storm-control multicast level 5.00 3.00
+ storm-control action shutdown
+ storm-control action trap
+ no lldp transmit
+ no lldp receive
+ no cdp enable
+ spanning-tree portfast
+ spanning-tree bpduguard enable
+ ip dhcp snooping limit rate 10
+!
+interface FastEthernet0/4
+ description Nettop_BigHall
+ switchport access vlan 22
+ logging event spanning-tree
+ logging event status
+ no snmp trap link-status
+ storm-control broadcast level 5.00 3.00
+ storm-control multicast level 5.00 3.00
+ storm-control action shutdown
+ storm-control action trap
+ no lldp transmit
+ no lldp receive
+ no cdp enable
+ spanning-tree portfast
+ spanning-tree bpduguard enable
+ ip dhcp snooping limit rate 10
+!
+interface FastEthernet0/5
+ description PC
+ switchport access vlan 20
+ logging event spanning-tree
+ logging event status
+ no snmp trap link-status
+ storm-control broadcast level 5.00 3.00
+ storm-control multicast level 5.00 3.00
+ storm-control action shutdown
+ storm-control action trap
+ no lldp transmit
+ no lldp receive
+ no cdp enable
+ spanning-tree portfast
+ spanning-tree bpduguard enable
+ ip dhcp snooping limit rate 10
+!
+interface FastEthernet0/6
+ description VKS_under_228.2
+ switchport access vlan 1420
+ switchport mode access
+ switchport nonegotiate
+ logging event spanning-tree
+ logging event status
+ speed 100
+ no snmp trap link-status
+ storm-control broadcast level 5.00 3.00
+ storm-control multicast level 5.00 3.00
+ storm-control action shutdown
+ storm-control action trap
+ spanning-tree portfast
+ ip dhcp snooping limit rate 10
+!
+interface FastEthernet0/7
+ description WIFI
+ switchport trunk allowed vlan 1,30-34
+ switchport mode trunk
+ logging event spanning-tree
+ logging event status
+ no snmp trap link-status
+ storm-control broadcast level 5.00 3.00
+ storm-control multicast level 5.00 3.00
+ storm-control action shutdown
+ storm-control action trap
+ no cdp enable
+!
+interface FastEthernet0/8
+ switchport access vlan 20
+ switchport trunk allowed vlan 17,20,21
+ switchport mode trunk
+ logging event spanning-tree
+ logging event status
+ speed 100
+ no snmp trap link-status
+ storm-control broadcast level 5.00 3.00
+ storm-control multicast level 5.00 3.00
+ storm-control action shutdown
+ storm-control action trap
+ no lldp transmit
+ no lldp receive
+ ip dhcp snooping limit rate 10
+!
+interface FastEthernet0/9
+ description WIFI
+ switchport trunk allowed vlan 1,30-34
+ switchport mode trunk
+ logging event spanning-tree
+ logging event status
+ no snmp trap link-status
+ storm-control broadcast level 5.00 3.00
+ storm-control multicast level 5.00 3.00
+ storm-control action shutdown
+ storm-control action trap
+ no cdp enable
+!
+interface FastEthernet0/10
+ description WIFI__OFFICE-AP-24V-1717
+ switchport trunk allowed vlan 30-34
+ switchport mode trunk
+ logging event spanning-tree
+ logging event status
+ duplex full
+ no snmp trap link-status
+ storm-control broadcast level 5.00 3.00
+ storm-control multicast level 5.00 3.00
+ storm-control action shutdown
+ storm-control action trap
+ spanning-tree bpduguard enable
+ ip dhcp snooping limit rate 15
+!
+interface FastEthernet0/11
+ description PC
+ switchport access vlan 20
+ logging event spanning-tree
+ logging event status
+ no snmp trap link-status
+ storm-control broadcast level 5.00 3.00
+ storm-control multicast level 5.00 3.00
+ storm-control action shutdown
+ storm-control action trap
+ no lldp transmit
+ no lldp receive
+ no cdp enable
+ spanning-tree portfast
+ spanning-tree bpduguard enable
+ ip dhcp snooping limit rate 10
+!
+interface FastEthernet0/12
+ description PC
+ switchport access vlan 21
+ logging event spanning-tree
+ logging event status
+ no snmp trap link-status
+ storm-control broadcast level 5.00 3.00
+ storm-control multicast level 5.00 3.00
+ storm-control action shutdown
+ storm-control action trap
+ no lldp transmit
+ no lldp receive
+ no cdp enable
+ spanning-tree portfast
+ spanning-tree bpduguard enable
+ ip dhcp snooping limit rate 10
+!
+interface FastEthernet0/13
+ description PC_LectureHall
+ switchport access vlan 20
+ logging event spanning-tree
+ logging event status
+ no snmp trap link-status
+ storm-control broadcast level 5.00 3.00
+ storm-control multicast level 5.00 3.00
+ storm-control action shutdown
+ storm-control action trap
+ no lldp transmit
+ no lldp receive
+ no cdp enable
+ spanning-tree portfast
+ spanning-tree bpduguard enable
+ ip dhcp snooping limit rate 10
+!
+interface FastEthernet0/14
+ description kab 
+ switchport access vlan 20
+ logging event spanning-tree
+ logging event status
+ no snmp trap link-status
+ storm-control broadcast level 5.00 3.00
+ storm-control multicast level 5.00 3.00
+ storm-control action shutdown
+ storm-control action trap
+ no lldp transmit
+ no lldp receive
+ no cdp enable
+ spanning-tree portfast
+ spanning-tree bpduguard enable
+ ip dhcp snooping limit rate 10
+!
+interface FastEthernet0/15
+ description Printer
+ switchport access vlan 21
+ logging event spanning-tree
+ logging event status
+ no snmp trap link-status
+ storm-control broadcast level 5.00 3.00
+ storm-control multicast level 5.00 3.00
+ storm-control action shutdown
+ storm-control action trap
+ no lldp transmit
+ no lldp receive
+ no cdp enable
+ spanning-tree portfast
+ spanning-tree bpduguard enable
+ ip dhcp snooping limit rate 10
+!
+interface FastEthernet0/16
+ logging event spanning-tree
+ logging event status
+ shutdown
+ no snmp trap link-status
+ storm-control broadcast level 5.00 3.00
+ storm-control multicast level 5.00 3.00
+ storm-control action shutdown
+ storm-control action trap
+ no lldp transmit
+ no lldp receive
+ no cdp enable
+ spanning-tree portfast
+ spanning-tree bpduguard enable
+ ip dhcp snooping limit rate 10
+!
+interface FastEthernet0/17
+ description PC-TEST
+ switchport access vlan 20
+ logging event spanning-tree
+ logging event status
+ no snmp trap link-status
+ storm-control broadcast level 5.00 3.00
+ storm-control multicast level 5.00 3.00
+ storm-control action shutdown
+ storm-control action trap
+ no lldp transmit
+ no lldp receive
+ no cdp enable
+ spanning-tree portfast
+ spanning-tree bpduguard enable
+ ip dhcp snooping limit rate 10
+!
+interface FastEthernet0/18
+ description PC-TEST
+ switchport access vlan 20
+ logging event spanning-tree
+ logging event status
+ no snmp trap link-status
+ storm-control broadcast level 5.00 3.00
+ storm-control multicast level 5.00 3.00
+ storm-control action shutdown
+ storm-control action trap
+ no lldp transmit
+ no lldp receive
+ no cdp enable
+ spanning-tree portfast
+ spanning-tree bpduguard enable
+ ip dhcp snooping limit rate 10
+!
+interface FastEthernet0/19
+ description PC-TEST
+ switchport access vlan 20
+ switchport mode access
+ logging event spanning-tree
+ logging event status
+ no snmp trap link-status
+ storm-control broadcast level 5.00 3.00
+ storm-control multicast level 5.00 3.00
+ storm-control action shutdown
+ storm-control action trap
+ no lldp transmit
+ no lldp receive
+ no cdp enable
+ spanning-tree portfast
+ spanning-tree bpduguard enable
+ ip dhcp snooping limit rate 10
+!
+interface FastEthernet0/20
+ logging event spanning-tree
+ logging event status
+ shutdown
+ no snmp trap link-status
+ storm-control broadcast level 5.00 3.00
+ storm-control multicast level 5.00 3.00
+ storm-control action shutdown
+ storm-control action trap
+ no lldp transmit
+ no lldp receive
+ no cdp enable
+ spanning-tree portfast
+ spanning-tree bpduguard enable
+ ip dhcp snooping limit rate 10
+!
+interface FastEthernet0/21
+ description PC-TEST
+ switchport access vlan 20
+ logging event spanning-tree
+ logging event status
+ no snmp trap link-status
+ storm-control broadcast level 5.00 3.00
+ storm-control multicast level 5.00 3.00
+ storm-control action shutdown
+ storm-control action trap
+ no lldp transmit
+ no lldp receive
+ no cdp enable
+ spanning-tree portfast
+ spanning-tree bpduguard enable
+ ip dhcp snooping limit rate 10
+!
+interface FastEthernet0/22
+ description PC-TEST
+ switchport access vlan 20
+ logging event spanning-tree
+ logging event status
+ no snmp trap link-status
+ storm-control broadcast level 5.00 3.00
+ storm-control multicast level 5.00 3.00
+ storm-control action shutdown
+ storm-control action trap
+ no lldp transmit
+ no lldp receive
+ no cdp enable
+ spanning-tree portfast
+ spanning-tree bpduguard enable
+ ip dhcp snooping limit rate 10
+!
+interface FastEthernet0/23
+ description PC
+ switchport access vlan 20
+ logging event spanning-tree
+ logging event status
+ no snmp trap link-status
+ storm-control broadcast level 5.00 3.00
+ storm-control multicast level 5.00 3.00
+ storm-control action shutdown
+ storm-control action trap
+ no lldp transmit
+ no lldp receive
+ no cdp enable
+ spanning-tree portfast
+ spanning-tree bpduguard enable
+ ip dhcp snooping limit rate 10
+!
+interface FastEthernet0/24
+ description Printer(Archive)
+ switchport access vlan 21
+ logging event spanning-tree
+ logging event status
+ no snmp trap link-status
+ storm-control broadcast level 5.00 3.00
+ storm-control multicast level 5.00 3.00
+ storm-control action shutdown
+ storm-control action trap
+ no lldp transmit
+ no lldp receive
+ no cdp enable
+ spanning-tree portfast
+ spanning-tree bpduguard enable
+ ip dhcp snooping limit rate 10
+!
+interface FastEthernet0/25
+ description Archive
+ switchport access vlan 20
+ logging event spanning-tree
+ logging event status
+ no snmp trap link-status
+ storm-control broadcast level 5.00 3.00
+ storm-control multicast level 5.00 3.00
+ storm-control action shutdown
+ storm-control action trap
+ no lldp transmit
+ no lldp receive
+ no cdp enable
+ spanning-tree portfast
+ spanning-tree bpduguard enable
+ ip dhcp snooping limit rate 10
+!
+interface FastEthernet0/26
+ description Printer(Archive)
+ switchport access vlan 21
+ logging event spanning-tree
+ logging event status
+ no snmp trap link-status
+ storm-control broadcast level 5.00 3.00
+ storm-control multicast level 5.00 3.00
+ storm-control action shutdown
+ storm-control action trap
+ no lldp transmit
+ no lldp receive
+ no cdp enable
+ spanning-tree portfast
+ spanning-tree bpduguard enable
+ ip dhcp snooping limit rate 10
+!
+interface FastEthernet0/27
+ description PC
+ switchport access vlan 20
+ logging event spanning-tree
+ logging event status
+ no snmp trap link-status
+ storm-control broadcast level 5.00 3.00
+ storm-control multicast level 5.00 3.00
+ storm-control action shutdown
+ storm-control action trap
+ no lldp transmit
+ no lldp receive
+ no cdp enable
+ spanning-tree portfast
+ spanning-tree bpduguard enable
+ ip dhcp snooping limit rate 10
+!
+interface FastEthernet0/28
+ switchport access vlan 20
+ logging event spanning-tree
+ logging event status
+ no snmp trap link-status
+ storm-control broadcast level 5.00 3.00
+ storm-control multicast level 5.00 3.00
+ storm-control action shutdown
+ storm-control action trap
+ no lldp transmit
+ no lldp receive
+ no cdp enable
+ spanning-tree portfast
+ spanning-tree bpduguard enable
+ ip dhcp snooping limit rate 10
+!
+interface FastEthernet0/29
+ switchport access vlan 20
+ logging event spanning-tree
+ logging event status
+ no snmp trap link-status
+ storm-control broadcast level 5.00 3.00
+ storm-control multicast level 5.00 3.00
+ storm-control action shutdown
+ storm-control action trap
+ no lldp transmit
+ no lldp receive
+ no cdp enable
+ spanning-tree portfast
+ spanning-tree bpduguard enable
+ ip dhcp snooping limit rate 10
+!
+interface FastEthernet0/30
+ logging event spanning-tree
+ logging event status
+ shutdown
+ no snmp trap link-status
+ storm-control broadcast level 5.00 3.00
+ storm-control multicast level 5.00 3.00
+ storm-control action shutdown
+ storm-control action trap
+ no lldp transmit
+ no lldp receive
+ no cdp enable
+ spanning-tree portfast
+ spanning-tree bpduguard enable
+ ip dhcp snooping limit rate 10
+!
+interface FastEthernet0/31
+ description PC
+ switchport access vlan 20
+ logging event spanning-tree
+ logging event status
+ no snmp trap link-status
+ storm-control broadcast level 5.00 3.00
+ storm-control multicast level 5.00 3.00
+ storm-control action shutdown
+ storm-control action trap
+ no lldp transmit
+ no lldp receive
+ no cdp enable
+ spanning-tree portfast
+ spanning-tree bpduguard enable
+ ip dhcp snooping limit rate 10
+!
+interface FastEthernet0/32
+ description SIB
+ switchport access vlan 710
+ switchport mode access
+ logging event spanning-tree
+ logging event status
+ shutdown
+ no snmp trap link-status
+ storm-control broadcast level 5.00 3.00
+ storm-control multicast level 5.00 3.00
+ storm-control action shutdown
+ storm-control action trap
+ no lldp transmit
+ no lldp receive
+ no cdp enable
+ spanning-tree portfast
+ spanning-tree bpduguard enable
+ ip dhcp snooping limit rate 10
+!
+interface FastEthernet0/33
+ description VKS_under_14.11
+ switchport access vlan 1420
+ switchport mode access
+ switchport nonegotiate
+ logging event spanning-tree
+ logging event status
+ speed 100
+ no snmp trap link-status
+ storm-control broadcast level 5.00 3.00
+ storm-control multicast level 5.00 3.00
+ storm-control action shutdown
+ storm-control action trap
+ spanning-tree portfast
+ ip dhcp snooping limit rate 10
+!
+interface FastEthernet0/34
+ description monitoring-kab-1-level
+ switchport access vlan 20
+ logging event spanning-tree
+ logging event status
+ no snmp trap link-status
+ storm-control broadcast level 5.00 3.00
+ storm-control multicast level 5.00 3.00
+ storm-control action shutdown
+ storm-control action trap
+ no lldp transmit
+ no lldp receive
+ no cdp enable
+ spanning-tree portfast
+ spanning-tree bpduguard enable
+ ip dhcp snooping limit rate 10
+!
+interface FastEthernet0/35
+ description Printer
+ switchport access vlan 21
+ logging event spanning-tree
+ logging event status
+ no snmp trap link-status
+ storm-control broadcast level 5.00 3.00
+ storm-control multicast level 5.00 3.00
+ storm-control action shutdown
+ storm-control action trap
+ no lldp transmit
+ no lldp receive
+ no cdp enable
+ spanning-tree portfast
+ spanning-tree bpduguard enable
+ ip dhcp snooping limit rate 10
+!
+interface FastEthernet0/36
+ switchport access vlan 20
+ logging event spanning-tree
+ logging event status
+ no snmp trap link-status
+ storm-control broadcast level 5.00 3.00
+ storm-control multicast level 5.00 3.00
+ storm-control action shutdown
+ storm-control action trap
+ no lldp transmit
+ no lldp receive
+ no cdp enable
+ spanning-tree portfast
+ spanning-tree bpduguard enable
+ ip dhcp snooping limit rate 10
+!
+interface FastEthernet0/37
+ switchport access vlan 20
+ logging event spanning-tree
+ logging event status
+ no snmp trap link-status
+ storm-control broadcast level 5.00 3.00
+ storm-control multicast level 5.00 3.00
+ storm-control action shutdown
+ storm-control action trap
+ no lldp transmit
+ no lldp receive
+ no cdp enable
+ spanning-tree portfast
+ spanning-tree bpduguard enable
+ ip dhcp snooping limit rate 10
+!
+interface FastEthernet0/38
+ switchport access vlan 20
+ logging event spanning-tree
+ logging event status
+ no snmp trap link-status
+ storm-control broadcast level 5.00 3.00
+ storm-control multicast level 5.00 3.00
+ storm-control action shutdown
+ storm-control action trap
+ no lldp transmit
+ no lldp receive
+ no cdp enable
+ spanning-tree portfast
+ spanning-tree bpduguard enable
+ ip dhcp snooping limit rate 10
+!
+interface FastEthernet0/39
+ switchport access vlan 20
+ logging event spanning-tree
+ logging event status
+ no snmp trap link-status
+ storm-control broadcast level 5.00 3.00
+ storm-control multicast level 5.00 3.00
+ storm-control action shutdown
+ storm-control action trap
+ no lldp transmit
+ no lldp receive
+ no cdp enable
+ spanning-tree portfast
+ spanning-tree bpduguard enable
+ ip dhcp snooping limit rate 10
+!
+interface FastEthernet0/40
+ switchport access vlan 20
+ logging event spanning-tree
+ logging event status
+ no snmp trap link-status
+ storm-control broadcast level 5.00 3.00
+ storm-control multicast level 5.00 3.00
+ storm-control action shutdown
+ storm-control action trap
+ no lldp transmit
+ no lldp receive
+ no cdp enable
+ spanning-tree portfast
+ spanning-tree bpduguard enable
+ ip dhcp snooping limit rate 10
+!
+interface FastEthernet0/41
+ logging event spanning-tree
+ logging event status
+ shutdown
+ no snmp trap link-status
+ storm-control broadcast level 5.00 3.00
+ storm-control multicast level 5.00 3.00
+ storm-control action shutdown
+ storm-control action trap
+ no lldp transmit
+ no lldp receive
+ no cdp enable
+ spanning-tree portfast
+ spanning-tree bpduguard enable
+ ip dhcp snooping limit rate 10
+!
+interface FastEthernet0/42
+ description Point_Megafon
+ switchport access vlan 109
+ logging event spanning-tree
+ logging event status
+ no snmp trap link-status
+ storm-control broadcast level 5.00 3.00
+ storm-control multicast level 5.00 3.00
+ storm-control action shutdown
+ storm-control action trap
+ no lldp transmit
+ no lldp receive
+ no cdp enable
+ spanning-tree portfast
+ spanning-tree bpduguard enable
+ ip dhcp snooping limit rate 10
+!
+interface FastEthernet0/43
+ description Point_Megafon
+ switchport access vlan 109
+ logging event spanning-tree
+ logging event status
+ no snmp trap link-status
+ storm-control broadcast level 5.00 3.00
+ storm-control multicast level 5.00 3.00
+ storm-control action shutdown
+ storm-control action trap
+ no lldp transmit
+ no lldp receive
+ no cdp enable
+ spanning-tree portfast
+ spanning-tree bpduguard enable
+ ip dhcp snooping limit rate 10
+!
+interface FastEthernet0/44
+ description TV
+ switchport access vlan 22
+ logging event spanning-tree
+ logging event status
+ no snmp trap link-status
+ storm-control broadcast level 5.00 3.00
+ storm-control multicast level 5.00 3.00
+ storm-control action shutdown
+ storm-control action trap
+ no lldp transmit
+ no lldp receive
+ no cdp enable
+ spanning-tree portfast
+ spanning-tree bpduguard enable
+ ip dhcp snooping limit rate 10
+!
+interface FastEthernet0/45
+ description TV
+ switchport access vlan 22
+ logging event spanning-tree
+ logging event status
+ no snmp trap link-status
+ storm-control broadcast level 5.00 3.00
+ storm-control multicast level 5.00 3.00
+ storm-control action shutdown
+ storm-control action trap
+ no lldp transmit
+ no lldp receive
+ no cdp enable
+ spanning-tree portfast
+ spanning-tree bpduguard enable
+ ip dhcp snooping limit rate 10
+!
+interface FastEthernet0/46
+ description TV
+ switchport access vlan 22
+ logging event spanning-tree
+ logging event status
+ no snmp trap link-status
+ storm-control broadcast level 5.00 3.00
+ storm-control multicast level 5.00 3.00
+ storm-control action shutdown
+ storm-control action trap
+ no lldp transmit
+ no lldp receive
+ no cdp enable
+ spanning-tree portfast
+ spanning-tree bpduguard enable
+ ip dhcp snooping limit rate 10
+!
+interface FastEthernet0/47
+ description SIB
+ switchport access vlan 710
+ switchport mode access
+ logging event spanning-tree
+ logging event status
+ no snmp trap link-status
+ storm-control broadcast level 5.00 3.00
+ storm-control multicast level 5.00 3.00
+ storm-control action shutdown
+ storm-control action trap
+ no lldp transmit
+ no lldp receive
+ no cdp enable
+ spanning-tree portfast
+ spanning-tree bpduguard enable
+ ip dhcp snooping limit rate 10
+!
+interface FastEthernet0/48
+ description SIB
+ switchport access vlan 710
+ switchport mode access
+ logging event spanning-tree
+ logging event status
+ no snmp trap link-status
+ storm-control broadcast level 5.00 3.00
+ storm-control multicast level 5.00 3.00
+ storm-control action shutdown
+ storm-control action trap
+ no lldp transmit
+ no lldp receive
+ no cdp enable
+ spanning-tree portfast
+ spanning-tree bpduguard enable
+ ip dhcp snooping limit rate 10
+!
+interface GigabitEthernet0/1
+ description TRUNK 99.129_te 0/1
+ switchport trunk allowed vlan 13,17,20,21
+ switchport mode trunk
+ logging event spanning-tree
+ logging event status
+ no snmp trap link-status
+ storm-control broadcast level 1.50 1.30
+ storm-control multicast level 1.50 1.30
+ storm-control action trap
+ ip dhcp snooping trust
+!
+interface GigabitEthernet0/2
+ description 96.4_gi1/0/6
+ switchport trunk allowed vlan 13,17,20-22,30-34,47,109,710,1420,1930
+ switchport mode trunk
+ logging event spanning-tree
+ logging event status
+ storm-control broadcast level 1.50 1.30
+ storm-control multicast level 1.50 1.30
+ storm-control action trap
+ ip dhcp snooping trust
+!
+interface Vlan1
+ no ip address
+ shutdown
+!
+interface Vlan17
+ ip address 10.20.99.75 255.255.252.0
+!
+interface Vlan1420
+ description VKS(1420)
+ no ip address
+!
+no ip http server
+ip http authentication aaa login-authentication login-RADIUS
+ip http authentication aaa exec-authorization auth-RADIUS-exec
+ip http secure-server
+ip http max-connections 3
+!
+ip access-list extended VKS-SECURITY
+ permit ip 31.173.228.0 0.0.0.255 31.173.228.0 0.0.0.255
+ permit ip 31.173.228.0 0.0.0.255 85.113.37.0 0.0.0.255
+ permit ip 31.173.228.0 0.0.0.255 194.186.62.8 0.0.0.1
+ permit ip 31.173.228.0 0.0.0.255 188.43.4.144 0.0.0.7
+ permit ip 31.173.228.0 0.0.0.255 62.33.87.224 0.0.0.31
+ permit ip 31.173.228.0 0.0.0.255 188.170.14.160 0.0.0.1
+ permit ip 31.173.228.0 0.0.0.255 95.170.149.2 0.0.0.1
+ permit ip 31.173.228.0 0.0.0.255 212.44.138.234 0.0.0.1
+ permit ip 31.173.228.0 0.0.0.255 212.44.138.228 0.0.0.1
+ permit ip 31.173.228.0 0.0.0.255 78.41.92.118 0.0.0.1
+ permit ip 31.173.228.0 0.0.0.255 81.62.163.14 0.0.0.1
+ permit ip 31.173.228.0 0.0.0.255 59.108.42.26 0.0.0.1
+ permit ip 31.173.228.0 0.0.0.255 145.255.138.34 0.0.0.1
+ permit ip 31.173.228.0 0.0.0.255 188.244.144.148 0.0.0.1
+ permit ip 31.173.228.0 0.0.0.255 194.190.106.126 0.0.0.1
+ permit ip 31.173.228.0 0.0.0.255 49.5.6.106 0.0.0.1
+ permit ip 31.173.228.0 0.0.0.255 31.173.55.240 0.0.0.1
+ permit ip 31.173.228.0 0.0.0.255 82.162.117.0 0.0.0.255
+ permit ip 31.173.228.0 0.0.0.255 173.243.2.68 0.0.0.1
+ permit ip 31.173.228.0 0.0.0.255 212.44.138.224 0.0.0.7
+ permit ip 31.173.228.0 0.0.0.255 109.252.111.158 0.0.0.1
+ permit ip 31.173.228.0 0.0.0.255 82.142.131.200 0.0.0.7
+ permit ip 31.173.228.0 0.0.0.255 78.41.94.90 0.0.0.1
+ permit ip 31.173.228.0 0.0.0.255 91.190.232.8 0.0.0.1
+ permit ip 31.173.228.0 0.0.0.255 188.43.239.192 0.0.0.1
+ permit ip 31.173.228.0 0.0.0.255 78.41.92.116 0.0.0.1
+ permit ip 31.173.228.0 0.0.0.255 87.229.240.194 0.0.0.1
+ permit ip 31.173.228.0 0.0.0.255 109.252.111.212 0.0.0.1
+ permit ip 31.173.228.0 0.0.0.255 91.220.112.68 0.0.0.1
+ deny   ip any any
+kron policy-list backup
+ cli copy vlan.dat tftp://dump.kolmar.pro/10.20.99.75_vlan
+!
+logging trap debugging
+logging host 10.10.0.19 transport udp port 1515
+logging host 10.10.0.142 transport udp port 5014
+snmp-server community public RO
+radius-server host 10.10.0.210 auth-port 1812 acct-port 1813
+radius-server host 10.10.0.212 auth-port 1812 acct-port 1813
+radius-server retransmit 1
+radius-server timeout 2
+radius-server key 7 1042021300061C031F082C29283F
+!
+!
+no vstack
+!
+line con 0
+ exec-timeout 13 0
+ privilege level 15
+ authorization exec auth-RADIUS-exec
+ logging synchronous
+ login authentication login-RADIUS
+line vty 0 4
+ exec-timeout 60 0
+ privilege level 15
+ authorization exec auth-RADIUS-exec
+ logging synchronous
+ login authentication login-RADIUS
+ transport input ssh
+line vty 5 15
+ authorization exec auth-RADIUS-exec
+ login authentication login-RADIUS
+ transport input none
+!
+ntp server 192.168.74.210
+mac address-table notification change interval 15
+mac address-table notification change history-size 500
+mac address-table notification change
+end
+
+
+
 $ show lldp neighbors detail
 ------------------------------------------------
 Local Intf: Gi0/2
@@ -84,7 +1161,7 @@ Technical Support: http://www.cisco.com/techsupport
 Copyright (c) 1986-2021 by Cisco Systems, Inc.
 Compiled Tue 19-Oct-21 03:16 by mcpr
 
-Time remaining: 111 seconds
+Time remaining: 117 seconds
 System Capabilities: B,R
 Enabled Capabilities: B,R
 Management Addresses:
@@ -109,7 +1186,7 @@ System Name: OFFICEHALLWAY-20LVL
 System Description: 
 UAP-AC-LR, 6.6.77.15402
 
-Time remaining: 119 seconds
+Time remaining: 110 seconds
 System Capabilities: B,W,R,S
 Enabled Capabilities: B,W,R
 Management Addresses:
@@ -144,7 +1221,7 @@ System Name: OFFICECONFHALL0LVL
 System Description: 
 UAP-AC-LR, 6.6.77.15402
 
-Time remaining: 109 seconds
+Time remaining: 100 seconds
 System Capabilities: B,W,R,S
 Enabled Capabilities: B,W,R
 Management Addresses:
@@ -181,7 +1258,7 @@ Entry address(es):
   IP address: 10.20.96.4
 Platform: cisco C9200-24P,  Capabilities: Router Switch IGMP 
 Interface: GigabitEthernet0/2,  Port ID (outgoing port): GigabitEthernet1/0/6
-Holdtime : 165 sec
+Holdtime : 140 sec
 
 Version :
 Cisco IOS Software [Amsterdam], Catalyst L3 Switch Software (CAT9K_LITE_IOSXE), Version 17.3.4b, RELEASE SOFTWARE (fc1)
@@ -207,6 +1284,6 @@ Capability Codes: R - Router, T - Trans Bridge, B - Source Route Bridge
 
 Device ID        Local Intrfce     Holdtme    Capability  Platform  Port ID
 NER-NSWR-01-96-4.kolmar.ru
-                 Gig 0/2           165             R S I  C9200-24P Gig 1/0/6
+                 Gig 0/2           140             R S I  C9200-24P Gig 1/0/6
 
 Total cdp entries displayed : 1
