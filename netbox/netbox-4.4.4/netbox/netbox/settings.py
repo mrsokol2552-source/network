@@ -246,7 +246,6 @@ for path in PROXY_ROUTERS:
         except ImportError:
             raise ImproperlyConfigured(f"Invalid path in PROXY_ROUTERS: {path}")
 
-
 #
 # Database
 #
@@ -260,7 +259,6 @@ if 'ENGINE' not in DATABASES['default']:
     DATABASES['default'].update({
         'ENGINE': 'django_prometheus.db.backends.postgresql' if METRICS_ENABLED else 'django.db.backends.postgresql'
     })
-
 
 #
 # Storage backend
@@ -402,7 +400,6 @@ SESSION_SAVE_EVERY_REQUEST = bool(LOGIN_PERSISTENCE)
 if SESSION_FILE_PATH is not None:
     SESSION_ENGINE = 'django.contrib.sessions.backends.file'
 
-
 #
 # Email
 #
@@ -418,7 +415,6 @@ EMAIL_USE_SSL = EMAIL.get('USE_SSL', False)
 EMAIL_USE_TLS = EMAIL.get('USE_TLS', False)
 EMAIL_TIMEOUT = EMAIL.get('TIMEOUT', 10)
 SERVER_EMAIL = EMAIL.get('FROM_EMAIL')
-
 
 #
 # Django core settings
@@ -582,7 +578,6 @@ SERIALIZATION_MODULES = {
     'json': 'utilities.serializers.json',
 }
 
-
 #
 # Permissions & authentication
 #
@@ -604,7 +599,6 @@ MAINTENANCE_EXEMPT_PATHS = (
     LOGIN_REDIRECT_URL,
     LOGOUT_REDIRECT_URL
 )
-
 
 #
 # Sentry
@@ -642,7 +636,6 @@ if SENTRY_ENABLED:
     # Assign any configured tags
     for k, v in SENTRY_TAGS.items():
         sentry_sdk.set_tag(k, v)
-
 
 #
 # Census collection

@@ -119,14 +119,14 @@
       },
       {
         "Neighbor": "X1S/X1SP",
-        "LocalInterface": "Gig 1/0/19",
+        "LocalInterface": "Gig 1/0/2",
         "NeighborPort": "P   X1S/X1SP",
         "_source_file": "C:\\Users\\zhiltsov.aa\\Desktop\\net-auto-mermaid\\data\\raw\\DEN\\01\\10.20.98.66.txt",
         "_template": "cisco_ios_show_cdp_neighbors.template"
       },
       {
         "Neighbor": "X1S/X1SP",
-        "LocalInterface": "Gig 1/0/2",
+        "LocalInterface": "Gig 1/0/19",
         "NeighborPort": "P   X1S/X1SP",
         "_source_file": "C:\\Users\\zhiltsov.aa\\Desktop\\net-auto-mermaid\\data\\raw\\DEN\\01\\10.20.98.66.txt",
         "_template": "cisco_ios_show_cdp_neighbors.template"
@@ -181,7 +181,7 @@
       },
       {
         "Neighbor": "X1S/X1SP",
-        "LocalInterface": "GigabitEthernet1/0/19",
+        "LocalInterface": "GigabitEthernet1/0/2",
         "NeighborPort": "WAN",
         "Platform": "X1S/X1SP",
         "_source_file": "C:\\Users\\zhiltsov.aa\\Desktop\\net-auto-mermaid\\data\\raw\\DEN\\01\\10.20.98.66.txt",
@@ -189,7 +189,7 @@
       },
       {
         "Neighbor": "X1S/X1SP",
-        "LocalInterface": "GigabitEthernet1/0/2",
+        "LocalInterface": "GigabitEthernet1/0/19",
         "NeighborPort": "WAN",
         "Platform": "X1S/X1SP",
         "_source_file": "C:\\Users\\zhiltsov.aa\\Desktop\\net-auto-mermaid\\data\\raw\\DEN\\01\\10.20.98.66.txt",
@@ -216,7 +216,7 @@
       {
         "Version": "15.0(2)SE10",
         "Model": "",
-        "Uptime": "1 year, 7 weeks, 1 day, 55 minutes",
+        "Uptime": "1 year, 7 weeks, 3 days, 2 hours, 9 minutes",
         "_source_file": "C:\\Users\\zhiltsov.aa\\Desktop\\net-auto-mermaid\\data\\raw\\DEN\\01\\10.20.98.66.txt",
         "_template": "cisco_ios_show_version.template"
       },

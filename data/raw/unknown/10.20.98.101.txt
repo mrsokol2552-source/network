@@ -62,7 +62,7 @@ Capabilities: Other
 System Name: 
 System description: 
 Port description: 
-Time To Live: 96
+Time To Live: 105
 
 
 802.1 PVID: None
@@ -82,7 +82,7 @@ Capabilities: Other
 System Name: 
 System description: 
 Port description: 
-Time To Live: 117
+Time To Live: 96
 
 
 802.1 PVID: None

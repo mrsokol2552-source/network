@@ -617,7 +617,7 @@
           "name": "M2",
           "peer": {
             "hostname": "PowerBeam",
-            "interface": "0/7           103"
+            "interface": "0/7           94"
           },
           "speed": null,
           "desc": null
@@ -1684,6 +1684,15 @@
           "name": "GigabitEthernet0/2",
           "peer": {
             "hostname": "DEN-NSWS-50-98-119",
+            "interface": "GigabitEthernet0/1"
+          },
+          "speed": null,
+          "desc": null
+        },
+        {
+          "name": "GigabitEthernet0/1",
+          "peer": {
+            "hostname": "DEN-NSWS-49-98-117",
             "interface": "GigabitEthernet0/1"
           },
           "speed": null,
@@ -3444,7 +3453,7 @@
       "hostname": "10.20.99.101",
       "mgmt_ip": "10.20.99.101",
       "vendor": "dlink",
-      "site": "DES",
+      "site": "UNKNOWN",
       "vlans": [
         {
           "id": 1,
@@ -3496,7 +3505,7 @@
       "hostname": "10.20.99.102",
       "mgmt_ip": "10.20.99.102",
       "vendor": "dlink",
-      "site": "DGS",
+      "site": "UNKNOWN",
       "vlans": [
         {
           "id": 1,
@@ -4913,15 +4922,6 @@
           "peer": {
             "hostname": "INA-NSWS-41-99-159",
             "interface": "GigabitEthernet0/9"
-          },
-          "speed": null,
-          "desc": null
-        },
-        {
-          "name": "GigabitEthernet1/0/3",
-          "peer": {
-            "hostname": "INA-NSWS-133-96-18",
-            "interface": "GigabitEthernet0/12"
           },
           "speed": null,
           "desc": null
@@ -6397,15 +6397,6 @@
       "model": null,
       "interfaces": [
         {
-          "name": "FastEthernet0/48",
-          "peer": {
-            "hostname": "X210i-V2",
-            "interface": "WAN"
-          },
-          "speed": null,
-          "desc": null
-        },
-        {
           "name": "GigabitEthernet0/2",
           "peer": {
             "hostname": "NER-NSWR-01-96-4",
@@ -6428,15 +6419,6 @@
           "peer": {
             "hostname": "B55B3419",
             "interface": "62CC4B3B FD268A0E"
-          },
-          "speed": null,
-          "desc": null
-        },
-        {
-          "name": "Fas 0/48",
-          "peer": {
-            "hostname": "X210i-V2",
-            "interface": "P   X210i-V2"
           },
           "speed": null,
           "desc": null
@@ -6993,7 +6975,7 @@
           "name": "M2",
           "peer": {
             "hostname": "PowerBeam",
-            "interface": "1/0/22        72"
+            "interface": "1/0/22        112"
           },
           "speed": null,
           "desc": null
@@ -9082,6 +9064,15 @@
           "desc": null
         },
         {
+          "name": "Ethernet1/0/1",
+          "peer": {
+            "hostname": "a8-a1-59-74-5b-d5",
+            "interface": "4"
+          },
+          "speed": null,
+          "desc": null
+        },
+        {
           "name": "Ethernet1/0/2",
           "peer": {
             "hostname": "00-1a-81-02-1b-11",
@@ -9840,6 +9831,15 @@
           "peer": {
             "hostname": "address",
             "interface": "is:"
+          },
+          "speed": null,
+          "desc": null
+        },
+        {
+          "name": "Ethernet1/0/1",
+          "peer": {
+            "hostname": "98-ee-cb-ec-26-8e",
+            "interface": "4"
           },
           "speed": null,
           "desc": null

@@ -160,26 +160,6 @@ Port ID : 8
 -------------------------------------------------------------------------------
 Remote Entities Count : 2 
 Entity 1 
-    Chassis ID Subtype                         : Network Address  
-    Chassis ID                                 : 10.13.0.155
-    Port ID Subtype                            : MAC Address  
-    Port ID                                    : 0C-38-3E-52-A5-9F
-    Port Description                           : WAN Port
-    System Name                                : X301
-    System Description                         : Version:2.12.17.8
-    System Capabilities                        : Bridge, Telephone
-    Management Address Count                   : 1
-    Port PVID                                  : 0
-    PPVID Entries Count                        : 0
-    VLAN Name Entries Count                    : 0
-    Protocol ID Entries Count                  : 0
-    MAC/PHY Configuration/Status               : (None)
-    Power Via MDI                              : (See Detail)
-    Link Aggregation                           : (None)
-    Maximum Frame Size                         : 0
-    Unknown TLVs Count                         : 0
-
-Entity 2 
     Chassis ID Subtype                         : MAC Address  
     Chassis ID                                 : 00-D8-61-28-8F-D5
     Port ID Subtype                            : MAC Address  
@@ -195,6 +175,26 @@ Entity 2
     Protocol ID Entries Count                  : 0
     MAC/PHY Configuration/Status               : (See Detail)
     Power Via MDI                              : (None)
+    Link Aggregation                           : (None)
+    Maximum Frame Size                         : 0
+    Unknown TLVs Count                         : 0
+
+Entity 2 
+    Chassis ID Subtype                         : Network Address  
+    Chassis ID                                 : 10.13.0.155
+    Port ID Subtype                            : MAC Address  
+    Port ID                                    : 0C-38-3E-52-A5-9F
+    Port Description                           : WAN Port
+    System Name                                : X301
+    System Description                         : Version:2.12.17.8
+    System Capabilities                        : Bridge, Telephone
+    Management Address Count                   : 1
+    Port PVID                                  : 0
+    PPVID Entries Count                        : 0
+    VLAN Name Entries Count                    : 0
+    Protocol ID Entries Count                  : 0
+    MAC/PHY Configuration/Status               : (None)
+    Power Via MDI                              : (See Detail)
     Link Aggregation                           : (None)
     Maximum Frame Size                         : 0
     Unknown TLVs Count                         : 0
@@ -282,26 +282,6 @@ Port ID : 14
 -------------------------------------------------------------------------------
 Remote Entities Count : 2 
 Entity 1 
-    Chassis ID Subtype                         : MAC Address  
-    Chassis ID                                 : 18-C0-4D-0E-31-9A
-    Port ID Subtype                            : MAC Address  
-    Port ID                                    : 18-C0-4D-0E-31-9A
-    Port Description                           : 
-    System Name                                : 
-    System Description                         : 
-    System Capabilities                        : 
-    Management Address Count                   : 0
-    Port PVID                                  : 0
-    PPVID Entries Count                        : 0
-    VLAN Name Entries Count                    : 0
-    Protocol ID Entries Count                  : 0
-    MAC/PHY Configuration/Status               : (See Detail)
-    Power Via MDI                              : (None)
-    Link Aggregation                           : (None)
-    Maximum Frame Size                         : 0
-    Unknown TLVs Count                         : 0
-
-Entity 2 
     Chassis ID Subtype                         : Network Address  
     Chassis ID                                 : 10.13.1.135
     Port ID Subtype                            : MAC Address  
@@ -317,6 +297,26 @@ Entity 2
     Protocol ID Entries Count                  : 0
     MAC/PHY Configuration/Status               : (None)
     Power Via MDI                              : (See Detail)
+    Link Aggregation                           : (None)
+    Maximum Frame Size                         : 0
+    Unknown TLVs Count                         : 0
+
+Entity 2 
+    Chassis ID Subtype                         : MAC Address  
+    Chassis ID                                 : 18-C0-4D-0E-31-9A
+    Port ID Subtype                            : MAC Address  
+    Port ID                                    : 18-C0-4D-0E-31-9A
+    Port Description                           : 
+    System Name                                : 
+    System Description                         : 
+    System Capabilities                        : 
+    Management Address Count                   : 0
+    Port PVID                                  : 0
+    PPVID Entries Count                        : 0
+    VLAN Name Entries Count                    : 0
+    Protocol ID Entries Count                  : 0
+    MAC/PHY Configuration/Status               : (See Detail)
+    Power Via MDI                              : (None)
     Link Aggregation                           : (None)
     Maximum Frame Size                         : 0
     Unknown TLVs Count                         : 0
@@ -376,26 +376,6 @@ Port ID : 18
 -------------------------------------------------------------------------------
 Remote Entities Count : 2 
 Entity 1 
-    Chassis ID Subtype                         : MAC Address  
-    Chassis ID                                 : 9C-6B-00-10-59-56
-    Port ID Subtype                            : MAC Address  
-    Port ID                                    : 9C-6B-00-10-59-56
-    Port Description                           : 
-    System Name                                : 
-    System Description                         : 
-    System Capabilities                        : 
-    Management Address Count                   : 0
-    Port PVID                                  : 0
-    PPVID Entries Count                        : 0
-    VLAN Name Entries Count                    : 0
-    Protocol ID Entries Count                  : 0
-    MAC/PHY Configuration/Status               : (See Detail)
-    Power Via MDI                              : (None)
-    Link Aggregation                           : (None)
-    Maximum Frame Size                         : 0
-    Unknown TLVs Count                         : 0
-
-Entity 2 
     Chassis ID Subtype                         : Network Address  
     Chassis ID                                 : 10.13.0.10
     Port ID Subtype                            : MAC Address  
@@ -411,6 +391,26 @@ Entity 2
     Protocol ID Entries Count                  : 0
     MAC/PHY Configuration/Status               : (None)
     Power Via MDI                              : (See Detail)
+    Link Aggregation                           : (None)
+    Maximum Frame Size                         : 0
+    Unknown TLVs Count                         : 0
+
+Entity 2 
+    Chassis ID Subtype                         : MAC Address  
+    Chassis ID                                 : 9C-6B-00-10-59-56
+    Port ID Subtype                            : MAC Address  
+    Port ID                                    : 9C-6B-00-10-59-56
+    Port Description                           : 
+    System Name                                : 
+    System Description                         : 
+    System Capabilities                        : 
+    Management Address Count                   : 0
+    Port PVID                                  : 0
+    PPVID Entries Count                        : 0
+    VLAN Name Entries Count                    : 0
+    Protocol ID Entries Count                  : 0
+    MAC/PHY Configuration/Status               : (See Detail)
+    Power Via MDI                              : (None)
     Link Aggregation                           : (None)
     Maximum Frame Size                         : 0
     Unknown TLVs Count                         : 0
@@ -506,48 +506,8 @@ Entity 2
 
 Port ID : 22 
 -------------------------------------------------------------------------------
-Remote Entities Count : 3 
+Remote Entities Count : 2 
 Entity 1 
-    Chassis ID Subtype                         : MAC Address  
-    Chassis ID                                 : 94-DE-80-4D-3D-4F
-    Port ID Subtype                            : MAC Address  
-    Port ID                                    : 94-DE-80-4D-3D-4F
-    Port Description                           : 
-    System Name                                : 
-    System Description                         : 
-    System Capabilities                        : 
-    Management Address Count                   : 0
-    Port PVID                                  : 0
-    PPVID Entries Count                        : 0
-    VLAN Name Entries Count                    : 0
-    Protocol ID Entries Count                  : 0
-    MAC/PHY Configuration/Status               : (See Detail)
-    Power Via MDI                              : (None)
-    Link Aggregation                           : (None)
-    Maximum Frame Size                         : 0
-    Unknown TLVs Count                         : 0
-
-Entity 2 
-    Chassis ID Subtype                         : MAC Address  
-    Chassis ID                                 : 18-C0-4D-B3-40-24
-    Port ID Subtype                            : MAC Address  
-    Port ID                                    : 18-C0-4D-B3-40-24
-    Port Description                           : 
-    System Name                                : 
-    System Description                         : 
-    System Capabilities                        : 
-    Management Address Count                   : 0
-    Port PVID                                  : 0
-    PPVID Entries Count                        : 0
-    VLAN Name Entries Count                    : 0
-    Protocol ID Entries Count                  : 0
-    MAC/PHY Configuration/Status               : (See Detail)
-    Power Via MDI                              : (None)
-    Link Aggregation                           : (None)
-    Maximum Frame Size                         : 0
-    Unknown TLVs Count                         : 0
-
-Entity 3 
     Chassis ID Subtype                         : Network Address  
     Chassis ID                                 : 10.13.1.16
     Port ID Subtype                            : MAC Address  
@@ -563,6 +523,26 @@ Entity 3
     Protocol ID Entries Count                  : 0
     MAC/PHY Configuration/Status               : (None)
     Power Via MDI                              : (See Detail)
+    Link Aggregation                           : (None)
+    Maximum Frame Size                         : 0
+    Unknown TLVs Count                         : 0
+
+Entity 2 
+    Chassis ID Subtype                         : MAC Address  
+    Chassis ID                                 : 94-DE-80-4D-3D-4F
+    Port ID Subtype                            : MAC Address  
+    Port ID                                    : 94-DE-80-4D-3D-4F
+    Port Description                           : 
+    System Name                                : 
+    System Description                         : 
+    System Capabilities                        : 
+    Management Address Count                   : 0
+    Port PVID                                  : 0
+    PPVID Entries Count                        : 0
+    VLAN Name Entries Count                    : 0
+    Protocol ID Entries Count                  : 0
+    MAC/PHY Configuration/Status               : (See Detail)
+    Power Via MDI                              : (None)
     Link Aggregation                           : (None)
     Maximum Frame Size                         : 0
     Unknown TLVs Count                         : 0

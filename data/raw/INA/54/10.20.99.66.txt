@@ -15,7 +15,7 @@ Technical Support: http://www.cisco.com/techsupport
 Copyrigh
 Port description: 99.66_gi1/0/48
 Management Address: 10.20.99.196
-Time To Live: 115
+Time To Live: 107
 
 
 802.3 MAC/PHY Configuration/Status
@@ -49,7 +49,7 @@ Capabilities: Other
 System Name: 
 System description: 
 Port description: 
-Time To Live: 119
+Time To Live: 96
 
 
 802.3 EEE:
@@ -137,8 +137,8 @@ gi1/0/42 1G-Copper      --      --     --     --  Down (adm)        --         -
 gi1/0/43 1G-Copper      --      --     --     --  Down (adm)        --         --     --     Access (1)              
 gi1/0/44 1G-Copper      --      --     --     --  Down (adm)        --         --     --     Access (1)              
 gi1/0/45 1G-Copper      --      --     --     --  Down (adm)        --         --     --     Access (1)              
-gi1/0/46 1G-Copper    Full    1000  Enabled  Off  Up          67,05:11:59   Disabled Off     General                 
-gi1/0/47 1G-Copper    Full    1000  Enabled  Off  Up          91,00:00:56   Disabled On      General                 
+gi1/0/46 1G-Copper    Full    1000  Enabled  Off  Up          69,06:26:53   Disabled Off     General                 
+gi1/0/47 1G-Copper    Full    1000  Enabled  Off  Up          93,01:15:50   Disabled On      General                 
 gi1/0/48 1G-Copper      --      --     --     --  Down (nc)         --         --     --     Access (1)              
 te1/0/1  10G-Fiber      --      --     --     --  Down (nc)         --         --     --     Access (1)              
 te1/0/2  10G-Fiber      --      --     --     --  Down (nc)         --         --     --     Access (1)              
@@ -205,22 +205,12 @@ adm (admin.shutdown): The interface was suspended by administrator.
 
 $ show interfaces
 
-      0 symbol errors, 0 carrier, 0 SQE test error
-  Output queues: (queue #: packets passed/packets dropped)
-      1: 0/0
-      2: 0/0
-      3: 0/0
-      4: 0/0
-      5: 0/0
-      6: 0/0
-      7: 0/0
-      8: 0/0
 ------------------ show interfaces gi1/0/48 ------------------
 gigabitethernet1/0/48 is down (not connected)
   Interface index is 96
   Hardware is gigabitethernet, MAC address is 68:13:e2:a0:78:f0
   Interface MTU is 1500
-  Link is down for 409 days, 1 hours, 22 minutes and 0 seconds
+  Link is down for 411 days, 2 hours, 36 minutes and 54 seconds
   Flow control is off, MDIX mode is unknown
   FEC is disabled
   15 second input rate is 0 Kbit/s
@@ -250,7 +240,7 @@ tengigabitethernet1/0/1 is down (not connected)
   Interface index is 105
   Hardware is tengigabitethernet, MAC address is 68:13:e2:a0:78:f1
   Interface MTU is 1500
-  Link is down for 409 days, 1 hours, 22 minutes and 1 seconds
+  Link is down for 411 days, 2 hours, 36 minutes and 54 seconds
   Flow control is off, MDIX mode is normal
   FEC is disabled
   15 second input rate is 0 Kbit/s
@@ -280,7 +270,7 @@ tengigabitethernet1/0/2 is down (not connected)
   Interface index is 106
   Hardware is tengigabitethernet, MAC address is 68:13:e2:a0:78:f2
   Interface MTU is 1500
-  Link is down for 409 days, 1 hours, 22 minutes and 0 seconds
+  Link is down for 411 days, 2 hours, 36 minutes and 54 seconds
   Flow control is off, MDIX mode is normal
   FEC is disabled
   15 second input rate is 0 Kbit/s
@@ -310,7 +300,7 @@ tengigabitethernet1/0/3 is down (not connected)
   Interface index is 107
   Hardware is tengigabitethernet, MAC address is 68:13:e2:a0:78:f3
   Interface MTU is 1500
-  Link is down for 409 days, 1 hours, 22 minutes and 1 seconds
+  Link is down for 411 days, 2 hours, 36 minutes and 55 seconds
   Flow control is off, MDIX mode is normal
   FEC is disabled
   15 second input rate is 0 Kbit/s
@@ -340,7 +330,7 @@ tengigabitethernet1/0/4 is down (not connected)
   Interface index is 108
   Hardware is tengigabitethernet, MAC address is 68:13:e2:a0:78:f4
   Interface MTU is 1500
-  Link is down for 409 days, 1 hours, 22 minutes and 1 seconds
+  Link is down for 411 days, 2 hours, 36 minutes and 55 seconds
   Flow control is off, MDIX mode is normal
   FEC is disabled
   15 second input rate is 0 Kbit/s

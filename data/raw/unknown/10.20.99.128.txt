@@ -15,7 +15,7 @@ System Name                       : NER-NSWS-05-99-128
 System Location                   : 
 System Description                : MES2448B rev.B AC 52-port 1G/10G Managed Switch
 Logging Option                    : Flash Logging
-Device Uptime                     : 37 Days, 16 Hrs, 8 Mins, 41 Secs
+Device Uptime                     : 39 Days, 16 Hrs, 46 Mins, 6 Secs
 Login Authentication Mode         : Local
 Config Save Status                : Successful
 Remote Save Status                : Not Initiated
@@ -227,17 +227,17 @@ $ show interfaces
 
 --More--
                 
-   Error Packets             : 6227156
+   Error Packets             : 6722507
    Unknown Protocol          : 0
-   CRC Errors                : 105548
-   Symbol Errors             : 286
+   CRC Errors                : 114723
+   Symbol Errors             : 319
    Oversized w/ Bad CRC      : 0
 
 Transmission Counters
-   Octets                    : 3461944142
-   Unicast Packets           : 78555527
-   Multicast Packets         : 11942914
-   Broadcast Packets         : 43435239
+   Octets                    : 166363092
+   Unicast Packets           : 83760841
+   Multicast Packets         : 12692950
+   Broadcast Packets         : 46202066
    Discarded Packets         : 0
    Error Drops               : 0
    Error Packets             : 0

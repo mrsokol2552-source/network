@@ -26,8 +26,8 @@ software.
 ROM: IOS-XE ROMMON
 BOOTLDR: System Bootstrap, Version 17.9.1r [FC13], RELEASE SOFTWARE (P) 
 
-NSK-NSWR-01-99-1 uptime is 8 weeks, 1 day, 17 hours, 39 minutes
-Uptime for this control processor is 8 weeks, 1 day, 17 hours, 41 minutes
+NSK-NSWR-01-99-1 uptime is 8 weeks, 3 days, 18 hours, 53 minutes
+Uptime for this control processor is 8 weeks, 3 days, 18 hours, 55 minutes
 System returned to ROM by Power Failure or Unknown
 System image file is "flash:packages.conf"
 Last reload reason: Power Failure or Unknown
@@ -726,7 +726,7 @@ Technical Support: http://www.cisco.com/techsupport
 Copyright (c) 1986-2017 by Cisco Systems, Inc.
 Compiled Wed 12-Jul-17 13:06 by prod_rel_team
 
-Time remaining: 102 seconds
+Time remaining: 108 seconds
 System Capabilities: B,R
 Enabled Capabilities: B
 Management Addresses:
@@ -755,7 +755,7 @@ Technical Support: http://www.cisco.com/techsupport
 Copyright (c) 1986-2016 by Cisco Systems, Inc.
 Compiled Thu 02-Jun-16 01:31 by prod_rel_team
 
-Time remaining: 101 seconds
+Time remaining: 116 seconds
 System Capabilities: B,R
 Enabled Capabilities: B
 Management Addresses:
@@ -784,7 +784,7 @@ Technical Support: http://www.cisco.com/techsupport
 Copyright (c) 1986-2015 by Cisco Systems, Inc.
 Compiled Wed 26-Aug-15 07:12 by prod_rel_team
 
-Time remaining: 119 seconds
+Time remaining: 111 seconds
 System Capabilities: B,R
 Enabled Capabilities: B
 Management Addresses:
@@ -812,7 +812,7 @@ Entry address(es):
   IP address: 10.2.99.5
 Platform: cisco WS-C2960X-48TS-L,  Capabilities: Switch IGMP 
 Interface: GigabitEthernet1/0/24,  Port ID (outgoing port): GigabitEthernet1/0/48
-Holdtime : 141 sec
+Holdtime : 153 sec
 
 Version :
 Cisco IOS Software, C2960X Software (C2960X-UNIVERSALK9-M), Version 15.2(2)E5, RELEASE SOFTWARE (fc2)
@@ -835,7 +835,7 @@ Entry address(es):
   IP address: 192.168.0.241
 Platform: cisco WS-C2960X-48TS-L,  Capabilities: Switch IGMP 
 Interface: GigabitEthernet1/0/22,  Port ID (outgoing port): GigabitEthernet1/0/35
-Holdtime : 170 sec
+Holdtime : 151 sec
 
 Version :
 Cisco IOS Software, C2960X Software (C2960X-UNIVERSALK9-M), Version 15.2(2)E3, RELEASE SOFTWARE (fc3)
@@ -858,7 +858,7 @@ Entry address(es):
   IP address: 10.2.99.11
 Platform: cisco WS-C2960X-48TS-L,  Capabilities: Switch IGMP 
 Interface: GigabitEthernet1/0/23,  Port ID (outgoing port): GigabitEthernet1/0/35
-Holdtime : 161 sec
+Holdtime : 176 sec
 
 Version :
 Cisco IOS Software, C2960X Software (C2960X-UNIVERSALK9-M), Version 15.2(2)E7, RELEASE SOFTWARE (fc3)
@@ -886,10 +886,10 @@ Capability Codes: R - Router, T - Trans Bridge, B - Source Route Bridge
 
 Device ID        Local Intrfce     Holdtme    Capability  Platform  Port ID
 NSK-NSWS-01-99-5.kolmar.local
-                 Gig 1/0/24        141              S I   WS-C2960X Gig 1/0/48
+                 Gig 1/0/24        153              S I   WS-C2960X Gig 1/0/48
 NSK-NSWS-01-99-7.kolmar.local
-                 Gig 1/0/22        170              S I   WS-C2960X Gig 1/0/35
+                 Gig 1/0/22        151              S I   WS-C2960X Gig 1/0/35
 NSK-NSWS-01-99-11.kolmar.local
-                 Gig 1/0/23        161              S I   WS-C2960X Gig 1/0/35
+                 Gig 1/0/23        175              S I   WS-C2960X Gig 1/0/35
 
 Total cdp entries displayed : 3

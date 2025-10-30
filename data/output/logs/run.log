@@ -1,4 +1,4 @@
-===== RUN START 27.10.2025 13:44:12,10 ===== 
+===== RUN START 29.10.2025 14:58:32,75 ===== 
 [INFO] Steps: collect, parse, split, merge, safety, normalize, render
 [INFO] [..............................] 0% (0/7)
 [INFO] Start: collect
@@ -8,126 +8,128 @@ Excluded ['10.12.0.0/24', '10.10.0.0/24', '10.0.2.31/24', '10.0.2.91/24',
 '10.0.2.137/24', '10.20.99.201', '10.20.99.140'] -> 256 host(s) removed from 
 scan
 Всего потенциальных целей: 1014
-Хостов с открытым 22/23: 258
-1/258 10.20.98.113: ok cisco_ios
-2/258 10.20.98.115: ok cisco_ios
-3/258 10.20.98.132: ok cisco_ios
-4/258 10.20.98.103: ok cisco_ios
-5/258 10.20.98.56: ok cisco_ios
-6/258 10.20.98.92: ok cisco_ios
-7/258 10.20.98.131: ok cisco_ios
-8/258 10.20.98.58: ok cisco_ios
-9/258 10.20.98.125: ok cisco_ios
-10/258 10.20.98.94: ok cisco_ios
-11/258 10.20.98.87: ok cisco_ios
-12/258 10.20.98.106: ok cisco_ios
-13/258 10.20.98.130: ok cisco_ios
-14/258 10.20.98.91: ok cisco_ios
-15/258 10.20.98.142: ok cisco_ios
-16/258 10.20.98.54: ok cisco_ios
-17/258 10.20.98.128: ok cisco_ios
-18/258 10.20.98.55: ok cisco_ios
-19/258 10.20.98.67: ok cisco_ios
-20/258 10.20.98.68: ok cisco_ios
-21/258 10.20.98.105: ok cisco_ios
-22/258 10.20.98.65: ok cisco_ios
-23/258 10.20.98.70: ok cisco_ios
-24/258 10.20.98.114: ok cisco_ios
-25/258 10.20.98.66: ok cisco_ios
-26/258 10.20.98.73: ok cisco_ios
-27/258 10.20.98.119: ok cisco_ios
-28/258 10.20.98.96: ok cisco_ios
-29/258 10.20.98.51: ok cisco_ios
-30/258 10.20.98.53: ok cisco_ios
-31/258 10.20.98.145: ok cisco_ios
-32/258 10.20.98.143: ok cisco_ios
-33/258 10.20.98.126: ok cisco_ios
-34/258 10.20.98.99: ok cisco_ios
-35/258 10.20.98.108: ok cisco_ios
-36/258 10.20.98.57: ok cisco_ios
-37/258 10.20.98.144: ok cisco_ios
-38/258 10.20.98.1: ok cisco_ios
-39/258 10.20.98.127: ok cisco_ios
-40/258 10.20.98.129: ok cisco_ios
-41/258 10.20.98.149: ok cisco_ios
-42/258 10.20.98.151: ok cisco_ios
-43/258 10.20.98.147: ok cisco_ios
-44/258 10.20.98.140: ok cisco_ios
-45/258 10.20.98.146: ok cisco_ios
-46/258 10.20.98.150: ok cisco_ios
-47/258 10.20.98.69: ok cisco_ios
-48/258 10.20.98.107: ok cisco_ios
-49/258 10.20.98.118: ok cisco_ios
-50/258 10.20.98.97: ok cisco_ios
-51/258 10.20.98.110: ok cisco_ios
-52/258 10.20.98.141: ok cisco_ios
-53/258 10.20.98.134: ok cisco_ios
-54/258 10.20.98.112: ok cisco_ios
-55/258 10.20.98.93: ok cisco_ios
-56/258 10.20.99.17: ok cisco_ios
-57/258 10.20.99.14: ok cisco_ios
-58/258 10.20.98.100: ok cisco_ios
-59/258 10.20.98.153: ok cisco_ios
-60/258 10.20.99.21: ok cisco_ios
-61/258 10.20.99.22: ok cisco_ios
-62/258 10.20.99.20: ok cisco_ios
-63/258 10.20.99.11: ok cisco_ios
-64/258 10.20.99.6: ok cisco_ios
-65/258 10.20.99.7: ok cisco_ios
-66/258 10.20.99.8: ok cisco_ios
-67/258 10.20.99.12: ok cisco_ios
-68/258 10.20.99.5: ok cisco_ios
-69/258 10.20.99.25: ok cisco_ios
-70/258 10.20.99.15: ok cisco_ios
-71/258 10.20.99.4: ok cisco_ios
-72/258 10.20.99.40: ok cisco_ios
-73/258 10.20.99.10: ok cisco_ios
-74/258 10.20.99.13: ok cisco_ios
-75/258 10.20.99.35: ok cisco_ios
-76/258 10.20.99.38: ok cisco_ios
-77/258 10.20.99.28: ok cisco_ios
-78/258 10.20.99.41: ok cisco_ios
-79/258 10.20.99.29: ok cisco_ios
-80/258 10.20.99.44: ok cisco_ios
-81/258 10.20.99.27: ok cisco_ios
-82/258 10.20.99.47: ok cisco_ios
-83/258 10.20.99.54: ok cisco_ios
-84/258 10.20.99.43: ok cisco_ios
-85/258 10.20.99.56: ok cisco_ios
-86/258 10.20.99.52: ok cisco_ios
-87/258 10.20.98.232: ok cisco_ios
-88/258 10.20.99.46: ok cisco_ios
-89/258 10.20.99.36: ok cisco_ios
-90/258 10.20.99.51: ok cisco_ios
-91/258 10.20.99.32: ok cisco_ios
-92/258 10.20.99.53: ok cisco_ios
-93/258 10.20.99.55: ok zes
-94/258 10.20.99.39: ok cisco_ios
-95/258 10.20.99.57: ok cisco_ios
-96/258 10.20.98.235: ok cisco_ios
-97/258 10.20.99.42: ok cisco_ios
-98/258 10.20.99.1: ok cisco_ios
-99/258 10.20.99.58: ok cisco_ios
-100/258 10.20.99.61: ok cisco_ios
-101/258 10.20.99.45: ok cisco_ios
-102/258 10.20.99.26: ok cisco_ios
-103/258 10.20.99.70: ok cisco_ios
-104/258 10.20.99.65: ok cisco_ios
-105/258 10.20.99.79: ok zes
-106/258 10.20.99.90: ok cisco_ios
-107/258 10.20.98.233: ok cisco_ios
-108/258 10.20.99.34: ok cisco_ios
-109/258 10.20.99.59: ok cisco_ios
-110/258 10.20.98.231: ok cisco_ios
-111/258 10.20.99.19: ok cisco_ios
-112/258 10.20.99.108: ok cisco_ios
-113/258 10.20.99.92: ok cisco_ios
-114/258 10.20.99.60: ok cisco_ios
-115/258 10.20.99.37: ok cisco_ios
-116/258 10.20.99.116: ok cisco_ios
-117/258 10.20.99.114: ok cisco_ios
-118/258 10.20.99.94: ok cisco_ios
-119/258 10.20.99.86: ok cisco_ios
+Хостов с открытым 22/23: 241
+1/241 10.20.98.113: ok cisco_ios
+2/241 10.20.98.130: ok cisco_ios
+3/241 10.20.98.99: ok cisco_ios
+4/241 10.20.98.115: ok cisco_ios
+5/241 10.20.98.125: ok cisco_ios
+6/241 10.20.98.103: ok cisco_ios
+7/241 10.20.98.106: ok cisco_ios
+8/241 10.20.98.54: ok cisco_ios
+9/241 10.20.98.144: ok cisco_ios
+10/241 10.20.98.127: ok cisco_ios
+11/241 10.20.98.92: ok cisco_ios
+12/241 10.20.98.126: ok cisco_ios
+13/241 10.20.98.141: ok cisco_ios
+14/241 10.20.98.57: ok cisco_ios
+15/241 10.20.98.56: ok cisco_ios
+16/241 10.20.98.142: ok cisco_ios
+17/241 10.20.98.97: ok cisco_ios
+18/241 10.20.98.58: ok cisco_ios
+19/241 10.20.98.1: ok cisco_ios
+20/241 10.20.98.68: ok cisco_ios
+21/241 10.20.98.69: ok cisco_ios
+22/241 10.20.98.105: ok cisco_ios
+23/241 10.20.98.70: ok cisco_ios
+24/241 10.20.98.73: ok cisco_ios
+25/241 10.20.98.66: ok cisco_ios
+26/241 10.20.98.119: ok cisco_ios
+27/241 10.20.98.110: ok cisco_ios
+28/241 10.20.98.53: ok cisco_ios
+29/241 10.20.98.51: ok cisco_ios
+30/241 10.20.98.96: ok cisco_ios
+31/241 10.20.98.108: ok cisco_ios
+32/241 10.20.98.112: ok cisco_ios
+33/241 10.20.98.143: ok cisco_ios
+34/241 10.20.98.128: ok cisco_ios
+35/241 10.20.98.87: ok cisco_ios
+36/241 10.20.98.131: ok cisco_ios
+37/241 10.20.98.147: ok cisco_ios
+38/241 10.20.98.55: ok cisco_ios
+39/241 10.20.98.94: ok cisco_ios
+40/241 10.20.98.132: ok cisco_ios
+41/241 10.20.98.93: ok cisco_ios
+42/241 10.20.98.149: ok cisco_ios
+43/241 10.20.98.91: ok cisco_ios
+44/241 10.20.98.140: ok cisco_ios
+45/241 10.20.98.129: ok cisco_ios
+46/241 10.20.98.145: ok cisco_ios
+47/241 10.20.98.67: ok cisco_ios
+48/241 10.20.98.134: ok cisco_ios
+49/241 10.20.98.146: ok cisco_ios
+50/241 10.20.98.107: ok cisco_ios
+51/241 10.20.98.151: ok cisco_ios
+52/241 10.20.98.65: ok cisco_ios
+53/241 10.20.98.118: ok cisco_ios
+54/241 10.20.98.150: ok cisco_ios
+55/241 10.20.98.114: ok cisco_ios
+56/241 10.20.99.17: ok cisco_ios
+57/241 10.20.99.14: ok cisco_ios
+58/241 10.20.99.12: ok cisco_ios
+59/241 10.20.98.235: ok cisco_ios
+60/241 10.20.99.21: ok cisco_ios
+61/241 10.20.99.11: ok cisco_ios
+62/241 10.20.99.5: ok cisco_ios
+63/241 10.20.99.19: ok cisco_ios
+64/241 10.20.99.40: ok cisco_ios
+65/241 10.20.99.6: ok cisco_ios
+66/241 10.20.99.22: ok cisco_ios
+67/241 10.20.99.4: ok cisco_ios
+68/241 10.20.99.8: ok cisco_ios
+69/241 10.20.99.7: ok cisco_ios
+70/241 10.20.99.32: ok cisco_ios
+71/241 10.20.98.232: ok cisco_ios
+72/241 10.20.99.15: ok cisco_ios
+73/241 10.20.99.27: ok cisco_ios
+74/241 10.20.98.231: ok cisco_ios
+75/241 10.20.99.43: ok cisco_ios
+76/241 10.20.99.10: ok cisco_ios
+77/241 10.20.99.39: ok cisco_ios
+78/241 10.20.99.25: ok cisco_ios
+79/241 10.20.99.38: ok cisco_ios
+80/241 10.20.99.35: ok cisco_ios
+81/241 10.20.98.233: ok cisco_ios
+82/241 10.20.99.26: ok cisco_ios
+83/241 10.20.99.55: ok zes
+84/241 10.20.99.37: ok cisco_ios
+85/241 10.20.99.54: ok cisco_ios
+86/241 10.20.99.52: ok cisco_ios
+87/241 10.20.99.46: ok cisco_ios
+88/241 10.20.99.64: ok zes
+89/241 10.20.99.59: ok cisco_ios
+90/241 10.20.99.29: ok cisco_ios
+91/241 10.20.99.79: ok zes
+92/241 10.20.99.42: ok cisco_ios
+93/241 10.20.99.36: ok cisco_ios
+94/241 10.20.99.65: ok cisco_ios
+95/241 10.20.99.45: ok cisco_ios
+96/241 10.20.99.91: ok cisco_ios
+97/241 10.20.99.75: ok cisco_ios
+98/241 10.20.99.28: ok cisco_ios
+99/241 10.20.99.69: ok cisco_ios
+100/241 10.20.99.74: ok cisco_ios
+101/241 10.20.99.87: ok cisco_ios
+102/241 10.20.99.41: ok cisco_ios
+103/241 10.20.99.88: ok cisco_ios
+104/241 10.20.99.92: ok cisco_ios
+105/241 10.20.99.77: ok cisco_ios
+106/241 10.20.99.76: ok cisco_ios
+107/241 10.20.99.112: ok cisco_ios
+108/241 10.20.99.73: ok cisco_ios
+109/241 10.20.99.108: ok cisco_ios
+110/241 10.20.99.89: ok cisco_ios
+111/241 10.20.99.51: ok cisco_ios
+112/241 10.20.99.60: ok cisco_ios
+113/241 10.20.99.34: ok cisco_ios
+114/241 10.20.99.53: ok cisco_ios
+115/241 10.20.99.3: fail 
+116/241 10.20.99.115: ok cisco_ios
+117/241 10.20.99.109: ok cisco_ios
+118/241 10.20.99.114: ok cisco_ios
+119/241 10.20.99.72: ok cisco_ios
+120/241 10.20.99.116: ok cisco_ios
+121/241 10.20.99.1: ok cisco_ios
 Exception (client): Incompatible ssh peer (no acceptable host key)
 Traceback (most recent call last):
   File "C:\Users\zhiltsov.aa\AppData\Local\Programs\Python\Python311\Lib\site-packages\paramiko\transport.py", line 2230, in run
@@ -148,448 +150,428 @@ Traceback (most recent call last):
     raise IncompatiblePeer(
 paramiko.ssh_exception.IncompatiblePeer: Incompatible ssh peer (no acceptable host key)
 
-120/258 10.20.99.115: ok cisco_ios
-121/258 10.20.99.82: ok cisco_ios
-122/258 10.20.99.107: fail 
-123/258 10.20.99.72: ok cisco_ios
-124/258 10.20.99.3: fail 
-125/258 10.20.99.76: ok cisco_ios
-126/258 10.20.99.88: ok cisco_ios
-127/258 10.20.99.132: ok cisco_ios
-128/258 10.20.99.117: ok cisco_ios
-129/258 10.20.99.87: ok cisco_ios
-130/258 10.20.99.122: ok cisco_ios
-131/258 10.20.99.109: ok cisco_ios
-132/258 10.20.99.98: ok cisco_ios
-133/258 10.20.99.120: ok cisco_ios
-134/258 10.20.99.138: ok cisco_ios
-135/258 10.20.99.119: ok cisco_ios
-136/258 10.20.99.143: ok cisco_ios
-137/258 10.20.99.149: ok snr
-138/258 10.20.99.137: ok cisco_ios
-139/258 10.20.99.131: ok cisco_ios
-140/258 10.20.99.145: ok cisco_ios
-141/258 10.20.99.152: ok cisco_ios
-142/258 10.20.99.139: ok cisco_ios
-143/258 10.20.99.127: ok cisco_ios
-144/258 10.20.99.148: ok zes
-145/258 10.20.99.147: ok cisco_ios
-146/258 10.20.99.160: ok cisco_ios
-147/258 10.20.99.125: ok cisco_ios_telnet
-148/258 10.20.99.153: ok cisco_ios
-149/258 10.20.99.68: ok cisco_ios
-150/258 10.20.99.73: ok cisco_ios
-151/258 10.20.99.74: ok cisco_ios
-152/258 10.20.99.159: ok cisco_ios
-153/258 10.20.99.130: ok cisco_ios
-154/258 10.20.99.126: ok cisco_ios
-155/258 10.20.99.156: ok cisco_ios
-156/258 10.20.99.118: ok cisco_ios
-157/258 10.20.99.164: ok nis
-158/258 10.20.99.165: ok nis
-159/258 10.20.99.112: ok cisco_ios
-160/258 10.20.99.155: ok cisco_ios
-161/258 10.20.99.67: ok cisco_ios
-162/258 10.20.99.150: ok cisco_ios
-163/258 10.20.99.71: ok cisco_ios
-164/258 10.20.99.141: ok cisco_ios
-165/258 10.20.99.93: ok cisco_ios
-166/258 10.20.99.123: ok cisco_ios
-167/258 10.20.99.95: ok cisco_ios
-168/258 10.20.99.91: ok cisco_ios
-169/258 10.20.99.97: ok cisco_ios
-heartbeat done 169/258
-170/258 10.20.99.89: ok cisco_ios
-171/258 10.20.99.77: ok cisco_ios
-172/258 10.20.99.69: ok cisco_ios
-173/258 10.20.99.121: ok cisco_ios
-174/258 10.20.99.187: ok cisco_ios
-175/258 10.20.99.64: ok zes
-176/258 10.20.99.186: ok cisco_ios
-177/258 10.20.99.84: ok zes
-178/258 10.20.99.75: ok cisco_ios
-179/258 10.20.99.185: ok cisco_ios
-180/258 10.20.99.135: ok cisco_ios
-181/258 10.20.99.197: ok cisco_ios
-182/258 10.20.99.196: ok cisco_ios
-183/258 10.20.99.193: ok cisco_ios
-184/258 10.20.99.170: ok cisco_ios
-185/258 10.20.99.198: ok osnova_telnet
-186/258 10.20.99.206: ok cisco_ios
-187/258 10.20.99.205: ok cisco_ios
-188/258 10.20.99.207: ok cisco_ios
-189/258 10.20.99.217: ok cisco_ios
-190/258 10.20.99.218: ok cisco_ios
-heartbeat done 190/258
-191/258 10.20.99.48: ok eltex_mes
-192/258 10.20.99.219: ok cisco_ios
-193/258 10.20.99.225: ok cisco_ios
-194/258 10.20.99.226: ok cisco_ios
-195/258 10.20.99.96: ok eltex_mes
-196/258 10.20.99.227: ok cisco_ios
-197/258 10.20.99.50: ok eltex_mes
-198/258 10.20.99.224: ok cisco_ios
-199/258 10.20.99.199: ok osnova_telnet
-200/258 10.20.99.83: ok zes
-201/258 10.20.99.223: ok cisco_ios
-202/258 10.20.99.222: ok cisco_ios
-203/258 10.20.99.231: ok cisco_ios
-204/258 10.20.99.236: ok cisco_ios
-205/258 10.20.99.235: ok cisco_ios
-206/258 10.20.99.194: ok cisco_ios
-207/258 10.20.99.234: ok cisco_ios
-208/258 10.20.99.237: ok cisco_ios
-209/258 10.20.99.66: ok eltex_mes
-210/258 10.20.99.240: ok cisco_ios
-211/258 10.20.99.243: ok cisco_ios
-heartbeat done 211/258
-212/258 10.20.99.30: ok dlink
-213/258 10.20.99.9: ok cisco_ios_telnet
-214/258 10.20.97.11: ok cisco_ios
-215/258 10.20.99.248: ok cisco_ios
-216/258 10.20.97.1: ok cisco_ios
-217/258 10.20.97.10: ok cisco_ios
-218/258 10.20.97.3: ok cisco_ios
-219/258 10.20.97.7: ok cisco_ios
-220/258 10.20.97.9: ok cisco_ios
-221/258 10.20.97.4: ok cisco_ios
-222/258 10.20.97.6: ok cisco_ios
-223/258 10.20.99.18: ok eltex_mes
-224/258 10.20.97.100: ok cisco_ios
-225/258 10.20.97.5: ok cisco_ios
-226/258 10.2.99.1: ok cisco_ios
-227/258 10.2.99.5: ok cisco_ios
-228/258 10.2.99.7: ok cisco_ios
-229/258 10.2.99.11: ok cisco_ios
-230/258 10.20.98.148: ok cisco_ios
-heartbeat done 230/258
-231/258 10.20.99.102: ok dlink
-232/258 10.20.99.161: ok eltex_mes
-233/258 10.20.99.78: ok cisco_ios
-234/258 10.20.99.99: ok dlink
-235/258 10.20.99.101: ok dlink
-236/258 10.20.99.16: ok eltex_mes
-237/258 10.20.99.49: ok eltex_mes
-238/258 10.20.99.183: ok cisco_ios
-239/258 10.20.99.85: ok zes
-heartbeat done 239/258
-240/258 10.20.99.105: ok eltex_mes
-241/258 10.20.99.179: ok cisco_ios
-242/258 10.20.99.136: ok eltex_mes
-243/258 10.20.99.128: ok eltex_mes
-244/258 10.20.99.129: ok eltex_mes
-245/258 10.20.99.124: ok eltex_mes
-246/258 10.20.99.134: ok eltex_mes
-247/258 10.20.99.106: ok eltex_mes
-heartbeat done 247/258
-248/258 10.20.99.113: ok cisco_ios
-heartbeat done 248/258
-249/258 10.20.97.15: ok cisco_ios
-250/258 10.20.99.151: ok cisco_ios
-251/258 10.20.99.63: ok cisco_ios
-heartbeat done 251/258
-heartbeat done 251/258
-252/258 10.20.98.98: ok cisco_ios
-253/258 10.20.98.95: ok cisco_ios
-254/258 10.20.98.104: ok cisco_ios
-255/258 10.20.98.101: ok cisco_ios
-256/258 10.20.98.102: ok cisco_ios
-heartbeat done 256/258
-heartbeat done 256/258
-heartbeat done 256/258
-257/258 10.20.99.244: ok cisco_ios
-258/258 10.20.99.245: ok cisco_ios
+122/241 10.20.99.118: ok cisco_ios
+123/241 10.20.99.95: ok cisco_ios
+124/241 10.20.99.117: ok cisco_ios
+125/241 10.20.99.93: ok cisco_ios
+126/241 10.20.99.123: ok cisco_ios
+127/241 10.20.99.132: ok cisco_ios
+128/241 10.20.99.121: ok cisco_ios
+129/241 10.20.99.120: ok cisco_ios
+130/241 10.20.99.122: ok cisco_ios
+131/241 10.20.99.71: ok cisco_ios
+132/241 10.20.99.84: ok zes
+133/241 10.20.99.119: ok cisco_ios
+134/241 10.20.99.138: ok cisco_ios
+135/241 10.20.99.147: ok cisco_ios
+136/241 10.20.99.137: ok cisco_ios
+137/241 10.20.99.97: ok cisco_ios
+138/241 10.20.99.126: ok cisco_ios
+139/241 10.20.99.145: ok cisco_ios
+140/241 10.20.99.127: ok cisco_ios
+141/241 10.20.99.141: ok cisco_ios
+142/241 10.20.99.149: ok snr
+143/241 10.20.99.139: ok cisco_ios
+144/241 10.20.99.152: ok cisco_ios
+145/241 10.20.99.143: ok cisco_ios
+146/241 10.20.99.148: ok zes
+147/241 10.20.99.20: ok cisco_ios
+148/241 10.20.99.135: ok cisco_ios
+149/241 10.20.99.61: ok cisco_ios
+150/241 10.20.99.44: ok cisco_ios
+151/241 10.20.99.125: ok cisco_ios_telnet
+152/241 10.20.99.155: ok cisco_ios
+153/241 10.20.99.58: ok cisco_ios
+154/241 10.20.99.160: ok cisco_ios
+155/241 10.20.99.156: ok cisco_ios
+156/241 10.20.99.86: ok cisco_ios
+157/241 10.20.99.98: ok cisco_ios
+158/241 10.20.99.153: ok cisco_ios
+159/241 10.20.99.67: ok cisco_ios
+160/241 10.20.99.164: ok nis
+161/241 10.20.99.90: ok cisco_ios
+162/241 10.20.99.165: ok nis
+163/241 10.20.99.185: ok cisco_ios
+164/241 10.20.99.170: ok cisco_ios
+165/241 10.20.99.187: ok cisco_ios
+166/241 10.20.99.159: ok cisco_ios
+heartbeat done 166/241
+167/241 10.20.99.150: ok cisco_ios
+168/241 10.20.99.94: ok cisco_ios
+169/241 10.20.99.196: ok cisco_ios
+170/241 10.20.99.186: ok cisco_ios
+171/241 10.20.99.193: fail 
+172/241 10.20.99.197: ok cisco_ios
+173/241 10.20.99.199: ok osnova_telnet
+174/241 10.20.99.198: ok osnova_telnet
+175/241 10.20.99.207: ok cisco_ios
+176/241 10.20.99.205: ok cisco_ios
+heartbeat done 176/241
+Exception (client): Invalid packet blocking
+Traceback (most recent call last):
+  File "C:\Users\zhiltsov.aa\AppData\Local\Programs\Python\Python311\Lib\site-packages\paramiko\transport.py", line 2195, in run
+    ptype, m = self.packetizer.read_message()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\zhiltsov.aa\AppData\Local\Programs\Python\Python311\Lib\site-packages\paramiko\packet.py", line 544, in read_message
+    raise SSHException("Invalid packet blocking")
+paramiko.ssh_exception.SSHException: Invalid packet blocking
+
+177/241 10.20.99.48: ok eltex_mes
+Exception (client): Invalid packet blocking
+Traceback (most recent call last):
+  File "C:\Users\zhiltsov.aa\AppData\Local\Programs\Python\Python311\Lib\site-packages\paramiko\transport.py", line 2195, in run
+    ptype, m = self.packetizer.read_message()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\zhiltsov.aa\AppData\Local\Programs\Python\Python311\Lib\site-packages\paramiko\packet.py", line 544, in read_message
+    raise SSHException("Invalid packet blocking")
+paramiko.ssh_exception.SSHException: Invalid packet blocking
+
+178/241 10.20.99.102: ok dlink
+179/241 10.20.99.85: ok zes
+180/241 10.20.99.101: ok dlink
+181/241 10.20.99.218: ok cisco_ios
+182/241 10.20.99.219: ok cisco_ios
+183/241 10.20.99.217: ok cisco_ios
+184/241 10.20.99.225: ok cisco_ios
+185/241 10.20.99.222: ok cisco_ios
+186/241 10.20.99.226: ok cisco_ios
+187/241 10.20.99.223: ok cisco_ios
+188/241 10.20.99.50: ok eltex_mes
+189/241 10.20.99.235: ok cisco_ios
+190/241 10.20.99.83: ok zes
+191/241 10.20.99.224: ok cisco_ios
+192/241 10.20.99.227: ok cisco_ios
+193/241 10.20.99.236: ok cisco_ios
+194/241 10.20.99.243: ok cisco_ios
+195/241 10.20.99.96: ok eltex_mes
+196/241 10.20.99.248: ok cisco_ios
+197/241 10.20.97.1: ok cisco_ios
+198/241 10.20.99.231: ok cisco_ios
+199/241 10.20.97.4: ok cisco_ios
+200/241 10.20.97.9: ok cisco_ios
+201/241 10.20.97.11: ok cisco_ios
+202/241 10.20.97.5: ok cisco_ios
+203/241 10.20.97.6: ok cisco_ios
+heartbeat done 203/241
+204/241 10.20.97.3: ok cisco_ios
+205/241 10.20.99.240: ok cisco_ios
+206/241 10.20.97.7: ok cisco_ios
+207/241 10.20.97.10: ok cisco_ios
+208/241 10.20.97.100: ok cisco_ios
+209/241 10.2.99.1: ok cisco_ios
+210/241 10.2.99.11: ok cisco_ios
+211/241 10.2.99.5: ok cisco_ios
+212/241 10.2.99.7: ok cisco_ios
+213/241 10.20.99.30: ok dlink
+214/241 10.20.99.18: ok eltex_mes
+215/241 10.20.99.66: ok eltex_mes
+heartbeat done 215/241
+216/241 10.20.98.148: ok cisco_ios
+217/241 10.20.99.161: ok eltex_mes
+218/241 10.20.99.99: ok dlink
+219/241 10.20.99.78: ok cisco_ios
+220/241 10.20.99.124: ok eltex_mes
+221/241 10.20.99.49: ok eltex_mes
+222/241 10.20.99.16: ok eltex_mes
+223/241 10.20.99.179: ok cisco_ios
+224/241 10.20.99.183: ok cisco_ios
+225/241 10.20.99.106: ok eltex_mes
+heartbeat done 225/241
+226/241 10.20.99.128: ok eltex_mes
+227/241 10.20.99.134: ok eltex_mes
+228/241 10.20.99.129: ok eltex_mes
+229/241 10.20.99.136: ok eltex_mes
+230/241 10.20.99.105: ok eltex_mes
+heartbeat done 230/241
+231/241 10.20.97.15: ok cisco_ios
+232/241 10.20.99.113: ok cisco_ios
+heartbeat done 232/241
+233/241 10.20.99.63: ok cisco_ios
+234/241 10.20.99.151: ok cisco_ios
+heartbeat done 234/241
+heartbeat done 234/241
+235/241 10.20.98.98: ok cisco_ios
+236/241 10.20.98.95: ok cisco_ios
+237/241 10.20.98.102: ok cisco_ios
+238/241 10.20.98.104: ok cisco_ios
+239/241 10.20.98.101: ok cisco_ios
+heartbeat done 239/241
+heartbeat done 239/241
+heartbeat done 239/241
+240/241 10.20.99.244: ok cisco_ios
+241/241 10.20.99.245: ok cisco_ios
 
                           Stage 1: Collection results                          
 +-----------------------------------------------------------------------------+
 | IP/Host      | Status | Info / Errors                                       |
 |--------------+--------+-----------------------------------------------------|
 | 10.20.98.113 | ok     | cisco_ios                                           |
-| 10.20.98.115 | ok     | cisco_ios                                           |
-| 10.20.98.132 | ok     | cisco_ios                                           |
-| 10.20.98.103 | ok     | cisco_ios                                           |
-| 10.20.98.56  | ok     | cisco_ios                                           |
-| 10.20.98.92  | ok     | cisco_ios                                           |
-| 10.20.98.131 | ok     | cisco_ios                                           |
-| 10.20.98.58  | ok     | cisco_ios                                           |
-| 10.20.98.125 | ok     | cisco_ios                                           |
-| 10.20.98.94  | ok     | cisco_ios                                           |
-| 10.20.98.87  | ok     | cisco_ios                                           |
-| 10.20.98.106 | ok     | cisco_ios                                           |
 | 10.20.98.130 | ok     | cisco_ios                                           |
-| 10.20.98.91  | ok     | cisco_ios                                           |
-| 10.20.98.142 | ok     | cisco_ios                                           |
-| 10.20.98.54  | ok     | cisco_ios                                           |
-| 10.20.98.128 | ok     | cisco_ios                                           |
-| 10.20.98.55  | ok     | cisco_ios                                           |
-| 10.20.98.67  | ok     | cisco_ios                                           |
-| 10.20.98.68  | ok     | cisco_ios                                           |
-| 10.20.98.105 | ok     | cisco_ios                                           |
-| 10.20.98.65  | ok     | cisco_ios                                           |
-| 10.20.98.70  | ok     | cisco_ios                                           |
-| 10.20.98.114 | ok     | cisco_ios                                           |
-| 10.20.98.66  | ok     | cisco_ios                                           |
-| 10.20.98.73  | ok     | cisco_ios                                           |
-| 10.20.98.119 | ok     | cisco_ios                                           |
-| 10.20.98.96  | ok     | cisco_ios                                           |
-| 10.20.98.51  | ok     | cisco_ios                                           |
-| 10.20.98.53  | ok     | cisco_ios                                           |
-| 10.20.98.145 | ok     | cisco_ios                                           |
-| 10.20.98.143 | ok     | cisco_ios                                           |
-| 10.20.98.126 | ok     | cisco_ios                                           |
 | 10.20.98.99  | ok     | cisco_ios                                           |
-| 10.20.98.108 | ok     | cisco_ios                                           |
-| 10.20.98.57  | ok     | cisco_ios                                           |
+| 10.20.98.115 | ok     | cisco_ios                                           |
+| 10.20.98.125 | ok     | cisco_ios                                           |
+| 10.20.98.103 | ok     | cisco_ios                                           |
+| 10.20.98.106 | ok     | cisco_ios                                           |
+| 10.20.98.54  | ok     | cisco_ios                                           |
 | 10.20.98.144 | ok     | cisco_ios                                           |
-| 10.20.98.1   | ok     | cisco_ios                                           |
 | 10.20.98.127 | ok     | cisco_ios                                           |
-| 10.20.98.129 | ok     | cisco_ios                                           |
-| 10.20.98.149 | ok     | cisco_ios                                           |
-| 10.20.98.151 | ok     | cisco_ios                                           |
-| 10.20.98.147 | ok     | cisco_ios                                           |
-| 10.20.98.140 | ok     | cisco_ios                                           |
-| 10.20.98.146 | ok     | cisco_ios                                           |
-| 10.20.98.150 | ok     | cisco_ios                                           |
-| 10.20.98.69  | ok     | cisco_ios                                           |
-| 10.20.98.107 | ok     | cisco_ios                                           |
-| 10.20.98.118 | ok     | cisco_ios                                           |
-| 10.20.98.97  | ok     | cisco_ios                                           |
-| 10.20.98.110 | ok     | cisco_ios                                           |
+| 10.20.98.92  | ok     | cisco_ios                                           |
+| 10.20.98.126 | ok     | cisco_ios                                           |
 | 10.20.98.141 | ok     | cisco_ios                                           |
-| 10.20.98.134 | ok     | cisco_ios                                           |
+| 10.20.98.57  | ok     | cisco_ios                                           |
+| 10.20.98.56  | ok     | cisco_ios                                           |
+| 10.20.98.142 | ok     | cisco_ios                                           |
+| 10.20.98.97  | ok     | cisco_ios                                           |
+| 10.20.98.58  | ok     | cisco_ios                                           |
+| 10.20.98.1   | ok     | cisco_ios                                           |
+| 10.20.98.68  | ok     | cisco_ios                                           |
+| 10.20.98.69  | ok     | cisco_ios                                           |
+| 10.20.98.105 | ok     | cisco_ios                                           |
+| 10.20.98.70  | ok     | cisco_ios                                           |
+| 10.20.98.73  | ok     | cisco_ios                                           |
+| 10.20.98.66  | ok     | cisco_ios                                           |
+| 10.20.98.119 | ok     | cisco_ios                                           |
+| 10.20.98.110 | ok     | cisco_ios                                           |
+| 10.20.98.53  | ok     | cisco_ios                                           |
+| 10.20.98.51  | ok     | cisco_ios                                           |
+| 10.20.98.96  | ok     | cisco_ios                                           |
+| 10.20.98.108 | ok     | cisco_ios                                           |
 | 10.20.98.112 | ok     | cisco_ios                                           |
+| 10.20.98.143 | ok     | cisco_ios                                           |
+| 10.20.98.128 | ok     | cisco_ios                                           |
+| 10.20.98.87  | ok     | cisco_ios                                           |
+| 10.20.98.131 | ok     | cisco_ios                                           |
+| 10.20.98.147 | ok     | cisco_ios                                           |
+| 10.20.98.55  | ok     | cisco_ios                                           |
+| 10.20.98.94  | ok     | cisco_ios                                           |
+| 10.20.98.132 | ok     | cisco_ios                                           |
 | 10.20.98.93  | ok     | cisco_ios                                           |
+| 10.20.98.149 | ok     | cisco_ios                                           |
+| 10.20.98.91  | ok     | cisco_ios                                           |
+| 10.20.98.140 | ok     | cisco_ios                                           |
+| 10.20.98.129 | ok     | cisco_ios                                           |
+| 10.20.98.145 | ok     | cisco_ios                                           |
+| 10.20.98.67  | ok     | cisco_ios                                           |
+| 10.20.98.134 | ok     | cisco_ios                                           |
+| 10.20.98.146 | ok     | cisco_ios                                           |
+| 10.20.98.107 | ok     | cisco_ios                                           |
+| 10.20.98.151 | ok     | cisco_ios                                           |
+| 10.20.98.65  | ok     | cisco_ios                                           |
+| 10.20.98.118 | ok     | cisco_ios                                           |
+| 10.20.98.150 | ok     | cisco_ios                                           |
+| 10.20.98.114 | ok     | cisco_ios                                           |
 | 10.20.99.17  | ok     | cisco_ios                                           |
 | 10.20.99.14  | ok     | cisco_ios                                           |
-| 10.20.98.100 | ok     | cisco_ios                                           |
-| 10.20.98.153 | ok     | cisco_ios                                           |
-| 10.20.99.21  | ok     | cisco_ios                                           |
-| 10.20.99.22  | ok     | cisco_ios                                           |
-| 10.20.99.20  | ok     | cisco_ios                                           |
-| 10.20.99.11  | ok     | cisco_ios                                           |
-| 10.20.99.6   | ok     | cisco_ios                                           |
-| 10.20.99.7   | ok     | cisco_ios                                           |
-| 10.20.99.8   | ok     | cisco_ios                                           |
 | 10.20.99.12  | ok     | cisco_ios                                           |
-| 10.20.99.5   | ok     | cisco_ios                                           |
-| 10.20.99.25  | ok     | cisco_ios                                           |
-| 10.20.99.15  | ok     | cisco_ios                                           |
-| 10.20.99.4   | ok     | cisco_ios                                           |
-| 10.20.99.40  | ok     | cisco_ios                                           |
-| 10.20.99.10  | ok     | cisco_ios                                           |
-| 10.20.99.13  | ok     | cisco_ios                                           |
-| 10.20.99.35  | ok     | cisco_ios                                           |
-| 10.20.99.38  | ok     | cisco_ios                                           |
-| 10.20.99.28  | ok     | cisco_ios                                           |
-| 10.20.99.41  | ok     | cisco_ios                                           |
-| 10.20.99.29  | ok     | cisco_ios                                           |
-| 10.20.99.44  | ok     | cisco_ios                                           |
-| 10.20.99.27  | ok     | cisco_ios                                           |
-| 10.20.99.47  | ok     | cisco_ios                                           |
-| 10.20.99.54  | ok     | cisco_ios                                           |
-| 10.20.99.43  | ok     | cisco_ios                                           |
-| 10.20.99.56  | ok     | cisco_ios                                           |
-| 10.20.99.52  | ok     | cisco_ios                                           |
-| 10.20.98.232 | ok     | cisco_ios                                           |
-| 10.20.99.46  | ok     | cisco_ios                                           |
-| 10.20.99.36  | ok     | cisco_ios                                           |
-| 10.20.99.51  | ok     | cisco_ios                                           |
-| 10.20.99.32  | ok     | cisco_ios                                           |
-| 10.20.99.53  | ok     | cisco_ios                                           |
-| 10.20.99.55  | ok     | zes                                                 |
-| 10.20.99.39  | ok     | cisco_ios                                           |
-| 10.20.99.57  | ok     | cisco_ios                                           |
 | 10.20.98.235 | ok     | cisco_ios                                           |
-| 10.20.99.42  | ok     | cisco_ios                                           |
-| 10.20.99.1   | ok     | cisco_ios                                           |
-| 10.20.99.58  | ok     | cisco_ios                                           |
-| 10.20.99.61  | ok     | cisco_ios                                           |
-| 10.20.99.45  | ok     | cisco_ios                                           |
-| 10.20.99.26  | ok     | cisco_ios                                           |
-| 10.20.99.70  | ok     | cisco_ios                                           |
-| 10.20.99.65  | ok     | cisco_ios                                           |
-| 10.20.99.79  | ok     | zes                                                 |
-| 10.20.99.90  | ok     | cisco_ios                                           |
-| 10.20.98.233 | ok     | cisco_ios                                           |
-| 10.20.99.34  | ok     | cisco_ios                                           |
-| 10.20.99.59  | ok     | cisco_ios                                           |
-| 10.20.98.231 | ok     | cisco_ios                                           |
+| 10.20.99.21  | ok     | cisco_ios                                           |
+| 10.20.99.11  | ok     | cisco_ios                                           |
+| 10.20.99.5   | ok     | cisco_ios                                           |
 | 10.20.99.19  | ok     | cisco_ios                                           |
-| 10.20.99.108 | ok     | cisco_ios                                           |
-| 10.20.99.92  | ok     | cisco_ios                                           |
-| 10.20.99.60  | ok     | cisco_ios                                           |
+| 10.20.99.40  | ok     | cisco_ios                                           |
+| 10.20.99.6   | ok     | cisco_ios                                           |
+| 10.20.99.22  | ok     | cisco_ios                                           |
+| 10.20.99.4   | ok     | cisco_ios                                           |
+| 10.20.99.8   | ok     | cisco_ios                                           |
+| 10.20.99.7   | ok     | cisco_ios                                           |
+| 10.20.99.32  | ok     | cisco_ios                                           |
+| 10.20.98.232 | ok     | cisco_ios                                           |
+| 10.20.99.15  | ok     | cisco_ios                                           |
+| 10.20.99.27  | ok     | cisco_ios                                           |
+| 10.20.98.231 | ok     | cisco_ios                                           |
+| 10.20.99.43  | ok     | cisco_ios                                           |
+| 10.20.99.10  | ok     | cisco_ios                                           |
+| 10.20.99.39  | ok     | cisco_ios                                           |
+| 10.20.99.25  | ok     | cisco_ios                                           |
+| 10.20.99.38  | ok     | cisco_ios                                           |
+| 10.20.99.35  | ok     | cisco_ios                                           |
+| 10.20.98.233 | ok     | cisco_ios                                           |
+| 10.20.99.26  | ok     | cisco_ios                                           |
+| 10.20.99.55  | ok     | zes                                                 |
 | 10.20.99.37  | ok     | cisco_ios                                           |
-| 10.20.99.116 | ok     | cisco_ios                                           |
-| 10.20.99.114 | ok     | cisco_ios                                           |
-| 10.20.99.94  | ok     | cisco_ios                                           |
-| 10.20.99.86  | ok     | cisco_ios                                           |
-| 10.20.99.115 | ok     | cisco_ios                                           |
-| 10.20.99.82  | ok     | cisco_ios                                           |
-| 10.20.99.107 | fail   | mikrotik: Authentication to device failed.          |
-|              |        |                                                     |
-|              |        | Common causes of this problem are:                  |
-|              |        | 1. Invalid username and password                    |
-|              |        | 2. In...                                            |
-| 10.20.99.72  | ok     | cisco_ios                                           |
+| 10.20.99.54  | ok     | cisco_ios                                           |
+| 10.20.99.52  | ok     | cisco_ios                                           |
+| 10.20.99.46  | ok     | cisco_ios                                           |
+| 10.20.99.64  | ok     | zes                                                 |
+| 10.20.99.59  | ok     | cisco_ios                                           |
+| 10.20.99.29  | ok     | cisco_ios                                           |
+| 10.20.99.79  | ok     | zes                                                 |
+| 10.20.99.42  | ok     | cisco_ios                                           |
+| 10.20.99.36  | ok     | cisco_ios                                           |
+| 10.20.99.65  | ok     | cisco_ios                                           |
+| 10.20.99.45  | ok     | cisco_ios                                           |
+| 10.20.99.91  | ok     | cisco_ios                                           |
+| 10.20.99.75  | ok     | cisco_ios                                           |
+| 10.20.99.28  | ok     | cisco_ios                                           |
+| 10.20.99.69  | ok     | cisco_ios                                           |
+| 10.20.99.74  | ok     | cisco_ios                                           |
+| 10.20.99.87  | ok     | cisco_ios                                           |
+| 10.20.99.41  | ok     | cisco_ios                                           |
+| 10.20.99.88  | ok     | cisco_ios                                           |
+| 10.20.99.92  | ok     | cisco_ios                                           |
+| 10.20.99.77  | ok     | cisco_ios                                           |
+| 10.20.99.76  | ok     | cisco_ios                                           |
+| 10.20.99.112 | ok     | cisco_ios                                           |
+| 10.20.99.73  | ok     | cisco_ios                                           |
+| 10.20.99.108 | ok     | cisco_ios                                           |
+| 10.20.99.89  | ok     | cisco_ios                                           |
+| 10.20.99.51  | ok     | cisco_ios                                           |
+| 10.20.99.60  | ok     | cisco_ios                                           |
+| 10.20.99.34  | ok     | cisco_ios                                           |
+| 10.20.99.53  | ok     | cisco_ios                                           |
 | 10.20.99.3   | fail   | huawei_vrp:                                         |
 |              |        |                                                     |
 |              |        | Pattern not detected: '(?:Change now|Please         |
 |              |        | choose|[\\]>])' in output.                          |
 |              |        |                                                     |
 |              |        | Things you might try to fix thi...                  |
-| 10.20.99.76  | ok     | cisco_ios                                           |
-| 10.20.99.88  | ok     | cisco_ios                                           |
-| 10.20.99.132 | ok     | cisco_ios                                           |
-| 10.20.99.117 | ok     | cisco_ios                                           |
-| 10.20.99.87  | ok     | cisco_ios                                           |
-| 10.20.99.122 | ok     | cisco_ios                                           |
+| 10.20.99.115 | ok     | cisco_ios                                           |
 | 10.20.99.109 | ok     | cisco_ios                                           |
-| 10.20.99.98  | ok     | cisco_ios                                           |
-| 10.20.99.120 | ok     | cisco_ios                                           |
-| 10.20.99.138 | ok     | cisco_ios                                           |
-| 10.20.99.119 | ok     | cisco_ios                                           |
-| 10.20.99.143 | ok     | cisco_ios                                           |
-| 10.20.99.149 | ok     | snr                                                 |
-| 10.20.99.137 | ok     | cisco_ios                                           |
-| 10.20.99.131 | ok     | cisco_ios                                           |
-| 10.20.99.145 | ok     | cisco_ios                                           |
-| 10.20.99.152 | ok     | cisco_ios                                           |
-| 10.20.99.139 | ok     | cisco_ios                                           |
-| 10.20.99.127 | ok     | cisco_ios                                           |
-| 10.20.99.148 | ok     | zes                                                 |
-| 10.20.99.147 | ok     | cisco_ios                                           |
-| 10.20.99.160 | ok     | cisco_ios                                           |
-| 10.20.99.125 | ok     | cisco_ios_telnet                                    |
-| 10.20.99.153 | ok     | cisco_ios                                           |
-| 10.20.99.68  | ok     | cisco_ios                                           |
-| 10.20.99.73  | ok     | cisco_ios                                           |
-| 10.20.99.74  | ok     | cisco_ios                                           |
-| 10.20.99.159 | ok     | cisco_ios                                           |
-| 10.20.99.130 | ok     | cisco_ios                                           |
-| 10.20.99.126 | ok     | cisco_ios                                           |
-| 10.20.99.156 | ok     | cisco_ios                                           |
+| 10.20.99.114 | ok     | cisco_ios                                           |
+| 10.20.99.72  | ok     | cisco_ios                                           |
+| 10.20.99.116 | ok     | cisco_ios                                           |
+| 10.20.99.1   | ok     | cisco_ios                                           |
 | 10.20.99.118 | ok     | cisco_ios                                           |
-| 10.20.99.164 | ok     | nis                                                 |
-| 10.20.99.165 | ok     | nis                                                 |
-| 10.20.99.112 | ok     | cisco_ios                                           |
-| 10.20.99.155 | ok     | cisco_ios                                           |
-| 10.20.99.67  | ok     | cisco_ios                                           |
-| 10.20.99.150 | ok     | cisco_ios                                           |
-| 10.20.99.71  | ok     | cisco_ios                                           |
-| 10.20.99.141 | ok     | cisco_ios                                           |
+| 10.20.99.95  | ok     | cisco_ios                                           |
+| 10.20.99.117 | ok     | cisco_ios                                           |
 | 10.20.99.93  | ok     | cisco_ios                                           |
 | 10.20.99.123 | ok     | cisco_ios                                           |
-| 10.20.99.95  | ok     | cisco_ios                                           |
-| 10.20.99.91  | ok     | cisco_ios                                           |
-| 10.20.99.97  | ok     | cisco_ios                                           |
-| 10.20.99.89  | ok     | cisco_ios                                           |
-| 10.20.99.77  | ok     | cisco_ios                                           |
-| 10.20.99.69  | ok     | cisco_ios                                           |
+| 10.20.99.132 | ok     | cisco_ios                                           |
 | 10.20.99.121 | ok     | cisco_ios                                           |
-| 10.20.99.187 | ok     | cisco_ios                                           |
-| 10.20.99.64  | ok     | zes                                                 |
-| 10.20.99.186 | ok     | cisco_ios                                           |
+| 10.20.99.120 | ok     | cisco_ios                                           |
+| 10.20.99.122 | ok     | cisco_ios                                           |
+| 10.20.99.71  | ok     | cisco_ios                                           |
 | 10.20.99.84  | ok     | zes                                                 |
-| 10.20.99.75  | ok     | cisco_ios                                           |
-| 10.20.99.185 | ok     | cisco_ios                                           |
+| 10.20.99.119 | ok     | cisco_ios                                           |
+| 10.20.99.138 | ok     | cisco_ios                                           |
+| 10.20.99.147 | ok     | cisco_ios                                           |
+| 10.20.99.137 | ok     | cisco_ios                                           |
+| 10.20.99.97  | ok     | cisco_ios                                           |
+| 10.20.99.126 | ok     | cisco_ios                                           |
+| 10.20.99.145 | ok     | cisco_ios                                           |
+| 10.20.99.127 | ok     | cisco_ios                                           |
+| 10.20.99.141 | ok     | cisco_ios                                           |
+| 10.20.99.149 | ok     | snr                                                 |
+| 10.20.99.139 | ok     | cisco_ios                                           |
+| 10.20.99.152 | ok     | cisco_ios                                           |
+| 10.20.99.143 | ok     | cisco_ios                                           |
+| 10.20.99.148 | ok     | zes                                                 |
+| 10.20.99.20  | ok     | cisco_ios                                           |
 | 10.20.99.135 | ok     | cisco_ios                                           |
-| 10.20.99.197 | ok     | cisco_ios                                           |
-| 10.20.99.196 | ok     | cisco_ios                                           |
-| 10.20.99.193 | ok     | cisco_ios                                           |
+| 10.20.99.61  | ok     | cisco_ios                                           |
+| 10.20.99.44  | ok     | cisco_ios                                           |
+| 10.20.99.125 | ok     | cisco_ios_telnet                                    |
+| 10.20.99.155 | ok     | cisco_ios                                           |
+| 10.20.99.58  | ok     | cisco_ios                                           |
+| 10.20.99.160 | ok     | cisco_ios                                           |
+| 10.20.99.156 | ok     | cisco_ios                                           |
+| 10.20.99.86  | ok     | cisco_ios                                           |
+| 10.20.99.98  | ok     | cisco_ios                                           |
+| 10.20.99.153 | ok     | cisco_ios                                           |
+| 10.20.99.67  | ok     | cisco_ios                                           |
+| 10.20.99.164 | ok     | nis                                                 |
+| 10.20.99.90  | ok     | cisco_ios                                           |
+| 10.20.99.165 | ok     | nis                                                 |
+| 10.20.99.185 | ok     | cisco_ios                                           |
 | 10.20.99.170 | ok     | cisco_ios                                           |
-| 10.20.99.198 | ok     | osnova_telnet                                       |
-| 10.20.99.206 | ok     | cisco_ios                                           |
-| 10.20.99.205 | ok     | cisco_ios                                           |
-| 10.20.99.207 | ok     | cisco_ios                                           |
-| 10.20.99.217 | ok     | cisco_ios                                           |
-| 10.20.99.218 | ok     | cisco_ios                                           |
-| 10.20.99.48  | ok     | eltex_mes                                           |
-| 10.20.99.219 | ok     | cisco_ios                                           |
-| 10.20.99.225 | ok     | cisco_ios                                           |
-| 10.20.99.226 | ok     | cisco_ios                                           |
-| 10.20.99.96  | ok     | eltex_mes                                           |
-| 10.20.99.227 | ok     | cisco_ios                                           |
-| 10.20.99.50  | ok     | eltex_mes                                           |
-| 10.20.99.224 | ok     | cisco_ios                                           |
+| 10.20.99.187 | ok     | cisco_ios                                           |
+| 10.20.99.159 | ok     | cisco_ios                                           |
+| 10.20.99.150 | ok     | cisco_ios                                           |
+| 10.20.99.94  | ok     | cisco_ios                                           |
+| 10.20.99.196 | ok     | cisco_ios                                           |
+| 10.20.99.186 | ok     | cisco_ios                                           |
+| 10.20.99.193 | fail   | cisco_ios: Paramiko: 'No existing session' error:   |
+|              |        | try increasing 'conn_timeout' to 15 seconds or      |
+|              |        | larger.                                             |
+| 10.20.99.197 | ok     | cisco_ios                                           |
 | 10.20.99.199 | ok     | osnova_telnet                                       |
-| 10.20.99.83  | ok     | zes                                                 |
-| 10.20.99.223 | ok     | cisco_ios                                           |
+| 10.20.99.198 | ok     | osnova_telnet                                       |
+| 10.20.99.207 | ok     | cisco_ios                                           |
+| 10.20.99.205 | ok     | cisco_ios                                           |
+| 10.20.99.48  | ok     | eltex_mes                                           |
+| 10.20.99.102 | ok     | dlink                                               |
+| 10.20.99.85  | ok     | zes                                                 |
+| 10.20.99.101 | ok     | dlink                                               |
+| 10.20.99.218 | ok     | cisco_ios                                           |
+| 10.20.99.219 | ok     | cisco_ios                                           |
+| 10.20.99.217 | ok     | cisco_ios                                           |
+| 10.20.99.225 | ok     | cisco_ios                                           |
 | 10.20.99.222 | ok     | cisco_ios                                           |
-| 10.20.99.231 | ok     | cisco_ios                                           |
-| 10.20.99.236 | ok     | cisco_ios                                           |
+| 10.20.99.226 | ok     | cisco_ios                                           |
+| 10.20.99.223 | ok     | cisco_ios                                           |
+| 10.20.99.50  | ok     | eltex_mes                                           |
 | 10.20.99.235 | ok     | cisco_ios                                           |
-| 10.20.99.194 | ok     | cisco_ios                                           |
-| 10.20.99.234 | ok     | cisco_ios                                           |
-| 10.20.99.237 | ok     | cisco_ios                                           |
-| 10.20.99.66  | ok     | eltex_mes                                           |
-| 10.20.99.240 | ok     | cisco_ios                                           |
+| 10.20.99.83  | ok     | zes                                                 |
+| 10.20.99.224 | ok     | cisco_ios                                           |
+| 10.20.99.227 | ok     | cisco_ios                                           |
+| 10.20.99.236 | ok     | cisco_ios                                           |
 | 10.20.99.243 | ok     | cisco_ios                                           |
-| 10.20.99.30  | ok     | dlink                                               |
-| 10.20.99.9   | ok     | cisco_ios_telnet                                    |
-| 10.20.97.11  | ok     | cisco_ios                                           |
+| 10.20.99.96  | ok     | eltex_mes                                           |
 | 10.20.99.248 | ok     | cisco_ios                                           |
 | 10.20.97.1   | ok     | cisco_ios                                           |
-| 10.20.97.10  | ok     | cisco_ios                                           |
-| 10.20.97.3   | ok     | cisco_ios                                           |
-| 10.20.97.7   | ok     | cisco_ios                                           |
-| 10.20.97.9   | ok     | cisco_ios                                           |
+| 10.20.99.231 | ok     | cisco_ios                                           |
 | 10.20.97.4   | ok     | cisco_ios                                           |
-| 10.20.97.6   | ok     | cisco_ios                                           |
-| 10.20.99.18  | ok     | eltex_mes                                           |
-| 10.20.97.100 | ok     | cisco_ios                                           |
+| 10.20.97.9   | ok     | cisco_ios                                           |
+| 10.20.97.11  | ok     | cisco_ios                                           |
 | 10.20.97.5   | ok     | cisco_ios                                           |
+| 10.20.97.6   | ok     | cisco_ios                                           |
+| 10.20.97.3   | ok     | cisco_ios                                           |
+| 10.20.99.240 | ok     | cisco_ios                                           |
+| 10.20.97.7   | ok     | cisco_ios                                           |
+| 10.20.97.10  | ok     | cisco_ios                                           |
+| 10.20.97.100 | ok     | cisco_ios                                           |
 | 10.2.99.1    | ok     | cisco_ios                                           |
+| 10.2.99.11   | ok     | cisco_ios                                           |
 | 10.2.99.5    | ok     | cisco_ios                                           |
 | 10.2.99.7    | ok     | cisco_ios                                           |
-| 10.2.99.11   | ok     | cisco_ios                                           |
+| 10.20.99.30  | ok     | dlink                                               |
+| 10.20.99.18  | ok     | eltex_mes                                           |
+| 10.20.99.66  | ok     | eltex_mes                                           |
 | 10.20.98.148 | ok     | cisco_ios                                           |
-| 10.20.99.102 | ok     | dlink                                               |
 | 10.20.99.161 | ok     | eltex_mes                                           |
-| 10.20.99.78  | ok     | cisco_ios                                           |
 | 10.20.99.99  | ok     | dlink                                               |
-| 10.20.99.101 | ok     | dlink                                               |
-| 10.20.99.16  | ok     | eltex_mes                                           |
-| 10.20.99.49  | ok     | eltex_mes                                           |
-| 10.20.99.183 | ok     | cisco_ios                                           |
-| 10.20.99.85  | ok     | zes                                                 |
-| 10.20.99.105 | ok     | eltex_mes                                           |
-| 10.20.99.179 | ok     | cisco_ios                                           |
-| 10.20.99.136 | ok     | eltex_mes                                           |
-| 10.20.99.128 | ok     | eltex_mes                                           |
-| 10.20.99.129 | ok     | eltex_mes                                           |
+| 10.20.99.78  | ok     | cisco_ios                                           |
 | 10.20.99.124 | ok     | eltex_mes                                           |
-| 10.20.99.134 | ok     | eltex_mes                                           |
+| 10.20.99.49  | ok     | eltex_mes                                           |
+| 10.20.99.16  | ok     | eltex_mes                                           |
+| 10.20.99.179 | ok     | cisco_ios                                           |
+| 10.20.99.183 | ok     | cisco_ios                                           |
 | 10.20.99.106 | ok     | eltex_mes                                           |
-| 10.20.99.113 | ok     | cisco_ios                                           |
+| 10.20.99.128 | ok     | eltex_mes                                           |
+| 10.20.99.134 | ok     | eltex_mes                                           |
+| 10.20.99.129 | ok     | eltex_mes                                           |
+| 10.20.99.136 | ok     | eltex_mes                                           |
+| 10.20.99.105 | ok     | eltex_mes                                           |
 | 10.20.97.15  | ok     | cisco_ios                                           |
-| 10.20.99.151 | ok     | cisco_ios                                           |
+| 10.20.99.113 | ok     | cisco_ios                                           |
 | 10.20.99.63  | ok     | cisco_ios                                           |
+| 10.20.99.151 | ok     | cisco_ios                                           |
 | 10.20.98.98  | ok     | cisco_ios                                           |
 | 10.20.98.95  | ok     | cisco_ios                                           |
+| 10.20.98.102 | ok     | cisco_ios                                           |
 | 10.20.98.104 | ok     | cisco_ios                                           |
 | 10.20.98.101 | ok     | cisco_ios                                           |
-| 10.20.98.102 | ok     | cisco_ios                                           |
 | 10.20.99.244 | ok     | cisco_ios                                           |
 | 10.20.99.245 | ok     | cisco_ios                                           |
 +-----------------------------------------------------------------------------+
-Успешных подключений: 256 / 258
+Успешных подключений: 239 / 241
 Raw out: C:\Users\zhiltsov.aa\Desktop\net-auto-mermaid\data\raw
 [INFO] Done: collect
 [INFO] [####..........................] 14% (1/7)
 [INFO] Start: parse
 [INFO] [STEP 2] PARSE CLI (TextFSM -> parsed_textfsm.json)
-[INFO] Р—Р°РіСЂСѓР¶РµРЅРѕ С€Р°Р±Р»РѕРЅРѕРІ: vendor=zes count=3
-[ERROR] РћС€РёР±РєР° РєРѕРјРїРёР»СЏС†РёРё С€Р°Р±Р»РѕРЅР° templates\textfsm\nis\nis_show_lldp_neighbors.template: No Value definitions found.
-[INFO] Р—Р°РіСЂСѓР¶РµРЅРѕ С€Р°Р±Р»РѕРЅРѕРІ: vendor=nis count=2
 [INFO] Р—Р°РіСЂСѓР¶РµРЅРѕ С€Р°Р±Р»РѕРЅРѕРІ: vendor=snr count=2
-[ERROR] РћС€РёР±РєР° РєРѕРјРїРёР»СЏС†РёРё С€Р°Р±Р»РѕРЅР° templates\textfsm\cisco_ios\cisco_ios_show_lldp_neighbors_detail.template: No Value definitions found.
-[INFO] Р—Р°РіСЂСѓР¶РµРЅРѕ С€Р°Р±Р»РѕРЅРѕРІ: vendor=cisco_ios count=5
-[INFO] Р—Р°РіСЂСѓР¶РµРЅРѕ С€Р°Р±Р»РѕРЅРѕРІ: vendor=eltex_mes count=3
-[INFO] Р—Р°РіСЂСѓР¶РµРЅРѕ С€Р°Р±Р»РѕРЅРѕРІ: vendor=osnova count=2
 [ERROR] РћС€РёР±РєР° РєРѕРјРїРёР»СЏС†РёРё С€Р°Р±Р»РѕРЅР° templates\textfsm\dlink\dlink_show_config_header.template: Duplicate or invalid variable substitution: '^#\s*${Model}\s+.*Switch\s*$'. Line: 5.
 [ERROR] РћС€РёР±РєР° РєРѕРјРїРёР»СЏС†РёРё С€Р°Р±Р»РѕРЅР° templates\textfsm\dlink\dlink_show_lldp_remote_ports_detail.template: Duplicate or invalid variable substitution: '^\s*Port\s+ID\s*:\s*${LocalInterface}\s*$'. Line: 8.
 [ERROR] РћС€РёР±РєР° РєРѕРјРїРёР»СЏС†РёРё С€Р°Р±Р»РѕРЅР° templates\textfsm\dlink\dlink_show_lldp_remote_ports_table.template: Duplicate or invalid variable substitution: '^\s*${LocalInterface}\s+\S+\s+\d+\s+${NeighborPort}\s+\S+\s+\S+\s+${NeighborName}\s*$'. Line: 7.
 [INFO] Р—Р°РіСЂСѓР¶РµРЅРѕ С€Р°Р±Р»РѕРЅРѕРІ: vendor=dlink count=1
+[INFO] Р—Р°РіСЂСѓР¶РµРЅРѕ С€Р°Р±Р»РѕРЅРѕРІ: vendor=eltex_mes count=3
+[ERROR] РћС€РёР±РєР° РєРѕРјРїРёР»СЏС†РёРё С€Р°Р±Р»РѕРЅР° templates\textfsm\nis\nis_show_lldp_neighbors.template: No Value definitions found.
+[INFO] Р—Р°РіСЂСѓР¶РµРЅРѕ С€Р°Р±Р»РѕРЅРѕРІ: vendor=nis count=2
+[INFO] Р—Р°РіСЂСѓР¶РµРЅРѕ С€Р°Р±Р»РѕРЅРѕРІ: vendor=osnova count=2
+[INFO] Р—Р°РіСЂСѓР¶РµРЅРѕ С€Р°Р±Р»РѕРЅРѕРІ: vendor=zes count=3
+[ERROR] РћС€РёР±РєР° РєРѕРјРїРёР»СЏС†РёРё С€Р°Р±Р»РѕРЅР° templates\textfsm\cisco_ios\cisco_ios_show_lldp_neighbors_detail.template: No Value definitions found.
+[INFO] Р—Р°РіСЂСѓР¶РµРЅРѕ С€Р°Р±Р»РѕРЅРѕРІ: vendor=cisco_ios count=5
 [INFO] textfsm_parse_progress: 10/478
 [INFO] textfsm_parse_progress: 20/478
 [INFO] textfsm_parse_progress: 30/478

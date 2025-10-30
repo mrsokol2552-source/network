@@ -14,7 +14,7 @@ System Name                       : DEN-NSWS-02-99-124
 System Location                   : Eltex Ltd, Russia
 System Description                : MES2424P rev.C1 AC 28-port 1G/10G Managed Switch with 24 POE+ ports
 Logging Option                    : Flash Logging
-Device Uptime                     : 7 Days, 0 Hrs, 57 Mins, 16 Secs
+Device Uptime                     : 9 Days, 2 Hrs, 1 Mins, 57 Secs
 Login Authentication Mode         : Local
 Config Save Status                : Not Initiated
 Remote Save Status                : Not Initiated
@@ -183,7 +183,7 @@ $ show interfaces status
 Port        Status           Duplex   Speed       Negotiation     Capability      Uptime (d,h:m:s)
 ----        ------           ------   -----       -----------     ----------      ----------------
 gi 0/1      Down (nc)        -        -           No-Negotiation  Auto-MDIX on    -               
-gi 0/2      Up               Full     100 Mbps    No-Negotiation  Auto-MDIX on    7,1:29:29       
+gi 0/2      Up               Full     100 Mbps    No-Negotiation  Auto-MDIX on    1,4:31:44       
 gi 0/3      Down (nc)        -        -           No-Negotiation  Auto-MDIX on    -               
 gi 0/4      Down (nc)        -        -           No-Negotiation  Auto-MDIX on    -               
 gi 0/5      Down (nc)        -        -           No-Negotiation  Auto-MDIX on    -               
@@ -200,7 +200,7 @@ gi 0/15     Down (nc)        -        -           No-Negotiation  Auto-MDIX on  
 gi 0/16     Down (nc)        -        -           No-Negotiation  Auto-MDIX on    -               
 gi 0/17     Down (nc)        -        -           No-Negotiation  Auto-MDIX on    -               
 gi 0/18     Down (nc)        -        -           No-Negotiation  Auto-MDIX on    -               
-gi 0/19     Up               Full     100 Mbps    No-Negotiation  Auto-MDIX on    0,0:14:36       
+gi 0/19     Up               Full     100 Mbps    No-Negotiation  Auto-MDIX on    0,6:57:13       
 gi 0/20     Down (nc)        -        -           No-Negotiation  Auto-MDIX on    -               
 
 
@@ -259,22 +259,22 @@ $ show running-config
 Link Up/Down Trap is disabled 
 
 Reception Counters
-   Octets                    : 2243229700
-   Unicast Packets           : 18933127
-   Multicast Packets         : 735
-   Broadcast Packets         : 158
+   Octets                    : 2908508987
+   Unicast Packets           : 26353393
+   Multicast Packets         : 959
+   Broadcast Packets         : 201
    Discarded Packets         : 4
-   Error Packets             : 467799
+   Error Packets             : 651980
    Unknown Protocol          : 0
-   CRC Errors                : 343789
+   CRC Errors                : 480704
    Symbol Errors             : 0
    Oversized w/ Bad CRC      : 0
 
 Transmission Counters
-   Octets                    : 3651203871
-   Unicast Packets           : 13856990
-   Multicast Packets         : 3538037
-   Broadcast Packets         : 15051440
+   Octets                    : 2534323593
+   Unicast Packets           : 19709189
+   Multicast Packets         : 4655832
+   Broadcast Packets         : 19640821
    Discarded Packets         : 0
    Error Drops               : 0
    Error Packets             : 0

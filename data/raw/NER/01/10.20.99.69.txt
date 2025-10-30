@@ -13,7 +13,7 @@ Compiled Wed 12-Jul-17 15:29 by prod_rel_team
 ROM: Bootstrap program is C2960 boot loader
 BOOTLDR: C2960 Boot Loader (C2960-HBOOT-M) Version 15.0(2r)EZ1, RELEASE SOFTWARE (fc1)
 
-NER-NSWS-01-99-69 uptime is 14 weeks, 6 days, 20 hours, 5 minutes
+NER-NSWS-01-99-69 uptime is 15 weeks, 1 day, 21 hours, 20 minutes
 System returned to ROM by power-on
 System image file is "flash:/c2960-lanbasek9-mz.152-2.E7/c2960-lanbasek9-mz.152-2.E7.bin"
 Last reload reason: power-on
@@ -73,9 +73,9 @@ Configuration register is 0xF
 $ show running-config
 Building configuration...
 
-Current configuration : 28892 bytes
+Current configuration : 28890 bytes
 !
-! Last configuration change at 07:12:23 YAKT Fri Jun 11 1993 by volodin_s
+! Last configuration change at 02:38:42 YAKT Wed Jun 16 1993 by volodin_s
 !
 version 15.2
 no service pad
@@ -1030,7 +1030,7 @@ interface FastEthernet0/48
  ip dhcp snooping limit rate 25
 !
 interface GigabitEthernet0/1
- switchport access vlan 2033
+ switchport access vlan 12
  logging event spanning-tree
  logging event status
  no snmp trap link-status
@@ -1153,7 +1153,7 @@ Port Description - not advertised
 System Name - not advertised
 System Description - not advertised
 
-Time remaining: 2701 seconds
+Time remaining: 3166 seconds
 System Capabilities - not advertised
 Enabled Capabilities - not advertised
 Management Addresses - not advertised
@@ -1187,7 +1187,7 @@ System Name: X1S/X1SP
 System Description: 
 Version:2.4.12.2
 
-Time remaining: 36 seconds
+Time remaining: 50 seconds
 System Capabilities: B,T
 Enabled Capabilities: B,T
 Management Addresses:
@@ -1226,7 +1226,7 @@ System Name: X1S/X1SP
 System Description: 
 Version:2.4.12.2
 
-Time remaining: 42 seconds
+Time remaining: 52 seconds
 System Capabilities: B,T
 Enabled Capabilities: B,T
 Management Addresses:
@@ -1265,7 +1265,7 @@ System Name: X1S/X1SP
 System Description: 
 Version:2.4.12.2
 
-Time remaining: 55 seconds
+Time remaining: 59 seconds
 System Capabilities: B,T
 Enabled Capabilities: B,T
 Management Addresses:
@@ -1304,7 +1304,7 @@ System Name: X1S/X1SP
 System Description: 
 Version:2.4.12.2
 
-Time remaining: 19 seconds
+Time remaining: 4 seconds
 System Capabilities: B,T
 Enabled Capabilities: B,T
 Management Addresses:
@@ -1341,7 +1341,7 @@ Port Description - not advertised
 System Name - not advertised
 System Description - not advertised
 
-Time remaining: 96 seconds
+Time remaining: 118 seconds
 System Capabilities: B,T
 Enabled Capabilities: B,T
 Management Addresses - not advertised
@@ -1381,7 +1381,7 @@ Port Description - not advertised
 System Name - not advertised
 System Description - not advertised
 
-Time remaining: 3104 seconds
+Time remaining: 3490 seconds
 System Capabilities - not advertised
 Enabled Capabilities - not advertised
 Management Addresses - not advertised
@@ -1413,7 +1413,7 @@ Port Description - not advertised
 System Name - not advertised
 System Description - not advertised
 
-Time remaining: 2754 seconds
+Time remaining: 3140 seconds
 System Capabilities - not advertised
 Enabled Capabilities - not advertised
 Management Addresses - not advertised
@@ -1450,7 +1450,7 @@ Technical Support: http://www.cisco.com/techsupport
 Copyright (c) 1986-2021 by Cisco Systems, Inc.
 Compiled Tue 19-Oct-21 03:16 by mcpr
 
-Time remaining: 113 seconds
+Time remaining: 96 seconds
 System Capabilities: B,R
 Enabled Capabilities: B,R
 Management Addresses:
@@ -1475,7 +1475,7 @@ System Name: X6U-V2
 System Description: 
 Version:2.12.20
 
-Time remaining: 165 seconds
+Time remaining: 137 seconds
 System Capabilities: B,T
 Enabled Capabilities: B,T
 Management Addresses:
@@ -1514,7 +1514,7 @@ System Name: X1S/X1SP
 System Description: 
 Version:2.4.12.2
 
-Time remaining: 14 seconds
+Time remaining: 0 seconds
 System Capabilities: B,T
 Enabled Capabilities: B,T
 Management Addresses:
@@ -1544,14 +1544,14 @@ MED Information:
     Location - not advertised
 
 ------------------------------------------------
-Local Intf: Gi0/1
-Chassis id: 8c16.4575.7e3c
-Port id: 8c16.4575.7e3c
+Local Intf: Fa0/21
+Chassis id: 7456.3c56.35fd
+Port id: 7456.3c56.35fd
 Port Description - not advertised
 System Name - not advertised
 System Description - not advertised
 
-Time remaining: 3319 seconds
+Time remaining: 2867 seconds
 System Capabilities - not advertised
 Enabled Capabilities - not advertised
 Management Addresses - not advertised
@@ -1583,167 +1583,7 @@ Port Description - not advertised
 System Name - not advertised
 System Description - not advertised
 
-Time remaining: 3332 seconds
-System Capabilities - not advertised
-Enabled Capabilities - not advertised
-Management Addresses - not advertised
-Auto Negotiation - supported, enabled
-Physical media capabilities:
-    1000baseT(FD)
-Media Attachment Unit type - not advertised
-Vlan ID: - not advertised
-
-MED Information:
-
-    MED Codes:
-          (NP) Network Policy, (LI) Location Identification
-          (PS) Power Source Entity, (PD) Power Device
-          (IN) Inventory
-
-    Inventory information - not advertised
-    Capabilities: 
-    Device type: Endpoint Class I
-    Network Policies - not advertised
-    Power requirements - not advertised
-    Location - not advertised
-
-------------------------------------------------
-Local Intf: Fa0/30
-Chassis id: d85e.d37f.e5c2
-Port id: d85e.d37f.e5c2
-Port Description - not advertised
-System Name - not advertised
-System Description - not advertised
-
-Time remaining: 3038 seconds
-System Capabilities - not advertised
-Enabled Capabilities - not advertised
-Management Addresses - not advertised
-Auto Negotiation - supported, enabled
-Physical media capabilities:
-    1000baseT(FD)
-Media Attachment Unit type - not advertised
-Vlan ID: - not advertised
-
-MED Information:
-
-    MED Codes:
-          (NP) Network Policy, (LI) Location Identification
-          (PS) Power Source Entity, (PD) Power Device
-          (IN) Inventory
-
-    Inventory information - not advertised
-    Capabilities: 
-    Device type: Endpoint Class I
-    Network Policies - not advertised
-    Power requirements - not advertised
-    Location - not advertised
-
-------------------------------------------------
-Local Intf: Fa0/21
-Chassis id: 7456.3c56.35fd
-Port id: 7456.3c56.35fd
-Port Description - not advertised
-System Name - not advertised
-System Description - not advertised
-
-Time remaining: 3214 seconds
-System Capabilities - not advertised
-Enabled Capabilities - not advertised
-Management Addresses - not advertised
-Auto Negotiation - supported, enabled
-Physical media capabilities:
-    1000baseT(FD)
-Media Attachment Unit type - not advertised
-Vlan ID: - not advertised
-
-MED Information:
-
-    MED Codes:
-          (NP) Network Policy, (LI) Location Identification
-          (PS) Power Source Entity, (PD) Power Device
-          (IN) Inventory
-
-    Inventory information - not advertised
-    Capabilities: 
-    Device type: Endpoint Class I
-    Network Policies - not advertised
-    Power requirements - not advertised
-    Location - not advertised
-
-------------------------------------------------
-Local Intf: Fa0/47
-Chassis id: 7456.3c8c.8f50
-Port id: 7456.3c8c.8f50
-Port Description - not advertised
-System Name - not advertised
-System Description - not advertised
-
-Time remaining: 3583 seconds
-System Capabilities - not advertised
-Enabled Capabilities - not advertised
-Management Addresses - not advertised
-Auto Negotiation - supported, enabled
-Physical media capabilities:
-    1000baseT(FD)
-Media Attachment Unit type - not advertised
-Vlan ID: - not advertised
-
-MED Information:
-
-    MED Codes:
-          (NP) Network Policy, (LI) Location Identification
-          (PS) Power Source Entity, (PD) Power Device
-          (IN) Inventory
-
-    Inventory information - not advertised
-    Capabilities: 
-    Device type: Endpoint Class I
-    Network Policies - not advertised
-    Power requirements - not advertised
-    Location - not advertised
-
-------------------------------------------------
-Local Intf: Fa0/8
-Chassis id: 0442.1a1f.7403
-Port id: 0442.1a1f.7403
-Port Description - not advertised
-System Name - not advertised
-System Description - not advertised
-
-Time remaining: 2815 seconds
-System Capabilities - not advertised
-Enabled Capabilities - not advertised
-Management Addresses - not advertised
-Auto Negotiation - supported, enabled
-Physical media capabilities:
-    1000baseT(FD)
-Media Attachment Unit type - not advertised
-Vlan ID: - not advertised
-
-MED Information:
-
-    MED Codes:
-          (NP) Network Policy, (LI) Location Identification
-          (PS) Power Source Entity, (PD) Power Device
-          (IN) Inventory
-
-    Inventory information - not advertised
-    Capabilities: 
-    Device type: Endpoint Class I
-    Network Policies - not advertised
-    Power requirements - not advertised
-    Location - not advertised
-
-------------------------------------------------
-Local Intf: Fa0/39
-Chassis id: 7456.3c53.d0fb
-Port id: 7456.3c53.d0fb
-Port Description - not advertised
-System Name - not advertised
-System Description - not advertised
-
-Time remaining: 3400 seconds
+Time remaining: 2892 seconds
 System Capabilities - not advertised
 Enabled Capabilities - not advertised
 Management Addresses - not advertised
@@ -1775,7 +1615,7 @@ Port Description - not advertised
 System Name - not advertised
 System Description - not advertised
 
-Time remaining: 3505 seconds
+Time remaining: 3034 seconds
 System Capabilities - not advertised
 Enabled Capabilities - not advertised
 Management Addresses - not advertised
@@ -1800,206 +1640,14 @@ MED Information:
     Location - not advertised
 
 ------------------------------------------------
-Local Intf: Fa0/40
-Chassis id: 7456.3c53.c9aa
-Port id: 7456.3c53.c9aa
+Local Intf: Fa0/30
+Chassis id: d85e.d37f.e5c2
+Port id: d85e.d37f.e5c2
 Port Description - not advertised
 System Name - not advertised
 System Description - not advertised
 
-Time remaining: 2663 seconds
-System Capabilities - not advertised
-Enabled Capabilities - not advertised
-Management Addresses - not advertised
-Auto Negotiation - supported, enabled
-Physical media capabilities:
-    1000baseT(FD)
-Media Attachment Unit type - not advertised
-Vlan ID: - not advertised
-
-MED Information:
-
-    MED Codes:
-          (NP) Network Policy, (LI) Location Identification
-          (PS) Power Source Entity, (PD) Power Device
-          (IN) Inventory
-
-    Inventory information - not advertised
-    Capabilities: 
-    Device type: Endpoint Class I
-    Network Policies - not advertised
-    Power requirements - not advertised
-    Location - not advertised
-
-------------------------------------------------
-Local Intf: Fa0/35
-Chassis id: 7456.3c56.3d0d
-Port id: 7456.3c56.3d0d
-Port Description - not advertised
-System Name - not advertised
-System Description - not advertised
-
-Time remaining: 2700 seconds
-System Capabilities - not advertised
-Enabled Capabilities - not advertised
-Management Addresses - not advertised
-Auto Negotiation - supported, enabled
-Physical media capabilities:
-    1000baseT(FD)
-Media Attachment Unit type - not advertised
-Vlan ID: - not advertised
-
-MED Information:
-
-    MED Codes:
-          (NP) Network Policy, (LI) Location Identification
-          (PS) Power Source Entity, (PD) Power Device
-          (IN) Inventory
-
-    Inventory information - not advertised
-    Capabilities: 
-    Device type: Endpoint Class I
-    Network Policies - not advertised
-    Power requirements - not advertised
-    Location - not advertised
-
-------------------------------------------------
-Local Intf: Fa0/33
-Chassis id: 94c6.9178.89b1
-Port id: 94c6.9178.89b1
-Port Description - not advertised
-System Name - not advertised
-System Description - not advertised
-
-Time remaining: 2711 seconds
-System Capabilities - not advertised
-Enabled Capabilities - not advertised
-Management Addresses - not advertised
-Auto Negotiation - supported, enabled
-Physical media capabilities:
-    1000baseT(FD)
-Media Attachment Unit type - not advertised
-Vlan ID: - not advertised
-
-MED Information:
-
-    MED Codes:
-          (NP) Network Policy, (LI) Location Identification
-          (PS) Power Source Entity, (PD) Power Device
-          (IN) Inventory
-
-    Inventory information - not advertised
-    Capabilities: 
-    Device type: Endpoint Class I
-    Network Policies - not advertised
-    Power requirements - not advertised
-    Location - not advertised
-
-------------------------------------------------
-Local Intf: Fa0/11
-Chassis id: 7085.c2b6.6a3e
-Port id: 7085.c2b6.6a3e
-Port Description - not advertised
-System Name - not advertised
-System Description - not advertised
-
-Time remaining: 2832 seconds
-System Capabilities - not advertised
-Enabled Capabilities - not advertised
-Management Addresses - not advertised
-Auto Negotiation - supported, enabled
-Physical media capabilities:
-    1000baseT(FD)
-Media Attachment Unit type - not advertised
-Vlan ID: - not advertised
-
-MED Information:
-
-    MED Codes:
-          (NP) Network Policy, (LI) Location Identification
-          (PS) Power Source Entity, (PD) Power Device
-          (IN) Inventory
-
-    Inventory information - not advertised
-    Capabilities: 
-    Device type: Endpoint Class I
-    Network Policies - not advertised
-    Power requirements - not advertised
-    Location - not advertised
-
-------------------------------------------------
-Local Intf: Fa0/23
-Chassis id: 7085.c2b6.6bd6
-Port id: 7085.c2b6.6bd6
-Port Description - not advertised
-System Name - not advertised
-System Description - not advertised
-
-Time remaining: 2833 seconds
-System Capabilities - not advertised
-Enabled Capabilities - not advertised
-Management Addresses - not advertised
-Auto Negotiation - supported, enabled
-Physical media capabilities:
-    1000baseT(FD)
-Media Attachment Unit type - not advertised
-Vlan ID: - not advertised
-
-MED Information:
-
-    MED Codes:
-          (NP) Network Policy, (LI) Location Identification
-          (PS) Power Source Entity, (PD) Power Device
-          (IN) Inventory
-
-    Inventory information - not advertised
-    Capabilities: 
-    Device type: Endpoint Class I
-    Network Policies - not advertised
-    Power requirements - not advertised
-    Location - not advertised
-
-------------------------------------------------
-Local Intf: Fa0/14
-Chassis id: 7456.3c56.531b
-Port id: 7456.3c56.531b
-Port Description - not advertised
-System Name - not advertised
-System Description - not advertised
-
-Time remaining: 2824 seconds
-System Capabilities - not advertised
-Enabled Capabilities - not advertised
-Management Addresses - not advertised
-Auto Negotiation - supported, enabled
-Physical media capabilities:
-    1000baseT(FD)
-Media Attachment Unit type - not advertised
-Vlan ID: - not advertised
-
-MED Information:
-
-    MED Codes:
-          (NP) Network Policy, (LI) Location Identification
-          (PS) Power Source Entity, (PD) Power Device
-          (IN) Inventory
-
-    Inventory information - not advertised
-    Capabilities: 
-    Device type: Endpoint Class I
-    Network Policies - not advertised
-    Power requirements - not advertised
-    Location - not advertised
-
-------------------------------------------------
-Local Intf: Fa0/44
-Chassis id: b4b6.86dc.097c
-Port id: b4b6.86dc.097c
-Port Description - not advertised
-System Name - not advertised
-System Description - not advertised
-
-Time remaining: 3100 seconds
+Time remaining: 2773 seconds
 System Capabilities - not advertised
 Enabled Capabilities - not advertised
 Management Addresses - not advertised
@@ -2031,7 +1679,295 @@ Port Description - not advertised
 System Name - not advertised
 System Description - not advertised
 
-Time remaining: 3235 seconds
+Time remaining: 3428 seconds
+System Capabilities - not advertised
+Enabled Capabilities - not advertised
+Management Addresses - not advertised
+Auto Negotiation - supported, enabled
+Physical media capabilities:
+    1000baseT(FD)
+Media Attachment Unit type - not advertised
+Vlan ID: - not advertised
+
+MED Information:
+
+    MED Codes:
+          (NP) Network Policy, (LI) Location Identification
+          (PS) Power Source Entity, (PD) Power Device
+          (IN) Inventory
+
+    Inventory information - not advertised
+    Capabilities: 
+    Device type: Endpoint Class I
+    Network Policies - not advertised
+    Power requirements - not advertised
+    Location - not advertised
+
+------------------------------------------------
+Local Intf: Fa0/47
+Chassis id: 7456.3c8c.8f50
+Port id: 7456.3c8c.8f50
+Port Description - not advertised
+System Name - not advertised
+System Description - not advertised
+
+Time remaining: 3097 seconds
+System Capabilities - not advertised
+Enabled Capabilities - not advertised
+Management Addresses - not advertised
+Auto Negotiation - supported, enabled
+Physical media capabilities:
+    1000baseT(FD)
+Media Attachment Unit type - not advertised
+Vlan ID: - not advertised
+
+MED Information:
+
+    MED Codes:
+          (NP) Network Policy, (LI) Location Identification
+          (PS) Power Source Entity, (PD) Power Device
+          (IN) Inventory
+
+    Inventory information - not advertised
+    Capabilities: 
+    Device type: Endpoint Class I
+    Network Policies - not advertised
+    Power requirements - not advertised
+    Location - not advertised
+
+------------------------------------------------
+Local Intf: Fa0/8
+Chassis id: 0442.1a1f.7403
+Port id: 0442.1a1f.7403
+Port Description - not advertised
+System Name - not advertised
+System Description - not advertised
+
+Time remaining: 3125 seconds
+System Capabilities - not advertised
+Enabled Capabilities - not advertised
+Management Addresses - not advertised
+Auto Negotiation - supported, enabled
+Physical media capabilities:
+    1000baseT(FD)
+Media Attachment Unit type - not advertised
+Vlan ID: - not advertised
+
+MED Information:
+
+    MED Codes:
+          (NP) Network Policy, (LI) Location Identification
+          (PS) Power Source Entity, (PD) Power Device
+          (IN) Inventory
+
+    Inventory information - not advertised
+    Capabilities: 
+    Device type: Endpoint Class I
+    Network Policies - not advertised
+    Power requirements - not advertised
+    Location - not advertised
+
+------------------------------------------------
+Local Intf: Fa0/11
+Chassis id: 7085.c2b6.6a3e
+Port id: 7085.c2b6.6a3e
+Port Description - not advertised
+System Name - not advertised
+System Description - not advertised
+
+Time remaining: 3475 seconds
+System Capabilities - not advertised
+Enabled Capabilities - not advertised
+Management Addresses - not advertised
+Auto Negotiation - supported, enabled
+Physical media capabilities:
+    1000baseT(FD)
+Media Attachment Unit type - not advertised
+Vlan ID: - not advertised
+
+MED Information:
+
+    MED Codes:
+          (NP) Network Policy, (LI) Location Identification
+          (PS) Power Source Entity, (PD) Power Device
+          (IN) Inventory
+
+    Inventory information - not advertised
+    Capabilities: 
+    Device type: Endpoint Class I
+    Network Policies - not advertised
+    Power requirements - not advertised
+    Location - not advertised
+
+------------------------------------------------
+Local Intf: Fa0/23
+Chassis id: 7085.c2b6.6bd6
+Port id: 7085.c2b6.6bd6
+Port Description - not advertised
+System Name - not advertised
+System Description - not advertised
+
+Time remaining: 2680 seconds
+System Capabilities - not advertised
+Enabled Capabilities - not advertised
+Management Addresses - not advertised
+Auto Negotiation - supported, enabled
+Physical media capabilities:
+    1000baseT(FD)
+Media Attachment Unit type - not advertised
+Vlan ID: - not advertised
+
+MED Information:
+
+    MED Codes:
+          (NP) Network Policy, (LI) Location Identification
+          (PS) Power Source Entity, (PD) Power Device
+          (IN) Inventory
+
+    Inventory information - not advertised
+    Capabilities: 
+    Device type: Endpoint Class I
+    Network Policies - not advertised
+    Power requirements - not advertised
+    Location - not advertised
+
+------------------------------------------------
+Local Intf: Fa0/39
+Chassis id: 7456.3c53.d0fb
+Port id: 7456.3c53.d0fb
+Port Description - not advertised
+System Name - not advertised
+System Description - not advertised
+
+Time remaining: 2740 seconds
+System Capabilities - not advertised
+Enabled Capabilities - not advertised
+Management Addresses - not advertised
+Auto Negotiation - supported, enabled
+Physical media capabilities:
+    1000baseT(FD)
+Media Attachment Unit type - not advertised
+Vlan ID: - not advertised
+
+MED Information:
+
+    MED Codes:
+          (NP) Network Policy, (LI) Location Identification
+          (PS) Power Source Entity, (PD) Power Device
+          (IN) Inventory
+
+    Inventory information - not advertised
+    Capabilities: 
+    Device type: Endpoint Class I
+    Network Policies - not advertised
+    Power requirements - not advertised
+    Location - not advertised
+
+------------------------------------------------
+Local Intf: Fa0/40
+Chassis id: 7456.3c53.c9aa
+Port id: 7456.3c53.c9aa
+Port Description - not advertised
+System Name - not advertised
+System Description - not advertised
+
+Time remaining: 2805 seconds
+System Capabilities - not advertised
+Enabled Capabilities - not advertised
+Management Addresses - not advertised
+Auto Negotiation - supported, enabled
+Physical media capabilities:
+    1000baseT(FD)
+Media Attachment Unit type - not advertised
+Vlan ID: - not advertised
+
+MED Information:
+
+    MED Codes:
+          (NP) Network Policy, (LI) Location Identification
+          (PS) Power Source Entity, (PD) Power Device
+          (IN) Inventory
+
+    Inventory information - not advertised
+    Capabilities: 
+    Device type: Endpoint Class I
+    Network Policies - not advertised
+    Power requirements - not advertised
+    Location - not advertised
+
+------------------------------------------------
+Local Intf: Fa0/33
+Chassis id: 94c6.9178.89b1
+Port id: 94c6.9178.89b1
+Port Description - not advertised
+System Name - not advertised
+System Description - not advertised
+
+Time remaining: 3004 seconds
+System Capabilities - not advertised
+Enabled Capabilities - not advertised
+Management Addresses - not advertised
+Auto Negotiation - supported, enabled
+Physical media capabilities:
+    1000baseT(FD)
+Media Attachment Unit type - not advertised
+Vlan ID: - not advertised
+
+MED Information:
+
+    MED Codes:
+          (NP) Network Policy, (LI) Location Identification
+          (PS) Power Source Entity, (PD) Power Device
+          (IN) Inventory
+
+    Inventory information - not advertised
+    Capabilities: 
+    Device type: Endpoint Class I
+    Network Policies - not advertised
+    Power requirements - not advertised
+    Location - not advertised
+
+------------------------------------------------
+Local Intf: Fa0/35
+Chassis id: 7456.3c56.3d0d
+Port id: 7456.3c56.3d0d
+Port Description - not advertised
+System Name - not advertised
+System Description - not advertised
+
+Time remaining: 3252 seconds
+System Capabilities - not advertised
+Enabled Capabilities - not advertised
+Management Addresses - not advertised
+Auto Negotiation - supported, enabled
+Physical media capabilities:
+    1000baseT(FD)
+Media Attachment Unit type - not advertised
+Vlan ID: - not advertised
+
+MED Information:
+
+    MED Codes:
+          (NP) Network Policy, (LI) Location Identification
+          (PS) Power Source Entity, (PD) Power Device
+          (IN) Inventory
+
+    Inventory information - not advertised
+    Capabilities: 
+    Device type: Endpoint Class I
+    Network Policies - not advertised
+    Power requirements - not advertised
+    Location - not advertised
+
+------------------------------------------------
+Local Intf: Fa0/44
+Chassis id: b4b6.86dc.097c
+Port id: b4b6.86dc.097c
+Port Description - not advertised
+System Name - not advertised
+System Description - not advertised
+
+Time remaining: 3103 seconds
 System Capabilities - not advertised
 Enabled Capabilities - not advertised
 Management Addresses - not advertised
@@ -2063,7 +1999,39 @@ Port Description - not advertised
 System Name - not advertised
 System Description - not advertised
 
-Time remaining: 3319 seconds
+Time remaining: 2657 seconds
+System Capabilities - not advertised
+Enabled Capabilities - not advertised
+Management Addresses - not advertised
+Auto Negotiation - supported, enabled
+Physical media capabilities:
+    1000baseT(FD)
+Media Attachment Unit type - not advertised
+Vlan ID: - not advertised
+
+MED Information:
+
+    MED Codes:
+          (NP) Network Policy, (LI) Location Identification
+          (PS) Power Source Entity, (PD) Power Device
+          (IN) Inventory
+
+    Inventory information - not advertised
+    Capabilities: 
+    Device type: Endpoint Class I
+    Network Policies - not advertised
+    Power requirements - not advertised
+    Location - not advertised
+
+------------------------------------------------
+Local Intf: Fa0/14
+Chassis id: 7456.3c56.531b
+Port id: 7456.3c56.531b
+Port Description - not advertised
+System Name - not advertised
+System Description - not advertised
+
+Time remaining: 3169 seconds
 System Capabilities - not advertised
 Enabled Capabilities - not advertised
 Management Addresses - not advertised
@@ -2088,7 +2056,7 @@ MED Information:
     Location - not advertised
 
 
-Total entries displayed: 28
+Total entries displayed: 27
 
 
 
@@ -2099,7 +2067,7 @@ Entry address(es):
   IP address: 10.20.96.4
 Platform: cisco C9200-24P,  Capabilities: Router Switch IGMP 
 Interface: GigabitEthernet0/2,  Port ID (outgoing port): GigabitEthernet1/0/3
-Holdtime : 147 sec
+Holdtime : 166 sec
 
 Version :
 Cisco IOS Software [Amsterdam], Catalyst L3 Switch Software (CAT9K_LITE_IOSXE), Version 17.3.4b, RELEASE SOFTWARE (fc1)
@@ -2120,7 +2088,7 @@ Entry address(es):
   IP address: 10.13.0.230
 Platform: X1S/X1SP,  Capabilities: Host Phone 
 Interface: FastEthernet0/27,  Port ID (outgoing port): WAN PORT
-Holdtime : 136 sec
+Holdtime : 147 sec
 
 Version :
 2.4.12.2
@@ -2133,7 +2101,7 @@ Entry address(es):
   IP address: 10.13.1.61
 Platform: X1S/X1SP,  Capabilities: Host Phone 
 Interface: FastEthernet0/21,  Port ID (outgoing port): WAN PORT
-Holdtime : 124 sec
+Holdtime : 132 sec
 
 Version :
 2.4.12.2
@@ -2146,7 +2114,7 @@ Entry address(es):
   IP address: 10.13.0.126
 Platform: X1S/X1SP,  Capabilities: Host Phone 
 Interface: FastEthernet0/8,  Port ID (outgoing port): WAN PORT
-Holdtime : 165 sec
+Holdtime : 147 sec
 
 Version :
 2.4.12.2
@@ -2159,7 +2127,7 @@ Entry address(es):
   IP address: 10.13.1.215
 Platform: X1S/X1SP,  Capabilities: Host Phone 
 Interface: FastEthernet0/43,  Port ID (outgoing port): WAN PORT
-Holdtime : 123 sec
+Holdtime : 168 sec
 
 Version :
 2.4.12.2
@@ -2177,10 +2145,10 @@ Capability Codes: R - Router, T - Trans Bridge, B - Source Route Bridge
 
 Device ID        Local Intrfce     Holdtme    Capability  Platform  Port ID
 NER-NSWR-01-96-4.kolmar.ru
-                 Gig 0/2           147             R S I  C9200-24P Gig 1/0/3
-X1S/X1SP         Fas 0/27          136              H P   X1S/X1SP  WAN PORT
-X1S/X1SP         Fas 0/21          124              H P   X1S/X1SP  WAN PORT
-X1S/X1SP         Fas 0/8           164              H P   X1S/X1SP  WAN PORT
-X1S/X1SP         Fas 0/43          123              H P   X1S/X1SP  WAN PORT
+                 Gig 0/2           166             R S I  C9200-24P Gig 1/0/3
+X1S/X1SP         Fas 0/27          147              H P   X1S/X1SP  WAN PORT
+X1S/X1SP         Fas 0/21          132              H P   X1S/X1SP  WAN PORT
+X1S/X1SP         Fas 0/8           147              H P   X1S/X1SP  WAN PORT
+X1S/X1SP         Fas 0/43          168              H P   X1S/X1SP  WAN PORT
 
 Total cdp entries displayed : 5

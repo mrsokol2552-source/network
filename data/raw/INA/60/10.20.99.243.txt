@@ -13,7 +13,7 @@ Compiled Sat 23-Mar-19 09:05 by prod_rel_team
 ROM: Bootstrap program is C2960CX boot loader
 BOOTLDR: C2960CX Boot Loader (C2960CX-HBOOT-M) Version 15.2(6r)E, RELEASE SOFTWARE (fc1)
 
-INA-NSWS-60-99-243 uptime is 5 hours, 46 minutes
+INA-NSWS-60-99-243 uptime is 2 days, 7 hours, 0 minutes
 System returned to ROM by power-on
 System restarted at 07:59:51 YAKT Mon Oct 27 2025
 System image file is "flash:/c2960cx-universalk9-mz.152-7.E/c2960cx-universalk9-mz.152-7.E.bin"
@@ -523,7 +523,7 @@ Entry address(es):
   IP address: 10.20.96.22
 Platform: cisco WS-C2960CX-8PC-L,  Capabilities: Switch IGMP 
 Interface: GigabitEthernet0/12,  Port ID (outgoing port): GigabitEthernet0/11
-Holdtime : 140 sec
+Holdtime : 136 sec
 
 Version :
 Cisco IOS Software, C2960CX Software (C2960CX-UNIVERSALK9-M), Version 15.2(7)E4, RELEASE SOFTWARE (fc2)
@@ -544,7 +544,7 @@ Entry address(es):
   IP address: 10.20.98.153
 Platform: cisco WS-C2960C-8PC-L,  Capabilities: Switch IGMP 
 Interface: GigabitEthernet0/11,  Port ID (outgoing port): GigabitEthernet0/2
-Holdtime : 135 sec
+Holdtime : 154 sec
 
 Version :
 Cisco IOS Software, C2960C Software (C2960c405-UNIVERSALK9-M), Version 15.2(2)E8, RELEASE SOFTWARE (fc1)
@@ -571,8 +571,8 @@ Capability Codes: R - Router, T - Trans Bridge, B - Source Route Bridge
 
 Device ID        Local Intrfce     Holdtme    Capability  Platform  Port ID
 INA-NSWS-68-96-22.kolmar.ru
-                 Gig 0/12          139              S I   WS-C2960C Gig 0/11
+                 Gig 0/12          136              S I   WS-C2960C Gig 0/11
 INA-NSWS-21-98-153.kolmar.ru
-                 Gig 0/11          135              S I   WS-C2960C Gig 0/2
+                 Gig 0/11          154              S I   WS-C2960C Gig 0/2
 
 Total cdp entries displayed : 2

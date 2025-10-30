@@ -1345,14 +1345,14 @@
         "_template": "zes_show_lldp_neighbors_brief.template"
       },
       {
-        "LocalInterface": "1918835",
+        "LocalInterface": "2121087",
         "NeighborName": "input",
         "NeighborPort": "packets,",
         "_source_file": "C:\\Users\\zhiltsov.aa\\Desktop\\net-auto-mermaid\\data\\raw\\INA\\1\\10.20.99.64.txt",
         "_template": "zes_show_lldp_neighbors_brief.template"
       },
       {
-        "LocalInterface": "1917852",
+        "LocalInterface": "2119921",
         "NeighborName": "unicast",
         "NeighborPort": "packets,",
         "_source_file": "C:\\Users\\zhiltsov.aa\\Desktop\\net-auto-mermaid\\data\\raw\\INA\\1\\10.20.99.64.txt",
@@ -1380,14 +1380,14 @@
         "_template": "zes_show_lldp_neighbors_brief.template"
       },
       {
-        "LocalInterface": "5805448",
+        "LocalInterface": "6503638",
         "NeighborName": "output",
         "NeighborPort": "packets,",
         "_source_file": "C:\\Users\\zhiltsov.aa\\Desktop\\net-auto-mermaid\\data\\raw\\INA\\1\\10.20.99.64.txt",
         "_template": "zes_show_lldp_neighbors_brief.template"
       },
       {
-        "LocalInterface": "1983791",
+        "LocalInterface": "2192195",
         "NeighborName": "unicast",
         "NeighborPort": "packets,",
         "_source_file": "C:\\Users\\zhiltsov.aa\\Desktop\\net-auto-mermaid\\data\\raw\\INA\\1\\10.20.99.64.txt",
@@ -1410,21 +1410,21 @@
       {
         "LocalInterface": "(64)",
         "NeighborName": "bytes:",
-        "NeighborPort": "3982480,",
+        "NeighborPort": "4443973,",
         "_source_file": "C:\\Users\\zhiltsov.aa\\Desktop\\net-auto-mermaid\\data\\raw\\INA\\1\\10.20.99.64.txt",
         "_template": "zes_show_lldp_neighbors_brief.template"
       },
       {
         "LocalInterface": "(128~255)",
         "NeighborName": "bytes:",
-        "NeighborPort": "514523,",
+        "NeighborPort": "572893,",
         "_source_file": "C:\\Users\\zhiltsov.aa\\Desktop\\net-auto-mermaid\\data\\raw\\INA\\1\\10.20.99.64.txt",
         "_template": "zes_show_lldp_neighbors_brief.template"
       },
       {
         "LocalInterface": "(512~1023)",
         "NeighborName": "bytes:",
-        "NeighborPort": "7782,",
+        "NeighborPort": "8771,",
         "_source_file": "C:\\Users\\zhiltsov.aa\\Desktop\\net-auto-mermaid\\data\\raw\\INA\\1\\10.20.99.64.txt",
         "_template": "zes_show_lldp_neighbors_brief.template"
       },
@@ -1534,14 +1534,14 @@
         "_template": "zes_show_lldp_neighbors_brief.template"
       },
       {
-        "LocalInterface": "3891606",
+        "LocalInterface": "4302960",
         "NeighborName": "input",
         "NeighborPort": "packets,",
         "_source_file": "C:\\Users\\zhiltsov.aa\\Desktop\\net-auto-mermaid\\data\\raw\\INA\\1\\10.20.99.64.txt",
         "_template": "zes_show_lldp_neighbors_brief.template"
       },
       {
-        "LocalInterface": "3890597",
+        "LocalInterface": "4301719",
         "NeighborName": "unicast",
         "NeighborPort": "packets,",
         "_source_file": "C:\\Users\\zhiltsov.aa\\Desktop\\net-auto-mermaid\\data\\raw\\INA\\1\\10.20.99.64.txt",
@@ -1569,14 +1569,14 @@
         "_template": "zes_show_lldp_neighbors_brief.template"
       },
       {
-        "LocalInterface": "7741970",
+        "LocalInterface": "8645440",
         "NeighborName": "output",
         "NeighborPort": "packets,",
         "_source_file": "C:\\Users\\zhiltsov.aa\\Desktop\\net-auto-mermaid\\data\\raw\\INA\\1\\10.20.99.64.txt",
         "_template": "zes_show_lldp_neighbors_brief.template"
       },
       {
-        "LocalInterface": "3920343",
+        "LocalInterface": "4334076",
         "NeighborName": "unicast",
         "NeighborPort": "packets,",
         "_source_file": "C:\\Users\\zhiltsov.aa\\Desktop\\net-auto-mermaid\\data\\raw\\INA\\1\\10.20.99.64.txt",
@@ -1599,21 +1599,21 @@
       {
         "LocalInterface": "(64)",
         "NeighborName": "bytes:",
-        "NeighborPort": "6375712,",
+        "NeighborPort": "7090948,",
         "_source_file": "C:\\Users\\zhiltsov.aa\\Desktop\\net-auto-mermaid\\data\\raw\\INA\\1\\10.20.99.64.txt",
         "_template": "zes_show_lldp_neighbors_brief.template"
       },
       {
         "LocalInterface": "(128~255)",
         "NeighborName": "bytes:",
-        "NeighborPort": "883226,",
+        "NeighborPort": "980800,",
         "_source_file": "C:\\Users\\zhiltsov.aa\\Desktop\\net-auto-mermaid\\data\\raw\\INA\\1\\10.20.99.64.txt",
         "_template": "zes_show_lldp_neighbors_brief.template"
       },
       {
         "LocalInterface": "(512~1023)",
         "NeighborName": "bytes:",
-        "NeighborPort": "7475,",
+        "NeighborPort": "8423,",
         "_source_file": "C:\\Users\\zhiltsov.aa\\Desktop\\net-auto-mermaid\\data\\raw\\INA\\1\\10.20.99.64.txt",
         "_template": "zes_show_lldp_neighbors_brief.template"
       },
@@ -1723,14 +1723,14 @@
         "_template": "zes_show_lldp_neighbors_brief.template"
       },
       {
-        "LocalInterface": "67913631",
+        "LocalInterface": "74878835",
         "NeighborName": "input",
         "NeighborPort": "packets,",
         "_source_file": "C:\\Users\\zhiltsov.aa\\Desktop\\net-auto-mermaid\\data\\raw\\INA\\1\\10.20.99.64.txt",
         "_template": "zes_show_lldp_neighbors_brief.template"
       },
       {
-        "LocalInterface": "67907956",
+        "LocalInterface": "74871752",
         "NeighborName": "unicast",
         "NeighborPort": "packets,",
         "_source_file": "C:\\Users\\zhiltsov.aa\\Desktop\\net-auto-mermaid\\data\\raw\\INA\\1\\10.20.99.64.txt",
@@ -1758,14 +1758,14 @@
         "_template": "zes_show_lldp_neighbors_brief.template"
       },
       {
-        "LocalInterface": "75372188",
+        "LocalInterface": "83373302",
         "NeighborName": "output",
         "NeighborPort": "packets,",
         "_source_file": "C:\\Users\\zhiltsov.aa\\Desktop\\net-auto-mermaid\\data\\raw\\INA\\1\\10.20.99.64.txt",
         "_template": "zes_show_lldp_neighbors_brief.template"
       },
       {
-        "LocalInterface": "71555223",
+        "LocalInterface": "79067776",
         "NeighborName": "unicast",
         "NeighborPort": "packets,",
         "_source_file": "C:\\Users\\zhiltsov.aa\\Desktop\\net-auto-mermaid\\data\\raw\\INA\\1\\10.20.99.64.txt",
@@ -1788,21 +1788,21 @@
       {
         "LocalInterface": "(64)",
         "NeighborName": "bytes:",
-        "NeighborPort": "14389409,",
+        "NeighborPort": "15844828,",
         "_source_file": "C:\\Users\\zhiltsov.aa\\Desktop\\net-auto-mermaid\\data\\raw\\INA\\1\\10.20.99.64.txt",
         "_template": "zes_show_lldp_neighbors_brief.template"
       },
       {
         "LocalInterface": "(128~255)",
         "NeighborName": "bytes:",
-        "NeighborPort": "94467790,",
+        "NeighborPort": "104369829,",
         "_source_file": "C:\\Users\\zhiltsov.aa\\Desktop\\net-auto-mermaid\\data\\raw\\INA\\1\\10.20.99.64.txt",
         "_template": "zes_show_lldp_neighbors_brief.template"
       },
       {
         "LocalInterface": "(512~1023)",
         "NeighborName": "bytes:",
-        "NeighborPort": "2103119,",
+        "NeighborPort": "2320906,",
         "_source_file": "C:\\Users\\zhiltsov.aa\\Desktop\\net-auto-mermaid\\data\\raw\\INA\\1\\10.20.99.64.txt",
         "_template": "zes_show_lldp_neighbors_brief.template"
       },
@@ -1912,14 +1912,14 @@
         "_template": "zes_show_lldp_neighbors_brief.template"
       },
       {
-        "LocalInterface": "4013506",
+        "LocalInterface": "4437451",
         "NeighborName": "input",
         "NeighborPort": "packets,",
         "_source_file": "C:\\Users\\zhiltsov.aa\\Desktop\\net-auto-mermaid\\data\\raw\\INA\\1\\10.20.99.64.txt",
         "_template": "zes_show_lldp_neighbors_brief.template"
       },
       {
-        "LocalInterface": "4012006",
+        "LocalInterface": "4435681",
         "NeighborName": "unicast",
         "NeighborPort": "packets,",
         "_source_file": "C:\\Users\\zhiltsov.aa\\Desktop\\net-auto-mermaid\\data\\raw\\INA\\1\\10.20.99.64.txt",
@@ -1947,14 +1947,14 @@
         "_template": "zes_show_lldp_neighbors_brief.template"
       },
       {
-        "LocalInterface": "7854325",
+        "LocalInterface": "8769320",
         "NeighborName": "output",
         "NeighborPort": "packets,",
         "_source_file": "C:\\Users\\zhiltsov.aa\\Desktop\\net-auto-mermaid\\data\\raw\\INA\\1\\10.20.99.64.txt",
         "_template": "zes_show_lldp_neighbors_brief.template"
       },
       {
-        "LocalInterface": "4033200",
+        "LocalInterface": "4458496",
         "NeighborName": "unicast",
         "NeighborPort": "packets,",
         "_source_file": "C:\\Users\\zhiltsov.aa\\Desktop\\net-auto-mermaid\\data\\raw\\INA\\1\\10.20.99.64.txt",
@@ -1977,21 +1977,21 @@
       {
         "LocalInterface": "(64)",
         "NeighborName": "bytes:",
-        "NeighborPort": "6511083,",
+        "NeighborPort": "7240168,",
         "_source_file": "C:\\Users\\zhiltsov.aa\\Desktop\\net-auto-mermaid\\data\\raw\\INA\\1\\10.20.99.64.txt",
         "_template": "zes_show_lldp_neighbors_brief.template"
       },
       {
         "LocalInterface": "(128~255)",
         "NeighborName": "bytes:",
-        "NeighborPort": "909728,",
+        "NeighborPort": "1010193,",
         "_source_file": "C:\\Users\\zhiltsov.aa\\Desktop\\net-auto-mermaid\\data\\raw\\INA\\1\\10.20.99.64.txt",
         "_template": "zes_show_lldp_neighbors_brief.template"
       },
       {
         "LocalInterface": "(512~1023)",
         "NeighborName": "bytes:",
-        "NeighborPort": "6999,",
+        "NeighborPort": "7911,",
         "_source_file": "C:\\Users\\zhiltsov.aa\\Desktop\\net-auto-mermaid\\data\\raw\\INA\\1\\10.20.99.64.txt",
         "_template": "zes_show_lldp_neighbors_brief.template"
       },
@@ -2101,14 +2101,14 @@
         "_template": "zes_show_lldp_neighbors_brief.template"
       },
       {
-        "LocalInterface": "4826901",
+        "LocalInterface": "5297341",
         "NeighborName": "input",
         "NeighborPort": "packets,",
         "_source_file": "C:\\Users\\zhiltsov.aa\\Desktop\\net-auto-mermaid\\data\\raw\\INA\\1\\10.20.99.64.txt",
         "_template": "zes_show_lldp_neighbors_brief.template"
       },
       {
-        "LocalInterface": "4810817",
+        "LocalInterface": "5279357",
         "NeighborName": "unicast",
         "NeighborPort": "packets,",
         "_source_file": "C:\\Users\\zhiltsov.aa\\Desktop\\net-auto-mermaid\\data\\raw\\INA\\1\\10.20.99.64.txt",
@@ -2136,14 +2136,14 @@
         "_template": "zes_show_lldp_neighbors_brief.template"
       },
       {
-        "LocalInterface": "13340880",
+        "LocalInterface": "14797489",
         "NeighborName": "output",
         "NeighborPort": "packets,",
         "_source_file": "C:\\Users\\zhiltsov.aa\\Desktop\\net-auto-mermaid\\data\\raw\\INA\\1\\10.20.99.64.txt",
         "_template": "zes_show_lldp_neighbors_brief.template"
       },
       {
-        "LocalInterface": "9534337",
+        "LocalInterface": "10502877",
         "NeighborName": "unicast",
         "NeighborPort": "packets,",
         "_source_file": "C:\\Users\\zhiltsov.aa\\Desktop\\net-auto-mermaid\\data\\raw\\INA\\1\\10.20.99.64.txt",
@@ -2166,21 +2166,21 @@
       {
         "LocalInterface": "(64)",
         "NeighborName": "bytes:",
-        "NeighborPort": "4654480,",
+        "NeighborPort": "5173462,",
         "_source_file": "C:\\Users\\zhiltsov.aa\\Desktop\\net-auto-mermaid\\data\\raw\\INA\\1\\10.20.99.64.txt",
         "_template": "zes_show_lldp_neighbors_brief.template"
       },
       {
         "LocalInterface": "(128~255)",
         "NeighborName": "bytes:",
-        "NeighborPort": "1508186,",
+        "NeighborPort": "1672189,",
         "_source_file": "C:\\Users\\zhiltsov.aa\\Desktop\\net-auto-mermaid\\data\\raw\\INA\\1\\10.20.99.64.txt",
         "_template": "zes_show_lldp_neighbors_brief.template"
       },
       {
         "LocalInterface": "(512~1023)",
         "NeighborName": "bytes:",
-        "NeighborPort": "163627,",
+        "NeighborPort": "180085,",
         "_source_file": "C:\\Users\\zhiltsov.aa\\Desktop\\net-auto-mermaid\\data\\raw\\INA\\1\\10.20.99.64.txt",
         "_template": "zes_show_lldp_neighbors_brief.template"
       },
@@ -6294,14 +6294,14 @@
         "_template": "zes_show_lldp_neighbors_brief.template"
       },
       {
-        "LocalInterface": "293863683",
+        "LocalInterface": "325450854",
         "NeighborName": "input",
         "NeighborPort": "packets,",
         "_source_file": "C:\\Users\\zhiltsov.aa\\Desktop\\net-auto-mermaid\\data\\raw\\INA\\1\\10.20.99.64.txt",
         "_template": "zes_show_lldp_neighbors_brief.template"
       },
       {
-        "LocalInterface": "99790363",
+        "LocalInterface": "110282683",
         "NeighborName": "unicast",
         "NeighborPort": "packets,",
         "_source_file": "C:\\Users\\zhiltsov.aa\\Desktop\\net-auto-mermaid\\data\\raw\\INA\\1\\10.20.99.64.txt",
@@ -6329,14 +6329,14 @@
         "_template": "zes_show_lldp_neighbors_brief.template"
       },
       {
-        "LocalInterface": "83813583",
+        "LocalInterface": "92426392",
         "NeighborName": "output",
         "NeighborPort": "packets,",
         "_source_file": "C:\\Users\\zhiltsov.aa\\Desktop\\net-auto-mermaid\\data\\raw\\INA\\1\\10.20.99.64.txt",
         "_template": "zes_show_lldp_neighbors_brief.template"
       },
       {
-        "LocalInterface": "83748202",
+        "LocalInterface": "92350520",
         "NeighborName": "unicast",
         "NeighborPort": "packets,",
         "_source_file": "C:\\Users\\zhiltsov.aa\\Desktop\\net-auto-mermaid\\data\\raw\\INA\\1\\10.20.99.64.txt",
@@ -6359,21 +6359,21 @@
       {
         "LocalInterface": "(64)",
         "NeighborName": "bytes:",
-        "NeighborPort": "598781,",
+        "NeighborPort": "665126,",
         "_source_file": "C:\\Users\\zhiltsov.aa\\Desktop\\net-auto-mermaid\\data\\raw\\INA\\1\\10.20.99.64.txt",
         "_template": "zes_show_lldp_neighbors_brief.template"
       },
       {
         "LocalInterface": "(128~255)",
         "NeighborName": "bytes:",
-        "NeighborPort": "110375113,",
+        "NeighborPort": "121984514,",
         "_source_file": "C:\\Users\\zhiltsov.aa\\Desktop\\net-auto-mermaid\\data\\raw\\INA\\1\\10.20.99.64.txt",
         "_template": "zes_show_lldp_neighbors_brief.template"
       },
       {
         "LocalInterface": "(512~1023)",
         "NeighborName": "bytes:",
-        "NeighborPort": "3872399,",
+        "NeighborPort": "4243176,",
         "_source_file": "C:\\Users\\zhiltsov.aa\\Desktop\\net-auto-mermaid\\data\\raw\\INA\\1\\10.20.99.64.txt",
         "_template": "zes_show_lldp_neighbors_brief.template"
       },

@@ -26,10 +26,10 @@ software.
 ROM: IOS-XE ROMMON
 BOOTLDR: CAT3K_CAA Boot Loader (CAT3K_CAA-HBOOT-M) Version 6.08, RELEASE SOFTWARE (P)
 
-NRG-NSWR-01-99-38 uptime is 29 weeks, 5 days, 20 hours, 31 minutes
-Uptime for this control processor is 29 weeks, 5 days, 20 hours, 32 minutes
+NRG-NSWR-01-99-38 uptime is 30 weeks, 21 hours, 45 minutes
+Uptime for this control processor is 30 weeks, 21 hours, 47 minutes
 System returned to ROM by Power Failure or Unknown at 10:44:31 YAKT Tue Oct 1 2024
-System restarted at 17:13:28 YAKT Tue Apr 1 2025
+System restarted at 17:13:29 YAKT Tue Apr 1 2025
 System image file is "flash:cat3k_caa-universalk9.16.12.11.SPA.bin"
 Last reload reason: Power Failure or Unknown
 
@@ -807,7 +807,7 @@ Technical Support: http://www.cisco.com/techsupport
 Copyright (c) 1986-2017 by Cisco Systems, Inc.
 Compiled Wed 12-Jul-17 13:06 by prod_rel_team
 
-Time remaining: 99 seconds
+Time remaining: 108 seconds
 System Capabilities: B,R
 Enabled Capabilities: B
 Management Addresses:
@@ -831,7 +831,7 @@ Technical Support: http://www.cisco.com/techsupport
 Copyright (c) 1986-2020 by Cisco Systems, Inc.
 Compiled Thu 26-Nov-20 23:35 by mcpre
 
-Time remaining: 104 seconds
+Time remaining: 96 seconds
 System Capabilities: B,R
 Enabled Capabilities: B,R
 Management Addresses:
@@ -854,7 +854,7 @@ Entry address(es):
   IP address: 10.20.99.40
 Platform: cisco WS-C2960X-24PS-L,  Capabilities: Switch IGMP 
 Interface: GigabitEthernet1/0/2,  Port ID (outgoing port): GigabitEthernet1/0/28
-Holdtime : 169 sec
+Holdtime : 154 sec
 
 Version :
 Cisco IOS Software, C2960X Software (C2960X-UNIVERSALK9-M), Version 15.2(2)E7, RELEASE SOFTWARE (fc3)
@@ -876,7 +876,7 @@ Entry address(es):
   IP address: 10.20.99.51
 Platform: cisco WS-C2960CX-8PC-L,  Capabilities: Switch IGMP 
 Interface: GigabitEthernet1/0/6,  Port ID (outgoing port): GigabitEthernet0/11
-Holdtime : 162 sec
+Holdtime : 134 sec
 
 Version :
 Cisco IOS Software, C2960CX Software (C2960CX-UNIVERSALK9-M), Version 15.2(7)E, RELEASE SOFTWARE (fc3)
@@ -897,7 +897,7 @@ Entry address(es):
   IP address: 10.20.99.39
 Platform: cisco WS-C2960X-24PS-L,  Capabilities: Switch IGMP 
 Interface: GigabitEthernet1/0/1,  Port ID (outgoing port): GigabitEthernet1/0/28
-Holdtime : 176 sec
+Holdtime : 147 sec
 
 Version :
 Cisco IOS Software, C2960X Software (C2960X-UNIVERSALK9-M), Version 15.2(2)E7, RELEASE SOFTWARE (fc3)
@@ -919,7 +919,7 @@ Entry address(es):
   IP address: 10.20.99.41
 Platform: cisco WS-C2960X-24PS-L,  Capabilities: Switch IGMP 
 Interface: GigabitEthernet1/0/3,  Port ID (outgoing port): GigabitEthernet1/0/28
-Holdtime : 152 sec
+Holdtime : 168 sec
 
 Version :
 Cisco IOS Software, C2960X Software (C2960X-UNIVERSALK9-M), Version 15.2(4)E5, RELEASE SOFTWARE (fc2)
@@ -941,7 +941,7 @@ Entry address(es):
   IP address: 10.20.99.54
 Platform: cisco WS-C2960X-24PS-L,  Capabilities: Switch IGMP 
 Interface: GigabitEthernet1/0/4,  Port ID (outgoing port): GigabitEthernet1/0/25
-Holdtime : 133 sec
+Holdtime : 161 sec
 
 Version :
 Cisco IOS Software, C2960X Software (C2960X-UNIVERSALK9-M), Version 15.2(7)E2, RELEASE SOFTWARE (fc3)
@@ -984,7 +984,7 @@ Entry address(es):
   IP address: 10.11.11.1
 Platform: cisco C9500-24Y4C,  Capabilities: Router Switch IGMP 
 Interface: TenGigabitEthernet1/1/4,  Port ID (outgoing port): TwentyFiveGigE1/0/2
-Holdtime : 147 sec
+Holdtime : 155 sec
 
 Version :
 Cisco IOS Software [Bengaluru], Catalyst L3 Switch Software (CAT9K_IOSXE), Version 17.4.1, RELEASE SOFTWARE (fc5)
@@ -1010,17 +1010,17 @@ Capability Codes: R - Router, T - Trans Bridge, B - Source Route Bridge
 
 Device ID        Local Intrfce     Holdtme    Capability  Platform  Port ID
 NER-NSWS-04-99-40.kolmar.ru
-                 Gig 1/0/2         169              S I   WS-C2960X Gig 1/0/28
+                 Gig 1/0/2         154              S I   WS-C2960X Gig 1/0/28
 NER-NSWS-04-99-51.kolmar.ru
-                 Gig 1/0/6         162              S I   WS-C2960C Gig 0/11
+                 Gig 1/0/6         134              S I   WS-C2960C Gig 0/11
 NER-NSWS-08-99-39.kolmar.ru
-                 Gig 1/0/1         176              S I   WS-C2960X Gig 1/0/28
+                 Gig 1/0/1         147              S I   WS-C2960X Gig 1/0/28
 NRG-NSWS-01-99-41.kolmar.ru
-                 Gig 1/0/3         152              S I   WS-C2960X Gig 1/0/28
+                 Gig 1/0/3         168              S I   WS-C2960X Gig 1/0/28
 NER-NSWS-09-99-54.kolmar.ru
-                 Gig 1/0/4         133              S I   WS-C2960X Gig 1/0/25
+                 Gig 1/0/4         161              S I   WS-C2960X Gig 1/0/25
 NER-NSWS-08-99-53.kolmar.ru
                  Gig 1/0/5         127              S I   WS-C2960X Gig 1/0/28
-NER-NSWR-01-96-1 Ten 1/1/4         147             R S I  C9500-24Y Twe 1/0/2
+NER-NSWR-01-96-1 Ten 1/1/4         155             R S I  C9500-24Y Twe 1/0/2
 
 Total cdp entries displayed : 7

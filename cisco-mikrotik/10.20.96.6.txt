@@ -1,0 +1,471 @@
+NER-NSWR-02-96-6#show running-config
+spanning-tree mode rapid-pvst
+!
+vlan database
+ vlan 10,15,17,220,1001,1750-1760,1930
+exit
+!
+radius server enable
+!
+ip access-list extended unity
+ permit ip 10.12.0.23 0.0.0.1 10.10.0.114 0.0.0.1 ace-priority 20
+ permit ip 10.10.0.114 0.0.0.1 10.12.0.23 0.0.0.1 ace-priority 40
+ permit ip 10.12.0.102 0.0.0.1 10.10.0.114 0.0.0.1 ace-priority 60
+ permit ip 10.10.0.114 0.0.0.1 10.12.0.102 0.0.0.1 ace-priority 80
+ permit ip 10.12.0.51 0.0.0.1 10.10.0.114 0.0.0.1 ace-priority 100
+ permit ip 10.10.0.114 0.0.0.1 10.12.0.51 0.0.0.1 ace-priority 120
+ deny ip any any ace-priority 140
+exit
+!
+!
+hostname NER-NSWR-02-96-6
+!
+encrypted radius-server key KJ0Nq18PB1/p7rGPSYyPzH92KXZQis8bQua+eo05sNc=
+encrypted radius-server host 10.10.0.210 timeout 5 key KJ0Nq18PB1/p7rGPSYyPzH92KXZQis8bQua+eo05sNc=
+encrypted radius-server host 10.10.0.212 timeout 5 key KJ0Nq18PB1/p7rGPSYyPzH92KXZQis8bQua+eo05sNc=
+!
+logging host 10.10.0.142 port 5014
+!
+line ssh
+ exec-timeout 15
+exit
+!
+username sib_uib password encrypted 8e4b9773ea54875af29b1ee3a88846c65301c52e privilege 15
+username volodin_s password encrypted c6ff25c3781b34389e7ad5e1c8cd8214d30e1d86 privilege 15
+username zhiltsov_a password encrypted 92dfaa82f9c2f10f0f22f340db01fb8a32cedef0 privilege 15
+!
+ip ssh server
+!
+snmp-server server
+encrypted snmp-server community qFiDC/J5H872AchiufYPZN8DRuLwUa5Mh4avgWaNg/M= ro view Default
+!
+aaa authentication login default radius local
+!
+clock timezone YAKT +9
+!
+!
+backup server tftp://192.168.74.210
+backup path 10.20.96.6
+backup time-period 1440
+backup history enable
+!
+interface TenGigabitEthernet1/0/1
+ description SRV_SB_p.1
+ spanning-tree portfast
+ spanning-tree bpduguard enable
+ switchport access vlan 10
+ no lldp transmit
+ no lldp receive
+exit
+!
+interface TenGigabitEthernet1/0/2
+ spanning-tree portfast
+ spanning-tree bpduguard enable
+ switchport access vlan 10
+ no lldp transmit
+ no lldp receive
+exit
+!
+interface TenGigabitEthernet1/0/3
+ spanning-tree portfast
+ spanning-tree bpduguard enable
+ switchport access vlan 10
+ no lldp transmit
+ no lldp receive
+exit
+!
+interface TenGigabitEthernet1/0/4
+ spanning-tree portfast
+ spanning-tree bpduguard enable
+ switchport access vlan 10
+ no lldp transmit
+ no lldp receive
+exit
+!
+interface TenGigabitEthernet1/0/5
+ spanning-tree portfast
+ spanning-tree bpduguard enable
+ switchport access vlan 10
+ no lldp transmit
+ no lldp receive
+exit
+!
+interface TenGigabitEthernet1/0/6
+ spanning-tree portfast
+ spanning-tree bpduguard enable
+ switchport access vlan 10
+ no lldp transmit
+ no lldp receive
+exit
+!
+interface TenGigabitEthernet1/0/7
+ spanning-tree portfast
+ spanning-tree bpduguard enable
+ switchport access vlan 10
+ no lldp transmit
+ no lldp receive
+exit
+!
+interface TenGigabitEthernet1/0/8
+ spanning-tree portfast
+ spanning-tree bpduguard enable
+ switchport access vlan 10
+ no lldp transmit
+ no lldp receive
+exit
+!
+interface TenGigabitEthernet1/0/9
+ spanning-tree portfast
+ spanning-tree bpduguard enable
+ switchport access vlan 10
+ no lldp transmit
+ no lldp receive
+exit
+!
+interface TenGigabitEthernet1/0/10
+ spanning-tree portfast
+ spanning-tree bpduguard enable
+ switchport mode trunk
+ switchport trunk allowed vlan add 10,1750-1760
+ no lldp transmit
+ no lldp receive
+ switchport forbidden default-vlan
+exit
+!
+interface TenGigabitEthernet1/0/11
+ spanning-tree portfast
+ spanning-tree bpduguard enable
+ switchport access vlan 10
+ no lldp transmit
+ no lldp receive
+exit
+!
+interface TenGigabitEthernet1/0/12
+ spanning-tree portfast
+ spanning-tree bpduguard enable
+ switchport access vlan 10
+ no lldp transmit
+ no lldp receive
+exit
+!
+interface TenGigabitEthernet1/0/13
+ spanning-tree portfast
+ spanning-tree bpduguard enable
+ switchport access vlan 10
+ no lldp transmit
+ no lldp receive
+exit
+!
+interface TenGigabitEthernet1/0/14
+ switchport mode trunk
+ switchport trunk allowed vlan add 10,15,17,220,1001,1750-1760,1930
+exit
+!
+interface TenGigabitEthernet2/0/1
+ description SRV_SB_p.2
+ spanning-tree portfast
+ spanning-tree bpduguard enable
+ switchport mode trunk
+ switchport trunk allowed vlan add 1930
+ switchport trunk native vlan 10
+ no lldp transmit
+ no lldp receive
+exit
+!
+interface TenGigabitEthernet2/0/2
+ spanning-tree portfast
+ spanning-tree bpduguard enable
+ switchport access vlan 10
+ no lldp transmit
+ no lldp receive
+exit
+!
+interface TenGigabitEthernet2/0/3
+ spanning-tree portfast
+ spanning-tree bpduguard enable
+ switchport access vlan 10
+ no lldp transmit
+ no lldp receive
+exit
+!
+interface TenGigabitEthernet2/0/4
+ spanning-tree portfast
+ spanning-tree bpduguard enable
+ switchport access vlan 10
+ no lldp transmit
+ no lldp receive
+exit
+!
+interface TenGigabitEthernet2/0/5
+ spanning-tree portfast
+ spanning-tree bpduguard enable
+ switchport mode trunk
+ switchport trunk native vlan 10
+ no lldp transmit
+ no lldp receive
+exit
+!
+interface TenGigabitEthernet2/0/6
+ spanning-tree portfast
+ spanning-tree bpduguard enable
+ switchport access vlan 10
+ no lldp transmit
+ no lldp receive
+exit
+!
+interface TenGigabitEthernet2/0/7
+ spanning-tree portfast
+ spanning-tree bpduguard enable
+ switchport access vlan 10
+ no lldp transmit
+ no lldp receive
+exit
+!
+interface TenGigabitEthernet2/0/8
+ spanning-tree portfast
+ spanning-tree bpduguard enable
+ switchport access vlan 10
+ no lldp transmit
+ no lldp receive
+exit
+!
+interface TenGigabitEthernet2/0/9
+ spanning-tree portfast
+ spanning-tree bpduguard enable
+ switchport access vlan 10
+ no lldp transmit
+ no lldp receive
+exit
+!
+interface TenGigabitEthernet2/0/10
+ spanning-tree portfast
+ spanning-tree bpduguard enable
+ switchport access vlan 10
+ no lldp transmit
+ no lldp receive
+exit
+!
+interface TenGigabitEthernet2/0/11
+ spanning-tree portfast
+ spanning-tree bpduguard enable
+ switchport access vlan 10
+ no lldp transmit
+ no lldp receive
+exit
+!
+interface TenGigabitEthernet2/0/12
+ spanning-tree portfast
+ spanning-tree bpduguard enable
+ switchport access vlan 10
+ no lldp transmit
+ no lldp receive
+exit
+!
+interface TenGigabitEthernet2/0/13
+ spanning-tree portfast
+ spanning-tree bpduguard enable
+ switchport access vlan 10
+ no lldp transmit
+ no lldp receive
+exit
+!
+interface TenGigabitEthernet2/0/14
+ switchport mode trunk
+ switchport trunk allowed vlan add 10,15,17,220,1930
+exit
+!
+interface vlan 10
+ name Servers
+exit
+!
+interface vlan 15
+ name Monitoring
+exit
+!
+interface vlan 17
+ name Transport
+ ip address 10.20.96.6 255.255.252.0
+exit
+!
+interface vlan 220
+ name UPS
+exit
+!
+interface vlan 1750
+ name DMZ-MAIL
+exit
+!
+interface vlan 1751
+ name DMZ
+exit
+!
+interface vlan 1752
+ name DMZ-AMICUM
+exit
+!
+interface vlan 1753
+ name DMZ-VPN
+exit
+!
+interface vlan 1754
+ name DMZ-RDP
+exit
+!
+interface vlan 1755
+ name DMZ-1
+exit
+!
+interface vlan 1756
+ name DMZ-HR-LINK
+exit
+!
+interface vlan 1757
+ name DMZ-VINTEO
+exit
+!
+interface vlan 1758
+ name DMZ-RDP-CORP
+exit
+!
+interface vlan 1759
+ name DMZ-REVERSE
+exit
+!
+interface vlan 1760
+ name DMZ-3
+exit
+!
+interface vlan 1930
+ name REAL_IP_MEGAFON
+exit
+!
+!
+ip default-gateway 10.20.96.1
+!
+end
+NER-NSWR-02-96-6#show lldp neighbors
+
+System capability legend:
+B - Bridge; R - Router; W - Wlan Access Point; T - telephone;
+D - DOCSIS Cable Device; H - Host; r - Repeater;
+TP - Two Ports MAC Relay; S - S-VLAN; C - C-VLAN; O - Other
+
+  Port        Device ID          Port ID               System Name           Capabilities  TTL
+--------- ----------------- ----------------- ------------------------------ ------------ -----
+te1/0/14  14:a2:a0:e7:ec:60     Twe1/0/16     NER-NSWR-02-96-2.kolmar.local      B, R      99
+
+NER-NSWR-02-96-6#show vlan
+Created by: D-Default, S-Static, G-GVRP, R-Radius Assigned VLAN, V-Voice VLAN
+
+Vlan       Name           Tagged Ports      UnTagged Ports      Created by
+---- ----------------- ------------------ ------------------ ----------------
+ 1           -                            te1/0/14-32,              D
+                                          te2/0/14-32,
+                                          te3/0/1-32,
+                                          te4/0/1-32,
+                                          te5/0/1-32,
+                                          te6/0/1-32,
+                                          te7/0/1-32,
+                                          te8/0/1-32,Po1-32
+ 10       Servers      te1/0/10,te1/0/14, te1/0/1-9,                S
+                       te2/0/14           te1/0/11-13,
+                                          te2/0/1-13
+ 15     Monitoring     te1/0/14,te2/0/14                            S
+ 17      Transport     te1/0/14,te2/0/14                            S
+220         UPS        te1/0/14,te2/0/14                            S
+1001         -              te1/0/14                                S
+1750     DMZ-MAIL      te1/0/10,te1/0/14                            S
+1751        DMZ        te1/0/10,te1/0/14                            S
+1752    DMZ-AMICUM     te1/0/10,te1/0/14                            S
+1753      DMZ-VPN      te1/0/10,te1/0/14                            S
+1754      DMZ-RDP      te1/0/10,te1/0/14                            S
+1755       DMZ-1       te1/0/10,te1/0/14                            S
+1756    DMZ-HR-LINK    te1/0/10,te1/0/14                            S
+1757    DMZ-VINTEO     te1/0/10,te1/0/14                            S
+1758   DMZ-RDP-CORP    te1/0/10,te1/0/14                            S
+1759    DMZ-REVERSE    te1/0/10,te1/0/14                            S
+1760       DMZ-3       te1/0/10,te1/0/14                            S
+1930  REAL_IP_MEGAFON  te1/0/14,te2/0/1,                            S
+                       te2/0/14
+
+NER-NSWR-02-96-6#show interfaces status
+                                             Flow Link           Uptime       Back   Mdix
+Port     Type         Duplex  Speed Neg      ctrl State         (d,h:m:s)   Pressure Mode    Port Mode (VLAN)
+-------- ------------ ------  ----- -------- ---- ----------- ------------- -------- ------- ------------------------
+te1/0/1  10G-Fiber    Full    10000 Disabled Off  Up          107,14:23:10  Disabled Off     Access (10)
+te1/0/2  10G-Fiber    Full    10000 Disabled Off  Up          107,14:27:59  Disabled Off     Access (10)
+te1/0/3  10G-Fiber    Full    10000 Disabled Off  Up          107,14:27:53  Disabled Off     Access (10)
+te1/0/4  10G-Fiber      --      --     --     --  Down (nc)         --         --     --     Access (10)
+te1/0/5  10G-Fiber    Full    10000 Disabled Off  Up          16,23:33:52   Disabled Off     Access (10)
+te1/0/6  10G-Fiber    Full    10000 Disabled Off  Up          107,14:19:04  Disabled Off     Access (10)
+te1/0/7  10G-Fiber    Full    10000 Disabled Off  Up          107,14:20:04  Disabled Off     Access (10)
+te1/0/8  10G-Fiber    Full    10000 Disabled Off  Up          107,14:19:03  Disabled Off     Access (10)
+te1/0/9  10G-Fiber    Full    10000 Disabled Off  Up          107,14:20:47  Disabled Off     Access (10)
+te1/0/10 10G-Fiber    Full    10000 Disabled Off  Up          107,14:28:38  Disabled Off     Trunk
+te1/0/11 10G-Fiber    Full    10000 Disabled Off  Up          107,14:28:38  Disabled Off     Access (10)
+te1/0/12 10G-Fiber      --      --     --     --  Down (nc)         --         --     --     Access (10)
+te1/0/13 10G-Fiber    Full    10000 Disabled Off  Up          107,14:28:38  Disabled Off     Access (10)
+te1/0/14 10G-Fiber    Full    10000 Disabled Off  Up          107,14:28:20  Disabled Off     Trunk
+te1/0/15      --        --      --     --     --  Not Present       --         --     --     Access (1)
+te1/0/16      --        --      --     --     --  Not Present       --         --     --     Access (1)
+te2/0/1  10G-Fiber    Full    10000 Disabled Off  Up          107,14:23:10  Disabled Off     Trunk
+te2/0/2  10G-Fiber    Full    10000 Disabled Off  Up          107,14:27:59  Disabled Off     Access (10)
+te2/0/3  10G-Fiber    Full    10000 Disabled Off  Up          107,14:27:53  Disabled Off     Access (10)
+te2/0/4  10G-Fiber    Full    1000  Disabled Off  Up          107,14:28:00  Disabled Off     Access (10)
+te2/0/5  10G-Fiber    Full    10000 Disabled Off  Up          16,23:33:53   Disabled Off     Trunk
+te2/0/6  10G-Fiber    Full    10000 Disabled Off  Up          107,14:18:59  Disabled Off     Access (10)
+te2/0/7  10G-Fiber    Full    10000 Disabled Off  Up          107,14:23:19  Disabled Off     Access (10)
+te2/0/8  10G-Fiber    Full    10000 Disabled Off  Up          107,14:19:07  Disabled Off     Access (10)
+te2/0/9  10G-Fiber    Full    10000 Disabled Off  Up          107,14:20:48  Disabled Off     Access (10)
+te2/0/10 10G-Fiber    Full    10000 Disabled Off  Up          75,22:27:16   Disabled Off     Access (10)
+te2/0/11 10G-Fiber    Full    10000 Disabled Off  Up          107,14:28:00  Disabled Off     Access (10)
+te2/0/12 10G-Fiber    Full    10000 Disabled Off  Up          107,14:28:00  Disabled Off     Access (10)
+te2/0/13 10G-Fiber    Full    10000 Disabled Off  Up          107,14:27:59  Disabled Off     Access (10)
+te2/0/14 10G-Fiber      --      --     --     --  Down (nc)         --         --     --     Trunk
+te2/0/15      --        --      --     --     --  Not Present       --         --     --     Access (1)
+te2/0/16      --        --      --     --     --  Not Present       --         --     --     Access (1)
+
+                                          Flow    Link
+Ch       Type    Duplex  Speed  Neg      control  State         Port Mode (VLAN)
+-------- ------- ------  -----  -------- -------  ------------- ------------------------
+Po1         --     --      --      --       --    Not Present   Access (1)
+Po2         --     --      --      --       --    Not Present   Access (1)
+Po3         --     --      --      --       --    Not Present   Access (1)
+Po4         --     --      --      --       --    Not Present   Access (1)
+Po5         --     --      --      --       --    Not Present   Access (1)
+Po6         --     --      --      --       --    Not Present   Access (1)
+Po7         --     --      --      --       --    Not Present   Access (1)
+Po8         --     --      --      --       --    Not Present   Access (1)
+Po9         --     --      --      --       --    Not Present   Access (1)
+Po10        --     --      --      --       --    Not Present   Access (1)
+Po11        --     --      --      --       --    Not Present   Access (1)
+Po12        --     --      --      --       --    Not Present   Access (1)
+Po13        --     --      --      --       --    Not Present   Access (1)
+Po14        --     --      --      --       --    Not Present   Access (1)
+Po15        --     --      --      --       --    Not Present   Access (1)
+Po16        --     --      --      --       --    Not Present   Access (1)
+Po17        --     --      --      --       --    Not Present   Access (1)
+Po18        --     --      --      --       --    Not Present   Access (1)
+Po19        --     --      --      --       --    Not Present   Access (1)
+Po20        --     --      --      --       --    Not Present   Access (1)
+Po21        --     --      --      --       --    Not Present   Access (1)
+Po22        --     --      --      --       --    Not Present   Access (1)
+Po23        --     --      --      --       --    Not Present   Access (1)
+Po24        --     --      --      --       --    Not Present   Access (1)
+Po25        --     --      --      --       --    Not Present   Access (1)
+Po26        --     --      --      --       --    Not Present   Access (1)
+Po27        --     --      --      --       --    Not Present   Access (1)
+Po28        --     --      --      --       --    Not Present   Access (1)
+Po29        --     --      --      --       --    Not Present   Access (1)
+Po30        --     --      --      --       --    Not Present   Access (1)
+Po31        --     --      --      --       --    Not Present   Access (1)
+Po32        --     --      --      --       --    Not Present   Access (1)
+
+                                              Link
+Oob       Type         Duplex  Speed Neg      State
+--------  ------------ ------  ----- -------- -----------
+oob       1G-Copper      --      --     --    Down
+
+nc (not connected): The interface is not connected.
+err (error-disabled): The interface was suspended by the system.
+adm (admin.shutdown): The interface was suspended by administrator.

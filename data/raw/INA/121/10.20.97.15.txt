@@ -6,7 +6,7 @@ $ terminal length 0
 
 $ show version
 
-MEMORY           : Total=85138 KBytes, Free=69968 KBytes, Max=69927 KBytes
+MEMORY           : Total=85138 KBytes, Free=70000 KBytes, Max=69951 KBytes
 FLASH            : 0x40000000-0x40ffffff, 256 x 0x10000 blocks
 MAC Address      : 00-1d-77-29-d3-ea
 S/N              : 5408PGE2023120111
@@ -17,8 +17,8 @@ Company Name     :
 Company Contact  : 
 System Location  : 
 Timezone Offset  : 0
-System Time      : 1970-01-06T00:29:06+00:00
-System Uptime    : 5d 00:29:06
+System Time      : 1970-01-08T01:43:21+00:00
+System Uptime    : 7d 01:43:21
 
 Active Image
 ------------
@@ -108,6 +108,7 @@ interface GigabitEthernet 1/5
  no spanning-tree
 !
 interface GigabitEthernet 1/6
+ switchport access vlan 1890
  no poe mode
  poe power limit 30.0
  no spanning-tree
@@ -124,6 +125,7 @@ interface GigabitEthernet 1/8
  no poe mode
  poe power limit 30.0
  no spanning-tree
+ description proverit' 
 !
 interface GigabitEthernet 1/9
  switchport mode trunk

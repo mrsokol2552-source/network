@@ -8,7 +8,7 @@
       {
         "Neighbor": "CHU-NSWS-26-98-233",
         "LocalInterface": "uptime is",
-        "NeighborPort": "6 days,",
+        "NeighborPort": "1 day,",
         "_source_file": "C:\\Users\\zhiltsov.aa\\Desktop\\net-auto-mermaid\\data\\raw\\CHU\\26\\10.20.98.233.txt",
         "_template": "cisco_ios_show_cdp_neighbors.template"
       },
@@ -69,7 +69,7 @@
       {
         "Version": "15.2(2)E8",
         "Model": "",
-        "Uptime": "10 weeks, 6 days, 19 hours, 56 minutes",
+        "Uptime": "11 weeks, 1 day, 21 hours, 10 minutes",
         "_source_file": "C:\\Users\\zhiltsov.aa\\Desktop\\net-auto-mermaid\\data\\raw\\CHU\\26\\10.20.98.233.txt",
         "_template": "cisco_ios_show_version.template"
       },

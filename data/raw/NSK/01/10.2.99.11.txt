@@ -13,7 +13,7 @@ Compiled Wed 12-Jul-17 13:06 by prod_rel_team
 ROM: Bootstrap program is C2960X boot loader
 BOOTLDR: C2960X Boot Loader (C2960X-HBOOT-M) Version 15.2(3r)E1, RELEASE SOFTWARE (fc1)
 
-NSK-NSWS-01-99-11 uptime is 8 weeks, 1 day, 17 hours, 35 minutes
+NSK-NSWS-01-99-11 uptime is 8 weeks, 3 days, 18 hours, 49 minutes
 System returned to ROM by power-on
 System restarted at 11:14:27 UTC Sat Aug 30 2025
 System image file is "flash:/c2960x-universalk9-mz.152-2.E7/c2960x-universalk9-mz.152-2.E7.bin"
@@ -340,7 +340,7 @@ Technical Support: http://www.cisco.com/techsupport
 Copyright (c) 1986-2023 by Cisco Systems, Inc.
 Compiled Wed 26-Jul-23 10:43 by mcpre
 
-Time remaining: 114 seconds
+Time remaining: 103 seconds
 System Capabilities: B,R
 Enabled Capabilities: B,R
 Management Addresses:
@@ -365,7 +365,7 @@ System Name: NSK-NSWS-01-99-13
 System Description: 
 Aruba Instant On 1930 24G 4SFP/SFP+ Switch JL682A, InstantOn_1930_1.0.2.0 (125), Linux 4.4.120, U-Boot 2013.01 (V1.0.1.28)
 
-Time remaining: 118 seconds
+Time remaining: 117 seconds
 System Capabilities: B,R
 Enabled Capabilities: B,R
 Management Addresses:
@@ -377,14 +377,14 @@ Media Attachment Unit type - not advertised
 Vlan ID: - not advertised
 
 ------------------------------------------------
-Local Intf: Gi1/0/15
-Chassis id: 7456.3c9f.56e0
-Port id: 7456.3c9f.56e0
+Local Intf: Gi1/0/28
+Chassis id: 0c9d.9287.8329
+Port id: 0c9d.9287.8329
 Port Description - not advertised
 System Name - not advertised
 System Description - not advertised
 
-Time remaining: 3002 seconds
+Time remaining: 3255 seconds
 System Capabilities - not advertised
 Enabled Capabilities - not advertised
 Management Addresses - not advertised
@@ -409,14 +409,14 @@ MED Information:
     Location - not advertised
 
 ------------------------------------------------
-Local Intf: Gi1/0/28
-Chassis id: 0c9d.9287.8329
-Port id: 0c9d.9287.8329
+Local Intf: Gi1/0/15
+Chassis id: 7456.3c9f.56e0
+Port id: 7456.3c9f.56e0
 Port Description - not advertised
 System Name - not advertised
 System Description - not advertised
 
-Time remaining: 3050 seconds
+Time remaining: 3362 seconds
 System Capabilities - not advertised
 Enabled Capabilities - not advertised
 Management Addresses - not advertised
@@ -448,7 +448,7 @@ Port Description - not advertised
 System Name - not advertised
 System Description - not advertised
 
-Time remaining: 3227 seconds
+Time remaining: 3423 seconds
 System Capabilities - not advertised
 Enabled Capabilities - not advertised
 Management Addresses - not advertised
@@ -480,7 +480,7 @@ Port Description - not advertised
 System Name - not advertised
 System Description - not advertised
 
-Time remaining: 3451 seconds
+Time remaining: 2861 seconds
 System Capabilities - not advertised
 Enabled Capabilities - not advertised
 Management Addresses - not advertised
@@ -515,7 +515,7 @@ Device ID: Switch
 Entry address(es): 
 Platform: cisco WS-C3560CX-12PC-S,  Capabilities: Switch IGMP 
 Interface: GigabitEthernet1/0/6,  Port ID (outgoing port): GigabitEthernet0/13
-Holdtime : 167 sec
+Holdtime : 130 sec
 
 Version :
 Cisco IOS Software, C3560CX Software (C3560CX-UNIVERSALK9-M), Version 15.2(4)E6, RELEASE SOFTWARE (fc4)
@@ -535,7 +535,7 @@ Entry address(es):
   IP address: 10.2.11.1
 Platform: cisco C9200L-24P-4G,  Capabilities: Router Switch IGMP 
 Interface: GigabitEthernet1/0/35,  Port ID (outgoing port): GigabitEthernet1/0/23
-Holdtime : 168 sec
+Holdtime : 178 sec
 
 Version :
 Cisco IOS Software [Cupertino], Catalyst L3 Switch Software (CAT9K_LITE_IOSXE), Version 17.9.4, RELEASE SOFTWARE (fc5)
@@ -560,8 +560,8 @@ Capability Codes: R - Router, T - Trans Bridge, B - Source Route Bridge
                   D - Remote, C - CVTA, M - Two-port Mac Relay 
 
 Device ID        Local Intrfce     Holdtme    Capability  Platform  Port ID
-Switch           Gig 1/0/6         167              S I   WS-C3560C Gig 0/13
+Switch           Gig 1/0/6         130              S I   WS-C3560C Gig 0/13
 NSK-NSWR-01-99-1.kolmar.ru
-                 Gig 1/0/35        167             R S I  C9200L-24 Gig 1/0/23
+                 Gig 1/0/35        178             R S I  C9200L-24 Gig 1/0/23
 
 Total cdp entries displayed : 2

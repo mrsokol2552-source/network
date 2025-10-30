@@ -13,7 +13,7 @@ Compiled Mon 13-Sep-21 09:18 by mcpre
 ROM: Bootstrap program is c1000 boot loader
 BOOTLDR: C1000 Boot Loader (C1000-HBOOT-M) Version 15.2(7r)E3, RELEASE SOFTWARE (fc4)
 
-DEN-NSWS-62-99-90 uptime is 14 weeks, 6 days, 21 hours, 15 minutes
+DEN-NSWS-62-99-90 uptime is 15 weeks, 1 day, 22 hours, 29 minutes
 System returned to ROM by power-on
 System restarted at 16:23:09 YAKT Mon Jul 14 2025
 System image file is "flash:/c1000-universalk9-mz.152-7.E5/c1000-universalk9-mz.152-7.E5.bin"
@@ -593,7 +593,7 @@ Technical Support: http://www.cisco.com/techsupport
 Copyright (c) 1986-2021 by Cisco Systems, Inc.
 Compiled Fri 30-Jul-21 15:15 by mcpre
 
-Time remaining: 104 seconds
+Time remaining: 110 seconds
 System Capabilities: B,R
 Enabled Capabilities: B,R
 Management Addresses:
@@ -614,7 +614,7 @@ System Name: DEN-FOK-UP
 System Description: 
 UAP-HD-IW, 6.7.17.15512
 
-Time remaining: 97 seconds
+Time remaining: 98 seconds
 System Capabilities: B,W,R,S
 Enabled Capabilities: B,W,R
 Management Addresses:
@@ -649,7 +649,7 @@ System Name: DEN-FOK-POOL
 System Description: 
 UAP-HD-IW, 6.7.17.15512
 
-Time remaining: 109 seconds
+Time remaining: 108 seconds
 System Capabilities: B,W,R,S
 Enabled Capabilities: B,W,R
 Management Addresses:
@@ -684,7 +684,7 @@ System Name: DEN-FOK-HOLL
 System Description: 
 UAP-HD-IW, 6.7.17.15512
 
-Time remaining: 96 seconds
+Time remaining: 93 seconds
 System Capabilities: B,W,R,S
 Enabled Capabilities: B,W,R
 Management Addresses:
@@ -719,7 +719,7 @@ System Name: DEN-FOK-ROOM
 System Description: 
 UAP-HD-IW, 6.7.17.15512
 
-Time remaining: 97 seconds
+Time remaining: 99 seconds
 System Capabilities: B,W,R,S
 Enabled Capabilities: B,W,R
 Management Addresses:
@@ -756,7 +756,7 @@ Entry address(es):
   IP address: 10.20.98.1
 Platform: cisco C9300X-24Y,  Capabilities: Router Switch IGMP 
 Interface: GigabitEthernet1/0/17,  Port ID (outgoing port): TwentyFiveGigE1/0/20
-Holdtime : 168 sec
+Holdtime : 166 sec
 
 Version :
 Cisco IOS Software [Bengaluru], Catalyst L3 Switch Software (CAT9K_IOSXE), Version 17.6.1, RELEASE SOFTWARE (fc6)
@@ -781,6 +781,6 @@ Capability Codes: R - Router, T - Trans Bridge, B - Source Route Bridge
                   D - Remote, C - CVTA, M - Two-port Mac Relay 
 
 Device ID        Local Intrfce     Holdtme    Capability  Platform  Port ID
-DEN-NSWR-03-98-1 Gig 1/0/17        168             R S I  C9300X-24 Twe 1/0/20
+DEN-NSWR-03-98-1 Gig 1/0/17        166             R S I  C9300X-24 Twe 1/0/20
 
 Total cdp entries displayed : 1

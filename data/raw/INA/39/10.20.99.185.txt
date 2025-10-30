@@ -13,7 +13,7 @@ Compiled Sat 17-Apr-21 07:21 by prod_rel_team
 ROM: Bootstrap program is c1000 boot loader
 BOOTLDR: C1000 Boot Loader (C1000-HBOOT-M) Version 15.2(7r)E3, RELEASE SOFTWARE (fc4)
 
-INA-NSWS-39-99-185 uptime is 12 weeks, 2 days, 20 hours, 9 minutes
+INA-NSWS-39-99-185 uptime is 12 weeks, 4 days, 21 hours, 24 minutes
 System returned to ROM by power-on
 System restarted at 17:31:30 YAKT Fri Aug 1 2025
 System image file is "flash:/c1000-universalk9-mz.152-8.E/c1000-universalk9-mz.152-8.E.bin"
@@ -633,7 +633,7 @@ System Name: X3S(P) Lite
 System Description: 
 Version:2.4.5
 
-Time remaining: 121 seconds
+Time remaining: 163 seconds
 System Capabilities: B,T
 Enabled Capabilities: B,T
 Management Addresses:
@@ -675,7 +675,7 @@ Technical Support: http://www.cisco.com/techsupport
 Copyright (c) 1986-2021 by Cisco Systems, Inc.
 Compiled Sat 17-Apr-21 07:21 by prod_rel_team
 
-Time remaining: 113 seconds
+Time remaining: 92 seconds
 System Capabilities: B,R
 Enabled Capabilities: B
 Management Addresses:
@@ -700,7 +700,7 @@ System Name: X1S/X1SP
 System Description: 
 Version:2.4.12.2
 
-Time remaining: 47 seconds
+Time remaining: 35 seconds
 System Capabilities: B,T
 Enabled Capabilities: B,T
 Management Addresses:
@@ -739,7 +739,7 @@ System Name: X1S/X1SP
 System Description: 
 Version:2.4.12.2
 
-Time remaining: 53 seconds
+Time remaining: 11 seconds
 System Capabilities: B,T
 Enabled Capabilities: B,T
 Management Addresses:
@@ -778,7 +778,7 @@ System Name: SIP-T46U
 System Description: 
 108.86.14.4
 
-Time remaining: 127 seconds
+Time remaining: 169 seconds
 System Capabilities: B,T
 Enabled Capabilities: B,T
 Management Addresses - not advertised
@@ -821,7 +821,7 @@ System Name: X3S(P) Lite
 System Description: 
 Version:2.4.10.1
 
-Time remaining: 147 seconds
+Time remaining: 130 seconds
 System Capabilities: B,T
 Enabled Capabilities: B,T
 Management Addresses:
@@ -858,7 +858,7 @@ Port Description - not advertised
 System Name - not advertised
 System Description - not advertised
 
-Time remaining: 2945 seconds
+Time remaining: 3319 seconds
 System Capabilities - not advertised
 Enabled Capabilities - not advertised
 Management Addresses - not advertised
@@ -890,7 +890,7 @@ Port Description - not advertised
 System Name - not advertised
 System Description - not advertised
 
-Time remaining: 3421 seconds
+Time remaining: 2852 seconds
 System Capabilities - not advertised
 Enabled Capabilities - not advertised
 Management Addresses - not advertised
@@ -922,7 +922,7 @@ Port Description - not advertised
 System Name - not advertised
 System Description - not advertised
 
-Time remaining: 3374 seconds
+Time remaining: 3080 seconds
 System Capabilities - not advertised
 Enabled Capabilities - not advertised
 Management Addresses - not advertised
@@ -954,39 +954,7 @@ Port Description - not advertised
 System Name - not advertised
 System Description - not advertised
 
-Time remaining: 3376 seconds
-System Capabilities - not advertised
-Enabled Capabilities - not advertised
-Management Addresses - not advertised
-Auto Negotiation - supported, enabled
-Physical media capabilities:
-    1000baseT(FD)
-Media Attachment Unit type - not advertised
-Vlan ID: - not advertised
-
-MED Information:
-
-    MED Codes:
-          (NP) Network Policy, (LI) Location Identification
-          (PS) Power Source Entity, (PD) Power Device
-          (IN) Inventory
-
-    Inventory information - not advertised
-    Capabilities: 
-    Device type: Endpoint Class I
-    Network Policies - not advertised
-    Power requirements - not advertised
-    Location - not advertised
-
-------------------------------------------------
-Local Intf: Gi1/0/9
-Chassis id: 94c6.9181.8103
-Port id: 94c6.9181.8103
-Port Description - not advertised
-System Name - not advertised
-System Description - not advertised
-
-Time remaining: 3098 seconds
+Time remaining: 3572 seconds
 System Capabilities - not advertised
 Enabled Capabilities - not advertised
 Management Addresses - not advertised
@@ -1011,7 +979,7 @@ MED Information:
     Location - not advertised
 
 
-Total entries displayed: 11
+Total entries displayed: 10
 
 
 
@@ -1022,7 +990,7 @@ Entry address(es):
   IP address: 10.200.10.28
 Platform: T46U,  Capabilities: Host Phone 
 Interface: GigabitEthernet1/0/6,  Port ID (outgoing port): WAN PORT
-Holdtime : 127 sec
+Holdtime : 169 sec
 
 Version :
 108.86.14.4
@@ -1037,7 +1005,7 @@ Entry address(es):
   IP address: 10.20.99.72
 Platform: cisco C1000-16T-2G-L,  Capabilities: Switch IGMP 
 Interface: GigabitEthernet1/0/16,  Port ID (outgoing port): GigabitEthernet1/0/9
-Holdtime : 125 sec
+Holdtime : 166 sec
 
 Version :
 Cisco IOS Software, C1000 Software (C1000-UNIVERSALK9-M), Version 15.2(8)E, RELEASE SOFTWARE (fc3)
@@ -1058,7 +1026,7 @@ Entry address(es):
   IP address: 10.13.1.78
 Platform: X3S(P) Lite,  Capabilities: Host Phone 
 Interface: GigabitEthernet1/0/15,  Port ID (outgoing port): WAN PORT
-Holdtime : 176 sec
+Holdtime : 158 sec
 
 Version :
 2.4.5
@@ -1071,7 +1039,7 @@ Entry address(es):
   IP address: 10.13.1.112
 Platform: X3S(P) Lite,  Capabilities: Host Phone 
 Interface: GigabitEthernet1/0/2,  Port ID (outgoing port): WAN PORT
-Holdtime : 136 sec
+Holdtime : 179 sec
 
 Version :
 2.4.10.1
@@ -1084,7 +1052,7 @@ Entry address(es):
   IP address: 10.13.1.67
 Platform: X1S/X1SP,  Capabilities: Host Phone 
 Interface: GigabitEthernet1/0/11,  Port ID (outgoing port): WAN PORT
-Holdtime : 155 sec
+Holdtime : 140 sec
 
 Version :
 2.4.12.2
@@ -1097,7 +1065,7 @@ Entry address(es):
   IP address: 10.13.1.64
 Platform: X1S/X1SP,  Capabilities: Host Phone 
 Interface: GigabitEthernet1/0/9,  Port ID (outgoing port): WAN PORT
-Holdtime : 141 sec
+Holdtime : 157 sec
 
 Version :
 2.4.12.2
@@ -1114,12 +1082,12 @@ Capability Codes: R - Router, T - Trans Bridge, B - Source Route Bridge
                   D - Remote, C - CVTA, M - Two-port Mac Relay 
 
 Device ID        Local Intrfce     Holdtme    Capability  Platform  Port ID
-T46U805E0C878394 Gig 1/0/6         127              H P   T46U      WAN PORT
+T46U805E0C878394 Gig 1/0/6         168              H P   T46U      WAN PORT
 INA-NSWS-39-99-72.kolmar.ru
-                 Gig 1/0/16        125              S I   C1000-16T Gig 1/0/9
-X3S(P) Lite      Gig 1/0/15        176              H P   X3S(P) Li WAN PORT
-X3S(P) Lite      Gig 1/0/2         136              H P   X3S(P) Li WAN PORT
-X1S/X1SP         Gig 1/0/11        154              H P   X1S/X1SP  WAN PORT
-X1S/X1SP         Gig 1/0/9         141              H P   X1S/X1SP  WAN PORT
+                 Gig 1/0/16        165              S I   C1000-16T Gig 1/0/9
+X3S(P) Lite      Gig 1/0/15        157              H P   X3S(P) Li WAN PORT
+X3S(P) Lite      Gig 1/0/2         178              H P   X3S(P) Li WAN PORT
+X1S/X1SP         Gig 1/0/11        140              H P   X1S/X1SP  WAN PORT
+X1S/X1SP         Gig 1/0/9         156              H P   X1S/X1SP  WAN PORT
 
 Total cdp entries displayed : 6

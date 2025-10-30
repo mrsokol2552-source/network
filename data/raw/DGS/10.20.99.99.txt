@@ -218,12 +218,27 @@ Remote Entities Count : 0
 
 Port ID : 16 
 -------------------------------------------------------------------------------
+Remote Entities Count : 0 
+    (None)
+
+Port ID : 17 
+-------------------------------------------------------------------------------
+Remote Entities Count : 0 
+    (None)
+
+Port ID : 18 
+-------------------------------------------------------------------------------
+Remote Entities Count : 0 
+    (None)
+
+Port ID : 19 
+-------------------------------------------------------------------------------
 Remote Entities Count : 1 
 Entity 1 
     Chassis ID Subtype                         : MAC Address  
-    Chassis ID                                 : E0-D5-5E-56-7C-70
+    Chassis ID                                 : F0-2F-74-17-61-3D
     Port ID Subtype                            : MAC Address  
-    Port ID                                    : E0-D5-5E-56-7C-70
+    Port ID                                    : F0-2F-74-17-61-3D
     Port Description                           : 
     System Name                                : 
     System Description                         : 
@@ -238,21 +253,6 @@ Entity 1
     Link Aggregation                           : (None)
     Maximum Frame Size                         : 0
     Unknown TLVs Count                         : 0
-
-Port ID : 17 
--------------------------------------------------------------------------------
-Remote Entities Count : 0 
-    (None)
-
-Port ID : 18 
--------------------------------------------------------------------------------
-Remote Entities Count : 0 
-    (None)
-
-Port ID : 19 
--------------------------------------------------------------------------------
-Remote Entities Count : 0 
-    (None)
 
 Port ID : 20 
 -------------------------------------------------------------------------------
@@ -672,26 +672,8 @@ Remote Entities Count : 0
 
 Port ID : 44 
 -------------------------------------------------------------------------------
-Remote Entities Count : 1 
-Entity 1 
-    Chassis ID Subtype                         : MAC Address  
-    Chassis ID                                 : 00-D8-61-1B-53-2C
-    Port ID Subtype                            : MAC Address  
-    Port ID                                    : 00-D8-61-1B-53-2C
-    Port Description                           : 
-    System Name                                : 
-    System Description                         : 
-    System Capabilities                        : 
-    Management Address Count                   : 0
-    Port PVID                                  : 0
-    PPVID Entries Count                        : 0
-    VLAN Name Entries Count                    : 0
-    Protocol ID Entries Count                  : 0
-    MAC/PHY Configuration/Status               : (See Detail)
-    Power Via MDI                              : (None)
-    Link Aggregation                           : (None)
-    Maximum Frame Size                         : 0
-    Unknown TLVs Count                         : 0
+Remote Entities Count : 0 
+    (None)
 
 Port ID : 45 
 -------------------------------------------------------------------------------

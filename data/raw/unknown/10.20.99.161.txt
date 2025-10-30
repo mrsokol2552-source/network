@@ -14,7 +14,7 @@ System Name                       : INA-NSWS-01-99-161
 System Location                   : Eltex Ltd, Russia
 System Description                : MES2424P rev.C1 AC 28-port 1G/10G Managed Switch with 24 POE+ ports
 Logging Option                    : Flash Logging
-Device Uptime                     : 7 Days, 2 Hrs, 5 Mins, 15 Secs
+Device Uptime                     : 9 Days, 3 Hrs, 13 Mins, 26 Secs
 Login Authentication Mode         : Local
 Config Save Status                : Successful
 Remote Save Status                : Not Initiated
@@ -43,6 +43,10 @@ $ show lldp neighbors detail
 
 --More--
                 
+Symm PAUSE(FD)
+1000base-X, -LX, -SX, -CX(FD)
+1000base-T(FD)
+-Link Aggregation
 Capability & Status           : Not Capable, Not In Aggregation
 Aggregated Port Id            : 0
 -Maximum Frame Size           : 0
@@ -63,46 +67,90 @@ Device Class                  : 0
 
 -LLDP-MED Nw Policy TLV       : Not Advertised 
 
+
+
+--More--
+                
+
+
+--More--
+                
+
+
+--More--
+                
+
+
+--More--
+                
+
+
+--More--
+                
 -LLDP-MED Location Info TLV   : Not Advertised 
 
 -LLDP-MED Ex-PowerViaMDI TLV  : Not Advertised 
 ------------------------------------------------------------
-
-
---More--
-                
-
-
---More--
-                
-
-
---More--
-                
-
-
---More--
-                
-
-
---More--
-                
 Chassis Id SubType            : Mac Address 
-Chassis Id                    : 00:1a:81:01:ca:21
-Port Id SubType               : Interface Name 
-Port Id                       : Ethernet1/0/8
-Port Description              : Not Advertised
-System Name                   : Not Advertised
-System Desc                   : Not Advertised
-Local Intf                    : gi 0/15
-Time Remaining                : 113 Seconds 
-System Capabilities Tlv       : Not Advertised
-Management Addresses          : Not Advertised
+Chassis Id                    : 00:1d:77:29:21:a2
+Port Id SubType               : Local 
+Port Id                       : 10
+Port Description              : GigabitEthernet 1/10
+System Name                   : INA-NSWS-128-99-164
+System Desc                   : V2.1 2021-04-25T04:45:04-07:00
+Local Intf                    : gi 0/12
+Time Remaining                : 91 Seconds 
+System Capabilities Supported : B               
+System Capabilities Enabled   : B
+Management Addresses          : 
+IfId SubType Address                         OID                               
+---- ------- -------                         ---                               
+0    IPv4    192.168.2.1                                                       
 
 Extended 802.3 TLV Info 
 -MAC PHY Configuration & Status
 10base-T(HD)
 10base-T(FD)
+
+
+--More--
+                
+
+
+--More--
+                
+
+
+--More--
+                
+
+
+--More--
+                
+
+
+--More--
+                
+
+
+--More--
+                
+
+
+--More--
+                
+
+
+--More--
+                
+
+
+--More--
+                
+
+
+--More--
+                
 100base-TX(HD)
 100base-T2(HD)
 100base-T2(FD)
@@ -111,46 +159,6 @@ Asym and Symm PAUSE(FD)
 1000base-X, -LX, -SX, -CX(FD)
 1000base-T(HD)
 -Link Aggregation
-
-
---More--
-                
-
-
---More--
-                
-
-
---More--
-                
-
-
---More--
-                
-
-
---More--
-                
-
-
---More--
-                
-
-
---More--
-                
-
-
---More--
-                
-
-
---More--
-                
-
-
---More--
-                
 Capability & Status           : Not Capable, Not In Aggregation
 Aggregated Port Id            : 0
 -Maximum Frame Size           : 0
@@ -167,43 +175,35 @@ Capabilities Supported        : 0
 Capabilities Enabled          : 0 
 Device Class                  : 0 
 
+
+
+--More--
+                
+
+
+--More--
+                
+
+
+--More--
+                
+
+
+--More--
+                
+
+
+--More--
+                
+
+
+--More--
+                
+
+
+--More--
+                
 -LLDP MED Inventory TLV       : Not Advertised
-
--LLDP-MED Nw Policy TLV       : Not Advertised 
-
--LLDP-MED Location Info TLV   : Not Advertised 
-
--LLDP-MED Ex-PowerViaMDI TLV  : Not Advertised 
-------------------------------------------------------------
-
-
---More--
-                
-
-
---More--
-                
-
-
---More--
-                
-
-
---More--
-                
-
-
---More--
-                
-
-
---More--
-                
-
-
---More--
-                
-Chassis Id SubType            : Mac Address 
 
 
 --More--
@@ -228,6 +228,14 @@ $ show vlan
 
 --More--
                 
+10base-T(FD)
+100base-TX(HD)
+100base-T2(HD)
+100base-T2(FD)
+Asym PAUSE(FD)
+Asym and Symm PAUSE(FD)
+1000base-X, -LX, -SX, -CX(FD)
+1000base-T(HD)
 -Link Aggregation
 Capability & Status           : Not Capable, Not In Aggregation
 Aggregated Port Id            : 0
@@ -245,14 +253,6 @@ Capabilities Supported        : 0
 Capabilities Enabled          : 0 
 Device Class                  : 0 
 
--LLDP MED Inventory TLV       : Not Advertised
-
--LLDP-MED Nw Policy TLV       : Not Advertised 
-
--LLDP-MED Location Info TLV   : Not Advertised 
-
--LLDP-MED Ex-PowerViaMDI TLV  : Not Advertised 
-
 
 --More--
                 
@@ -272,7 +272,7 @@ Device Class                  : 0
 
 --More--
                 
-------------------------------------------------------------
+
 
 
 --More--
@@ -297,30 +297,30 @@ $ show interfaces status
 
 --More--
                 
+Device Class                  : 0 
+
+-LLDP MED Inventory TLV       : Not Advertised
+
+-LLDP-MED Nw Policy TLV       : Not Advertised 
+
+-LLDP-MED Location Info TLV   : Not Advertised 
+
 -LLDP-MED Ex-PowerViaMDI TLV  : Not Advertised 
 ------------------------------------------------------------
 Chassis Id SubType            : Mac Address 
-Chassis Id                    : 00:1d:77:29:21:95
-Port Id SubType               : Local 
-Port Id                       : 12
-Port Description              : GigabitEthernet 1/12
-System Name                   : INA-NSWS-124-99-165
-System Desc                   : V2.1 2021-04-25T04:45:04-07:00
-Local Intf                    : te 0/1
-Time Remaining                : 104 Seconds 
-System Capabilities Supported : B               
-System Capabilities Enabled   : B
-Management Addresses          : 
-IfId SubType Address                         OID                               
----- ------- -------                         ---                               
-0    IPv4    192.168.5.101                                                     
+Chassis Id                    : 98:ee:cb:ec:42:be
+Port Id SubType               : Mac Address 
+Port Id                       : 98:ee:cb:ec:42:be
+Port Description              : Not Advertised
+System Name                   : Not Advertised
+System Desc                   : Not Advertised
+Local Intf                    : gi 0/21
+Time Remaining                : 3260 Seconds 
+System Capabilities Tlv       : Not Advertised
+Management Addresses          : Not Advertised
 
 Extended 802.3 TLV Info 
 -MAC PHY Configuration & Status
-10base-T(HD)
-10base-T(FD)
-100base-TX(HD)
-100base-T2(HD)
 
 
 --More--
@@ -365,11 +365,9 @@ Extended 802.3 TLV Info
 
 --More--
                 
-100base-T2(FD)
-Asym PAUSE(FD)
-Asym and Symm PAUSE(FD)
-1000base-X, -LX, -SX, -CX(FD)
-1000base-T(HD)
+Auto-Neg Support & Status     : Supported, Enabled
+Advertised Capability Bits    : 8000
+Other
 -Link Aggregation
 Capability & Status           : Not Capable, Not In Aggregation
 Aggregated Port Id            : 0
@@ -389,35 +387,37 @@ Device Class                  : 0
 
 -LLDP MED Inventory TLV       : Not Advertised
 
-
-
---More--
-                
-
-
---More--
-                
-
-
---More--
-                
-
-
---More--
-                
-
-
---More--
-                
-
-
---More--
-                
-
-
---More--
-                
 -LLDP-MED Nw Policy TLV       : Not Advertised 
+
+
+
+--More--
+                
+
+
+--More--
+                
+
+
+--More--
+                
+
+
+--More--
+                
+
+
+--More--
+                
+
+
+--More--
+                
+
+
+--More--
+                
+-LLDP-MED Location Info TLV   : Not Advertised 
 
 
 --More--
@@ -441,10 +441,10 @@ Media-type: prefer-fiber
 Link Up/Down Trap is enabled 
 
 Reception Counters
-   Octets                    : 3350549014
-   Unicast Packets           : 325820340
-   Multicast Packets         : 196
-   Broadcast Packets         : 20455
+   Octets                    : 1841052291
+   Unicast Packets           : 420062199
+   Multicast Packets         : 243
+   Broadcast Packets         : 26362
    Discarded Packets         : 30
    Error Packets             : 0
 
@@ -475,10 +475,10 @@ $ show running-config
 Link Up/Down Trap is enabled 
 
 Reception Counters
-   Octets                    : 3246744422
-   Unicast Packets           : 324564818
-   Multicast Packets         : 194
-   Broadcast Packets         : 20450
+   Octets                    : 1725467119
+   Unicast Packets           : 418658737
+   Multicast Packets         : 241
+   Broadcast Packets         : 26357
    Discarded Packets         : 7
    Error Packets             : 0
    Unknown Protocol          : 0
@@ -487,10 +487,10 @@ Reception Counters
    Oversized w/ Bad CRC      : 0
 
 Transmission Counters
-   Octets                    : 484734505
-   Unicast Packets           : 180633118
-   Multicast Packets         : 332693
-   Broadcast Packets         : 4130244
+   Octets                    : 52367168
+   Unicast Packets           : 232830897
+   Multicast Packets         : 428517
+   Broadcast Packets         : 5322791
    Discarded Packets         : 0
    Error Drops               : 0
    Error Packets             : 0

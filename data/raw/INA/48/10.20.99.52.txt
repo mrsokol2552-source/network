@@ -13,7 +13,7 @@ Compiled Sat 17-Apr-21 07:21 by prod_rel_team
 ROM: Bootstrap program is c1000 boot loader
 BOOTLDR: C1000 Boot Loader (C1000-HBOOT-M) Version 15.2(7r)E3, RELEASE SOFTWARE (fc4)
 
-INA-NSWS-48-99-52 uptime is 5 days, 3 hours, 25 minutes
+INA-NSWS-48-99-52 uptime is 1 week, 4 hours, 39 minutes
 System returned to ROM by power-on
 System image file is "flash:/c1000-universalk9-mz.152-8.E/c1000-universalk9-mz.152-8.E.bin"
 Last reload reason: power-on
@@ -464,7 +464,7 @@ Technical Support: http://www.cisco.com/techsupport
 Copyright (c) 1986-2018 by Cisco Systems, Inc.
 Compiled Mon 22-Jan-18 07:16 by prod_rel_team
 
-Time remaining: 93 seconds
+Time remaining: 106 seconds
 System Capabilities: B
 Enabled Capabilities: B
 Management Addresses:
@@ -486,7 +486,7 @@ Port Description - not advertised
 System Name - not advertised
 System Description - not advertised
 
-Time remaining: 3595 seconds
+Time remaining: 3159 seconds
 System Capabilities - not advertised
 Enabled Capabilities - not advertised
 Management Addresses - not advertised
@@ -522,7 +522,7 @@ Entry address(es):
   IP address: 10.20.96.67
 Platform: cisco WS-C2960C-12PC-L,  Capabilities: Switch IGMP 
 Interface: GigabitEthernet1/0/16,  Port ID (outgoing port): FastEthernet0/10
-Holdtime : 166 sec
+Holdtime : 138 sec
 
 Version :
 Cisco IOS Software, C2960C Software (C2960c405-UNIVERSALK9-M), Version 15.2(2)E8, RELEASE SOFTWARE (fc1)
@@ -549,6 +549,6 @@ Capability Codes: R - Router, T - Trans Bridge, B - Source Route Bridge
 
 Device ID        Local Intrfce     Holdtme    Capability  Platform  Port ID
 INA-NSWS-48-96-67.kolmar.ru
-                 Gig 1/0/16        166              S I   WS-C2960C Fas 0/10
+                 Gig 1/0/16        138              S I   WS-C2960C Fas 0/10
 
 Total cdp entries displayed : 1

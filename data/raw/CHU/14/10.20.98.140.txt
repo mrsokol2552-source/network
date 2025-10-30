@@ -26,8 +26,8 @@ software.
 ROM: IOS-XE ROMMON
 BOOTLDR: CAT3K_CAA Boot Loader (CAT3K_CAA-HBOOT-M) Version 4.68, RELEASE SOFTWARE (P)
 
-CHU-NSWR-14-98-140 uptime is 7 weeks, 3 days, 22 hours, 7 minutes
-Uptime for this control processor is 7 weeks, 3 days, 22 hours, 10 minutes
+CHU-NSWR-14-98-140 uptime is 7 weeks, 5 days, 23 hours, 22 minutes
+Uptime for this control processor is 7 weeks, 5 days, 23 hours, 24 minutes
 System returned to ROM by Power Failure or Unknown
 System image file is "flash:packages.conf"
 Last reload reason: Power Failure or Unknown
@@ -827,7 +827,7 @@ Technical Support: http://www.cisco.com/techsupport
 Copyright (c) 1986-2017 by Cisco Systems, Inc.
 Compiled Wed 12-Jul-17 15:37 by prod_rel_team
 
-Time remaining: 101 seconds
+Time remaining: 118 seconds
 System Capabilities: B
 Enabled Capabilities: B
 Management Addresses:
@@ -851,7 +851,7 @@ Technical Support: http://www.cisco.com/techsupport
 Copyright (c) 1986-2016 by Cisco Systems, Inc.
 Compiled Thu 19-May-16 
 
-Time remaining: 105 seconds
+Time remaining: 112 seconds
 System Capabilities: B,R
 Enabled Capabilities: B,R
 Management Addresses:
@@ -874,7 +874,7 @@ Entry address(es):
   IP address: 10.20.99.45
 Platform: cisco WS-C3850R-24T,  Capabilities: Router Switch IGMP 
 Interface: GigabitEthernet1/1/1,  Port ID (outgoing port): GigabitEthernet1/1/2
-Holdtime : 178 sec
+Holdtime : 151 sec
 
 Version :
 Cisco IOS Software, IOS-XE Software, Catalyst L3 Switch Software (CAT3K_CAA-UNIVERSALK9-M), Version 03.07.04E RELEASE SOFTWARE (fc1)
@@ -895,7 +895,7 @@ Entry address(es):
   IP address: 10.20.99.222
 Platform: cisco WS-C2960C-8TC-L,  Capabilities: Switch IGMP 
 Interface: GigabitEthernet1/0/4,  Port ID (outgoing port): GigabitEthernet0/1
-Holdtime : 158 sec
+Holdtime : 137 sec
 
 Version :
 Cisco IOS Software, C2960C Software (C2960c405-UNIVERSALK9-M), Version 15.2(2)E7, RELEASE SOFTWARE (fc3)
@@ -917,7 +917,7 @@ Entry address(es):
   IP address: 10.20.98.143
 Platform: cisco WS-C2960CX-8PC-L,  Capabilities: Switch IGMP 
 Interface: GigabitEthernet1/0/1,  Port ID (outgoing port): GigabitEthernet0/11
-Holdtime : 156 sec
+Holdtime : 177 sec
 
 Version :
 Cisco IOS Software, C2960CX Software (C2960CX-UNIVERSALK9-M), Version 15.2(4)E6, RELEASE SOFTWARE (fc4)
@@ -939,7 +939,7 @@ Entry address(es):
   IP address: 10.20.98.145
 Platform: cisco WS-C2960CX-8PC-L,  Capabilities: Switch IGMP 
 Interface: GigabitEthernet1/0/6,  Port ID (outgoing port): GigabitEthernet0/11
-Holdtime : 164 sec
+Holdtime : 126 sec
 
 Version :
 Cisco IOS Software, C2960CX Software (C2960CX-UNIVERSALK9-M), Version 15.2(4)E6, RELEASE SOFTWARE (fc4)
@@ -961,7 +961,7 @@ Entry address(es):
   IP address: 10.20.98.146
 Platform: cisco WS-C2960CX-8PC-L,  Capabilities: Switch IGMP 
 Interface: GigabitEthernet1/0/7,  Port ID (outgoing port): GigabitEthernet0/11
-Holdtime : 169 sec
+Holdtime : 127 sec
 
 Version :
 Cisco IOS Software, C2960CX Software (C2960CX-UNIVERSALK9-M), Version 15.2(4)E6, RELEASE SOFTWARE (fc4)
@@ -983,7 +983,7 @@ Entry address(es):
   IP address: 10.20.99.224
 Platform: cisco WS-C2960C-8TC-L,  Capabilities: Switch IGMP 
 Interface: GigabitEthernet1/0/2,  Port ID (outgoing port): GigabitEthernet0/1
-Holdtime : 174 sec
+Holdtime : 148 sec
 
 Version :
 Cisco IOS Software, C2960C Software (C2960c405-UNIVERSALK9-M), Version 15.2(2)E7, RELEASE SOFTWARE (fc3)
@@ -1005,7 +1005,7 @@ Entry address(es):
   IP address: 10.20.98.148
 Platform: cisco WS-C2960CX-8PC-L,  Capabilities: Switch IGMP 
 Interface: GigabitEthernet1/0/8,  Port ID (outgoing port): GigabitEthernet0/11
-Holdtime : 142 sec
+Holdtime : 170 sec
 
 Version :
 Cisco IOS Software, C2960CX Software (C2960CX-UNIVERSALK9-M), Version 15.2(4)E6, RELEASE SOFTWARE (fc4)
@@ -1027,7 +1027,7 @@ Entry address(es):
   IP address: 10.20.98.151
 Platform: cisco WS-C2960CX-8PC-L,  Capabilities: Switch IGMP 
 Interface: GigabitEthernet1/0/13,  Port ID (outgoing port): GigabitEthernet0/11
-Holdtime : 169 sec
+Holdtime : 130 sec
 
 Version :
 Cisco IOS Software, C2960CX Software (C2960CX-UNIVERSALK9-M), Version 15.2(4)E6, RELEASE SOFTWARE (fc4)
@@ -1049,7 +1049,7 @@ Entry address(es):
   IP address: 10.20.98.142
 Platform: cisco WS-C2960X-24PS-L,  Capabilities: Switch IGMP 
 Interface: GigabitEthernet1/0/10,  Port ID (outgoing port): GigabitEthernet1/0/25
-Holdtime : 142 sec
+Holdtime : 130 sec
 
 Version :
 Cisco IOS Software, C2960X Software (C2960X-UNIVERSALK9-M), Version 15.2(2)E7, RELEASE SOFTWARE (fc3)
@@ -1071,7 +1071,7 @@ Entry address(es):
   IP address: 10.20.99.225
 Platform: cisco WS-C2960CX-8TC-L,  Capabilities: Switch IGMP 
 Interface: GigabitEthernet1/0/9,  Port ID (outgoing port): GigabitEthernet0/11
-Holdtime : 168 sec
+Holdtime : 144 sec
 
 Version :
 Cisco IOS Software, C2960CX Software (C2960CX-UNIVERSALK9-M), Version 15.2(4)E5, RELEASE SOFTWARE (fc2)
@@ -1093,7 +1093,7 @@ Entry address(es):
   IP address: 10.20.98.144
 Platform: cisco WS-C2960CX-8PC-L,  Capabilities: Switch IGMP 
 Interface: GigabitEthernet1/0/5,  Port ID (outgoing port): GigabitEthernet0/11
-Holdtime : 169 sec
+Holdtime : 152 sec
 
 Version :
 Cisco IOS Software, C2960CX Software (C2960CX-UNIVERSALK9-M), Version 15.2(4)E6, RELEASE SOFTWARE (fc4)
@@ -1115,7 +1115,7 @@ Entry address(es):
   IP address: 10.20.98.141
 Platform: cisco WS-C2960X-24PS-L,  Capabilities: Switch IGMP 
 Interface: GigabitEthernet1/0/24,  Port ID (outgoing port): GigabitEthernet1/0/25
-Holdtime : 159 sec
+Holdtime : 174 sec
 
 Version :
 Cisco IOS Software, C2960X Software (C2960X-UNIVERSALK9-M), Version 15.2(2)E7, RELEASE SOFTWARE (fc3)
@@ -1137,7 +1137,7 @@ Entry address(es):
   IP address: 10.20.99.217
 Platform: cisco WS-C2960CX-8PC-L,  Capabilities: Switch IGMP 
 Interface: GigabitEthernet1/0/11,  Port ID (outgoing port): GigabitEthernet0/11
-Holdtime : 133 sec
+Holdtime : 170 sec
 
 Version :
 Cisco IOS Software, C2960CX Software (C2960CX-UNIVERSALK9-M), Version 15.2(4)E6, RELEASE SOFTWARE (fc4)
@@ -1159,7 +1159,7 @@ Entry address(es):
   IP address: 10.20.99.223
 Platform: cisco WS-C2960C-12PC-L,  Capabilities: Switch IGMP 
 Interface: GigabitEthernet1/0/3,  Port ID (outgoing port): GigabitEthernet0/1
-Holdtime : 135 sec
+Holdtime : 155 sec
 
 Version :
 Cisco IOS Software, C2960C Software (C2960c405-UNIVERSALK9-M), Version 15.2(2)E8, RELEASE SOFTWARE (fc1)
@@ -1181,7 +1181,7 @@ Entry address(es):
   IP address: 10.20.99.218
 Platform: cisco WS-C2960CX-8PC-L,  Capabilities: Switch IGMP 
 Interface: GigabitEthernet1/0/12,  Port ID (outgoing port): GigabitEthernet0/11
-Holdtime : 137 sec
+Holdtime : 123 sec
 
 Version :
 Cisco IOS Software, C2960CX Software (C2960CX-UNIVERSALK9-M), Version 15.2(4)E6, RELEASE SOFTWARE (fc4)
@@ -1208,34 +1208,34 @@ Capability Codes: R - Router, T - Trans Bridge, B - Source Route Bridge
 
 Device ID        Local Intrfce     Holdtme    Capability  Platform  Port ID
 CHU-NSWR-14-99-45.kolmar.ru
-                 Gig 1/1/1         177             R S I  WS-C3850R Gig 1/1/2
+                 Gig 1/1/1         151             R S I  WS-C3850R Gig 1/1/2
 CHU-NSWS-04-99-222.kolmar.ru
-                 Gig 1/0/4         158              S I   WS-C2960C Gig 0/1
+                 Gig 1/0/4         136              S I   WS-C2960C Gig 0/1
 CHU-NSWS-01-98-143.kolmar.ru
-                 Gig 1/0/1         156              S I   WS-C2960C Gig 0/11
+                 Gig 1/0/1         177              S I   WS-C2960C Gig 0/11
 CHU-NSWS-07-98-145.kolmar.ru
-                 Gig 1/0/6         164              S I   WS-C2960C Gig 0/11
+                 Gig 1/0/6         126              S I   WS-C2960C Gig 0/11
 CHU-NSWS-05-98-146.kolmar.ru
-                 Gig 1/0/7         169              S I   WS-C2960C Gig 0/11
+                 Gig 1/0/7         127              S I   WS-C2960C Gig 0/11
 CHU-NSWS-03-99-224.kolmar.ru
-                 Gig 1/0/2         174              S I   WS-C2960C Gig 0/1
+                 Gig 1/0/2         148              S I   WS-C2960C Gig 0/1
 CHU-NSWS-08-98-148.kolmar.ru
-                 Gig 1/0/8         142              S I   WS-C2960C Gig 0/11
+                 Gig 1/0/8         170              S I   WS-C2960C Gig 0/11
 CHU-NSWS-22-98-151.kolmar.ru
-                 Gig 1/0/13        169              S I   WS-C2960C Gig 0/11
+                 Gig 1/0/13        130              S I   WS-C2960C Gig 0/11
 CHU-NSWS-12-98-142.kolmar.ru
-                 Gig 1/0/10        142              S I   WS-C2960X Gig 1/0/25
+                 Gig 1/0/10        130              S I   WS-C2960X Gig 1/0/25
 CHU-NSWS-16-99-225.kolmar.ru
-                 Gig 1/0/9         167              S I   WS-C2960C Gig 0/11
+                 Gig 1/0/9         144              S I   WS-C2960C Gig 0/11
 CHU-NSWS-03-98-144.kolmar.ru
-                 Gig 1/0/5         169              S I   WS-C2960C Gig 0/11
+                 Gig 1/0/5         152              S I   WS-C2960C Gig 0/11
 CHU-NSWS-14-98-141.kolmar.ru
-                 Gig 1/0/24        159              S I   WS-C2960X Gig 1/0/25
+                 Gig 1/0/24        174              S I   WS-C2960X Gig 1/0/25
 CHU-NSWS-15-99-217.kolmar.ru
-                 Gig 1/0/11        133              S I   WS-C2960C Gig 0/11
+                 Gig 1/0/11        169              S I   WS-C2960C Gig 0/11
 CHU-NSWS-02-99-223.kolmar.ru
-                 Gig 1/0/3         135              S I   WS-C2960C Gig 0/1
+                 Gig 1/0/3         155              S I   WS-C2960C Gig 0/1
 CHU-NSWS-13-99-218.kolmar.ru
-                 Gig 1/0/12        137              S I   WS-C2960C Gig 0/11
+                 Gig 1/0/12        123              S I   WS-C2960C Gig 0/11
 
 Total cdp entries displayed : 15

@@ -8,7 +8,7 @@
       {
         "Neighbor": "NER-NSWS-11-97-10",
         "LocalInterface": "uptime is",
-        "NeighborPort": "3 days,",
+        "NeighborPort": "5 days,",
         "_source_file": "C:\\Users\\zhiltsov.aa\\Desktop\\net-auto-mermaid\\data\\raw\\NER\\11\\10.20.97.10.txt",
         "_template": "cisco_ios_show_cdp_neighbors.template"
       },
@@ -43,7 +43,7 @@
       {
         "Neighbor": "PowerBeam",
         "LocalInterface": "M2",
-        "NeighborPort": "0/7           103",
+        "NeighborPort": "0/7           94",
         "_source_file": "C:\\Users\\zhiltsov.aa\\Desktop\\net-auto-mermaid\\data\\raw\\NER\\11\\10.20.97.10.txt",
         "_template": "cisco_ios_show_cdp_neighbors.template"
       },
@@ -123,7 +123,7 @@
       {
         "Version": "15.2(7)E",
         "Model": "",
-        "Uptime": "5 weeks, 3 days, 3 hours, 54 minutes",
+        "Uptime": "5 weeks, 5 days, 5 hours, 8 minutes",
         "_source_file": "C:\\Users\\zhiltsov.aa\\Desktop\\net-auto-mermaid\\data\\raw\\NER\\11\\10.20.97.10.txt",
         "_template": "cisco_ios_show_version.template"
       },

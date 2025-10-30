@@ -13,7 +13,7 @@ Compiled Sat 14-Mar-20 15:28 by prod_rel_team
 ROM: Bootstrap program is c1000 boot loader
 BOOTLDR: C1000 Boot Loader (C1000-HBOOT-M), Version 15.2(7r)E RELEASE SOFTWARE (fc1)
 
-INA-NSWS-123-97-100 uptime is 3 days, 18 hours, 42 minutes
+INA-NSWS-123-97-100 uptime is 10 hours, 58 minutes
 System returned to ROM by power-on
 System image file is "flash:/c1000-universalk9-mz.152-7.E2/c1000-universalk9-mz.152-7.E2.bin"
 Last reload reason: power-on
@@ -73,7 +73,7 @@ Building configuration...
 
 Current configuration : 4990 bytes
 !
-! Last configuration change at 08:41:26 UTC Sat Jul 4 1970
+! Last configuration change at 17:39:00 UTC Thu Jul 9 1970
 !
 version 15.2
 no service pad
@@ -356,7 +356,7 @@ Technical Support: http://www.cisco.com/techsupport
 Copyright (c) 1986-2023 by Cisco Systems, Inc.
 Compiled Tue 14-Mar-23 18:26 by mcpre
 
-Time remaining: 94 seconds
+Time remaining: 113 seconds
 System Capabilities: B,R
 Enabled Capabilities: B,R
 Management Addresses:
@@ -380,7 +380,7 @@ Technical Support: http://www.cisco.com/techsupport
 Copyright (c) 1986-2023 by Cisco Systems, Inc.
 Compiled Fri 20-Oct-23 10:44 by mcpre
 
-Time remaining: 111 seconds
+Time remaining: 105 seconds
 System Capabilities: B,R
 Enabled Capabilities: B
 Management Addresses:
@@ -399,7 +399,7 @@ Port Description - not advertised
 System Name - not advertised
 System Description - not advertised
 
-Time remaining: 201 seconds
+Time remaining: 223 seconds
 System Capabilities - not advertised
 Enabled Capabilities - not advertised
 Management Addresses - not advertised
@@ -420,7 +420,7 @@ Entry address(es):
   IP address: 10.20.97.1
 Platform: cisco C9300X-24Y,  Capabilities: Router Switch IGMP 
 Interface: GigabitEthernet1/0/17,  Port ID (outgoing port): TwentyFiveGigE1/1/3
-Holdtime : 146 sec
+Holdtime : 172 sec
 
 Version :
 Cisco IOS Software [Cupertino], Catalyst L3 Switch Software (CAT9K_IOSXE), Version 17.9.3, RELEASE SOFTWARE (fc6)
@@ -441,7 +441,7 @@ Entry address(es):
   IP address: 10.20.96.3
 Platform: cisco C9300X-24Y,  Capabilities: Switch IGMP 
 Interface: GigabitEthernet1/0/18,  Port ID (outgoing port): TwentyFiveGigE1/0/20
-Holdtime : 149 sec
+Holdtime : 163 sec
 
 Version :
 Cisco IOS Software [Cupertino], Catalyst L3 Switch Software (CAT9K_IOSXE), Version 17.9.4a, RELEASE SOFTWARE (fc3)
@@ -462,7 +462,7 @@ Entry address(es):
   IP address: 10.90.17.10
 Platform: Rocket M3,  Capabilities: Trans-Bridge 
 Interface: GigabitEthernet1/0/15,  Port ID (outgoing port): br0
-Holdtime : 73 sec
+Holdtime : 79 sec
 
 Version :
 XM.v6.3.6
@@ -475,7 +475,7 @@ Entry address(es):
   IP address: 10.20.96.231
 Platform: cisco WS-C2960CX-8PC-L,  Capabilities: Switch IGMP 
 Interface: GigabitEthernet1/0/15,  Port ID (outgoing port): GigabitEthernet0/10
-Holdtime : 142 sec
+Holdtime : 154 sec
 
 Version :
 Cisco IOS Software, C2960CX Software (C2960CX-UNIVERSALK9-M), Version 15.2(4)E6, RELEASE SOFTWARE (fc4)
@@ -497,7 +497,7 @@ Entry address(es):
   IP address: 10.90.17.11
 Platform: Rocket M3,  Capabilities: Trans-Bridge 
 Interface: GigabitEthernet1/0/15,  Port ID (outgoing port): br0
-Holdtime : 118 sec
+Holdtime : 64 sec
 
 Version :
 XM.v6.3.6
@@ -515,12 +515,12 @@ Capability Codes: R - Router, T - Trans Bridge, B - Source Route Bridge
 
 Device ID        Local Intrfce     Holdtme    Capability  Platform  Port ID
 INA-NSWR-03-97-1.kolmar.local
-                 Gig 1/0/17        146             R S I  C9300X-24 Twe 1/1/3
+                 Gig 1/0/17        172             R S I  C9300X-24 Twe 1/1/3
 INA-NSWR-37-96-3.kolmar.local
-                 Gig 1/0/18        149              S I   C9300X-24 Twe 1/0/20
-RocketM3         Gig 1/0/15        73                T    Rocket M3 br0
+                 Gig 1/0/18        162              S I   C9300X-24 Twe 1/0/20
+RocketM3         Gig 1/0/15        79                T    Rocket M3 br0
 INA-NSWS-70-96-231.kolmar.ru
-                 Gig 1/0/15        142              S I   WS-C2960C Gig 0/10
-Rocket M3        Gig 1/0/15        118               T    Rocket M3 br0
+                 Gig 1/0/15        154              S I   WS-C2960C Gig 0/10
+Rocket M3        Gig 1/0/15        64                T    Rocket M3 br0
 
 Total cdp entries displayed : 5

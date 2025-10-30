@@ -13,7 +13,7 @@ Compiled Thu 23-Oct-14 14:49 by prod_rel_team
 ROM: Bootstrap program is C2960 boot loader
 BOOTLDR: C2960 Boot Loader (C2960-HBOOT-M) Version 12.2(25r)SEE6, RELEASE SOFTWARE (fc1)
 
-DEN-NSWS-09-99-42 uptime is 14 weeks, 6 days, 21 hours, 18 minutes
+DEN-NSWS-09-99-42 uptime is 15 weeks, 1 day, 22 hours, 32 minutes
 System returned to ROM by power-on
 System restarted at 16:23:51 YAKT Mon Jul 14 2025
 System image file is "flash:/c2960-lanbasek9-mz.150-2.SE7.bin"
@@ -1137,7 +1137,7 @@ System Name: X1S/X1SP
 System Description: 
 Version:2.4.12.2
 
-Time remaining: 22 seconds
+Time remaining: 43 seconds
 System Capabilities: B,T
 Enabled Capabilities: B,T
 Management Addresses:
@@ -1175,7 +1175,7 @@ System Name: X1S/X1SP
 System Description: 
 Version:2.4.12.2
 
-Time remaining: 47 seconds
+Time remaining: 55 seconds
 System Capabilities: B,T
 Enabled Capabilities: B,T
 Management Addresses:
@@ -1199,8 +1199,8 @@ MED Information:
     Model: X1S/X1SP
     Capabilities: NP
     Device type: Endpoint Class III
-    Network Policy(Voice): VLAN 13, tagged, Layer-2 priority: 5, DSCP: 46
-    Network Policy(Voice Signal): Unknown
+    Network Policy(Voice): VLAN 13, tagged, Layer-2 priority: 0, DSCP: 0
+    Network Policy(Voice Signal): VLAN 0, untagged, Layer-2 priority: 0, DSCP: 0
     Power requirements - not advertised
     Location - not advertised
 
@@ -1216,7 +1216,7 @@ Technical Support: http://www.cisco.com/techsupport
 Copyright (c) 1986-2021 by Cisco Systems, Inc.
 Compiled Fri 30-Jul-21 15:15 by mcpre
 
-Time remaining: 106 seconds
+Time remaining: 95 seconds
 System Capabilities: B,R
 Enabled Capabilities: B,R
 Management Addresses:
@@ -1236,7 +1236,7 @@ System Name: X1S/X1SP
 System Description: 
 Version:2.4.12.2
 
-Time remaining: 20 seconds
+Time remaining: 44 seconds
 System Capabilities: B,T
 Enabled Capabilities: B,T
 Management Addresses:
@@ -1274,7 +1274,7 @@ System Name: X1S/X1SP
 System Description: 
 Version:2.4.12.2
 
-Time remaining: 36 seconds
+Time remaining: 0 seconds
 System Capabilities: B,T
 Enabled Capabilities: B,T
 Management Addresses:
@@ -1310,38 +1310,7 @@ Port Description - not advertised
 System Name - not advertised
 System Description - not advertised
 
-Time remaining: 3057 seconds
-System Capabilities - not advertised
-Enabled Capabilities - not advertised
-Management Addresses - not advertised
-Auto Negotiation - supported, enabled
-Physical media capabilities:
-    1000baseT(FD)
-Media Attachment Unit type - not advertised
-Vlan ID: - not advertised
-
-MED Information:
-
-    MED Codes:
-          (NP) Network Policy, (LI) Location Identification
-          (PS) Power Source Entity, (PD) Power Device
-          (IN) Inventory
-
-    Inventory information - not advertised
-    Capabilities: 
-    Device type: Endpoint Class I
-    Network Policies - not advertised
-    Power requirements - not advertised
-    Location - not advertised
-
-------------------------------------------------
-Chassis id: c07c.d1c0.5328
-Port id: c07c.d1c0.5328
-Port Description - not advertised
-System Name - not advertised
-System Description - not advertised
-
-Time remaining: 2840 seconds
+Time remaining: 3495 seconds
 System Capabilities - not advertised
 Enabled Capabilities - not advertised
 Management Addresses - not advertised
@@ -1372,38 +1341,7 @@ Port Description - not advertised
 System Name - not advertised
 System Description - not advertised
 
-Time remaining: 2990 seconds
-System Capabilities - not advertised
-Enabled Capabilities - not advertised
-Management Addresses - not advertised
-Auto Negotiation - supported, enabled
-Physical media capabilities:
-    1000baseT(FD)
-Media Attachment Unit type - not advertised
-Vlan ID: - not advertised
-
-MED Information:
-
-    MED Codes:
-          (NP) Network Policy, (LI) Location Identification
-          (PS) Power Source Entity, (PD) Power Device
-          (IN) Inventory
-
-    Inventory information - not advertised
-    Capabilities: 
-    Device type: Endpoint Class I
-    Network Policies - not advertised
-    Power requirements - not advertised
-    Location - not advertised
-
-------------------------------------------------
-Chassis id: a8a1.5955.9108
-Port id: a8a1.5955.9108
-Port Description - not advertised
-System Name - not advertised
-System Description - not advertised
-
-Time remaining: 3063 seconds
+Time remaining: 3331 seconds
 System Capabilities - not advertised
 Enabled Capabilities - not advertised
 Management Addresses - not advertised
@@ -1434,7 +1372,100 @@ Port Description - not advertised
 System Name - not advertised
 System Description - not advertised
 
-Time remaining: 3125 seconds
+Time remaining: 2738 seconds
+System Capabilities - not advertised
+Enabled Capabilities - not advertised
+Management Addresses - not advertised
+Auto Negotiation - supported, enabled
+Physical media capabilities:
+    1000baseT(FD)
+Media Attachment Unit type - not advertised
+Vlan ID: - not advertised
+
+MED Information:
+
+    MED Codes:
+          (NP) Network Policy, (LI) Location Identification
+          (PS) Power Source Entity, (PD) Power Device
+          (IN) Inventory
+
+    Inventory information - not advertised
+    Capabilities: 
+    Device type: Endpoint Class I
+    Network Policies - not advertised
+    Power requirements - not advertised
+    Location - not advertised
+
+------------------------------------------------
+Chassis id: c07c.d1c0.5328
+Port id: c07c.d1c0.5328
+Port Description - not advertised
+System Name - not advertised
+System Description - not advertised
+
+Time remaining: 3093 seconds
+System Capabilities - not advertised
+Enabled Capabilities - not advertised
+Management Addresses - not advertised
+Auto Negotiation - supported, enabled
+Physical media capabilities:
+    1000baseT(FD)
+Media Attachment Unit type - not advertised
+Vlan ID: - not advertised
+
+MED Information:
+
+    MED Codes:
+          (NP) Network Policy, (LI) Location Identification
+          (PS) Power Source Entity, (PD) Power Device
+          (IN) Inventory
+
+    Inventory information - not advertised
+    Capabilities: 
+    Device type: Endpoint Class I
+    Network Policies - not advertised
+    Power requirements - not advertised
+    Location - not advertised
+
+------------------------------------------------
+Chassis id: a8a1.5955.9108
+Port id: a8a1.5955.9108
+Port Description - not advertised
+System Name - not advertised
+System Description - not advertised
+
+Time remaining: 2784 seconds
+System Capabilities - not advertised
+Enabled Capabilities - not advertised
+Management Addresses - not advertised
+Auto Negotiation - supported, enabled
+Physical media capabilities:
+    1000baseT(FD)
+Media Attachment Unit type - not advertised
+Vlan ID: - not advertised
+
+MED Information:
+
+    MED Codes:
+          (NP) Network Policy, (LI) Location Identification
+          (PS) Power Source Entity, (PD) Power Device
+          (IN) Inventory
+
+    Inventory information - not advertised
+    Capabilities: 
+    Device type: Endpoint Class I
+    Network Policies - not advertised
+    Power requirements - not advertised
+    Location - not advertised
+
+------------------------------------------------
+Chassis id: 7085.c2a6.9500
+Port id: 7085.c2a6.9500
+Port Description - not advertised
+System Name - not advertised
+System Description - not advertised
+
+Time remaining: 3481 seconds
 System Capabilities - not advertised
 Enabled Capabilities - not advertised
 Management Addresses - not advertised
@@ -1459,7 +1490,7 @@ MED Information:
     Location - not advertised
 
 
-Total entries displayed: 10
+Total entries displayed: 11
 
 
 
@@ -1470,7 +1501,7 @@ Entry address(es):
   IP address: 10.20.98.1
 Platform: cisco C9300X-24Y,  Capabilities: Router Switch IGMP 
 Interface: GigabitEthernet0/45,  Port ID (outgoing port): TwentyFiveGigE1/0/2
-Holdtime : 176 sec
+Holdtime : 175 sec
 
 Version :
 Cisco IOS Software [Bengaluru], Catalyst L3 Switch Software (CAT9K_IOSXE), Version 17.6.1, RELEASE SOFTWARE (fc6)
@@ -1494,7 +1525,7 @@ Entry address(es):
   IP address: 10.13.1.38
 Platform: X1S/X1SP,  Capabilities: Host Phone 
 Interface: GigabitEthernet0/15,  Port ID (outgoing port): WAN PORT
-Holdtime : 141 sec
+Holdtime : 166 sec
 
 Version :
 2.4.12.2
@@ -1513,5 +1544,5 @@ Capability Codes: R - Router, T - Trans Bridge, B - Source Route Bridge
                   D - Remote, C - CVTA, M - Two-port Mac Relay 
 
 Device ID        Local Intrfce     Holdtme    Capability  Platform  Port ID
-DEN-NSWR-03-98-1 Gig 0/45          176             R S I  C9300X-24 TwentyFiveGigE1/0/2
-X1S/X1SP         Gig 0/15          141              H P   X1S/X1SP  WAN PORT
+DEN-NSWR-03-98-1 Gig 0/45          175             R S I  C9300X-24 TwentyFiveGigE1/0/2
+X1S/X1SP         Gig 0/15          166              H P   X1S/X1SP  WAN PORT

@@ -13,7 +13,7 @@ Compiled Thu 14-May-15 03:20 by prod_rel_team
 ROM: Bootstrap program is C2960C boot loader
 BOOTLDR: C2960C Boot Loader (C2960c405-HBOOT-M) Version 12.2(55r)EX9, RELEASE SOFTWARE (fc1)
 
-DEN-NSWS-51-98-118 uptime is 7 weeks, 4 hours, 32 minutes
+DEN-NSWS-51-98-118 uptime is 7 weeks, 2 days, 5 hours, 46 minutes
 System returned to ROM by power-on
 System restarted at 09:09:47 YAKT Mon Sep 8 2025
 System image file is "flash:/c2960c405-universalk9-mz.150-2.SE8/c2960c405-universalk9-mz.150-2.SE8.bin"
@@ -504,7 +504,7 @@ Entry address(es):
   IP address: 10.20.98.119
 Platform: cisco WS-C2960C-8PC-L,  Capabilities: Switch IGMP 
 Interface: GigabitEthernet0/2,  Port ID (outgoing port): GigabitEthernet0/1
-Holdtime : 128 sec
+Holdtime : 179 sec
 
 Version :
 Cisco IOS Software, C2960C Software (C2960c405-UNIVERSALK9-M), Version 15.0(2)SE8, RELEASE SOFTWARE (fc1)
@@ -523,6 +523,31 @@ Power Available TLV:
 Management address(es): 
   IP address: 10.20.98.119
 
+-------------------------
+Device ID: DEN-NSWS-49-98-117.kolmar.ru
+Entry address(es): 
+  IP address: 10.20.98.117
+Platform: cisco WS-C2960C-8PC-L,  Capabilities: Switch IGMP 
+Interface: GigabitEthernet0/1,  Port ID (outgoing port): GigabitEthernet0/1
+Holdtime : 174 sec
+
+Version :
+Cisco IOS Software, C2960C Software (C2960c405-UNIVERSALK9-M), Version 15.0(2)SE8, RELEASE SOFTWARE (fc1)
+Technical Support: http://www.cisco.com/techsupport
+Copyright (c) 1986-2015 by Cisco Systems, Inc.
+Compiled Thu 14-May-15 03:20 by prod_rel_team
+
+advertisement version: 2
+Protocol Hello:  OUI=0x00000C, Protocol ID=0x0112; payload len=27, value=00000000FFFFFFFF010221FF000000000000C4B9CD8A6080FF0000
+VTP Management Domain: 'tradc'
+Native VLAN: 1
+Duplex: full
+Power Available TLV:
+
+    Power request id: 0, Power management id: 1, Power available: 0, Power management level: -1
+Management address(es): 
+  IP address: 10.20.98.117
+
 
 
 $ show cdp neighbors
@@ -532,4 +557,6 @@ Capability Codes: R - Router, T - Trans Bridge, B - Source Route Bridge
 
 Device ID        Local Intrfce     Holdtme    Capability  Platform  Port ID
 DEN-NSWS-50-98-119.kolmar.ru
-                 Gig 0/2           128              S I   WS-C2960C Gig 0/1
+                 Gig 0/2           179              S I   WS-C2960C Gig 0/1
+DEN-NSWS-49-98-117.kolmar.ru
+                 Gig 0/1           174              S I   WS-C2960C Gig 0/1

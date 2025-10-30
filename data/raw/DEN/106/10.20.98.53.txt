@@ -13,7 +13,7 @@ Compiled Mon 22-Jan-18 07:16 by prod_rel_team
 ROM: Bootstrap program is C2960C boot loader
 BOOTLDR: C2960C Boot Loader (C2960c405-HBOOT-M) Version 12.2(55r)EX9, RELEASE SOFTWARE (fc1)
 
-DEN-NSWS-106-98-53 uptime is 3 days, 3 hours, 16 minutes
+DEN-NSWS-106-98-53 uptime is 5 days, 4 hours, 30 minutes
 System returned to ROM by power-on
 System image file is "flash:/c2960c405-universalk9-mz.152-2.E8/c2960c405-universalk9-mz.152-2.E8.bin"
 Last reload reason: power-on
@@ -581,7 +581,7 @@ Entry address(es):
   IP address: 10.20.99.151
 Platform: Cisco SG300-10SFP (PID:SG300-10SFP-K9)-,  Capabilities: Switch IGMP 
 Interface: GigabitEthernet0/2,  Port ID (outgoing port): gi2
-Holdtime : 154 sec
+Holdtime : 130 sec
 
 Version :
 1.4.11.5
@@ -596,7 +596,7 @@ Entry address(es):
   IP address: 10.20.98.54
 Platform: cisco WS-C2960CX-8PC-L,  Capabilities: Switch IGMP 
 Interface: GigabitEthernet0/1,  Port ID (outgoing port): GigabitEthernet0/12
-Holdtime : 168 sec
+Holdtime : 162 sec
 
 Version :
 Cisco IOS Software, C2960CX Software (C2960CX-UNIVERSALK9-M), Version 15.2(7)E, RELEASE SOFTWARE (fc3)
@@ -621,8 +621,8 @@ Capability Codes: R - Router, T - Trans Bridge, B - Source Route Bridge
                   D - Remote, C - CVTA, M - Two-port Mac Relay 
 
 Device ID        Local Intrfce     Holdtme    Capability  Platform  Port ID
-b4a8b9cbcee1     Gig 0/2           154              S I   SG300-10S gi2
+b4a8b9cbcee1     Gig 0/2           129              S I   SG300-10S gi2
 DEN-NSWS-90-98-54.kolmar.ru
-                 Gig 0/1           168              S I   WS-C2960C Gig 0/12
+                 Gig 0/1           162              S I   WS-C2960C Gig 0/12
 
 Total cdp entries displayed : 2

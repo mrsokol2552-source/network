@@ -8,7 +8,7 @@
       {
         "Neighbor": "DEN-NSWS-90-98-54",
         "LocalInterface": "uptime is",
-        "NeighborPort": "3 days,",
+        "NeighborPort": "5 days,",
         "_source_file": "C:\\Users\\zhiltsov.aa\\Desktop\\net-auto-mermaid\\data\\raw\\DEN\\90\\10.20.98.54.txt",
         "_template": "cisco_ios_show_cdp_neighbors.template"
       },
@@ -63,7 +63,7 @@
       {
         "Version": "15.2(7)E",
         "Model": "",
-        "Uptime": "13 weeks, 3 days, 5 hours, 8 minutes",
+        "Uptime": "13 weeks, 5 days, 6 hours, 22 minutes",
         "_source_file": "C:\\Users\\zhiltsov.aa\\Desktop\\net-auto-mermaid\\data\\raw\\DEN\\90\\10.20.98.54.txt",
         "_template": "cisco_ios_show_version.template"
       },

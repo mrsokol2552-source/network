@@ -1,0 +1,669 @@
+
+
+$ show version
+Command: show
+Next possible completions: 
+802.1p              802.1x              aaa                 access_profile      
+account             accounting          acct_client         address_binding     
+arp_spoofing_prevention                 arpentry            attack_log          
+auth_client         auth_diagnostics    auth_session_statistics                 
+auth_statistics     authen              authen_enable       authen_login        
+authen_policy       authentication      authorization       autoconfig          
+bandwidth_control   block               boot_file           bpdu_protection     
+cfm                 command             command_history     
+community_encryption                    config              control_pkt         
+cpu                 cpu_filter          current_config      ddm                 
+device_status       dhcp_local_relay    dhcp_relay          
+dhcpv6_local_relay                      dhcpv6_relay        dos_prevention      
+dot1v_protocol_group                    dscp                duld                
+environment         erps                error               ethernet_oam        
+fdb                 filter              flow_meter          gratuitous_arp      
+greeting_message    gvrp                igmp                igmp_snooping       
+ipif                ipif_ipv6_link_local_auto               iproute             
+ipv6                ipv6route           jumbo_frame         l2protocol_tunnel   
+lacp_port           limited_multicast_addr                  link_aggregation    
+lldp                lldp_med            log                 log_save_timing     
+log_software_module                     loopdetect          
+mac_based_access_control                mac_based_access_control_local          
+mac_based_vlan      mac_notification    mac_protection      max_mcast_group     
+mcast_filter_profile                    mirror              mld_snooping        
+multicast           multicast_fdb       nlb                 packet              
+password_recovery   per_queue           port                port_security       
+port_security_entry                     port_vlan           ports               
+pppoe               private_vlan        pvid                qinq                
+radius              reboot              rmon                router_ports        
+safeguard_engine    scheduling          scheduling_mechanism                    
+serial_port         session             sflow               sim                 
+smtp                snmp                sntp                ssh                 
+ssl                 storage_media_info                      stp                 
+switch              syslog              system_severity     tech_support        
+terminal            terminal_line       tftp                time                
+time_range          traffic             traffic_segmentation                    
+trap                trusted_host        utilization         vlan                
+vlan_translation    vlan_trunk          voice_vlan          
+
+
+
+$ show lldp remote_ports
+Command: show lldp remote_ports
+
+Port ID : 1 
+-------------------------------------------------------------------------------
+Remote Entities Count : 0 
+    (None)
+
+Port ID : 2 
+-------------------------------------------------------------------------------
+Remote Entities Count : 0 
+    (None)
+
+Port ID : 3 
+-------------------------------------------------------------------------------
+Remote Entities Count : 0 
+    (None)
+
+Port ID : 4 
+-------------------------------------------------------------------------------
+Remote Entities Count : 0 
+    (None)
+
+Port ID : 5 
+-------------------------------------------------------------------------------
+Remote Entities Count : 0 
+    (None)
+
+Port ID : 6 
+-------------------------------------------------------------------------------
+Remote Entities Count : 0 
+    (None)
+
+Port ID : 7 
+-------------------------------------------------------------------------------
+Remote Entities Count : 0 
+    (None)
+
+Port ID : 8 
+-------------------------------------------------------------------------------
+Remote Entities Count : 0 
+    (None)
+
+Port ID : 9 
+-------------------------------------------------------------------------------
+Remote Entities Count : 0 
+    (None)
+
+Port ID : 10 
+-------------------------------------------------------------------------------
+Remote Entities Count : 0 
+    (None)
+
+Port ID : 11 
+-------------------------------------------------------------------------------
+Remote Entities Count : 0 
+    (None)
+
+Port ID : 12 
+-------------------------------------------------------------------------------
+Remote Entities Count : 0 
+    (None)
+
+Port ID : 13 
+-------------------------------------------------------------------------------
+Remote Entities Count : 0 
+    (None)
+
+Port ID : 14 
+-------------------------------------------------------------------------------
+Remote Entities Count : 1 
+Entity 1 
+    Chassis ID Subtype                         : Network Address  
+    Chassis ID                                 : 10.13.1.195
+    Port ID Subtype                            : MAC Address  
+    Port ID                                    : 0C-38-3E-52-B6-C7
+    Port Description                           : WAN Port
+    System Name                                : X1S/X1SP
+    System Description                         : Version:2.4.12.2
+    System Capabilities                        : Bridge, Telephone
+    Management Address Count                   : 1
+    Port PVID                                  : 0
+    PPVID Entries Count                        : 0
+    VLAN Name Entries Count                    : 0
+    Protocol ID Entries Count                  : 0
+    MAC/PHY Configuration/Status               : (None)
+    Power Via MDI                              : (See Detail)
+    Link Aggregation                           : (None)
+    Maximum Frame Size                         : 0
+    Unknown TLVs Count                         : 0
+
+Port ID : 15 
+-------------------------------------------------------------------------------
+Remote Entities Count : 2 
+Entity 1 
+    Chassis ID Subtype                         : MAC Address  
+    Chassis ID                                 : 88-D7-F6-DF-00-B9
+    Port ID Subtype                            : MAC Address  
+    Port ID                                    : 88-D7-F6-DF-00-B9
+    Port Description                           : 
+    System Name                                : 
+    System Description                         : 
+    System Capabilities                        : 
+    Management Address Count                   : 0
+    Port PVID                                  : 0
+    PPVID Entries Count                        : 0
+    VLAN Name Entries Count                    : 0
+    Protocol ID Entries Count                  : 0
+    MAC/PHY Configuration/Status               : (See Detail)
+    Power Via MDI                              : (None)
+    Link Aggregation                           : (None)
+    Maximum Frame Size                         : 0
+    Unknown TLVs Count                         : 0
+
+Entity 2 
+    Chassis ID Subtype                         : Network Address  
+    Chassis ID                                 : 10.13.1.183
+    Port ID Subtype                            : MAC Address  
+    Port ID                                    : 0C-38-3E-02-8E-3E
+    Port Description                           : WAN Port
+    System Name                                : X3S(P) Lite
+    System Description                         : Version:2.4.5
+    System Capabilities                        : Bridge, Telephone
+    Management Address Count                   : 1
+    Port PVID                                  : 0
+    PPVID Entries Count                        : 0
+    VLAN Name Entries Count                    : 0
+    Protocol ID Entries Count                  : 0
+    MAC/PHY Configuration/Status               : (None)
+    Power Via MDI                              : (See Detail)
+    Link Aggregation                           : (None)
+    Maximum Frame Size                         : 0
+    Unknown TLVs Count                         : 0
+
+Port ID : 16 
+-------------------------------------------------------------------------------
+Remote Entities Count : 0 
+    (None)
+
+Port ID : 17 
+-------------------------------------------------------------------------------
+Remote Entities Count : 0 
+    (None)
+
+Port ID : 18 
+-------------------------------------------------------------------------------
+Remote Entities Count : 0 
+    (None)
+
+Port ID : 19 
+-------------------------------------------------------------------------------
+Remote Entities Count : 0 
+    (None)
+
+Port ID : 20 
+-------------------------------------------------------------------------------
+Remote Entities Count : 0 
+    (None)
+
+Port ID : 21 
+-------------------------------------------------------------------------------
+Remote Entities Count : 0 
+    (None)
+
+Port ID : 22 
+-------------------------------------------------------------------------------
+Remote Entities Count : 0 
+    (None)
+
+Port ID : 23 
+-------------------------------------------------------------------------------
+Remote Entities Count : 0 
+    (None)
+
+Port ID : 24 
+-------------------------------------------------------------------------------
+Remote Entities Count : 0 
+    (None)
+
+Port ID : 25 
+-------------------------------------------------------------------------------
+Remote Entities Count : 1 
+Entity 1 
+    Chassis ID Subtype                         : MAC Address  
+    Chassis ID                                 : 04-D4-C4-F0-24-36
+    Port ID Subtype                            : MAC Address  
+    Port ID                                    : 04-D4-C4-F0-24-36
+    Port Description                           : 
+    System Name                                : 
+    System Description                         : 
+    System Capabilities                        : 
+    Management Address Count                   : 0
+    Port PVID                                  : 0
+    PPVID Entries Count                        : 0
+    VLAN Name Entries Count                    : 0
+    Protocol ID Entries Count                  : 0
+    MAC/PHY Configuration/Status               : (See Detail)
+    Power Via MDI                              : (None)
+    Link Aggregation                           : (None)
+    Maximum Frame Size                         : 0
+    Unknown TLVs Count                         : 0
+
+Port ID : 26 
+-------------------------------------------------------------------------------
+Remote Entities Count : 0 
+    (None)
+
+Port ID : 27 
+-------------------------------------------------------------------------------
+Remote Entities Count : 0 
+    (None)
+
+Port ID : 28 
+-------------------------------------------------------------------------------
+Remote Entities Count : 0 
+    (None)
+
+Port ID : 29 
+-------------------------------------------------------------------------------
+Remote Entities Count : 0 
+    (None)
+
+Port ID : 30 
+-------------------------------------------------------------------------------
+Remote Entities Count : 0 
+    (None)
+
+Port ID : 31 
+-------------------------------------------------------------------------------
+Remote Entities Count : 0 
+    (None)
+
+Port ID : 32 
+-------------------------------------------------------------------------------
+Remote Entities Count : 0 
+    (None)
+
+Port ID : 33 
+-------------------------------------------------------------------------------
+Remote Entities Count : 0 
+    (None)
+
+Port ID : 34 
+-------------------------------------------------------------------------------
+Remote Entities Count : 0 
+    (None)
+
+Port ID : 35 
+-------------------------------------------------------------------------------
+Remote Entities Count : 0 
+    (None)
+
+Port ID : 36 
+-------------------------------------------------------------------------------
+Remote Entities Count : 0 
+    (None)
+
+Port ID : 37 
+-------------------------------------------------------------------------------
+Remote Entities Count : 0 
+    (None)
+
+Port ID : 38 
+-------------------------------------------------------------------------------
+Remote Entities Count : 0 
+    (None)
+
+Port ID : 39 
+-------------------------------------------------------------------------------
+Remote Entities Count : 0 
+    (None)
+
+Port ID : 40 
+-------------------------------------------------------------------------------
+Remote Entities Count : 0 
+    (None)
+
+Port ID : 41 
+-------------------------------------------------------------------------------
+Remote Entities Count : 0 
+    (None)
+
+Port ID : 42 
+-------------------------------------------------------------------------------
+Remote Entities Count : 0 
+    (None)
+
+Port ID : 43 
+-------------------------------------------------------------------------------
+Remote Entities Count : 0 
+    (None)
+
+Port ID : 44 
+-------------------------------------------------------------------------------
+Remote Entities Count : 0 
+    (None)
+
+Port ID : 45 
+-------------------------------------------------------------------------------
+Remote Entities Count : 0 
+    (None)
+
+Port ID : 46 
+-------------------------------------------------------------------------------
+Remote Entities Count : 2 
+Entity 1 
+    Chassis ID Subtype                         : Network Address  
+    Chassis ID                                 : 10.13.1.88
+    Port ID Subtype                            : MAC Address  
+    Port ID                                    : 0C-38-3E-10-74-0E
+    Port Description                           : WAN Port
+    System Name                                : X1S/X1SP
+    System Description                         : Version:2.4.12.2
+    System Capabilities                        : Bridge, Telephone
+    Management Address Count                   : 1
+    Port PVID                                  : 0
+    PPVID Entries Count                        : 0
+    VLAN Name Entries Count                    : 0
+    Protocol ID Entries Count                  : 0
+    MAC/PHY Configuration/Status               : (None)
+    Power Via MDI                              : (See Detail)
+    Link Aggregation                           : (None)
+    Maximum Frame Size                         : 0
+    Unknown TLVs Count                         : 0
+
+Entity 2 
+    Chassis ID Subtype                         : MAC Address  
+    Chassis ID                                 : 94-DE-80-34-08-B5
+    Port ID Subtype                            : MAC Address  
+    Port ID                                    : 94-DE-80-34-08-B5
+    Port Description                           : 
+    System Name                                : 
+    System Description                         : 
+    System Capabilities                        : 
+    Management Address Count                   : 0
+    Port PVID                                  : 0
+    PPVID Entries Count                        : 0
+    VLAN Name Entries Count                    : 0
+    Protocol ID Entries Count                  : 0
+    MAC/PHY Configuration/Status               : (See Detail)
+    Power Via MDI                              : (None)
+    Link Aggregation                           : (None)
+    Maximum Frame Size                         : 0
+    Unknown TLVs Count                         : 0
+
+Port ID : 47 
+-------------------------------------------------------------------------------
+Remote Entities Count : 0 
+    (None)
+
+Port ID : 48 
+-------------------------------------------------------------------------------
+Remote Entities Count : 0 
+    (None)
+
+Port ID : 49 
+-------------------------------------------------------------------------------
+Remote Entities Count : 0 
+    (None)
+
+Port ID : 50 
+-------------------------------------------------------------------------------
+Remote Entities Count : 1 
+Entity 1 
+    Chassis ID Subtype                         : MAC Address  
+    Chassis ID                                 : D4-A0-2A-56-F1-80
+    Port ID Subtype                            : Interface Name 
+    Port ID                                    : Fa0/4
+    Port Description                           : FastEthernet0/4
+    System Name                                : INA-NSWR-03-99-20.kolmar.ru
+    System Description                         : Cisco IOS Software, C3560 Softw
+                                                 are (C3560-IPBASEK9-M), Version
+                                                  12.2(50)SE5, RELEASE SOFTWARE 
+                                                 (fc1)
+Technical Support: http:/
+                                                 /www.cisco.com/techsupport
+Copy
+                                                 right (c) 1986-2010 by Cisco Sy
+                                                 stems, Inc.
+Compiled Tue 28-Sep
+                                                 -10 13:21 by prod_rel_team
+    System Capabilities                        : Bridge, Router
+    Management Address Count                   : 1
+    Port PVID                                  : 1
+    PPVID Entries Count                        : 0
+    VLAN Name Entries Count                    : 0
+    Protocol ID Entries Count                  : 0
+    MAC/PHY Configuration/Status               : (See Detail)
+    Power Via MDI                              : (None)
+    Link Aggregation                           : (None)
+    Maximum Frame Size                         : 0
+    Unknown TLVs Count                         : 0
+
+Port ID : 51 
+-------------------------------------------------------------------------------
+Remote Entities Count : 0 
+    (None)
+
+Port ID : 52 
+-------------------------------------------------------------------------------
+Remote Entities Count : 0 
+    (None)
+
+
+
+
+$ show vlan
+Command: show vlan
+
+
+VLAN Trunk State	: Disabled
+VLAN Trunk Member Ports	: 
+
+
+VID             : 1               VLAN Name     : default
+VLAN Type       : Static          Advertisement : Enabled
+Member Ports    : 5,10,12,16,18,23-24,27,29-30,32,37,39,42,50-52
+Static Ports    : 5,10,12,16,18,23-24,27,29-30,32,37,39,42,50-52
+Current Tagged Ports  : 50                  
+Current Untagged Ports: 5,10,12,16,18,23-24,27,29-30,32,37,39,42,51-52
+Static Tagged Ports   : 50                  
+Static Untagged Ports : 5,10,12,16,18,23-24,27,29-30,32,37,39,42,51-52
+Forbidden Ports       :                     
+
+VID             : 13              VLAN Name     : Phones
+VLAN Type       : Voice VLAN      Advertisement : Disabled
+Member Ports    : 1-52                
+Static Ports    : 1-52                
+Current Tagged Ports  : 1-52                
+Current Untagged Ports:                     
+Static Tagged Ports   : 1-52                
+Static Untagged Ports :                     
+Forbidden Ports       :                     
+
+VID             : 17              VLAN Name     : Transport
+VLAN Type       : Static          Advertisement : Enabled
+Member Ports    : 50                  
+Static Ports    : 50                  
+Current Tagged Ports  : 50                  
+Current Untagged Ports:                     
+Static Tagged Ports   : 50                  
+Static Untagged Ports :                     
+Forbidden Ports       :                     
+
+VID             : 30              VLAN Name     : Wi-Fi
+VLAN Type       : Static          Advertisement : Enabled
+Member Ports    : 2,49-50             
+Static Ports    : 2,49-50             
+Current Tagged Ports  : 2,49-50             
+Current Untagged Ports:                     
+Static Tagged Ports   : 2,49-50             
+Static Untagged Ports :                     
+Forbidden Ports       :                     
+
+VID             : 31              VLAN Name     : Wi-Fi_Guest
+VLAN Type       : Static          Advertisement : Enabled
+Member Ports    : 2,49-50             
+Static Ports    : 2,49-50             
+Current Tagged Ports  : 2,49-50             
+Current Untagged Ports:                     
+Static Tagged Ports   : 2,49-50             
+Static Untagged Ports :                     
+Forbidden Ports       :                     
+
+VID             : 32              VLAN Name     : Wi-Fi_Works
+VLAN Type       : Static          Advertisement : Enabled
+Member Ports    : 2,49-50             
+Static Ports    : 2,49-50             
+Current Tagged Ports  : 2,49-50             
+Current Untagged Ports:                     
+Static Tagged Ports   : 2,49-50             
+Static Untagged Ports :                     
+Forbidden Ports       :                     
+
+VID             : 33              VLAN Name     : Wi-Fi_Directors
+VLAN Type       : Static          Advertisement : Disabled
+Member Ports    : 2,49-50             
+Static Ports    : 2,49-50             
+Current Tagged Ports  : 2,49-50             
+Current Untagged Ports:                     
+Static Tagged Ports   : 2,49-50             
+Static Untagged Ports :                     
+Forbidden Ports       :                     
+
+VID             : 34              VLAN Name     : Wi-Fi_Generals
+VLAN Type       : Static          Advertisement : Disabled
+Member Ports    : 2,49-50             
+Static Ports    : 2,49-50             
+Current Tagged Ports  : 2,49-50             
+Current Untagged Ports:                     
+Static Tagged Ports   : 2,49-50             
+Static Untagged Ports :                     
+Forbidden Ports       :                     
+
+VID             : 90              VLAN Name     : Inaglinsky
+VLAN Type       : Static          Advertisement : Enabled
+Member Ports    : 1-4,6-9,11,13-15,17,19-22,25-26,28,31,33-36,38,40-41,43-48,50
+Static Ports    : 1-4,6-9,11,13-15,17,19-22,25-26,28,31,33-36,38,40-41,43-48,50
+Current Tagged Ports  : 50                  
+Current Untagged Ports: 1-4,6-9,11,13-15,17,19-22,25-26,28,31,33-36,38,40-41,   
+                        43-48
+Static Tagged Ports   : 50                  
+Static Untagged Ports : 1-4,6-9,11,13-15,17,19-22,25-26,28,31,33-36,38,40-41,   
+                        43-48
+Forbidden Ports       :                     
+
+VID             : 220             VLAN Name     : IBP
+VLAN Type       : Static          Advertisement : Enabled
+Member Ports    : 50                  
+Static Ports    : 50                  
+Current Tagged Ports  : 50                  
+Current Untagged Ports:                     
+Static Tagged Ports   : 50                  
+Static Untagged Ports :                     
+Forbidden Ports       :                     
+
+VID             : 1490            VLAN Name     : VKS
+VLAN Type       : Static          Advertisement : Disabled
+Member Ports    : 16,50               
+Static Ports    : 16,50               
+Current Tagged Ports  : 50                  
+Current Untagged Ports: 16                  
+Static Tagged Ports   : 50                  
+Static Untagged Ports : 16                  
+Forbidden Ports       :                     
+ 
+Total Static VLAN Entries: 11 
+Total GVRP VLAN Entries: 0 
+
+
+
+
+$ show interfaces status
+Command: show
+Next possible completions: 
+802.1p              802.1x              aaa                 access_profile      
+account             accounting          acct_client         address_binding     
+arp_spoofing_prevention                 arpentry            attack_log          
+auth_client         auth_diagnostics    auth_session_statistics                 
+auth_statistics     authen              authen_enable       authen_login        
+authen_policy       authentication      authorization       autoconfig          
+bandwidth_control   block               boot_file           bpdu_protection     
+cfm                 command             command_history     
+community_encryption                    config              control_pkt         
+cpu                 cpu_filter          current_config      ddm                 
+device_status       dhcp_local_relay    dhcp_relay          
+dhcpv6_local_relay                      dhcpv6_relay        dos_prevention      
+dot1v_protocol_group                    dscp                duld                
+environment         erps                error               ethernet_oam        
+fdb                 filter              flow_meter          gratuitous_arp      
+greeting_message    gvrp                igmp                igmp_snooping       
+ipif                ipif_ipv6_link_local_auto               iproute             
+ipv6                ipv6route           jumbo_frame         l2protocol_tunnel   
+lacp_port           limited_multicast_addr                  link_aggregation    
+lldp                lldp_med            log                 log_save_timing     
+log_software_module                     loopdetect          
+mac_based_access_control                mac_based_access_control_local          
+mac_based_vlan      mac_notification    mac_protection      max_mcast_group     
+mcast_filter_profile                    mirror              mld_snooping        
+multicast           multicast_fdb       nlb                 packet              
+password_recovery   per_queue           port                port_security       
+port_security_entry                     port_vlan           ports               
+pppoe               private_vlan        pvid                qinq                
+radius              reboot              rmon                router_ports        
+safeguard_engine    scheduling          scheduling_mechanism                    
+serial_port         session             sflow               sim                 
+smtp                snmp                sntp                ssh                 
+ssl                 storage_media_info                      stp                 
+switch              syslog              system_severity     tech_support        
+terminal            terminal_line       tftp                time                
+time_range          traffic             traffic_segmentation                    
+trap                trusted_host        utilization         vlan                
+vlan_translation    vlan_trunk          voice_vlan          
+
+
+
+$ show config effective
+# STORM
+
+config traffic control 1 broadcast enable multicast enable unicast enable action drop threshold 256 countdown 0 time_interval 5 
+config traffic control 2 broadcast enable multicast enable unicast enable action drop threshold 256 countdown 0 time_interval 5 
+config traffic control 3 broadcast enable multicast enable unicast enable action drop threshold 256 countdown 0 time_interval 5 
+config traffic control 4 broadcast enable multicast enable unicast enable action drop threshold 256 countdown 0 time_interval 5 
+config traffic control 5 broadcast enable multicast enable unicast enable action drop threshold 256 countdown 0 time_interval 5 
+config traffic control 6 broadcast enable multicast enable unicast enable action drop threshold 256 countdown 0 time_interval 5 
+config traffic control 7 broadcast enable multicast enable unicast enable action drop threshold 256 countdown 0 time_interval 5 
+config traffic control 8 broadcast enable multicast enable unicast enable action drop threshold 256 countdown 0 time_interval 5 
+config traffic control 9 broadcast enable multicast enable unicast enable action drop threshold 256 countdown 0 time_interval 5 
+config traffic control 10 broadcast enable multicast enable unicast enable action drop threshold 256 countdown 0 time_interval 5 
+config traffic control 11 broadcast enable multicast enable unicast enable action drop threshold 256 countdown 0 time_interval 5 
+config traffic control 12 broadcast enable multicast enable unicast enable action drop threshold 256 countdown 0 time_interval 5 
+config traffic control 13 broadcast enable multicast enable unicast enable action drop threshold 256 countdown 0 time_interval 5 
+config traffic control 14 broadcast enable multicast enable unicast enable action drop threshold 256 countdown 0 time_interval 5 
+config traffic control 15 broadcast enable multicast enable unicast enable action drop threshold 256 countdown 0 time_interval 5 
+config traffic control 16 broadcast enable multicast enable unicast enable action drop threshold 256 countdown 0 time_interval 5 
+config traffic control 17 broadcast enable multicast enable unicast enable action drop threshold 256 countdown 0 time_interval 5 
+config traffic control 18 broadcast enable multicast enable unicast enable action drop threshold 256 countdown 0 time_interval 5 
+config traffic control 19 broadcast enable multicast enable unicast enable action drop threshold 256 countdown 0 time_interval 5 
+config traffic control 20 broadcast enable multicast enable unicast enable action drop threshold 256 countdown 0 time_interval 5 
+config traffic control 21 broadcast enable multicast enable unicast enable action drop threshold 256 countdown 0 time_interval 5 
+config traffic control 22 broadcast enable multicast enable unicast enable action drop threshold 256 countdown 0 time_interval 5 
+config traffic control 23 broadcast enable multicast enable unicast enable action drop threshold 256 countdown 0 time_interval 5 
+config traffic control 24 broadcast enable multicast enable unicast enable action drop threshold 256 countdown 0 time_interval 5 
+config traffic control 25 broadcast enable multicast enable unicast enable action drop threshold 256 countdown 0 time_interval 5 
+config traffic control 26 broadcast enable multicast enable unicast enable action drop threshold 256 countdown 0 time_interval 5 
+config traffic control 27 broadcast enable multicast enable unicast enable action drop threshold 256 countdown 0 time_interval 5 
+config traffic control 28 broadcast enable multicast enable unicast enable action drop threshold 256 countdown 0 time_interval 5 
+config traffic control 29 broadcast enable multicast enable unicast enable action drop threshold 256 countdown 0 time_interval 5 
+config traffic control 30 broadcast enable multicast enable unicast enable action drop threshold 256 countdown 0 time_interval 5 
+config traffic control 31 broadcast enable multicast enable unicast enable action drop threshold 256 countdown 0 time_interval 5 
+config traffic control 32 broadcast enable multicast enable unicast enable action drop threshold 256 countdown 0 time_interval 5 
+config traffic control 33 broadcast enable multicast enable unicast enable action drop threshold 256 countdown 0 time_interval 5 
+config traffic control 34 broadcast enable multicast enable unicast enable action drop threshold 256 countdown 0 time_interval 5 
+config traffic control 35 broadcast enable multicast enable unicast enable action drop threshold 256 countdown 0 time_interval 5 
+config traffic control 36 broadcast enable multicast enable unicast enable action drop threshold 256 countdown 0 time_interval 5 
+config traffic control 37 broadcast enable multicast enable unicast enable action drop threshold 256 countdown 0 time_interval 5 
+config traffic control 38 broadcast enable multicast enable unicast enable action drop threshold 256 countdown 0 time_interval 5 
+config traffic control 39 broadcast enable multicast enable unicast enable action drop threshold 256 countdown 0 time_interval 5 
+config traffic control 40 broadcast enable multicast enable unicast enable action drop threshold 256 countdown 0 time_interval 5 
+config traffic control 41 broadcast enable multicast enable unicast enable action drop threshold 256 countdown 0 time_interval 5 
+config traffic control 42 broadcast enable multicast enable unicast enable action drop threshold 256 countdown 0 time_interval 5 
+config traffic control 43 broadcast enable multicast enable unicast enable action drop threshold 256 countdown 0 time_interval 5 
+config traffic control 44 broadcast enable multicast enable unicast enable action drop threshold 256 countdown 0 time_interval 5 

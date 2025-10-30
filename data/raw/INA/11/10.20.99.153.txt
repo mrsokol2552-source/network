@@ -13,7 +13,7 @@ Compiled Sat 19-Aug-17 09:34 by prod_rel_team
 ROM: Bootstrap program is C2960 boot loader
 BOOTLDR: C2960 Boot Loader (C2960-HBOOT-M) Version 15.0(2r)EZ1, RELEASE SOFTWARE (fc2)
 
-INA-NSWS-11-99-153 uptime is 14 weeks, 6 days, 20 hours, 46 minutes
+INA-NSWS-11-99-153 uptime is 15 weeks, 1 day, 22 hours, 0 minutes
 System returned to ROM by power-on
 System restarted at 16:57:17 YAKT Mon Jul 14 2025
 System image file is "flash:c2960-lanbasek9-mz.150-2.SE11.bin"

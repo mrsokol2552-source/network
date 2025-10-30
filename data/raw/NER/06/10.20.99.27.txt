@@ -13,7 +13,7 @@ Compiled Wed 23-Nov-16 00:41 by prod_rel_team
 ROM: Bootstrap program is C2960C boot loader
 BOOTLDR: C2960C Boot Loader (C2960c405-HBOOT-M) Version 12.2(55r)EX9, RELEASE SOFTWARE (fc1)
 
-NER-NSWS-06-99-27 uptime is 5 weeks, 3 days, 3 hours, 38 minutes
+NER-NSWS-06-99-27 uptime is 5 weeks, 5 days, 4 hours, 52 minutes
 System returned to ROM by power-on
 System restarted at 10:06:07 YAKT Fri Sep 19 2025
 System image file is "flash:/c2960c405-universalk9-mz.152-5.E1.bin"
@@ -534,7 +534,7 @@ Technical Support: http://www.cisco.com/techsupport
 Copyright (c) 1986-2017 by Cisco Systems, Inc.
 Compiled Wed 12-Jul-17 15:29 by prod_rel_team
 
-Time remaining: 100 seconds
+Time remaining: 101 seconds
 System Capabilities: B
 Enabled Capabilities: B
 Management Addresses:

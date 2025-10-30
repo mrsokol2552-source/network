@@ -13,7 +13,7 @@ Compiled Wed 12-Jul-17 13:06 by prod_rel_team
 ROM: Bootstrap program is C2960X boot loader
 BOOTLDR: C2960X Boot Loader (C2960X-HBOOT-M) Version 15.2(3r)E1, RELEASE SOFTWARE (fc1)
 
-CHU-NSWS-23-98-235 uptime is 4 days, 22 hours, 49 minutes
+CHU-NSWS-23-98-235 uptime is 1 week, 3 minutes
 System returned to ROM by power-on
 System restarted at 14:55:14 YAKT Wed Oct 22 2025
 System image file is "flash:/c2960x-universalk9-mz.152-2.E7/c2960x-universalk9-mz.152-2.E7.bin"
@@ -822,7 +822,7 @@ Entry address(es):
   IP address: 10.20.98.231
 Platform: cisco WS-C3560CX-12PC-S,  Capabilities: Switch IGMP 
 Interface: GigabitEthernet1/0/25,  Port ID (outgoing port): GigabitEthernet0/16
-Holdtime : 142 sec
+Holdtime : 145 sec
 
 Version :
 Cisco IOS Software, C3560CX Software (C3560CX-UNIVERSALK9-M), Version 15.2(4)E4, RELEASE SOFTWARE (fc2)
@@ -844,7 +844,7 @@ Entry address(es):
   IP address: 10.20.98.233
 Platform: cisco WS-C2960C-12PC-L,  Capabilities: Switch IGMP 
 Interface: GigabitEthernet1/0/26,  Port ID (outgoing port): GigabitEthernet0/1
-Holdtime : 178 sec
+Holdtime : 135 sec
 
 Version :
 Cisco IOS Software, C2960C Software (C2960c405-UNIVERSALK9-M), Version 15.2(2)E8, RELEASE SOFTWARE (fc1)
@@ -871,8 +871,8 @@ Capability Codes: R - Router, T - Trans Bridge, B - Source Route Bridge
 
 Device ID        Local Intrfce     Holdtme    Capability  Platform  Port ID
 CHU-NSWS-25-98-231.kolmar.ru
-                 Gig 1/0/25        142              S I   WS-C3560C Gig 0/16
+                 Gig 1/0/25        145              S I   WS-C3560C Gig 0/16
 CHU-NSWS-26-98-233.kolmar.ru
-                 Gig 1/0/26        178              S I   WS-C2960C Gig 0/1
+                 Gig 1/0/26        134              S I   WS-C2960C Gig 0/1
 
 Total cdp entries displayed : 2

@@ -13,7 +13,7 @@ Compiled Fri 25-Oct-13 14:35 by prod_rel_team
 ROM: Bootstrap program is C2960C boot loader
 BOOTLDR: C2960C Boot Loader (C2960c405-HBOOT-M) Version 12.2(55r)EX9, RELEASE SOFTWARE (fc1)
 
-CHU-NSWS-03-99-7 uptime is 7 weeks, 3 days, 22 hours, 7 minutes
+CHU-NSWS-03-99-7 uptime is 7 weeks, 5 days, 23 hours, 22 minutes
 System returned to ROM by power-on
 System restarted at 10:27:24 YAKT Wed Mar 30 2011
 System image file is "flash:/c2960c405-universalk9-mz.150-2.SE5/c2960c405-universalk9-mz.150-2.SE5.bin"
@@ -392,7 +392,7 @@ Technical Support: http://www.cisco.com/techsupport
 Copyright (c) 1986-2011 by Cisco Systems, Inc.
 Compiled Wed 10-Aug-11 06:40 by prod_rel_team
 
-Time remaining: 90 seconds
+Time remaining: 99 seconds
 System Capabilities: B
 Enabled Capabilities: B
 Management Addresses:
@@ -415,7 +415,7 @@ System Name: RPBKREMBOX1
 System Description: 
 UAP-AC-Mesh-Pro, 6.6.77.15402
 
-Time remaining: 119 seconds
+Time remaining: 111 seconds
 System Capabilities: B,W,R,S
 Enabled Capabilities: B,W,R
 Management Addresses:
@@ -447,7 +447,7 @@ Port Description - not advertised
 System Name - not advertised
 System Description - not advertised
 
-Time remaining: 2978 seconds
+Time remaining: 3054 seconds
 System Capabilities - not advertised
 Enabled Capabilities - not advertised
 Management Addresses - not advertised
@@ -483,7 +483,7 @@ Entry address(es):
   IP address: 10.20.99.14
 Platform: cisco WS-C2960C-8TC-L,  Capabilities: Switch IGMP 
 Interface: GigabitEthernet0/2,  Port ID (outgoing port): FastEthernet0/3
-Holdtime : 179 sec
+Holdtime : 163 sec
 
 Version :
 Cisco IOS Software, C2960C Software (C2960c405-UNIVERSALK9-M), Version 12.2(55)EX3, RELEASE SOFTWARE (fc2)
@@ -511,4 +511,4 @@ Capability Codes: R - Router, T - Trans Bridge, B - Source Route Bridge
 
 Device ID        Local Intrfce     Holdtme    Capability  Platform  Port ID
 CHU-NSWS-03-99-14.kolmar.ru
-                 Gig 0/2           179              S I   WS-C2960C Fas 0/3
+                 Gig 0/2           163              S I   WS-C2960C Fas 0/3

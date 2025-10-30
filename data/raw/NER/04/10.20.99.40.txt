@@ -13,7 +13,7 @@ Compiled Wed 12-Jul-17 13:06 by prod_rel_team
 ROM: Bootstrap program is C2960X boot loader
 BOOTLDR: C2960X Boot Loader (C2960X-HBOOT-M) Version 15.2(3r)E1, RELEASE SOFTWARE (fc1)
 
-NER-NSWS-04-99-40 uptime is 22 weeks, 5 days, 1 hour, 12 minutes
+NER-NSWS-04-99-40 uptime is 23 weeks, 2 hours, 26 minutes
 System returned to ROM by power-on
 System restarted at 12:28:02 YAKT Wed May 21 2025
 System image file is "flash:/c2960x-universalk9-mz.152-2.E7/c2960x-universalk9-mz.152-2.E7.bin"
@@ -971,7 +971,7 @@ System Name: OFFICEAPENDIKS2LVL
 System Description: 
 UAP-AC-Pro-Gen2, 6.6.77.15402
 
-Time remaining: 99 seconds
+Time remaining: 90 seconds
 System Capabilities: B,W,R,S
 Enabled Capabilities: B,W,R
 Management Addresses:
@@ -1006,7 +1006,7 @@ System Name: OFFICEGENERALS2LVL
 System Description: 
 UAP-AC-Pro-Gen2, 6.6.77.15402
 
-Time remaining: 102 seconds
+Time remaining: 99 seconds
 System Capabilities: B,W,R,S
 Enabled Capabilities: B,W,R
 Management Addresses:
@@ -1043,7 +1043,7 @@ Entry address(es):
   IP address: 10.20.99.38
 Platform: cisco WS-C3850-12S,  Capabilities: Router Switch IGMP 
 Interface: GigabitEthernet1/0/28,  Port ID (outgoing port): GigabitEthernet1/0/2
-Holdtime : 150 sec
+Holdtime : 123 sec
 
 Version :
 Cisco IOS Software [Gibraltar], Catalyst L3 Switch Software (CAT3K_CAA-UNIVERSALK9-M), Version 16.12.11, RELEASE SOFTWARE (fc2)
@@ -1069,6 +1069,6 @@ Capability Codes: R - Router, T - Trans Bridge, B - Source Route Bridge
 
 Device ID        Local Intrfce     Holdtme    Capability  Platform  Port ID
 NRG-NSWR-01-99-38.kolmar.ru
-                 Gig 1/0/28        150             R S I  WS-C3850- Gig 1/0/2
+                 Gig 1/0/28        179             R S I  WS-C3850- Gig 1/0/2
 
 Total cdp entries displayed : 1

@@ -14,7 +14,7 @@ System Name                       : INA-NSWS-37-99-49
 System Location                   : 
 System Description                : MES2424P rev.C1 AC 28-port 1G/10G Managed Switch with 24 POE+ ports
 Logging Option                    : Flash Logging
-Device Uptime                     : 514 Days, 1 Hrs, 19 Mins, 9 Secs
+Device Uptime                     : 516 Days, 2 Hrs, 15 Mins, 43 Secs
 Login Authentication Mode         : Local
 Config Save Status                : Successful
 Remote Save Status                : Not Initiated
@@ -102,7 +102,7 @@ Port Description              : Not Advertised
 System Name                   : Not Advertised
 System Desc                   : Not Advertised
 Local Intf                    : gi 0/4
-Time Remaining                : 103 Seconds 
+Time Remaining                : 106 Seconds 
 System Capabilities Tlv       : Not Advertised
 Management Addresses          : Not Advertised
 
@@ -292,10 +292,10 @@ $ show interfaces
    Oversized w/ Bad CRC      : 0
 
 Transmission Counters
-   Octets                    : 2532108370
-   Unicast Packets           : 3180789
-   Multicast Packets         : 86349373
-   Broadcast Packets         : 31460769
+   Octets                    : 2759315111
+   Unicast Packets           : 3202563
+   Multicast Packets         : 86720667
+   Broadcast Packets         : 31567873
    Discarded Packets         : 0
    Error Drops               : 0
    Error Packets             : 0
@@ -394,10 +394,10 @@ Media-type: prefer-fiber
 Link Up/Down Trap is enabled 
 
 Reception Counters
-   Octets                    : 1723509695
-   Unicast Packets           : 3434515
-   Multicast Packets         : 372339
-   Broadcast Packets         : 5393
+   Octets                    : 1730734905
+   Unicast Packets           : 3448701
+   Multicast Packets         : 373816
+   Broadcast Packets         : 5394
    Discarded Packets         : 3
    Error Packets             : 0
    Unknown Protocol          : 0

@@ -8,7 +8,7 @@
       {
         "Neighbor": "DEN-NSWS-51-98-118",
         "LocalInterface": "uptime is",
-        "NeighborPort": "4 hours,",
+        "NeighborPort": "2 days,",
         "_source_file": "C:\\Users\\zhiltsov.aa\\Desktop\\net-auto-mermaid\\data\\raw\\DEN\\51\\10.20.98.118.txt",
         "_template": "cisco_ios_show_cdp_neighbors.template"
       },
@@ -102,6 +102,13 @@
         "NeighborPort": "I   WS-C2960C",
         "_source_file": "C:\\Users\\zhiltsov.aa\\Desktop\\net-auto-mermaid\\data\\raw\\DEN\\51\\10.20.98.118.txt",
         "_template": "cisco_ios_show_cdp_neighbors.template"
+      },
+      {
+        "Neighbor": "Gig",
+        "LocalInterface": "0/1",
+        "NeighborPort": "I   WS-C2960C",
+        "_source_file": "C:\\Users\\zhiltsov.aa\\Desktop\\net-auto-mermaid\\data\\raw\\DEN\\51\\10.20.98.118.txt",
+        "_template": "cisco_ios_show_cdp_neighbors.template"
       }
     ],
     "cisco_ios_show_cdp_neighbors_detail": [
@@ -112,13 +119,21 @@
         "Platform": "cisco WS-C2960C-8PC-L",
         "_source_file": "C:\\Users\\zhiltsov.aa\\Desktop\\net-auto-mermaid\\data\\raw\\DEN\\51\\10.20.98.118.txt",
         "_template": "cisco_ios_show_cdp_neighbors_detail.template"
+      },
+      {
+        "Neighbor": "DEN-NSWS-49-98-117.kolmar.ru",
+        "LocalInterface": "GigabitEthernet0/1",
+        "NeighborPort": "GigabitEthernet0/1",
+        "Platform": "cisco WS-C2960C-8PC-L",
+        "_source_file": "C:\\Users\\zhiltsov.aa\\Desktop\\net-auto-mermaid\\data\\raw\\DEN\\51\\10.20.98.118.txt",
+        "_template": "cisco_ios_show_cdp_neighbors_detail.template"
       }
     ],
     "cisco_ios_show_version": [
       {
         "Version": "15.0(2)SE8",
         "Model": "",
-        "Uptime": "7 weeks, 4 hours, 32 minutes",
+        "Uptime": "7 weeks, 2 days, 5 hours, 46 minutes",
         "_source_file": "C:\\Users\\zhiltsov.aa\\Desktop\\net-auto-mermaid\\data\\raw\\DEN\\51\\10.20.98.118.txt",
         "_template": "cisco_ios_show_version.template"
       },

@@ -13,7 +13,7 @@ Compiled Sat 23-Mar-19 09:05 by prod_rel_team
 ROM: Bootstrap program is C2960CX boot loader
 BOOTLDR: C2960CX Boot Loader (C2960CX-HBOOT-M) Version 15.2(6r)E, RELEASE SOFTWARE (fc1)
 
-CHU-NSWS-24-98-232 uptime is 4 days, 22 hours, 49 minutes
+CHU-NSWS-24-98-232 uptime is 1 week, 3 minutes
 System returned to ROM by power-on
 System restarted at 14:54:47 YAKT Wed Oct 22 2025
 System image file is "flash:/c2960cx-universalk9-mz.152-7.E/c2960cx-universalk9-mz.152-7.E.bin"
@@ -520,7 +520,7 @@ Port Description - not advertised
 System Name - not advertised
 System Description - not advertised
 
-Time remaining: 180 seconds
+Time remaining: 219 seconds
 System Capabilities - not advertised
 Enabled Capabilities - not advertised
 Management Addresses - not advertised
@@ -542,7 +542,7 @@ Technical Support: http://www.cisco.com/techsupport
 Copyright (c) 1986-2015 by Cisco Systems, Inc.
 Compiled Tue 21-Jul-15 13:24 by prod_rel_team
 
-Time remaining: 112 seconds
+Time remaining: 95 seconds
 System Capabilities: B,R
 Enabled Capabilities: B
 Management Addresses:
@@ -566,7 +566,7 @@ Entry address(es):
   IP address: 169.254.187.90
 Platform: NanoStation M2,  Capabilities: Trans-Bridge 
 Interface: GigabitEthernet0/10,  Port ID (outgoing port): br0
-Holdtime : 117 sec
+Holdtime : 108 sec
 
 Version :
 XW.v6.3.6
@@ -579,7 +579,7 @@ Entry address(es):
   IP address: 10.20.98.93
 Platform: cisco WS-C2960CX-8PC-L,  Capabilities: Switch IGMP 
 Interface: GigabitEthernet0/11,  Port ID (outgoing port): GigabitEthernet0/12
-Holdtime : 126 sec
+Holdtime : 166 sec
 
 Version :
 Cisco IOS Software, C2960CX Software (C2960CX-UNIVERSALK9-M), Version 15.2(3)E2, RELEASE SOFTWARE (fc1)
@@ -601,7 +601,7 @@ Entry address(es):
   IP address: 10.20.98.231
 Platform: cisco WS-C3560CX-12PC-S,  Capabilities: Switch IGMP 
 Interface: GigabitEthernet0/12,  Port ID (outgoing port): GigabitEthernet0/15
-Holdtime : 172 sec
+Holdtime : 138 sec
 
 Version :
 Cisco IOS Software, C3560CX Software (C3560CX-UNIVERSALK9-M), Version 15.2(4)E4, RELEASE SOFTWARE (fc2)
@@ -627,10 +627,10 @@ Capability Codes: R - Router, T - Trans Bridge, B - Source Route Bridge
                   D - Remote, C - CVTA, M - Two-port Mac Relay 
 
 Device ID        Local Intrfce     Holdtme    Capability  Platform  Port ID
-NanoStation M2   Gig 0/10          117               T    NanoStati br0
+NanoStation M2   Gig 0/10          108               T    NanoStati br0
 CHU-NSWS-24-98-93.kolmar.ru
-                 Gig 0/11          126              S I   WS-C2960C Gig 0/12
+                 Gig 0/11          166              S I   WS-C2960C Gig 0/12
 CHU-NSWS-25-98-231.kolmar.ru
-                 Gig 0/12          172              S I   WS-C3560C Gig 0/15
+                 Gig 0/12          138              S I   WS-C3560C Gig 0/15
 
 Total cdp entries displayed : 3

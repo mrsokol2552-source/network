@@ -1,0 +1,923 @@
+Current configuration : 29816 bytes
+!
+! Last configuration change at 08:30:20 YAKT Sun Aug 17 2025 by november
+!
+version 17.6
+no service timestamps debug
+no service timestamps log
+service password-encryption
+service call-home
+platform qfp utilization monitor load 80
+no platform punt-keepalive disable-kernel-core
+!
+hostname NER-NRTR-01-10-1
+!
+boot-start-marker
+boot system bootflash:isr4300-universalk9.17.06.03a.SPA.bin
+boot-end-marker
+!
+!
+vrf definition LOCAL
+ !
+ address-family ipv4
+  route-replicate from vrf TTK unicast all
+  route-replicate from vrf MEGAFON unicast all
+ exit-address-family
+!
+vrf definition MEGAFON
+ !
+ address-family ipv4
+  route-replicate from vrf LOCAL unicast all
+ exit-address-family
+!
+vrf definition Mgmt-intf
+ !
+ address-family ipv4
+ exit-address-family
+ !
+ address-family ipv6
+ exit-address-family
+!
+vrf definition TTK
+ !
+ address-family ipv4
+  route-replicate from vrf LOCAL unicast all
+ exit-address-family
+!
+logging userinfo
+!
+aaa new-model
+!
+!
+aaa group server radius KOLMAR
+ server name cis.kolmar.pro_210
+ server name cis.kolmar.pro_212
+ ip vrf forwarding LOCAL
+ deadtime 333
+!
+aaa authentication login login-RADIUS group KOLMAR local
+aaa authorization console
+aaa authorization exec auth-RADIUS-exec group KOLMAR local
+!
+!
+!
+!
+!
+aaa server radius dynamic-author
+ client 192.168.74.210 server-key 7 060A042B495F0711161B14090013
+ client 192.168.74.212 server-key 7 05070D05245D40010A091110071B
+!
+aaa session-id common
+clock timezone YAKT 9 0
+!
+!
+!
+!
+!
+!
+!
+ip domain name kolmar.local
+!
+!
+!
+ip wccp web-cache redirect-list WCCP_ACCESS
+ip wccp 70 redirect-list WCCP_ACCESS
+login block-for 100 attempts 7 within 100
+login on-failure log
+login on-success log
+!
+!
+!
+!
+!
+!
+!
+subscriber templating
+!
+!
+!
+!
+!
+multilink bundle-name authenticated
+!
+flow record NetFlow
+ match ipv4 source address
+ match ipv4 destination address
+ match ipv4 protocol
+ match transport source-port
+ match transport destination-port
+ match ipv4 tos
+ match interface input
+ match routing vrf input
+ collect interface output
+ collect counter bytes
+ collect counter packets
+ collect timestamp sys-uptime first
+ collect timestamp sys-uptime last
+ collect application name
+ collect routing source as
+ collect routing destination as
+!
+!
+flow exporter NetFlowExploter
+ destination 10.10.0.142 vrf LOCAL
+ source GigabitEthernet0/0/1
+ transport udp 2055
+ template data timeout 60
+ option application-table timeout 60
+ option application-attributes timeout 300
+!
+!
+flow monitor NetFlowMonitor
+ exporter NetFlowExploter
+ cache timeout active 60
+ record NetFlow
+!
+!
+!
+key chain kolmar_eigrp
+ key 1
+  key-string 7 0450040A02205E711A1C06
+!
+!
+crypto pki trustpoint TP-self-signed-3637830731
+ enrollment selfsigned
+ subject-name cn=IOS-Self-Signed-Certificate-3637830731
+ revocation-check none
+ rsakeypair TP-self-signed-3637830731
+!
+crypto pki trustpoint SLA-TrustPoint
+ enrollment terminal
+ revocation-check crl
+!
+!
+crypto pki certificate chain TP-self-signed-3637830731
+ certificate self-signed 01
+  30820330 30820218 A0030201 02020101 300D0609 2A864886 F70D0101 05050030
+  31312F30 2D060355 04031326 494F532D 53656C66 2D536967 6E65642D 43657274
+  69666963 6174652D 33363337 38333037 3331301E 170D3139 30383134 30353039
+  34355A17 0D323030 31303130 30303030 305A3031 312F302D 06035504 03132649
+  4F532D53 656C662D 5369676E 65642D43 65727469 66696361 74652D33 36333738
+  33303733 31308201 22300D06 092A8648 86F70D01 01010500 0382010F 00308201
+  0A028201 0100C62E 1779163B 162CA24A 50B8C2A8 AA9AB7B2 963283C7 5DC71AF7
+  4D966114 38260D79 C8381A1E EF630C9D 6789550C EF7A5807 11DD218A 9EACB6C5
+  BF5D3A3C 03351F49 744656D5 65DCE1AE 73C37CBA E85236D8 5569D017 3E244E11
+  D726BCE2 0095EB4A 628947FB EF61EABF 884B9FF4 8B011CEA 6808C9D8 8ECF312A
+  7E53DEE3 AB01E5AC EC7421A9 9F530C37 0D121B5F CBAB6585 41D66AB8 78396405
+  24821848 36C5EA81 FE5CD194 5511A628 CF4366AE 503AFA01 A82B6987 EAEEE208
+  A282E00C B13CEA65 7CA97408 1C69200A 9EACA79E 4DB3060C F2264EAF 0E4E59C4
+  1470E4ED E2E5FE7D C5B25653 E06B2789 35CBCC40 FBEEB12C 9FBAD2A0 E42678A1
+  7BF16870 AD3D0203 010001A3 53305130 0F060355 1D130101 FF040530 030101FF
+  301F0603 551D2304 18301680 14CE1603 D29ABD2F 333CB676 717191E1 3C2BA2B4
+  3B301D06 03551D0E 04160414 CE1603D2 9ABD2F33 3CB67671 7191E13C 2BA2B43B
+  300D0609 2A864886 F70D0101 05050003 82010100 C2E90CE1 C97005E4 742D734F
+  567C4804 2AF909F3 7BC32436 AB1017F5 B03C27E1 1D6E1D5E 9149EFA3 BAD18B2A
+  7E49687A DA5201CC 59CAC117 6764175D 68B817A1 728770D9 D311472B D9175E5C
+  825DEA8F C360672C 1F17A8AB 8F2EBC68 52CFF015 3A457236 CF4F96CC A8072FBF
+  02183BB8 C975858B 88D44D9B 98E1D75E 94753602 AF003BCC 85343964 970427C0
+  2BABF4B2 EA68A02C 0E9F11B8 22FB8C7B BE71A766 A8C70ADD 417D20BB 3E6A74C5
+  32BF6ADE 7A2B5527 6FF4AD0F 240EEBDA 0C93EC30 DEC403A6 E8D49BEB 4DA55AE6
+  516ECA9E 8E7D067F CB91296F AA5ED31F 1E7B22E5 0B3978D7 FC4F5FB0 D71294D0
+  FEFFB127 FFFF21CD 8D36F652 F8B3E745 46F3D64F
+        quit
+crypto pki certificate chain SLA-TrustPoint
+ certificate ca 01
+  30820321 30820209 A0030201 02020101 300D0609 2A864886 F70D0101 0B050030
+  32310E30 0C060355 040A1305 43697363 6F312030 1E060355 04031317 43697363
+  6F204C69 63656E73 696E6720 526F6F74 20434130 1E170D31 33303533 30313934
+  3834375A 170D3338 30353330 31393438 34375A30 32310E30 0C060355 040A1305
+  43697363 6F312030 1E060355 04031317 43697363 6F204C69 63656E73 696E6720
+  526F6F74 20434130 82012230 0D06092A 864886F7 0D010101 05000382 010F0030
+  82010A02 82010100 A6BCBD96 131E05F7 145EA72C 2CD686E6 17222EA1 F1EFF64D
+  CBB4C798 212AA147 C655D8D7 9471380D 8711441E 1AAF071A 9CAE6388 8A38E520
+  1C394D78 462EF239 C659F715 B98C0A59 5BBB5CBD 0CFEBEA3 700A8BF7 D8F256EE
+  4AA4E80D DB6FD1C9 60B1FD18 FFC69C96 6FA68957 A2617DE7 104FDC5F EA2956AC
+  7390A3EB 2B5436AD C847A2C5 DAB553EB 69A9A535 58E9F3E3 C0BD23CF 58BD7188
+  68E69491 20F320E7 948E71D7 AE3BCC84 F10684C7 4BC8E00F 539BA42B 42C68BB7
+  C7479096 B4CB2D62 EA2F505D C7B062A4 6811D95B E8250FC4 5D5D5FB8 8F27D191
+  C55F0D76 61F9A4CD 3D992327 A8BB03BD 4E6D7069 7CBADF8B DF5F4368 95135E44
+  DFC7C6CF 04DD7FD1 02030100 01A34230 40300E06 03551D0F 0101FF04 04030201
+  06300F06 03551D13 0101FF04 05300301 01FF301D 0603551D 0E041604 1449DC85
+  4B3D31E5 1B3E6A17 606AF333 3D3B4C73 E8300D06 092A8648 86F70D01 010B0500
+  03820101 00507F24 D3932A66 86025D9F E838AE5C 6D4DF6B0 49631C78 240DA905
+  604EDCDE FF4FED2B 77FC460E CD636FDB DD44681E 3A5673AB 9093D3B1 6C9E3D8B
+  D98987BF E40CBD9E 1AECA0C2 2189BB5C 8FA85686 CD98B646 5575B146 8DFC66A8
+  467A3DF4 4D565700 6ADF0F0D CF835015 3C04FF7C 21E878AC 11BA9CD2 55A9232C
+  7CA7B7E6 C1AF74F6 152E99B7 B1FCF9BB E973DE7F 5BDDEB86 C71E3B49 1765308B
+  5FB0DA06 B92AFE7F 494E8A9E 07B85737 F3A58BE1 1A48A229 C37C1E69 39F08678
+  80DDCD16 D6BACECA EEBC7CF9 8428787B 35202CDC 60E4616A B623CDBD 230E3AFB
+  418616A9 4093E049 4D10AB75 27E86F73 932E35B5 8862FDAE 0275156F 719BB2F0
+  D697DF7F 28
+        quit
+!
+!
+no license feature hseck9
+license udi pid ISR4351/K9 sn FDO22462G94
+license boot level securityk9
+memory free low-watermark processor 67482
+!
+!
+!
+!
+!
+object-group service FORWARD-PORT
+ tcp eq smtp
+ tcp eq 443
+ tcp eq echo
+!
+object-group network MEGAFON-ALLOW
+ 10.22.0.0 255.255.255.0
+ host 172.16.50.2
+!
+object-group network MEGAFON-DENY
+ 192.168.0.0 255.255.255.0
+!
+object-group network NAT-DENY
+ 192.168.0.0 255.255.255.0
+!
+object-group network NAT-PERMIT
+ 10.10.0.0 255.255.255.0
+ 10.12.0.0 255.255.255.0
+ 10.14.0.0 255.255.255.0
+ 10.20.0.0 255.255.252.0
+ 10.30.0.0 255.255.255.0
+ 10.31.0.0 255.255.252.0
+ 10.32.0.0 255.255.252.0
+ 10.33.0.0 255.255.252.0
+ 10.34.0.0 255.255.252.0
+ 10.35.0.0 255.255.255.0
+ 10.40.0.0 255.255.252.0
+ 10.60.0.0 255.255.252.0
+ 10.80.0.0 255.255.252.0
+ 10.90.0.0 255.255.252.0
+ 10.13.0.0 255.255.254.0
+ 192.168.64.0 255.255.192.0
+ 10.11.109.0 255.255.255.0
+ 172.16.50.0 255.255.255.0
+ 192.168.10.0 255.255.255.0
+ 172.16.52.0 255.255.255.0
+ 172.16.55.0 255.255.255.0
+ 10.200.51.0 255.255.255.0
+ 10.20.20.0 255.255.255.240
+ 10.40.10.0 255.255.255.0
+ 10.90.10.0 255.255.255.0
+ 10.100.77.0 255.255.255.0
+ host 10.11.11.111
+ host 10.11.11.33
+ 10.40.12.0 255.255.255.0
+ 10.90.12.0 255.255.255.0
+ host 10.11.11.40
+ host 10.11.11.41
+ 10.40.30.0 255.255.255.0
+ 10.40.32.0 255.255.255.0
+ 10.40.34.0 255.255.255.0
+ host 10.11.11.50
+ host 10.11.11.51
+ 10.91.0.0 255.255.255.0
+ 10.40.31.0 255.255.255.0
+ 10.40.33.0 255.255.255.0
+ 10.200.55.0 255.255.255.0
+ 10.31.31.0 255.255.255.0
+ 10.22.0.0 255.255.255.0
+ host 172.16.50.18
+ host 172.16.50.14
+ host 172.16.50.10
+ 172.16.10.4 255.255.255.252
+ host 172.16.11.2
+ host 172.16.50.42
+ host 10.20.99.100
+ host 172.16.10.2
+ 10.37.0.0 255.255.255.0
+ host 172.16.50.50
+ 10.66.66.0 255.255.255.0
+ host 172.16.50.59
+ host 172.16.50.58
+!
+object-group network TTK-ALLOW
+ 10.10.0.0 255.255.255.0
+ 10.12.0.0 255.255.255.0
+ 10.14.0.0 255.255.255.0
+ 10.20.0.0 255.255.252.0
+ 10.30.0.0 255.255.255.0
+ 10.31.0.0 255.255.252.0
+ 10.32.0.0 255.255.252.0
+ 10.33.0.0 255.255.252.0
+ 10.34.0.0 255.255.252.0
+ 10.35.0.0 255.255.255.0
+ 10.40.0.0 255.255.252.0
+ 10.60.0.0 255.255.252.0
+ 10.80.0.0 255.255.252.0
+ 10.90.0.0 255.255.252.0
+ 10.13.0.0 255.255.254.0
+ 192.168.64.0 255.255.192.0
+ host 10.100.77.20
+ 10.200.55.0 255.255.255.0
+ 10.31.31.0 255.255.255.0
+ 10.37.0.0 255.255.255.0
+!
+object-group network TTK-DENY
+ host 172.16.50.2
+!
+diagnostic bootup level minimal
+!
+spanning-tree extend system-id
+!
+username november privilege 15 secret 9 $14$/8dA$Hgbb75Zr.r0ZW.$F2uh68CMJPRhYZkNcr56Pcinnvgkti3WkOwosrtNsNY
+username ivashenko_vb privilege 15 secret 9 $14$bi7z$KoA9urnlmvVEQk$aqIEhiJPOHpVemKQgEFh.p27.1rMyHLZz3nHOzvSnyM
+username sib_uib privilege 15 secret 9 $9$XG3qtYGO6dEK1U$OrwZYaKVQZuNdbxZrABgfs.En9nekzzX0E9VqI4AqSA
+!
+redundancy
+ mode none
+!
+!
+!
+!
+!
+no cdp run
+!
+track 10 ip sla 10 reachability
+ delay down 20 up 10
+!
+!
+crypto keyring TTK vrf TTK
+  pre-shared-key address 0.0.0.0 0.0.0.0 key A!Kolmar$me
+crypto keyring MEGAFON vrf MEGAFON
+  pre-shared-key address 0.0.0.0 0.0.0.0 key A!Kolmar$me
+crypto keyring LOCAL vrf LOCAL
+  pre-shared-key address 0.0.0.0 0.0.0.0 key A!Kolmar$me
+!
+!
+!
+!
+!
+!
+!
+crypto isakmp policy 1
+ encryption aes 256
+ hash sha512
+ authentication pre-share
+ group 14
+crypto isakmp keepalive 10 periodic
+!
+!
+crypto ipsec transform-set dmvpn_ts esp-aes 256 esp-sha256-hmac
+ mode transport
+!
+!
+crypto ipsec profile dmvpn_profile
+ set transform-set dmvpn_ts
+!
+!
+!
+!
+!
+!
+!
+!
+!
+interface Tunnel0
+ ip address 172.16.3.2 255.255.255.240
+ shutdown
+!
+interface Tunnel1
+ description MEGAFON-DMVPN
+ vrf forwarding LOCAL
+ ip address 172.16.2.2 255.255.255.240
+ no ip redirects
+ ip mtu 1416
+ ip nhrp network-id 100000
+ ip nhrp nhs 172.16.2.1 nbma 188.170.14.163 multicast
+ ip tcp adjust-mss 1360
+ ip ospf authentication
+ ip ospf authentication-key 7 002F1C0A095A19475D
+ ip ospf network point-to-multipoint
+ tunnel source GigabitEthernet0/0/0
+ tunnel mode gre multipoint
+ tunnel key 2014
+ tunnel vrf TTK
+ tunnel protection ipsec profile dmvpn_profile
+!
+interface Tunnel3
+ description DMVPN_HUB_MEGAFON
+ vrf forwarding LOCAL
+ ip address 172.16.3.1 255.255.255.240
+ no ip redirects
+ ip mtu 1416
+ ip nhrp network-id 100
+ ip nhrp redirect
+ ip tcp adjust-mss 1360
+ ip ospf authentication
+ ip ospf authentication-key 7 002F1C0A095A19475D
+ ip ospf network point-to-multipoint
+ shutdown
+ tunnel source GigabitEthernet0/0/2
+ tunnel mode gre multipoint
+ tunnel key 100
+ tunnel vrf MEGAFON
+ tunnel protection ipsec profile dmvpn_profile shared
+!
+interface GigabitEthernet0/0/0
+ description WAN
+ vrf forwarding TTK
+ ip address 188.43.4.145 255.255.255.248
+ no ip redirects
+ no ip proxy-arp
+ ip nat outside
+ ip verify unicast reverse-path
+ ip access-group TTK-WOT out
+ negotiation auto
+ no cdp enable
+ ip virtual-reassembly max-reassemblies 64
+!
+interface GigabitEthernet0/0/1
+ vrf forwarding LOCAL
+ ip flow monitor NetFlowMonitor input
+ ip flow monitor NetFlowMonitor output
+ ip address 172.16.10.1 255.255.255.252
+ no ip redirects
+ no ip proxy-arp
+ ip nat inside
+ ip policy route-map ROUTE-INTERNET
+ ip ospf network point-to-point
+ negotiation auto
+ ip virtual-reassembly max-reassemblies 256
+!
+interface GigabitEthernet0/0/2
+ description WAN_MEGAFON
+ vrf forwarding MEGAFON
+ no ip address
+ no ip redirects
+ no ip proxy-arp
+ ip nat outside
+ ip verify unicast reverse-path
+ negotiation auto
+ no cdp enable
+ ip virtual-reassembly max-reassemblies 64
+!
+interface GigabitEthernet0/0/2.47
+ encapsulation dot1Q 47
+ vrf forwarding TTK
+ ip address 62.33.87.254 255.255.255.224 secondary
+ ip address 62.33.87.228 255.255.255.224
+ no ip redirects
+ no ip proxy-arp
+ ip access-group TTK-WOT out
+ no cdp enable
+ ip virtual-reassembly max-reassemblies 64
+!
+interface GigabitEthernet0/0/2.1930
+ encapsulation dot1Q 1930
+ vrf forwarding MEGAFON
+ ip address 31.173.228.8 255.255.255.240
+ no ip redirects
+ no ip proxy-arp
+ ip nat outside
+ ip verify unicast reverse-path
+ ip access-group TTK-WOT out
+ no cdp enable
+ ip virtual-reassembly max-reassemblies 64
+!
+interface GigabitEthernet0
+ vrf forwarding Mgmt-intf
+ no ip address
+ shutdown
+ negotiation auto
+!
+!
+router eigrp 1
+ !
+ address-family ipv4 vrf LOCAL autonomous-system 1
+  network 172.16.2.0 0.0.0.15
+  network 172.16.3.0 0.0.0.15
+  network 192.168.10.0
+  network 192.168.64.0 0.0.63.255
+ exit-address-family
+!
+router ospf 10 vrf LOCAL
+ capability vrf-lite
+ passive-interface default
+ no passive-interface GigabitEthernet0/0/1
+ no passive-interface Tunnel1
+ network 172.16.2.0 0.0.0.15 area 10.20.96.0
+ network 172.16.10.0 0.0.0.3 area 10.20.96.0
+ network 192.168.10.0 0.0.0.255 area 10.20.96.0
+!
+no ip http server
+no ip http secure-server
+ip http max-connections 3
+ip http client source-interface GigabitEthernet0/0/1.1
+ip forward-protocol nd
+ip ftp username FTP1
+ip ftp password 7 013532340A
+ip nat settings interface-overload block port tcp 10443
+ip nat settings interface-overload block port tcp 5900
+ip nat settings interface-overload block port tcp 21531
+ip nat settings interface-overload block port tcp 13000
+ip nat translation timeout 20
+ip nat translation tcp-timeout 120
+ip nat translation udp-timeout 30
+ip nat translation dns-timeout 30
+ip nat translation icmp-timeout 10
+ip nat translation max-entries 70000
+ip nat translation max-entries all-host 213
+ip nat translation max-entries host 10.12.0.13 5000
+ip nat translation max-entries host 10.10.0.27 5000
+ip nat translation max-entries host 10.10.0.28 5000
+ip nat translation max-entries host 10.40.10.13 5000
+ip nat translation max-entries host 10.10.0.42 5000
+ip nat translation max-entries host 10.90.10.26 5000
+no ip nat service sip udp port 5060
+ip nat inside source static tcp 172.16.50.2 25 31.173.228.8 25 vrf LOCAL extendable
+ip nat inside source static tcp 172.16.50.10 443 31.173.228.8 443 vrf LOCAL extendable
+ip nat inside source static tcp 10.10.0.254 3377 31.173.228.8 3377 vrf LOCAL extendable
+ip nat inside source static 172.16.50.18 31.173.228.8 vrf LOCAL route-map VINTEO extendable
+ip nat inside source static tcp 172.16.50.10 443 62.33.87.228 443 vrf LOCAL extendable
+ip nat inside source static udp 172.16.50.50 1488 62.33.87.228 1488 vrf LOCAL extendable
+ip nat inside source static tcp 10.10.0.254 3377 62.33.87.228 3377 vrf LOCAL extendable
+ip nat inside source static tcp 172.16.50.2 25 188.43.4.145 25 vrf LOCAL extendable
+ip nat inside source static tcp 172.16.50.10 443 188.43.4.145 443 vrf LOCAL extendable
+ip nat inside source static tcp 172.16.50.18 22 188.43.4.145 2233 vrf LOCAL extendable
+ip nat inside source static tcp 172.16.50.42 21531 188.43.4.145 21531 vrf LOCAL extendable
+ip nat inside source static udp 172.16.50.14 45455 188.43.4.145 45455 vrf LOCAL extendable
+ip nat inside source static tcp 10.20.99.100 50015 188.43.4.145 50015 vrf LOCAL extendable
+ip nat inside source static tcp 10.20.99.100 50016 188.43.4.145 50016 vrf LOCAL extendable
+ip nat inside source static tcp 10.20.99.100 50017 188.43.4.145 50017 vrf LOCAL extendable
+ip nat inside source route-map MEGAFON-NAT interface GigabitEthernet0/0/2.1930 vrf LOCAL overload
+ip nat inside source route-map TTK-NAT interface GigabitEthernet0/0/0 vrf LOCAL overload
+ip route vrf TTK 0.0.0.0 0.0.0.0 188.43.4.150 track 10
+ip route vrf LOCAL 10.0.10.0 255.255.255.0 10.0.2.12
+ip route vrf LOCAL 10.0.11.0 255.255.255.0 10.0.2.11
+ip route vrf LOCAL 10.0.31.0 255.255.255.0 10.0.2.11
+ip route vrf LOCAL 10.0.32.0 255.255.255.0 10.0.2.11
+ip route vrf LOCAL 10.0.33.0 255.255.255.0 10.0.2.11
+ip route vrf LOCAL 10.0.34.0 255.255.255.0 10.0.2.11
+ip route vrf LOCAL 10.0.35.0 255.255.255.0 10.0.2.11
+ip route vrf LOCAL 10.1.20.0 255.255.255.0 192.168.10.2
+ip route vrf LOCAL 10.1.30.0 255.255.255.0 192.168.10.2
+ip route vrf LOCAL 10.1.31.0 255.255.255.0 192.168.10.2
+ip route vrf LOCAL 10.1.32.0 255.255.255.0 192.168.10.2
+ip route vrf LOCAL 10.1.33.0 255.255.255.0 192.168.10.2
+ip route vrf LOCAL 10.1.34.0 255.255.255.0 192.168.10.2
+ip route vrf LOCAL 10.10.0.0 255.255.255.0 192.168.10.2
+ip route vrf LOCAL 10.11.11.0 255.255.255.0 192.168.10.2
+ip route vrf LOCAL 10.11.109.0 255.255.255.0 192.168.10.2
+ip route vrf LOCAL 10.12.0.0 255.255.255.0 192.168.10.2
+ip route vrf LOCAL 10.13.0.0 255.255.254.0 192.168.10.2
+ip route vrf LOCAL 10.14.0.0 255.255.255.0 192.168.10.2
+ip route vrf LOCAL 10.15.0.0 255.255.254.0 192.168.10.2
+ip route vrf LOCAL 10.20.0.0 255.255.252.0 192.168.10.2
+ip route vrf LOCAL 10.20.20.0 255.255.255.240 192.168.10.2
+ip route vrf LOCAL 10.30.0.0 255.255.255.0 172.16.10.2
+ip route vrf LOCAL 10.31.0.0 255.255.252.0 192.168.10.2
+ip route vrf LOCAL 10.31.31.0 255.255.255.0 172.16.10.2
+ip route vrf LOCAL 10.32.0.0 255.255.252.0 172.16.10.2
+ip route vrf LOCAL 10.33.0.0 255.255.252.0 192.168.10.2
+ip route vrf LOCAL 10.34.0.0 255.255.252.0 192.168.10.2
+ip route vrf LOCAL 10.35.0.0 255.255.255.0 192.168.10.2
+ip route vrf LOCAL 10.36.0.0 255.255.255.0 192.168.10.2
+ip route vrf LOCAL 10.40.0.0 255.255.252.0 192.168.10.2
+ip route vrf LOCAL 10.40.10.0 255.255.255.0 192.168.10.2
+ip route vrf LOCAL 10.40.12.0 255.255.255.0 192.168.10.2
+ip route vrf LOCAL 10.40.30.0 255.255.255.0 192.168.10.2
+ip route vrf LOCAL 10.40.31.0 255.255.255.0 192.168.10.2
+ip route vrf LOCAL 10.40.32.0 255.255.255.0 192.168.10.2
+ip route vrf LOCAL 10.40.33.0 255.255.255.0 192.168.10.2
+ip route vrf LOCAL 10.40.34.0 255.255.255.0 192.168.10.2
+ip route vrf LOCAL 10.60.0.0 255.255.252.0 172.16.10.2
+ip route vrf LOCAL 10.66.66.0 255.255.255.0 172.16.10.2
+ip route vrf LOCAL 10.80.0.0 255.255.252.0 192.168.10.2
+ip route vrf LOCAL 10.90.0.0 255.255.252.0 192.168.10.2
+ip route vrf LOCAL 10.90.10.0 255.255.255.0 192.168.10.2
+ip route vrf LOCAL 10.90.12.0 255.255.255.0 192.168.10.2
+ip route vrf LOCAL 10.91.0.0 255.255.255.0 192.168.10.2
+ip route vrf LOCAL 10.100.10.0 255.255.255.0 192.168.10.2
+ip route vrf LOCAL 10.100.77.0 255.255.255.0 192.168.10.2
+ip route vrf LOCAL 10.200.10.0 255.255.255.0 192.168.10.2
+ip route vrf LOCAL 10.200.31.0 255.255.255.0 192.168.10.2
+ip route vrf LOCAL 10.200.51.0 255.255.255.0 172.16.10.2
+ip route vrf LOCAL 10.200.55.0 255.255.255.0 192.168.10.2
+ip route vrf LOCAL 172.16.50.0 255.255.255.0 192.168.10.2
+ip route vrf LOCAL 172.16.52.0 255.255.255.0 192.168.10.2
+ip route vrf LOCAL 172.16.55.0 255.255.255.0 192.168.10.2
+ip route vrf LOCAL 192.168.64.0 255.255.192.0 192.168.10.2
+ip route vrf MEGAFON 0.0.0.0 0.0.0.0 31.173.228.1 10
+ip route vrf MEGAFON 5.255.209.0 255.255.255.0 31.173.228.1
+ip route vrf MEGAFON 8.8.4.4 255.255.255.255 31.173.228.1
+ip route vrf MEGAFON 37.140.143.0 255.255.255.0 31.173.228.1
+ip route vrf MEGAFON 37.140.188.0 255.255.255.0 31.173.228.1
+ip route vrf MEGAFON 62.249.157.36 255.255.255.255 31.173.228.1
+ip route vrf MEGAFON 77.88.8.1 255.255.255.255 31.173.228.1
+ip route vrf MEGAFON 82.142.137.5 255.255.255.255 31.173.228.1
+ip route vrf MEGAFON 87.250.251.0 255.255.255.0 31.173.228.1
+ip route vrf MEGAFON 91.207.6.75 255.255.255.255 31.173.228.1
+ip route vrf MEGAFON 95.170.149.0 255.255.255.0 31.173.228.1
+ip route vrf MEGAFON 95.173.144.0 255.255.240.0 31.173.228.1
+ip route vrf MEGAFON 95.173.159.13 255.255.255.255 31.173.228.1
+ip route vrf MEGAFON 178.218.107.36 255.255.255.255 31.173.228.1
+ip route vrf MEGAFON 178.218.107.37 255.255.255.255 31.173.228.1
+ip route vrf MEGAFON 178.218.107.39 255.255.255.255 31.173.228.1
+ip route vrf MEGAFON 185.250.151.50 255.255.255.255 31.173.228.1
+ip route vrf MEGAFON 188.43.239.193 255.255.255.255 31.173.228.1
+ip route vrf MEGAFON 212.44.138.0 255.255.255.0 31.173.228.1
+ip route vrf MEGAFON 212.44.138.224 255.255.255.248 31.173.228.1
+ip route vrf TTK 8.8.8.8 255.255.255.255 188.43.4.150
+ip route vrf TTK 77.88.8.8 255.255.255.255 188.43.4.150
+ip ssh time-out 60
+ip ssh authentication-retries 2
+ip ssh port 9922 rotary 9
+ip ssh source-interface GigabitEthernet0/0/1.1
+ip ssh rsa keypair-name SSH
+ip ssh logging events
+ip ssh version 2
+!
+!
+ip access-list extended INTERNET-MEGAFON
+ 10 deny   object-group FORWARD-PORT object-group MEGAFON-DENY any
+ 20 permit object-group FORWARD-PORT object-group MEGAFON-ALLOW any
+ip access-list extended INTERNET-TTK
+ 10 deny   object-group FORWARD-PORT object-group TTK-DENY any
+ 20 permit object-group FORWARD-PORT object-group TTK-ALLOW any
+ip access-list extended MEGAFON
+ 10 deny   ip 127.0.0.0 0.255.255.255 any
+ 20 deny   ip any 127.0.0.0 0.255.255.255
+ 30 deny   ip 221.0.95.0 0.0.0.255 any
+ 40 deny   ip any 221.0.95.0 0.0.0.255
+ 50 deny   ip 195.22.127.0 0.0.0.255 any
+ 60 deny   ip any 195.22.127.0 0.0.0.255
+ 70 deny   ip 224.0.0.0 15.255.255.255 any
+ 80 deny   ip any 224.0.0.0 15.255.255.255
+ 90 deny   ip host 0.0.0.0 any
+ 100 deny   ip any host 0.0.0.0
+ 110 deny   ip host 255.255.255.255 any
+ 120 deny   ip any host 255.255.255.255
+ 130 deny   ip 10.0.0.0 0.255.255.255 any
+ 140 deny   ip any 10.0.0.0 0.255.255.255
+ 150 deny   ip 172.16.0.0 0.15.255.255 any
+ 160 deny   ip any 172.16.0.0 0.15.255.255
+ 170 deny   ip 192.168.0.0 0.0.255.255 any
+ 180 deny   ip any 192.168.0.0 0.0.255.255
+ 190 deny   ip 169.254.0.0 0.0.255.255 any
+ 200 deny   ip any 169.254.0.0 0.0.255.255
+ 210 deny   tcp any any fragments
+ 220 deny   udp any any fragments
+ 230 deny   ip any any fragments
+ 240 deny   icmp any any fragments
+ 250 deny   tcp any any eq 22
+ 260 deny   tcp any any eq telnet
+ 270 deny   tcp any any eq www
+ 280 deny   tcp any any eq 4786
+ 290 deny   udp any any eq 22
+ 300 deny   udp any any eq 23
+ 310 deny   udp any any eq 80
+ 320 deny   tcp any any eq 443
+ 330 deny   udp any any eq 443
+ 340 deny   udp any any eq 4786
+ 350 permit icmp any any echo
+ 360 permit icmp any any echo-reply
+ 370 permit icmp any any time-exceeded
+ 380 permit icmp any any packet-too-big
+ 390 permit ip any any
+ remark END
+ip access-list extended NAT
+ 10 deny   ip object-group NAT-DENY any
+ 20 permit ip object-group NAT-PERMIT any
+ip access-list extended NAT-ACCESS-LIST
+ 10 remark ACCESS VLAN1
+ 10 permit ip 192.168.64.0 0.0.63.255 any
+ 20 remark ACCESS VLAN10
+ 20 permit ip 10.10.0.0 0.0.0.255 any
+ 30 remark ACCESS VLAN12
+ 30 permit ip 10.12.0.0 0.0.0.255 any
+ 40 remark ACCESS VLAN13
+ 40 permit ip 10.13.0.0 0.0.1.255 any
+ 50 remark ACCESS VLAN14
+ 50 permit ip 10.14.0.0 0.0.1.255 any
+ 60 remark ACCESS VLAN20
+ 60 permit ip 10.20.0.0 0.0.3.255 any
+ 70 remark ACCESS VLAN22
+ 70 permit ip 10.22.0.0 0.0.0.255 any
+ 80 remark ACCESS VLAN40
+ 80 permit ip 10.40.0.0 0.0.3.255 any
+ 90 remark ACCESS VLAN60
+ 90 permit ip 10.60.0.0 0.0.3.255 any
+ 100 remark ACCESS VLAN77
+ 100 permit ip 10.100.77.0 0.0.0.255 any
+ 110 remark ACCESS VLAN80
+ 110 permit ip 10.80.0.0 0.0.3.255 any
+ 120 remark ACCESS VLAN90
+ 120 permit ip 10.90.0.0 0.0.3.255 any
+ 130 remark ACCESS VLAN30
+ 130 permit ip 10.30.0.0 0.0.0.255 any
+ 140 remark ACCESS VLAN31
+ 140 permit ip 10.31.0.0 0.0.3.255 any
+ 150 remark ACCESS VLAN32
+ 150 permit ip 10.32.0.0 0.0.3.255 any
+ 160 remark ACCESS VLAN33
+ 160 permit ip 10.33.0.0 0.0.0.255 any
+ 170 remark ACCESS VLAN34
+ 170 permit ip 10.34.0.0 0.0.0.255 any
+ 180 remark ACCESS VLAN35
+ 180 permit ip 10.35.0.0 0.0.0.255 any
+ 190 remark ACCESS VLAN 521
+ 190 permit ip 10.200.31.0 0.0.0.3 any
+ 200 remark ACCESS VLAN 3131
+ 200 permit ip 10.31.31.0 0.0.0.255 any
+ 210 remark ACCESS VLAN 37
+ 210 permit ip 10.37.0.0 0.0.0.255 any
+ip access-list extended OKO
+ 10 permit tcp any host 172.16.50.8 range 6600 6636
+ 20 permit udp any host 172.16.50.8 range 6600 6636
+ 30 permit udp any host 172.16.50.8 range 16600 16636
+ 40 permit tcp any host 172.16.50.8 range 16600 16636
+ 50 permit tcp any host 172.16.50.8 range 2121 2162
+ip access-list extended TTK-WOT
+ 10 deny   ip any 92.223.1.0 0.0.0.255
+ 20 deny   ip any 92.223.4.0 0.0.0.255
+ 30 deny   ip any 92.223.5.0 0.0.0.255
+ 40 deny   ip any 92.223.6.0 0.0.0.255
+ 50 deny   ip any 92.223.8.0 0.0.0.255
+ 60 deny   ip any 92.223.10.0 0.0.0.255
+ 70 deny   ip any 92.223.12.0 0.0.0.255
+ 80 deny   ip any 92.223.14.0 0.0.0.255
+ 90 deny   ip any 92.223.18.0 0.0.0.255
+ 100 deny   ip any 92.223.19.0 0.0.0.255
+ 110 deny   ip any 92.223.21.0 0.0.0.255
+ 120 deny   ip any 92.223.36.0 0.0.0.255
+ 130 deny   ip any 92.223.37.0 0.0.0.255
+ 140 deny   ip any 92.223.38.0 0.0.0.255
+ 150 deny   ip any 185.12.240.0 0.0.0.255
+ 160 deny   ip any 185.12.241.0 0.0.0.255
+ 170 deny   ip any 185.12.242.0 0.0.0.255
+ 180 deny   ip any 88.204.200.0 0.0.0.255
+ 190 remark 4vendeta.com
+ 190 deny   ip any 79.124.60.0 0.0.0.255 log
+ 200 deny   ip any 78.128.113.0 0.0.0.255 log
+ 210 deny   ip any 141.98.81.0 0.0.0.255 log
+ 220 deny   ip any 141.98.80.0 0.0.0.255 log
+ 230 deny   ip any 138.99.216.0 0.0.0.255 log
+ 240 deny   ip any 46.161.27.0 0.0.0.255 log
+ 250 deny   ip any 92.245.132.0 0.0.0.255 log
+ 260 remark bestwayshop.ru.com
+ 260 deny   ip any 84.201.157.0 0.0.0.255 log
+ 270 remark mypoisk.su
+ 270 deny   ip any 139.99.8.0 0.0.0.255 log
+ 280 remark tools.cisco.com
+ 280 deny   ip any 173.37.145.0 0.0.0.255 log
+ 290 permit ip any any
+ remark END
+ip access-list extended VINTEO
+ 30 permit tcp any host 172.16.50.18 range 20000 30000
+ 40 permit udp any host 172.16.50.18 range 20000 30000
+ip access-list extended VKS
+ 10 permit tcp any host 10.10.0.8 range 34000 36000
+ 20 permit udp any host 10.10.0.8 range 34000 36000
+ip access-list extended VKS-ACL
+ 10 permit tcp host 10.10.0.123 any eq 443
+ip access-list extended VPN-TRAFFIC
+ 10 remark PERMIT IPSEC
+ 10 permit ip 192.168.64.0 0.0.63.255 10.0.2.0 0.0.0.255
+ remark END
+ip access-list extended WCCP_ACCESS
+ 10 remark Squid bypass WCCP
+ 10 deny   ip host 10.10.0.10 any
+ 20 deny   ip host 10.12.0.13 any
+!
+ip radius source-interface GigabitEthernet0/0/1 vrf LOCAL
+ip sla 10
+ icmp-echo 77.88.8.8 source-interface GigabitEthernet0/0/0
+  vrf TTK
+  threshold 1000
+  timeout 1500
+  frequency 3
+ip sla schedule 10 life forever start-time now
+ip sla 20
+ icmp-echo 8.8.4.4 source-interface GigabitEthernet0/0/2.1930
+  vrf MEGAFON
+  threshold 1000
+  timeout 1500
+  frequency 3
+ip sla schedule 20 life forever start-time now
+kron occurrence backup at 17:00 recurring
+ policy-list backup
+!
+kron policy-list backup
+ cli copy startup-config ftp://192.168.74.5
+ cli copy startup-config tftp://dump.kolmar.pro/192.168.10.1
+!
+logging dmvpn
+logging history debugging
+logging source-interface GigabitEthernet0/0/1 vrf LOCAL
+logging host 10.10.0.19 transport udp port 1515
+logging host 10.10.0.19 vrf LOCAL transport udp port 1515
+logging host 10.10.0.24 vrf LOCAL
+logging host 10.10.0.24
+ip access-list standard 5
+ 10 permit 192.168.99.49
+ 20 permit 10.10.0.0 0.0.0.255
+ip access-list standard 10
+ 10 permit 192.168.64.0 0.0.31.255 log
+ 20 permit 10.10.0.0 0.0.0.255 log
+ 30 permit 10.12.0.0 0.0.0.255 log
+ 40 deny   any log
+!
+route-map VINTEO permit 10
+ match ip address VINTEO
+!
+route-map TTK-NAT permit 10
+ match ip address NAT
+ match interface GigabitEthernet0/0/0
+!
+route-map MEGAFON-NAT permit 10
+ match ip address NAT
+ match interface GigabitEthernet0/0/2.1930
+!
+route-map MEGAFON permit 10
+ match ip address NAT-ACCESS-LIST
+ match interface GigabitEthernet0/0/2
+!
+route-map OKO permit 10
+ match ip address OKO
+!
+route-map TTK permit 10
+ match ip address NAT-ACCESS-LIST
+ match interface GigabitEthernet0/0/0
+!
+route-map ROUTE-INTERNET permit 10
+ match ip address INTERNET-TTK
+ set ip next-hop verify-availability 188.43.4.150 10 track 10
+!
+route-map ROUTE-INTERNET permit 20
+ match ip address INTERNET-MEGAFON
+ set ip next-hop verify-availability 31.173.228.1 10 track 20
+!
+snmp-server community public RO 5
+snmp-server host 10.10.0.7 version 2c public
+!
+!
+radius-server retransmit 1
+radius-server timeout 2
+radius-server key 7 0008180C014A050E1C2D4A4C050E
+!
+radius server cis.kolmar.pro_210
+ address ipv4 192.168.74.210 auth-port 1812 acct-port 1813
+ timeout 5
+ retransmit 3
+ key 7 141B190109152423372435372E04
+!
+radius server cis.kolmar.pro_212
+ address ipv4 192.168.74.212 auth-port 1812 acct-port 1813
+ timeout 5
+ retransmit 3
+ key 7 082D47440C080B1F01070A06263C
+!
+!
+control-plane
+!
+!
+line con 0
+ exec-timeout 13 0
+ privilege level 15
+ authorization exec auth-RADIUS-exec
+ logging synchronous
+ login authentication login-RADIUS
+ stopbits 1
+line aux 0
+line vty 0 4
+ access-class 10 in vrf-also
+ exec-timeout 15 0
+ privilege level 15
+ authorization exec auth-RADIUS-exec
+ logging synchronous
+ login authentication login-RADIUS
+ rotary 9
+ length 0
+ transport input ssh
+ transport output ssh
+line vty 5 15
+ exec-timeout 15 0
+ authorization exec auth-RADIUS-exec
+ login authentication login-RADIUS
+ transport input none
+!
+call-home
+ ! If contact email address in call-home is configured as sch-smart-licensing@cisco.com
+ ! the email address configured in Cisco Smart License Portal will be used as contact email address to send SCH notifications.
+ contact-email-addr sch-smart-licensing@cisco.com
+ profile "CiscoTAC-1"
+  active
+  destination transport-method http
+!
+!
+!
+!
+!
+event manager applet CLR-NAT-10
+ event track 10 state any
+ action 10 cli command "enable"
+ action 20 cli command "clear ip nat translation *"
+event manager applet CLR_NAT_20
+ event track 20 state any
+ action 10 cli command "enable"
+ action 20 cli command "clear ip nat traslation *"
+!
+end

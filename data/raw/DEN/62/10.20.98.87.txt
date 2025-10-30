@@ -13,7 +13,7 @@ Compiled Thu 05-Apr-18 03:25 by prod_rel_team
 ROM: Bootstrap program is C2960CX boot loader
 BOOTLDR: C2960CX Boot Loader (C2960CX-HBOOT-M) Version 15.2(4r)E5, RELEASE SOFTWARE (fc4)
 
-DEN-NSWS-62-98-87 uptime is 14 weeks, 6 days, 21 hours, 11 minutes
+DEN-NSWS-62-98-87 uptime is 15 weeks, 1 day, 22 hours, 25 minutes
 System returned to ROM by power-on
 System restarted at 00:26:17 YAKT Tue Jul 15 2025
 System image file is "flash:/c2960cx-universalk9-mz.152-4.E6/c2960cx-universalk9-mz.152-4.E6.bin"
@@ -557,7 +557,7 @@ Technical Support: http://www.cisco.com/techsupport
 Copyright (c) 1986-2018 by Cisco Systems, Inc.
 Compiled Thu 05-Apr-18 03:25 by prod_rel_team
 
-Time remaining: 103 seconds
+Time remaining: 93 seconds
 System Capabilities: B,R
 Enabled Capabilities: B
 Management Addresses:
@@ -581,7 +581,7 @@ Technical Support: http://www.cisco.com/techsupport
 Copyright (c) 1986-2018 by Cisco Systems, Inc.
 Compiled Thu 05-Apr-18 03:25 by prod_rel_team
 
-Time remaining: 108 seconds
+Time remaining: 91 seconds
 System Capabilities: B,R
 Enabled Capabilities: B
 Management Addresses:
@@ -604,7 +604,7 @@ Entry address(es):
   IP address: 10.20.98.132
 Platform: cisco WS-C2960CX-8PC-L,  Capabilities: Switch IGMP 
 Interface: GigabitEthernet0/11,  Port ID (outgoing port): GigabitEthernet0/12
-Holdtime : 143 sec
+Holdtime : 153 sec
 
 Version :
 Cisco IOS Software, C2960CX Software (C2960CX-UNIVERSALK9-M), Version 15.2(4)E6, RELEASE SOFTWARE (fc4)
@@ -626,7 +626,7 @@ Entry address(es):
   IP address: 10.20.98.134
 Platform: cisco WS-C2960CX-8PC-L,  Capabilities: Switch IGMP 
 Interface: GigabitEthernet0/12,  Port ID (outgoing port): GigabitEthernet0/11
-Holdtime : 131 sec
+Holdtime : 179 sec
 
 Version :
 Cisco IOS Software, C2960CX Software (C2960CX-UNIVERSALK9-M), Version 15.2(4)E6, RELEASE SOFTWARE (fc4)
@@ -653,8 +653,8 @@ Capability Codes: R - Router, T - Trans Bridge, B - Source Route Bridge
 
 Device ID        Local Intrfce     Holdtme    Capability  Platform  Port ID
 DEN-NSWS-58-98-132.kolmar.ru
-                 Gig 0/11          142              S I   WS-C2960C Gig 0/12
+                 Gig 0/11          153              S I   WS-C2960C Gig 0/12
 DEN-NSWS-59-98-134.kolmar.ru
-                 Gig 0/12          131              S I   WS-C2960C Gig 0/11
+                 Gig 0/12          179              S I   WS-C2960C Gig 0/11
 
 Total cdp entries displayed : 2
