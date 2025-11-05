@@ -23,7 +23,6 @@ from utilities.release import load_release_data
 from utilities.string import trailing_slash
 from .monkey import get_unique_validators
 
-
 #
 # Monkey-patching
 #
@@ -31,7 +30,6 @@ from .monkey import get_unique_validators
 # TODO: Remove this once #20547 has been implemented
 # Override DRF's get_unique_validators() function with our own (see bug #19302)
 field_mapping.get_unique_validators = get_unique_validators
-
 
 #
 # Environment setup
@@ -679,14 +677,12 @@ SOCIAL_AUTH_USER_MODEL = AUTH_USER_MODEL
 
 PROMETHEUS_EXPORT_MIGRATIONS = False
 
-
 #
 # Django filters
 #
 
 FILTERS_NULL_CHOICE_LABEL = 'None'
 FILTERS_NULL_CHOICE_VALUE = 'null'
-
 
 #
 # Django REST framework (API)
